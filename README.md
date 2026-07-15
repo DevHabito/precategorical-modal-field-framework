@@ -43,8 +43,8 @@ Both exact counts are independently reproduced by exhaustive enumeration and clo
 ## Quick start
 
 ```bash
-git clone REPLACE_WITH_GITHUB_REPOSITORY_URL
-cd REPLACE_WITH_REPOSITORY_DIRECTORY
+git clone https://github.com/DevHabito/precategorical-modal-field-framework.git
+cd precategorical-modal-field-framework
 python -m venv .venv
 source .venv/bin/activate       # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
