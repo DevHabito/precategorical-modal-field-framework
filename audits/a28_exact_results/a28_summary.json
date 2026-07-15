@@ -1,0 +1,157 @@
+{
+  "seed": 20260801,
+  "row_samples": 6000,
+  "graph_samples": 2000,
+  "monotone_warp_samples": 4000,
+  "score_summaries": [
+    {
+      "score": "raw",
+      "maximum_relabel_error": 3.3306690738754696e-16,
+      "maximum_affine_probability_error": 0.6339595187685225,
+      "median_affine_tv": 0.2222521082329702,
+      "extension_violation_rate": 0.0,
+      "median_extension_log_odds_change": 1.1102230246251565e-16,
+      "remote_locality_violation_rate": 0.0,
+      "median_remote_tv": 0.0,
+      "median_monotone_warp_tv": 0.049737311959171554,
+      "median_outlier_log_odds_change": 2.220446049250313e-16
+    },
+    {
+      "score": "min_shift",
+      "maximum_relabel_error": 3.3306690738754696e-16,
+      "maximum_affine_probability_error": 0.6339595187685225,
+      "median_affine_tv": 0.2222521082329702,
+      "extension_violation_rate": 0.0,
+      "median_extension_log_odds_change": 1.1102230246251565e-16,
+      "remote_locality_violation_rate": 0.0,
+      "median_remote_tv": 0.0,
+      "median_monotone_warp_tv": 0.049737311959171554,
+      "median_outlier_log_odds_change": 2.220446049250313e-16
+    },
+    {
+      "score": "row_zscore",
+      "maximum_relabel_error": 3.3306690738754696e-16,
+      "maximum_affine_probability_error": 7.771561172376096e-16,
+      "median_affine_tv": 5.898059818321144e-17,
+      "extension_violation_rate": 1.0,
+      "median_extension_log_odds_change": 0.23282754080407864,
+      "remote_locality_violation_rate": 0.0,
+      "median_remote_tv": 0.0,
+      "median_monotone_warp_tv": 0.03381694349939679,
+      "median_outlier_log_odds_change": 0.8816254788635615
+    },
+    {
+      "score": "row_mad",
+      "maximum_relabel_error": 4.440892098500626e-16,
+      "maximum_affine_probability_error": 1.3322676295501878e-15,
+      "median_affine_tv": 6.938893903907228e-17,
+      "extension_violation_rate": 0.9551666666666667,
+      "median_extension_log_odds_change": 0.39885735863242433,
+      "remote_locality_violation_rate": 0.0,
+      "median_remote_tv": 0.0,
+      "median_monotone_warp_tv": 0.041499315443038025,
+      "median_outlier_log_odds_change": 0.2596674514612811
+    },
+    {
+      "score": "row_rank",
+      "maximum_relabel_error": 1.1102230246251565e-16,
+      "maximum_affine_probability_error": 0.0,
+      "median_affine_tv": 0.0,
+      "extension_violation_rate": 0.9613333333333334,
+      "median_extension_log_odds_change": 0.08571428571428585,
+      "remote_locality_violation_rate": 0.0,
+      "median_remote_tv": 0.0,
+      "median_monotone_warp_tv": 0.0,
+      "median_outlier_log_odds_change": 0.050000000000000266
+    },
+    {
+      "score": "global_zscore",
+      "maximum_relabel_error": 2.220446049250313e-16,
+      "maximum_affine_probability_error": 4.440892098500626e-16,
+      "median_affine_tv": 5.898059818321144e-17,
+      "extension_violation_rate": 1.0,
+      "median_extension_log_odds_change": 0.0469253147282343,
+      "remote_locality_violation_rate": 1.0,
+      "median_remote_tv": 0.20342836642573386,
+      "median_monotone_warp_tv": 0.04458715520380545,
+      "median_outlier_log_odds_change": 0.5307289670175923
+    }
+  ],
+  "classification": [
+    {
+      "score": "raw/min_shift q",
+      "local": true,
+      "relabel_equivariant": true,
+      "extension_stable": true,
+      "positive_affine_invariant": false,
+      "cardinal": true,
+      "requires_external_scale_or_lambda": true,
+      "status": "STABLE_CARDINAL_BUT_SCALE_DEGENERATE"
+    },
+    {
+      "score": "row z-score",
+      "local": true,
+      "relabel_equivariant": true,
+      "extension_stable": false,
+      "positive_affine_invariant": true,
+      "cardinal": true,
+      "requires_external_scale_or_lambda": false,
+      "status": "DIMENSIONLESS_BUT_CONTEXT_DEPENDENT"
+    },
+    {
+      "score": "row median/MAD",
+      "local": true,
+      "relabel_equivariant": true,
+      "extension_stable": false,
+      "positive_affine_invariant": true,
+      "cardinal": true,
+      "requires_external_scale_or_lambda": false,
+      "status": "ROBUST_BUT_CONTEXT_DEPENDENT"
+    },
+    {
+      "score": "row rank",
+      "local": true,
+      "relabel_equivariant": true,
+      "extension_stable": false,
+      "positive_affine_invariant": true,
+      "cardinal": false,
+      "requires_external_scale_or_lambda": false,
+      "status": "ORDINAL_AND_CONTEXT_DEPENDENT"
+    },
+    {
+      "score": "global z-score",
+      "local": false,
+      "relabel_equivariant": true,
+      "extension_stable": false,
+      "positive_affine_invariant": true,
+      "cardinal": true,
+      "requires_external_scale_or_lambda": false,
+      "status": "DIMENSIONLESS_BUT_NONLOCAL"
+    },
+    {
+      "score": "fixed externally calibrated q unit",
+      "local": true,
+      "relabel_equivariant": true,
+      "extension_stable": true,
+      "positive_affine_invariant": false,
+      "cardinal": true,
+      "requires_external_scale_or_lambda": true,
+      "status": "ESCAPE_REQUIRES_EXTRA_PRIMITIVE"
+    }
+  ],
+  "gates": {
+    "G1_context_scale_incompatibility_theorem_proved": true,
+    "G2_all_scores_relabel_equivariant": true,
+    "G3_raw_and_min_shift_extension_stable": true,
+    "G4_dimensionless_scores_positive_affine_invariant": true,
+    "G5_dimensionless_scores_context_dependent": true,
+    "G6_global_normalization_nonlocal": true,
+    "G7_rank_is_ordinal_not_cardinal": true,
+    "G8_raw_score_lambda_scale_degeneracy_exact": true,
+    "G9_no_natural_candidate_satisfies_all_desiderata": true,
+    "G10_no_physical_score_selected": true
+  },
+  "verdict": "PASS_SCORE_CONTEXT_SCALE_INCOMPATIBILITY_NO_GO",
+  "logical_conclusion": "No nontrivial continuous cardinal score can be both stable under arbitrary addition of alternatives and invariant under all positive affine q reparameterizations. Raw q differences retain cardinal and extension-stable information but require a q scale or free lambda. Local z-score and MAD remove that scale but make pairwise odds context-dependent. Rank gives up cardinality, while global normalization gives up locality. The present RZS symmetries therefore do not select a unique score; an additional operational convention or law is required.",
+  "interpretation_boundary": "A28 does not show that context dependence is always physically unacceptable, nor that a calibrated raw-q score is impossible. It proves that the desired properties cannot all be obtained for free from the current relational and gauge structure."
+}

@@ -1,0 +1,153 @@
+{
+  "n_vertices": 5,
+  "labeled_digraphs_enumerated": 1048576,
+  "exhaustive_full_labeled_condensation_preorders": 6942,
+  "exhaustive_minimum_representative_codes": 5234,
+  "independent_full_formula_count": 6942,
+  "independent_representative_formula_count": 5234,
+  "unlabeled_full_condensation_preorders": 139,
+  "labeled_poset_counts": {
+    "1": 1,
+    "2": 3,
+    "3": 19,
+    "4": 219,
+    "5": 4231
+  },
+  "difference_full_minus_representative": 1708,
+  "representative_code_fiber_distribution": [
+    {
+      "number_full_codes_per_representative_code": 1,
+      "number_representative_codes": 4473,
+      "number_full_codes": 4473
+    },
+    {
+      "number_full_codes_per_representative_code": 2,
+      "number_representative_codes": 241,
+      "number_full_codes": 482
+    },
+    {
+      "number_full_codes_per_representative_code": 3,
+      "number_representative_codes": 238,
+      "number_full_codes": 714
+    },
+    {
+      "number_full_codes_per_representative_code": 4,
+      "number_representative_codes": 241,
+      "number_full_codes": 964
+    },
+    {
+      "number_full_codes_per_representative_code": 6,
+      "number_representative_codes": 19,
+      "number_full_codes": 114
+    },
+    {
+      "number_full_codes_per_representative_code": 8,
+      "number_representative_codes": 3,
+      "number_full_codes": 24
+    },
+    {
+      "number_full_codes_per_representative_code": 9,
+      "number_representative_codes": 19,
+      "number_full_codes": 171
+    }
+  ],
+  "explicit_collision": {
+    "graph_one_edges": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "graph_two_edges": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "graph_one_scc_partition": [
+      [
+        0,
+        2,
+        3,
+        4
+      ],
+      [
+        1
+      ]
+    ],
+    "graph_two_scc_partition": [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "same_minimum_representative_code": true,
+    "different_full_labeled_preorder_code": true,
+    "representative_code": 100663296,
+    "graph_one_full_code": 31388765,
+    "graph_two_full_code": 19314253
+  },
+  "edge_flip": {
+    "total_graph_edge_pairs": 20971520,
+    "representative_changed_pairs": 6144000,
+    "full_changed_pairs": 6144000,
+    "full_only_changed_pairs": 0,
+    "representative_only_changed_pairs": 0,
+    "fraction": 0.29296875,
+    "exact_fraction": "75/256"
+  },
+  "gates": {
+    "G1_exhaustive_full_code_count_is_6942": true,
+    "G2_exhaustive_representative_code_count_is_5234": true,
+    "G3_independent_full_combinatorial_formula_is_6942": true,
+    "G4_independent_representative_formula_is_5234": true,
+    "G5_labeled_poset_counts_reproduced": true,
+    "G6_unlabeled_full_preorder_count_is_139": true,
+    "G7_explicit_collision_proves_original_code_noninjective": true,
+    "G8_code_fiber_accounting_exact": true,
+    "G9_edge_flip_fraction_same_under_both_codes": true,
+    "G10_no_full_labeled_claim_retained_for_5234": true
+  },
+  "verdict": "PASS_FORMAL_RESOLUTION_5234_REPRESENTATIVE_CODES_6942_FULL_LABELED_PREORDERS",
+  "correction": {
+    "incorrect_or_ambiguous_label": "distinct labeled condensation-poset codes = 5,234",
+    "correct_labels": {
+      "full_labeled_condensation_preorders": 6942,
+      "minimum_representative_quotient_poset_codes": 5234
+    },
+    "scientific_effect": "The A8 count label must be corrected. Height, width, gradedness, source/sink metrics, and the n=5 one-edge-flip fraction are unchanged because they depend on the quotient poset or were independently checked under both codes."
+  }
+}

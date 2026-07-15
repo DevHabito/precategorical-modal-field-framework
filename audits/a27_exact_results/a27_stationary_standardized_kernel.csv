@@ -1,0 +1,7 @@
+dimension,reference_sigma,comparison_sigma,maximum_standardized_state_error,maximum_kernel_probability_error
+64,0.08,0.04,0.0,0.0
+64,0.08,0.16,0.0,0.0
+128,0.08,0.04,0.0,0.0
+128,0.08,0.16,0.0,0.0
+256,0.08,0.04,0.0,0.0
+256,0.08,0.16,0.0,0.0

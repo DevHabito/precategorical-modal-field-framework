@@ -1,0 +1,7 @@
+q_source,new_information,breaks_order_only_degeneracy,absolute_scale,status
+deterministic function of order,False,False,False,REDUNDANT
+model-independent random field,True,False,False,EXTRA_ENTROPY_NOT_MODEL_INFORMATION
+ordinal or rank-derived field,False,False,False,MONOTONE_INVARIANT
+independently calibrated quantitative field,True,True,False,RELATIVE_INFORMATION_WITNESS
+global mean or offset of q,,,False,GAUGE_DEPENDENT_NOT_OBSERVABLE
+centered q dynamics with eta per uncalibrated step,True,only if initial q or noise law is independently non-invariant,False,RELATIVE_DYNAMICS_NO_PHYSICAL_RATE

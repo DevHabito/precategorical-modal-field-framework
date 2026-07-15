@@ -1,0 +1,5 @@
+distribution,differential_entropy,selected_by,status
+Gaussian variance 1,1.4189385332046727,fixed mean and variance,UNIQUE_CONDITIONAL_MAXIMUM
+Laplace variance 1,1.3465735902799727,fixed mean absolute deviation,DIFFERENT_CONSTRAINT
+Uniform variance 1,1.2424533248940002,fixed bounded support,DIFFERENT_CONSTRAINT
+Logistic variance 1,1.4045762584846548,control,CONTROL

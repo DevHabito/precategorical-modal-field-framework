@@ -1,0 +1,164 @@
+{
+  "seed": 20260802,
+  "refinement_samples": 6000,
+  "near_zero_samples": 2000,
+  "extreme_samples": 4000,
+  "iid_samples_per_n": 3000,
+  "refinement_results": [
+    {
+      "mode": "unweighted_raw",
+      "consistency_rate": 0.0,
+      "median_macro_tv": 0.17135112094458638,
+      "maximum_macro_error": 0.42020405652392995
+    },
+    {
+      "mode": "unweighted_z",
+      "consistency_rate": 0.0,
+      "median_macro_tv": 0.13007144365352372,
+      "maximum_macro_error": 0.43496732709935587
+    },
+    {
+      "mode": "weighted_raw",
+      "consistency_rate": 1.0,
+      "median_macro_tv": 6.938893903907228e-18,
+      "maximum_macro_error": 3.3306690738754696e-16
+    },
+    {
+      "mode": "weighted_z",
+      "consistency_rate": 1.0,
+      "median_macro_tv": 3.350184712980209e-17,
+      "maximum_macro_error": 4.440892098500626e-16
+    }
+  ],
+  "near_zero_results": [
+    {
+      "epsilon": 1e-06,
+      "median_total_variation": 9.27334735774559e-08,
+      "maximum_total_variation": 0.999999977802069
+    },
+    {
+      "epsilon": 1e-05,
+      "median_total_variation": 9.273330166545116e-07,
+      "maximum_total_variation": 0.9999999976779346
+    },
+    {
+      "epsilon": 0.0001,
+      "median_total_variation": 9.273158263350415e-06,
+      "maximum_total_variation": 0.999999999639323
+    },
+    {
+      "epsilon": 0.001,
+      "median_total_variation": 9.271439532167105e-05,
+      "maximum_total_variation": 0.9999999986795263
+    },
+    {
+      "epsilon": 0.01,
+      "median_total_variation": 0.0009254282204006355,
+      "maximum_total_variation": 0.9999699684483851
+    },
+    {
+      "epsilon": 0.1,
+      "median_total_variation": 0.009066040562706917,
+      "maximum_total_variation": 0.9194167880190336
+    }
+  ],
+  "extreme_results": {
+    "maximum_asymptotic_probability_error": 2.7755575615628914e-17,
+    "minimum_limiting_new_probability": 0.0015814179451694148,
+    "maximum_limiting_new_probability": 0.0320459636914101,
+    "pair_odds_collapse_rate": 1.0,
+    "maximum_absolute_expanded_pair_log_odds": 1.83203487508958e-07
+  },
+  "iid_context_results": [
+    {
+      "background_size": 16,
+      "rmse_to_population_limit": 0.28249512269359056,
+      "mean_error": 0.13757591395057286,
+      "median_absolute_error": 0.1560955295335773
+    },
+    {
+      "background_size": 64,
+      "rmse_to_population_limit": 0.12005852069715878,
+      "mean_error": 0.036426615392764525,
+      "median_absolute_error": 0.07856021519932332
+    },
+    {
+      "background_size": 256,
+      "rmse_to_population_limit": 0.05514490704127668,
+      "mean_error": 0.008573950084651642,
+      "median_absolute_error": 0.03618303110748422
+    },
+    {
+      "background_size": 1024,
+      "rmse_to_population_limit": 0.027692439375869498,
+      "mean_error": 0.0025594870670984943,
+      "median_absolute_error": 0.018443456547944104
+    }
+  ],
+  "classification": [
+    {
+      "construction": "unweighted raw exponential",
+      "contextual_normalization": false,
+      "refinement_consistent": false,
+      "near_zero_multiplicity_available": false,
+      "extra_structure": "implicit unit mass per listed alternative",
+      "status": "CLONE_SENSITIVE"
+    },
+    {
+      "construction": "unweighted row z-score",
+      "contextual_normalization": true,
+      "refinement_consistent": false,
+      "near_zero_multiplicity_available": false,
+      "extra_structure": "implicit unit mass per listed alternative",
+      "status": "CONTEXT_AND_CLONE_SENSITIVE"
+    },
+    {
+      "construction": "mass-weighted raw exponential",
+      "contextual_normalization": false,
+      "refinement_consistent": true,
+      "near_zero_multiplicity_available": true,
+      "extra_structure": "positive additive base mass mu",
+      "status": "PROJECTIVELY_CONSISTENT"
+    },
+    {
+      "construction": "mass-weighted row z-score",
+      "contextual_normalization": true,
+      "refinement_consistent": true,
+      "near_zero_multiplicity_available": true,
+      "extra_structure": "positive additive base mass mu",
+      "status": "PROJECTIVELY_CONSISTENT_CONTEXTUAL_LAW"
+    },
+    {
+      "construction": "unweighted z-score at high iid degree",
+      "contextual_normalization": true,
+      "refinement_consistent": false,
+      "near_zero_multiplicity_available": false,
+      "extra_structure": "iid environmental assumption",
+      "status": "ASYMPTOTICALLY_STABLE_NOT_EXACT"
+    },
+    {
+      "construction": "RZS physical interpretation of mu",
+      "contextual_normalization": null,
+      "refinement_consistent": null,
+      "near_zero_multiplicity_available": null,
+      "extra_structure": "not derived",
+      "status": "OPEN"
+    }
+  ],
+  "gates": {
+    "G1_additive_base_measure_refinement_theorem_proved": true,
+    "G2_naive_raw_cloning_inconsistent": true,
+    "G3_naive_zscore_cloning_inconsistent": true,
+    "G4_weighted_raw_exactly_refinement_consistent": true,
+    "G5_weighted_zscore_exactly_refinement_consistent": true,
+    "G6_near_zero_mass_alternative_becomes_irrelevant": false,
+    "G7_unweighted_zscore_extreme_limit_matches_theory": true,
+    "G8_extreme_unweighted_zscore_collapses_old_odds": true,
+    "G9_iid_context_has_large_degree_limit": true,
+    "G10_refinement_consistency_requires_measure_like_data_within_factorized_class": true,
+    "G11_no_physical_volume_measure_claimed": true
+  },
+  "verdict": "FAIL_CONTEXTUAL_REFINEMENT_AUDIT",
+  "logical_conclusion": "Naive listing-based kernels are not invariant under exact refinement: cloning an alternative changes its macro weight, and local z-normalization changes the entire context. Exact projective consistency is restored by a positive additive base mass mu, used both in the context statistics and in transition weights. Under mass-preserving splits, the weighted empirical measure and all macro probabilities remain unchanged. Thus contextual q normalization can be coherent, but only after supplying measure-like multiplicity data. The present RZS framework has not derived the physical meaning of that data.",
+  "interpretation_boundary": "The base mass is mathematical bookkeeping required for exact refinement consistency within the audited factorized class. It is not identified with spacetime volume, probability mass, matter density, or counting measure without an independent operational argument."
+}

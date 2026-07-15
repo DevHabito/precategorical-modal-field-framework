@@ -1,0 +1,7 @@
+n,first_model,second_model,pooled_mark_total_variation
+64,uniform,power_anisotropic,0.3905390625000001
+64,uniform,beta_skew,0.21972656250000003
+128,uniform,power_anisotropic,0.39533203124999994
+128,uniform,beta_skew,0.21837890624999998
+256,uniform,power_anisotropic,0.394828125
+256,uniform,beta_skew,0.21822851562499995

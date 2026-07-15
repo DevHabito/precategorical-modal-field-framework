@@ -1,0 +1,172 @@
+{
+  "seed": 20260809,
+  "clt_samples_per_cell": 60000,
+  "aggregate_results": {
+    "entropy_results": [
+      {
+        "distribution": "Gaussian variance 1",
+        "differential_entropy": 1.4189385332046727,
+        "selected_by": "fixed mean and variance",
+        "status": "UNIQUE_CONDITIONAL_MAXIMUM"
+      },
+      {
+        "distribution": "Laplace variance 1",
+        "differential_entropy": 1.3465735902799727,
+        "selected_by": "fixed mean absolute deviation",
+        "status": "DIFFERENT_CONSTRAINT"
+      },
+      {
+        "distribution": "Uniform variance 1",
+        "differential_entropy": 1.2424533248940002,
+        "selected_by": "fixed bounded support",
+        "status": "DIFFERENT_CONSTRAINT"
+      },
+      {
+        "distribution": "Logistic variance 1",
+        "differential_entropy": 1.4045762584846548,
+        "selected_by": "control",
+        "status": "CONTROL"
+      }
+    ],
+    "stability_results": [
+      {
+        "distribution": "gaussian",
+        "max_sqrt_sum_residual": 2.220446049250313e-16,
+        "median_sqrt_sum_residual": 8.673617379884035e-18,
+        "max_own_scale_residual": NaN
+      },
+      {
+        "distribution": "rademacher",
+        "max_sqrt_sum_residual": 1.599206968654332,
+        "median_sqrt_sum_residual": 0.44046527248421874,
+        "max_own_scale_residual": NaN
+      },
+      {
+        "distribution": "laplace",
+        "max_sqrt_sum_residual": 0.09016994372139533,
+        "median_sqrt_sum_residual": 0.07512361639295093,
+        "max_own_scale_residual": NaN
+      },
+      {
+        "distribution": "uniform",
+        "max_sqrt_sum_residual": 0.2174590172131115,
+        "median_sqrt_sum_residual": 0.07824159625155724,
+        "max_own_scale_residual": NaN
+      },
+      {
+        "distribution": "cauchy",
+        "max_sqrt_sum_residual": NaN,
+        "median_sqrt_sum_residual": NaN,
+        "max_own_scale_residual": 1.1102230246251565e-16
+      }
+    ],
+    "clt_results": [
+      {
+        "distribution": "laplace",
+        "initial_empirical_excess": 2.9747519804847444,
+        "final_empirical_excess": 0.0332993122051084,
+        "initial_ks": 0.06269253102818331,
+        "final_ks": 0.004019680704398287
+      },
+      {
+        "distribution": "rademacher",
+        "initial_empirical_excess": -1.9999942399917052,
+        "final_empirical_excess": -0.0057206348238350024,
+        "initial_ks": 0.3419447460685429,
+        "final_ks": 0.03689143573400022
+      },
+      {
+        "distribution": "uniform",
+        "initial_empirical_excess": -1.2063532564345678,
+        "final_empirical_excess": 0.0017719147086387999,
+        "initial_ks": 0.05913373764251251,
+        "final_ks": 0.004934837572011408
+      }
+    ],
+    "scale_mixture_excess": 1.5,
+    "scale_mixture_cross_square_cov": 0.5
+  },
+  "classification": [
+    {
+      "principle": "maximum entropy with fixed variance",
+      "selects_gaussian": true,
+      "strength": "conditional",
+      "missing_input": "reference measure and variance constraint",
+      "status": "CONDITIONAL_SELECTION"
+    },
+    {
+      "principle": "exact iid sqrt-sum stability plus finite variance",
+      "selects_gaussian": true,
+      "strength": "exact theorem",
+      "missing_input": "exact iid stability axiom",
+      "status": "STRONG_EXACT_SELECTION"
+    },
+    {
+      "principle": "finite-variance iid CLT",
+      "selects_gaussian": "asymptotically",
+      "strength": "conditional asymptotic",
+      "missing_input": "independence or Lindeberg conditions",
+      "status": "ASYMPTOTIC_SELECTION"
+    },
+    {
+      "principle": "centering",
+      "selects_gaussian": false,
+      "strength": "linear projection",
+      "missing_input": "full innovation law",
+      "status": "NONSELECTIVE"
+    },
+    {
+      "principle": "rotational invariance",
+      "selects_gaussian": false,
+      "strength": "symmetry only",
+      "missing_input": "component independence",
+      "status": "NONSELECTIVE"
+    },
+    {
+      "principle": "rotational invariance plus independent components",
+      "selects_gaussian": true,
+      "strength": "Maxwell-type theorem",
+      "missing_input": "strong symmetry and independence",
+      "status": "STRONG_EXACT_SELECTION"
+    },
+    {
+      "principle": "infinite divisibility",
+      "selects_gaussian": false,
+      "strength": "broad class",
+      "missing_input": "stability or variance axioms",
+      "status": "NONSELECTIVE"
+    },
+    {
+      "principle": "dimension projectivity plus rotational invariance",
+      "selects_gaussian": false,
+      "strength": "admits scale mixtures",
+      "missing_input": "independence or fixed radial scale",
+      "status": "NONSELECTIVE"
+    },
+    {
+      "principle": "current RZS noise contract",
+      "selects_gaussian": false,
+      "strength": "centered amplitude only",
+      "missing_input": "innovation law",
+      "status": "UNDERDETERMINED"
+    }
+  ],
+  "gates": {
+    "G1_fixed_variance_maximum_entropy_selects_gaussian": true,
+    "G2_entropy_selection_depends_on_constraints": true,
+    "G3_exact_finite_variance_sqrt_sum_stability_selects_gaussian": true,
+    "G4_cauchy_exact_nongaussian_stable_without_finite_variance": true,
+    "G5_iid_finite_variance_block_sums_gaussianize": false,
+    "G6_perfect_dependence_blocks_clt": true,
+    "G7_rotational_invariance_alone_nonselective": true,
+    "G8_independence_alone_nonselective": true,
+    "G9_rotational_invariance_plus_independence_selection_theorem_stated": true,
+    "G10_infinite_divisibility_nonselective": true,
+    "G11_projective_rotational_scale_mixture_nonselective": true,
+    "G12_current_rzs_centering_and_amplitude_do_not_imply_gaussianity": true,
+    "G13_no_physical_noise_law_claimed": true
+  },
+  "verdict": "FAIL_GAUSSIAN_NOISE_SELECTION_AUDIT",
+  "logical_conclusion": "Gaussian noise is uniquely selected only by strong assumption packages. Exact iid sqrt-sum stability with finite variance selects Gaussian; rotational invariance plus independent components also selects it. Maximum entropy and CLT are conditional. Centering, isotropy, projectivity, and infinite divisibility alone are nonselective. Current RZS assumptions do not derive a Gaussian innovation law.",
+  "interpretation_boundary": "A36 identifies sufficient principles and counterexamples. It does not establish that RZS innovations satisfy independence, exact stability, Maxwell symmetry, or a physical entropy constraint."
+}

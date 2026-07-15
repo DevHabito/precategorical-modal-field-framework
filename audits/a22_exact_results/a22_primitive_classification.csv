@@ -1,0 +1,6 @@
+primitive,source,adds_model_information,breaks_monotone_symmetry,calibration_required,status,physical_conclusion
+order_degree_parity,function of relation,False,False,False,REDUNDANT,none; it is only a repackaging of the order
+independent_bit,model-independent randomness,False,False,False,NONINFORMATIVE_RANDOMNESS,none; extra entropy is not extra information about the representative
+rank_half_bit,ordinal rank of X,False,False,False,INVARIANT_ORDINAL,none; strictly increasing transformations preserve ranks
+moving_threshold_bit,threshold transformed with the representative,False,False,True,COVARIANT_BUT_NONIDENTIFYING,none unless a threshold is fixed independently of the representative
+fixed_calibrated_threshold_bit,same numerical threshold X>1/2 in every model,True,True,True,MATHEMATICALLY_SUFFICIENT_WITNESS,not physically admissible yet; it presupposes the scale it helps identify

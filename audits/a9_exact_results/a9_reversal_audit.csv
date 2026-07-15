@@ -1,0 +1,4 @@
+clock,fraction_exactly_reflected,mean_max_reflection_error,maximum_reflection_error
+depth,0.9352218012144878,0.0441782351870543,1.0
+balance,1.0,9.26877417579348e-18,1.1102230246251565e-16
+mean_extension,1.0,1.3662630086949388e-17,2.220446049250313e-16

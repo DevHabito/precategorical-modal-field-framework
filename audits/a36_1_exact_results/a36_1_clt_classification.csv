@@ -1,0 +1,5 @@
+diagnostic,validity,limitation,status,claim,result
+KS at fixed n=128,valid finite-sample distance,lattice jumps remain visible,ORIGINAL_GATE_FAILED,,
+characteristic function on fixed compact set,aligned with Levy CLT criterion,finite compact numerical audit,CORRECTIVE_DIAGNOSTIC,,
+,,,CONDITIONAL_THEOREM,iid finite-variance sums,Gaussian asymptotic limit
+,,,UNDERDETERMINED,current RZS noise,independence and innovation law not derived

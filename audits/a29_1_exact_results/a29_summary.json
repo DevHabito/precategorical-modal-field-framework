@@ -1,0 +1,215 @@
+{
+  "seed": 20260803,
+  "refinement_samples": 6000,
+  "near_zero_samples": 2000,
+  "extreme_samples": 4000,
+  "iid_samples_per_n": 3000,
+  "refinement_results": [
+    {
+      "mode": "unweighted_raw",
+      "consistency_rate": 0.0,
+      "median_macro_tv": 0.17355263190702766,
+      "maximum_macro_error": 0.42020410283113535
+    },
+    {
+      "mode": "unweighted_z",
+      "consistency_rate": 0.0,
+      "median_macro_tv": 0.13110378858143953,
+      "maximum_macro_error": 0.4343214980391914
+    },
+    {
+      "mode": "weighted_raw",
+      "consistency_rate": 1.0,
+      "median_macro_tv": 6.938893903907228e-18,
+      "maximum_macro_error": 3.3306690738754696e-16
+    },
+    {
+      "mode": "weighted_z",
+      "consistency_rate": 1.0,
+      "median_macro_tv": 3.469446951953614e-17,
+      "maximum_macro_error": 3.3306690738754696e-16
+    }
+  ],
+  "near_zero_results": [
+    {
+      "epsilon": 1e-06,
+      "median_total_variation": 9.578247316421568e-08,
+      "maximum_total_variation": 0.0003250042053845527
+    },
+    {
+      "epsilon": 1e-05,
+      "median_total_variation": 9.578211198014698e-07,
+      "maximum_total_variation": 0.003239087291375645
+    },
+    {
+      "epsilon": 0.0001,
+      "median_total_variation": 9.577849986556864e-06,
+      "maximum_total_variation": 0.03133450230871139
+    },
+    {
+      "epsilon": 0.001,
+      "median_total_variation": 9.574239605925734e-05,
+      "maximum_total_variation": 0.23617864977905306
+    },
+    {
+      "epsilon": 0.01,
+      "median_total_variation": 0.0009552230516899727,
+      "maximum_total_variation": 0.6734222773723932
+    },
+    {
+      "epsilon": 0.1,
+      "median_total_variation": 0.009367960918080153,
+      "maximum_total_variation": 0.7378638150300243
+    }
+  ],
+  "singular_context_results": [
+    {
+      "spread": 0.1,
+      "base_weighted_sd": 0.14142135623730953,
+      "epsilon": 1e-06,
+      "total_variation": 6.043523381801064e-06
+    },
+    {
+      "spread": 0.01,
+      "base_weighted_sd": 0.01414213562373095,
+      "epsilon": 1e-06,
+      "total_variation": 0.0006058019119657091
+    },
+    {
+      "spread": 0.001,
+      "base_weighted_sd": 0.001414213562373095,
+      "epsilon": 1e-06,
+      "total_variation": 0.0484013308757402
+    },
+    {
+      "spread": 0.0001,
+      "base_weighted_sd": 0.0001414213562373095,
+      "epsilon": 1e-06,
+      "total_variation": 0.31253653322727226
+    },
+    {
+      "spread": 1e-05,
+      "base_weighted_sd": 1.4142135623730953e-05,
+      "epsilon": 1e-06,
+      "total_variation": 0.37288395434858135
+    },
+    {
+      "spread": 1e-06,
+      "base_weighted_sd": 1.414213562373095e-06,
+      "epsilon": 1e-06,
+      "total_variation": 0.37893245367294187
+    },
+    {
+      "spread": 1e-07,
+      "base_weighted_sd": 1.414213562373095e-07,
+      "epsilon": 1e-06,
+      "total_variation": 0.3795363146407119
+    },
+    {
+      "spread": 1e-08,
+      "base_weighted_sd": 1.4142135623730952e-08,
+      "epsilon": 1e-06,
+      "total_variation": 0.37959668972442306
+    }
+  ],
+  "extreme_results": {
+    "maximum_asymptotic_probability_error": 2.42861286636753e-17,
+    "minimum_limiting_new_probability": 0.0015814179451694148,
+    "maximum_limiting_new_probability": 0.0320459636914101,
+    "pair_odds_collapse_rate": 1.0,
+    "maximum_absolute_expanded_pair_log_odds": 1.6413561513597628e-07
+  },
+  "iid_context_results": [
+    {
+      "background_size": 16,
+      "rmse_to_population_limit": 0.2906915563043166,
+      "mean_error": 0.14069020821824396,
+      "median_absolute_error": 0.15897497612946754
+    },
+    {
+      "background_size": 64,
+      "rmse_to_population_limit": 0.12091456009370508,
+      "mean_error": 0.036179028004698355,
+      "median_absolute_error": 0.07502317624052646
+    },
+    {
+      "background_size": 256,
+      "rmse_to_population_limit": 0.05670224879436072,
+      "mean_error": 0.009899206125658772,
+      "median_absolute_error": 0.0381789689187374
+    },
+    {
+      "background_size": 1024,
+      "rmse_to_population_limit": 0.028184573802769997,
+      "mean_error": 0.002906361343847819,
+      "median_absolute_error": 0.01881088694431965
+    }
+  ],
+  "classification": [
+    {
+      "construction": "unweighted raw exponential",
+      "contextual_normalization": false,
+      "refinement_consistent": false,
+      "near_zero_multiplicity_available": false,
+      "extra_structure": "implicit unit mass per listed alternative",
+      "status": "CLONE_SENSITIVE"
+    },
+    {
+      "construction": "unweighted row z-score",
+      "contextual_normalization": true,
+      "refinement_consistent": false,
+      "near_zero_multiplicity_available": false,
+      "extra_structure": "implicit unit mass per listed alternative",
+      "status": "CONTEXT_AND_CLONE_SENSITIVE"
+    },
+    {
+      "construction": "mass-weighted raw exponential",
+      "contextual_normalization": false,
+      "refinement_consistent": true,
+      "near_zero_multiplicity_available": true,
+      "extra_structure": "positive additive base mass mu",
+      "status": "PROJECTIVELY_CONSISTENT"
+    },
+    {
+      "construction": "mass-weighted row z-score",
+      "contextual_normalization": true,
+      "refinement_consistent": true,
+      "near_zero_multiplicity_available": true,
+      "extra_structure": "positive additive base mass mu",
+      "status": "PROJECTIVELY_CONSISTENT_CONTEXTUAL_LAW"
+    },
+    {
+      "construction": "unweighted z-score at high iid degree",
+      "contextual_normalization": true,
+      "refinement_consistent": false,
+      "near_zero_multiplicity_available": false,
+      "extra_structure": "iid environmental assumption",
+      "status": "ASYMPTOTICALLY_STABLE_NOT_EXACT"
+    },
+    {
+      "construction": "RZS physical interpretation of mu",
+      "contextual_normalization": null,
+      "refinement_consistent": null,
+      "near_zero_multiplicity_available": null,
+      "extra_structure": "not derived",
+      "status": "OPEN"
+    }
+  ],
+  "gates": {
+    "G1_additive_base_measure_refinement_theorem_proved": true,
+    "G2_naive_raw_cloning_inconsistent": true,
+    "G3_naive_zscore_cloning_inconsistent": true,
+    "G4_weighted_raw_exactly_refinement_consistent": true,
+    "G5_weighted_zscore_exactly_refinement_consistent": true,
+    "G6_near_zero_mass_stability_under_nondegeneracy": false,
+    "G6b_singular_variance_limit_explicitly_exposed": true,
+    "G7_unweighted_zscore_extreme_limit_matches_theory": true,
+    "G8_extreme_unweighted_zscore_collapses_old_odds": true,
+    "G9_iid_context_has_large_degree_limit": true,
+    "G10_refinement_consistency_requires_measure_like_data_within_factorized_class": true,
+    "G11_no_physical_volume_measure_claimed": true
+  },
+  "verdict": "FAIL_CONTEXTUAL_REFINEMENT_AUDIT",
+  "logical_conclusion": "Naive listing-based kernels are not invariant under exact refinement: cloning an alternative changes its macro weight, and local z-normalization changes the entire context. Exact projective consistency is restored by a positive additive base mass mu, used both in the context statistics and in transition weights. Under mass-preserving splits, the weighted empirical measure and all macro probabilities remain unchanged. A near-zero mass alternative becomes irrelevant continuously only away from the singular zero-variance boundary; no uniform stability bound exists as the context variance tends to zero. Thus contextual q normalization can be coherent, but it requires measure-like multiplicity data and a nondegeneracy treatment. The present RZS framework has derived neither physically.",
+  "interpretation_boundary": "The base mass is mathematical bookkeeping required for exact refinement consistency within the audited factorized class. The nondegeneracy condition is also substantive: standardized scores are singular at zero variance. Neither the mass nor a regularization of that singular boundary is identified with spacetime volume, matter, or a physical law."
+}

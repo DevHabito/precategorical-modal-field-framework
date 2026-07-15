@@ -1,0 +1,5 @@
+distribution,infinitely_divisible,construction,selects_gaussian
+Gaussian,True,n Gaussians of variance sigma^2/n,False
+Laplace,True,"difference of Gamma(1/n,b) summands",False
+Cauchy,True,n Cauchy(scale 1/n) summands,False
+Poisson,True,n Poisson(lambda/n) summands,False

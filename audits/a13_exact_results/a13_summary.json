@@ -1,0 +1,172 @@
+{
+  "seed": 20260712,
+  "n_values": [
+    96,
+    128,
+    160
+  ],
+  "reference_samples_per_n": 300,
+  "holdout_minkowski_per_n": 80,
+  "ordinary_null_samples_per_family_per_n": 80,
+  "adversarial_pool_per_n": 260,
+  "adversarial_selected_per_n": 60,
+  "alpha": 0.05,
+  "analytic_formula": "E[N_m] = n(n-1) C(n-2,m) sum_{j=0}^{n-2-m} (-1)^j C(n-2-m,j) / ((m+j+1)^2 (m+j+2)^2)",
+  "discrepancy": "squared Hellinger distance between the observed normalized interval-abundance profile and the exact fixed-n 2D expectation",
+  "size_results": [
+    {
+      "n": 96,
+      "formula_normalization_error": 0.0,
+      "formula_normalization_pass": true,
+      "maximum_absolute_monte_carlo_z": 1.9610052169215038,
+      "monte_carlo_formula_check_pass": true,
+      "reference_score_median": 0.006041330750957863,
+      "reference_score_95_quantile": 0.010537875572048556,
+      "minkowski_acceptance_rate": 0.9875,
+      "minkowski_acceptance_wilson_95": [
+        0.9325372992233133,
+        0.9977900244795476
+      ],
+      "transitive_percolation_rejection_rate": 0.8875,
+      "transitive_percolation_rejection_wilson_95": [
+        0.7998178190762713,
+        0.9396731305336952
+      ],
+      "three_layer_rejection_rate": 1.0,
+      "three_layer_rejection_wilson_95": [
+        0.9541818704644728,
+        0.9999999999999999
+      ],
+      "adversarial_rejection_rate": 0.8333333333333334,
+      "adversarial_rejection_wilson_95": [
+        0.7196838683638547,
+        0.9068682302080855
+      ],
+      "ordinary_low_m_error_median": 0.09714062807564888,
+      "adversarial_low_m_error_median": 0.082566167460864,
+      "adversarial_low_m_error_reduction": 0.15003465494823576,
+      "maximum_ordering_fraction_mismatch": 0.004824561403508787,
+      "perturbation_score_medians": {
+        "0.0": 0.006185062054461954,
+        "0.1": 0.008185915361715257,
+        "0.2": 0.018710053829937012,
+        "0.3": 0.03798731503054564
+      },
+      "perturbation_rejection_rates": {
+        "0.0": 0.050000000000000044,
+        "0.1": 0.30000000000000004,
+        "0.2": 0.8666666666666667,
+        "0.3": 1.0
+      },
+      "perturbation_monotonic": true,
+      "perturbation_detection_pass": true
+    },
+    {
+      "n": 128,
+      "formula_normalization_error": 9.094947017729282e-13,
+      "formula_normalization_pass": true,
+      "maximum_absolute_monte_carlo_z": 1.911741868845677,
+      "monte_carlo_formula_check_pass": true,
+      "reference_score_median": 0.0045936014622784405,
+      "reference_score_95_quantile": 0.008355511110116544,
+      "minkowski_acceptance_rate": 0.9625,
+      "minkowski_acceptance_wilson_95": [
+        0.8954527990995489,
+        0.9871654310800886
+      ],
+      "transitive_percolation_rejection_rate": 0.9875,
+      "transitive_percolation_rejection_wilson_95": [
+        0.9325372992233133,
+        0.9977900244795476
+      ],
+      "three_layer_rejection_rate": 1.0,
+      "three_layer_rejection_wilson_95": [
+        0.9541818704644728,
+        0.9999999999999999
+      ],
+      "adversarial_rejection_rate": 1.0,
+      "adversarial_rejection_wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+      ],
+      "ordinary_low_m_error_median": 0.0933743424223652,
+      "adversarial_low_m_error_median": 0.07626005614037526,
+      "adversarial_low_m_error_reduction": 0.18328681989079998,
+      "maximum_ordering_fraction_mismatch": 0.004183070866141669,
+      "perturbation_score_medians": {
+        "0.0": 0.004582304627453182,
+        "0.1": 0.007019082201326854,
+        "0.2": 0.015495260677125144,
+        "0.3": 0.03100659202280276
+      },
+      "perturbation_rejection_rates": {
+        "0.0": 0.01666666666666672,
+        "0.1": 0.33333333333333337,
+        "0.2": 0.9166666666666666,
+        "0.3": 1.0
+      },
+      "perturbation_monotonic": true,
+      "perturbation_detection_pass": true
+    },
+    {
+      "n": 160,
+      "formula_normalization_error": 0.0,
+      "formula_normalization_pass": true,
+      "maximum_absolute_monte_carlo_z": 2.36381731734448,
+      "monte_carlo_formula_check_pass": true,
+      "reference_score_median": 0.0036547085855433425,
+      "reference_score_95_quantile": 0.005873929496319297,
+      "minkowski_acceptance_rate": 0.9625,
+      "minkowski_acceptance_wilson_95": [
+        0.8954527990995489,
+        0.9871654310800886
+      ],
+      "transitive_percolation_rejection_rate": 1.0,
+      "transitive_percolation_rejection_wilson_95": [
+        0.9541818704644728,
+        0.9999999999999999
+      ],
+      "three_layer_rejection_rate": 1.0,
+      "three_layer_rejection_wilson_95": [
+        0.9541818704644728,
+        0.9999999999999999
+      ],
+      "adversarial_rejection_rate": 1.0,
+      "adversarial_rejection_wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+      ],
+      "ordinary_low_m_error_median": 0.08840622775524863,
+      "adversarial_low_m_error_median": 0.07656566954710184,
+      "adversarial_low_m_error_reduction": 0.13393353057577806,
+      "maximum_ordering_fraction_mismatch": 0.004716981132075415,
+      "perturbation_score_medians": {
+        "0.0": 0.0036200707010084487,
+        "0.1": 0.005615327110797097,
+        "0.2": 0.01191141366377535,
+        "0.3": 0.029561027614007696
+      },
+      "perturbation_rejection_rates": {
+        "0.0": 0.08333333333333337,
+        "0.1": 0.44999999999999996,
+        "0.2": 0.95,
+        "0.3": 1.0
+      },
+      "perturbation_monotonic": true,
+      "perturbation_detection_pass": true
+    }
+  ],
+  "gates": {
+    "G1_exact_formula_normalization": true,
+    "G2_monte_carlo_formula_validation": true,
+    "G3_minkowski_holdout_acceptance_ge_0_90": true,
+    "G4_transitive_percolation_rejection_ge_0_90": false,
+    "G5_three_layer_rejection_ge_0_90": true,
+    "G6_adversarial_rejection_ge_0_80": true,
+    "G7_adversarial_low_m_matching_and_density_control": false,
+    "G8_perturbation_response": true,
+    "G9_no_trained_classifier": true
+  },
+  "verdict": "FAIL_ANALYTIC_INTERVAL_SIGNATURE",
+  "interpretation_boundary": "A pass establishes finite-size rejection of the specified matched nulls by an analytic-reference interval-abundance test. It does not establish that the criterion is sufficient for manifoldlikeness or that spacetime is generated by arbitrary relations."
+}

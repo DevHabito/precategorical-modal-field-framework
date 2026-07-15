@@ -1,0 +1,85 @@
+{
+  "seed": 20260810,
+  "contraction": 0.825,
+  "innovation_sd": 0.5651327277728658,
+  "aggregate_results": {
+    "stationary_excess_kurtosis_spread": 0.9501673484566756,
+    "stationary_q_results": [
+      {
+        "lambda": 0.5,
+        "minimum_defined_q": -0.2530328890291323,
+        "maximum_defined_q": -0.2480528427248317,
+        "defined_q_spread": 0.0049800463043006005
+      },
+      {
+        "lambda": 1.0,
+        "minimum_defined_q": -0.5259714235320352,
+        "maximum_defined_q": -0.48513951655829757,
+        "defined_q_spread": 0.04083190697373762
+      },
+      {
+        "lambda": 2.0,
+        "minimum_defined_q": -1.3062419772592067,
+        "maximum_defined_q": -0.8988107910865978,
+        "defined_q_spread": 0.4074311861726089
+      }
+    ],
+    "maximum_light_tailed_block_q_error_at_256": 0.000743287791263203,
+    "kernel_median_max_probability_spread": 0.01981145406269051,
+    "common_shock_excess_at_block_1024": -1.9883325479815186
+  },
+  "classification": [
+    {
+      "regime": "single stationary component, matched variance",
+      "universal": false,
+      "required_information": "innovation higher cumulants or full law",
+      "status": "NO_EXACT_UNIVERSALITY"
+    },
+    {
+      "regime": "independent block sums with local exponential moments",
+      "universal": "asymptotically Gaussian for audited score",
+      "required_information": "independence and MGF control",
+      "status": "CONDITIONAL_COARSE_GRAIN_UNIVERSALITY"
+    },
+    {
+      "regime": "finite-variance Student-t innovations",
+      "universal": false,
+      "required_information": "tail class",
+      "status": "Q_LAMBDA_UNDEFINED"
+    },
+    {
+      "regime": "shared non-Gaussian common shock",
+      "universal": false,
+      "required_information": "dependence structure",
+      "status": "DEPENDENCE_OBSTRUCTION"
+    },
+    {
+      "regime": "row-standardized exponential transition kernel",
+      "universal": false,
+      "required_information": "stationary shape after standardization",
+      "status": "OPERATIONAL_LAW_SENSITIVITY"
+    },
+    {
+      "regime": "actual RZS innovations",
+      "universal": null,
+      "required_information": "noise law, dependence, and tail control",
+      "status": "NOT_ESTABLISHED"
+    }
+  ],
+  "gates": {
+    "G1_stationary_characteristic_function_and_cumulant_formula_stated": true,
+    "G2_equal_stationary_mean_variance_do_not_fix_higher_cumulants": true,
+    "G3_light_tailed_stationary_effective_scores_depend_on_noise_law": true,
+    "G4_student_t_finite_variance_does_not_make_q_lambda_finite": true,
+    "G5_independent_light_tailed_block_scores_converge_to_gaussian": false,
+    "G6_student_t_block_q_remains_undefined_under_finite_block_averaging": true,
+    "G7_common_nongaussian_factor_blocks_gaussian_universality": true,
+    "G8_standardized_operational_kernel_retains_noise_law_sensitivity": true,
+    "G9_variance_matching_and_centering_are_not_exact_universality_principles": true,
+    "G10_universality_requires_independence_or_mixing_and_exponential_moment_control": true,
+    "G11_no_physical_rzs_noise_law_claimed": true
+  },
+  "verdict": "FAIL_NOISE_UNIVERSALITY_AUDIT",
+  "logical_conclusion": "Matching innovation mean and variance fixes the stationary mean and variance of the affine q process but not its higher cumulants, effective score, or standardized transition-kernel statistics. Independent coarse-graining produces strong Gaussian universality for light-tailed laws with controlled exponential moments. That universality fails as a statement about Q_lambda for Student-t tails, whose moment-generating function is infinite, and it can be blocked by shared non-Gaussian dependence. The RZS noise law is therefore macroscopically dispensable only under additional tail and dependence conditions that are not yet derived.",
+  "interpretation_boundary": "A37 identifies universality classes in an affine stationary model. It does not prove that RZS relational components are independent copies, that their innovations have exponential moments, or that the audited block sum is the physical coarse-graining operation."
+}

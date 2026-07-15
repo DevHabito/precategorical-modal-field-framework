@@ -1,0 +1,92 @@
+{
+  "seed": 20260731,
+  "lambda_values": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "estimation_summary": [
+    {
+      "lambda_true": 0.5,
+      "mean_estimate": 0.4996357823518551,
+      "bias": -0.0003642176481448651,
+      "rmse": 0.004008956561573853,
+      "maximum_absolute_error": 0.009628493140600103,
+      "optimizer_success_rate": 1.0
+    },
+    {
+      "lambda_true": 1.0,
+      "mean_estimate": 0.9996170716320276,
+      "bias": -0.0003829283679722748,
+      "rmse": 0.004440002971392908,
+      "maximum_absolute_error": 0.010252904829817444,
+      "optimizer_success_rate": 1.0
+    },
+    {
+      "lambda_true": 2.0,
+      "mean_estimate": 2.000985105734542,
+      "bias": 0.0009851057345422816,
+      "rmse": 0.008612003457205617,
+      "maximum_absolute_error": 0.0215952685780465,
+      "optimizer_success_rate": 1.0
+    }
+  ],
+  "aggregate_results": {
+    "maximum_raw_reparameterization_error": 1.3877787807814457e-15,
+    "maximum_standardized_score_error": 9.325873406851315e-15,
+    "median_distinct_lambda_tv": 0.23820455966431,
+    "maximum_stationary_variance_relative_error": 0.005471920535800154,
+    "maximum_stationary_kernel_error": 0.0,
+    "maximum_coarse_closure_error": 5.551115123125783e-16,
+    "median_coarse_lambda_tv": 0.18944134911471264,
+    "maximum_constraint_derivative_error": 1.2670819948823464e-10
+  },
+  "classification": [
+    {
+      "question": "Can lambda be absorbed into an unstandardized score?",
+      "answer": "yes",
+      "status": "RAW_SCORE_SCALE_DEGENERACY"
+    },
+    {
+      "question": "Can lambda be absorbed after local standardization?",
+      "answer": "no, unless the normalization convention itself is changed",
+      "status": "IDENTIFIABLE_MODEL_PARAMETER"
+    },
+    {
+      "question": "Does stationary q variance fix lambda?",
+      "answer": "no",
+      "status": "DYNAMICS_AMPLITUDE_CANCELLED_BY_STANDARDIZATION"
+    },
+    {
+      "question": "Does coarse-graining closure fix lambda?",
+      "answer": "no",
+      "status": "CLOSURE_FOR_ALL_POSITIVE_LAMBDA"
+    },
+    {
+      "question": "Can transition data estimate lambda?",
+      "answer": "yes, conditional on known z and accepted exponential law",
+      "status": "PHENOMENOLOGICALLY_ESTIMABLE"
+    },
+    {
+      "question": "Is a physical numerical lambda derived?",
+      "answer": "no",
+      "status": "EMPIRICAL_OR_ADDITIONAL_LAW_REQUIRED"
+    }
+  ],
+  "gates": {
+    "G1_raw_score_lambda_scale_degeneracy_exact": true,
+    "G2_standardized_score_affine_invariant": true,
+    "G3_distinct_lambda_not_gauge_after_standardization": true,
+    "G4_stationary_variance_matches_linear_theory": true,
+    "G5_noise_amplitude_cannot_fix_standardized_kernel": true,
+    "G6_coarse_graining_closure_holds_for_every_lambda": true,
+    "G7_coarse_graining_does_not_select_lambda": true,
+    "G8_lambda_statistically_estimable_given_z_and_kernel": true,
+    "G9_expected_score_map_strictly_monotone": true,
+    "G10_lambda_is_model_parameter_not_current_gauge": true,
+    "G11_no_physical_lambda_value_claimed": true
+  },
+  "verdict": "PASS_LAMBDA_IDENTIFIABLE_BUT_NOT_DERIVED",
+  "logical_conclusion": "Lambda is a gauge convention only when paired with an uncalibrated raw score. Once the local score is standardized, lambda cannot be removed by the accepted positive-affine q gauge and distinct values generate distinct transition laws. The current centered q dynamics and its stationary variance do not select lambda, because amplitude normalization removes the noise scale. Coarse-graining closure also holds for every lambda. Lambda is therefore an identifiable phenomenological parameter conditional on the exponential standardized-score model, but its physical value is not derived.",
+  "interpretation_boundary": "A27 does not prove that standardized q is the correct physical score or that lambda is fundamental. Estimability from an assumed kernel is not a derivation of that kernel or of its physical units."
+}

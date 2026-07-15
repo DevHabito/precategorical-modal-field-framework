@@ -1,0 +1,9 @@
+transformed_model,kernel,number_runs,prefix_identity_rate,final_identity_rate,path_hash_identity_rate,action_hash_identity_rate,transitivity_rate
+beta_skew,history_reinforced,250,1.0,1.0,1.0,1.0,1.0
+beta_skew,principal_ideal,250,1.0,1.0,1.0,1.0,1.0
+beta_skew,random_downset,250,1.0,1.0,1.0,1.0,1.0
+beta_skew,two_ideal_union,250,1.0,1.0,1.0,1.0,1.0
+power_anisotropic,history_reinforced,250,1.0,1.0,1.0,1.0,1.0
+power_anisotropic,principal_ideal,250,1.0,1.0,1.0,1.0,1.0
+power_anisotropic,random_downset,250,1.0,1.0,1.0,1.0,1.0
+power_anisotropic,two_ideal_union,250,1.0,1.0,1.0,1.0,1.0

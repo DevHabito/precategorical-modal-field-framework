@@ -1,0 +1,7 @@
+construction,contextual_normalization,refinement_consistent,near_zero_multiplicity_available,extra_structure,status
+unweighted raw exponential,False,False,False,implicit unit mass per listed alternative,CLONE_SENSITIVE
+unweighted row z-score,True,False,False,implicit unit mass per listed alternative,CONTEXT_AND_CLONE_SENSITIVE
+mass-weighted raw exponential,False,True,True,positive additive base mass mu,PROJECTIVELY_CONSISTENT
+mass-weighted row z-score,True,True,True,positive additive base mass mu,PROJECTIVELY_CONSISTENT_CONTEXTUAL_LAW
+unweighted z-score at high iid degree,True,False,False,iid environmental assumption,ASYMPTOTICALLY_STABLE_NOT_EXACT
+RZS physical interpretation of mu,,,,not derived,OPEN

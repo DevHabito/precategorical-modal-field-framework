@@ -1,0 +1,9 @@
+code,number_scc,standard_ranked,cover_potential_exists,number_comparable_pairs,number_comparable_triples,longest_additive_all_triples,volume_additive_all_triples,rank_matches_longest,cover_potential_matches_longest,maximum_longest_duration,maximum_interval_duration,mean_longest_defect,mean_volume_defect,longest_histogram,volume_histogram,control,edge_count
+1040187392,5,True,True,0,0,True,True,True,True,0,0,0.0,0.0,"[0, 0, 0, 0]","[0, 0, 0, 0]",empty,0
+33554432,1,True,True,0,0,True,True,True,True,0,0,0.0,0.0,"[0, 0, 0, 0]","[0, 0, 0, 0]",complete,20
+1040737182,5,True,True,10,10,True,True,True,True,4,4,0.0,0.0,"[np.int64(4), np.int64(3), np.int64(2), np.int64(1)]","[np.int64(4), np.int64(3), np.int64(2), np.int64(1)]",directed_path,4
+33554432,1,True,True,0,0,True,True,True,True,0,0,0.0,0.0,"[0, 0, 0, 0]","[0, 0, 0, 0]",directed_cycle,5
+1040737182,5,True,True,10,10,True,True,True,True,4,4,0.0,0.0,"[np.int64(4), np.int64(3), np.int64(2), np.int64(1)]","[np.int64(4), np.int64(3), np.int64(2), np.int64(1)]",total_order,10
+1040195854,5,True,True,5,2,True,False,True,True,2,3,0.0,1.0,"[np.int64(4), np.int64(1), np.int64(0), np.int64(0)]","[np.int64(4), np.int64(0), np.int64(1), np.int64(0)]",diamond,4
+1040736798,5,False,False,8,5,False,False,True,True,3,4,0.2,0.8,"[np.int64(5), np.int64(2), np.int64(1), np.int64(0)]","[np.int64(5), np.int64(2), np.int64(0), np.int64(1)]",unequal_branches,5
+167772164,2,True,True,1,0,True,True,True,True,1,1,0.0,0.0,"[np.int64(1), np.int64(0), np.int64(0), np.int64(0)]","[np.int64(1), np.int64(0), np.int64(0), np.int64(0)]",two_scc_modules,6

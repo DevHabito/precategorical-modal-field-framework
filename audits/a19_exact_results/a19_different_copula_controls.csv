@@ -1,0 +1,4 @@
+first_copula,second_copula,marginal,total_variation,jensen_shannon_bits,chi_square,degrees_freedom,p_value,log10_p_value
+independence,gaussian_positive,uniform,0.48701000000000005,0.2423956806974493,60386.628229361224,719,0.0,-inf
+independence,gaussian_negative,uniform,0.48550000000000004,0.24074843518714562,59973.37136745668,719,0.0,-inf
+gaussian_positive,gaussian_negative,uniform,0.81213,0.6531544446357991,143422.23729473207,719,0.0,-inf

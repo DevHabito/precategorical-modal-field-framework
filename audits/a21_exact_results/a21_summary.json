@@ -1,0 +1,143 @@
+{
+  "seed": 20260724,
+  "initial_n": 24,
+  "growth_steps": 40,
+  "coupled_samples": 250,
+  "transformed_models": [
+    "power_anisotropic",
+    "beta_skew"
+  ],
+  "endogenous_kernels": [
+    "principal_ideal",
+    "two_ideal_union",
+    "random_downset",
+    "history_reinforced"
+  ],
+  "exogenous_control": {
+    "selection_rule": "anchor probability proportional to exp(7.0 * calibrated_mark)",
+    "new_mark_rule": "fresh latent U transformed by the same marginal representative",
+    "interpretation": "mathematical witness of a non-invariant primitive, not a physical proposal"
+  },
+  "kernel_results": [
+    {
+      "transformed_model": "beta_skew",
+      "kernel": "history_reinforced",
+      "number_runs": 250,
+      "prefix_identity_rate": 1.0,
+      "final_identity_rate": 1.0,
+      "path_hash_identity_rate": 1.0,
+      "action_hash_identity_rate": 1.0,
+      "transitivity_rate": 1.0
+    },
+    {
+      "transformed_model": "beta_skew",
+      "kernel": "principal_ideal",
+      "number_runs": 250,
+      "prefix_identity_rate": 1.0,
+      "final_identity_rate": 1.0,
+      "path_hash_identity_rate": 1.0,
+      "action_hash_identity_rate": 1.0,
+      "transitivity_rate": 1.0
+    },
+    {
+      "transformed_model": "beta_skew",
+      "kernel": "random_downset",
+      "number_runs": 250,
+      "prefix_identity_rate": 1.0,
+      "final_identity_rate": 1.0,
+      "path_hash_identity_rate": 1.0,
+      "action_hash_identity_rate": 1.0,
+      "transitivity_rate": 1.0
+    },
+    {
+      "transformed_model": "beta_skew",
+      "kernel": "two_ideal_union",
+      "number_runs": 250,
+      "prefix_identity_rate": 1.0,
+      "final_identity_rate": 1.0,
+      "path_hash_identity_rate": 1.0,
+      "action_hash_identity_rate": 1.0,
+      "transitivity_rate": 1.0
+    },
+    {
+      "transformed_model": "power_anisotropic",
+      "kernel": "history_reinforced",
+      "number_runs": 250,
+      "prefix_identity_rate": 1.0,
+      "final_identity_rate": 1.0,
+      "path_hash_identity_rate": 1.0,
+      "action_hash_identity_rate": 1.0,
+      "transitivity_rate": 1.0
+    },
+    {
+      "transformed_model": "power_anisotropic",
+      "kernel": "principal_ideal",
+      "number_runs": 250,
+      "prefix_identity_rate": 1.0,
+      "final_identity_rate": 1.0,
+      "path_hash_identity_rate": 1.0,
+      "action_hash_identity_rate": 1.0,
+      "transitivity_rate": 1.0
+    },
+    {
+      "transformed_model": "power_anisotropic",
+      "kernel": "random_downset",
+      "number_runs": 250,
+      "prefix_identity_rate": 1.0,
+      "final_identity_rate": 1.0,
+      "path_hash_identity_rate": 1.0,
+      "action_hash_identity_rate": 1.0,
+      "transitivity_rate": 1.0
+    },
+    {
+      "transformed_model": "power_anisotropic",
+      "kernel": "two_ideal_union",
+      "number_runs": 250,
+      "prefix_identity_rate": 1.0,
+      "final_identity_rate": 1.0,
+      "path_hash_identity_rate": 1.0,
+      "action_hash_identity_rate": 1.0,
+      "transitivity_rate": 1.0
+    }
+  ],
+  "exogenous_results": [
+    {
+      "transformed_model": "beta_skew",
+      "number_runs": 250,
+      "mark_difference_rate": 1.0,
+      "trajectory_divergence_rate": 1.0,
+      "final_relation_difference_rate": 1.0,
+      "anchor_sequence_difference_rate": 1.0,
+      "median_first_divergence_step": 2.0,
+      "maximum_first_divergence_step": 16,
+      "transitivity_rate": 1.0
+    },
+    {
+      "transformed_model": "power_anisotropic",
+      "number_runs": 250,
+      "mark_difference_rate": 1.0,
+      "trajectory_divergence_rate": 1.0,
+      "final_relation_difference_rate": 1.0,
+      "anchor_sequence_difference_rate": 1.0,
+      "median_first_divergence_step": 1.0,
+      "maximum_first_divergence_step": 15,
+      "transitivity_rate": 1.0
+    }
+  ],
+  "gates": {
+    "G1_initial_relations_identical": true,
+    "G2_all_endogenous_prefixes_identical": true,
+    "G3_all_endogenous_final_relations_identical": true,
+    "G4_endogenous_path_and_action_hashes_identical": true,
+    "G5_history_dependent_kernel_identical": true,
+    "G6_all_generated_relations_transitive": true,
+    "G7_exogenous_marks_change": true,
+    "G8_exogenous_kernel_breaks_trajectory_identity": true,
+    "G9_exogenous_divergence_occurs_early": true,
+    "G10_equivariance_and_symmetry_breaking_theorems_proved": true,
+    "G11_no_physical_dynamics_claimed": true
+  },
+  "verdict": "PASS_ENDOGENOUS_RELATIONAL_EQUIVARIANCE",
+  "logical_conclusion": "Any stochastic or deterministic dynamics whose complete state and update law are measurable from the relational history and model-independent randomness is equivariant under transformations that preserve the initial relation. Its entire order-valued trajectory therefore cannot select a preferred marginal or conformal-volume representative. A symmetry-breaking transition requires an additional non-invariant primitive.",
+  "interpretation_boundary": "The theorem identifies a no-go class and a necessary route around it. It does not establish that a physically justified non-invariant primitive exists in the pre-categorical theory."
+}

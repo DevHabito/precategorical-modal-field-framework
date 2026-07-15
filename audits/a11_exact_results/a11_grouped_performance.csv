@@ -1,0 +1,5 @@
+dimension,null_family,number_samples,balanced_accuracy
+2,transitive_percolation,30,0.5
+2,three_layer,30,1.0
+3,transitive_percolation,30,0.95
+3,three_layer,30,0.8

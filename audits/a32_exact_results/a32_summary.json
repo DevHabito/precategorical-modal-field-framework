@@ -1,0 +1,78 @@
+{
+  "seed": 20260806,
+  "aggregate_results": {
+    "maximum_projective_error": 4.440892098500626e-16,
+    "maximum_schedule_error": 2.220446049250313e-16,
+    "atomic_path_mass_depth160": 0.5031055900621119,
+    "non_atomic_max_leaf_bound_depth20": 0.011529215046068483,
+    "binary_measure_tv_depth16": 0.5974374851853119,
+    "maximum_martingale_tail_relative_error": 0.0036366224256910895,
+    "constant_increment_variance_depth128": 128.1022413056
+  },
+  "classification": [
+    {
+      "construction": "finite terminal leaves",
+      "measure_exists": true,
+      "terminality_required": true,
+      "atomicity": "possible",
+      "status": "FINITE_ATOMIC_MODEL"
+    },
+    {
+      "construction": "uniform infinite binary refinement",
+      "measure_exists": true,
+      "terminality_required": false,
+      "atomicity": false,
+      "status": "NONATOMIC_PROJECTIVE_LIMIT"
+    },
+    {
+      "construction": "telescoping distinguished path",
+      "measure_exists": true,
+      "terminality_required": false,
+      "atomicity": true,
+      "status": "ATOM_WITHOUT_TERMINAL_LEAF"
+    },
+    {
+      "construction": "arbitrary consistent split fractions",
+      "measure_exists": true,
+      "terminality_required": false,
+      "atomicity": "depends on products",
+      "status": "MEASURE_FAMILY_UNDERDETERMINED"
+    },
+    {
+      "construction": "square-summable martingale q increments",
+      "measure_exists": "given path measure",
+      "terminality_required": false,
+      "atomicity": "independent issue",
+      "status": "L2_CONVERGENT_MARK_WITNESS"
+    },
+    {
+      "construction": "constant q increments",
+      "measure_exists": "given path measure",
+      "terminality_required": false,
+      "atomicity": "independent issue",
+      "status": "NO_L2_MARK_LIMIT"
+    },
+    {
+      "construction": "actual RZS refinement ontology",
+      "measure_exists": null,
+      "terminality_required": null,
+      "atomicity": null,
+      "status": "NOT_DERIVED"
+    }
+  ],
+  "gates": {
+    "G1_projective_limit_conditions_stated": true,
+    "G2_finite_level_mass_consistency": true,
+    "G3_refinement_schedule_independent": true,
+    "G4_nonatomic_infinite_refinement_witness": true,
+    "G5_atom_without_terminal_leaf_witness": true,
+    "G6_projective_consistency_does_not_select_measure": true,
+    "G7_square_summable_mark_increments_l2_converge": true,
+    "G8_constant_increment_control_not_l2_cauchy": true,
+    "G9_atomicity_and_terminality_distinguished": true,
+    "G10_no_rzs_infinite_tree_or_physical_measure_claimed": true
+  },
+  "verdict": "PASS_INFINITE_PROJECTIVE_MEASURE_WITH_TERMINALITY_UNDERDETERMINED",
+  "logical_conclusion": "A consistent finitely branching refinement family can define a probability measure on infinite paths without terminal leaves. Terminality is neither necessary for measure existence nor equivalent to atomicity: infinite nonterminal systems may be non-atomic or contain atoms. Consistency does not select the split fractions, so the limiting measure remains underdetermined. A scalar refinement mark can converge in L2 when its conditional variance budget is summable, but this is an additional mark-extension law.",
+  "interpretation_boundary": "A32 establishes conditional mathematical constructions. It does not demonstrate an actual RZS refinement tree, physical atoms, physical continuity, or a law selecting branch fractions and q increments."
+}

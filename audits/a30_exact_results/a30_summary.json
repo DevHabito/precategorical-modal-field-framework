@@ -1,0 +1,147 @@
+{
+  "seed": 20260804,
+  "n_values": [
+    10,
+    20,
+    40
+  ],
+  "graph_samples_per_n": 180,
+  "derived_measure_results": [
+    {
+      "measure": "degree",
+      "refinement_consistency_rate": 0.0,
+      "median_macro_tv": 0.12474548187939405,
+      "maximum_macro_tv": 0.30963302752293576
+    },
+    {
+      "measure": "q_node_softmax",
+      "refinement_consistency_rate": 0.0,
+      "median_macro_tv": 0.11111679569039579,
+      "maximum_macro_tv": 0.3959475164026313
+    },
+    {
+      "measure": "q_stationary",
+      "refinement_consistency_rate": 0.0,
+      "median_macro_tv": 0.06489170022801645,
+      "maximum_macro_tv": 0.46820333826727306
+    },
+    {
+      "measure": "relation_stationary",
+      "refinement_consistency_rate": 0.0,
+      "median_macro_tv": 0.09921283175843429,
+      "maximum_macro_tv": 0.36569456581549276
+    },
+    {
+      "measure": "uniform_count",
+      "refinement_consistency_rate": 0.0,
+      "median_macro_tv": 0.10833333333333334,
+      "maximum_macro_tv": 0.3
+    }
+  ],
+  "q_information_results": [
+    {
+      "measure": "q_node_softmax",
+      "median_same_relation_tv": 0.16466301438580827,
+      "minimum_same_relation_tv": 0.09141497443560548
+    },
+    {
+      "measure": "q_stationary",
+      "median_same_relation_tv": 0.30741930696996334,
+      "minimum_same_relation_tv": 0.03804097065147667
+    }
+  ],
+  "semantic_ambiguity": {
+    "minimum_tv": 0.031182795698924737,
+    "maximum_tv": 0.45
+  },
+  "explicit_additive_measure": {
+    "maximum_macro_error": 1.1102230246251565e-16,
+    "consistency_rate": 1.0
+  },
+  "projective_transport": {
+    "maximum_macro_error": 3.0531133177191805e-16,
+    "maximum_conservation_error": 3.6637359812630166e-15
+  },
+  "classification": [
+    {
+      "candidate": "uniform counting",
+      "independent_of_order": false,
+      "contains_q_information": false,
+      "refinement_consistent": false,
+      "requires_extra_semantics": false,
+      "status": "REPRESENTATION_COUNTING"
+    },
+    {
+      "candidate": "degree-derived mass",
+      "independent_of_order": false,
+      "contains_q_information": false,
+      "refinement_consistent": false,
+      "requires_extra_semantics": false,
+      "status": "ORDER_REDUNDANT_AND_CLONE_SENSITIVE"
+    },
+    {
+      "candidate": "relation-only stationary distribution",
+      "independent_of_order": false,
+      "contains_q_information": false,
+      "refinement_consistent": false,
+      "requires_extra_semantics": false,
+      "status": "ORDER_DERIVED_AND_CLONE_SENSITIVE"
+    },
+    {
+      "candidate": "q-dependent stationary distribution",
+      "independent_of_order": true,
+      "contains_q_information": true,
+      "refinement_consistent": false,
+      "requires_extra_semantics": false,
+      "status": "NEW_INFORMATION_BUT_NOT_PROJECTIVE"
+    },
+    {
+      "candidate": "q-node softmax mass",
+      "independent_of_order": true,
+      "contains_q_information": true,
+      "refinement_consistent": false,
+      "requires_extra_semantics": false,
+      "status": "NEW_INFORMATION_BUT_CLONE_SENSITIVE"
+    },
+    {
+      "candidate": "explicit additive multiplicity",
+      "independent_of_order": true,
+      "contains_q_information": false,
+      "refinement_consistent": true,
+      "requires_extra_semantics": true,
+      "status": "PROJECTIVE_EXTRA_PRIMITIVE"
+    },
+    {
+      "candidate": "projectively lifted conserved transport",
+      "independent_of_order": "depends on supplied kernel and initial mass",
+      "contains_q_information": "optional",
+      "refinement_consistent": true,
+      "requires_extra_semantics": true,
+      "status": "CONSISTENT_WITH_REFINEMENT_MAP"
+    },
+    {
+      "candidate": "stationary solution of a mu-dependent kernel",
+      "independent_of_order": null,
+      "contains_q_information": null,
+      "refinement_consistent": null,
+      "requires_extra_semantics": true,
+      "status": "IMPLICIT_SIMULTANEOUS_LAW_NOT_A_DERIVATION"
+    }
+  ],
+  "gates": {
+    "G1_refinement_semantic_ambiguity_theorem_proved": true,
+    "G2_same_refined_structure_supports_incompatible_semantics": true,
+    "G3_order_derived_candidates_fail_refinement": true,
+    "G4_q_derived_candidates_fail_refinement": true,
+    "G5_q_derived_measures_contain_information_beyond_relation": true,
+    "G6_explicit_additive_mass_exactly_refinement_consistent": true,
+    "G7_projective_transport_exactly_preserves_macro_mass": true,
+    "G8_projective_transport_conserves_total_mass": true,
+    "G9_order_derived_measure_is_not_independent_primitive": true,
+    "G10_stationary_measure_from_mu_dependent_kernel_not_accepted_as_derivation": true,
+    "G11_no_physical_volume_or_matter_measure_claimed": true
+  },
+  "verdict": "PASS_BASE_MEASURE_ORIGIN_REQUIRES_EXTRA_REFINEMENT_SEMANTICS",
+  "logical_conclusion": "The bare refined relation and q marks do not determine whether structurally identical alternatives are descriptive clones or ontically distinct states. Counting, degree, and stationary order-derived measures are relational summaries and fail exact refinement consistency. q-dependent stationary and node-score measures add information beyond the order but also fail projective refinement. Exact consistency is achieved by an explicit additive multiplicity or by a stochastic transport equipped with a refinement map and split fractions. Therefore the base measure required by A29 cannot be derived from the bare unweighted refined structure alone.",
+  "interpretation_boundary": "A30 proves a semantic and identifiability requirement, not the existence of physical microstates or volume. A refinement map, multiplicity count, or projectively specified flow is additional structure whose physical origin remains open."
+}

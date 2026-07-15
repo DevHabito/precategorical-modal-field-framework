@@ -1,0 +1,7 @@
+question,answer,status
+Can lambda be absorbed into an unstandardized score?,yes,RAW_SCORE_SCALE_DEGENERACY
+Can lambda be absorbed after local standardization?,"no, unless the normalization convention itself is changed",IDENTIFIABLE_MODEL_PARAMETER
+Does stationary q variance fix lambda?,no,DYNAMICS_AMPLITUDE_CANCELLED_BY_STANDARDIZATION
+Does coarse-graining closure fix lambda?,no,CLOSURE_FOR_ALL_POSITIVE_LAMBDA
+Can transition data estimate lambda?,"yes, conditional on known z and accepted exponential law",PHENOMENOLOGICALLY_ESTIMABLE
+Is a physical numerical lambda derived?,no,EMPIRICAL_OR_ADDITIONAL_LAW_REQUIRED

@@ -1,0 +1,10 @@
+principle,selects_gaussian,strength,missing_input,status
+maximum entropy with fixed variance,True,conditional,reference measure and variance constraint,CONDITIONAL_SELECTION
+exact iid sqrt-sum stability plus finite variance,True,exact theorem,exact iid stability axiom,STRONG_EXACT_SELECTION
+finite-variance iid CLT,asymptotically,conditional asymptotic,independence or Lindeberg conditions,ASYMPTOTIC_SELECTION
+centering,False,linear projection,full innovation law,NONSELECTIVE
+rotational invariance,False,symmetry only,component independence,NONSELECTIVE
+rotational invariance plus independent components,True,Maxwell-type theorem,strong symmetry and independence,STRONG_EXACT_SELECTION
+infinite divisibility,False,broad class,stability or variance axioms,NONSELECTIVE
+dimension projectivity plus rotational invariance,False,admits scale mixtures,independence or fixed radial scale,NONSELECTIVE
+current RZS noise contract,False,centered amplitude only,innovation law,UNDERDETERMINED

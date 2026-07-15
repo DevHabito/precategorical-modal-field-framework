@@ -1,0 +1,7 @@
+construction,path_independent,ontology_supplied,status
+fixed weighted terminal leaves,True,True,UNIQUE_PROJECTIVE_MEASURE
+equal-weight terminal leaves,True,True,CONDITIONAL_COUNTING_MEASURE
+conservative mass split,True,True,DESCRIPTIVE_REFINEMENT
+fresh unit mass per child,history dependent,False,ONTIC_MULTIPLICITY_CREATION
+bare coarse relation,,False,TERMINAL_ONTOLOGY_UNDERDETERMINED
+mass-weighted q aggregates,True,True,MARKED_PROJECTIVE_OBSERVABLES

@@ -1,0 +1,11 @@
+{
+  "n_vertices": 5,
+  "number_of_possible_edges": 20,
+  "number_of_labeled_graphs": 1048576,
+  "number_of_labeled_degree_fibers": 225025,
+  "fibers_with_more_than_one_graph": 136793,
+  "fibers_with_residual_variation": 93167,
+  "fibers_with_full_profile_variation": 95053,
+  "largest_fiber_size": 216,
+  "median_nontrivial_fiber_size": 4.0
+}

@@ -1,0 +1,7 @@
+m,n,rows_u_m,cols_u_n,rank,affine_image_dimension,distinct_columns,pure_m_classes_extendible
+1,2,1,3,1,0,1,1
+1,3,1,16,1,0,1,1
+1,4,1,218,1,0,1,1
+2,3,3,16,3,2,10,3
+2,4,3,218,3,2,28,3
+3,4,16,218,16,15,210,9

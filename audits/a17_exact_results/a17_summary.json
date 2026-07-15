@@ -1,0 +1,138 @@
+{
+  "seed": 20260718,
+  "discovery_n": 192,
+  "prospective_confirmation_n": 256,
+  "local_scales": [
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "local_estimation_samples_per_scale": 180,
+  "local_calibration_samples_per_scale": 180,
+  "parent_estimation_samples": {
+    "192": 36,
+    "256": 36
+  },
+  "parent_calibration_samples": {
+    "192": 36,
+    "256": 36
+  },
+  "family_results": [
+    {
+      "n": 192,
+      "phase": "discovery",
+      "family": "bimodal_clusters",
+      "number_samples": 24,
+      "acceptance_rate": 0.9583333333333334,
+      "rejection_rate": 0.04166666666666663,
+      "median_p_value": 0.527027027027027,
+      "maximum_p_value": 0.972972972972973,
+      "maximum_ordering_fraction_mismatch": 0.004853839441535779,
+      "all_exact_product_orders_2d": true
+    },
+    {
+      "n": 192,
+      "phase": "discovery",
+      "family": "four_corner_clusters",
+      "number_samples": 24,
+      "acceptance_rate": 0.9583333333333334,
+      "rejection_rate": 0.04166666666666663,
+      "median_p_value": 0.527027027027027,
+      "maximum_p_value": 0.972972972972973,
+      "maximum_ordering_fraction_mismatch": 0.025141797556719025,
+      "all_exact_product_orders_2d": true
+    },
+    {
+      "n": 192,
+      "phase": "discovery",
+      "family": "minkowski_holdout",
+      "number_samples": 24,
+      "acceptance_rate": 1.0,
+      "rejection_rate": 0.0,
+      "median_p_value": 0.47297297297297297,
+      "maximum_p_value": 0.972972972972973,
+      "maximum_ordering_fraction_mismatch": 0.0,
+      "all_exact_product_orders_2d": true
+    },
+    {
+      "n": 192,
+      "phase": "discovery",
+      "family": "opposing_diagonal_bands",
+      "number_samples": 24,
+      "acceptance_rate": 0.0,
+      "rejection_rate": 1.0,
+      "median_p_value": 0.02702702702702703,
+      "maximum_p_value": 0.02702702702702703,
+      "maximum_ordering_fraction_mismatch": 0.013743455497382207,
+      "all_exact_product_orders_2d": true
+    },
+    {
+      "n": 256,
+      "phase": "prospective_confirmation",
+      "family": "bimodal_clusters",
+      "number_samples": 24,
+      "acceptance_rate": 0.9583333333333334,
+      "rejection_rate": 0.04166666666666663,
+      "median_p_value": 0.527027027027027,
+      "maximum_p_value": 0.8648648648648649,
+      "maximum_ordering_fraction_mismatch": 0.004993872549019618,
+      "all_exact_product_orders_2d": true
+    },
+    {
+      "n": 256,
+      "phase": "prospective_confirmation",
+      "family": "four_corner_clusters",
+      "number_samples": 24,
+      "acceptance_rate": 1.0,
+      "rejection_rate": 0.0,
+      "median_p_value": 0.6486486486486487,
+      "maximum_p_value": 0.972972972972973,
+      "maximum_ordering_fraction_mismatch": 0.015318627450980449,
+      "all_exact_product_orders_2d": true
+    },
+    {
+      "n": 256,
+      "phase": "prospective_confirmation",
+      "family": "minkowski_holdout",
+      "number_samples": 24,
+      "acceptance_rate": 1.0,
+      "rejection_rate": 0.0,
+      "median_p_value": 0.7027027027027027,
+      "maximum_p_value": 0.972972972972973,
+      "maximum_ordering_fraction_mismatch": 0.0,
+      "all_exact_product_orders_2d": true
+    },
+    {
+      "n": 256,
+      "phase": "prospective_confirmation",
+      "family": "opposing_diagonal_bands",
+      "number_samples": 24,
+      "acceptance_rate": 0.0,
+      "rejection_rate": 1.0,
+      "median_p_value": 0.02702702702702703,
+      "maximum_p_value": 0.02702702702702703,
+      "maximum_ordering_fraction_mismatch": 0.018566176470588225,
+      "all_exact_product_orders_2d": true
+    }
+  ],
+  "gates": {
+    "G1_local_reference_covariances_stable": true,
+    "G2_parent_covariances_stable": true,
+    "G3_minkowski_acceptance_ge_0_90": true,
+    "G4_opposing_regime_rejection_ge_0_90": true,
+    "G5_bimodal_cluster_rejection_ge_0_80": false,
+    "G6_four_corner_rejection_ge_0_80": false,
+    "G7_density_matching_le_0_02": false,
+    "G8_all_challenges_are_exact_2d_orders": true,
+    "G9_no_challenge_used_for_calibration": true
+  },
+  "verdict": "FAIL_MULTISCALE_SELF_SIMILARITY",
+  "secondary_interpretation": {
+    "order_regime_heterogeneity_detected": true,
+    "compact_cluster_degeneracy_observed": true,
+    "meaning": "The self-similarity statistic can detect mixtures of strongly different local order regimes, but compact exact-2D clusters may remain statistically compatible with uniform anchored intervals. Such acceptance is consistent with a conformal-volume or sampling-measure identifiability boundary."
+  },
+  "interpretation_boundary": "The test addresses self-similarity relative to a uniform anchored 2D Minkowski interval ensemble. It neither proves nor disproves exact causal embeddability, because every challenge family in this audit is explicitly constructed as a 2D product order."
+}

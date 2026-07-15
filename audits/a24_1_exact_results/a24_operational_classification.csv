@@ -1,0 +1,8 @@
+candidate,operational_new_information,reason,status
+q inferred from relation,False,deterministic recoding of observed graph/order,REDUNDANT
+free q with no q-dependent observation,False,latent variation has no observable consequence,EMPIRICALLY_SILENT
+local softmax transition coupling,True,transition odds depend on local q contrasts,MATHEMATICAL_OPERATIONAL_WITNESS
+absolute q offset,False,removed by global and row softmax normalization,GAUGE_UNIDENTIFIABLE
+q contrast with known beta,True,recoverable from log transition odds,STATISTICALLY_IDENTIFIABLE
+q contrast with unknown beta,only beta times contrast,q->a q and beta->beta/a leave observations unchanged,CALIBRATION_DEGENERACY
+actual RZS q,,no independently established measurement or coupling law in this audit,OPERATIONAL_ORIGIN_UNRESOLVED

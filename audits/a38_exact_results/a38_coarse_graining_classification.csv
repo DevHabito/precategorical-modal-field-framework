@@ -1,0 +1,8 @@
+operator,gauge_covariant,refinement_consistent,hierarchically_decomposable,preserves_exponential_kernel,status
+weighted arithmetic mean,True,True,True,False,FIRST_MOMENT_COARSE_GRAINING
+exponential effective score,True,True,True,True,KERNEL_SUFFICIENT_STATIC_MESSAGE
+weighted median,True,True,False,False,ROBUST_BUT_SUMMARY_NOT_CLOSED
+minimum,True,True,True,False,EXTREMAL_TROPICAL_LIMIT
+unweighted mean,True,False,"with counts, not supplied mu",False,COUNTING_MEASURE_DEPENDENT
+macro transition from q alone,kernel dependent,,False,,SOURCE_OCCUPANCY_UNDERDETERMINED
+joint-flow aggregation with supplied pi,inherited from micro kernel,True,True,True,EXACT_DYNAMIC_COARSE_GRAINING_WITH_EXTRA_STATE

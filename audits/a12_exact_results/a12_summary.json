@@ -1,0 +1,362 @@
+{
+  "seed": 20260712,
+  "splits": {
+    "train": 64,
+    "test_96": 96,
+    "test_128": 128
+  },
+  "pairs_per_split": 28,
+  "self_tests": {
+    "chain_is_dim2": true,
+    "antichain_is_dim2": true,
+    "standard_example_S3_is_not_dim2": true
+  },
+  "feature_families": {
+    "interval_abundance": [
+      "interval_k_0",
+      "interval_k_1",
+      "interval_k_2",
+      "interval_k_3",
+      "interval_k_4",
+      "interval_k_5",
+      "interval_logbin_0",
+      "interval_logbin_1",
+      "interval_logbin_2",
+      "interval_logbin_3",
+      "interval_logbin_4",
+      "interval_logbin_5",
+      "interval_open_mean_fraction",
+      "interval_open_median_fraction",
+      "interval_open_q90_fraction"
+    ],
+    "local_dimension_consistency": [
+      "local_dim_abs_median",
+      "local_dim_abs_q90",
+      "local_dim_mad",
+      "local_dim_fraction_within_0_5",
+      "local_dim_scale_drift",
+      "local_dim_valid_fraction"
+    ],
+    "local_2d_embeddability": [
+      "global_dim2_obstruction_fraction",
+      "interval_dim2_obstruction_fraction"
+    ]
+  },
+  "matching": {
+    "maximum_absolute_mismatch": 0.004960317460317498,
+    "mean_absolute_mismatch": 0.0013886343780962246,
+    "required_maximum": 0.02
+  },
+  "evaluations": {
+    "test_96": {
+      "primary_combined": {
+        "features": [
+          "interval_k_0",
+          "interval_k_1",
+          "interval_k_2",
+          "interval_k_3",
+          "interval_k_4",
+          "interval_k_5",
+          "interval_logbin_0",
+          "interval_logbin_1",
+          "interval_logbin_2",
+          "interval_logbin_3",
+          "interval_logbin_4",
+          "interval_logbin_5",
+          "interval_open_mean_fraction",
+          "interval_open_median_fraction",
+          "interval_open_q90_fraction",
+          "local_dim_abs_median",
+          "local_dim_abs_q90",
+          "local_dim_mad",
+          "local_dim_fraction_within_0_5",
+          "local_dim_scale_drift",
+          "local_dim_valid_fraction",
+          "global_dim2_obstruction_fraction",
+          "interval_dim2_obstruction_fraction"
+        ],
+        "balanced_accuracy": 1.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": [
+          [
+            28,
+            0
+          ],
+          [
+            0,
+            28
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "interval_abundance_only": {
+        "features": [
+          "interval_k_0",
+          "interval_k_1",
+          "interval_k_2",
+          "interval_k_3",
+          "interval_k_4",
+          "interval_k_5",
+          "interval_logbin_0",
+          "interval_logbin_1",
+          "interval_logbin_2",
+          "interval_logbin_3",
+          "interval_logbin_4",
+          "interval_logbin_5",
+          "interval_open_mean_fraction",
+          "interval_open_median_fraction",
+          "interval_open_q90_fraction"
+        ],
+        "balanced_accuracy": 1.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": [
+          [
+            28,
+            0
+          ],
+          [
+            0,
+            28
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "local_dimension_only": {
+        "features": [
+          "local_dim_abs_median",
+          "local_dim_abs_q90",
+          "local_dim_mad",
+          "local_dim_fraction_within_0_5",
+          "local_dim_scale_drift",
+          "local_dim_valid_fraction"
+        ],
+        "balanced_accuracy": 0.9464285714285714,
+        "roc_auc": 0.9910714285714286,
+        "confusion_matrix": [
+          [
+            27,
+            1
+          ],
+          [
+            2,
+            26
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          0.875,
+          1.0
+        ]
+      },
+      "local_embeddability_only": {
+        "features": [
+          "global_dim2_obstruction_fraction",
+          "interval_dim2_obstruction_fraction"
+        ],
+        "balanced_accuracy": 0.5178571428571429,
+        "roc_auc": 0.5178571428571428,
+        "confusion_matrix": [
+          [
+            1,
+            27
+          ],
+          [
+            0,
+            28
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          0.5,
+          0.5535714285714286
+        ]
+      },
+      "ordering_fraction_only": {
+        "features": [
+          "ordering_fraction"
+        ],
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.4885204081632653,
+        "confusion_matrix": [
+          [
+            19,
+            9
+          ],
+          [
+            19,
+            9
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    "test_128": {
+      "primary_combined": {
+        "features": [
+          "interval_k_0",
+          "interval_k_1",
+          "interval_k_2",
+          "interval_k_3",
+          "interval_k_4",
+          "interval_k_5",
+          "interval_logbin_0",
+          "interval_logbin_1",
+          "interval_logbin_2",
+          "interval_logbin_3",
+          "interval_logbin_4",
+          "interval_logbin_5",
+          "interval_open_mean_fraction",
+          "interval_open_median_fraction",
+          "interval_open_q90_fraction",
+          "local_dim_abs_median",
+          "local_dim_abs_q90",
+          "local_dim_mad",
+          "local_dim_fraction_within_0_5",
+          "local_dim_scale_drift",
+          "local_dim_valid_fraction",
+          "global_dim2_obstruction_fraction",
+          "interval_dim2_obstruction_fraction"
+        ],
+        "balanced_accuracy": 1.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": [
+          [
+            28,
+            0
+          ],
+          [
+            0,
+            28
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "interval_abundance_only": {
+        "features": [
+          "interval_k_0",
+          "interval_k_1",
+          "interval_k_2",
+          "interval_k_3",
+          "interval_k_4",
+          "interval_k_5",
+          "interval_logbin_0",
+          "interval_logbin_1",
+          "interval_logbin_2",
+          "interval_logbin_3",
+          "interval_logbin_4",
+          "interval_logbin_5",
+          "interval_open_mean_fraction",
+          "interval_open_median_fraction",
+          "interval_open_q90_fraction"
+        ],
+        "balanced_accuracy": 1.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": [
+          [
+            28,
+            0
+          ],
+          [
+            0,
+            28
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "local_dimension_only": {
+        "features": [
+          "local_dim_abs_median",
+          "local_dim_abs_q90",
+          "local_dim_mad",
+          "local_dim_fraction_within_0_5",
+          "local_dim_scale_drift",
+          "local_dim_valid_fraction"
+        ],
+        "balanced_accuracy": 0.9642857142857143,
+        "roc_auc": 1.0,
+        "confusion_matrix": [
+          [
+            28,
+            0
+          ],
+          [
+            2,
+            26
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          0.9107142857142857,
+          1.0
+        ]
+      },
+      "local_embeddability_only": {
+        "features": [
+          "global_dim2_obstruction_fraction",
+          "interval_dim2_obstruction_fraction"
+        ],
+        "balanced_accuracy": 0.5714285714285714,
+        "roc_auc": 0.5714285714285714,
+        "confusion_matrix": [
+          [
+            4,
+            24
+          ],
+          [
+            0,
+            28
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          0.5178571428571429,
+          0.6428571428571429
+        ]
+      },
+      "ordering_fraction_only": {
+        "features": [
+          "ordering_fraction"
+        ],
+        "balanced_accuracy": 0.4821428571428572,
+        "roc_auc": 0.49553571428571436,
+        "confusion_matrix": [
+          [
+            18,
+            10
+          ],
+          [
+            19,
+            9
+          ]
+        ],
+        "paired_bootstrap_95_ci": [
+          0.44642857142857145,
+          0.5
+        ]
+      }
+    }
+  },
+  "gates": {
+    "G1_all_self_tests_pass": true,
+    "G2_max_ordering_fraction_mismatch_le_0_02": true,
+    "G3_balanced_accuracy_n96_ge_0_80": true,
+    "G4_balanced_accuracy_n128_ge_0_80": true,
+    "G5_bootstrap_lower_n96_gt_0_60": true,
+    "G6_bootstrap_lower_n128_gt_0_60": true,
+    "G7_density_baseline_n96_le_0_60": true,
+    "G8_density_baseline_n128_le_0_60": true
+  },
+  "verdict": "PASS_TARGETED_2D_DISCRIMINATION",
+  "interpretation_boundary": "A pass establishes prospective discrimination between finite 2D Minkowski interval orders and individually ordering-fraction-matched transitive-percolation posets at n=96 and n=128. It does not establish that a generic relational domain is a spacetime or that physical time has emerged."
+}

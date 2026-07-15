@@ -1,0 +1,228 @@
+{
+  "seed": 20260715,
+  "discovery_n": [
+    96,
+    128
+  ],
+  "prospective_confirmation_n": 192,
+  "covariance_samples_per_n": 220,
+  "calibration_samples_per_n": 220,
+  "holdout_samples_per_n": 60,
+  "candidates_per_gadget_count_per_n": 60,
+  "gadget_counts": [
+    1,
+    2,
+    3
+  ],
+  "alpha": 0.05,
+  "certificate": "Every adversary contains an induced S3 standard example. S3 has order dimension 3, so the full poset cannot be a 2D order or an exact finite 1+1 Minkowski causal order.",
+  "construction": "Minkowski core plus density-matched S3 sandwich; prefix and suffix cuts are chosen only by ordering fraction, never by Q.",
+  "self_tests": {
+    "chain_dimension_at_most_two": true,
+    "antichain_dimension_at_most_two": true,
+    "s3_not_dimension_at_most_two": true
+  },
+  "size_results": [
+    {
+      "n": 96,
+      "phase": "discovery",
+      "number_bins": 36,
+      "covariance_condition_number": 655.6119269090591,
+      "covariance_minimum_eigenvalue": 5.579859782757162e-07,
+      "ledoit_wolf_shrinkage": 0.02565667968456874,
+      "holdout_minkowski_acceptance_rate": 0.95,
+      "model_gate_pass": true,
+      "gadget_results": [
+        {
+          "gadget_count": 1,
+          "gadget_vertex_fraction": 0.0625,
+          "number_candidates": 60,
+          "accepted_count": 42,
+          "acceptance_rate": 0.7,
+          "acceptance_wilson_95": [
+            0.5749129205308552,
+            0.8010183386123089
+          ],
+          "median_p_value": 0.1425339366515837,
+          "maximum_p_value": 0.8235294117647058,
+          "median_q_score": 50.0340760406433,
+          "maximum_ordering_fraction_mismatch": 0.06666666666666665,
+          "all_transitive": true,
+          "all_induced_s3_certified": true
+        },
+        {
+          "gadget_count": 2,
+          "gadget_vertex_fraction": 0.125,
+          "number_candidates": 60,
+          "accepted_count": 4,
+          "acceptance_rate": 0.06666666666666667,
+          "acceptance_wilson_95": [
+            0.026228698724506214,
+            0.1592535731319717
+          ],
+          "median_p_value": 0.004524886877828055,
+          "maximum_p_value": 0.5384615384615384,
+          "median_q_score": 125.62676895820606,
+          "maximum_ordering_fraction_mismatch": 0.023684210526315808,
+          "all_transitive": true,
+          "all_induced_s3_certified": true
+        },
+        {
+          "gadget_count": 3,
+          "gadget_vertex_fraction": 0.1875,
+          "number_candidates": 60,
+          "accepted_count": 0,
+          "acceptance_rate": 0.0,
+          "acceptance_wilson_95": [
+            0.0,
+            0.06017185214208986
+          ],
+          "median_p_value": 0.004524886877828055,
+          "maximum_p_value": 0.004524886877828055,
+          "median_q_score": 260.5152145157427,
+          "maximum_ordering_fraction_mismatch": 0.0017543859649122862,
+          "all_transitive": true,
+          "all_induced_s3_certified": true
+        }
+      ]
+    },
+    {
+      "n": 128,
+      "phase": "discovery",
+      "number_bins": 54,
+      "covariance_condition_number": 976.3910837181841,
+      "covariance_minimum_eigenvalue": 2.045747615792907e-07,
+      "ledoit_wolf_shrinkage": 0.02509303905015132,
+      "holdout_minkowski_acceptance_rate": 0.9333333333333333,
+      "model_gate_pass": true,
+      "gadget_results": [
+        {
+          "gadget_count": 1,
+          "gadget_vertex_fraction": 0.046875,
+          "number_candidates": 60,
+          "accepted_count": 35,
+          "acceptance_rate": 0.5833333333333334,
+          "acceptance_wilson_95": [
+            0.45728081022640116,
+            0.6993572144165838
+          ],
+          "median_p_value": 0.08144796380090498,
+          "maximum_p_value": 0.9864253393665159,
+          "median_q_score": 84.0621486591178,
+          "maximum_ordering_fraction_mismatch": 0.07763287401574803,
+          "all_transitive": true,
+          "all_induced_s3_certified": true
+        },
+        {
+          "gadget_count": 2,
+          "gadget_vertex_fraction": 0.09375,
+          "number_candidates": 60,
+          "accepted_count": 5,
+          "acceptance_rate": 0.08333333333333333,
+          "acceptance_wilson_95": [
+            0.03612045660173077,
+            0.1806894201833441
+          ],
+          "median_p_value": 0.004524886877828055,
+          "maximum_p_value": 0.7058823529411765,
+          "median_q_score": 161.69896618928047,
+          "maximum_ordering_fraction_mismatch": 0.0007381889763779514,
+          "all_transitive": true,
+          "all_induced_s3_certified": true
+        },
+        {
+          "gadget_count": 3,
+          "gadget_vertex_fraction": 0.140625,
+          "number_candidates": 60,
+          "accepted_count": 0,
+          "acceptance_rate": 0.0,
+          "acceptance_wilson_95": [
+            0.0,
+            0.06017185214208986
+          ],
+          "median_p_value": 0.004524886877828055,
+          "maximum_p_value": 0.004524886877828055,
+          "median_q_score": 287.1870797665075,
+          "maximum_ordering_fraction_mismatch": 0.001107283464566955,
+          "all_transitive": true,
+          "all_induced_s3_certified": true
+        }
+      ]
+    },
+    {
+      "n": 192,
+      "phase": "prospective_confirmation",
+      "number_bins": 90,
+      "covariance_condition_number": 894.3881901369459,
+      "covariance_minimum_eigenvalue": 7.533087540295374e-08,
+      "ledoit_wolf_shrinkage": 0.03630751738142299,
+      "holdout_minkowski_acceptance_rate": 0.9666666666666667,
+      "model_gate_pass": true,
+      "gadget_results": [
+        {
+          "gadget_count": 1,
+          "gadget_vertex_fraction": 0.03125,
+          "number_candidates": 60,
+          "accepted_count": 41,
+          "acceptance_rate": 0.6833333333333333,
+          "acceptance_wilson_95": [
+            0.5576623297382323,
+            0.7869413244763347
+          ],
+          "median_p_value": 0.1990950226244344,
+          "maximum_p_value": 0.9502262443438914,
+          "median_q_score": 134.65596049631597,
+          "maximum_ordering_fraction_mismatch": 0.05279232111692844,
+          "all_transitive": true,
+          "all_induced_s3_certified": true
+        },
+        {
+          "gadget_count": 2,
+          "gadget_vertex_fraction": 0.0625,
+          "number_candidates": 60,
+          "accepted_count": 17,
+          "acceptance_rate": 0.2833333333333333,
+          "acceptance_wilson_95": [
+            0.18506828428432714,
+            0.4076728516439118
+          ],
+          "median_p_value": 0.004524886877828055,
+          "maximum_p_value": 0.7963800904977375,
+          "median_q_score": 196.75337542943458,
+          "maximum_ordering_fraction_mismatch": 0.00027268760907506184,
+          "all_transitive": true,
+          "all_induced_s3_certified": true
+        },
+        {
+          "gadget_count": 3,
+          "gadget_vertex_fraction": 0.09375,
+          "number_candidates": 60,
+          "accepted_count": 2,
+          "acceptance_rate": 0.03333333333333333,
+          "acceptance_wilson_95": [
+            0.009189319256197877,
+            0.113637742743086
+          ],
+          "median_p_value": 0.004524886877828055,
+          "maximum_p_value": 0.37104072398190047,
+          "median_q_score": 337.238974662181,
+          "maximum_ordering_fraction_mismatch": 0.0003817626527050644,
+          "all_transitive": true,
+          "all_induced_s3_certified": true
+        }
+      ]
+    }
+  ],
+  "gates": {
+    "G1_s3_dimension_self_tests": true,
+    "G2_minkowski_model_and_holdout": true,
+    "G3_all_candidates_transitive_and_certified": true,
+    "G4_ordering_fraction_mismatch_le_0_02": false,
+    "G5_systematic_one_gadget_false_positives_discovery": true,
+    "G6_systematic_one_gadget_false_positives_n192": true,
+    "G7_at_least_one_prospective_counterexample": true,
+    "G8_detection_non_decreasing_with_gadget_burden": true
+  },
+  "verdict": "SYSTEMATIC_CERTIFIED_COUNTEREXAMPLES_FOUND_A14_NOT_SUFFICIENT",
+  "interpretation_boundary": "Finding a certified counterexample proves that the tested A14 global interval-abundance statistic is not a sufficient condition for exact 1+1-dimensional Minkowski embeddability. It does not invalidate its value as a global necessary-signature test."
+}

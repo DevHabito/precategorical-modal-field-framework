@@ -1,0 +1,113 @@
+{
+  "seed": 20260730,
+  "functional_samples": 50000,
+  "choice_set_samples": 2000,
+  "detailed_balance_samples": 600,
+  "maximum_entropy_samples": 1000,
+  "rank_iia_violation_rate": 0.903,
+  "functional_results": [
+    {
+      "function": "exp_0_5",
+      "maximum_shift_odds_residual": 8.881784197001252e-16,
+      "median_shift_odds_residual": 5.551115123125783e-17,
+      "maximum_additive_composition_residual": 4.440892098500626e-16,
+      "median_additive_composition_residual": 5.551115123125783e-17
+    },
+    {
+      "function": "exp_1",
+      "maximum_shift_odds_residual": 8.881784197001252e-16,
+      "median_shift_odds_residual": 0.0,
+      "maximum_additive_composition_residual": 5.551115123125783e-16,
+      "median_additive_composition_residual": 5.551115123125783e-17
+    },
+    {
+      "function": "exp_2",
+      "maximum_shift_odds_residual": 1.7763568394002505e-15,
+      "median_shift_odds_residual": 0.0,
+      "maximum_additive_composition_residual": 8.881784197001252e-16,
+      "median_additive_composition_residual": 0.0
+    },
+    {
+      "function": "asinh",
+      "maximum_shift_odds_residual": 1.551212659737236,
+      "median_shift_odds_residual": 0.07992518416780936,
+      "maximum_additive_composition_residual": 0.8727588168464688,
+      "median_additive_composition_residual": 0.045260265278315615
+    },
+    {
+      "function": "logistic",
+      "maximum_shift_odds_residual": 1.8222832536815048,
+      "median_shift_odds_residual": 0.09853630220841332,
+      "maximum_additive_composition_residual": 1.468952040866176,
+      "median_additive_composition_residual": 0.053922538817752885
+    }
+  ],
+  "minimum_pairwise_lambda_tv": 0.1241422925901651,
+  "maximum_pairwise_lambda_tv": 0.726852065855096,
+  "maximum_entropy_results": {
+    "maximum_lambda_error": 9.14823772291129e-14,
+    "maximum_probability_error": 1.7430501486614958e-14,
+    "maximum_feasible_entropy_excess": -2.8821389719269064e-13
+  },
+  "principle_classification": [
+    {
+      "principle": "IIA",
+      "selects": "all positive pointwise weight functions",
+      "unique": false,
+      "hidden_input": "none beyond pointwise score",
+      "status": "NONSELECTIVE"
+    },
+    {
+      "principle": "detailed balance on symmetric weights",
+      "selects": "all positive symmetric edge-weight functions",
+      "unique": false,
+      "hidden_input": "stationary measure follows from row sums",
+      "status": "NONSELECTIVE"
+    },
+    {
+      "principle": "aggregation by total weight",
+      "selects": "all additive positive weight representations",
+      "unique": false,
+      "hidden_input": "choice of weight representation",
+      "status": "NONSELECTIVE"
+    },
+    {
+      "principle": "difference-only odds plus continuity",
+      "selects": "f(z)=C exp(-lambda z)",
+      "unique": "family only",
+      "hidden_input": "cardinal additive score z",
+      "status": "SELECTS_EXPONENTIAL_FAMILY"
+    },
+    {
+      "principle": "maximum entropy with fixed expected score",
+      "selects": "f(z)=exp(-lambda z)",
+      "unique": "yes after target mean m is fixed",
+      "hidden_input": "choice of score and numerical constraint m",
+      "status": "CONDITIONAL_SELECTION"
+    },
+    {
+      "principle": "present RZS postulates alone",
+      "selects": "no unique lambda or target mean",
+      "unique": false,
+      "hidden_input": "missing empirical or dynamical constraint",
+      "status": "LAW_STRENGTH_UNDERDETERMINED"
+    }
+  ],
+  "gates": {
+    "G1_all_pointwise_kernels_satisfy_iia": true,
+    "G2_rank_context_control_violates_iia": true,
+    "G3_detailed_balance_is_nonselective": true,
+    "G4_weight_aggregation_is_nonselective": true,
+    "G5_exponential_family_satisfies_difference_and_composition": true,
+    "G6_nonexponential_controls_fail_exponential_axioms": true,
+    "G7_maximum_entropy_recovers_exponential_solution": true,
+    "G8_maximum_entropy_solution_dominates_feasible_perturbations": true,
+    "G9_lambda_remains_observationally_nonunique": true,
+    "G10_different_constraints_generate_different_lambda": true,
+    "G11_exponential_form_not_physical_strength_claimed": true,
+    "G12_no_unique_rzs_kernel_claimed": true
+  },
+  "verdict": "PASS_EXPONENTIAL_FAMILY_SELECTION_WITH_FREE_STRENGTH",
+  "logical_conclusion": "IIA, detailed balance, and aggregation do not select a unique q-kernel. Continuity plus difference-only odds, equivalently additive composition of weights, selects the exponential family. Maximum entropy reaches the same family only after a numerical expected-score constraint is supplied. Neither route fixes lambda from the current RZS postulates, so the functional form can be justified more strongly than the coupling strength.",
+  "interpretation_boundary": "A26 does not establish that transitions in nature obey the difference-only odds axiom, that standardized q is the correct constraint variable, or that any tested lambda is physical. The result narrows the admissible family without deriving a complete RZS law."
+}

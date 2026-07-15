@@ -1,0 +1,236 @@
+{
+  "seed": 20260808,
+  "contraction": 0.825,
+  "normalized_innovation_sd": 0.5651327277728658,
+  "aggregate_results": {
+    "maximum_exact_gaussian_closure_error": 1.7763568394002505e-15,
+    "matched_null_results": [
+      {
+        "lambda": 0.5,
+        "initial_difference": 0.0047299320995682625,
+        "difference_at_step_1": 0.00225788809448374,
+        "difference_at_step_10": 2.3655434858993463e-06,
+        "difference_at_step_30": 4.911626660941693e-13
+      },
+      {
+        "lambda": 1.0,
+        "initial_difference": 0.02938181393366479,
+        "difference_at_step_1": 0.015071757973841915,
+        "difference_at_step_10": 1.8804105512526537e-05,
+        "difference_at_step_30": 3.928857239543504e-12
+      },
+      {
+        "lambda": 2.0,
+        "initial_difference": 0.1159899248787376,
+        "difference_at_step_1": 0.069586073826584,
+        "difference_at_step_10": 0.0001466909942116068,
+        "difference_at_step_30": 3.1430080760230794e-11
+      }
+    ],
+    "stationary_rademacher_excess_kurtosis": -0.3800669393826702,
+    "maximum_stationary_q_gaussian_error": 0.10118920891340222,
+    "centered_rademacher_excess_by_dimension": [
+      {
+        "dimension": 8,
+        "centered_component_variance": 0.875,
+        "centered_component_kappa4": -1.17578125,
+        "centered_component_excess_kurtosis": -1.5357142857142858
+      },
+      {
+        "dimension": 16,
+        "centered_component_variance": 0.9375,
+        "centered_component_kappa4": -1.54541015625,
+        "centered_component_excess_kurtosis": -1.7583333333333333
+      },
+      {
+        "dimension": 64,
+        "centered_component_variance": 0.984375,
+        "centered_component_kappa4": -1.8779067993164062,
+        "centered_component_excess_kurtosis": -1.9379960317460319
+      },
+      {
+        "dimension": 256,
+        "centered_component_variance": 0.99609375,
+        "centered_component_kappa4": -1.9689327478408813,
+        "centered_component_excess_kurtosis": -1.984405637254902
+      }
+    ],
+    "empirical_gaussian_results": [
+      {
+        "lambda": 0.5,
+        "sample_size": 32,
+        "mean_estimate": -0.2357886875655682,
+        "bias": 0.014211312434431808,
+        "rmse": 0.18728711029429201,
+        "median_absolute_error": 0.12840005239105778,
+        "delta_method_rmse": 0.1884228677362906,
+        "rmse_to_delta_ratio": 0.9939722951059838
+      },
+      {
+        "lambda": 0.5,
+        "sample_size": 128,
+        "mean_estimate": -0.25061985227988237,
+        "bias": -0.0006198522798823784,
+        "rmse": 0.09260833657553524,
+        "median_absolute_error": 0.06171492150885616,
+        "delta_method_rmse": 0.0942114338681453,
+        "rmse_to_delta_ratio": 0.9829840474049711
+      },
+      {
+        "lambda": 0.5,
+        "sample_size": 512,
+        "mean_estimate": -0.24954705198750252,
+        "bias": 0.00045294801249746406,
+        "rmse": 0.04794193180289768,
+        "median_absolute_error": 0.03185575567219123,
+        "delta_method_rmse": 0.04710571693407265,
+        "rmse_to_delta_ratio": 1.017751876486571
+      },
+      {
+        "lambda": 0.5,
+        "sample_size": 2048,
+        "mean_estimate": -0.24983127994614657,
+        "bias": 0.0001687200538534316,
+        "rmse": 0.023969850744293374,
+        "median_absolute_error": 0.016318053082657435,
+        "delta_method_rmse": 0.023552858467036326,
+        "rmse_to_delta_ratio": 1.0177045294880303
+      },
+      {
+        "lambda": 1.0,
+        "sample_size": 32,
+        "mean_estimate": -0.47789906778835506,
+        "bias": 0.022100932211644945,
+        "rmse": 0.2291050751339796,
+        "median_absolute_error": 0.1521108496473922,
+        "delta_method_rmse": 0.23172463645315133,
+        "rmse_to_delta_ratio": 0.9886953698179548
+      },
+      {
+        "lambda": 1.0,
+        "sample_size": 128,
+        "mean_estimate": -0.49352142565195406,
+        "bias": 0.006478574348045909,
+        "rmse": 0.11403668050753839,
+        "median_absolute_error": 0.0768020891501553,
+        "delta_method_rmse": 0.11586231822657567,
+        "rmse_to_delta_ratio": 0.9842430416810137
+      },
+      {
+        "lambda": 1.0,
+        "sample_size": 512,
+        "mean_estimate": -0.49750280983495804,
+        "bias": 0.002497190165041958,
+        "rmse": 0.057936789553081264,
+        "median_absolute_error": 0.03736535317326384,
+        "delta_method_rmse": 0.05793115911328783,
+        "rmse_to_delta_ratio": 1.000097191906387
+      },
+      {
+        "lambda": 1.0,
+        "sample_size": 2048,
+        "mean_estimate": -0.4986216775427403,
+        "bias": 0.0013783224572596904,
+        "rmse": 0.028870139718081177,
+        "median_absolute_error": 0.01957880693047631,
+        "delta_method_rmse": 0.028965579556643917,
+        "rmse_to_delta_ratio": 0.9967050602810794
+      },
+      {
+        "lambda": 2.0,
+        "sample_size": 32,
+        "mean_estimate": -0.8683903019385341,
+        "bias": 0.13160969806146602,
+        "rmse": 0.3511504409680199,
+        "median_absolute_error": 0.25044910050664937,
+        "delta_method_rmse": 0.6470977879223041,
+        "rmse_to_delta_ratio": 0.542654367735502
+      },
+      {
+        "lambda": 2.0,
+        "sample_size": 128,
+        "mean_estimate": -0.9553942268253507,
+        "bias": 0.044605773174649206,
+        "rmse": 0.20631930084834277,
+        "median_absolute_error": 0.1332373667929191,
+        "delta_method_rmse": 0.32354889396115205,
+        "rmse_to_delta_ratio": 0.6376758032531403
+      },
+      {
+        "lambda": 2.0,
+        "sample_size": 512,
+        "mean_estimate": -0.9833110831908531,
+        "bias": 0.01668891680914679,
+        "rmse": 0.12659240495614035,
+        "median_absolute_error": 0.07983087292256075,
+        "delta_method_rmse": 0.16177444698057603,
+        "rmse_to_delta_ratio": 0.7825241088374116
+      },
+      {
+        "lambda": 2.0,
+        "sample_size": 2048,
+        "mean_estimate": -0.995320389982205,
+        "bias": 0.00467961001779498,
+        "rmse": 0.07205542872952281,
+        "median_absolute_error": 0.044337145878548645,
+        "delta_method_rmse": 0.08088722349028801,
+        "rmse_to_delta_ratio": 0.8908134761007637
+      }
+    ]
+  },
+  "classification": [
+    {
+      "case": "Gaussian initial law + Gaussian innovations",
+      "finite_dimensional_closure": true,
+      "state_required": "mean and covariance",
+      "status": "EXACT_GAUSSIAN_CLOSURE"
+    },
+    {
+      "case": "Non-Gaussian initial law + Gaussian innovations",
+      "finite_dimensional_closure": "asymptotic, not finite-time exact",
+      "state_required": "higher cumulants at finite time",
+      "status": "ASYMPTOTIC_GAUSSIANIZATION"
+    },
+    {
+      "case": "Non-Gaussian innovations",
+      "finite_dimensional_closure": false,
+      "state_required": "innovation-dependent higher cumulants",
+      "status": "NONGAUSSIAN_STATIONARY_OBSTRUCTION"
+    },
+    {
+      "case": "Centered non-Gaussian innovations",
+      "finite_dimensional_closure": false,
+      "state_required": "full centered innovation law",
+      "status": "CENTERING_NOT_GAUSSIANIZATION"
+    },
+    {
+      "case": "Finite empirical Gaussian sample",
+      "finite_dimensional_closure": "population law only",
+      "state_required": "sampling uncertainty",
+      "status": "FINITE_SAMPLE_ESTIMATION_ERROR"
+    },
+    {
+      "case": "Current RZS noise contract",
+      "finite_dimensional_closure": null,
+      "state_required": "specified innovation distribution",
+      "status": "GAUSSIANITY_NOT_DERIVED"
+    }
+  ],
+  "gates": {
+    "G1_affine_gaussian_family_exactly_closed": true,
+    "G2_gaussian_q_exactly_mean_variance_functional": true,
+    "G3_same_mean_variance_nongaussian_nulls_differ_at_finite_time": true,
+    "G4_gaussian_innovations_asymptotically_erase_higher_moments": true,
+    "G5_higher_cumulants_decay_under_gaussian_innovations": true,
+    "G6_nongaussian_innovations_generate_nongaussian_stationary_law": true,
+    "G7_nongaussian_stationary_q_differs_from_gaussian_closure": true,
+    "G8_centering_does_not_gaussianize_rademacher_noise": true,
+    "G9_finite_empirical_gaussian_q_converges_with_sample_size": true,
+    "G10_finite_sample_error_increases_with_lambda": true,
+    "G11_population_closure_distinguished_from_empirical_estimator": true,
+    "G12_gaussian_rzs_noise_not_claimed_or_derived": true
+  },
+  "verdict": "PASS_GAUSSIAN_CLOSURE_CONDITIONAL_ON_INNOVATION_LAW",
+  "logical_conclusion": "Mean and variance give an exact dynamic closure for Q_lambda only when the q law is Gaussian and the affine innovations are Gaussian. Gaussian innovations asymptotically erase higher cumulants of non-Gaussian initial laws, but finite-time predictions still depend on those cumulants. Non-Gaussian innovations regenerate higher cumulants and generally produce a non-Gaussian stationary law. Centering the noise does not remove this obstruction. The current RZS noise contract therefore does not justify Gaussian closure without an independent innovation-law assumption or derivation.",
+  "interpretation_boundary": "A35 establishes conditional probabilistic theorems and controls. It does not show that actual RZS q values are iid, Gaussian, exchangeable, or governed by Gaussian innovations."
+}

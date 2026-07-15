@@ -1,0 +1,122 @@
+{
+  "seed": 20260807,
+  "samples": 2200,
+  "trees_per_sample": 6,
+  "aggregate_results": {
+    "candidate_results": [
+      {
+        "candidate": "base_mass",
+        "median_pairwise_tree_tv": 1.249000902703301e-16,
+        "maximum_pairwise_tree_tv": 2.8796409701215e-16,
+        "median_target_tv": 5.377642775528102e-17,
+        "maximum_target_tv": 3.0357660829594124e-16
+      },
+      {
+        "candidate": "descendant_count",
+        "median_pairwise_tree_tv": 6.245004513516506e-17,
+        "maximum_pairwise_tree_tv": 1.5959455978986625e-16,
+        "median_target_tv": 2.0816681711721685e-17,
+        "maximum_target_tv": 1.3530843112619095e-16
+      },
+      {
+        "candidate": "mass_times_exp_mean_q",
+        "median_pairwise_tree_tv": 0.2470813171108837,
+        "maximum_pairwise_tree_tv": 0.734639238165867,
+        "median_target_tv": 0.13710949258390528,
+        "maximum_target_tv": 0.6416435808104538
+      },
+      {
+        "candidate": "mean_q_softmax",
+        "median_pairwise_tree_tv": 0.7291495829955996,
+        "maximum_pairwise_tree_tv": 0.9669274217701324,
+        "median_target_tv": 0.450846376156986,
+        "maximum_target_tv": 0.9158198563126199
+      },
+      {
+        "candidate": "partition_sum",
+        "median_pairwise_tree_tv": 1.4094628242311558e-16,
+        "maximum_pairwise_tree_tv": 3.2873009869760494e-16,
+        "median_target_tv": 6.678685382510707e-17,
+        "maximum_target_tv": 3.211948935988307e-16
+      },
+      {
+        "candidate": "uniform_child",
+        "median_pairwise_tree_tv": 0.6180555555555555,
+        "maximum_pairwise_tree_tv": 0.8657407407407408,
+        "median_target_tv": 0.33564814814814814,
+        "maximum_target_tv": 0.7083333333333334
+      }
+    ],
+    "maximum_q_shift_tv": 6.171278765787491e-16,
+    "maximum_partition_message_error": 5.329070518200751e-15,
+    "maximum_maxent_factorization_error": 3.3306690738754696e-16,
+    "median_terminal_weight_induced_tv": 0.39909943863366654
+  },
+  "classification": [
+    {
+      "candidate": "uniform per child",
+      "projective_across_regrouping": false,
+      "extra_input": "tree arity",
+      "status": "TREE_SHAPE_DEPENDENT"
+    },
+    {
+      "candidate": "descendant-count proportional",
+      "projective_across_regrouping": true,
+      "extra_input": "terminal leaf counts",
+      "status": "CONDITIONAL_COUNTING_LAW"
+    },
+    {
+      "candidate": "base-mass proportional",
+      "projective_across_regrouping": true,
+      "extra_input": "additive mu",
+      "status": "PROJECTIVE_MEASURE_RATIO"
+    },
+    {
+      "candidate": "exp(-lambda child mean q)",
+      "projective_across_regrouping": false,
+      "extra_input": "macro mean q and lambda",
+      "status": "NONADDITIVE_GROUPING_DEPENDENCE"
+    },
+    {
+      "candidate": "mu(child) exp(-lambda weighted mean q)",
+      "projective_across_regrouping": false,
+      "extra_input": "mu, mean q, lambda",
+      "status": "JENSEN_GAP_NONPROJECTIVE"
+    },
+    {
+      "candidate": "subtree partition sum",
+      "projective_across_regrouping": true,
+      "extra_input": "mu, leaf q, lambda",
+      "status": "PROJECTIVE_Q_WEIGHTED_LAW"
+    },
+    {
+      "candidate": "maximum relative entropy",
+      "projective_across_regrouping": "yes with partition sums",
+      "extra_input": "reference mu and expected-q constraint",
+      "status": "CONDITIONAL_GIBBS_SELECTION"
+    },
+    {
+      "candidate": "recursive additivity without boundary weights",
+      "projective_across_regrouping": "architecture only",
+      "extra_input": "terminal boundary weights",
+      "status": "UNDERDETERMINED"
+    }
+  ],
+  "gates": {
+    "G1_projective_ratio_theorem_proved": true,
+    "G2_uniform_child_rule_fails_regrouping": true,
+    "G3_descendant_count_rule_exact_for_uniform_leaves": true,
+    "G4_base_mass_rule_exact_for_supplied_mu": true,
+    "G5_naive_mean_q_softmax_fails_regrouping": true,
+    "G6_mass_times_exp_mean_q_fails_regrouping": true,
+    "G7_partition_sum_q_rule_exact_and_projective": true,
+    "G8_q_weighted_rules_global_shift_invariant": true,
+    "G9_partition_sum_message_associative": true,
+    "G10_maxent_leaf_solution_factorizes_exactly": true,
+    "G11_projectivity_does_not_select_terminal_weights": true,
+    "G12_no_mu_lambda_or_physical_split_law_claimed": true
+  },
+  "verdict": "PASS_PROJECTIVE_RATIO_LAW_WITH_TERMINAL_WEIGHT_UNDERDETERMINATION",
+  "logical_conclusion": "Exact regrouping invariance forces branch fractions to be ratios of positive additive subtree weights. Uniform-per-child and naive softmax rules based on a child representative q are tree-shape dependent. Descendant counts, supplied base mass, and q-weighted partition sums are exactly projective because their subtree weights add. The q-weighted law can be evaluated by local message passing on the refinement tree, but it still requires terminal mu, q, and lambda. Projectivity selects the ratio architecture, not terminal weights or a physical splitting law.",
+  "interpretation_boundary": "A33 establishes conditional consistency requirements and rejects grouping-dependent shortcuts. It does not derive physical branching probabilities."
+}

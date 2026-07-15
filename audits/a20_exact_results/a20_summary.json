@@ -1,0 +1,258 @@
+{
+  "seed": 20260723,
+  "n_values": [
+    64,
+    128,
+    256
+  ],
+  "coupled_samples_per_n": 200,
+  "mark_ensembles_per_model_n": 2000,
+  "models": {
+    "uniform": {
+      "mean_x": 0.5,
+      "description": "X=U, Y=V"
+    },
+    "power_anisotropic": {
+      "mean_x": 0.2,
+      "description": "X=U^4, Y=sqrt(V)"
+    },
+    "beta_skew": {
+      "mean_x": 0.2857142857142857,
+      "description": "X=BetaPPF(U;2,5), Y=BetaPPF(V;5,2)"
+    }
+  },
+  "witness_mark": "M|X ~ Poisson(4.0 X), with known kappa",
+  "theoretical_mark_means": {
+    "uniform": 2.0,
+    "power_anisotropic": 0.8,
+    "beta_skew": 1.1428571428571428
+  },
+  "invariance_rates": {
+    "final_relation_identical": 1.0,
+    "growth_history_signature_identical": 1.0,
+    "birth_order_identical": 1.0,
+    "x_ranks_identical": 1.0,
+    "y_ranks_identical": 1.0,
+    "rank_mark_identical": 1.0,
+    "independent_mark_identical_under_coupling": 1.0
+  },
+  "mark_results": [
+    {
+      "n": 64,
+      "model": "uniform",
+      "ensemble_count": 2000,
+      "marks_per_ensemble": 64,
+      "theoretical_mark_mean": 2.0,
+      "empirical_mark_mean": 1.9982109375,
+      "absolute_mean_error": 0.0017890625000001048,
+      "ensemble_mean_sd": 0.22545770069729368,
+      "ensemble_mean_05_quantile": 1.625,
+      "ensemble_mean_95_quantile": 2.375
+    },
+    {
+      "n": 64,
+      "model": "power_anisotropic",
+      "ensemble_count": 2000,
+      "marks_per_ensemble": 64,
+      "theoretical_mark_mean": 0.8,
+      "empirical_mark_mean": 0.8053984375,
+      "absolute_mean_error": 0.0053984374999999085,
+      "ensemble_mean_sd": 0.16908421835898857,
+      "ensemble_mean_05_quantile": 0.546875,
+      "ensemble_mean_95_quantile": 1.09375
+    },
+    {
+      "n": 64,
+      "model": "beta_skew",
+      "ensemble_count": 2000,
+      "marks_per_ensemble": 64,
+      "theoretical_mark_mean": 1.1428571428571428,
+      "empirical_mark_mean": 1.1431015625,
+      "absolute_mean_error": 0.00024441964285726314,
+      "ensemble_mean_sd": 0.15372870242685982,
+      "ensemble_mean_05_quantile": 0.890625,
+      "ensemble_mean_95_quantile": 1.390625
+    },
+    {
+      "n": 128,
+      "model": "uniform",
+      "ensemble_count": 2000,
+      "marks_per_ensemble": 128,
+      "theoretical_mark_mean": 2.0,
+      "empirical_mark_mean": 2.00307421875,
+      "absolute_mean_error": 0.003074218750000135,
+      "ensemble_mean_sd": 0.16329341598247504,
+      "ensemble_mean_05_quantile": 1.7421875,
+      "ensemble_mean_95_quantile": 2.2734375
+    },
+    {
+      "n": 128,
+      "model": "power_anisotropic",
+      "ensemble_count": 2000,
+      "marks_per_ensemble": 128,
+      "theoretical_mark_mean": 0.8,
+      "empirical_mark_mean": 0.8011875,
+      "absolute_mean_error": 0.001187500000000008,
+      "ensemble_mean_sd": 0.12111049637912417,
+      "ensemble_mean_05_quantile": 0.6171875,
+      "ensemble_mean_95_quantile": 1.0078125
+    },
+    {
+      "n": 128,
+      "model": "beta_skew",
+      "ensemble_count": 2000,
+      "marks_per_ensemble": 128,
+      "theoretical_mark_mean": 1.1428571428571428,
+      "empirical_mark_mean": 1.1420234375,
+      "absolute_mean_error": 0.0008337053571427777,
+      "ensemble_mean_sd": 0.11031838047258327,
+      "ensemble_mean_05_quantile": 0.96875,
+      "ensemble_mean_95_quantile": 1.328125
+    },
+    {
+      "n": 256,
+      "model": "uniform",
+      "ensemble_count": 2000,
+      "marks_per_ensemble": 256,
+      "theoretical_mark_mean": 2.0,
+      "empirical_mark_mean": 2.000357421875,
+      "absolute_mean_error": 0.0003574218749999858,
+      "ensemble_mean_sd": 0.11452102309488459,
+      "ensemble_mean_05_quantile": 1.8125,
+      "ensemble_mean_95_quantile": 2.1875
+    },
+    {
+      "n": 256,
+      "model": "power_anisotropic",
+      "ensemble_count": 2000,
+      "marks_per_ensemble": 256,
+      "theoretical_mark_mean": 0.8,
+      "empirical_mark_mean": 0.8004453125,
+      "absolute_mean_error": 0.00044531249999990585,
+      "ensemble_mean_sd": 0.08525535171926589,
+      "ensemble_mean_05_quantile": 0.66015625,
+      "ensemble_mean_95_quantile": 0.94140625
+    },
+    {
+      "n": 256,
+      "model": "beta_skew",
+      "ensemble_count": 2000,
+      "marks_per_ensemble": 256,
+      "theoretical_mark_mean": 1.1428571428571428,
+      "empirical_mark_mean": 1.142541015625,
+      "absolute_mean_error": 0.00031612723214280436,
+      "ensemble_mean_sd": 0.07698971402907658,
+      "ensemble_mean_05_quantile": 1.015625,
+      "ensemble_mean_95_quantile": 1.265625
+    }
+  ],
+  "fixed_threshold_results": [
+    {
+      "n": 64,
+      "base_model": "uniform",
+      "alternative_model": "power_anisotropic",
+      "fixed_threshold": 1.4,
+      "balanced_accuracy": 0.99775,
+      "uniform_false_negative_rate": 0.004,
+      "alternative_false_positive_rate": 0.0005
+    },
+    {
+      "n": 64,
+      "base_model": "uniform",
+      "alternative_model": "beta_skew",
+      "fixed_threshold": 1.5714285714285714,
+      "balanced_accuracy": 0.98275,
+      "uniform_false_negative_rate": 0.028,
+      "alternative_false_positive_rate": 0.0065
+    },
+    {
+      "n": 128,
+      "base_model": "uniform",
+      "alternative_model": "power_anisotropic",
+      "fixed_threshold": 1.4,
+      "balanced_accuracy": 1.0,
+      "uniform_false_negative_rate": 0.0,
+      "alternative_false_positive_rate": 0.0
+    },
+    {
+      "n": 128,
+      "base_model": "uniform",
+      "alternative_model": "beta_skew",
+      "fixed_threshold": 1.5714285714285714,
+      "balanced_accuracy": 0.998,
+      "uniform_false_negative_rate": 0.004,
+      "alternative_false_positive_rate": 0.0
+    },
+    {
+      "n": 256,
+      "base_model": "uniform",
+      "alternative_model": "power_anisotropic",
+      "fixed_threshold": 1.4,
+      "balanced_accuracy": 1.0,
+      "uniform_false_negative_rate": 0.0,
+      "alternative_false_positive_rate": 0.0
+    },
+    {
+      "n": 256,
+      "base_model": "uniform",
+      "alternative_model": "beta_skew",
+      "fixed_threshold": 1.5714285714285714,
+      "balanced_accuracy": 1.0,
+      "uniform_false_negative_rate": 0.0,
+      "alternative_false_positive_rate": 0.0
+    }
+  ],
+  "mark_distribution_results": [
+    {
+      "n": 64,
+      "first_model": "uniform",
+      "second_model": "power_anisotropic",
+      "pooled_mark_total_variation": 0.3905390625000001
+    },
+    {
+      "n": 64,
+      "first_model": "uniform",
+      "second_model": "beta_skew",
+      "pooled_mark_total_variation": 0.21972656250000003
+    },
+    {
+      "n": 128,
+      "first_model": "uniform",
+      "second_model": "power_anisotropic",
+      "pooled_mark_total_variation": 0.39533203124999994
+    },
+    {
+      "n": 128,
+      "first_model": "uniform",
+      "second_model": "beta_skew",
+      "pooled_mark_total_variation": 0.21837890624999998
+    },
+    {
+      "n": 256,
+      "first_model": "uniform",
+      "second_model": "power_anisotropic",
+      "pooled_mark_total_variation": 0.394828125
+    },
+    {
+      "n": 256,
+      "first_model": "uniform",
+      "second_model": "beta_skew",
+      "pooled_mark_total_variation": 0.21822851562499995
+    }
+  ],
+  "gates": {
+    "G1_final_relations_identical": true,
+    "G2_full_growth_histories_identical": true,
+    "G3_birth_and_coordinate_ranks_identical": true,
+    "G4_rank_marks_and_independent_marks_no_help": true,
+    "G5_calibrated_mark_means_match_theory": true,
+    "G6_mark_distributions_separated": true,
+    "G7_fixed_theoretical_threshold_accuracy": true,
+    "G8_accuracy_non_decreasing_with_n": true,
+    "G9_negative_and_positive_results_proved": true,
+    "G10_no_physical_mechanism_claimed": true
+  },
+  "verdict": "PASS_MINIMAL_SYMMETRY_BREAKING_INFORMATION",
+  "logical_conclusion": "Independent birth order, the entire resulting growth filtration, rank-derived marks, and coordinate-independent marks do not break the monotone marginal symmetry. A calibrated quantitative mark whose conditional law is not invariant can break it; the Poisson-rate witness does so without using the order labels for training.",
+  "interpretation_boundary": "The result characterizes a mathematical requirement for additional information. It does not identify which physical field, clock, rate, or interaction \u2014 if any \u2014 should supply such calibration in the pre-categorical framework."
+}

@@ -1,0 +1,134 @@
+{
+  "seed": 20260716,
+  "discovery_n": 128,
+  "prospective_confirmation_n": 256,
+  "global_model": "A14 covariance-aware analytic interval-abundance Q",
+  "local_channels": [
+    "label-invariant induced S3 certificate search",
+    "exact dimension<=2 recognition for every order interval with 6-10 elements"
+  ],
+  "self_tests": {
+    "chain_dimension_at_most_two": true,
+    "antichain_dimension_at_most_two": true,
+    "s3_dimension_greater_than_two": true,
+    "minimal7_dimension_greater_than_two": true,
+    "all_minimal7_vertex_deletions_dim2": true,
+    "anchored_minimal7_transitive": true
+  },
+  "model_results": [
+    {
+      "n": 128,
+      "number_bins": 54,
+      "covariance_condition_number": 351.7339142624706,
+      "covariance_minimum_eigenvalue": 5.096490666236504e-07,
+      "ledoit_wolf_shrinkage": 0.06210042634046799,
+      "global_holdout_acceptance_rate": 1.0,
+      "local_holdout_pass_rate": 1.0,
+      "combined_scanned_holdout_acceptance_rate": 1.0
+    },
+    {
+      "n": 256,
+      "number_bins": 161,
+      "covariance_condition_number": 525.4031084554894,
+      "covariance_minimum_eigenvalue": 5.738315079799536e-08,
+      "ledoit_wolf_shrinkage": 0.0973943893591158,
+      "global_holdout_acceptance_rate": 1.0,
+      "local_holdout_pass_rate": 1.0,
+      "combined_scanned_holdout_acceptance_rate": 1.0
+    }
+  ],
+  "family_results": [
+    {
+      "n": 128,
+      "family": "minkowski_holdout",
+      "number_samples": 12,
+      "global_acceptance_rate": 1.0,
+      "local_pass_rate": 1.0,
+      "combined_acceptance_rate": 1.0,
+      "maximum_ordering_fraction_mismatch": 0.0,
+      "all_transitive": true,
+      "local_channels": {
+        "none": 4
+      }
+    },
+    {
+      "n": 128,
+      "family": "unanchored_s3",
+      "number_samples": 12,
+      "global_acceptance_rate": 0.6666666666666666,
+      "local_pass_rate": 0.0,
+      "combined_acceptance_rate": 0.0,
+      "maximum_ordering_fraction_mismatch": 0.0003690944881890035,
+      "all_transitive": true,
+      "local_channels": {
+        "induced_s3": 12
+      }
+    },
+    {
+      "n": 256,
+      "family": "anchored_minimal7_obstruction",
+      "number_samples": 10,
+      "global_acceptance_rate": 1.0,
+      "local_pass_rate": 0.0,
+      "combined_acceptance_rate": 0.0,
+      "maximum_ordering_fraction_mismatch": 0.004564950980392168,
+      "all_transitive": true,
+      "local_channels": {
+        "small_interval_dimension": 10
+      }
+    },
+    {
+      "n": 256,
+      "family": "bimodal_exact_2d_order",
+      "number_samples": 6,
+      "global_acceptance_rate": 1.0,
+      "local_pass_rate": 1.0,
+      "combined_acceptance_rate": 1.0,
+      "maximum_ordering_fraction_mismatch": 0.0049325980392156965,
+      "all_transitive": true,
+      "local_channels": {
+        "none": 6
+      }
+    },
+    {
+      "n": 256,
+      "family": "minkowski_holdout",
+      "number_samples": 12,
+      "global_acceptance_rate": 1.0,
+      "local_pass_rate": 1.0,
+      "combined_acceptance_rate": 1.0,
+      "maximum_ordering_fraction_mismatch": 0.0,
+      "all_transitive": true,
+      "local_channels": {
+        "none": 4
+      }
+    },
+    {
+      "n": 256,
+      "family": "unanchored_s3",
+      "number_samples": 12,
+      "global_acceptance_rate": 1.0,
+      "local_pass_rate": 0.0,
+      "combined_acceptance_rate": 0.0,
+      "maximum_ordering_fraction_mismatch": 0.004350490196078416,
+      "all_transitive": true,
+      "local_channels": {
+        "induced_s3": 12
+      }
+    }
+  ],
+  "gates": {
+    "G1_exact_recognition_self_tests": true,
+    "G2_minkowski_global_and_local_acceptance": true,
+    "G3_all_structures_transitive": true,
+    "G4_all_adversaries_density_matched": true,
+    "G5_unanchored_s3_detection_discovery": true,
+    "G6_unanchored_s3_detection_n256": true,
+    "G7_unseen_minimal7_interval_detection": true,
+    "G8_bimodal_2d_local_accept_global_reject": false,
+    "G9_global_q_has_sparse_defect_false_positives": true,
+    "G10_no_adversary_used_for_calibration": true
+  },
+  "verdict": "FAIL_LOCAL_GLOBAL_COMPLEMENTARITY",
+  "interpretation_boundary": "A pass establishes complementarity of a global Minkowski statistical signature and exact local order-theoretic obstruction tests for the specified families. It does not prove sufficient manifoldlikeness for arbitrary posets or derive physical spacetime."
+}

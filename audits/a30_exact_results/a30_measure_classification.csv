@@ -1,0 +1,9 @@
+candidate,independent_of_order,contains_q_information,refinement_consistent,requires_extra_semantics,status
+uniform counting,False,False,False,False,REPRESENTATION_COUNTING
+degree-derived mass,False,False,False,False,ORDER_REDUNDANT_AND_CLONE_SENSITIVE
+relation-only stationary distribution,False,False,False,False,ORDER_DERIVED_AND_CLONE_SENSITIVE
+q-dependent stationary distribution,True,True,False,False,NEW_INFORMATION_BUT_NOT_PROJECTIVE
+q-node softmax mass,True,True,False,False,NEW_INFORMATION_BUT_CLONE_SENSITIVE
+explicit additive multiplicity,True,False,True,True,PROJECTIVE_EXTRA_PRIMITIVE
+projectively lifted conserved transport,depends on supplied kernel and initial mass,optional,True,True,CONSISTENT_WITH_REFINEMENT_MAP
+stationary solution of a mu-dependent kernel,,,,True,IMPLICIT_SIMULTANEOUS_LAW_NOT_A_DERIVATION

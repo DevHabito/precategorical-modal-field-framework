@@ -1,0 +1,8 @@
+construction,measure_exists,terminality_required,atomicity,status
+finite terminal leaves,True,True,possible,FINITE_ATOMIC_MODEL
+uniform infinite binary refinement,True,False,False,NONATOMIC_PROJECTIVE_LIMIT
+telescoping distinguished path,True,False,True,ATOM_WITHOUT_TERMINAL_LEAF
+arbitrary consistent split fractions,True,False,depends on products,MEASURE_FAMILY_UNDERDETERMINED
+square-summable martingale q increments,given path measure,False,independent issue,L2_CONVERGENT_MARK_WITNESS
+constant q increments,given path measure,False,independent issue,NO_L2_MARK_LIMIT
+actual RZS refinement ontology,,,,NOT_DERIVED

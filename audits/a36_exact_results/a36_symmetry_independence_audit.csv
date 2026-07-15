@@ -1,0 +1,7 @@
+family,dimension,rotational,independent,component_excess,cross_square_cov,gaussian,rotated_component_excess
+uniform_sphere,4,True,False,-1.0,-0.33333333333333337,False,
+uniform_sphere,8,True,False,-0.6,-0.19999999999999996,False,
+uniform_sphere,16,True,False,-0.3333333333333333,-0.11111111111111116,False,
+uniform_sphere,64,True,False,-0.09090909090909091,-0.030303030303030276,False,
+iid_laplace,2,False,True,3.0,,False,1.5
+iid_gaussian,any,True,True,0.0,0.0,True,

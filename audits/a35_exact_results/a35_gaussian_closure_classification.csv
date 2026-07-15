@@ -1,0 +1,7 @@
+case,finite_dimensional_closure,state_required,status
+Gaussian initial law + Gaussian innovations,True,mean and covariance,EXACT_GAUSSIAN_CLOSURE
+Non-Gaussian initial law + Gaussian innovations,"asymptotic, not finite-time exact",higher cumulants at finite time,ASYMPTOTIC_GAUSSIANIZATION
+Non-Gaussian innovations,False,innovation-dependent higher cumulants,NONGAUSSIAN_STATIONARY_OBSTRUCTION
+Centered non-Gaussian innovations,False,full centered innovation law,CENTERING_NOT_GAUSSIANIZATION
+Finite empirical Gaussian sample,population law only,sampling uncertainty,FINITE_SAMPLE_ESTIMATION_ERROR
+Current RZS noise contract,,specified innovation distribution,GAUSSIANITY_NOT_DERIVED

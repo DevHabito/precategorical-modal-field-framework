@@ -1,0 +1,8 @@
+object,status
+"(mu_A, Q_lambda(A)) under static regrouping",EXACTLY_ASSOCIATIVE
+Q_lambda alone,STATICALLY_AGGREGATABLE_ONLY_WITH_MASS
+mean and variance,INSUFFICIENT_AT_FINITE_LAMBDA
+single fixed-lambda Q under centered contraction,NOT_AUTONOMOUSLY_CLOSED
+mean plus full Q(lambda) curve,EXACTLY_CLOSED_FOR_DETERMINISTIC_CENTERED_CONTRACTION
+finite cumulant truncation,ASYMPTOTIC_APPROXIMATION_NOT_EXACT_GENERAL_CLOSURE
+physical RZS macro observable,NOT_ESTABLISHED

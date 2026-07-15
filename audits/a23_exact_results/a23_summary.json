@@ -1,0 +1,96 @@
+{
+  "seed": 20260726,
+  "order_n_values": [
+    32,
+    64,
+    128
+  ],
+  "order_coupled_samples": 250,
+  "gauge_graph_n": 18,
+  "gauge_samples": 80,
+  "gauge_offsets": [
+    -2.0,
+    -0.5,
+    0.75,
+    1.6
+  ],
+  "dynamics": {
+    "vector_size": 120,
+    "samples": 100,
+    "steps": 60,
+    "eta": 0.35,
+    "noise_sd": 0.08
+  },
+  "theoretical_coordinate_q_variances": {
+    "uniform": 0.16666666666666666,
+    "power_anisotropic": 0.1422222222222222,
+    "beta_skew": 0.05102040816326531
+  },
+  "pairwise_variance_separations": {
+    "uniform_vs_power": 0.024444444444444463,
+    "uniform_vs_beta": 0.11564625850340135,
+    "power_vs_beta": 0.09120181405895689
+  },
+  "classification": [
+    {
+      "q_source": "deterministic function of order",
+      "new_information": false,
+      "breaks_order_only_degeneracy": false,
+      "absolute_scale": false,
+      "status": "REDUNDANT"
+    },
+    {
+      "q_source": "model-independent random field",
+      "new_information": true,
+      "breaks_order_only_degeneracy": false,
+      "absolute_scale": false,
+      "status": "EXTRA_ENTROPY_NOT_MODEL_INFORMATION"
+    },
+    {
+      "q_source": "ordinal or rank-derived field",
+      "new_information": false,
+      "breaks_order_only_degeneracy": false,
+      "absolute_scale": false,
+      "status": "MONOTONE_INVARIANT"
+    },
+    {
+      "q_source": "independently calibrated quantitative field",
+      "new_information": true,
+      "breaks_order_only_degeneracy": true,
+      "absolute_scale": false,
+      "status": "RELATIVE_INFORMATION_WITNESS"
+    },
+    {
+      "q_source": "global mean or offset of q",
+      "new_information": null,
+      "breaks_order_only_degeneracy": null,
+      "absolute_scale": false,
+      "status": "GAUGE_DEPENDENT_NOT_OBSERVABLE"
+    },
+    {
+      "q_source": "centered q dynamics with eta per uncalibrated step",
+      "new_information": true,
+      "breaks_order_only_degeneracy": "only if initial q or noise law is independently non-invariant",
+      "absolute_scale": false,
+      "status": "RELATIVE_DYNAMICS_NO_PHYSICAL_RATE"
+    }
+  ],
+  "gates": {
+    "G1_same_order_under_monotone_representatives": true,
+    "G2_order_measurable_q_redundant": true,
+    "G3_model_independent_random_q_nonidentifying": true,
+    "G4_rank_q_invariant": true,
+    "G5_calibrated_coordinate_q_breaks_identity": true,
+    "G6_coordinate_q_variance_matches_theory": true,
+    "G7_coordinate_q_gauge_invariant_shape_separates_models": true,
+    "G8_effective_distance_scales_under_global_gauge": true,
+    "G9_centered_q_and_Dhat_gauge_invariant": true,
+    "G10_centered_dynamics_gauge_equivariant": true,
+    "G11_rate_time_degeneracy_exact": true,
+    "G12_q_can_be_new_information_but_not_automatically_physical": true,
+    "G13_no_absolute_scale_or_physical_rate_claimed": true
+  },
+  "verdict": "PASS_RZS_Q_PRIMITIVE_AND_GAUGE_AUDIT",
+  "logical_conclusion": "The RZS q-field can evade the order-only no-go only if it is a genuinely additional quantitative field whose conditional law is not fixed by the order. Even then, the global shift q->q+c makes its absolute offset and the global scale of D_eff unidentifiable. Centered q, q differences, and D_hat carry relative shape information. The centered dynamics preserves this gauge and eta supplies only a dimensionless per-step contraction unless the duration of one step is independently calibrated.",
+  "interpretation_boundary": "This audit does not demonstrate that the existing RZS q is operationally independent, physically measurable, or tied to matter. It establishes the exact conditions it would have to satisfy to serve as the non-invariant primitive required by A20\u2013A22."
+}

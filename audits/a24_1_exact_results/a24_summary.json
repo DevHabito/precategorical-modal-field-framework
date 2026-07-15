@@ -1,0 +1,85 @@
+{
+  "seed": 20260728,
+  "n_values": [
+    16,
+    32,
+    64
+  ],
+  "graph_samples_per_n": 80,
+  "beta": 1.4,
+  "transition_trials_per_node": 30000,
+  "path_steps": 80,
+  "classification": [
+    {
+      "candidate": "q inferred from relation",
+      "operational_new_information": false,
+      "reason": "deterministic recoding of observed graph/order",
+      "status": "REDUNDANT"
+    },
+    {
+      "candidate": "free q with no q-dependent observation",
+      "operational_new_information": false,
+      "reason": "latent variation has no observable consequence",
+      "status": "EMPIRICALLY_SILENT"
+    },
+    {
+      "candidate": "local softmax transition coupling",
+      "operational_new_information": true,
+      "reason": "transition odds depend on local q contrasts",
+      "status": "MATHEMATICAL_OPERATIONAL_WITNESS"
+    },
+    {
+      "candidate": "absolute q offset",
+      "operational_new_information": false,
+      "reason": "removed by global and row softmax normalization",
+      "status": "GAUGE_UNIDENTIFIABLE"
+    },
+    {
+      "candidate": "q contrast with known beta",
+      "operational_new_information": true,
+      "reason": "recoverable from log transition odds",
+      "status": "STATISTICALLY_IDENTIFIABLE"
+    },
+    {
+      "candidate": "q contrast with unknown beta",
+      "operational_new_information": "only beta times contrast",
+      "reason": "q->a q and beta->beta/a leave observations unchanged",
+      "status": "CALIBRATION_DEGENERACY"
+    },
+    {
+      "candidate": "actual RZS q",
+      "operational_new_information": null,
+      "reason": "no independently established measurement or coupling law in this audit",
+      "status": "OPERATIONAL_ORIGIN_UNRESOLVED"
+    }
+  ],
+  "aggregate_results": {
+    "maximum_global_gauge_error": 3.3306690738754696e-16,
+    "maximum_relabel_error": 2.220446049250313e-16,
+    "maximum_locality_error": 0.0,
+    "minimum_local_contrast_tv": 0.03643500109882213,
+    "maximum_local_log_odds_shift_error": 8.881784197001252e-16,
+    "mean_contrast_recovery_rmse": 0.015993500754335584,
+    "maximum_contrast_recovery_rmse": 0.02223879238367362,
+    "gauge_inequivalent_path_divergence_rate": 1.0,
+    "median_first_path_divergence": 1.0,
+    "maximum_beta_q_degeneracy_error": 2.220446049250313e-16
+  },
+  "gates": {
+    "G1_order_derived_q_redundant": true,
+    "G2_uncoupled_q_empirically_silent": true,
+    "G3_global_q_gauge_invariant": true,
+    "G4_relabeling_equivariant": true,
+    "G5_declared_locality_holds": true,
+    "G6_local_q_contrast_changes_observable_law": true,
+    "G7_gauge_equivalent_paths_identical": true,
+    "G8_gauge_inequivalent_paths_diverge": true,
+    "G9_q_contrasts_recoverable_when_beta_known": true,
+    "G10_beta_q_scale_degeneracy_exact": true,
+    "G11_local_kernel_has_additional_row_offset_gauge": true,
+    "G12_actual_rzs_operational_origin_not_assumed": true
+  },
+  "verdict": "PASS_Q_OPERATIONALIZATION_CRITERIA_WITH_CALIBRATION_LIMIT_CORRECTED",
+  "logical_conclusion": "A q-field becomes operational only through a specified q-dependent observable law. The local transition witness shows that gauge-invariant q contrasts can be measured from relational transition frequencies without coordinates when the coupling beta is calibrated. The same observations do not identify absolute q offsets, row offsets for this kernel, or q magnitude separately from beta.",
+  "interpretation_boundary": "The audit supplies criteria and a mathematical witness, not the missing physical bridge. The actual RZS q remains operationally ungrounded until its preparation, measurement, noise law, and coupling to observable events are specified independently of the desired emergent geometry."
+}

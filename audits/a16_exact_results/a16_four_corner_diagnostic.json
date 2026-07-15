@@ -1,0 +1,13 @@
+{
+  "status": "POST_HOC_STRONGER_NONUNIFORM_2D_CONTROL",
+  "n": 256,
+  "samples": 16,
+  "pool_per_target": 40,
+  "width": 0.1,
+  "global_acceptance_rate": 0.9375,
+  "global_rejection_rate": 0.0625,
+  "max_ordering_fraction_mismatch": 0.011366421568627438,
+  "median_p_value": 0.4230769230769231,
+  "scanned_local_pass_rate": 1.0,
+  "interpretation": "Four separated corner clusters remain exact 2D orders, but strongly violate the uniform single-diamond sprinkling profile. This is a post-hoc diagnostic and does not alter the preregistered A16 gate result."
+}

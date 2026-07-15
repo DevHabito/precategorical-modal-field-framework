@@ -1,0 +1,150 @@
+{
+  "seed": 20260729,
+  "n_values": [
+    16,
+    32,
+    64
+  ],
+  "graph_samples_per_n": 100,
+  "kernels": [
+    "raw_softmax",
+    "standardized_exponential",
+    "standardized_asinh",
+    "standardized_rank"
+  ],
+  "kernel_results": [
+    {
+      "kernel": "raw_softmax",
+      "maximum_row_affine_error": 0.5505985259579653,
+      "median_global_scale_tv": 0.23140103889292346,
+      "maximum_relabel_error": 2.220446049250313e-16,
+      "maximum_locality_error": 0.0,
+      "minimum_shape_sensitivity_mean_tv": 0.08901976810236475,
+      "median_shape_sensitivity_mean_tv": 0.13851667344121882
+    },
+    {
+      "kernel": "standardized_asinh",
+      "maximum_row_affine_error": 9.43689570931383e-16,
+      "median_global_scale_tv": 3.821812658011403e-17,
+      "maximum_relabel_error": 2.220446049250313e-16,
+      "maximum_locality_error": 0.0,
+      "minimum_shape_sensitivity_mean_tv": 0.11458075752236409,
+      "median_shape_sensitivity_mean_tv": 0.1736103475247993
+    },
+    {
+      "kernel": "standardized_exponential",
+      "maximum_row_affine_error": 9.43689570931383e-16,
+      "median_global_scale_tv": 4.692223714609922e-17,
+      "maximum_relabel_error": 3.3306690738754696e-16,
+      "maximum_locality_error": 0.0,
+      "minimum_shape_sensitivity_mean_tv": 0.13163085977895,
+      "median_shape_sensitivity_mean_tv": 0.20479197967697513
+    },
+    {
+      "kernel": "standardized_rank",
+      "maximum_row_affine_error": 0.0,
+      "median_global_scale_tv": 0.0,
+      "maximum_relabel_error": 1.1102230246251565e-16,
+      "maximum_locality_error": 0.0,
+      "minimum_shape_sensitivity_mean_tv": 0.04809124730408379,
+      "median_shape_sensitivity_mean_tv": 0.08437553332326211
+    }
+  ],
+  "underdetermination_results": [
+    {
+      "first_kernel": "standardized_asinh",
+      "second_kernel": "standardized_rank",
+      "median_mean_row_tv": 0.18646482013571108
+    },
+    {
+      "first_kernel": "standardized_exponential",
+      "second_kernel": "standardized_asinh",
+      "median_mean_row_tv": 0.07013156487277436
+    },
+    {
+      "first_kernel": "standardized_exponential",
+      "second_kernel": "standardized_rank",
+      "median_mean_row_tv": 0.24936477513895722
+    }
+  ],
+  "dynamics": {
+    "vector_size": 160,
+    "samples": 120,
+    "steps": 80,
+    "eta": 0.35,
+    "noise_sd": 0.08,
+    "maximum_reparameterization_error": 2.6645352591003757e-15
+  },
+  "classification": [
+    {
+      "candidate": "raw exp(-q) softmax",
+      "uses_only_existing_relational_inputs": true,
+      "hidden_external_scale": "yes unless q normalization is independently fixed",
+      "local": true,
+      "gauge_invariant": "row shifts only",
+      "absolute_q_information": false,
+      "status": "OPERATIONAL_BUT_NORMALIZATION_DEPENDENT"
+    },
+    {
+      "candidate": "standardized exponential kernel",
+      "uses_only_existing_relational_inputs": true,
+      "hidden_external_scale": false,
+      "local": true,
+      "gauge_invariant": "row positive affine transformations",
+      "absolute_q_information": false,
+      "status": "STRUCTURALLY_ADMISSIBLE_NONCIRCULAR_WITNESS"
+    },
+    {
+      "candidate": "standardized asinh kernel",
+      "uses_only_existing_relational_inputs": true,
+      "hidden_external_scale": false,
+      "local": true,
+      "gauge_invariant": "row positive affine transformations",
+      "absolute_q_information": false,
+      "status": "STRUCTURALLY_ADMISSIBLE_NONCIRCULAR_WITNESS"
+    },
+    {
+      "candidate": "rank kernel",
+      "uses_only_existing_relational_inputs": true,
+      "hidden_external_scale": false,
+      "local": true,
+      "gauge_invariant": "all strictly increasing row transformations",
+      "absolute_q_information": false,
+      "status": "NONCIRCULAR_BUT_ONLY_ORDINAL"
+    },
+    {
+      "candidate": "absolute D_eff/L0 kernel",
+      "uses_only_existing_relational_inputs": false,
+      "hidden_external_scale": true,
+      "local": false,
+      "gauge_invariant": false,
+      "absolute_q_information": "assumed through L0",
+      "status": "CIRCULAR_OR_EXTRA_PRIMITIVE"
+    },
+    {
+      "candidate": "current centered q dynamics",
+      "uses_only_existing_relational_inputs": true,
+      "hidden_external_scale": "noise amplitude fixes only a dimensionless q convention",
+      "local": null,
+      "gauge_invariant": true,
+      "absolute_q_information": false,
+      "status": "REPARAMETERIZATION_EQUIVARIANT"
+    }
+  ],
+  "gates": {
+    "G1_scale_free_family_theorem_proved": true,
+    "G2_scale_free_kernels_row_affine_invariant": true,
+    "G3_all_kernels_relabel_equivariant": true,
+    "G4_all_kernels_declared_local": true,
+    "G5_scale_free_kernels_sensitive_to_q_shape": true,
+    "G6_raw_softmax_exposes_hidden_q_normalization": true,
+    "G7_scale_free_kernels_ignore_global_q_rescaling": true,
+    "G8_admissible_kernel_family_is_observationally_nonunique": true,
+    "G9_centered_q_dynamics_reparameterization_exact": true,
+    "G10_noise_scale_is_normalization_not_physical_unit": true,
+    "G11_no_unique_or_physical_coupling_claimed": true
+  },
+  "verdict": "PASS_NONCIRCULAR_Q_COUPLING_WITH_LAW_UNDERDETERMINATION",
+  "logical_conclusion": "The RZS ingredients admit local, relabel-equivariant, scale-free q-shape couplings that do not import an absolute q unit. Therefore operational sensitivity to relative q need not be circular. However, infinitely many such kernels satisfy the same structural constraints and produce different laws. The present postulates do not select a unique coupling. The centered q dynamics is also equivariant under simultaneous rescaling of q and noise, so its noise amplitude supplies only a dimensionless normalization convention unless independently operationalized.",
+  "interpretation_boundary": "A25 establishes structural admissibility and exact underdetermination. It does not derive a matter coupling, transition law, physical q unit, absolute length, energy, temperature, or time scale."
+}

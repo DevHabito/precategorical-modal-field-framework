@@ -1,0 +1,136 @@
+{
+  "seed": 20260813,
+  "lambda": 1.25,
+  "aggregate_results": {
+    "associativity_results": [
+      {
+        "operator": "exponential_mean",
+        "associativity_pass_rate": 1.0,
+        "median_absolute_error": 1.1102230246251565e-16,
+        "maximum_absolute_error": 8.881784197001252e-16
+      },
+      {
+        "operator": "minimum",
+        "associativity_pass_rate": 1.0,
+        "median_absolute_error": 0.0,
+        "maximum_absolute_error": 0.0
+      },
+      {
+        "operator": "weighted_arithmetic",
+        "associativity_pass_rate": 1.0,
+        "median_absolute_error": 3.469446951953614e-17,
+        "maximum_absolute_error": 8.881784197001252e-16
+      },
+      {
+        "operator": "weighted_median",
+        "associativity_pass_rate": 0.3822,
+        "median_absolute_error": 0.08064449417432325,
+        "maximum_absolute_error": 3.124175206976979
+      }
+    ],
+    "kernel_preservation_results": [
+      {
+        "operator": "exponential_mean",
+        "median_macro_probability_tv": 4.85722573273506e-17,
+        "maximum_macro_probability_tv": 2.185751579730777e-16
+      },
+      {
+        "operator": "minimum",
+        "median_macro_probability_tv": 0.11857749102754259,
+        "maximum_macro_probability_tv": 0.5860440213817039
+      },
+      {
+        "operator": "weighted_arithmetic",
+        "median_macro_probability_tv": 0.08755266807017771,
+        "maximum_macro_probability_tv": 0.6022144403893283
+      },
+      {
+        "operator": "weighted_median",
+        "median_macro_probability_tv": 0.14957661292074942,
+        "maximum_macro_probability_tv": 0.6944054079941642
+      }
+    ],
+    "median_unweighted_refinement_error": 0.12277346838670573,
+    "median_occupancy_macro_row_tv": 0.10122374286537626,
+    "maximum_nested_graph_error": 1.3642420526593924e-12,
+    "maximum_flow_aggregation_error": 8.881784197001252e-16,
+    "weighted_median_exact_counterexample_difference": 1.0
+  },
+  "classification": [
+    {
+      "operator": "weighted arithmetic mean",
+      "gauge_covariant": true,
+      "refinement_consistent": true,
+      "hierarchically_decomposable": true,
+      "preserves_exponential_kernel": false,
+      "status": "FIRST_MOMENT_COARSE_GRAINING"
+    },
+    {
+      "operator": "exponential effective score",
+      "gauge_covariant": true,
+      "refinement_consistent": true,
+      "hierarchically_decomposable": true,
+      "preserves_exponential_kernel": true,
+      "status": "KERNEL_SUFFICIENT_STATIC_MESSAGE"
+    },
+    {
+      "operator": "weighted median",
+      "gauge_covariant": true,
+      "refinement_consistent": true,
+      "hierarchically_decomposable": false,
+      "preserves_exponential_kernel": false,
+      "status": "ROBUST_BUT_SUMMARY_NOT_CLOSED"
+    },
+    {
+      "operator": "minimum",
+      "gauge_covariant": true,
+      "refinement_consistent": true,
+      "hierarchically_decomposable": true,
+      "preserves_exponential_kernel": false,
+      "status": "EXTREMAL_TROPICAL_LIMIT"
+    },
+    {
+      "operator": "unweighted mean",
+      "gauge_covariant": true,
+      "refinement_consistent": false,
+      "hierarchically_decomposable": "with counts, not supplied mu",
+      "preserves_exponential_kernel": false,
+      "status": "COUNTING_MEASURE_DEPENDENT"
+    },
+    {
+      "operator": "macro transition from q alone",
+      "gauge_covariant": "kernel dependent",
+      "refinement_consistent": null,
+      "hierarchically_decomposable": false,
+      "preserves_exponential_kernel": null,
+      "status": "SOURCE_OCCUPANCY_UNDERDETERMINED"
+    },
+    {
+      "operator": "joint-flow aggregation with supplied pi",
+      "gauge_covariant": "inherited from micro kernel",
+      "refinement_consistent": true,
+      "hierarchically_decomposable": true,
+      "preserves_exponential_kernel": true,
+      "status": "EXACT_DYNAMIC_COARSE_GRAINING_WITH_EXTRA_STATE"
+    }
+  ],
+  "gates": {
+    "G1_translation_covariant_quasi_arithmetic_classification_stated": true,
+    "G2_weighted_arithmetic_associative_refinement_consistent_and_gauge_covariant": true,
+    "G3_exponential_mean_associative_refinement_consistent_and_gauge_covariant": true,
+    "G4_weighted_median_not_closed_by_mass_and_median_message": true,
+    "G5_minimum_is_associative_but_mass_insensitive_extremal_control": true,
+    "G6_unweighted_mean_is_clone_sensitive_under_mass_preserving_refinement": true,
+    "G7_rms_fails_additive_gauge_covariance": true,
+    "G8_exponential_mean_exactly_preserves_exponential_kernel": true,
+    "G9_arithmetic_mean_does_not_preserve_exponential_kernel": true,
+    "G10_nested_graph_partition_sum_aggregation_exact": true,
+    "G11_macro_transition_depends_on_source_occupancy": true,
+    "G12_supplied_occupancy_flow_aggregation_exact": true,
+    "G13_coarse_graining_declared_observable_relative_not_unique": true,
+    "G14_no_physical_lambda_or_source_occupancy_claimed": true
+  },
+  "verdict": "PASS_CORRECTED_OBSERVABLE_RELATIVE_COARSE_GRAINING_WITH_OCCUPANCY_OBSTRUCTION",
+  "logical_conclusion": "There is no observable-independent unique scalar coarse-graining of q. Within the regular decomposable translation-covariant quasi-arithmetic class, the arithmetic and exponential families survive. The arithmetic mean is the correct sufficient statistic for the first moment; the exponential effective score is the exact static sufficient message for the audited exponential kernel. For graph dynamics, q and edge weights alone do not determine a unique macro transition because the distribution of source occupancy inside each region matters. Exact dynamic aggregation is restored by carrying joint flows or an explicit occupancy measure.",
+  "interpretation_boundary": "A38 determines consistency requirements relative to declared observables. It does not establish the physical exponential kernel, a physical lambda, a unique regional partition, or the occupancy measure required by dynamic coarse-graining."
+}

@@ -1,0 +1,292 @@
+{
+  "seed": 20260722,
+  "order_size": 6,
+  "permutation_categories": 720,
+  "ensemble_size_per_copula_marginal": 100000,
+  "copulas": {
+    "independence": 0.0,
+    "gaussian_positive": 0.6,
+    "gaussian_negative": -0.6
+  },
+  "marginals": [
+    "uniform",
+    "beta_skew",
+    "power_anisotropic"
+  ],
+  "same_copula_thresholds": {
+    "minimum_homogeneity_p_value": 0.0001,
+    "maximum_total_variation": 0.075,
+    "maximum_ordering_fraction_range": 0.004
+  },
+  "different_copula_thresholds": {
+    "minimum_total_variation": 0.15,
+    "maximum_log10_p_value": -20.0
+  },
+  "coupled_identity_rate": 1.0,
+  "ensemble_results": [
+    {
+      "copula": "independence",
+      "rho": 0.0,
+      "marginal": "uniform",
+      "ensemble_size": 100000,
+      "observed_ordering_fraction_mean": 0.49984866666666666,
+      "theoretical_ordering_fraction": 0.5,
+      "absolute_theory_error": 0.00015133333333333665,
+      "permutation_uniformity_chi_square": 671.0336,
+      "permutation_uniformity_p_value": 0.8991104884310538,
+      "occupied_permutation_categories": 720
+    },
+    {
+      "copula": "independence",
+      "rho": 0.0,
+      "marginal": "beta_skew",
+      "ensemble_size": 100000,
+      "observed_ordering_fraction_mean": 0.500108,
+      "theoretical_ordering_fraction": 0.5,
+      "absolute_theory_error": 0.00010799999999999699,
+      "permutation_uniformity_chi_square": 703.232,
+      "permutation_uniformity_p_value": 0.6558920290142972,
+      "occupied_permutation_categories": 720
+    },
+    {
+      "copula": "independence",
+      "rho": 0.0,
+      "marginal": "power_anisotropic",
+      "ensemble_size": 100000,
+      "observed_ordering_fraction_mean": 0.500432,
+      "theoretical_ordering_fraction": 0.5,
+      "absolute_theory_error": 0.00043199999999998795,
+      "permutation_uniformity_chi_square": 684.2096,
+      "permutation_uniformity_p_value": 0.8199097265503535,
+      "occupied_permutation_categories": 720
+    },
+    {
+      "copula": "gaussian_positive",
+      "rho": 0.6,
+      "marginal": "uniform",
+      "ensemble_size": 100000,
+      "observed_ordering_fraction_mean": 0.7054806666666666,
+      "theoretical_ordering_fraction": 0.7048327646991335,
+      "absolute_theory_error": 0.000647901967533171,
+      "permutation_uniformity_chi_square": NaN,
+      "permutation_uniformity_p_value": NaN,
+      "occupied_permutation_categories": 720
+    },
+    {
+      "copula": "gaussian_positive",
+      "rho": 0.6,
+      "marginal": "beta_skew",
+      "ensemble_size": 100000,
+      "observed_ordering_fraction_mean": 0.7044339999999999,
+      "theoretical_ordering_fraction": 0.7048327646991335,
+      "absolute_theory_error": 0.00039876469913358026,
+      "permutation_uniformity_chi_square": NaN,
+      "permutation_uniformity_p_value": NaN,
+      "occupied_permutation_categories": 720
+    },
+    {
+      "copula": "gaussian_positive",
+      "rho": 0.6,
+      "marginal": "power_anisotropic",
+      "ensemble_size": 100000,
+      "observed_ordering_fraction_mean": 0.7047526666666666,
+      "theoretical_ordering_fraction": 0.7048327646991335,
+      "absolute_theory_error": 8.009803246689096e-05,
+      "permutation_uniformity_chi_square": NaN,
+      "permutation_uniformity_p_value": NaN,
+      "occupied_permutation_categories": 720
+    },
+    {
+      "copula": "gaussian_negative",
+      "rho": -0.6,
+      "marginal": "uniform",
+      "ensemble_size": 100000,
+      "observed_ordering_fraction_mean": 0.29532933333333333,
+      "theoretical_ordering_fraction": 0.2951672353008665,
+      "absolute_theory_error": 0.00016209803246680643,
+      "permutation_uniformity_chi_square": NaN,
+      "permutation_uniformity_p_value": NaN,
+      "occupied_permutation_categories": 720
+    },
+    {
+      "copula": "gaussian_negative",
+      "rho": -0.6,
+      "marginal": "beta_skew",
+      "ensemble_size": 100000,
+      "observed_ordering_fraction_mean": 0.29452066666666665,
+      "theoretical_ordering_fraction": 0.2951672353008665,
+      "absolute_theory_error": 0.0006465686341998733,
+      "permutation_uniformity_chi_square": NaN,
+      "permutation_uniformity_p_value": NaN,
+      "occupied_permutation_categories": 720
+    },
+    {
+      "copula": "gaussian_negative",
+      "rho": -0.6,
+      "marginal": "power_anisotropic",
+      "ensemble_size": 100000,
+      "observed_ordering_fraction_mean": 0.2957653333333333,
+      "theoretical_ordering_fraction": 0.2951672353008665,
+      "absolute_theory_error": 0.0005980980324667984,
+      "permutation_uniformity_chi_square": NaN,
+      "permutation_uniformity_p_value": NaN,
+      "occupied_permutation_categories": 720
+    }
+  ],
+  "same_copula_comparisons": [
+    {
+      "copula": "independence",
+      "first_marginal": "uniform",
+      "second_marginal": "beta_skew",
+      "total_variation": 0.04769,
+      "jensen_shannon_bits": 0.002539747548373755,
+      "chi_square": 702.9876748438145,
+      "degrees_freedom": 719,
+      "p_value": 0.658295856040486,
+      "log10_p_value": -0.1815788787745696
+    },
+    {
+      "copula": "independence",
+      "first_marginal": "uniform",
+      "second_marginal": "power_anisotropic",
+      "total_variation": 0.04618,
+      "jensen_shannon_bits": 0.0024069582652366315,
+      "chi_square": 666.2378418762019,
+      "degrees_freedom": 719,
+      "p_value": 0.9206193299492965,
+      "log10_p_value": -0.035919910604132445
+    },
+    {
+      "copula": "independence",
+      "first_marginal": "beta_skew",
+      "second_marginal": "power_anisotropic",
+      "total_variation": 0.04885,
+      "jensen_shannon_bits": 0.0026940067971741146,
+      "chi_square": 745.534037265175,
+      "degrees_freedom": 719,
+      "p_value": 0.23921787759399846,
+      "log10_p_value": -0.6212063671155028
+    },
+    {
+      "copula": "gaussian_positive",
+      "first_marginal": "uniform",
+      "second_marginal": "beta_skew",
+      "total_variation": 0.0385,
+      "jensen_shannon_bits": 0.0026627161024273815,
+      "chi_square": 729.6175352282905,
+      "degrees_freedom": 719,
+      "p_value": 0.3835445051946549,
+      "log10_p_value": -0.4161842347423462
+    },
+    {
+      "copula": "gaussian_positive",
+      "first_marginal": "uniform",
+      "second_marginal": "power_anisotropic",
+      "total_variation": 0.038770000000000006,
+      "jensen_shannon_bits": 0.00249382011987726,
+      "chi_square": 687.0644463327914,
+      "degrees_freedom": 719,
+      "p_value": 0.7987923006636758,
+      "log10_p_value": -0.09756612982461339
+    },
+    {
+      "copula": "gaussian_positive",
+      "first_marginal": "beta_skew",
+      "second_marginal": "power_anisotropic",
+      "total_variation": 0.040440000000000004,
+      "jensen_shannon_bits": 0.002623367185592323,
+      "chi_square": 722.679412125595,
+      "degrees_freedom": 719,
+      "p_value": 0.45444548501973736,
+      "log10_p_value": -0.3425182069966987
+    },
+    {
+      "copula": "gaussian_negative",
+      "first_marginal": "uniform",
+      "second_marginal": "beta_skew",
+      "total_variation": 0.04083,
+      "jensen_shannon_bits": 0.0027201828133567576,
+      "chi_square": 748.1053915646773,
+      "degrees_freedom": 719,
+      "p_value": 0.2191899437232261,
+      "log10_p_value": -0.6591793748486908
+    },
+    {
+      "copula": "gaussian_negative",
+      "first_marginal": "uniform",
+      "second_marginal": "power_anisotropic",
+      "total_variation": 0.04029,
+      "jensen_shannon_bits": 0.0027050028135061125,
+      "chi_square": 744.3577509517174,
+      "degrees_freedom": 719,
+      "p_value": 0.24871878539313522,
+      "log10_p_value": -0.6042914118170158
+    },
+    {
+      "copula": "gaussian_negative",
+      "first_marginal": "beta_skew",
+      "second_marginal": "power_anisotropic",
+      "total_variation": 0.039360000000000006,
+      "jensen_shannon_bits": 0.0026225156241984115,
+      "chi_square": 722.4461752918854,
+      "degrees_freedom": 719,
+      "p_value": 0.45687583731319353,
+      "log10_p_value": -0.3402018097688356
+    }
+  ],
+  "same_copula_ordering_fraction_ranges": {
+    "independence": 0.0005833333333333246,
+    "gaussian_positive": 0.0010466666666667512,
+    "gaussian_negative": 0.0012446666666666717
+  },
+  "different_copula_controls": [
+    {
+      "first_copula": "independence",
+      "second_copula": "gaussian_positive",
+      "marginal": "uniform",
+      "total_variation": 0.48701000000000005,
+      "jensen_shannon_bits": 0.2423956806974493,
+      "chi_square": 60386.628229361224,
+      "degrees_freedom": 719,
+      "p_value": 0.0,
+      "log10_p_value": -Infinity
+    },
+    {
+      "first_copula": "independence",
+      "second_copula": "gaussian_negative",
+      "marginal": "uniform",
+      "total_variation": 0.48550000000000004,
+      "jensen_shannon_bits": 0.24074843518714562,
+      "chi_square": 59973.37136745668,
+      "degrees_freedom": 719,
+      "p_value": 0.0,
+      "log10_p_value": -Infinity
+    },
+    {
+      "first_copula": "gaussian_positive",
+      "second_copula": "gaussian_negative",
+      "marginal": "uniform",
+      "total_variation": 0.81213,
+      "jensen_shannon_bits": 0.6531544446357991,
+      "chi_square": 143422.23729473207,
+      "degrees_freedom": 719,
+      "p_value": 0.0,
+      "log10_p_value": -Infinity
+    }
+  ],
+  "gates": {
+    "G1_coupled_relations_and_hashes_identical": true,
+    "G2_independence_permutation_uniformity": true,
+    "G3_same_copula_homogeneity_tests": true,
+    "G4_same_copula_total_variation_small": true,
+    "G5_same_copula_ordering_fraction_stable": true,
+    "G6_gaussian_ordering_fraction_matches_theory": true,
+    "G7_different_copula_total_variation_large": true,
+    "G8_different_copula_controls_rejected": true,
+    "G9_infinite_ensemble_nonidentifiability_proved": true,
+    "G10_no_claim_of_copula_injectivity": true
+  },
+  "verdict": "PASS_ENSEMBLE_COPULA_IDENTIFIABILITY_LIMIT",
+  "logical_conclusion": "For fixed copula C, all continuous strictly increasing marginal choices induce exactly the same probability law on every finite order and hence on every iid sequence of such orders. Marginal parameters are therefore statistically non-identifiable from order and cardinality observations alone.",
+  "interpretation_boundary": "The theorem establishes marginal non-identifiability. It does not establish that the full copula is uniquely recoverable from order ensembles; distinct copulas may still share some or all finite-order probabilities."
+}

@@ -1,0 +1,9 @@
+candidate,projective_across_regrouping,extra_input,status
+uniform per child,False,tree arity,TREE_SHAPE_DEPENDENT
+descendant-count proportional,True,terminal leaf counts,CONDITIONAL_COUNTING_LAW
+base-mass proportional,True,additive mu,PROJECTIVE_MEASURE_RATIO
+exp(-lambda child mean q),False,macro mean q and lambda,NONADDITIVE_GROUPING_DEPENDENCE
+mu(child) exp(-lambda weighted mean q),False,"mu, mean q, lambda",JENSEN_GAP_NONPROJECTIVE
+subtree partition sum,True,"mu, leaf q, lambda",PROJECTIVE_Q_WEIGHTED_LAW
+maximum relative entropy,yes with partition sums,reference mu and expected-q constraint,CONDITIONAL_GIBBS_SELECTION
+recursive additivity without boundary weights,architecture only,terminal boundary weights,UNDERDETERMINED

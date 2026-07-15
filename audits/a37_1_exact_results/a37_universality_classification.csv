@@ -1,0 +1,7 @@
+regime,universal,required_information,status
+"single stationary component, matched variance",False,innovation higher cumulants or full law,NO_EXACT_UNIVERSALITY
+independent block sums with local exponential moments,asymptotically Gaussian for audited score,independence and MGF control,CONDITIONAL_COARSE_GRAIN_UNIVERSALITY
+finite-variance Student-t innovations,False,tail class,Q_LAMBDA_UNDEFINED
+shared non-Gaussian common shock,False,dependence structure,DEPENDENCE_OBSTRUCTION
+row-standardized exponential transition kernel,False,stationary shape after standardization,OPERATIONAL_LAW_SENSITIVITY
+actual RZS innovations,,"noise law, dependence, and tail control",NOT_ESTABLISHED

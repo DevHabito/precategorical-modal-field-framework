@@ -1,0 +1,8 @@
+control,edge_count,number_scc,height,width,graded,sources,sinks,degree_fiber_size,fraction_fiber_height_at_least_observed,fraction_fiber_chain_and_height_at_least_observed
+empty,0,5,1,5,True,5,5,1,1.0,0.0
+complete,20,1,1,1,True,1,1,1,1.0,1.0
+directed_path,4,5,5,1,True,1,1,11,0.5454545454545454,0.5454545454545454
+directed_cycle,5,1,1,1,True,1,1,44,1.0,0.5454545454545454
+bidirectional_path,8,1,1,1,True,1,1,61,1.0,0.9836065573770492
+total_order,10,5,5,1,True,1,1,1,1.0,1.0
+two_scc_modules,6,2,2,1,True,1,1,48,0.375,0.375

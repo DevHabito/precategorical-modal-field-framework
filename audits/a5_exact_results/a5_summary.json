@@ -1,0 +1,550 @@
+{
+  "model": "loopless directed graphs; uniform induced-subset sampling",
+  "N_max": 4,
+  "unlabeled_class_counts": {
+    "1": 1,
+    "2": 3,
+    "3": 16,
+    "4": 218
+  },
+  "composition_checks": [
+    {
+      "ell": 1,
+      "m": 2,
+      "n": 3,
+      "exact": true
+    },
+    {
+      "ell": 1,
+      "m": 2,
+      "n": 4,
+      "exact": true
+    },
+    {
+      "ell": 1,
+      "m": 3,
+      "n": 4,
+      "exact": true
+    },
+    {
+      "ell": 2,
+      "m": 3,
+      "n": 4,
+      "exact": true
+    }
+  ],
+  "all_composition_checks_pass": true,
+  "kernel_stats": [
+    {
+      "m": 1,
+      "n": 2,
+      "rows_u_m": 1,
+      "cols_u_n": 3,
+      "rank": 1,
+      "affine_image_dimension": 0,
+      "distinct_columns": 1,
+      "pure_m_classes_extendible": 1,
+      "pure_m_class_indices_extendible": [
+        0
+      ]
+    },
+    {
+      "m": 1,
+      "n": 3,
+      "rows_u_m": 1,
+      "cols_u_n": 16,
+      "rank": 1,
+      "affine_image_dimension": 0,
+      "distinct_columns": 1,
+      "pure_m_classes_extendible": 1,
+      "pure_m_class_indices_extendible": [
+        0
+      ]
+    },
+    {
+      "m": 1,
+      "n": 4,
+      "rows_u_m": 1,
+      "cols_u_n": 218,
+      "rank": 1,
+      "affine_image_dimension": 0,
+      "distinct_columns": 1,
+      "pure_m_classes_extendible": 1,
+      "pure_m_class_indices_extendible": [
+        0
+      ]
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "rows_u_m": 3,
+      "cols_u_n": 16,
+      "rank": 3,
+      "affine_image_dimension": 2,
+      "distinct_columns": 10,
+      "pure_m_classes_extendible": 3,
+      "pure_m_class_indices_extendible": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "m": 2,
+      "n": 4,
+      "rows_u_m": 3,
+      "cols_u_n": 218,
+      "rank": 3,
+      "affine_image_dimension": 2,
+      "distinct_columns": 28,
+      "pure_m_classes_extendible": 3,
+      "pure_m_class_indices_extendible": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "m": 3,
+      "n": 4,
+      "rows_u_m": 16,
+      "cols_u_n": 218,
+      "rank": 16,
+      "affine_image_dimension": 15,
+      "distinct_columns": 210,
+      "pure_m_classes_extendible": 9,
+      "pure_m_class_indices_extendible": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        10,
+        12,
+        14,
+        15
+      ]
+    }
+  ],
+  "family_dimensions": [
+    {
+      "N": 1,
+      "u_N": 1,
+      "simplex_dimension_top": 0,
+      "projective_family_polytope_dimension": 0,
+      "number_of_extreme_points": 1
+    },
+    {
+      "N": 2,
+      "u_N": 3,
+      "simplex_dimension_top": 2,
+      "projective_family_polytope_dimension": 2,
+      "number_of_extreme_points": 3
+    },
+    {
+      "N": 3,
+      "u_N": 16,
+      "simplex_dimension_top": 15,
+      "projective_family_polytope_dimension": 15,
+      "number_of_extreme_points": 16
+    },
+    {
+      "N": 4,
+      "u_N": 218,
+      "simplex_dimension_top": 217,
+      "projective_family_polytope_dimension": 217,
+      "number_of_extreme_points": 218
+    }
+  ],
+  "theorem_audit": {
+    "statement": "For a fixed top size N, the polytope of projective families (p_1,...,p_N) with induced-subgraph kernels is affinely isomorphic to the full simplex on unlabeled N-vertex classes.",
+    "reason": "p_N is unconstrained apart from being a probability vector, and every lower p_m is uniquely K_{m<-N} p_N.",
+    "consequence": "Finite projectivity alone does not select a measure; its dimension is u_N-1 and its extreme points are deterministic choices of an N-vertex isomorphism class."
+  },
+  "pure_3_class_extendibility_to_4": [
+    {
+      "class_index": 0,
+      "representative_mask": 0,
+      "adjacency": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": true,
+      "number_of_4_class_witnesses": 1,
+      "first_witness_4_class_index": 0
+    },
+    {
+      "class_index": 1,
+      "representative_mask": 1,
+      "adjacency": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": true,
+      "number_of_4_class_witnesses": 1,
+      "first_witness_4_class_index": 11
+    },
+    {
+      "class_index": 2,
+      "representative_mask": 3,
+      "adjacency": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": false,
+      "number_of_4_class_witnesses": 0,
+      "first_witness_4_class_index": null
+    },
+    {
+      "class_index": 3,
+      "representative_mask": 5,
+      "adjacency": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": true,
+      "number_of_4_class_witnesses": 1,
+      "first_witness_4_class_index": 120
+    },
+    {
+      "class_index": 4,
+      "representative_mask": 6,
+      "adjacency": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": true,
+      "number_of_4_class_witnesses": 1,
+      "first_witness_4_class_index": 128
+    },
+    {
+      "class_index": 5,
+      "representative_mask": 7,
+      "adjacency": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": false,
+      "number_of_4_class_witnesses": 0,
+      "first_witness_4_class_index": null
+    },
+    {
+      "class_index": 6,
+      "representative_mask": 10,
+      "adjacency": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": false,
+      "number_of_4_class_witnesses": 0,
+      "first_witness_4_class_index": null
+    },
+    {
+      "class_index": 7,
+      "representative_mask": 11,
+      "adjacency": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": true,
+      "number_of_4_class_witnesses": 1,
+      "first_witness_4_class_index": 83
+    },
+    {
+      "class_index": 8,
+      "representative_mask": 15,
+      "adjacency": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": false,
+      "number_of_4_class_witnesses": 0,
+      "first_witness_4_class_index": null
+    },
+    {
+      "class_index": 9,
+      "representative_mask": 21,
+      "adjacency": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": false,
+      "number_of_4_class_witnesses": 0,
+      "first_witness_4_class_index": null
+    },
+    {
+      "class_index": 10,
+      "representative_mask": 23,
+      "adjacency": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": true,
+      "number_of_4_class_witnesses": 1,
+      "first_witness_4_class_index": 203
+    },
+    {
+      "class_index": 11,
+      "representative_mask": 25,
+      "adjacency": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": false,
+      "number_of_4_class_witnesses": 0,
+      "first_witness_4_class_index": null
+    },
+    {
+      "class_index": 12,
+      "representative_mask": 27,
+      "adjacency": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": true,
+      "number_of_4_class_witnesses": 1,
+      "first_witness_4_class_index": 208
+    },
+    {
+      "class_index": 13,
+      "representative_mask": 30,
+      "adjacency": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": false,
+      "number_of_4_class_witnesses": 0,
+      "first_witness_4_class_index": null
+    },
+    {
+      "class_index": 14,
+      "representative_mask": 31,
+      "adjacency": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": true,
+      "number_of_4_class_witnesses": 1,
+      "first_witness_4_class_index": 215
+    },
+    {
+      "class_index": 15,
+      "representative_mask": 63,
+      "adjacency": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "extendible_to_4_as_delta": true,
+      "number_of_4_class_witnesses": 1,
+      "first_witness_4_class_index": 217
+    }
+  ]
+}

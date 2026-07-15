@@ -1,0 +1,7 @@
+principle,selects,unique,hidden_input,status
+IIA,all positive pointwise weight functions,False,none beyond pointwise score,NONSELECTIVE
+detailed balance on symmetric weights,all positive symmetric edge-weight functions,False,stationary measure follows from row sums,NONSELECTIVE
+aggregation by total weight,all additive positive weight representations,False,choice of weight representation,NONSELECTIVE
+difference-only odds plus continuity,f(z)=C exp(-lambda z),family only,cardinal additive score z,SELECTS_EXPONENTIAL_FAMILY
+maximum entropy with fixed expected score,f(z)=exp(-lambda z),yes after target mean m is fixed,choice of score and numerical constraint m,CONDITIONAL_SELECTION
+present RZS postulates alone,no unique lambda or target mean,False,missing empirical or dynamical constraint,LAW_STRENGTH_UNDERDETERMINED

@@ -1,0 +1,7 @@
+n,base_model,alternative_model,fixed_threshold,balanced_accuracy,uniform_false_negative_rate,alternative_false_positive_rate
+64,uniform,power_anisotropic,1.4,0.99775,0.004,0.0005
+64,uniform,beta_skew,1.5714285714285714,0.98275,0.028,0.0065
+128,uniform,power_anisotropic,1.4,1.0,0.0,0.0
+128,uniform,beta_skew,1.5714285714285714,0.998,0.004,0.0
+256,uniform,power_anisotropic,1.4,1.0,0.0,0.0
+256,uniform,beta_skew,1.5714285714285714,1.0,0.0,0.0

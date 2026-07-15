@@ -1,0 +1,45 @@
+{
+  "status": "POST_HOC_DENSITY_FILTERED_AUDIT",
+  "filter": "ordering_fraction_mismatch <= 0.02",
+  "one_gadget_results": [
+    {
+      "n": 96,
+      "gadget_count": 1,
+      "all_candidates": 60,
+      "density_valid_candidates": 56,
+      "density_valid_fraction": 0.9333333333333333,
+      "density_valid_accepted": 38,
+      "density_valid_acceptance_rate": 0.6785714285714286,
+      "maximum_p_value_among_density_valid": 0.8235294117647058,
+      "median_p_value_among_density_valid": 0.12443438914027144,
+      "maximum_density_mismatch_in_valid_subset": 0.0164473684210526
+    },
+    {
+      "n": 128,
+      "gadget_count": 1,
+      "all_candidates": 60,
+      "density_valid_candidates": 56,
+      "density_valid_fraction": 0.9333333333333333,
+      "density_valid_accepted": 31,
+      "density_valid_acceptance_rate": 0.5535714285714286,
+      "maximum_p_value_among_density_valid": 0.986425339366516,
+      "median_p_value_among_density_valid": 0.07692307692307684,
+      "maximum_density_mismatch_in_valid_subset": 0.0055364173228346
+    },
+    {
+      "n": 192,
+      "gadget_count": 1,
+      "all_candidates": 60,
+      "density_valid_candidates": 57,
+      "density_valid_fraction": 0.95,
+      "density_valid_accepted": 38,
+      "density_valid_acceptance_rate": 0.6666666666666666,
+      "maximum_p_value_among_density_valid": 0.9049773755656108,
+      "median_p_value_among_density_valid": 0.1628959276018099,
+      "maximum_density_mismatch_in_valid_subset": 0.0149978184991274
+    }
+  ],
+  "systematic_acceptance_ge_0_50_at_all_sizes": true,
+  "prospective_n192_density_valid_acceptance_rate": 0.6666666666666666,
+  "interpretation": "Although the preregistered all-candidates density gate failed, the certified false-positive effect remains systematic after restricting analysis to candidates individually matched within the stated 0.02 ordering-fraction tolerance."
+}

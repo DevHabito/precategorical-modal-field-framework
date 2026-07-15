@@ -1,0 +1,7 @@
+candidate,uses_only_existing_relational_inputs,hidden_external_scale,local,gauge_invariant,absolute_q_information,status
+raw exp(-q) softmax,True,yes unless q normalization is independently fixed,True,row shifts only,False,OPERATIONAL_BUT_NORMALIZATION_DEPENDENT
+standardized exponential kernel,True,False,True,row positive affine transformations,False,STRUCTURALLY_ADMISSIBLE_NONCIRCULAR_WITNESS
+standardized asinh kernel,True,False,True,row positive affine transformations,False,STRUCTURALLY_ADMISSIBLE_NONCIRCULAR_WITNESS
+rank kernel,True,False,True,all strictly increasing row transformations,False,NONCIRCULAR_BUT_ONLY_ORDINAL
+absolute D_eff/L0 kernel,False,True,False,False,assumed through L0,CIRCULAR_OR_EXTRA_PRIMITIVE
+current centered q dynamics,True,noise amplitude fixes only a dimensionless q convention,,True,False,REPARAMETERIZATION_EQUIVARIANT

@@ -1,0 +1,59 @@
+{
+  "seed": 20260810,
+  "compact_t_interval": [
+    -4.0,
+    4.0
+  ],
+  "n_values": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "distribution_results": [
+    {
+      "distribution": "laplace",
+      "initial_max_cf_error": 0.2036321857230491,
+      "error_n128": 0.002109120965879341,
+      "final_max_cf_error": 0.00013214185157531255,
+      "reduction_factor": 1541.0120510305665
+    },
+    {
+      "distribution": "rademacher",
+      "initial_max_cf_error": 1.0074648240124693,
+      "error_n128": 0.0014141641335129462,
+      "final_max_cf_error": 8.812612068020975e-05,
+      "reduction_factor": 11432.079572279561
+    },
+    {
+      "distribution": "uniform",
+      "initial_max_cf_error": 0.26052980692092254,
+      "error_n128": 0.0008482465312042997,
+      "final_max_cf_error": 5.287468922665628e-05,
+      "reduction_factor": 4927.306632557546
+    }
+  ],
+  "gates": {
+    "G1_original_ks_threshold_not_lowered": true,
+    "G2_lattice_finite_size_issue_explicitly_identified": true,
+    "G3_characteristic_function_is_valid_clt_convergence_diagnostic": true,
+    "G4_rademacher_compact_cf_converges": true,
+    "G5_laplace_compact_cf_converges": true,
+    "G6_uniform_compact_cf_converges": true,
+    "G7_compact_cf_errors_monotonically_decrease": true,
+    "G8_clt_remains_conditional_on_iid_finite_variance_assumptions": true,
+    "G9_original_a36_failure_preserved_in_record": true,
+    "G10_no_gaussian_rzs_noise_claimed": true
+  },
+  "verdict": "PASS_CORRECTED_CLT_DIAGNOSTIC_GAUSSIAN_SELECTION_REMAINS_CONDITIONAL",
+  "logical_conclusion": "The A36 KS gate failed because n=128 was not sufficiently asymptotic for the lattice Rademacher law under the frozen absolute KS threshold. A fresh corrective audit using characteristic functions confirms convergence of iid finite-variance Rademacher, Laplace, and uniform normalized sums toward the Gaussian characteristic function. This repairs the diagnostic, not the physical derivation: RZS independence and finite-variance innovation assumptions remain absent.",
+  "interpretation_boundary": "The corrected result supports the conditional CLT statement only. It does not turn centered RZS noise into Gaussian noise."
+}

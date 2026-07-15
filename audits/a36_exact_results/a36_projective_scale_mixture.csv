@@ -1,0 +1,6 @@
+dimension,df,projective,rotational,variance,component_excess,cross_square_cov,gaussian
+2,8,True,True,1.0,1.5,0.5,False
+4,8,True,True,1.0,1.5,0.5,False
+8,8,True,True,1.0,1.5,0.5,False
+16,8,True,True,1.0,1.5,0.5,False
+64,8,True,True,1.0,1.5,0.5,False

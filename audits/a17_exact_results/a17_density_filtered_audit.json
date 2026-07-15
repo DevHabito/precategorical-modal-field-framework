@@ -1,0 +1,67 @@
+{
+  "status": "POST_HOC_DENSITY_FILTERED_AUDIT",
+  "filter": "ordering_fraction_mismatch <= 0.02",
+  "results": [
+    {
+      "n": 192,
+      "family": "bimodal_clusters",
+      "all_samples": 24,
+      "density_valid_samples": 24,
+      "density_valid_fraction": 1.0,
+      "density_valid_acceptance_rate": 0.9583333333333334,
+      "density_valid_rejection_rate": 0.04166666666666663,
+      "max_mismatch_valid": 0.0048538394415357
+    },
+    {
+      "n": 192,
+      "family": "four_corner_clusters",
+      "all_samples": 24,
+      "density_valid_samples": 22,
+      "density_valid_fraction": 0.9166666666666666,
+      "density_valid_acceptance_rate": 0.9545454545454546,
+      "density_valid_rejection_rate": 0.045454545454545414,
+      "max_mismatch_valid": 0.019251745200698
+    },
+    {
+      "n": 192,
+      "family": "opposing_diagonal_bands",
+      "all_samples": 24,
+      "density_valid_samples": 24,
+      "density_valid_fraction": 1.0,
+      "density_valid_acceptance_rate": 0.0,
+      "density_valid_rejection_rate": 1.0,
+      "max_mismatch_valid": 0.0137434554973822
+    },
+    {
+      "n": 256,
+      "family": "bimodal_clusters",
+      "all_samples": 24,
+      "density_valid_samples": 24,
+      "density_valid_fraction": 1.0,
+      "density_valid_acceptance_rate": 0.9583333333333334,
+      "density_valid_rejection_rate": 0.04166666666666663,
+      "max_mismatch_valid": 0.0049938725490196
+    },
+    {
+      "n": 256,
+      "family": "four_corner_clusters",
+      "all_samples": 24,
+      "density_valid_samples": 24,
+      "density_valid_fraction": 1.0,
+      "density_valid_acceptance_rate": 1.0,
+      "density_valid_rejection_rate": 0.0,
+      "max_mismatch_valid": 0.0153186274509804
+    },
+    {
+      "n": 256,
+      "family": "opposing_diagonal_bands",
+      "all_samples": 24,
+      "density_valid_samples": 24,
+      "density_valid_fraction": 1.0,
+      "density_valid_acceptance_rate": 0.0,
+      "density_valid_rejection_rate": 1.0,
+      "max_mismatch_valid": 0.0185661764705882
+    }
+  ],
+  "central_conclusion": "After density filtering, opposing diagonal bands remain universally rejected, whereas compact bimodal and four-corner exact-2D clusters remain overwhelmingly accepted."
+}

@@ -1,0 +1,128 @@
+{
+  "n_vertices": 5,
+  "labeled_digraphs": 1048576,
+  "unique_labeled_condensation_posets": 5234,
+  "nontrivial_unique_condensation_posets": 5233,
+  "all_candidates_strict_on_comparable_pairs": {
+    "depth": true,
+    "balance": true,
+    "mean_extension": true
+  },
+  "fraction_nontrivial_posets_clock_injective": {
+    "depth": 0.049684693292566404,
+    "balance": 0.3409134339766864,
+    "mean_extension": 0.4785018154022549
+  },
+  "fraction_nontrivial_posets_all_three_clocks_equal": 0.10376457099178292,
+  "total_incomparable_pairs_across_unique_posets": 20048,
+  "fraction_incomparable_pairs_depth_balance_disagree": 0.4175977653631285,
+  "fraction_incomparable_pairs_depth_mean_extension_disagree": 0.42358339984038307,
+  "fraction_incomparable_pairs_balance_mean_extension_disagree": 0.047885075818036714,
+  "reversal_audit": [
+    {
+      "clock": "depth",
+      "fraction_exactly_reflected": 0.9352218012144878,
+      "mean_max_reflection_error": 0.0441782351870543,
+      "maximum_reflection_error": 1.0
+    },
+    {
+      "clock": "balance",
+      "fraction_exactly_reflected": 1.0,
+      "mean_max_reflection_error": 9.26877417579348e-18,
+      "maximum_reflection_error": 1.1102230246251565e-16
+    },
+    {
+      "clock": "mean_extension",
+      "fraction_exactly_reflected": 1.0,
+      "mean_max_reflection_error": 1.3662630086949388e-17,
+      "maximum_reflection_error": 2.220446049250313e-16
+    }
+  ],
+  "single_edge_perturbation_audit": [
+    {
+      "clock": "depth",
+      "fraction_single_edge_flips_changing_clock": 0.2869300842285156,
+      "mean_vertex_absolute_change": 0.094268798828125,
+      "mean_graph_maximum_change": 0.15236473083496094
+    },
+    {
+      "clock": "balance",
+      "fraction_single_edge_flips_changing_clock": 0.29296875,
+      "mean_vertex_absolute_change": 0.0941287158784412,
+      "mean_graph_maximum_change": 0.15046640123639782
+    },
+    {
+      "clock": "mean_extension",
+      "fraction_single_edge_flips_changing_clock": 0.29296875,
+      "mean_vertex_absolute_change": 0.09387992017525072,
+      "mean_graph_maximum_change": 0.1502144842815575
+    }
+  ],
+  "first_candidate_disagreement_example": {
+    "code": 234881026,
+    "active_vertices": [
+      0,
+      1,
+      2
+    ],
+    "strict_relation_matrix": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "depth_clock": [
+      0.0,
+      1.0,
+      0.0,
+      NaN,
+      NaN
+    ],
+    "balance_clock": [
+      0.0,
+      1.0,
+      0.5,
+      NaN,
+      NaN
+    ],
+    "mean_extension_clock": [
+      0.0,
+      1.0,
+      0.5,
+      NaN,
+      NaN
+    ],
+    "number_linear_extensions": 3
+  }
+}

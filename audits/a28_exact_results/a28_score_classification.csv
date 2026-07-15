@@ -1,0 +1,7 @@
+score,local,relabel_equivariant,extension_stable,positive_affine_invariant,cardinal,requires_external_scale_or_lambda,status
+raw/min_shift q,True,True,True,False,True,True,STABLE_CARDINAL_BUT_SCALE_DEGENERATE
+row z-score,True,True,False,True,True,False,DIMENSIONLESS_BUT_CONTEXT_DEPENDENT
+row median/MAD,True,True,False,True,True,False,ROBUST_BUT_CONTEXT_DEPENDENT
+row rank,True,True,False,True,False,False,ORDINAL_AND_CONTEXT_DEPENDENT
+global z-score,False,True,False,True,True,False,DIMENSIONLESS_BUT_NONLOCAL
+fixed externally calibrated q unit,True,True,True,False,True,True,ESCAPE_REQUIRES_EXTRA_PRIMITIVE

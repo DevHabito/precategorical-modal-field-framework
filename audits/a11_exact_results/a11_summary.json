@@ -1,0 +1,120 @@
+{
+  "seed": 20260712,
+  "confirmatory_dimensions": [
+    2,
+    3
+  ],
+  "training_size_n": 64,
+  "testing_size_n": 96,
+  "d4_diagnostic_size_n": 128,
+  "training_samples": 80,
+  "testing_samples": 80,
+  "primary_features": [
+    "abs_d_lc_minus_d_mm",
+    "abs_d_mid_minus_d_mm",
+    "r2_lc",
+    "mad_mid",
+    "branch_excess",
+    "usable_reg_fraction",
+    "usable_mid_fraction"
+  ],
+  "null_matching": {
+    "mean_absolute_ordering_fraction_mismatch": 0.014200736215538842,
+    "maximum_ordering_fraction_mismatch": 0.060526315789473706
+  },
+  "primary_classifier": {
+    "features": [
+      "abs_d_lc_minus_d_mm",
+      "abs_d_mid_minus_d_mm",
+      "r2_lc",
+      "mad_mid",
+      "branch_excess",
+      "usable_reg_fraction",
+      "usable_mid_fraction"
+    ],
+    "accuracy": 0.8125,
+    "balanced_accuracy": 0.8125,
+    "roc_auc": 0.913125,
+    "confusion_matrix": [
+      [
+        25,
+        15
+      ],
+      [
+        0,
+        40
+      ]
+    ],
+    "bootstrap_95_ci_balanced_accuracy": [
+      0.7368238304093567,
+      0.8857142857142857
+    ]
+  },
+  "ordering_fraction_only_baseline": {
+    "features": [
+      "ordering_fraction"
+    ],
+    "accuracy": 0.5,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.47187500000000004,
+    "confusion_matrix": [
+      [
+        20,
+        20
+      ],
+      [
+        20,
+        20
+      ]
+    ],
+    "bootstrap_95_ci_balanced_accuracy": [
+      0.38742644212156413,
+      0.6074909959793681
+    ]
+  },
+  "grouped_performance": [
+    {
+      "dimension": 2,
+      "null_family": "transitive_percolation",
+      "number_samples": 30,
+      "balanced_accuracy": 0.5
+    },
+    {
+      "dimension": 2,
+      "null_family": "three_layer",
+      "number_samples": 30,
+      "balanced_accuracy": 1.0
+    },
+    {
+      "dimension": 3,
+      "null_family": "transitive_percolation",
+      "number_samples": 30,
+      "balanced_accuracy": 0.95
+    },
+    {
+      "dimension": 3,
+      "null_family": "three_layer",
+      "number_samples": 30,
+      "balanced_accuracy": 0.8
+    }
+  ],
+  "d4_diagnostic": {
+    "number_samples": 16,
+    "fraction_with_at_least_20_regression_and_5_midpoint_intervals": 0.4375,
+    "median_number_regression_intervals": 30.0,
+    "median_number_midpoint_intervals": 4.0,
+    "median_d_mm": 4.118642214059532,
+    "median_d_lc": 4.31465949449396,
+    "median_d_mid": 3.027641217750595
+  },
+  "gates": {
+    "G1_ordering_fraction_matching_mae_le_0_02": true,
+    "G2_test_balanced_accuracy_ge_0_75": true,
+    "G3_bootstrap_lower_bound_gt_0_50": true,
+    "G4_each_dimension_null_pair_ge_0_65": false,
+    "G5_ordering_fraction_only_baseline_le_0_60": true,
+    "G6_d4_finite_sample_feasibility_ge_0_80": false
+  },
+  "confirmatory_verdict": "FAIL_ORDER_VOLUME_DISCRIMINATION",
+  "interpretation_boundary": "A pass means the frozen order-volume feature set separates finite 2D/3D Minkowski sprinklings from the two tested matched null families across a prospective size shift. It does not show that generic relational structures generate spacetime."
+}

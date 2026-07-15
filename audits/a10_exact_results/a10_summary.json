@@ -1,0 +1,41 @@
+{
+  "n_vertices": 5,
+  "labeled_digraphs": 1048576,
+  "unique_labeled_condensation_posets": 5234,
+  "nontrivial_unique_condensation_posets": 5233,
+  "fraction_nontrivial_posets_standard_ranked": 0.7523409134339767,
+  "fraction_nontrivial_posets_cover_potential_exists": 0.9541372061914771,
+  "fraction_nontrivial_posets_longest_additive_all_triples": 0.9770686030957386,
+  "fraction_nontrivial_posets_volume_additive_all_triples": 0.8494171603286833,
+  "fraction_all_comparable_triples_longest_additive": 0.9892818863879957,
+  "fraction_all_comparable_triples_volume_additive": 0.8145766345123259,
+  "mean_longest_superadditivity_defect": 0.010718113612004287,
+  "mean_volume_superadditivity_defect": 0.2015005359056806,
+  "fraction_comparable_pairs_longest_equals_interval": 0.9652698048220436,
+  "all_standard_ranked_posets_rank_matches_longest": true,
+  "all_cover_potential_posets_match_longest": true,
+  "degree_fibers_with_multiple_graphs": 136793,
+  "degree_fibers_varying_duration_signature": 47700,
+  "degree_fibers_varying_max_longest_duration": 46490,
+  "degree_fibers_varying_standard_rankedness": 2740,
+  "degree_fibers_varying_cover_potential": 280,
+  "single_edge_flip_fraction_changing_duration_signature": 0.29296875,
+  "single_edge_flip_fraction_changing_max_longest_duration": 0.2547607421875,
+  "single_edge_flip_fraction_changing_max_interval_duration": 0.25858306884765625,
+  "single_edge_flip_fraction_changing_standard_rankedness": 0.01306915283203125,
+  "single_edge_flip_fraction_changing_cover_potential": 0.00199127197265625,
+  "coarse_graining_counterexample": {
+    "fine_chain": "a<b<c<d",
+    "partition": "{a,b}|{c}|{d}",
+    "quotient_chain": "A<B<C",
+    "max_fine_longest_between_A_B": 2,
+    "quotient_longest_A_B": 1,
+    "max_fine_longest_between_A_C": 3,
+    "quotient_longest_A_C": 2,
+    "ratios": [
+      "1/2",
+      "2/3"
+    ],
+    "conclusion": "No single multiplicative scale preserves both durations."
+  }
+}

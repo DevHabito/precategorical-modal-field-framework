@@ -1,0 +1,10 @@
+n,transform,relation_hash_identical,interval_abundance_identical,interval_abundance_hash_identical,all_interval_sizes_identical,interval_size_hash_identical
+128,power_anisotropic,True,True,True,True,True
+128,beta_skew_opposed,True,True,True,True,True
+128,beta_extreme_edges,True,True,True,True,True
+256,power_anisotropic,True,True,True,True,True
+256,beta_skew_opposed,True,True,True,True,True
+256,beta_extreme_edges,True,True,True,True,True
+512,power_anisotropic,True,True,True,True,True
+512,beta_skew_opposed,True,True,True,True,True
+512,beta_extreme_edges,True,True,True,True,True

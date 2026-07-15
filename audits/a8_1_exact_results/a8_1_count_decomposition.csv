@@ -1,0 +1,6 @@
+number_scc,labeled_posets_on_quotient,set_partitions_S_n_k,minimum_representative_sets,full_labeled_contribution,representative_code_contribution,difference
+1,1,1,1,1,1,0
+2,3,15,4,45,12,33
+3,19,25,6,475,114,361
+4,219,10,4,2190,876,1314
+5,4231,1,1,4231,4231,0
