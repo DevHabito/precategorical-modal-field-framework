@@ -13,6 +13,11 @@ as requiring novelty review in `docs/RESULT_CLASSIFICATION.md`.
 - `REFERENCES.bib`
 - `RESULT_CLASSIFICATION_PATCH.csv`
 
+## C2 scope
+
+See `README_C2.md` for the foundational novelty audit covering MF-R036,
+MF-R047, MF-R048, and MF-R049.
+
 ## Status vocabulary
 
 - `CLASSICAL`: an explicit matching prior result was located.

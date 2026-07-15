@@ -22,10 +22,7 @@ No item is labeled a definitively new theorem unless a dedicated claim-level lit
 
 - **MF-R008 — Count of minimum-representative quotient-poset codes**: PROJECT-SPECIFIC ELEMENTARY ENUMERATION; NO EXACT MATCH FOUND IN C1 SEARCH; PRIORITY NOT CERTIFIED
 - **MF-R011 — Single-edge flip changes the n=5 condensation preorder with probability 75/256**: APPARENTLY UNREPORTED EXACT FINITE SENSITIVITY STATISTIC; NOVELTY NOT CERTIFIED
-- **MF-R036 — No nontrivial continuous cardinal score satisfies both extension stability and full positive-affine invariance**: POTENTIALLY ORIGINAL FORMULATION; HIGH-PRIORITY NOVELTY SEARCH
-- **MF-R047 — Q_lambda(aq+c)=c+a Q_{a lambda}(q)**: POTENTIALLY ORIGINAL EMPHASIS; ALGEBRA ITSELF ELEMENTARY
-- **MF-R048 — Q'_lambda=(1-a) q_bar + a Q_{a lambda}**: POTENTIALLY ORIGINAL AND TECHNICALLY STRONG; NOVELTY SEARCH REQUIRED
-- **MF-R049 — A single Q_lambda is not generally a dynamically closed state variable**: POTENTIALLY ORIGINAL FRAMEWORK CONSEQUENCE
+- **MF-R049 — A single Q_lambda is not generally a dynamically closed state variable**: PROJECT-SPECIFIC EXACT NONCLOSURE COROLLARY WITH AN EXACT FOUR-POINT COUNTEREXAMPLE; NO EXACT PRIOR MATCH FOUND; NOVELTY NOT CERTIFIED
 - **MF-R067 — Current minimal architecture is (R,q,mu,K,pi)**: POTENTIALLY ORIGINAL SYNTHESIS
 - **MF-R068 — The obstruction map is a framework-level contribution**: ORIGINAL ORGANIZATION; INDIVIDUAL ITEMS HAVE UNEQUAL NOVELTY
 
@@ -54,7 +51,7 @@ No item is labeled a definitively new theorem unless a dedicated claim-level lit
 
 | ID | Claim | Mathematical status | Novelty status | Evidence | Allowed claim | Forbidden overclaim | Target | Action | Priority |
 |---|---|---|---|---|---|---|---|---|---|
-| MF-R047 | Q_lambda(aq+c)=c+a Q_{a lambda}(q) | PROVED ALGEBRAICALLY | POTENTIALLY ORIGINAL EMPHASIS; ALGEBRA ITSELF ELEMENTARY | EXACT_IDENTITY | The scale transformation changes the effective lambda and therefore couples score scale to the parameter. | A physical renormalization-group law. | FOUNDATIONAL | KEEP AS CORE IDENTITY | P0 |
+| MF-R047 | Q_lambda(aq+c)=c+a Q_{a lambda}(q) | PROVED ALGEBRAICALLY | CLASSICAL ALGEBRAIC PROPERTY OF THE EXPONENTIAL CERTAINTY EQUIVALENT / ENTROPIC RISK FUNCTIONAL | EXACT_IDENTITY | The framework uses the standard affine covariance Q_lambda(aq+c)=c+a Q_{a lambda}(q) to track score-scale and parameter coupling. | A newly discovered log-partition transformation law or evidence for physical renormalization. | FOUNDATIONAL | ATTRIBUTE AS BACKGROUND IDENTITY; RETAIN FOR PARAMETER-STATUS ANALYSIS | P0 |
 
 ## Analytic interval signature
 
@@ -90,7 +87,7 @@ No item is labeled a definitively new theorem unless a dedicated claim-level lit
 
 | ID | Claim | Mathematical status | Novelty status | Evidence | Allowed claim | Forbidden overclaim | Target | Action | Priority |
 |---|---|---|---|---|---|---|---|---|---|
-| MF-R036 | No nontrivial continuous cardinal score satisfies both extension stability and full... | PROVED | POTENTIALLY ORIGINAL FORMULATION; HIGH-PRIORITY NOVELTY SEARCH | NO_GO_THEOREM | The three audited requirements are jointly incompatible for a nontrivial cardinal score. | No meaningful score can ever be defined, or the theorem applies outside its explicit axioms. | FOUNDATIONAL | PROMOTE TO A CENTRAL THEOREM AFTER LITERATURE REVIEW | P0 |
+| MF-R036 | No nontrivial continuous cardinal score satisfies both extension stability and full positive-affine invariance | PROVED | ELEMENTARY COROLLARY OF STANDARD INTERVAL-SCALE MEASUREMENT INVARIANCE; PROJECT-SPECIFIC CONTEXT FORMULATION | NO_GO_THEOREM | The project formalizes a short incompatibility among extension stability, numerical positive-affine invariance, continuity, and nontrivial cardinal score differences. | A fundamentally new measurement-theory impossibility theorem, or a claim that interval-scale differences are meaningless. | FOUNDATIONAL | DEMOTE TO FOUNDATIONAL LEMMA; KEEP THE CONTEXT–SCALE–CARDINALITY TRILEMMA | P0 |
 
 ## Copula identifiability
 
@@ -126,13 +123,13 @@ No item is labeled a definitively new theorem unless a dedicated claim-level lit
 
 | ID | Claim | Mathematical status | Novelty status | Evidence | Allowed claim | Forbidden overclaim | Target | Action | Priority |
 |---|---|---|---|---|---|---|---|---|---|
-| MF-R048 | Q'_lambda=(1-a) q_bar + a Q_{a lambda} | PROVED | POTENTIALLY ORIGINAL AND TECHNICALLY STRONG; NOVELTY SEARCH REQUIRED | EXACT_DYNAMIC_IDENTITY | The contraction transports the whole Q(lambda) curve by rescaling lambda. | A fundamental physical evolution equation or closure of the full RZS dynamics. | FOUNDATIONAL | PROMOTE TO CENTRAL PROPOSITION AFTER LITERATURE REVIEW | P0 |
+| MF-R048 | Q'_lambda=(1-a) q_bar + a Q_{a lambda} | PROVED | PROJECT-SPECIFIC DIRECT COROLLARY OF CLASSICAL AFFINE COVARIANCE; EXACT BUT NOT AN INDEPENDENT NEW THEOREM | EXACT_DYNAMIC_IDENTITY | For the declared centered contraction, the exact transport law Q'_lambda=(1-a)q_bar+aQ_{a lambda} follows and exposes parameter transport. | A previously unknown algebraic identity, a physical evolution law, or a renormalization-group flow. | FOUNDATIONAL | KEEP PROMINENTLY AS CENTRAL EXACT FRAMEWORK PROPOSITION WITH CORRECT ATTRIBUTION | P0 |
 
 ## Dynamic non-closure
 
 | ID | Claim | Mathematical status | Novelty status | Evidence | Allowed claim | Forbidden overclaim | Target | Action | Priority |
 |---|---|---|---|---|---|---|---|---|---|
-| MF-R049 | A single Q_lambda is not generally a dynamically closed state variable | PROVED | POTENTIALLY ORIGINAL FRAMEWORK CONSEQUENCE | CONSTRUCTIVE_COUNTEREXAMPLE + EXACT_IDENTITY | One point of the Q curve is insufficient for exact dynamics in general. | No finite-dimensional closure can exist under any restricted distribution family. | FOUNDATIONAL | KEEP AS CENTRAL THEOREM/COUNTEREXAMPLE | P0 |
+| MF-R049 | A single Q_lambda is not generally a dynamically closed state variable | PROVED | PROJECT-SPECIFIC EXACT NONCLOSURE COROLLARY WITH AN EXACT FOUR-POINT COUNTEREXAMPLE; NO EXACT PRIOR MATCH FOUND; NOVELTY NOT CERTIFIED | CONSTRUCTIVE_COUNTEREXAMPLE + EXACT_IDENTITY | On the unrestricted finite-distribution class, mean plus one fixed-lambda entropic score does not determine the next score; an exact four-point witness is provided. | No finite-dimensional closure can exist, the whole curve is always minimal, or the result solves the general moment-closure problem. | FOUNDATIONAL | PROMOTE AS THE STRONGEST SELF-CONTAINED A34 PROPOSITION/COUNTEREXAMPLE | P0 |
 
 ## Effective path cost
 

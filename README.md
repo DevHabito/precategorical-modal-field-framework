@@ -37,7 +37,7 @@ Both exact counts are independently reproduced by exhaustive enumeration and clo
 - `docs/AUDIT_INDEX.md` — audit-by-audit index;
 - `docs/CANONICAL_VERSIONS.md` — which version should be treated as canonical;
 - `docs/RESULT_CLASSIFICATION.md` — claim-level classification by evidence, novelty, allowed wording, and manuscript destination;
-- `docs/novelty/` — claim-level literature and novelty audits;
+- `docs/novelty/` — claim-level novelty audits C1 and C2, including safe manuscript wording and exact supporting witnesses;
 - `docs/SCIENTIFIC_STATUS.md` — established results and explicit nonclaims;
 - `docs/REPRODUCIBILITY.md` — environment and execution instructions;
 - `docs/REPRODUCIBILITY_PROTOCOLS.md` — canonical audit protocol documentation;

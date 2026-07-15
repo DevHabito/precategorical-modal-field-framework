@@ -1,0 +1,36 @@
+{
+  "audit_id": "NOVELTY_AUDIT_C2",
+  "search_date": "2026-07-15",
+  "claims": {
+    "MF-R036": {
+      "classification": "ELEMENTARY_COROLLARY_OF_STANDARD_MEASUREMENT_INVARIANCE",
+      "matching_conceptual_prior_framework_found": true,
+      "exact_project_wording_match_found": false,
+      "novelty_certified": false
+    },
+    "MF-R047": {
+      "classification": "CLASSICAL_ALGEBRAIC_IDENTITY",
+      "classical_object": "exponential certainty equivalent / entropic risk functional",
+      "novelty_certified": false
+    },
+    "MF-R048": {
+      "classification": "PROJECT_SPECIFIC_DIRECT_COROLLARY_OF_CLASSICAL_AFFINE_IDENTITY",
+      "exact_model_specific_match_found": false,
+      "novelty_certified": false
+    },
+    "MF-R049": {
+      "classification": "PROJECT_SPECIFIC_EXACT_NONCLOSURE_COROLLARY_WITH_CONSTRUCTIVE_WITNESS",
+      "exact_match_found": false,
+      "novelty_certified": false,
+      "exact_counterexample_added": true
+    }
+  },
+  "primary_sources": [
+    "https://arxiv.org/abs/0903.2434",
+    "https://arxiv.org/abs/1002.3794",
+    "https://arxiv.org/abs/1511.06032",
+    "https://arxiv.org/abs/1505.02190",
+    "https://arxiv.org/abs/2012.00960"
+  ],
+  "editorial_conclusion": "MF-R049 is the strongest self-contained A34 contribution. MF-R036 should be a lemma; MF-R047 background; MF-R048 a central framework-specific corollary."
+}

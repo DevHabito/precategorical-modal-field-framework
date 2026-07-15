@@ -1,0 +1,66 @@
+{
+  "audit_id": "NOVELTY_AUDIT_C2_EXACT_SUPPORT",
+  "seed": 20260815,
+  "identity_checks": {
+    "maximum_affine_identity_error": 2.220446049250313e-15,
+    "maximum_dynamic_identity_error": 2.55351295663786e-15
+  },
+  "exact_counterexample": {
+    "support": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "p_plus": [
+      "9/40",
+      "7/20",
+      "1/8",
+      "3/10"
+    ],
+    "p_minus": [
+      "11/40",
+      "3/20",
+      "3/8",
+      "1/5"
+    ],
+    "mean_plus": "3/2",
+    "mean_minus": "3/2",
+    "E_exp_minus_lambda_X_plus": "15/32",
+    "E_exp_minus_lambda_X_minus": "15/32",
+    "lambda": "log(2)",
+    "contraction_a": "1/2",
+    "E_exp_minus_half_lambda_X_plus": "23/80 + sqrt(2)/4",
+    "E_exp_minus_half_lambda_X_minus": "37/80 + sqrt(2)/8",
+    "half_lambda_moment_difference": "(5*sqrt(2)-7)/40",
+    "half_lambda_moment_difference_decimal": 0.0017766952966368876,
+    "Q_lambda_plus": 1.0931094043914815,
+    "Q_lambda_minus": 1.0931094043914815,
+    "Q_half_lambda_plus": 1.2829671542880652,
+    "Q_half_lambda_minus": 1.2909751864891084,
+    "future_Q_lambda_plus": 1.3914835771440326,
+    "future_Q_lambda_minus": 1.395487593244554,
+    "future_score_absolute_difference": 0.004004016100521479,
+    "gates": {
+      "probabilities_normalized": true,
+      "probabilities_positive": true,
+      "means_equal_exactly": true,
+      "fixed_lambda_moments_equal_exactly": true,
+      "fixed_lambda_scores_equal_numerically": true,
+      "rescaled_lambda_moments_differ": true,
+      "future_scores_differ": true
+    }
+  },
+  "gates": {
+    "G1_affine_identity": true,
+    "G2_centered_contraction_identity": true,
+    "G3_exact_nonclosure_witness": true
+  },
+  "verdict": "PASS_EXACT_AFFINE_IDENTITIES_AND_SCALAR_NONCLOSURE_WITNESS",
+  "interpretation": "The affine and contraction formulas are direct algebraic properties of the exponential certainty equivalent. The exact four-point witness proves that mean plus one fixed-lambda score is not a generally closed macrostate under the contraction.",
+  "limitations": [
+    "The script does not establish bibliographic novelty.",
+    "The counterexample proves generic non-closure, not the absence of closure on every restricted invariant distribution family.",
+    "No physical interpretation of Q is established."
+  ]
+}
