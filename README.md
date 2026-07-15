@@ -35,6 +35,7 @@ Both exact counts are independently reproduced by exhaustive enumeration and clo
 - `article/` — preserved manuscripts and erratum notice;
 - `docs/AUDIT_INDEX.md` — audit-by-audit index;
 - `docs/CANONICAL_VERSIONS.md` — which version should be treated as canonical;
+- `docs/RESULT_CLASSIFICATION.md` — claim-level classification by evidence, novelty, allowed wording, and manuscript destination;
 - `docs/SCIENTIFIC_STATUS.md` — established results and explicit nonclaims;
 - `docs/REPRODUCIBILITY.md` — environment and execution instructions;
 - `docs/CORRECTIONS.md` — correction history;
