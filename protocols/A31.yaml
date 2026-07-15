@@ -1,0 +1,150 @@
+schema_version: 1.0.0
+audit:
+  id: A31
+  title: Microscopic Multiplicity and Finite Refinement Measure
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - finite_measure_proposition
+  - seeded_tree_tests
+  - ontology_counterexamples
+  claim_ids:
+  - MF-R040
+  - MF-R045
+source:
+  script: audits/a31_microscopic_multiplicity_audit.py
+  results_directory: audits/a31_exact_results
+  summary: audits/a31_exact_results/a31_summary.json
+  working_directory: audits
+  command: python a31_microscopic_multiplicity_audit.py
+  implementation_functions:
+  - js
+  - norm
+  - tv
+  - leaf_state
+  - obs
+  - merge_random
+  - tree_audit
+  - split
+  - aggregate
+  - commute_audit
+  - dynamics_audit
+  - uniform_audit
+  - ontic_audit
+  - ontology_audit
+  - main
+integrity:
+  script_sha256: bf376efa22180279be76840684922bd02874ad77d2530851c1f83a9066290f19
+  summary_sha256: f6df78817c7fe7fea634173ccae560bb1cb89c97c592a3526a9ba2b9d0832307
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260805
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260805
+  TREE_SAMPLES: 2500
+  MERGE_ORDERS_PER_SAMPLE: 6
+  COMMUTATION_SAMPLES: 3000
+  DYNAMICS_SAMPLES: 500
+  DYNAMICS_STEPS: 100
+  ONTOLOGY_SAMPLES: 3000
+  UNIFORM_COUNT_SAMPLES: 2000
+  LAMBDA: 1.2
+  MAX_EXACT_ERROR: 1.0e-11
+  MIN_ONTIC_BRANCHING_MEDIAN_TV: 0.05
+  MIN_ONTOLOGY_AMBIGUITY_MEDIAN_TV: 0.12
+generators:
+- name: random_refinement_trees
+  implementation_functions:
+  - leaf_state
+  - merge_random
+  - tree_audit
+  description: Generates finite weighted leaf states and random hierarchical merge orders.
+- name: split_and_commutation_schedules
+  implementation_functions:
+  - split
+  - commute_audit
+  - dynamics_audit
+  description: Generates dynamic mass-preserving splits and alternative operation orders.
+- name: ontology_comparisons
+  implementation_functions:
+  - ontic_audit
+  - ontology_audit
+  description: Constructs alternative branching/leaf ontologies that obey the same additive architecture.
+procedure:
+- Assign positive terminal weights and define internal masses by descendant sums.
+- Compare direct and hierarchical aggregation across random merge orders.
+- Test commutation and dynamic mass-preserving splits.
+- Compare alternative ontologies and terminal weight assignments.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_REFINEMENT_TREE_MEASURE_PATH_INDEPENDENT_BUT_ONTOLOGY_UNDERDETERMINED
+  expected_gates:
+    G1_unique_additive_extension_theorem_proved: true
+    G2_tree_parenthesization_path_independent: true
+    G3_independent_refinements_commute: true
+    G4_conservative_split_preserves_macro_observables: true
+    G5_conservative_split_conserves_total_mass: true
+    G6_equal_leaf_weights_reduce_to_counting_measure: true
+    G7_ontic_unit_branching_is_not_conservative_refinement: true
+    G8_terminal_leaf_ontology_not_fixed_by_additivity: true
+    G9_refinement_history_and_terminal_ontology_distinguished: true
+    G10_no_physical_microstate_or_volume_claimed: true
+  metric_snapshot: {}
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a31_exact_results/a31_commuting_refinements.csv
+  role: tabular_output
+  sha256: 6c4f363150ec652e438acc1cbba045f35721f74516d8a541275648ca5a1a612b
+- path: audits/a31_exact_results/a31_conservative_split_dynamics.csv
+  role: tabular_output
+  sha256: 0c901cee0968a6b7e8b09209e1e1972ea92bac26ce308335434cbeec2a28efa5
+- path: audits/a31_exact_results/a31_leaf_ontology_ambiguity.csv
+  role: tabular_output
+  sha256: 1ec8866e7c81a6b9f7db3505b5ac7ad0458c7be9877c64a32394fc6a1483470c
+- path: audits/a31_exact_results/a31_ontic_branching.csv
+  role: tabular_output
+  sha256: acd4b66986373ac2be4895b1f83a852bad14957c9828bceb86f6e73f3c368038
+- path: audits/a31_exact_results/a31_refinement_classification.csv
+  role: tabular_output
+  sha256: bbab8bf19adc8844e72e294aaa4b0468d0af0d79b825a0a039451d87fc3ad534
+- path: audits/a31_exact_results/a31_report.md
+  role: human_readable_report
+  sha256: 38726bf287cc0274bfe2752581e7698e9a7469ac3967806f592664d98f03096a
+- path: audits/a31_exact_results/a31_summary.json
+  role: canonical_summary
+  sha256: f6df78817c7fe7fea634173ccae560bb1cb89c97c592a3526a9ba2b9d0832307
+- path: audits/a31_exact_results/a31_theorem.md
+  role: theorem_note
+  sha256: 3fe952374c82846baad43286262e3f6995d48733651b8e81c17ea3f14a93534f
+- path: audits/a31_exact_results/a31_tree_path_independence.csv
+  role: tabular_output
+  sha256: 94045380830ff9dea26e2f4d175def93921ee572ca521493c2bc8ed7557cc5cb
+- path: audits/a31_exact_results/a31_uniform_leaf_counting.csv
+  role: tabular_output
+  sha256: 2611b0c9e79347e66db7c038c538a5103b0f07a2754fc1fe549787ef5b03be99
+interpretation:
+  allowed_claims:
+  - Given leaf weights, the additive extension is unique and independent of refinement order.
+  forbidden_claims:
+  - The audit derives terminal constituents, ontic branching, or fundamental probability weights.
+  limitations:
+  - Terminal weights and their physical semantics are supplied, not derived.
+  - Path independence does not select a unique ontology.
+  summary_boundary: A31 proves mathematical path independence, not the existence of fundamental microstates. Leaf
+    identities, terminality, weights, and creation rules remain extra structure.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

@@ -1,0 +1,132 @@
+schema_version: 1.0.0
+audit:
+  id: A18_2
+  title: Exact Order-Measure Identifiability Limit
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - theorem
+  - software_regression_test
+  - synthetic_controls
+  claim_ids:
+  - MF-R023
+  - MF-R025
+source:
+  script: audits/a18_2_order_measure_identifiability.py
+  results_directory: audits/a18_2_exact_results
+  summary: audits/a18_2_exact_results/a18_summary.json
+  working_directory: audits
+  command: python a18_2_order_measure_identifiability.py
+  implementation_functions:
+  - json_safe
+  - relation_from_coordinates
+  - transform_coordinates
+  - packed_hash
+  - vector_hash
+  - histogram_probability
+  - coordinate_diagnostics
+  - power_density
+  - density_normalization_checks
+  - opposing_diagonal_control
+  - main
+integrity:
+  script_sha256: 7b8a6b4603f242a4116f90ab56b042a231381201b8f614c8af53b2e487074455
+  summary_sha256: c368af2944326a050f3a09428b92b0498ed106d0196a7ea453821c33387f1b78
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260721
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260721
+  N_VALUES:
+  - 128
+  - 256
+  - 512
+  SAMPLES_PER_N: 30
+  HISTOGRAM_BINS: 24
+  TRANSFORMS:
+    power_anisotropic:
+      description: u'=u^4, v'=sqrt(v)
+    beta_skew_opposed:
+      description: u'=BetaPPF(u;2,5), v'=BetaPPF(v;5,2)
+    power_isotropic_extreme:
+      description: u'=u^8, v'=v^8
+generators:
+- name: coordinate_samples_and_monotone_transforms
+  implementation_functions:
+  - relation_from_coordinates
+  - transform_coordinates
+  description: Samples latent coordinate clouds at the frozen sizes and applies the three declared strictly increasing
+    coordinate transformations.
+- name: opposing_diagonal_control
+  implementation_functions:
+  - opposing_diagonal_control
+  description: Constructs a non-monotone/copula-changing control used to verify that the audit is not insensitive
+    to all transformations.
+procedure:
+- Generate paired latent coordinate samples.
+- Apply each strictly increasing transform and compare the complete relation matrices and relation-derived summaries
+  exactly.
+- Audit density normalization and contrasting copula controls.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_EXACT_ORDER_MEASURE_IDENTIFIABILITY_LIMIT_ROBUST
+  expected_gates:
+    G1_all_monotone_transform_relations_bitwise_identical: true
+    G2_all_coordinate_ranks_identical: true
+    G3_all_relation_hashes_identical: true
+    G4_interval_abundance_and_interval_sizes_identical: true
+    G5_coordinate_distributions_strongly_changed: true
+    G6_pushforward_densities_normalized: true
+    G7_nonseparable_copula_control_changes_order_statistics: true
+    G8_same_cardinality_in_every_pair: true
+    G9_impossibility_follows_from_identical_input: true
+  metric_snapshot: {}
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a18_2_exact_results/a18_copula_controls.csv
+  role: tabular_output
+  sha256: 29aab2c435fb062d5c5701b5fdc7edb6707f3faff47d387a2a740ada2c610171
+- path: audits/a18_2_exact_results/a18_order_fingerprints.csv
+  role: tabular_output
+  sha256: 5946c5f68baabcb9574c49d418fc863f0d8b6ce35a641ae82736fd36708f2497
+- path: audits/a18_2_exact_results/a18_paired_transform_audit.csv
+  role: tabular_output
+  sha256: 5485eb5aa7932baaa2dff6379cb20459026d37f16fa3c3ba798a973ae63ec4e1
+- path: audits/a18_2_exact_results/a18_report.md
+  role: human_readable_report
+  sha256: 633c33e84ba9bb0a18b8354282783ad0225d3b5360fb13da4b019905effc1112
+- path: audits/a18_2_exact_results/a18_summary.json
+  role: canonical_summary
+  sha256: c368af2944326a050f3a09428b92b0498ed106d0196a7ea453821c33387f1b78
+- path: audits/a18_2_exact_results/a18_transform_summary.csv
+  role: tabular_output
+  sha256: 574378bcfa38d13d35652e5c91b5b792bfc1a1e7bb2a913db19a9796a25d1636
+interpretation:
+  allowed_claims:
+  - Strict coordinatewise monotone recalibrations preserve product order exactly, so order-only estimators cannot
+    identify the transformed marginals.
+  forbidden_claims:
+  - The 270 numerical pairs establish a new theorem or prove that no enriched relational theory can identify measure.
+  limitations:
+  - The numerical pairs are regression checks for a theorem that follows from strict monotonicity; they are not
+    independent empirical evidence.
+  - The no-go applies to estimators that receive only the order/relation object.
+  summary_boundary: The ambiguity concerns the choice of sampling measure or conformal-volume representative. It
+    does not say that causal structure contains no geometric information, nor does it contradict continuum statements
+    in which causal structure is supplemented by an independently specified local volume element.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

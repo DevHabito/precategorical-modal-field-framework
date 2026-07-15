@@ -33,12 +33,15 @@ Both exact counts are independently reproduced by exhaustive enumeration and clo
 
 - `audits/` — scripts and exact/seeded outputs, including failed and corrective versions;
 - `article/` — preserved manuscripts and erratum notice;
+- `protocols/` — frozen reproducibility contracts for canonical audits;
 - `docs/AUDIT_INDEX.md` — audit-by-audit index;
 - `docs/CANONICAL_VERSIONS.md` — which version should be treated as canonical;
 - `docs/RESULT_CLASSIFICATION.md` — claim-level classification by evidence, novelty, allowed wording, and manuscript destination;
 - `docs/SCIENTIFIC_STATUS.md` — established results and explicit nonclaims;
 - `docs/REPRODUCIBILITY.md` — environment and execution instructions;
+- `docs/REPRODUCIBILITY_PROTOCOLS.md` — canonical audit protocol documentation;
 - `docs/CORRECTIONS.md` — correction history;
+- `tools/validate_protocols.py` — validates protocol structure, hashes, seeds, verdicts, gates, metrics, outputs, and claim IDs;
 - `MANIFEST.csv` and `SHA256SUMS.txt` — integrity and completeness records.
 
 ## Quick start

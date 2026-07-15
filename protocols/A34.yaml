@@ -1,0 +1,155 @@
+schema_version: 1.0.0
+audit:
+  id: A34
+  title: Effective Score Closure Audit
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - exact_identity
+  - constructive_counterexample
+  - seeded_moment_audit
+  claim_ids:
+  - MF-R046
+  - MF-R047
+  - MF-R048
+  - MF-R049
+  - MF-R050
+source:
+  script: audits/a34_effective_score_closure_audit.py
+  results_directory: audits/a34_exact_results
+  summary: audits/a34_exact_results/a34_summary.json
+  working_directory: audits
+  command: python a34_effective_score_closure_audit.py
+  implementation_functions:
+  - json_safe
+  - normalize
+  - logsumexp
+  - q_effective
+  - weighted_moments
+  - random_partition
+  - associativity_audit
+  - gauge_affine_audit
+  - moment_insufficiency_audit
+  - matched_q_mean_dynamic_witness
+  - cumulant_audit
+  - scalar_loss_witness
+  - main
+integrity:
+  script_sha256: e83b05bda17de0ffc5d6908c1a0cc2f7bed8e1bddc24827fefe3ba769047165c
+  summary_sha256: 189349e2d03a5ee1cea52ac3506428a912cf44b9d3cc958c522c7c96015fb782
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260808
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260808
+  LAMBDA: 1.3
+  ETA: 0.35
+  CONTRACTION:
+    source_expression: 1.0 - ETA / 2.0
+  ASSOCIATIVITY_SAMPLES: 5000
+  GAUGE_SAMPLES: 4000
+  CUMULANT_SAMPLES: 3000
+  MAX_EXACT_ERROR: 2.0e-11
+  MIN_DYNAMIC_WITNESS_DIFFERENCE: 0.0001
+  MIN_MOMENT_PAIR_DIFFERENCE: 0.001
+generators:
+- name: random_weighted_microdistributions
+  implementation_functions:
+  - associativity_audit
+  - gauge_affine_audit
+  - moment_insufficiency_audit
+  description: Generates positive masses and q-valued microdistributions for static aggregation, affine covariance,
+    and matched-moment witnesses.
+- name: matched_effective_score_witnesses
+  implementation_functions:
+  - matched_q_mean_dynamic_witness
+  - scalar_loss_witness
+  description: Constructs different microstates with matched selected summaries and compares their future effective
+    scores.
+- name: cumulant_test_distributions
+  implementation_functions:
+  - cumulant_audit
+  description: Generates distributions used to compare truncated cumulant approximations.
+procedure:
+- Verify static hierarchical associativity of Q_lambda.
+- Verify gauge and affine identities.
+- Construct same-moment and same-Q witnesses.
+- Apply the centered contraction and compare future Q_lambda.
+- Measure truncation error of cumulant expansions.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_STATIC_EFFECTIVE_SCORE_WITH_DYNAMIC_CLOSURE_OBSTRUCTION
+  expected_gates:
+    G1_associative_mass_score_aggregation_exact: true
+    G2_global_q_shift_covariance_exact: true
+    G3_affine_rescaling_identity_exact: true
+    G4_mean_and_variance_do_not_determine_effective_score: true
+    G5_same_mean_and_qeff_can_have_different_future: true
+    G6_whole_partition_curve_closes_centered_contraction: true
+    G7_scalar_qeff_alone_not_dynamically_closed: true
+    G8_cumulant_expansion_improves_with_added_terms_at_small_lambda: true
+    G9_static_projectivity_not_promoted_to_dynamic_closure: true
+    G10_no_physical_free_energy_or_thermodynamic_claim: true
+  metric_snapshot:
+    lambda: 1.3
+    eta: 0.35
+    contraction: 0.825
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a34_exact_results/a34_associative_aggregation.csv
+  role: tabular_output
+  sha256: e8873cf0eea0648035426942ffee9eb4fb1da34f298bbc0874990f87743d6c2a
+- path: audits/a34_exact_results/a34_cumulant_expansion.csv
+  role: tabular_output
+  sha256: e8350ce993d6a292aac5316022391e6828a4410af640dbd51231d42ee984de3f
+- path: audits/a34_exact_results/a34_effective_score_classification.csv
+  role: tabular_output
+  sha256: 5b755d4f7f0fc18869e89bd7de88177055d762d206689226ee3cf3aae8c68867
+- path: audits/a34_exact_results/a34_gauge_affine_covariance.csv
+  role: tabular_output
+  sha256: ffe39e752f92266be504aa0dd5a837bb4a7f277081ae4a73673ffcae021c5fa5
+- path: audits/a34_exact_results/a34_matched_q_mean_dynamic_witness.csv
+  role: tabular_output
+  sha256: bc379e505d1072d489d20120f2bc23a4cfbb7f9f6dedc3bfadf99a68c0ff46a8
+- path: audits/a34_exact_results/a34_mean_variance_insufficiency.csv
+  role: tabular_output
+  sha256: 3c5a3e9e058ad5553a8a6f022f4f20533a6c38feff9639bc868a3636e0ad4838
+- path: audits/a34_exact_results/a34_report.md
+  role: human_readable_report
+  sha256: c4a8173e823a5a1c97ec7bc74783fc43e1c2048b385dc9dfde106df046b2d4d0
+- path: audits/a34_exact_results/a34_scalar_information_loss.csv
+  role: tabular_output
+  sha256: 4228cc95cec17d8aee8c48dfe0d836048e135e4f4e61c273553f3a3af534ea63
+- path: audits/a34_exact_results/a34_summary.json
+  role: canonical_summary
+  sha256: 189349e2d03a5ee1cea52ac3506428a912cf44b9d3cc958c522c7c96015fb782
+- path: audits/a34_exact_results/a34_theorem.md
+  role: theorem_note
+  sha256: 8d4c44523130459d9c0b8808097b3997032c09d1c9e0912420c828bc655ff58a
+interpretation:
+  allowed_claims:
+  - Q_lambda is statically associative for the partition sum, but a single Q_lambda is not generally dynamically
+    closed; the exact contraction transports Q along lambda.
+  forbidden_claims:
+  - Q_lambda is a universal thermodynamic state variable or a closed physical evolution variable.
+  limitations:
+  - The exact dynamic identity applies to the declared affine centered contraction, not arbitrary RZS graph dynamics.
+  - Population Q_lambda requires finite exponential moments.
+  summary_boundary: A34 establishes a static sufficient message and a dynamic no-go. It does not identify Q_eff
+    as physical free energy, prove thermodynamics, or establish a closed RZS macrodynamics.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

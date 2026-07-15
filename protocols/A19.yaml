@@ -1,0 +1,147 @@
+schema_version: 1.0.0
+audit:
+  id: A19
+  title: Ensemble Copula Identifiability Limit
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - direct_corollary_of_sklar
+  - seeded_ensemble_test
+  - coupled_identity_test
+  claim_ids:
+  - MF-R024
+  - MF-R025
+source:
+  script: audits/a19_ensemble_copula_identifiability.py
+  results_directory: audits/a19_exact_results
+  summary: audits/a19_exact_results/a19_summary.json
+  working_directory: audits
+  command: python a19_ensemble_copula_identifiability.py
+  implementation_functions:
+  - json_safe
+  - gaussian_copula_uniforms
+  - apply_marginals
+  - rank_permutations
+  - lehmer_codes
+  - comparable_pair_fractions
+  - relation_matrix
+  - relation_hash
+  - histogram_metrics
+  - theoretical_ordering_fraction
+  - coupled_identity_audit
+  - main
+integrity:
+  script_sha256: a3d69fcc725e427c3330ebfebcd25dd95fcfc773ce8d5825345264d20d263377
+  summary_sha256: 00ab236c8300db52a14473fecbe9d28d31843feb18e402b7dd1fe506088d9086
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260722
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260722
+  ORDER_SIZE: 6
+  CATEGORY_COUNT:
+    source_expression: math.factorial(ORDER_SIZE)
+  ENSEMBLE_SIZE: 100000
+  COUPLED_SAMPLES: 300
+  COUPLED_ORDER_SIZE: 32
+  COPULAS:
+    independence: 0.0
+    gaussian_positive: 0.6
+    gaussian_negative: -0.6
+  MARGINALS:
+  - uniform
+  - beta_skew
+  - power_anisotropic
+  SAME_COPULA_P_MIN: 0.0001
+  SAME_COPULA_TV_MAX: 0.075
+  SAME_COPULA_RELATION_RANGE_MAX: 0.004
+  THEORY_RELATION_ERROR_MAX: 0.004
+  DIFFERENT_COPULA_TV_MIN: 0.15
+  DIFFERENT_COPULA_LOG10_P_MAX: -20.0
+generators:
+- name: gaussian_copula_uniforms
+  implementation_functions:
+  - gaussian_copula_uniforms
+  description: Generates uniform pairs from independence and Gaussian copulas at correlations 0, +0.6, and -0.6.
+- name: marginal_transforms
+  implementation_functions:
+  - apply_marginals
+  description: Applies uniform, beta-skew, and anisotropic-power marginals without changing the copula.
+- name: finite_order_categories
+  implementation_functions:
+  - rank_permutations
+  - lehmer_codes
+  description: Maps sampled finite orders to permutation-category codes for ensemble comparison.
+procedure:
+- Generate ensembles for every frozen copula-marginal combination.
+- Compare category histograms and comparable-pair fractions within fixed copulas and across different copulas.
+- Run coupled identity checks using common uniforms and marginal transformations.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_ENSEMBLE_COPULA_IDENTIFIABILITY_LIMIT
+  expected_gates:
+    G1_coupled_relations_and_hashes_identical: true
+    G2_independence_permutation_uniformity: true
+    G3_same_copula_homogeneity_tests: true
+    G4_same_copula_total_variation_small: true
+    G5_same_copula_ordering_fraction_stable: true
+    G6_gaussian_ordering_fraction_matches_theory: true
+    G7_different_copula_total_variation_large: true
+    G8_different_copula_controls_rejected: true
+    G9_infinite_ensemble_nonidentifiability_proved: true
+    G10_no_claim_of_copula_injectivity: true
+  metric_snapshot:
+    order_size: 6
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a19_exact_results/a19_coupled_identity.csv
+  role: tabular_output
+  sha256: 624da8a15e0673081c14851051d0fe42d896bfad7aebc05b7ae8e3180aca71da
+- path: audits/a19_exact_results/a19_different_copula_controls.csv
+  role: tabular_output
+  sha256: 77c034926e98142916285668ccaad6e7ac7f11ae61efac7f8435c6cdeabfd47e
+- path: audits/a19_exact_results/a19_ensemble_summary.csv
+  role: tabular_output
+  sha256: dddff1c2fbb66d83143cb0ba3ab50bedca075afbd99dfacd5b39810fca28d3d4
+- path: audits/a19_exact_results/a19_permutation_histograms.csv
+  role: tabular_output
+  sha256: 512f6c84f923df01eda9f1b120b0818478bfbf4399fa0d8f7fd70954d13dfa2f
+- path: audits/a19_exact_results/a19_report.md
+  role: human_readable_report
+  sha256: 4dabea6cb072ce897941469fbeb59435dd73bf457e60871bc73b8ae7d2edd54b
+- path: audits/a19_exact_results/a19_same_copula_comparisons.csv
+  role: tabular_output
+  sha256: e4eee9f72b418c4cf07b25fcabac0c62b08dfe9c09b002595f5d1316f13f2126
+- path: audits/a19_exact_results/a19_summary.json
+  role: canonical_summary
+  sha256: 00ab236c8300db52a14473fecbe9d28d31843feb18e402b7dd1fe506088d9086
+- path: audits/a19_exact_results/a19_theorem.md
+  role: theorem_note
+  sha256: fd159648c06c94079fc2dceeb52691b6693ec750471fbfdd78950a0f997f0349
+interpretation:
+  allowed_claims:
+  - The ensemble law of the induced coordinatewise order depends on the copula and is invariant to continuous monotone
+    marginal changes.
+  forbidden_claims:
+  - A new copula theorem or recovery of physical volume from order alone.
+  limitations:
+  - The theorem requires continuous marginals and fixed copula.
+  - Finite histogram thresholds are implementation/model checks, not the logical basis of Sklar invariance.
+  summary_boundary: The theorem establishes marginal non-identifiability. It does not establish that the full copula
+    is uniquely recoverable from order ensembles; distinct copulas may still share some or all finite-order probabilities.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

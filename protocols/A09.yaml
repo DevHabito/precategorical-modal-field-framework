@@ -1,0 +1,116 @@
+schema_version: 1.0.0
+audit:
+  id: A09
+  title: Relational Clock Audit
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - exact_enumeration
+  - candidate_comparison
+  - constructive_disagreement
+  claim_ids:
+  - MF-R012
+  - MF-R013
+source:
+  script: audits/a9_relational_clock_audit.py
+  results_directory: audits/a9_exact_results
+  summary: audits/a9_exact_results/a9_summary.json
+  working_directory: audits
+  command: python a9_relational_clock_audit.py
+  implementation_functions:
+  - enumerate_adjacency
+  - transitive_closure
+  - scc_data
+  - encode_condensation_posets
+  - decode_poset
+  - normalize_clock
+  - topological_order
+  - linear_extensions
+  - poset_clocks
+  - transpose_masks
+  - graph_clock_values
+  - main
+integrity:
+  script_sha256: 3b5b8d8e50c4fb44ccd84e3748ce1c7c6408a3cbac199350227ef56ed7a2c243
+  summary_sha256: d6efb1f931918ce3582c8b559ff4a019efa8e2f5bc96f541e14020c308763de7
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: false
+  seed: null
+  rng_implementation: null
+  seed_scope: not applicable
+parameters:
+  N: 5
+  EDGES:
+    source_expression: '[(i, j) for i in range(N) for j in range(N) if i != j]'
+  NUMBER_OF_GRAPHS:
+    source_expression: 1 << len(EDGES)
+  TOLERANCE: 1.0e-12
+generators:
+- name: all_loopless_labeled_digraphs_n5
+  implementation_functions:
+  - enumerate_adjacency
+  description: Enumerates all 2^20 loopless labeled directed graphs and their historical minimum-representative
+    condensation codes.
+- name: all_linear_extensions
+  implementation_functions:
+  - linear_extensions
+  description: Enumerates all linear extensions of each active quotient poset used by the mean-extension clock.
+procedure:
+- Enumerate historical A8 quotient-poset codes.
+- Compute longest-chain depth, down/up balance, and mean linear-extension position.
+- Test strict monotonicity on comparable pairs, injectivity, disagreement on incomparable pairs, reversal behavior,
+  and single-edge perturbation sensitivity.
+validation:
+  mode: metric_snapshot
+  expected_verdict: null
+  expected_gates: {}
+  metric_snapshot:
+    n_vertices: 5
+    labeled_digraphs: 1048576
+    unique_labeled_condensation_posets: 5234
+    nontrivial_unique_condensation_posets: 5233
+    fraction_nontrivial_posets_all_three_clocks_equal: 0.10376457099178292
+    total_incomparable_pairs_across_unique_posets: 20048
+    all_candidates_strict_on_comparable_pairs.depth: true
+    all_candidates_strict_on_comparable_pairs.balance: true
+    all_candidates_strict_on_comparable_pairs.mean_extension: true
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a9_exact_results/a9_perturbation_audit.csv
+  role: tabular_output
+  sha256: 5917b990c58c0b2dee5a992741f74b633bb8d6e5118e929172093a4cd40bac70
+- path: audits/a9_exact_results/a9_poset_clock_profiles.csv
+  role: tabular_output
+  sha256: 64c2c254cb3e116b6d8fe68ab8aaf102e1acb0e5cb955b1d726b75aee64063e7
+- path: audits/a9_exact_results/a9_report.md
+  role: human_readable_report
+  sha256: 5c8fac5e2ce7642ce3e7465857df491e1a28f91f747cc544dbe6f0156a668245
+- path: audits/a9_exact_results/a9_reversal_audit.csv
+  role: tabular_output
+  sha256: e97540526e8865059a51e6b49f5048061bcb3200931251b8b98b1a53ca3724de
+- path: audits/a9_exact_results/a9_summary.json
+  role: canonical_summary
+  sha256: d6efb1f931918ce3582c8b559ff4a019efa8e2f5bc96f541e14020c308763de7
+interpretation:
+  allowed_claims:
+  - The three audited scalarizations are monotone on comparable pairs but are not uniquely selected by the order.
+  forbidden_claims:
+  - The construction derives physical time, a unique clock, a rate, or a temporal arrow.
+  limitations:
+  - Uses the historical minimum-representative code rather than the 6,942 full labeled preorders.
+  - Finite n=5 statistics do not establish asymptotic behavior or a physical clock.
+  summary_boundary: null
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

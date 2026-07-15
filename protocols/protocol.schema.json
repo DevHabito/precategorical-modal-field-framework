@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DevHabito/precategorical-modal-field-framework/protocols/protocol.schema.json",
+  "title": "Modal Field Audit Protocol Contract",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "audit",
+    "source",
+    "integrity",
+    "environment",
+    "randomness",
+    "parameters",
+    "generators",
+    "procedure",
+    "validation",
+    "expected_outputs",
+    "interpretation",
+    "reproduction"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "audit": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "status",
+        "evidence_classes",
+        "claim_ids"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "script",
+        "results_directory",
+        "summary",
+        "working_directory",
+        "command"
+      ]
+    },
+    "integrity": {
+      "type": "object",
+      "required": [
+        "script_sha256",
+        "summary_sha256"
+      ]
+    },
+    "environment": {
+      "type": "object"
+    },
+    "randomness": {
+      "type": "object",
+      "required": [
+        "stochastic",
+        "seed",
+        "rng_implementation"
+      ]
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "generators": {
+      "type": "array"
+    },
+    "procedure": {
+      "type": "array",
+      "minItems": 1
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "mode",
+        "expected_verdict",
+        "expected_gates",
+        "metric_snapshot"
+      ]
+    },
+    "expected_outputs": {
+      "type": "array"
+    },
+    "interpretation": {
+      "type": "object",
+      "required": [
+        "allowed_claims",
+        "forbidden_claims",
+        "limitations"
+      ]
+    },
+    "reproduction": {
+      "type": "object"
+    }
+  }
+}

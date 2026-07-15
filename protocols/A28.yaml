@@ -1,0 +1,162 @@
+schema_version: 1.0.0
+audit:
+  id: A28
+  title: q Score Selection and Context-Scale Incompatibility
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - no_go_theorem
+  - seeded_candidate_score_audit
+  claim_ids:
+  - MF-R036
+source:
+  script: audits/a28_q_score_selection_audit.py
+  results_directory: audits/a28_exact_results
+  summary: audits/a28_exact_results/a28_summary.json
+  working_directory: audits
+  command: python a28_q_score_selection_audit.py
+  implementation_functions:
+  - json_safe
+  - normalize
+  - exponential_probabilities
+  - total_variation
+  - mean_sd
+  - median_mad
+  - rank_percentiles
+  - score_values
+  - pair_log_odds
+  - relabel_equivariance_audit
+  - affine_invariance_audit
+  - extension_stability_audit
+  - remote_locality_audit
+  - monotone_cardinality_audit
+  - raw_lambda_scale_audit
+  - outlier_robustness_audit
+  - summarize_score
+  - main
+integrity:
+  script_sha256: db32e94a839202a54c8825128302c3aeb30fe2e9caa88d5c268b8eeb7c0dcb0d
+  summary_sha256: 6837c156cd98e76fc36255a11d23c8dca98a5873163a360b864bce1b21810084
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260801
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260801
+  ROW_SAMPLES: 6000
+  GRAPH_SAMPLES: 2000
+  MONOTONE_WARP_SAMPLES: 4000
+  LAMBDA: 1.0
+  MAX_EXACT_ERROR: 5.0e-12
+  MIN_CONTEXT_VIOLATION_RATE: 0.8
+  MIN_CONTEXT_MEDIAN_LOG_ODDS_CHANGE: 0.02
+  MIN_GLOBAL_NONLOCALITY_RATE: 0.95
+  MIN_CARDINAL_TV: 0.015
+  MAX_RANK_CARDINAL_TV: 5.0e-13
+  MIN_RAW_SCALE_CHANGE_TV: 0.03
+  SCORES:
+  - raw
+  - min_shift
+  - row_zscore
+  - row_mad
+  - row_rank
+  - global_zscore
+generators:
+- name: random_choice_rows
+  implementation_functions:
+  - extension_stability_audit
+  - monotone_cardinality_audit
+  description: Generates random alternative rows and context extensions for the declared score rules.
+- name: random_weighted_graphs
+  implementation_functions:
+  - relabel_equivariance_audit
+  - remote_locality_audit
+  description: Generates graph contexts for relabeling and locality tests.
+- name: monotone_warps
+  implementation_functions:
+  - monotone_cardinality_audit
+  description: Applies frozen monotone score warps to distinguish ordinal from cardinal behavior.
+procedure:
+- Audit six score constructions for relabel equivariance, positive-affine invariance, context extension stability,
+  locality, monotone cardinality, raw-scale sensitivity, and robustness.
+- Use the exact argument in the theorem note to show incompatibility of the selected universal axioms.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_SCORE_CONTEXT_SCALE_INCOMPATIBILITY_NO_GO
+  expected_gates:
+    G1_context_scale_incompatibility_theorem_proved: true
+    G2_all_scores_relabel_equivariant: true
+    G3_raw_and_min_shift_extension_stable: true
+    G4_dimensionless_scores_positive_affine_invariant: true
+    G5_dimensionless_scores_context_dependent: true
+    G6_global_normalization_nonlocal: true
+    G7_rank_is_ordinal_not_cardinal: true
+    G8_raw_score_lambda_scale_degeneracy_exact: true
+    G9_no_natural_candidate_satisfies_all_desiderata: true
+    G10_no_physical_score_selected: true
+  metric_snapshot: {}
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a28_exact_results/a28_affine_invariance.csv
+  role: tabular_output
+  sha256: ba1055be00610e1b1ed479b30a5d8ecacbb9b8cbd3d7f7cd5aee7ce49d9ba82b
+- path: audits/a28_exact_results/a28_extension_stability.csv
+  role: tabular_output
+  sha256: 154de48bd63a3941f6dffe96e341f82cbfee0c60d6d3046459a5d95dc56cf8a2
+- path: audits/a28_exact_results/a28_monotone_cardinality.csv
+  role: tabular_output
+  sha256: b9636b8e92db09148303b175d8ea23037fd57b97d31cb9e844dc7af2316f6cad
+- path: audits/a28_exact_results/a28_outlier_robustness.csv
+  role: tabular_output
+  sha256: b1f7eb9791111ee4dcede8d2c6b8eba265ef3194f95acc04a842a2f72e5d87c8
+- path: audits/a28_exact_results/a28_raw_lambda_scale.csv
+  role: tabular_output
+  sha256: 64bbcdf94afb6695b5df1164eb9efef281463c03f15016806fffcf08669c839d
+- path: audits/a28_exact_results/a28_relabel_equivariance.csv
+  role: tabular_output
+  sha256: a295de62cef50094c65324f11f8437981482d47c83a47128f2fbcb50aacd733f
+- path: audits/a28_exact_results/a28_remote_locality.csv
+  role: tabular_output
+  sha256: 6f4d2ee7b901a892db019ee342597d047b995873f79f075c617558e75964da65
+- path: audits/a28_exact_results/a28_report.md
+  role: human_readable_report
+  sha256: bd76ea5dadb326d31c08f9cb9677bcce0997ac4db2739d0031071f1a748a2164
+- path: audits/a28_exact_results/a28_score_classification.csv
+  role: tabular_output
+  sha256: 478ae0c4315ba9d981bc93278d4ae8fe86cda5ca0db92069127723b732875865
+- path: audits/a28_exact_results/a28_score_summary.csv
+  role: tabular_output
+  sha256: d584bfa819771a224204f60c5b9ee5c67df112f3654fc8a107c74029e768a16f
+- path: audits/a28_exact_results/a28_summary.json
+  role: canonical_summary
+  sha256: 6837c156cd98e76fc36255a11d23c8dca98a5873163a360b864bce1b21810084
+- path: audits/a28_exact_results/a28_theorem.md
+  role: theorem_note
+  sha256: f0f811f842052023ec9387393fa9bb60b285a96f1369450a9a0c2a774905c1ff
+interpretation:
+  allowed_claims:
+  - No nontrivial continuous cardinal score satisfies the full audited axiom package.
+  forbidden_claims:
+  - No meaningful cardinal score or contextual kernel can exist under any alternative assumptions.
+  limitations:
+  - The no-go applies only to the exact continuity, extension-stability, and positive-affine-invariance axioms stated
+    in A28.
+  - The score audit is not a search over all conceivable contextual state representations.
+  summary_boundary: A28 does not show that context dependence is always physically unacceptable, nor that a calibrated
+    raw-q score is impossible. It proves that the desired properties cannot all be obtained for free from the current
+    relational and gauge structure.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

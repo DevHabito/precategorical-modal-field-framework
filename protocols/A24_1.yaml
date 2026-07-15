@@ -1,0 +1,147 @@
+schema_version: 1.0.0
+audit:
+  id: A24_1
+  title: Corrected q Operationalization Audit
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - exact_log_odds_identity
+  - seeded_transition_simulation
+  - synthetic_parameter_recovery
+  claim_ids:
+  - MF-R031
+  - MF-R032
+source:
+  script: audits/a24_1_q_operational_origin_audit.py
+  results_directory: audits/a24_1_exact_results
+  summary: audits/a24_1_exact_results/a24_summary.json
+  working_directory: audits
+  command: python a24_1_q_operational_origin_audit.py
+  implementation_functions:
+  - json_safe
+  - make_strong_digraph
+  - sample_q
+  - order_derived_q
+  - transition_matrix
+  - uniform_transition_matrix
+  - permute_matrix
+  - inverse_permutation
+  - categorical_choice
+  - simulate_path
+  - first_path_divergence
+  - row_total_variation
+  - structured_q_perturbation
+  - recover_q_contrasts
+  - main
+integrity:
+  script_sha256: 9bef867a707aa9c16a443520728452ac1a96e643c53317b5e78c2f39f5d19ae0
+  summary_sha256: 9d557fa33833c360079349acbe297de035422acaffe43734769fc8cded1ccfb1
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260728
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260728
+  N_VALUES:
+  - 16
+  - 32
+  - 64
+  GRAPH_SAMPLES_PER_N: 80
+  EDGE_PROBABILITY: 0.12
+  BETA: 1.4
+  LOCAL_PERTURBATION: 1.0
+  STRUCTURED_PERTURBATION: 0.75
+  TRANSITION_TRIALS_PER_NODE: 30000
+  PATH_STEPS: 80
+  MAX_NUMERICAL_ERROR: 3.0e-12
+  MAX_CONTRAST_RMSE: 0.035
+  MIN_PATH_DIVERGENCE_RATE: 0.95
+  MAX_MEDIAN_FIRST_DIVERGENCE_STEP: 8.0
+generators:
+- name: strong_random_digraphs
+  implementation_functions:
+  - make_strong_digraph
+  description: Generates strongly connected directed graphs at the frozen sizes and edge probability.
+- name: q_fields
+  implementation_functions:
+  - sample_q
+  - order_derived_q
+  description: Generates independent q marks and order-derived comparison fields.
+- name: transition_and_path_simulation
+  implementation_functions:
+  - transition_matrix
+  - categorical_choice
+  - simulate_path
+  description: Builds exponential transition kernels and simulates categorical paths with frozen trial counts and
+    path length.
+procedure:
+- Generate graph/q samples and exponential transition matrices at beta=1.4.
+- Verify exact relabeling, local perturbation, and log-odds identities.
+- Recover q contrasts from multinomial samples.
+- Compare coupled paths under structured q perturbations.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_Q_OPERATIONALIZATION_CRITERIA_WITH_CALIBRATION_LIMIT_CORRECTED
+  expected_gates:
+    G1_order_derived_q_redundant: true
+    G2_uncoupled_q_empirically_silent: true
+    G3_global_q_gauge_invariant: true
+    G4_relabeling_equivariant: true
+    G5_declared_locality_holds: true
+    G6_local_q_contrast_changes_observable_law: true
+    G7_gauge_equivalent_paths_identical: true
+    G8_gauge_inequivalent_paths_diverge: true
+    G9_q_contrasts_recoverable_when_beta_known: true
+    G10_beta_q_scale_degeneracy_exact: true
+    G11_local_kernel_has_additional_row_offset_gauge: true
+    G12_actual_rzs_operational_origin_not_assumed: true
+  metric_snapshot: {}
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a24_1_exact_results/a24_operational_classification.csv
+  role: tabular_output
+  sha256: 5238a09e9dd002cbda8a0667e02049167a2c47c76fe46878999c91c043c2f5b6
+- path: audits/a24_1_exact_results/a24_operational_kernel_audit.csv
+  role: tabular_output
+  sha256: 1fbc5f8941789e3198284a355f24c98c6d51fb3e96ed8b220bf4baf4170b091f
+- path: audits/a24_1_exact_results/a24_path_coupling_audit.csv
+  role: tabular_output
+  sha256: 75aaaac5f4b25f4161ff497832676b9e87a1f1a21e47b371a8fe211c632edcdf
+- path: audits/a24_1_exact_results/a24_q_contrast_recovery.csv
+  role: tabular_output
+  sha256: fc4384afb9ab5d7782c40b4ce573c7b8150a3eae37557e9aa69d62dc0f85075c
+- path: audits/a24_1_exact_results/a24_report.md
+  role: human_readable_report
+  sha256: b27053a997e94bd7df5519f3d448b72158ed8e99935ae57e042bc1fb09686da8
+- path: audits/a24_1_exact_results/a24_summary.json
+  role: canonical_summary
+  sha256: 9d557fa33833c360079349acbe297de035422acaffe43734769fc8cded1ccfb1
+- path: audits/a24_1_exact_results/a24_theorem.md
+  role: theorem_note
+  sha256: f2e8e8ae2c3cfface2599ab402ce9de337b0f81c5f691454116bf516eb930cc8
+interpretation:
+  allowed_claims:
+  - Within the declared kernel, q contrasts are operationally encoded in transition log-odds.
+  forbidden_claims:
+  - The audit derives the exponential kernel, beta, or a physical transition law.
+  limitations:
+  - The exponential kernel and beta are supplied modeling assumptions.
+  - Synthetic recovery assumes correct model specification and large transition counts.
+  summary_boundary: The audit supplies criteria and a mathematical witness, not the missing physical bridge. The
+    actual RZS q remains operationally ungrounded until its preparation, measurement, noise law, and coupling to
+    observable events are specified independently of the desired emergent geometry.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

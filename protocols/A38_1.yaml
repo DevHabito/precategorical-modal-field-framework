@@ -1,0 +1,179 @@
+schema_version: 1.0.0
+audit:
+  id: A38_1
+  title: Corrected Observable-Relative Coarse-Graining Audit
+  status: canonical
+  supersedes:
+  - A38 empirical prevalence gate for weighted-median non-closure
+  evidence_classes:
+  - classical_quasi_arithmetic_characterization
+  - exact_sufficient_statistic_identity
+  - constructive_median_counterexample
+  - seeded_graph_aggregation
+  - corrective_protocol
+  claim_ids:
+  - MF-R058
+  - MF-R059
+  - MF-R060
+  - MF-R061
+  - MF-R062
+  - MF-R063
+source:
+  script: audits/a38_1_rzs_coarse_graining_corrective.py
+  results_directory: audits/a38_1_exact_results
+  summary: audits/a38_1_exact_results/a38_summary.json
+  working_directory: audits
+  command: python a38_1_rzs_coarse_graining_corrective.py
+  implementation_functions:
+  - json_safe
+  - normalize
+  - total_variation
+  - weighted_arithmetic
+  - exponential_mean
+  - weighted_lower_median
+  - minimum_score
+  - rms_score
+  - random_partition
+  - two_stage_scalar
+  - scalar_associativity_audit
+  - refinement_audit
+  - gauge_covariance_audit
+  - kernel_preservation_audit
+  - random_nested_partition
+  - aggregate_matrix
+  - graph_audit
+  - weighted_median_counterexample
+  - main
+integrity:
+  script_sha256: cb075164e5ec70aa4bb9d7de46b48e6a46540768fcfdfdf8965f80e6aba801e3
+  summary_sha256: 530409878e30acbbf3157b55a051292455c7f930c3431a59f46a5b5cc0e9c96a
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260813
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260813
+  LAMBDA: 1.25
+  SCALAR_SAMPLES: 5000
+  REFINEMENT_SAMPLES: 4000
+  KERNEL_SAMPLES: 4000
+  GRAPH_SAMPLES: 1200
+  MAX_EXACT_ERROR: 3.0e-12
+  MIN_MEDIAN_ASSOCIATIVITY_FAILURE_RATE: 0.7
+  MIN_UNWEIGHTED_CLONE_TV: 0.01
+  MIN_ARITHMETIC_KERNEL_MEDIAN_TV: 0.01
+  MIN_OCCUPANCY_MEDIAN_ROW_TV: 0.03
+  SCALAR_OPERATORS:
+    source_expression: '{''weighted_arithmetic'': weighted_arithmetic, ''exponential_mean'': exponential_mean, ''weighted_median'':
+      weighted_lower_median, ''minimum'': minimum_score}'
+generators:
+- name: random_weighted_scalar_states
+  implementation_functions:
+  - scalar_associativity_audit
+  - refinement_audit
+  - gauge_covariance_audit
+  description: Generates weighted q samples and random partitions for scalar aggregation tests.
+- name: exponential_kernel_groups
+  implementation_functions:
+  - kernel_preservation_audit
+  description: Generates random groups and compares direct microscopic exponential weights with macro scores.
+- name: nested_graph_partitions
+  implementation_functions:
+  - random_nested_partition
+  - graph_audit
+  description: Generates random weighted q matrices, nested region partitions, and source occupancies.
+- name: weighted_median_exact_witness
+  implementation_functions:
+  - weighted_median_counterexample
+  description: Uses a frozen exact three-leaf counterexample to disprove median closure by mass-plus-median summaries.
+procedure:
+- Compare associativity, refinement invariance, and gauge covariance of candidate scalar operators.
+- Test exact preservation of the exponential kernel.
+- Audit nested partition-sum aggregation.
+- Compare macro kernels under different source occupancies.
+- Restore exact aggregation by carrying joint flow.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_CORRECTED_OBSERVABLE_RELATIVE_COARSE_GRAINING_WITH_OCCUPANCY_OBSTRUCTION
+  expected_gates:
+    G1_translation_covariant_quasi_arithmetic_classification_stated: true
+    G2_weighted_arithmetic_associative_refinement_consistent_and_gauge_covariant: true
+    G3_exponential_mean_associative_refinement_consistent_and_gauge_covariant: true
+    G4_weighted_median_not_closed_by_mass_and_median_message: true
+    G5_minimum_is_associative_but_mass_insensitive_extremal_control: true
+    G6_unweighted_mean_is_clone_sensitive_under_mass_preserving_refinement: true
+    G7_rms_fails_additive_gauge_covariance: true
+    G8_exponential_mean_exactly_preserves_exponential_kernel: true
+    G9_arithmetic_mean_does_not_preserve_exponential_kernel: true
+    G10_nested_graph_partition_sum_aggregation_exact: true
+    G11_macro_transition_depends_on_source_occupancy: true
+    G12_supplied_occupancy_flow_aggregation_exact: true
+    G13_coarse_graining_declared_observable_relative_not_unique: true
+    G14_no_physical_lambda_or_source_occupancy_claimed: true
+  metric_snapshot:
+    lambda: 1.25
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a38_1_exact_results/a38_coarse_graining_classification.csv
+  role: tabular_output
+  sha256: 2523e4fc715bd05a304d1fae84c6b255f8cc2187c876d07530e809f5df7a95d5
+- path: audits/a38_1_exact_results/a38_exponential_kernel_preservation.csv
+  role: tabular_output
+  sha256: 334678d4271baefb54134723a6e127b31bc90e9b516d859d4af91850af383c53
+- path: audits/a38_1_exact_results/a38_flow_aggregation.csv
+  role: tabular_output
+  sha256: 2176c18ca0464468f250c8535b12591a4a0ae3cb71e815371a4a8d29838781c6
+- path: audits/a38_1_exact_results/a38_gauge_covariance.csv
+  role: tabular_output
+  sha256: cf961d445faac3f920f652012cc7e630810ef59cab1a3b0c01c2a3aca713483e
+- path: audits/a38_1_exact_results/a38_nested_graph_aggregation.csv
+  role: tabular_output
+  sha256: 488ae9c17f52cc3601558022603c1665418b0d053f4d750fbbdc5b73e0777059
+- path: audits/a38_1_exact_results/a38_refinement_invariance.csv
+  role: tabular_output
+  sha256: 66d4f8438e51416c63192a2e651c7519d77219623793e5266e3b71166b735b6a
+- path: audits/a38_1_exact_results/a38_report.md
+  role: human_readable_report
+  sha256: 4bb600e86e40226634c8e3e3fbad71813f80aa9f9f0f9a072c9bdbda8f2bd7a8
+- path: audits/a38_1_exact_results/a38_scalar_associativity.csv
+  role: tabular_output
+  sha256: 712863633a6062765469797515a899a0c12a1b092207863a8777a258717f8076
+- path: audits/a38_1_exact_results/a38_source_occupancy_obstruction.csv
+  role: tabular_output
+  sha256: 96b56904732573405db0f03d653769b975d103eafbacdba51370489245dbea44
+- path: audits/a38_1_exact_results/a38_summary.json
+  role: canonical_summary
+  sha256: 530409878e30acbbf3157b55a051292455c7f930c3431a59f46a5b5cc0e9c96a
+- path: audits/a38_1_exact_results/a38_theorem.md
+  role: theorem_note
+  sha256: 0dc3f1187b28592af9062a83029149109a13ad19997728656456aab86597c95f
+- path: audits/a38_1_exact_results/a38_weighted_median_counterexample.csv
+  role: tabular_output
+  sha256: ff75fb53b3d3740776c7133f067077c39401dee34e1d18c6844d716d2bd7e5d9
+interpretation:
+  allowed_claims:
+  - Coarse-graining is observable-relative; Q_lambda is exact for the exponential kernel, and dynamic graph aggregation
+    additionally requires occupancy/flow or lumpability.
+  forbidden_claims:
+  - A unique physical coarse-graining, a derived lambda, or a fundamental occupancy field.
+  limitations:
+  - The quasi-arithmetic classification is classical and conditional on its regularity class.
+  - The exponential kernel, lambda, partition, and source occupancy are supplied.
+  summary_boundary: A38 determines consistency requirements relative to declared observables. It does not establish
+    the physical exponential kernel, a physical lambda, a unique regional partition, or the occupancy measure required
+    by dynamic coarse-graining.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

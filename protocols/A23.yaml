@@ -1,0 +1,175 @@
+schema_version: 1.0.0
+audit:
+  id: A23
+  title: RZS q Primitive and Gauge Audit
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - conditional_proposition
+  - exact_gauge_identity
+  - seeded_synthetic_audit
+  claim_ids:
+  - MF-R028
+  - MF-R029
+  - MF-R030
+source:
+  script: audits/a23_rzs_q_primitive_gauge_audit.py
+  results_directory: audits/a23_exact_results
+  summary: audits/a23_exact_results/a23_summary.json
+  working_directory: audits
+  command: python a23_rzs_q_primitive_gauge_audit.py
+  implementation_functions:
+  - json_safe
+  - apply_model
+  - relation_matrix
+  - integer_ranks
+  - array_hash
+  - order_interval_size_field
+  - shared_random_q
+  - rank_gap_q
+  - calibrated_coordinate_q
+  - off_diagonal_values
+  - centered
+  - theoretical_coordinate_q_variance
+  - coupled_q_source_audit
+  - effective_distance
+  - gauge_audit
+  - centered_update
+  - dynamics_gauge_audit
+  - rate_degeneracy_table
+  - main
+integrity:
+  script_sha256: 82006a0e6a91b75b65970d2a00c24df56e9e175a7e8df219d6b22fca436094e5
+  summary_sha256: 10573a00e97361987d01351585d85494e101b2e62def8dbce342ea6fe652a148
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260726
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260726
+  ORDER_N_VALUES:
+  - 32
+  - 64
+  - 128
+  ORDER_COUPLED_SAMPLES: 250
+  GAUGE_GRAPH_N: 18
+  GAUGE_SAMPLES: 80
+  GAUGE_OFFSETS:
+  - -2.0
+  - -0.5
+  - 0.75
+  - 1.6
+  DYNAMICS_VECTOR_SIZE: 120
+  DYNAMICS_SAMPLES: 100
+  DYNAMICS_STEPS: 60
+  ETA: 0.35
+  NOISE_SD: 0.08
+  RATE_ETA_VALUES:
+  - 0.1
+  - 0.35
+  - 0.8
+  RATE_TIME_UNITS:
+  - 0.25
+  - 1.0
+  - 4.0
+  MAX_NUMERICAL_ERROR: 2.0e-11
+  MIN_COORDINATE_Q_VARIANCE_SEPARATION: 0.02
+  MAX_EMPIRICAL_VARIANCE_ERROR: 0.01
+generators:
+- name: order_and_q_source_pairs
+  implementation_functions:
+  - shared_random_q
+  - rank_gap_q
+  - calibrated_coordinate_q
+  - order_interval_size_field
+  description: Constructs order-derived and independently marked q fields on coupled order samples.
+- name: strongly_connected_weighted_graphs
+  implementation_functions:
+  - effective_distance
+  - gauge_audit
+  description: Audits q-offset scaling of exponential edge costs and effective directed/symmetrized path costs.
+- name: centered_affine_q_dynamics
+  implementation_functions:
+  - centered_update
+  - dynamics_gauge_audit
+  description: Runs the frozen centered affine q update with matched noise for gauge-coupled trajectories.
+procedure:
+- Test whether candidate q sources add information beyond the order.
+- Apply global q offsets and verify the exact scaling/invariance contract.
+- Run coupled centered dynamics under offset initial conditions.
+- Construct rate-time degeneracy tables.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_RZS_Q_PRIMITIVE_AND_GAUGE_AUDIT
+  expected_gates:
+    G1_same_order_under_monotone_representatives: true
+    G2_order_measurable_q_redundant: true
+    G3_model_independent_random_q_nonidentifying: true
+    G4_rank_q_invariant: true
+    G5_calibrated_coordinate_q_breaks_identity: true
+    G6_coordinate_q_variance_matches_theory: true
+    G7_coordinate_q_gauge_invariant_shape_separates_models: true
+    G8_effective_distance_scales_under_global_gauge: true
+    G9_centered_q_and_Dhat_gauge_invariant: true
+    G10_centered_dynamics_gauge_equivariant: true
+    G11_rate_time_degeneracy_exact: true
+    G12_q_can_be_new_information_but_not_automatically_physical: true
+    G13_no_absolute_scale_or_physical_rate_claimed: true
+  metric_snapshot: {}
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a23_exact_results/a23_coordinate_q_variance.csv
+  role: tabular_output
+  sha256: 59b1f7a473deb893d0436b00bf713122decb67d303fc6b7d40f4e06ba20148bf
+- path: audits/a23_exact_results/a23_dynamics_gauge_audit.csv
+  role: tabular_output
+  sha256: 986a9634097fd35ed87f03934789ca882e822f8ca4ce52d730c9724e36e5211b
+- path: audits/a23_exact_results/a23_gauge_audit.csv
+  role: tabular_output
+  sha256: 7c181ececa31e3f56def269b9b339d366b595b232d70ac3d6ffb693d8e09c3e4
+- path: audits/a23_exact_results/a23_q_classification.csv
+  role: tabular_output
+  sha256: 83599c4679a97a9e221af19decff87e286b2f1a897def6a1e75fb4f8bb02e9f1
+- path: audits/a23_exact_results/a23_q_source_audit.csv
+  role: tabular_output
+  sha256: 54184a19ef1b4b22479814c0d9fef033a76904b3bfece7a705556805f1ad8771
+- path: audits/a23_exact_results/a23_rate_time_degeneracy.csv
+  role: tabular_output
+  sha256: af22e4b4423f98b78394b7cb136b1cfa6da337e460a013236a6698cc70bb0e99
+- path: audits/a23_exact_results/a23_report.md
+  role: human_readable_report
+  sha256: 94bd50416517d8726cb4398bf9fa18f798ffb9daebedad3177b99a5814c6705d
+- path: audits/a23_exact_results/a23_summary.json
+  role: canonical_summary
+  sha256: 10573a00e97361987d01351585d85494e101b2e62def8dbce342ea6fe652a148
+- path: audits/a23_exact_results/a23_theorem.md
+  role: theorem_note
+  sha256: ec07e02a6d6ad47380b968c73ecac9b1a7ea3a1f7dc46ff848bfdad0859bc907
+interpretation:
+  allowed_claims:
+  - An independent q mark can contain cardinal information unavailable from order; the current construction retains
+    a global offset gauge.
+  forbidden_claims:
+  - q is physical distance, energy, or a derived field; D_eff is spacetime distance.
+  limitations:
+  - q is treated as a supplied quantitative mark; its physical origin is not derived.
+  - D_eff is a computational path cost, not calibrated physical distance.
+  - eta per algorithmic step is not a physical rate without a calibrated step duration.
+  summary_boundary: This audit does not demonstrate that the existing RZS q is operationally independent, physically
+    measurable, or tied to matter. It establishes the exact conditions it would have to satisfy to serve as the
+    non-invariant primitive required by A20–A22.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

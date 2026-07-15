@@ -1,0 +1,120 @@
+schema_version: 1.0.0
+audit:
+  id: A36_1
+  title: Corrected Gaussian Noise Selection Diagnostic
+  status: canonical
+  supersedes:
+  - A36 G5 diagnostic only
+  evidence_classes:
+  - classical_clt_diagnostic
+  - characteristic_function_computation
+  - corrective_protocol
+  claim_ids:
+  - MF-R053
+  - MF-R054
+source:
+  script: audits/a36_1_gaussian_noise_selection_corrective.py
+  results_directory: audits/a36_1_exact_results
+  summary: audits/a36_1_exact_results/a36_1_summary.json
+  working_directory: audits
+  command: python a36_1_gaussian_noise_selection_corrective.py
+  implementation_functions:
+  - js
+  - single_cf
+  - clt_cf_audit
+  - main
+integrity:
+  script_sha256: 605a42547f385009d8bad381c092110581b9b61343215998428d994b99d8b6f4
+  summary_sha256: f9c64be118fce62f6b8692326d2d05abb442622a29b9f4ae921f877c730ac375
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: false
+  seed: 20260810
+  rng_implementation: null
+  seed_scope: not applicable
+parameters:
+  SEED: 20260810
+  T:
+    source_expression: np.linspace(-4.0, 4.0, 8001)
+  N_VALUES:
+  - 1
+  - 2
+  - 4
+  - 8
+  - 16
+  - 32
+  - 64
+  - 128
+  - 256
+  - 512
+  - 1024
+  - 2048
+  MAX_FINAL_CF_ERROR: 0.002
+  MAX_EXACT_ERROR: 2.0e-12
+generators:
+- name: analytic_characteristic_functions
+  implementation_functions:
+  - single_cf
+  - clt_cf_audit
+  description: Evaluates exact characteristic functions for Gaussian, Laplace, Rademacher, and uniform normalized
+    sums over n=1,...,2048 on t in [-4,4].
+procedure:
+- Evaluate the compact-interval characteristic function of normalized sums for each frozen law and n.
+- Compare with the standard Gaussian characteristic function.
+- Verify monotone convergence and final-error thresholds.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_CORRECTED_CLT_DIAGNOSTIC_GAUSSIAN_SELECTION_REMAINS_CONDITIONAL
+  expected_gates:
+    G1_original_ks_threshold_not_lowered: true
+    G2_lattice_finite_size_issue_explicitly_identified: true
+    G3_characteristic_function_is_valid_clt_convergence_diagnostic: true
+    G4_rademacher_compact_cf_converges: true
+    G5_laplace_compact_cf_converges: true
+    G6_uniform_compact_cf_converges: true
+    G7_compact_cf_errors_monotonically_decrease: true
+    G8_clt_remains_conditional_on_iid_finite_variance_assumptions: true
+    G9_original_a36_failure_preserved_in_record: true
+    G10_no_gaussian_rzs_noise_claimed: true
+  metric_snapshot: {}
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a36_1_exact_results/a36_1_characteristic_function_clt.csv
+  role: tabular_output
+  sha256: 0a817183f297fe90767bc4312e4fdd722edf60ecc49fed9cb5aea7fda108b207
+- path: audits/a36_1_exact_results/a36_1_clt_classification.csv
+  role: tabular_output
+  sha256: c7a8dc7155a10ed0923c12ccd42c276392092cb2201de05ccf460f3c48cda47a
+- path: audits/a36_1_exact_results/a36_1_report.md
+  role: human_readable_report
+  sha256: 85821faf93bc2d17317eee3d9366781e48a0b359c568b32c659cae129bf79841
+- path: audits/a36_1_exact_results/a36_1_summary.json
+  role: canonical_summary
+  sha256: f9c64be118fce62f6b8692326d2d05abb442622a29b9f4ae921f877c730ac375
+- path: audits/a36_1_exact_results/a36_1_theorem.md
+  role: theorem_note
+  sha256: 14c2d2ffd4385680f677f3b36847052efe408878690be829c0d7bcf2898d69f6
+interpretation:
+  allowed_claims:
+  - The corrected diagnostic confirms CLT-aligned convergence for the selected finite-variance laws.
+  forbidden_claims:
+  - Gaussianity is derived for RZS or holds exactly at finite n.
+  limitations:
+  - This corrects the A36 empirical KS diagnostic; it does not add independence or finite-variance assumptions to
+    the RZS model.
+  - Characteristic-function convergence is asymptotic and observable-specific.
+  summary_boundary: The corrected result supports the conditional CLT statement only. It does not turn centered
+    RZS noise into Gaussian noise.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

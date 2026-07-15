@@ -1,0 +1,174 @@
+schema_version: 1.0.0
+audit:
+  id: A37_1
+  title: Corrected Noise-Law Universality Audit
+  status: canonical
+  supersedes:
+  - A37 numerical Gaussian fixed-point accumulation issue
+  evidence_classes:
+  - analytic_stationary_cumulants
+  - analytic_log_mgf
+  - seeded_kernel_simulation
+  - dependence_counterexample
+  - corrective_protocol
+  claim_ids:
+  - MF-R054
+  - MF-R055
+  - MF-R056
+  - MF-R057
+source:
+  script: audits/a37_1_noise_universality_corrective.py
+  results_directory: audits/a37_1_exact_results
+  summary: audits/a37_1_exact_results/a37_summary.json
+  working_directory: audits
+  command: python a37_1_noise_universality_corrective.py
+  implementation_functions:
+  - json_safe
+  - normalize
+  - innovation_excess
+  - stationary_excess
+  - log_mgf_innovation
+  - stationary_log_mgf
+  - stationary_cumulant_audit
+  - stationary_q_audit
+  - block_q_universality_audit
+  - draw_innovation
+  - operational_kernel_audit
+  - dependence_obstruction_audit
+  - main
+integrity:
+  script_sha256: ded8f7da79f04a26c497433d0bce113c03416ca7cac10549686e9daa43eb97eb
+  summary_sha256: d73828087d0fede0a4bba575ed3cf53494a391b85bb5493f77c26ad0945bf843
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260811
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260811
+  A: 0.825
+  INNOVATION_SD:
+    source_expression: math.sqrt(1.0 - A * A)
+  LAMBDA_VALUES:
+  - 0.5
+  - 1.0
+  - 2.0
+  BLOCK_SIZES:
+  - 1
+  - 4
+  - 16
+  - 64
+  - 256
+  KERNEL_ROWS: 2500
+  KERNEL_DIMENSION: 64
+  KERNEL_BURN_IN: 140
+  KERNEL_LAMBDA: 1.0
+  MAX_EXACT_ERROR: 3.0e-12
+  MIN_STATIONARY_EXCESS_SPREAD: 0.8
+  MIN_STATIONARY_Q_SPREAD_LAMBDA_2: 0.3
+  MAX_BLOCK_Q_ERROR_AT_256: 0.001
+  MIN_KERNEL_MAX_PROBABILITY_SPREAD: 0.015
+  MIN_COMMON_SHOCK_LIMIT_EXCESS_ABS: 1.9
+generators:
+- name: matched_variance_innovation_laws
+  implementation_functions:
+  - draw_innovation
+  description: Uses Gaussian, Rademacher, uniform, Laplace, and standardized Student-t(8) innovations with matched
+    variance.
+- name: stationary_affine_process
+  implementation_functions:
+  - stationary_cumulant_audit
+  - stationary_q_audit
+  description: Evaluates analytic stationary cumulants and log-MGFs for contraction a=0.825.
+- name: independent_block_sums
+  implementation_functions:
+  - block_q_universality_audit
+  description: Computes Q_lambda of normalized independent blocks of sizes 1,4,16,64,256.
+- name: standardized_transition_rows
+  implementation_functions:
+  - operational_kernel_audit
+  description: Simulates stationary 64-dimensional rows, standardizes them, and applies an exponential kernel.
+- name: common_shock_model
+  implementation_functions:
+  - dependence_obstruction_audit
+  description: Evaluates a shared Rademacher factor plus idiosyncratic Gaussian components.
+procedure:
+- Match stationary variance across innovation laws.
+- Compare higher cumulants and Q_lambda.
+- Test independent-block convergence for light-tailed laws.
+- Classify Student-t Q divergence.
+- Measure standardized kernel sensitivity.
+- Evaluate the common-factor dependence obstruction.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_CORRECTED_PARTIAL_NOISE_UNIVERSALITY_WITH_MOMENT_AND_DEPENDENCE_LIMITS
+  expected_gates:
+    G1_stationary_characteristic_function_and_cumulant_formula_stated: true
+    G2_equal_stationary_mean_variance_do_not_fix_higher_cumulants: true
+    G3_light_tailed_stationary_effective_scores_depend_on_noise_law: true
+    G4_student_t_finite_variance_does_not_make_q_lambda_finite: true
+    G5_independent_light_tailed_block_scores_converge_to_gaussian: true
+    G6_student_t_block_q_remains_undefined_under_finite_block_averaging: true
+    G7_common_nongaussian_factor_blocks_gaussian_universality: true
+    G8_standardized_operational_kernel_retains_noise_law_sensitivity: true
+    G9_variance_matching_and_centering_are_not_exact_universality_principles: true
+    G10_universality_requires_independence_or_mixing_and_exponential_moment_control: true
+    G11_no_physical_rzs_noise_law_claimed: true
+  metric_snapshot:
+    contraction: 0.825
+    innovation_sd: 0.5651327277728658
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a37_1_exact_results/a37_dependence_obstruction.csv
+  role: tabular_output
+  sha256: ef04a5a4ce21d003870e55481bbf852138b0cfb4aa6ce42e34b951b795fd7ada
+- path: audits/a37_1_exact_results/a37_independent_block_universality.csv
+  role: tabular_output
+  sha256: 2b807d9876f0e4fe3a5e9abb733cd285cf38aa4d206a8f33e8dfced0af3360b2
+- path: audits/a37_1_exact_results/a37_operational_kernel_sensitivity.csv
+  role: tabular_output
+  sha256: db67f016c1aa6ea3278da121b416aef82bf7d68c3eb221fc1bd4578f9aeb18ac
+- path: audits/a37_1_exact_results/a37_report.md
+  role: human_readable_report
+  sha256: e4d8ee09ea7fe5570d04ae45193824952c40ffd37991dec1ee70607241d60be0
+- path: audits/a37_1_exact_results/a37_stationary_cumulants.csv
+  role: tabular_output
+  sha256: a02441b77f1499e8327cb22f882eb807104c1dcabdd7cfa9a2b71f9dec57cee9
+- path: audits/a37_1_exact_results/a37_stationary_effective_score.csv
+  role: tabular_output
+  sha256: 86f4d65b138fc197672f5b0a5a782790d097be91f1e986246b35cf57c7f5f0e9
+- path: audits/a37_1_exact_results/a37_summary.json
+  role: canonical_summary
+  sha256: d73828087d0fede0a4bba575ed3cf53494a391b85bb5493f77c26ad0945bf843
+- path: audits/a37_1_exact_results/a37_theorem.md
+  role: theorem_note
+  sha256: 2e8bb7df8eb2885d8d4539f240893a6c901966f2bca24a0a7b704f0d0ebdcad7
+- path: audits/a37_1_exact_results/a37_universality_classification.csv
+  role: tabular_output
+  sha256: c362e3be58ba15719190883f2974a4c0517bdc19e35a16973765a55b1b929583
+interpretation:
+  allowed_claims:
+  - Noise-law details disappear for some low-order observables and under conditional independent coarse-graining,
+    but survive in higher, tail, exponential, and dependent observables.
+  forbidden_claims:
+  - The actual RZS noise law is macroscopically irrelevant or Gaussian.
+  limitations:
+  - The model is an affine centered q sector, not the full interacting RZS graph dynamics.
+  - The block sum is a mathematical coarse-graining witness, not yet a derived physical coarse-graining rule.
+  summary_boundary: A37 identifies universality classes in an affine stationary model. It does not prove that RZS
+    relational components are independent copies, that their innovations have exponential moments, or that the audited
+    block sum is the physical coarse-graining operation.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

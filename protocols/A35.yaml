@@ -1,0 +1,166 @@
+schema_version: 1.0.0
+audit:
+  id: A35
+  title: Conditional Gaussian Closure Audit
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - classical_gaussian_closure
+  - analytic_cumulants
+  - seeded_empirical_checks
+  claim_ids:
+  - MF-R051
+  - MF-R052
+source:
+  script: audits/a35_gaussian_closure_audit.py
+  results_directory: audits/a35_exact_results
+  summary: audits/a35_exact_results/a35_summary.json
+  working_directory: audits
+  command: python a35_gaussian_closure_audit.py
+  implementation_functions:
+  - json_safe
+  - q_from_log_mgf
+  - gaussian_q
+  - matched_null_log_mgf
+  - matched_null_dynamics_audit
+  - cumulant_decay_audit
+  - stationary_rademacher_audit
+  - centered_noise_shape_audit
+  - empirical_gaussian_q_audit
+  - gaussian_affine_closure_audit
+  - main
+integrity:
+  script_sha256: 6b863bed670ec08957dd029c5a741f02e322bbd728f58ffe6260b77f8cb01569
+  summary_sha256: ddae66f747b9189be754f4f8fc29cbe64e1f3b07fdf267db2a39bc294772229a
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260808
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260808
+  A: 0.825
+  INNOVATION_SD:
+    source_expression: math.sqrt(1.0 - A * A)
+  LAMBDA_VALUES:
+  - 0.5
+  - 1.0
+  - 2.0
+  TIME_STEPS:
+    source_expression: tuple(range(0, 31))
+  EMPIRICAL_N_VALUES:
+  - 32
+  - 128
+  - 512
+  - 2048
+  EMPIRICAL_REPLICATES: 3000
+  EMPIRICAL_BATCH_SIZE: 250
+  CENTERING_DIMS:
+  - 8
+  - 16
+  - 64
+  - 256
+  MAX_EXACT_ERROR: 2.0e-12
+  MAX_MATCHED_NULL_FINAL_DIFFERENCE: 1.0e-08
+  MIN_MATCHED_NULL_INITIAL_DIFFERENCE: 0.0001
+  MIN_NONGAUSSIAN_EXCESS_ABS: 0.05
+  MIN_STATIONARY_Q_DIFFERENCE: 0.0001
+generators:
+- name: matched_gaussian_and_nongaussian_nulls
+  implementation_functions:
+  - matched_null_log_mgf
+  - matched_null_dynamics_audit
+  description: Constructs Gaussian and matched-moment non-Gaussian initial laws.
+- name: affine_innovation_processes
+  implementation_functions:
+  - gaussian_affine_closure_audit
+  - stationary_rademacher_audit
+  description: Runs affine recursions with Gaussian or Rademacher innovations at contraction a=0.825.
+- name: centered_component_noise
+  implementation_functions:
+  - centered_noise_shape_audit
+  description: Centers iid non-Gaussian components across frozen vector dimensions.
+- name: finite_gaussian_samples
+  implementation_functions:
+  - empirical_gaussian_q_audit
+  description: Samples finite Gaussian ensembles to quantify plug-in Q estimation error.
+procedure:
+- Verify exact Gaussian mean/variance/Q propagation.
+- Compare matched non-Gaussian initial laws under Gaussian innovations.
+- Compute stationary higher cumulants for non-Gaussian innovations.
+- Audit whether centering creates Gaussian component shapes.
+- Measure finite-sample Q error by n and lambda.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_GAUSSIAN_CLOSURE_CONDITIONAL_ON_INNOVATION_LAW
+  expected_gates:
+    G1_affine_gaussian_family_exactly_closed: true
+    G2_gaussian_q_exactly_mean_variance_functional: true
+    G3_same_mean_variance_nongaussian_nulls_differ_at_finite_time: true
+    G4_gaussian_innovations_asymptotically_erase_higher_moments: true
+    G5_higher_cumulants_decay_under_gaussian_innovations: true
+    G6_nongaussian_innovations_generate_nongaussian_stationary_law: true
+    G7_nongaussian_stationary_q_differs_from_gaussian_closure: true
+    G8_centering_does_not_gaussianize_rademacher_noise: true
+    G9_finite_empirical_gaussian_q_converges_with_sample_size: true
+    G10_finite_sample_error_increases_with_lambda: true
+    G11_population_closure_distinguished_from_empirical_estimator: true
+    G12_gaussian_rzs_noise_not_claimed_or_derived: true
+  metric_snapshot:
+    contraction: 0.825
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a35_exact_results/a35_centered_noise_shape.csv
+  role: tabular_output
+  sha256: 35f0b71dd46629632b769571d4afee52ffb4110f6e746d4df5bdbc7a4695bc9c
+- path: audits/a35_exact_results/a35_finite_empirical_gaussian_q.csv
+  role: tabular_output
+  sha256: b4f62312be54c1f92a7e413a4c0741a6404232f53fc6069ee6ffa96175967aaf
+- path: audits/a35_exact_results/a35_gaussian_affine_closure.csv
+  role: tabular_output
+  sha256: e33cf020fd9d6d208da73917c9f5d989d197320c3763b0070fbeac05f722e520
+- path: audits/a35_exact_results/a35_gaussian_closure_classification.csv
+  role: tabular_output
+  sha256: 8e0ae40dde374bfdc9355ae82850c71740b7f799b68d5f132425b67f0863a8a4
+- path: audits/a35_exact_results/a35_gaussian_noise_cumulant_decay.csv
+  role: tabular_output
+  sha256: ef1d6f78bc6f905f53a570eba8e4506346d5307ac68c60b3823093ff5ed5d8c6
+- path: audits/a35_exact_results/a35_matched_moment_gaussianization.csv
+  role: tabular_output
+  sha256: 1b100292a96b51c98f073562407101f2bc8f5da710d2bc8597e1bcc3c55c2d47
+- path: audits/a35_exact_results/a35_nongaussian_stationary_control.csv
+  role: tabular_output
+  sha256: 999d7c73cb9257336be51ae0cd0fc65053dc8336d9307a8c5e2434d139d43938
+- path: audits/a35_exact_results/a35_report.md
+  role: human_readable_report
+  sha256: e1e7c175037194ac59a1a3b2d2327c53639a31d1fc85b8e6f279b6bf0cded935
+- path: audits/a35_exact_results/a35_summary.json
+  role: canonical_summary
+  sha256: ddae66f747b9189be754f4f8fc29cbe64e1f3b07fdf267db2a39bc294772229a
+- path: audits/a35_exact_results/a35_theorem.md
+  role: theorem_note
+  sha256: 77fd6cfbb7c807d4f82a66d51e8c76bb16148bd080e87d1021b5b00b40c2644c
+interpretation:
+  allowed_claims:
+  - Mean-variance closure is exact in the Gaussian invariant family and fails generically outside it.
+  forbidden_claims:
+  - The RZS innovation law is Gaussian or has been physically derived.
+  limitations:
+  - Gaussian closure is conditional on Gaussian state and affine Gaussian innovations.
+  - Centering alone is not a Gaussian-selection principle.
+  summary_boundary: A35 establishes conditional probabilistic theorems and controls. It does not show that actual
+    RZS q values are iid, Gaussian, exchangeable, or governed by Gaussian innovations.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

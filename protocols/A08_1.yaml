@@ -1,0 +1,143 @@
+schema_version: 1.0.0
+audit:
+  id: A08_1
+  title: Formal Resolution of 5,234 versus 6,942
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - combinatorial_proof
+  - exact_enumeration
+  - constructive_counterexample
+  - software_cross_check
+  claim_ids:
+  - MF-R005
+  - MF-R006
+  - MF-R007
+  - MF-R008
+  - MF-R009
+  - MF-R010
+  - MF-R011
+source:
+  script: audits/a8_1_condensation_code_resolution.py
+  results_directory: audits/a8_1_exact_results
+  summary: audits/a8_1_exact_results/a8_1_summary.json
+  working_directory: audits
+  command: python a8_1_condensation_code_resolution.py
+  implementation_functions:
+  - enumerate_adjacency
+  - transitive_closure
+  - scc_representatives
+  - encode_boolean_matrices
+  - encode_full_labeled_preorder
+  - encode_minimum_representative_poset
+  - strict_poset_count
+  - stirling_second_kind
+  - representative_partition_multiplicity
+  - decode_matrix_code
+  - encode_matrix_scalar
+  - canonical_unlabeled_preorder_code
+  - explicit_collision
+  - main
+integrity:
+  script_sha256: 7b2b3b2d97de8e6492e7bec68c266d553b0cc2d9d64ebe22a86647c9d908dc1a
+  summary_sha256: bcd42550b4e7d0ee657f9f1760432813e77d25917fc834f173cba57a7553f56d
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: false
+  seed: null
+  rng_implementation: null
+  seed_scope: not applicable
+parameters:
+  N: 5
+  EDGES:
+    source_expression: '[(i, j) for i in range(N) for j in range(N) if i != j]'
+  NUMBER_OF_GRAPHS:
+    source_expression: 1 << len(EDGES)
+  MAX_EXACT_ERROR: 0
+generators:
+- name: all_loopless_labeled_digraphs_n5
+  implementation_functions:
+  - enumerate_adjacency
+  description: Enumerates every one of the 2^20 loopless directed graphs on the labeled vertex set {0,...,4}.
+- name: all_strict_partial_orders_k_le_5
+  implementation_functions:
+  - strict_poset_count
+  description: Independently enumerates strict partial orders on k labeled elements for k=1,...,5.
+- name: all_vertex_relabelings
+  implementation_functions:
+  - canonical_unlabeled_preorder_code
+  description: Canonicalizes full preorder matrices under all 5! permutations.
+procedure:
+- Enumerate all loopless labeled n=5 digraphs and compute reflexive transitive closure.
+- Recover SCC representatives from mutual reachability.
+- Encode both the full labeled reachability preorder and the historical minimum-representative quotient-poset code.
+- Count unique codes under both encodings and independently evaluate the two closed counting formulas.
+- Canonicalize full codes under relabeling to obtain the unlabeled count.
+- Construct an explicit collision for the historical code and audit every single-edge toggle under both encodings.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_FORMAL_RESOLUTION_5234_REPRESENTATIVE_CODES_6942_FULL_LABELED_PREORDERS
+  expected_gates:
+    G1_exhaustive_full_code_count_is_6942: true
+    G2_exhaustive_representative_code_count_is_5234: true
+    G3_independent_full_combinatorial_formula_is_6942: true
+    G4_independent_representative_formula_is_5234: true
+    G5_labeled_poset_counts_reproduced: true
+    G6_unlabeled_full_preorder_count_is_139: true
+    G7_explicit_collision_proves_original_code_noninjective: true
+    G8_code_fiber_accounting_exact: true
+    G9_edge_flip_fraction_same_under_both_codes: true
+    G10_no_full_labeled_claim_retained_for_5234: true
+  metric_snapshot:
+    exhaustive_full_labeled_condensation_preorders: 6942
+    exhaustive_minimum_representative_codes: 5234
+    unlabeled_full_condensation_preorders: 139
+    edge_flip.fraction: 0.29296875
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a8_1_exact_results/a8_1_active_minimum_set_multiplicity.csv
+  role: tabular_output
+  sha256: 15aeaaa0e650a633d99c5a81b8a76af0784ecd924c04f2913ac6be0be6e658ef
+- path: audits/a8_1_exact_results/a8_1_code_fiber_distribution.csv
+  role: tabular_output
+  sha256: 8d773493bd53edc11fca7ea13dc055267a21238769b729073ca7a2a5618c751b
+- path: audits/a8_1_exact_results/a8_1_count_decomposition.csv
+  role: tabular_output
+  sha256: 9cfc550375c84f4063a209b027bc565841d04d51fdc4e157a74a59ea01bdf5a0
+- path: audits/a8_1_exact_results/a8_1_explicit_collision.csv
+  role: tabular_output
+  sha256: 112f171eff6c173a4d96edf1280dea4611f71083184e6fdacbd4fab58d0b5965
+- path: audits/a8_1_exact_results/a8_1_report.md
+  role: human_readable_report
+  sha256: b0e5183cc9bc17131b859b56be1cffa5f49b2e36b6fb84326480aee595b0474f
+- path: audits/a8_1_exact_results/a8_1_summary.json
+  role: canonical_summary
+  sha256: bcd42550b4e7d0ee657f9f1760432813e77d25917fc834f173cba57a7553f56d
+- path: audits/a8_1_exact_results/a8_1_theorem.md
+  role: theorem_note
+  sha256: 8b6cf26d00b2e3bd352ff67e00e04409adaa594c02f09cd13e2b02427fa3e9c1
+interpretation:
+  allowed_claims:
+  - 6,942 and 5,234 are correct counts of two explicitly different encodings.
+  - The historical 5,234 label was ambiguous and is corrected by A8.1.
+  forbidden_claims:
+  - 5,234 is the number of complete labeled condensation structures.
+  - 75/256 is a universal or asymptotic constant.
+  limitations:
+  - The exact edge-flip fraction is established only for n=5 under the uniform graph-edge-pair ensemble.
+  - The formula for full preorders is an enumeration identity and should be checked against the classical finite-preorder
+    literature before novelty is claimed.
+  summary_boundary: null
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

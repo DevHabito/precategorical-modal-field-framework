@@ -1,0 +1,116 @@
+schema_version: 1.0.0
+audit:
+  id: A10
+  title: Internal Duration Audit
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - exact_enumeration
+  - constructive_counterexample
+  claim_ids:
+  - MF-R014
+  - MF-R015
+source:
+  script: audits/a10_internal_duration_audit.py
+  results_directory: audits/a10_exact_results
+  summary: audits/a10_exact_results/a10_summary.json
+  working_directory: audits
+  command: python a10_internal_duration_audit.py
+  implementation_functions:
+  - enumerate_adjacency
+  - transitive_closure
+  - scc_data
+  - encode_condensation_posets
+  - decode_poset
+  - cover_relation
+  - topological_order
+  - rank_function
+  - unit_cover_potential
+  - longest_chain_distances
+  - interval_volume
+  - poset_duration_metrics
+  - degree_codes
+  - adjacency_from_edges
+  - mask_from_adjacency
+  - control_structures
+  - main
+integrity:
+  script_sha256: d3b4ca6d6f3a9b772f928c1f9e17c9f122ee4b2fc10621fcfc0debfeb75d8367
+  summary_sha256: f65874f503738e0e1520e9b90fde0287cf21f2ddc677754e186563b5ef3ed8c1
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: false
+  seed: null
+  rng_implementation: null
+  seed_scope: not applicable
+parameters:
+  N: 5
+  EDGES:
+    source_expression: '[(i, j) for i in range(N) for j in range(N) if i != j]'
+  NUMBER_OF_GRAPHS:
+    source_expression: 1 << len(EDGES)
+generators:
+- name: all_loopless_labeled_digraphs_n5
+  implementation_functions:
+  - enumerate_adjacency
+  description: Enumerates all n=5 loopless labeled digraphs and historical quotient codes.
+- name: declared_control_structures
+  implementation_functions:
+  - control_structures
+  description: Constructs exact small poset controls used to validate duration functions.
+procedure:
+- Compute cover relations, standard rank, unit-cover potentials, longest-chain distances, and interval volumes.
+- Audit additivity over comparable triples and agreement among duration candidates.
+- Measure variation within degree fibers and sensitivity to every single-edge toggle.
+- Evaluate the explicit four-element coarse-graining counterexample.
+validation:
+  mode: metric_snapshot
+  expected_verdict: null
+  expected_gates: {}
+  metric_snapshot:
+    fraction_all_comparable_triples_longest_additive: 0.9892818863879957
+    fraction_all_comparable_triples_volume_additive: 0.8145766345123259
+    fraction_comparable_pairs_longest_equals_interval: 0.9652698048220436
+    single_edge_flip_fraction_changing_duration_signature: 0.29296875
+    coarse_graining_counterexample.ratios.0: 1/2
+    coarse_graining_counterexample.ratios.1: 2/3
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a10_exact_results/a10_control_tests.csv
+  role: tabular_output
+  sha256: 7bf5a0046a2aacdbd4d07186e601b1643af2e057bdea3238199c84d7d74b0a7c
+- path: audits/a10_exact_results/a10_density_profile.csv
+  role: tabular_output
+  sha256: d39039613a17234bd292793a1f40c58f659ee4ef842cad1fcf86bdc4eeaa4441
+- path: audits/a10_exact_results/a10_poset_duration_profiles.csv
+  role: tabular_output
+  sha256: b15d53021d68dffb6eec9be27925f364aa75455db60b1ca1d6ceb15d5672ef4a
+- path: audits/a10_exact_results/a10_report.md
+  role: human_readable_report
+  sha256: 7bf80b34c5bce65912a336f071ac04799851cfd6fcc9ee827687c7f1d0c4c9af
+- path: audits/a10_exact_results/a10_summary.json
+  role: canonical_summary
+  sha256: f65874f503738e0e1520e9b90fde0287cf21f2ddc677754e186563b5ef3ed8c1
+interpretation:
+  allowed_claims:
+  - Longest-chain distance is the strongest audited ordinal-duration candidate at n=5.
+  - The stated quotient example has no single multiplicative scale preserving both selected durations.
+  forbidden_claims:
+  - Longest-chain distance is physical proper time or a uniquely derived duration.
+  limitations:
+  - Finite n=5 ordinal durations only.
+  - No calibration, continuum limit, or proper-time interpretation is supplied.
+  summary_boundary: null
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.

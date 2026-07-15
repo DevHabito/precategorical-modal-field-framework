@@ -1,0 +1,151 @@
+schema_version: 1.0.0
+audit:
+  id: A32
+  title: Infinite Refinement, Projective Limits, and Terminality
+  status: canonical
+  supersedes: []
+  evidence_classes:
+  - classical_extension_theorem_application
+  - constructive_atomic_nonatomic_examples
+  - seeded_martingale_audit
+  claim_ids:
+  - MF-R041
+  - MF-R042
+source:
+  script: audits/a32_infinite_refinement_audit.py
+  results_directory: audits/a32_exact_results
+  summary: audits/a32_exact_results/a32_summary.json
+  working_directory: audits
+  command: python a32_infinite_refinement_audit.py
+  implementation_functions:
+  - js
+  - tv
+  - generate_tree_masses
+  - projective_tree_audit
+  - preassign_binary_splits
+  - direct_binary_leaf_masses
+  - scheduled_binary_leaf_masses
+  - schedule_audit
+  - atomicity_audit
+  - bernoulli_leaf_distribution
+  - nonuniqueness_audit
+  - martingale_audit
+  - divergent_mark_audit
+  - main
+integrity:
+  script_sha256: b466742f964ffe476cddb28f782e8d57b2a9465c2d3231fb6ee7e42442068b7c
+  summary_sha256: 935a7e1143ef37bfa7109fd81e044f998c92579790f5efc399d608cb77673a01
+environment:
+  python: '>=3.11'
+  dependencies:
+  - numpy
+  - pandas
+  - scipy
+  deterministic_blas_required: false
+randomness:
+  stochastic: true
+  seed: 20260806
+  rng_implementation: numpy.random.default_rng
+  seed_scope: single audit-level generator; see source for coupled substreams
+parameters:
+  SEED: 20260806
+  TREE_SAMPLES: 600
+  MAX_DEPTH: 8
+  SCHEDULE_SAMPLES: 500
+  SCHEDULE_MAX_DEPTH: 7
+  MARTINGALE_PATHS: 120000
+  MARTINGALE_DEPTH: 30
+  MARTINGALE_RHO: 0.72
+  MARTINGALE_SCALE: 0.8
+  MAX_NUMERICAL_ERROR: 2.0e-11
+  MAX_MARTINGALE_RELATIVE_ERROR: 0.035
+  MIN_MEASURE_NONUNIQUENESS_TV: 0.2
+  MIN_ATOMIC_LIMIT: 0.49
+  MAX_NONATOMIC_LEAF_MASS_DEPTH20:
+    source_expression: 0.8 ** 20 + 1e-15
+generators:
+- name: finite_projective_trees
+  implementation_functions:
+  - generate_tree_masses
+  - projective_tree_audit
+  description: Generates consistent finite-depth tree masses.
+- name: binary_refinement_schedules
+  implementation_functions:
+  - preassign_binary_splits
+  - direct_binary_leaf_masses
+  - scheduled_binary_leaf_masses
+  - schedule_audit
+  description: Compares direct and scheduled refinement of preassigned binary splits.
+- name: martingale_path_samples
+  implementation_functions:
+  - martingale_audit
+  description: Samples paths for the frozen square-summable q-mark martingale.
+procedure:
+- Verify finite projective consistency and schedule independence.
+- Construct an infinite nonterminal atomic path with mass limit 1/2 and a non-atomic bounded-branching example.
+- Compare distinct measures on the same tree.
+- Audit L2 convergence of a square-summable marked martingale and failure under a divergent schedule.
+validation:
+  mode: verdict_and_gates
+  expected_verdict: PASS_INFINITE_PROJECTIVE_MEASURE_WITH_TERMINALITY_UNDERDETERMINED
+  expected_gates:
+    G1_projective_limit_conditions_stated: true
+    G2_finite_level_mass_consistency: true
+    G3_refinement_schedule_independent: true
+    G4_nonatomic_infinite_refinement_witness: true
+    G5_atom_without_terminal_leaf_witness: true
+    G6_projective_consistency_does_not_select_measure: true
+    G7_square_summable_mark_increments_l2_converge: true
+    G8_constant_increment_control_not_l2_cauchy: true
+    G9_atomicity_and_terminality_distinguished: true
+    G10_no_rzs_infinite_tree_or_physical_measure_claimed: true
+  metric_snapshot: {}
+  numeric_tolerance:
+    absolute: 1.0e-12
+    relative: 1.0e-10
+expected_outputs:
+- path: audits/a32_exact_results/a32_atomicity_without_terminality.csv
+  role: tabular_output
+  sha256: bef4a03b77eb90391221fdfd1b7c0ecbed0564766771a8f47cb0e8bec2f8eded
+- path: audits/a32_exact_results/a32_mark_l2_convergence.csv
+  role: tabular_output
+  sha256: 5ec2d1901e135626ce00ee18d70cca7f7d7e38c7249b74650872b8c33730c1f2
+- path: audits/a32_exact_results/a32_mark_nonconvergence_control.csv
+  role: tabular_output
+  sha256: 9c4c067dacb0783404f4b4476f5f3685fef09b5742d9b007ece50b4fab884da4
+- path: audits/a32_exact_results/a32_measure_nonuniqueness.csv
+  role: tabular_output
+  sha256: 212c462f88e964d7a3bc52c24e1c3f95f6f20e9f932784f9a41136eed9ff5bfe
+- path: audits/a32_exact_results/a32_projective_consistency.csv
+  role: tabular_output
+  sha256: bff146c7ccaaa575f7c9ccbaef30296c5968a5ea118175c40eca0af9e2ebb921
+- path: audits/a32_exact_results/a32_refinement_classification.csv
+  role: tabular_output
+  sha256: 3185859580af13e58c037b2f75406b96030bd26595c0be123ef9cef1c9d19c8a
+- path: audits/a32_exact_results/a32_report.md
+  role: human_readable_report
+  sha256: c3666c68918ad92cd7d066a2c5046cea26fbeb76a410ab0f497d58d06210068c
+- path: audits/a32_exact_results/a32_schedule_independence.csv
+  role: tabular_output
+  sha256: c0217d4e356baa6716ede953c00f16327942c0b2eea72a942782ad0ce281e0fa
+- path: audits/a32_exact_results/a32_summary.json
+  role: canonical_summary
+  sha256: 935a7e1143ef37bfa7109fd81e044f998c92579790f5efc399d608cb77673a01
+- path: audits/a32_exact_results/a32_theorem.md
+  role: theorem_note
+  sha256: a6913e353aba375d256c9ab8d7478a6ddb3b8ff32b29544c3839156f6c90befd
+interpretation:
+  allowed_claims:
+  - Projective measures can exist without terminal leaves; atomicity and terminality are distinct.
+  forbidden_claims:
+  - The framework proves nature is infinitely divisible or selects one projective measure.
+  limitations:
+  - Infinite extension uses standard measure-extension hypotheses.
+  - The examples establish logical distinctions, not a physical infinite-refinement ontology.
+  summary_boundary: A32 establishes conditional mathematical constructions. It does not demonstrate an actual RZS
+    refinement tree, physical atoms, physical continuity, or a law selecting branch fractions and q increments.
+reproduction:
+  fresh_output_policy: Run in a clean checkout or remove the matching result directory before execution.
+  comparison_policy: Compare summary seed, verdict, gates, metric snapshot, and output hashes. Floating CSV values
+    may require declared tolerances across compatible library versions.
+  failure_policy: A mismatch must be reported; do not overwrite archived canonical outputs silently.
