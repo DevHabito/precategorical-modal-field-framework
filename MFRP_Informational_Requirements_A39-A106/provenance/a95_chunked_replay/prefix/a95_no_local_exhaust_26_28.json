@@ -1,0 +1,90 @@
+[
+  {
+    "M": 318,
+    "b": 55,
+    "cell_phase": "b_plus_1_to_b_plus_2",
+    "side": "right",
+    "s": "131/1000",
+    "segment": [
+      "77012269869328577328798713043229408727/590295810358705651712000000000000000000",
+      "133/1000"
+    ],
+    "compressed_j": 57,
+    "local": [
+      {
+        "family": "F2",
+        "contact": 57,
+        "gamma": null,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 56,
+        "gamma": -1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 57,
+        "gamma": 1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_58"
+      }
+    ],
+    "passes": [],
+    "full_catalogue_passes": [],
+    "status_counts": {
+      "primal_infeasible": 895,
+      "reduced_cost_infeasible": 53,
+      "active_dual_infeasible": 1
+    },
+    "candidate_count": 949,
+    "elapsed": 12.275156736373901
+  },
+  {
+    "M": 324,
+    "b": 56,
+    "cell_phase": "b_plus_1_to_b_plus_2",
+    "side": "right",
+    "s": "131/1000",
+    "segment": [
+      "61520290010736914550294951306584759961/472236648286964521369600000000000000000",
+      "133/1000"
+    ],
+    "compressed_j": 58,
+    "local": [
+      {
+        "family": "F2",
+        "contact": 58,
+        "gamma": null,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 57,
+        "gamma": -1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 58,
+        "gamma": 1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_59"
+      }
+    ],
+    "passes": [],
+    "full_catalogue_passes": [],
+    "status_counts": {
+      "primal_infeasible": 912,
+      "reduced_cost_infeasible": 54,
+      "active_dual_infeasible": 1
+    },
+    "candidate_count": 967,
+    "elapsed": 12.894284963607788
+  }
+]

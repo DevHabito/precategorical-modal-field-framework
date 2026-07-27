@@ -1,0 +1,163 @@
+{
+  "audit": "A103_EXACT_ENDPOINT_RELEASED_CONTINUUM_SEGMENT_ATLAS",
+  "evidence_class": "exact sparse rational-function KKT reduction, exact rational interval arithmetic, exact algebraic root brackets, and exact outside counterexamples",
+  "scope": {
+    "source_segment_count": 76,
+    "maximum_range": [
+      125,
+      520
+    ],
+    "source_segments": "A95 exact rational inner phase segments corresponding to the 76 A97 endpoint-released strict witnesses",
+    "tested_family": "P={j-1,j,M}, Q={1,h,h+1}, alpha+ and beta- active, gamma inactive",
+    "symbolic_method": "exact Sherman-Morrison rank-one alpha-row update around s=1/8",
+    "claim": "complete exact classification of the strict KKT component containing each of the 76 rational witnesses inside its declared rational source segment",
+    "explicit_nonclaim": "not a lift theorem for the other 987 A102 witnesses, not an all-cell theorem, not an all-M theorem, and not a physical claim"
+  },
+  "continuum_atlas": {
+    "record_count": 76,
+    "unique_key_count": 76,
+    "status_counts": {
+      "proper_strict_subcomponent": 51,
+      "full_segment_coverage": 25
+    },
+    "phase_status_counts": {
+      "b_plus_1_to_b_plus_2::proper_strict_subcomponent": 46,
+      "b_plus_2_to_b_plus_3::full_segment_coverage": 11,
+      "unique_b_plus_2::proper_strict_subcomponent": 5,
+      "unique_b_plus_3::full_segment_coverage": 14
+    },
+    "condition_count": 54944,
+    "numerator_plus_denominator_count": 55020,
+    "selected_boundary_count": 55,
+    "left_boundary_counts": {
+      "None": 72,
+      "inactive_slack_gamma_-1": 4
+    },
+    "right_boundary_counts": {
+      "basic_p_{j-1}": 49,
+      "None": 25,
+      "reduced_cost_q_0": 2
+    },
+    "outside_counterexample_count": 55,
+    "core_failure_count": 0,
+    "root_failure_count": 0,
+    "hull_failure_count": 0
+  },
+  "structural_result": {
+    "full_segment_classes": [
+      {
+        "compressed_phase": "unique_b_plus_3",
+        "segment_count": 14
+      },
+      {
+        "compressed_phase": "b_plus_2_to_b_plus_3",
+        "phase_side": "right",
+        "segment_count": 11
+      }
+    ],
+    "partial_segment_classes": [
+      {
+        "compressed_phase": "b_plus_1_to_b_plus_2",
+        "phase_side": "right",
+        "segment_count": 46
+      },
+      {
+        "compressed_phase": "unique_b_plus_2",
+        "segment_count": 5
+      }
+    ],
+    "boundary_mechanisms": {
+      "lower_gamma_minus_slack_entry": 4,
+      "upper_p_lower_mass_exit": 49,
+      "upper_q0_reduced_cost_entry": 2
+    },
+    "interpretation": "the endpoint-released family is continuously valid on all 76 witness-containing components, but only 25 cover their complete A95 rational source segment; 51 encounter exact internal KKT boundaries"
+  },
+  "provenance": {
+    "chunk_count": 5,
+    "chunks": [
+      {
+        "file": "provenance/a103_continuum_atlas/a103_chunk_000_016.json",
+        "sha256": "30b8a870ff50900dc1c9eabb114bc2eec031e01cea1b140c252e0989f263c964",
+        "record_count": 16,
+        "source_record_slice": [
+          0,
+          16
+        ]
+      },
+      {
+        "file": "provenance/a103_continuum_atlas/a103_chunk_016_032.json",
+        "sha256": "7e81316bdd0bce0e53409826f84175a761c0c0afe004adea85f7f333963301c2",
+        "record_count": 16,
+        "source_record_slice": [
+          16,
+          32
+        ]
+      },
+      {
+        "file": "provenance/a103_continuum_atlas/a103_chunk_032_048.json",
+        "sha256": "8d1f7b96aaf0b6ba4eaadbfc9a2fea7103f9934158154de3a452a39c63df00c4",
+        "record_count": 16,
+        "source_record_slice": [
+          32,
+          48
+        ]
+      },
+      {
+        "file": "provenance/a103_continuum_atlas/a103_chunk_048_064.json",
+        "sha256": "85e6ecdc498363453d1c315acbd973fb9910d83087333bdda9f40f5c49121532",
+        "record_count": 16,
+        "source_record_slice": [
+          48,
+          64
+        ]
+      },
+      {
+        "file": "provenance/a103_continuum_atlas/a103_chunk_064_076.json",
+        "sha256": "4769d996d49eb523e49d90b6cb4082ee5b7b4cf9c865cd8f55b25f451f834762",
+        "record_count": 12,
+        "source_record_slice": [
+          64,
+          76
+        ]
+      }
+    ],
+    "source_hashes": {
+      "A95_result": "005aefe165635744e57f78e49189cbf7acbe19c57c9080aaeeb967ec77e35b3a",
+      "A95_catalogue": "326edd554a3e4b0b3a74e2f985aef462c826910d5f708cefa1cfe5d011e96b85",
+      "A97_result": "974cfdc39b4f5b9951601a6c26e43bc3f4b59dc8882cc7a31caea88e680d9f79",
+      "A97_catalogue": "ddc65d33830f8fafb8253253e65b7d65876dc15369df0bf2edf7b5e75e8a1707",
+      "A102_result": "a502b5a44362834454806ec11359055057fec0ab786d55fbd35f4b56060e80af"
+    }
+  },
+  "gates": {
+    "A95_rational_witness_source_present_and_passed": true,
+    "A97_76_endpoint_released_witness_source_present_and_passed": true,
+    "A102_complete_witness_atlas_source_present_and_passed": true,
+    "chunk_provenance_is_present": true,
+    "chunk_records_cover_exactly_76_source_segments": true,
+    "all_76_keys_are_unique": true,
+    "no_source_segment_is_missing_or_extra": true,
+    "exact_KKT_condition_count_is_54944": true,
+    "exact_numerator_plus_denominator_count_is_55020": true,
+    "classification_is_25_full_and_51_partial_with_zero_unresolved": true,
+    "all_14_unique_b_plus_3_segments_have_full_coverage": true,
+    "all_11_b_plus_2_to_b_plus_3_right_segments_have_full_coverage": true,
+    "all_46_b_plus_1_to_b_plus_2_right_segments_are_partial": true,
+    "all_5_unique_b_plus_2_segments_are_partial": true,
+    "exactly_four_lower_boundaries_are_gamma_minus_slack_roots": true,
+    "right_boundaries_are_49_p_lower_mass_roots_and_two_q0_reduced_cost_roots": true,
+    "all_55_selected_algebraic_boundaries_are_locally_unique_and_simple": true,
+    "all_55020_core_polynomial_certificates_pass": true,
+    "all_nonselected_conditions_pass_on_complete_boundary_hulls": true,
+    "all_51_partial_segments_have_exact_negative_outside_counterexamples": true,
+    "every_certified_component_contains_its_A95_witness": true,
+    "no_denominator_or_KKT_condition_failure_remains": true,
+    "formal_contract_and_nonphysical_scope_are_preserved": true
+  },
+  "gate_count": 23,
+  "pass_count": 23,
+  "fail_count": 0,
+  "failed_gates": [],
+  "verdict": "PASS_EXACT_CONTINUUM_CLASSIFICATION_OF_76_ENDPOINT_RELEASED_SEGMENTS_WITH_25_FULL_AND_51_PARTIAL_COMPONENTS"
+}

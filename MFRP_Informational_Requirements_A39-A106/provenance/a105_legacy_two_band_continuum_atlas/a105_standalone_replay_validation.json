@@ -1,0 +1,306 @@
+{
+  "verdict": "PASS_FULL_40_RECORD_EXACT_STANDALONE_REPLAY_MATCH",
+  "record_count": 40,
+  "comparison_count": 43,
+  "all_equal": true,
+  "comparisons": [
+    {
+      "record_index": 0,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_000.json",
+      "integrated_sha256": "3c4dd29307569715861cc9bd5e5144b342d058b994673fce7dc49c10959eadfb",
+      "standalone_sha256": "3c4dd29307569715861cc9bd5e5144b342d058b994673fce7dc49c10959eadfb",
+      "equal": true
+    },
+    {
+      "record_index": 1,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_001.json",
+      "integrated_sha256": "83e3773d422f7d547230393a304a03c8a464f21daa4851e2556a2417a22b343d",
+      "standalone_sha256": "83e3773d422f7d547230393a304a03c8a464f21daa4851e2556a2417a22b343d",
+      "equal": true
+    },
+    {
+      "record_index": 2,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_002.json",
+      "integrated_sha256": "eb60aa06eab61022c96869d8021e241075476a053aed48a449375ab7c6e68cdd",
+      "standalone_sha256": "eb60aa06eab61022c96869d8021e241075476a053aed48a449375ab7c6e68cdd",
+      "equal": true
+    },
+    {
+      "record_index": 3,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_003.json",
+      "integrated_sha256": "98bdeca0e47a9359dc9b382f626a43b8ac7343df30018815067b82a8bbb53e45",
+      "standalone_sha256": "98bdeca0e47a9359dc9b382f626a43b8ac7343df30018815067b82a8bbb53e45",
+      "equal": true
+    },
+    {
+      "record_index": 4,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_004.json",
+      "integrated_sha256": "e977dca0bc50f89f76be03e003df1fa0604d79d7b2c39c536231488dc0ed3b2e",
+      "standalone_sha256": "e977dca0bc50f89f76be03e003df1fa0604d79d7b2c39c536231488dc0ed3b2e",
+      "equal": true
+    },
+    {
+      "record_index": 5,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_005.json",
+      "integrated_sha256": "cc129b4e60a01245e17cd22138f89f084eae1dc29cc724d50b9134b154f487b5",
+      "standalone_sha256": "cc129b4e60a01245e17cd22138f89f084eae1dc29cc724d50b9134b154f487b5",
+      "equal": true
+    },
+    {
+      "record_index": 6,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_006.json",
+      "integrated_sha256": "4a2f6531972c0ee40d73d548916ed9a1253b876dcab188720a9e63e42d196815",
+      "standalone_sha256": "4a2f6531972c0ee40d73d548916ed9a1253b876dcab188720a9e63e42d196815",
+      "equal": true
+    },
+    {
+      "record_index": 7,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_007.json",
+      "integrated_sha256": "c848cf3d737c4252085aec13f2fd1517c6a39b3f16933271c87fd0186fa43941",
+      "standalone_sha256": "c848cf3d737c4252085aec13f2fd1517c6a39b3f16933271c87fd0186fa43941",
+      "equal": true
+    },
+    {
+      "record_index": 8,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_008.json",
+      "integrated_sha256": "f0932c08bde1e35b634ab5d4aeddda48875936e501c9b4f20dd7a88b9f392d00",
+      "standalone_sha256": "f0932c08bde1e35b634ab5d4aeddda48875936e501c9b4f20dd7a88b9f392d00",
+      "equal": true
+    },
+    {
+      "record_index": 9,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_009.json",
+      "integrated_sha256": "d9240ede38c8e29ad7da7b351bbe0a214f3150c4d38ea6fcee52cffc10a57f75",
+      "standalone_sha256": "d9240ede38c8e29ad7da7b351bbe0a214f3150c4d38ea6fcee52cffc10a57f75",
+      "equal": true
+    },
+    {
+      "record_index": 10,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_010.json",
+      "integrated_sha256": "56df448892464206232e633a2b41cf6aaf131d7595f2551b76f6e2d4f9015531",
+      "standalone_sha256": "56df448892464206232e633a2b41cf6aaf131d7595f2551b76f6e2d4f9015531",
+      "equal": true
+    },
+    {
+      "record_index": 11,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_011.json",
+      "integrated_sha256": "8b2e368ca9940b79640857289b8ec3d7cc1d67fa4a31273beafffb41457528c5",
+      "standalone_sha256": "8b2e368ca9940b79640857289b8ec3d7cc1d67fa4a31273beafffb41457528c5",
+      "equal": true
+    },
+    {
+      "record_index": 12,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_012.json",
+      "integrated_sha256": "b3af05a67c2c17ed15ab9ab6072c8594855d44ba7d8da5be5650a5371e007bbe",
+      "standalone_sha256": "b3af05a67c2c17ed15ab9ab6072c8594855d44ba7d8da5be5650a5371e007bbe",
+      "equal": true
+    },
+    {
+      "record_index": 13,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_013.json",
+      "integrated_sha256": "0c1367f3de2cf08d1e1c2a16ed501116f82afd4198deca9fce4558d8e40ebc30",
+      "standalone_sha256": "0c1367f3de2cf08d1e1c2a16ed501116f82afd4198deca9fce4558d8e40ebc30",
+      "equal": true
+    },
+    {
+      "record_index": 14,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_014.json",
+      "integrated_sha256": "c78a056edd61d358627d482c236c3057122ca1f8b8d393eb0464c2d83b3df396",
+      "standalone_sha256": "c78a056edd61d358627d482c236c3057122ca1f8b8d393eb0464c2d83b3df396",
+      "equal": true
+    },
+    {
+      "record_index": 15,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_015.json",
+      "integrated_sha256": "4ab11e0672d4841543d5fcc92cd9d24c4a4be1b60c1395abbc4fc32633a0368e",
+      "standalone_sha256": "4ab11e0672d4841543d5fcc92cd9d24c4a4be1b60c1395abbc4fc32633a0368e",
+      "equal": true
+    },
+    {
+      "record_index": 16,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_016.json",
+      "integrated_sha256": "7bb6762e5f75e377939b8948e0b9e3ce6a8ffccac5fc57269d49a58e3876e898",
+      "standalone_sha256": "7bb6762e5f75e377939b8948e0b9e3ce6a8ffccac5fc57269d49a58e3876e898",
+      "equal": true
+    },
+    {
+      "record_index": 17,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_017.json",
+      "integrated_sha256": "fa54d261d20d72a9753ecc77087949c2759c8b00d8d0ac61f9800d11af298dc0",
+      "standalone_sha256": "fa54d261d20d72a9753ecc77087949c2759c8b00d8d0ac61f9800d11af298dc0",
+      "equal": true
+    },
+    {
+      "record_index": 18,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_018.json",
+      "integrated_sha256": "a49ad91cbf2312d8b215889233f0b76cd41b3209bc577964ea8c12844051b7ad",
+      "standalone_sha256": "a49ad91cbf2312d8b215889233f0b76cd41b3209bc577964ea8c12844051b7ad",
+      "equal": true
+    },
+    {
+      "record_index": 19,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_019.json",
+      "integrated_sha256": "ed54690ceb7b99b1cb7bef7b527fdd36fd1fa40e949c156878cd281a1024a031",
+      "standalone_sha256": "ed54690ceb7b99b1cb7bef7b527fdd36fd1fa40e949c156878cd281a1024a031",
+      "equal": true
+    },
+    {
+      "record_index": 20,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_020.json",
+      "integrated_sha256": "1a21bb8a558272d2b5fbe0f56251e6994e3734bea7aa4363ef56b1c53f919762",
+      "standalone_sha256": "1a21bb8a558272d2b5fbe0f56251e6994e3734bea7aa4363ef56b1c53f919762",
+      "equal": true
+    },
+    {
+      "record_index": 21,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_021.json",
+      "integrated_sha256": "bb0786e4563e8d22f58eb3af885dfb63108fb049fbd978c730fe193ad6eadd6b",
+      "standalone_sha256": "bb0786e4563e8d22f58eb3af885dfb63108fb049fbd978c730fe193ad6eadd6b",
+      "equal": true
+    },
+    {
+      "record_index": 22,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_022.json",
+      "integrated_sha256": "92bce7ed19c7bbc278657d29e6a0dc33a7d0969cbc25feb1967a04e93eacad81",
+      "standalone_sha256": "92bce7ed19c7bbc278657d29e6a0dc33a7d0969cbc25feb1967a04e93eacad81",
+      "equal": true
+    },
+    {
+      "record_index": 23,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_023.json",
+      "integrated_sha256": "e5881ba55ef5aef6eab0d266d58564aa15efc79daa9838806f870bf2fa834d62",
+      "standalone_sha256": "e5881ba55ef5aef6eab0d266d58564aa15efc79daa9838806f870bf2fa834d62",
+      "equal": true
+    },
+    {
+      "record_index": 24,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_024.json",
+      "integrated_sha256": "fdf23fda57dfb6dda143f26df23795219f5086c9a3e5645f8bfd1697f671e024",
+      "standalone_sha256": "fdf23fda57dfb6dda143f26df23795219f5086c9a3e5645f8bfd1697f671e024",
+      "equal": true
+    },
+    {
+      "record_index": 25,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_025.json",
+      "integrated_sha256": "fe88262de5d44dbe4b47be494c20f3b21ea81ad7c9e798e3ed29d9ba2fb58588",
+      "standalone_sha256": "fe88262de5d44dbe4b47be494c20f3b21ea81ad7c9e798e3ed29d9ba2fb58588",
+      "equal": true
+    },
+    {
+      "record_index": 26,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_026.json",
+      "integrated_sha256": "4ffd0c60450464ab01df451b3f8f5aefc8043e2d7ddb0b4147c99dcba5ce6c98",
+      "standalone_sha256": "4ffd0c60450464ab01df451b3f8f5aefc8043e2d7ddb0b4147c99dcba5ce6c98",
+      "equal": true
+    },
+    {
+      "record_index": 27,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_027.json",
+      "integrated_sha256": "c474d522aaa66c674be5cf5c1a23eb89c3fb5e4de106b4229b13e1bf7bce23c8",
+      "standalone_sha256": "c474d522aaa66c674be5cf5c1a23eb89c3fb5e4de106b4229b13e1bf7bce23c8",
+      "equal": true
+    },
+    {
+      "record_index": 28,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_028.json",
+      "integrated_sha256": "e738c59dbae01c06bb4fc6b478f7a051be2bf141b1a48bd9bde418329f42dde9",
+      "standalone_sha256": "e738c59dbae01c06bb4fc6b478f7a051be2bf141b1a48bd9bde418329f42dde9",
+      "equal": true
+    },
+    {
+      "record_index": 29,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_029.json",
+      "integrated_sha256": "a98101fead07c7a042ab2dac04766acfce2b4d1cebab7590be3516440a6c5c95",
+      "standalone_sha256": "a98101fead07c7a042ab2dac04766acfce2b4d1cebab7590be3516440a6c5c95",
+      "equal": true
+    },
+    {
+      "record_index": 30,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_030.json",
+      "integrated_sha256": "0ffb37c1411f99f3d47ce34f24290c0722667789aceeb020526a8f0d46fd60d8",
+      "standalone_sha256": "0ffb37c1411f99f3d47ce34f24290c0722667789aceeb020526a8f0d46fd60d8",
+      "equal": true
+    },
+    {
+      "record_index": 31,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_031.json",
+      "integrated_sha256": "392807c4498893acfc316c6a7ed275b4a24bfd7fad7ebea193e6baa859973e21",
+      "standalone_sha256": "392807c4498893acfc316c6a7ed275b4a24bfd7fad7ebea193e6baa859973e21",
+      "equal": true
+    },
+    {
+      "record_index": 32,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_032.json",
+      "integrated_sha256": "af78a6d6bac1f5c0e1037e614834b9e6b596f7cb9cada650753385e9d46d0308",
+      "standalone_sha256": "af78a6d6bac1f5c0e1037e614834b9e6b596f7cb9cada650753385e9d46d0308",
+      "equal": true
+    },
+    {
+      "record_index": 33,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_033.json",
+      "integrated_sha256": "0784972776360f8346dc271a4858ff73afe87d7c574308cf8e90f729a3893bb4",
+      "standalone_sha256": "0784972776360f8346dc271a4858ff73afe87d7c574308cf8e90f729a3893bb4",
+      "equal": true
+    },
+    {
+      "record_index": 34,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_034.json",
+      "integrated_sha256": "4cddcdf190d98f251462b32b6e1d96d27ad989976a9c44e9dd14caba2ce60c49",
+      "standalone_sha256": "4cddcdf190d98f251462b32b6e1d96d27ad989976a9c44e9dd14caba2ce60c49",
+      "equal": true
+    },
+    {
+      "record_index": 35,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_035.json",
+      "integrated_sha256": "d34bf47c3090b8ef3aefc941b53c66db08c5c152547f7b00dad5ae9d8fde184e",
+      "standalone_sha256": "d34bf47c3090b8ef3aefc941b53c66db08c5c152547f7b00dad5ae9d8fde184e",
+      "equal": true
+    },
+    {
+      "record_index": 36,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_036.json",
+      "integrated_sha256": "f09570335fa4db9909853c19e8ab66a182324416f012bbe322952b97c14f85af",
+      "standalone_sha256": "f09570335fa4db9909853c19e8ab66a182324416f012bbe322952b97c14f85af",
+      "equal": true
+    },
+    {
+      "record_index": 37,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_037.json",
+      "integrated_sha256": "eebe678896351a45dd88a852043d12cb9ee5f480eec3e82b159bbff8940253a0",
+      "standalone_sha256": "eebe678896351a45dd88a852043d12cb9ee5f480eec3e82b159bbff8940253a0",
+      "equal": true
+    },
+    {
+      "record_index": 38,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_038.json",
+      "integrated_sha256": "61bf91f72c943183f05fbe37e85f9cfd184432a206ddfd376d614a7636929bf2",
+      "standalone_sha256": "61bf91f72c943183f05fbe37e85f9cfd184432a206ddfd376d614a7636929bf2",
+      "equal": true
+    },
+    {
+      "record_index": 39,
+      "relative_path": "provenance/a105_legacy_two_band_continuum_atlas/records/a105_record_039.json",
+      "integrated_sha256": "aa7d7666fa3bb688972d06b549b3d286b38e74e0df31d93363336fb617bbea13",
+      "standalone_sha256": "aa7d7666fa3bb688972d06b549b3d286b38e74e0df31d93363336fb617bbea13",
+      "equal": true
+    },
+    {
+      "relative_path": "results/a105_legacy_two_band_continuum_segment_results.json",
+      "integrated_sha256": "76acc4f7d55d8a15a56a7d7f1c5dbca443c10d1a6f0254875f8e368eacd1533c",
+      "standalone_sha256": "76acc4f7d55d8a15a56a7d7f1c5dbca443c10d1a6f0254875f8e368eacd1533c",
+      "equal": true
+    },
+    {
+      "relative_path": "results/a105_legacy_two_band_continuum_segment_catalogue.json",
+      "integrated_sha256": "bbb9f2c6afd139a9774ce613d2cb7e95b9761e3a0acdd448888fa20aece6024d",
+      "standalone_sha256": "bbb9f2c6afd139a9774ce613d2cb7e95b9761e3a0acdd448888fa20aece6024d",
+      "equal": true
+    },
+    {
+      "relative_path": "figures/a105_legacy_two_band_continuum_segment_atlas.png",
+      "integrated_sha256": "9a2eb9a74569d2be0c5897d59a5db06d1a2e1d463a9f19d6332e1b55c2fb2a63",
+      "standalone_sha256": "9a2eb9a74569d2be0c5897d59a5db06d1a2e1d463a9f19d6332e1b55c2fb2a63",
+      "equal": true
+    }
+  ]
+}

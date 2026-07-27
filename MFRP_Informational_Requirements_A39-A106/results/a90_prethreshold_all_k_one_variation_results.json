@@ -1,0 +1,778 @@
+{
+  "audit": "A90_EXACT_PRETHRESHOLD_ALL_K_ONE_VARIATION",
+  "contract": {
+    "maximum_range": [
+      10,
+      520
+    ],
+    "probe_interval": [
+      "129/1000",
+      "133/1000"
+    ],
+    "exact_probes": [
+      {
+        "index": 0,
+        "name": "local_0",
+        "value": "129/1000"
+      },
+      {
+        "index": 1,
+        "name": "local_1",
+        "value": "259/2000"
+      },
+      {
+        "index": 2,
+        "name": "local_2",
+        "value": "13/100"
+      },
+      {
+        "index": 3,
+        "name": "local_3",
+        "value": "261/2000"
+      },
+      {
+        "index": 4,
+        "name": "local_4",
+        "value": "131/1000"
+      },
+      {
+        "index": 5,
+        "name": "local_5",
+        "value": "263/2000"
+      },
+      {
+        "index": 6,
+        "name": "local_6",
+        "value": "33/250"
+      },
+      {
+        "index": 7,
+        "name": "local_7",
+        "value": "53/400"
+      },
+      {
+        "index": 8,
+        "name": "local_8",
+        "value": "133/1000"
+      }
+    ],
+    "adjacent_contact_rule": "2 <= k <= floor(M/2)-2",
+    "base_contact": "b=ceil(M c(s)), c(s)=log(2)/(-2 log(s)) evaluated by exact integer comparisons"
+  },
+  "exact_integer_scaling": {
+    "identity": "sign(E_(M,k)(s)) = sign(sum_i C_i (D r_i)^k, with the declared affine k multipliers), where C_i=L c_i, L=lcm coefficient denominators, and D=lcm node denominators",
+    "reason": "L*D^k is strictly positive",
+    "floating_point_used_for_gates": false,
+    "regression_count": 45,
+    "all_regressions_exact": true
+  },
+  "finite_exact_all_k_result": {
+    "support_count": 511,
+    "probe_count": 9,
+    "support_probe_sequence_count": 4599,
+    "adjacent_factor_evaluation_count": 594423,
+    "strict_one_variation_sequence_count": 4599,
+    "zero_factor_count": 0,
+    "statement": "At every declared (M,s) cell, the complete adjacent sequence is strictly +,...,+,-,...,- and has one maximizing compressed contact."
+  },
+  "contact_strip_result": {
+    "offset_definition": "k_star-ceil(M c(s))",
+    "offset_counts": {
+      "0": 9,
+      "1": 1207,
+      "2": 3368,
+      "3": 15
+    },
+    "offset_counts_by_probe": {
+      "0": {
+        "0": 1,
+        "1": 65,
+        "2": 431,
+        "3": 14
+      },
+      "1": {
+        "0": 1,
+        "1": 82,
+        "2": 427,
+        "3": 1
+      },
+      "2": {
+        "0": 1,
+        "1": 100,
+        "2": 410
+      },
+      "3": {
+        "0": 1,
+        "1": 116,
+        "2": 394
+      },
+      "4": {
+        "0": 1,
+        "1": 139,
+        "2": 371
+      },
+      "5": {
+        "0": 1,
+        "1": 153,
+        "2": 357
+      },
+      "6": {
+        "0": 1,
+        "1": 168,
+        "2": 342
+      },
+      "7": {
+        "0": 1,
+        "1": 185,
+        "2": 325
+      },
+      "8": {
+        "0": 1,
+        "1": 199,
+        "2": 311
+      }
+    },
+    "finite_exact_strip": "k_star belongs to {ceil(Mc), ceil(Mc)+1, ceil(Mc)+2, ceil(Mc)+3} on the declared finite grid",
+    "A86_three_contact_extension_status": "falsified beyond the original M<=300 scope",
+    "offset_three_count": 15,
+    "first_offset_three_case": {
+      "maximum": 325,
+      "probe_index": 0,
+      "probe_name": "local_0",
+      "probe": "129/1000",
+      "adjacent_factor_count": 159,
+      "first_sign": 1,
+      "last_sign": -1,
+      "zero_count": 0,
+      "sign_transition_count": 1,
+      "strict_one_variation": true,
+      "base_contact_ceil_Mc": 55,
+      "maximizing_contact": 58,
+      "ceil_offset": 3
+    },
+    "offset_three_cases": [
+      {
+        "maximum": 325,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 159,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 55,
+        "maximizing_contact": 58,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 372,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 183,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 63,
+        "maximizing_contact": 66,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 378,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 186,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 64,
+        "maximizing_contact": 67,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 384,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 189,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 65,
+        "maximizing_contact": 68,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 390,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 192,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 66,
+        "maximizing_contact": 69,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 443,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 218,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 75,
+        "maximizing_contact": 78,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 449,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 221,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 76,
+        "maximizing_contact": 79,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 455,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 224,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 77,
+        "maximizing_contact": 80,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 460,
+        "probe_index": 1,
+        "probe_name": "local_1",
+        "probe": "259/2000",
+        "adjacent_factor_count": 227,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 78,
+        "maximizing_contact": 81,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 490,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 242,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 83,
+        "maximizing_contact": 86,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 496,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 245,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 84,
+        "maximizing_contact": 87,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 502,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 248,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 85,
+        "maximizing_contact": 88,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 508,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 251,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 86,
+        "maximizing_contact": 89,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 514,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 254,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 87,
+        "maximizing_contact": 90,
+        "ceil_offset": 3
+      },
+      {
+        "maximum": 520,
+        "probe_index": 0,
+        "probe_name": "local_0",
+        "probe": "129/1000",
+        "adjacent_factor_count": 257,
+        "first_sign": 1,
+        "last_sign": -1,
+        "zero_count": 0,
+        "sign_transition_count": 1,
+        "strict_one_variation": true,
+        "base_contact_ceil_Mc": 88,
+        "maximizing_contact": 91,
+        "ceil_offset": 3
+      }
+    ]
+  },
+  "relation_to_A89": {
+    "A89_result": "uniform continuum positivity of one local secant for every M>=521",
+    "A90_result": "finite exact complete all-k one-variation at nine probes for M<=520",
+    "nonimplication": "The two results do not combine into an all-M continuum proof of global all-k unimodality, because A90 is probe-discrete and A89 controls only one local secant."
+  },
+  "scaling_regression": [
+    {
+      "maximum": 12,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 12,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 3,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 12,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 4,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 12,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 12,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 3,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 12,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 4,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 12,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 12,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 3,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 12,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 4,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 300,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 300,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 75,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 300,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 148,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 300,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 300,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 75,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 300,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 148,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 300,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 300,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 75,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 300,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 148,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 325,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 325,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 81,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 325,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 160,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 325,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 325,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 81,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 325,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 160,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 325,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 325,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 81,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 325,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 160,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 460,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 460,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 115,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 460,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 228,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 460,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 460,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 115,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 460,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 228,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 460,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 460,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 115,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 460,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 228,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 520,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 520,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 130,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 520,
+      "probe_index": 0,
+      "probe": "129/1000",
+      "contact": 258,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 520,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 520,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 130,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 520,
+      "probe_index": 4,
+      "probe": "131/1000",
+      "contact": 258,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 520,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 2,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 520,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 130,
+      "identity_exact": true,
+      "sign_match": true
+    },
+    {
+      "maximum": 520,
+      "probe_index": 8,
+      "probe": "133/1000",
+      "contact": 258,
+      "identity_exact": true,
+      "sign_match": true
+    }
+  ],
+  "gates": {
+    "A89_threshold_is_521_and_A90_stops_at_520": true,
+    "support_count_exact": true,
+    "probe_count_exact": true,
+    "support_probe_sequence_count_exact": true,
+    "adjacent_factor_evaluation_count_exact": true,
+    "all_integer_scaled_values_are_nonzero": true,
+    "all_sequences_have_strict_one_positive_to_negative_variation": true,
+    "all_sequence_records_have_endpoint_signs_plus_minus": true,
+    "integer_scaling_identity_regression_count_exact": true,
+    "integer_scaling_identity_exact_in_all_regressions": true,
+    "complete_offset_census_exact": true,
+    "finite_four_contact_strip_holds": true,
+    "A86_original_three_contact_scope_reproduced": true,
+    "three_contact_extension_has_exactly_15_counterexamples": true,
+    "three_contact_extension_counterexample_list_exact": true,
+    "first_three_contact_extension_failure_is_M325_at_lower_probe": true,
+    "claim_boundary_preserved": true
+  },
+  "gate_count": 17,
+  "pass_count": 17,
+  "verdict": "PASS_EXACT_PRETHRESHOLD_NINE_PROBE_ALL_K_ONE_VARIATION_AND_FOUR_CONTACT_STRIP",
+  "claim_boundary": [
+    "The one-variation result is exact but finite: 10<=M<=520 at nine rational probes only.",
+    "A90 does not certify every real s between the probes.",
+    "A90 does not prove global all-k unimodality for M>=521; A89 proves only the required local secant there.",
+    "The four-contact strip is a finite-grid theorem, not an all-M theorem or exact rounding law.",
+    "The fifteen offset-three records falsify only an extension of A86 beyond its declared M<=300 scope; they do not contradict A86.",
+    "Compressed-objective selection is not by itself a physical law or a full KKT feasibility theorem for arbitrary contracts."
+  ]
+}

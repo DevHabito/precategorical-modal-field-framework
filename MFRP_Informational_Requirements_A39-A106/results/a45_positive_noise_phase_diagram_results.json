@@ -1,0 +1,327 @@
+{
+  "audit": "A45_PROVISIONAL_COMPLETE_POSITIVE_NOISE_PHASE_DIAGRAM",
+  "contract": {
+    "support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mean": "5/2",
+    "epsilon": "1/10000",
+    "design": "{2*log(2), 3*log(2), gamma*log(2)}",
+    "gamma_domain": "[3, infinity]",
+    "target": "direct future-Q minimax width, contraction a=1/2"
+  },
+  "transition_polynomials": [
+    "53268160*r**4 + 13317040*r**3 - 200908865*r**2 + 148890794*r - 14639747",
+    "35156096*r**4 + 8789024*r**3 - 132490502*r**2 + 98061088*r - 9569361",
+    "334069952*r**4 - 455233544*r**3 - 113808386*r**2 + 257741432*r - 23297331",
+    "1838752*r**4 - 4611812*r**3 + 3732866*r**2 - 989812*r + 33387"
+  ],
+  "transition_table": [
+    {
+      "transition": 0,
+      "root_object": "CRootOf(53268160*x**4 + 13317040*x**3 - 200908865*x**2 + 148890794*x - 14639747, 1)",
+      "r_decimal": "0.1164017845135463519094626866484457616868",
+      "gamma_decimal": "3.102814919037134692585166885039599421889",
+      "future_risk_decimal": "0.04344020875874140601004868278888584631570",
+      "isolating_interval": [
+        "5820089/50000000",
+        "11640179/100000000"
+      ]
+    },
+    {
+      "transition": 1,
+      "root_object": "CRootOf(35156096*x**4 + 8789024*x**3 - 132490502*x**2 + 98061088*x - 9569361, 1)",
+      "r_decimal": "0.1153671856788104487550515157951464797494",
+      "gamma_decimal": "3.115695163716007102038625719995393103154",
+      "future_risk_decimal": "0.04089094963947515391434328484033058721169",
+      "isolating_interval": [
+        "5768359/50000000",
+        "11536719/100000000"
+      ]
+    },
+    {
+      "transition": 2,
+      "root_object": "CRootOf(334069952*x**4 - 455233544*x**3 - 113808386*x**2 + 257741432*x - 23297331, 1)",
+      "r_decimal": "0.09589933142500932071107869546199653583648",
+      "gamma_decimal": "3.382335432437322233604250870100307606552",
+      "future_risk_decimal": "0.01827720337357260502635198975120426704739",
+      "isolating_interval": [
+        "9589933/100000000",
+        "4794967/50000000"
+      ]
+    },
+    {
+      "transition": 3,
+      "root_object": "CRootOf(1838752*x**4 - 4611812*x**3 + 3732866*x**2 - 989812*x + 33387, 0)",
+      "r_decimal": "0.03926824648345309780028268281227348085201",
+      "gamma_decimal": "4.670493013621933609843625041279623892916",
+      "future_risk_decimal": "0.01025129724585096245260620161850464901601",
+      "isolating_interval": [
+        "490853/12500000",
+        "157073/4000000"
+      ]
+    }
+  ],
+  "piecewise_ratios": {
+    "plateau": "337423987/317703750",
+    "phase_1": "(70436096*r**4 + 17609024*r**3 - 268968412*r**2 + 203255020*r - 22248967)/(38*(1847680*r**4 + 461920*r**3 - 7050770*r**2 + 5322512*r - 579431))",
+    "phase_2": "4*(2205000*r**4 + 356036071*r**3 - 763935114*r**2 + 450930647*r - 45228078)/(35131008*r**4 + 1352358784*r**3 - 2988326634*r**2 + 1779064448*r - 178236279)",
+    "phase_3": "(506059952*r**4 + 21367778*r**3 - 1700546319*r**2 + 1312566628*r - 139310888)/(5*(103603936*r**4 - 2543516*r**3 - 333277512*r**2 + 259744544*r - 27508489))",
+    "phase_4": "(4651509760*r**4 - 531817376*r**3 - 14091583756*r**2 + 11170302884*r - 1196703225)/(10*(480055456*r**4 - 94091636*r**3 - 1370377492*r**2 + 1102617752*r - 118061343))",
+    "infinity": "26593405/26235854"
+  },
+  "support_patterns": {
+    "plateau": {
+      "p": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "q": [
+        1,
+        3
+      ],
+      "third_constraint": "inactive"
+    },
+    "phase_1": {
+      "p": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "q": [
+        1,
+        2,
+        3
+      ]
+    },
+    "phase_2": {
+      "p": [
+        0,
+        2,
+        5
+      ],
+      "q": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "phase_3": {
+      "p": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "q": [
+        1,
+        2,
+        4
+      ]
+    },
+    "phase_4": {
+      "p": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "q": [
+        1,
+        2,
+        4
+      ]
+    }
+  },
+  "phase_audits": {
+    "phase_1": {
+      "gates": {
+        "normalization_symbolic": true,
+        "mean_symbolic": true,
+        "observational_differences_symbolic": true,
+        "primal_dual_objective_identity": true,
+        "all_primal_sign_certificates_pass": true,
+        "all_dual_sign_certificates_pass": true,
+        "all_reduced_cost_certificates_pass": true,
+        "ratio_derivative_positive_in_r": true
+      },
+      "derivative": "1946478*(r - 1)*(174080*r**4 - 307584*r**3 - 87232*r**2 + 359442*r - 166489)/(19*(1847680*r**4 + 461920*r**3 - 7050770*r**2 + 5322512*r - 579431)**2)",
+      "original_differences": [
+        "1/5000",
+        "-1/5000",
+        "1/5000"
+      ],
+      "sign_certificate_counts": {
+        "primal": 8,
+        "dual": 3,
+        "reduced_cost": 5
+      }
+    },
+    "phase_2": {
+      "gates": {
+        "normalization_symbolic": true,
+        "mean_symbolic": true,
+        "observational_differences_symbolic": true,
+        "primal_dual_objective_identity": true,
+        "all_primal_sign_certificates_pass": true,
+        "all_dual_sign_certificates_pass": true,
+        "all_reduced_cost_certificates_pass": true,
+        "ratio_derivative_positive_in_r": true
+      },
+      "derivative": "-1083846732*(r - 1)*(35156096*r**5 - 114300832*r**4 + 131468770*r**3 - 60313982*r**2 + 7753233*r + 337557)/(35131008*r**4 + 1352358784*r**3 - 2988326634*r**2 + 1779064448*r - 178236279)**2",
+      "original_differences": [
+        "1/5000",
+        "-1/5000",
+        "1/5000"
+      ],
+      "sign_certificate_counts": {
+        "primal": 8,
+        "dual": 3,
+        "reduced_cost": 5
+      }
+    },
+    "phase_3": {
+      "gates": {
+        "normalization_symbolic": true,
+        "mean_symbolic": true,
+        "observational_differences_symbolic": true,
+        "primal_dual_objective_identity": true,
+        "all_primal_sign_certificates_pass": true,
+        "all_dual_sign_certificates_pass": true,
+        "all_reduced_cost_certificates_pass": true,
+        "ratio_derivative_positive_in_r": true
+      },
+      "derivative": "-20115858*(r - 1)*(34807936*r**5 - 114823072*r**4 + 134423458*r**3 - 62697070*r**2 + 7745785*r + 780662)/(103603936*r**4 - 2543516*r**3 - 333277512*r**2 + 259744544*r - 27508489)**2",
+      "original_differences": [
+        "1/5000",
+        "-1/5000",
+        "1/5000"
+      ],
+      "sign_certificate_counts": {
+        "primal": 8,
+        "dual": 3,
+        "reduced_cost": 5
+      }
+    },
+    "phase_4": {
+      "gates": {
+        "normalization_symbolic": true,
+        "mean_symbolic": true,
+        "observational_differences_symbolic": true,
+        "primal_dual_objective_identity": true,
+        "all_primal_sign_certificates_pass": true,
+        "all_dual_sign_certificates_pass": true,
+        "all_reduced_cost_certificates_pass": true,
+        "ratio_derivative_positive_in_r": true
+      },
+      "derivative": "-433867842*(r - 1)*(210163456*r**5 - 689689792*r**4 + 805802972*r**3 - 381843564*r**2 + 55544031*r + 835807)/(5*(480055456*r**4 - 94091636*r**3 - 1370377492*r**2 + 1102617752*r - 118061343)**2)",
+      "original_differences": [
+        "1/5000",
+        "-1/5000",
+        "1/5000"
+      ],
+      "sign_certificate_counts": {
+        "primal": 8,
+        "dual": 3,
+        "reduced_cost": 5
+      }
+    }
+  },
+  "continuity_gates": {
+    "plateau_to_phase_1": true,
+    "phase_1_to_phase_2": true,
+    "phase_2_to_phase_3": true,
+    "phase_3_to_phase_4": true
+  },
+  "plateau": {
+    "third_difference": "(r - 1)**2*(213072640*r**3 + 426145280*r**2 - 177734580*r + 14857601)/1089270000",
+    "lower_certificate": {
+      "ok": true,
+      "identically_zero": false,
+      "midpoint_sign": "1",
+      "lower_sign": "1",
+      "upper_sign": "0",
+      "interior_numerator_root_count": 0,
+      "interior_denominator_root_count": 0
+    },
+    "upper_certificate": {
+      "ok": true,
+      "identically_zero": false,
+      "midpoint_sign": "1",
+      "lower_sign": "0",
+      "upper_sign": "1",
+      "interior_numerator_root_count": 0,
+      "interior_denominator_root_count": 0
+    }
+  },
+  "selected_integer_gamma_risks": [
+    {
+      "gamma": 3,
+      "ratio_exact": "337423987/317703750",
+      "future_risk_decimal": "0.043440208758741404"
+    },
+    {
+      "gamma": 4,
+      "ratio_exact": "1384952831/1362663390",
+      "future_risk_decimal": "0.0117038075340310608"
+    },
+    {
+      "gamma": 6,
+      "ratio_exact": "1828961429248/1804118444725",
+      "future_risk_decimal": "0.00986529623594514272"
+    },
+    {
+      "gamma": 10,
+      "ratio_exact": "2263558795360587104/2233113362221566575",
+      "future_risk_decimal": "0.00976814521137567456"
+    }
+  ],
+  "hard_cap_rule": {
+    "plateau_end_gamma_decimal": "3.102814919037134692585166885039599421889",
+    "if_cap_at_or_below_plateau_end": "all gamma in [3, cap] tie",
+    "if_cap_above_plateau_end": "unique minimizer gamma = cap"
+  },
+  "formal_results": [
+    "complete piecewise-rational direct-risk curve for epsilon=1/10000",
+    "four algebraic transition roots",
+    "five globally optimal active regimes",
+    "constant redundancy plateau followed by strict risk decrease in gamma",
+    "unique compactified minimizer gamma=infinity",
+    "exact finite hard-cap endpoint rule",
+    "endpoint reversal relative to exact-data minimum-separation design"
+  ],
+  "gates": {
+    "transition_0_unique_domain_root": true,
+    "transition_0_inside_declared_interval": true,
+    "transition_1_unique_domain_root": true,
+    "transition_1_inside_declared_interval": true,
+    "transition_2_unique_domain_root": true,
+    "transition_2_inside_declared_interval": true,
+    "transition_3_unique_domain_root": true,
+    "transition_3_inside_declared_interval": true,
+    "transition_roots_strictly_ordered": true,
+    "duplicate_ratio_matches_A44": true,
+    "duplicate_primal_dual_equal": true,
+    "duplicate_primal_positive": true,
+    "duplicate_dual_inequality_multipliers_nonnegative": true,
+    "duplicate_reduced_costs_nonnegative": true,
+    "plateau_lower_tolerance_certified": true,
+    "plateau_upper_tolerance_certified": true,
+    "all_phase_internal_gates_pass": true,
+    "all_adjacent_branches_continuous": true,
+    "phase_4_limit_matches_A44_infinity": true,
+    "global_curve_nonincreasing_in_gamma": true,
+    "compactified_infinity_strictly_below_plateau": true
+  },
+  "verdict": "PASS_COMPLETE_POSITIVE_NOISE_PHASE_DIAGRAM_AND_HARD_CAP_RULE",
+  "boundary": "The phase diagram is exact only under the declared finite support, exact mean, anchor pair, target, contraction, common absolute tolerance, and direct-ratio risk. No empirical error model, physical cost, or physical meaning of gamma is inferred."
+}

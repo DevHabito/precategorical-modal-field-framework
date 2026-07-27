@@ -48,6 +48,7 @@ Both exact counts are independently reproduced by exhaustive enumeration and clo
 - `docs/CORRECTIONS.md` — correction history;
 - `MFRP_Informational_Requirements_A39-A71/` — English computational audit archive for informational requirements A39-A71;
 - `MFRP_Informational_Requirements_A39-A77/` — expanded English computational audit archive for informational requirements A39-A77;
+- `MFRP_Informational_Requirements_A39-A106/` — expanded English computational audit archive for informational requirements A39-A106;
 - `tools/validate_protocols.py` — validates protocol structure, hashes, seeds, verdicts, gates, metrics, outputs, and claim IDs;
 - `MANIFEST.csv` and `SHA256SUMS.txt` — integrity and completeness records.
 

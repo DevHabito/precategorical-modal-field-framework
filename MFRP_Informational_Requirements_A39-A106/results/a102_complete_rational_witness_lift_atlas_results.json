@@ -1,0 +1,126 @@
+{
+  "audit": "A102_COMPLETE_EXACT_RATIONAL_WITNESS_LIFT_ATLAS",
+  "evidence_class": "exact database closure, full source-certificate validation, independent replay of all 83 post-A95 resolutions, and a stratified 100-record natural-lift replay",
+  "scope": {
+    "source_phase_segment_witness_count": 1063,
+    "maximum_range": [
+      14,
+      520
+    ],
+    "probe_interval": [
+      "129/1000",
+      "133/1000"
+    ],
+    "claim": "Every one of the 1,063 A95 exact rational phase-segment witnesses has exactly one assigned strict global finite-LP KKT certificate. A102 independently replays all 83 post-A95 resolutions and a deterministic stratified sample of 100 natural lifts.",
+    "explicit_nonclaim": "This is pointwise rational-witness closure. It is not a lift theorem on all A94 algebraic cells, not a theorem outside the frozen contract, and not a physical claim."
+  },
+  "complete_atlas": {
+    "witness_count": 1063,
+    "unique_key_count": 1063,
+    "broad_resolution_class_counts": {
+      "legacy_natural": 980,
+      "endpoint_released_gamma_inactive": 76,
+      "q0q1_gamma_inactive": 3,
+      "q0q1_gamma_active": 4
+    },
+    "detailed_resolution_class_counts": {
+      "legacy_three_band_gamma_plus": 922,
+      "legacy_three_band_gamma_minus": 18,
+      "legacy_two_band_compressed": 40,
+      "endpoint_released_gamma_inactive": 76,
+      "q0q1_gamma_inactive": 3,
+      "q0q1_gamma_active": 4
+    },
+    "resolver_audit_counts": {
+      "A95": 980,
+      "A97": 76,
+      "A98": 1,
+      "A100": 1,
+      "A101": 3,
+      "A99": 2
+    },
+    "total_exact_KKT_condition_count": 676847,
+    "architecture_exact_KKT_condition_totals": {
+      "legacy_natural": 615414,
+      "endpoint_released_gamma_inactive": 54944,
+      "q0q1_gamma_inactive": 2721,
+      "q0q1_gamma_active": 3768
+    },
+    "source_certificate_validation_failure_count": 0,
+    "independent_exact_replay_count": 183,
+    "natural_stratified_replay_count": 100,
+    "post_A95_obstruction_replay_count": 83,
+    "exact_replay_failure_count": 0,
+    "source_replay_mismatch_count": 0
+  },
+  "obstruction_closure": {
+    "A95_obstruction_count": 83,
+    "A97_endpoint_released_count": 76,
+    "A98_A99_q0q1_gamma_inactive_count": 3,
+    "A100_A101_q0q1_gamma_active_count": 4,
+    "unresolved_count": 0
+  },
+  "unrestricted_certificate_checks": {
+    "A98": {
+      "condition_count": 801,
+      "category_counts": {
+        "basic_variables": 7,
+        "active_dual_multipliers": 2,
+        "reduced_costs": 788,
+        "inactive_band_slacks": 4
+      },
+      "exact_positive_failure_count": 0,
+      "exact_positive_failures": [],
+      "primal_dual_equal": true,
+      "strict_global_KKT_pass": true
+    },
+    "A100": {
+      "condition_count": 895,
+      "category_counts": {
+        "basic_variables": 8,
+        "active_dual_multipliers": 3,
+        "reduced_costs": 881,
+        "inactive_band_slacks": 3
+      },
+      "exact_positive_failure_count": 0,
+      "exact_positive_failures": [],
+      "primal_dual_equal": true,
+      "strict_global_KKT_pass": true
+    }
+  },
+  "source_hash_manifest": "provenance/a102_complete_atlas/a102_source_certificate_hashes.json",
+  "catalogue": "results/a102_complete_rational_witness_lift_atlas_catalogue.json",
+  "interpretation": {
+    "positive_result": "The complete finite A95 rational-witness atlas is now closed: every one of its 1,063 phase-segment witnesses has one strict global finite-LP KKT certificate; all 83 post-A95 resolutions and a stratified 100-record natural subset were independently replayed in A102.",
+    "structural_result": "The 83 natural-lift obstructions require 76 endpoint-released bases, three q0/q1 gamma-inactive bases, and four q0/q1 gamma-active bases.",
+    "negative_boundary": "A102 does not prove that these bases persist across every algebraic cell; only A97, A99, and A101 establish interval persistence for three representative bases."
+  },
+  "gate_count": 23,
+  "pass_count": 23,
+  "gates": {
+    "all_A95_A97_A98_A99_A100_A101_source_verdicts_and_gates_pass": true,
+    "A95_source_contains_exactly_1063_phase_segment_witnesses": true,
+    "all_1063_A95_witness_keys_are_unique": true,
+    "A95_natural_and_obstruction_partition_is_980_plus_83": true,
+    "A97_catalogue_is_an_exact_key_match_to_all_83_A95_obstructions": true,
+    "A97_resolves_exactly_76_obstruction_keys": true,
+    "A97_leaves_exactly_seven_residual_keys": true,
+    "q0q1_gamma_inactive_resolution_set_contains_exactly_M396_M455_M496": true,
+    "q0q1_gamma_active_resolution_set_contains_exactly_M443_M449_M484_M490": true,
+    "the_three_post_A95_resolution_sets_are_disjoint_and_cover_all_83_obstructions": true,
+    "every_witness_receives_exactly_one_resolution_route": true,
+    "broad_resolution_class_counts_are_980_76_3_4": true,
+    "detailed_resolution_class_counts_are_40_922_18_76_3_4": true,
+    "A98_full_certificate_has_all_801_exact_conditions_positive_and_primal_dual_equality": true,
+    "A100_full_certificate_has_all_895_exact_conditions_positive_and_primal_dual_equality": true,
+    "all_1063_selected_KKT_branches_have_strict_committed_source_certificates": true,
+    "A102_independently_replays_all_83_post_A95_resolutions_and_100_stratified_natural_lifts": true,
+    "all_replayed_supports_active_bands_and_condition_counts_match_committed_sources": true,
+    "every_catalogue_record_has_positive_nonzero_source_KKT_condition_count": true,
+    "all_1063_catalogue_records_are_key_unique_after_merge": true,
+    "source_certificate_hash_manifest_covers_all_18_frozen_inputs": true,
+    "pointwise_closure_is_explicitly_separated_from_continuum_lift_claims": true,
+    "formal_contract_and_nonphysical_scope_are_preserved": true
+  },
+  "verdict": "PASS_COMPLETE_EXACT_1063_RATIONAL_WITNESS_LIFT_ATLAS"
+}

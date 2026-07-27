@@ -1,0 +1,55 @@
+{
+  "audit": "A75_PARITY_REDUCED_SUPPORT_SIZE_ORIENTATION",
+  "verdict": "PASS_PARITY_REDUCED_DOUBLE_BIFURCATION_AND_M15_M16_EXTENSION",
+  "interval": {
+    "s_lower": "13/100",
+    "s_upper": "33/250",
+    "alpha_lower_decimal": "2.9213901653036336059578562977945610601314482456995",
+    "alpha_upper_decimal": "2.9434164716336325353438262047220856181012263842581"
+  },
+  "support_size_theorem": {
+    "numerator_sign": {
+      "M_10_to_12": "positive",
+      "all_M_at_least_13": "negative"
+    },
+    "denominator_sign": {
+      "M_10_to_21": "positive",
+      "all_M_at_least_22": "negative"
+    },
+    "multiplier_sign": {
+      "M_10_to_12": "positive",
+      "M_13_to_21": "negative",
+      "all_M_at_least_22": "positive"
+    },
+    "formal_statement": "For every integer M>=10, on the declared exact s interval, the gamma-plus multiplier is positive for M=10,11,12, negative for 13<=M<=21, and positive for every M>=22.",
+    "mechanism": "The first sign change at 12->13 comes from the Cramer numerator. The re-entry at 21->22 comes from the active-basis determinant changing sign while the numerator remains negative."
+  },
+  "asymptotic_start": {
+    "h": 18,
+    "even_support": 36,
+    "odd_support": 37
+  },
+  "M15": {
+    "phase_count": 6,
+    "transition_count": 5,
+    "catalogue_winner": [
+      2,
+      3,
+      4
+    ],
+    "boundary_risk": "0.56172873736830370656202807981241442676796484723723",
+    "coalescence_risk": "1.3119201838558254020097574193852155446415542991235"
+  },
+  "M16": {
+    "phase_count": 6,
+    "transition_count": 5,
+    "catalogue_winner": [
+      2,
+      3,
+      4
+    ],
+    "boundary_risk": "0.64636328870957157684628541353309982775750608761980",
+    "coalescence_risk": "1.5288619847524960465624386936729386300426111928421"
+  },
+  "scope": "The all-M orientation theorem concerns the declared gamma-plus candidate signature only on the exact interval s in [13/100,33/250]."
+}

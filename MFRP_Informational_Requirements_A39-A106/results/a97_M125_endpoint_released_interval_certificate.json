@@ -1,0 +1,95 @@
+{
+  "contract": {
+    "maximum": 125,
+    "mean": "125/2",
+    "epsilon": "1/11529215046068469760000",
+    "search_interval": [
+      "129/1000",
+      "133/1000"
+    ],
+    "probe": "33/250",
+    "P_support": [
+      23,
+      24,
+      125
+    ],
+    "Q_support": [
+      1,
+      62,
+      63
+    ],
+    "active_bands": [
+      [
+        "alpha",
+        1
+      ],
+      [
+        "beta",
+        -1
+      ]
+    ],
+    "gamma_status": "inactive"
+  },
+  "strict_component": {
+    "lower_boundary_condition": "reduced_cost_p_0",
+    "upper_boundary_condition": "basic_p_23",
+    "lower_root_bracket": [
+      "13196648628180965408239/100000000000000000000000",
+      "131966486281809654082393/1000000000000000000000000"
+    ],
+    "upper_root_bracket": [
+      "5284846278961643161077/40000000000000000000000",
+      "8257572310877567439183/62500000000000000000000"
+    ],
+    "lower_root_midpoint_decimal": "0.13196648628180965408239150000000000",
+    "upper_root_midpoint_decimal": "0.13212115697404107902692650000000000",
+    "root_bracket_width": "3/1000000000000000000000000",
+    "component_statement": "the maximal connected strict-KKT component containing 33/250 inside [129/1000,133/1000] is the open interval between the two isolated algebraic roots"
+  },
+  "boundary_certificates": {
+    "lower_numerator_degree": 125,
+    "lower_numerator_endpoint_signs": [
+      1,
+      -1
+    ],
+    "lower_derivative_interval_signs": [
+      -1,
+      -1
+    ],
+    "lower_denominator_interval_signs": [
+      -1,
+      -1
+    ],
+    "lower_root_unique_and_simple": true,
+    "upper_numerator_degree": 125,
+    "upper_numerator_endpoint_signs": [
+      -1,
+      1
+    ],
+    "upper_derivative_interval_signs": [
+      1,
+      1
+    ],
+    "upper_denominator_interval_signs": [
+      -1,
+      -1
+    ],
+    "upper_root_unique_and_simple": true,
+    "lower_numerator_derivative_signs_on_closed_core": [
+      -1,
+      -1
+    ],
+    "boundary_numerators_have_correct_sign_on_closed_core": true
+  },
+  "complete_sign_census": {
+    "condition_count": 259,
+    "polynomial_part_count": 518,
+    "boundary_numerators_handled_separately": 2,
+    "interval_horner_part_count": 516,
+    "unique_interval_horner_polynomial_count": 370,
+    "interval_horner_failure_count": 0,
+    "all_nonboundary_parts_sign_stable_on_full_hull": true,
+    "failures": []
+  },
+  "pass": true
+}

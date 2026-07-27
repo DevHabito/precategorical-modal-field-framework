@@ -1,0 +1,135 @@
+{
+  "audit": "A106_STANDALONE_REPLAY_VALIDATION",
+  "verdict": "PASS_FULL_18_RECORD_EXACT_STANDALONE_REPLAY_MATCH",
+  "record_count": 18,
+  "comparison_count": 21,
+  "all_equal": true,
+  "comparisons": [
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_000.json",
+      "integrated_sha256": "c4bcf478031a825213743d4e2de6da377ae1e6f309bc6b5a14910363178282cd",
+      "standalone_sha256": "c4bcf478031a825213743d4e2de6da377ae1e6f309bc6b5a14910363178282cd",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_001.json",
+      "integrated_sha256": "cca826af9c722c729fabe96812000e79fce3bc5f7dba768cb60403d962b54da2",
+      "standalone_sha256": "cca826af9c722c729fabe96812000e79fce3bc5f7dba768cb60403d962b54da2",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_002.json",
+      "integrated_sha256": "02a02f753d89117639b245e47e8ec58852c80f5897026464f34c4898fe6eae54",
+      "standalone_sha256": "02a02f753d89117639b245e47e8ec58852c80f5897026464f34c4898fe6eae54",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_003.json",
+      "integrated_sha256": "e96c9eb0a5279ee9ad0150d565cfec0b2c8d2812f907536f633c05fd6cd021b6",
+      "standalone_sha256": "e96c9eb0a5279ee9ad0150d565cfec0b2c8d2812f907536f633c05fd6cd021b6",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_004.json",
+      "integrated_sha256": "33fc72344426e4f21a818732b8d21aa60da5d75ef738fcc7dbb6c54a6e1c9943",
+      "standalone_sha256": "33fc72344426e4f21a818732b8d21aa60da5d75ef738fcc7dbb6c54a6e1c9943",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_005.json",
+      "integrated_sha256": "2f7f3e66c42dab4e9b9bc2394dc1669bbd9c60127f35ee94db8a2d893b1a2ea0",
+      "standalone_sha256": "2f7f3e66c42dab4e9b9bc2394dc1669bbd9c60127f35ee94db8a2d893b1a2ea0",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_006.json",
+      "integrated_sha256": "d47f6e3acc882d52e38def0f55ff08ceb8212f68b429c75200c8cdbe34d5184e",
+      "standalone_sha256": "d47f6e3acc882d52e38def0f55ff08ceb8212f68b429c75200c8cdbe34d5184e",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_007.json",
+      "integrated_sha256": "0c72cf5e9388953e075d58b8aa52dffa11dbd62b26410078be19e36b84cb1d3d",
+      "standalone_sha256": "0c72cf5e9388953e075d58b8aa52dffa11dbd62b26410078be19e36b84cb1d3d",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_008.json",
+      "integrated_sha256": "54a4eb9ca22ed567a43ab8af392790f4b5d41220659b07436c1f8008f13b655e",
+      "standalone_sha256": "54a4eb9ca22ed567a43ab8af392790f4b5d41220659b07436c1f8008f13b655e",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_009.json",
+      "integrated_sha256": "e4697f9449a32d51139b07ac7d69a5992b48b1bcb4c850aa991dd2fc2634e3b5",
+      "standalone_sha256": "e4697f9449a32d51139b07ac7d69a5992b48b1bcb4c850aa991dd2fc2634e3b5",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_010.json",
+      "integrated_sha256": "07200ad1a9714b9041d07b66fc8deb979b81f17da8c84e8ad613844d30a429ca",
+      "standalone_sha256": "07200ad1a9714b9041d07b66fc8deb979b81f17da8c84e8ad613844d30a429ca",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_011.json",
+      "integrated_sha256": "7332d9e350022adc6738577d8a9b7c237f9bbf0e4787e6bfc38a7d84e428a992",
+      "standalone_sha256": "7332d9e350022adc6738577d8a9b7c237f9bbf0e4787e6bfc38a7d84e428a992",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_012.json",
+      "integrated_sha256": "77ac48b136c7ebff3ab935e31c58d30fe9390da32208b2617e0888a79875df6c",
+      "standalone_sha256": "77ac48b136c7ebff3ab935e31c58d30fe9390da32208b2617e0888a79875df6c",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_013.json",
+      "integrated_sha256": "7533c01ba5197752a5252dc9f69d36f205d9d6d0e4c7288f7c01785cc8717ac8",
+      "standalone_sha256": "7533c01ba5197752a5252dc9f69d36f205d9d6d0e4c7288f7c01785cc8717ac8",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_014.json",
+      "integrated_sha256": "de866a6968cef079fc9f008b3ffd30370e33eb9d5baf444f5e49200da06a7569",
+      "standalone_sha256": "de866a6968cef079fc9f008b3ffd30370e33eb9d5baf444f5e49200da06a7569",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_015.json",
+      "integrated_sha256": "d62d75aa8edd75a1bcd464906d445c16764d7d2afcefe75de5a1246bda27fed0",
+      "standalone_sha256": "d62d75aa8edd75a1bcd464906d445c16764d7d2afcefe75de5a1246bda27fed0",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_016.json",
+      "integrated_sha256": "d251945427305e1b72e3b4b61569d154ba58c0220b211898ed7ec9447584ab43",
+      "standalone_sha256": "d251945427305e1b72e3b4b61569d154ba58c0220b211898ed7ec9447584ab43",
+      "equal": true
+    },
+    {
+      "path": "provenance/a106_legacy_gamma_minus_continuum_atlas/records/a106_record_017.json",
+      "integrated_sha256": "ca18dc595e974af26364c2e6feb92fc3941db32d2096bcfed318208dfac93975",
+      "standalone_sha256": "ca18dc595e974af26364c2e6feb92fc3941db32d2096bcfed318208dfac93975",
+      "equal": true
+    },
+    {
+      "path": "results/a106_legacy_gamma_minus_continuum_segment_results.json",
+      "integrated_sha256": "9c91d861588cde4f13aa208e8bf93e33c207b2e66cec0d5051f477bb736292d9",
+      "standalone_sha256": "9c91d861588cde4f13aa208e8bf93e33c207b2e66cec0d5051f477bb736292d9",
+      "equal": true
+    },
+    {
+      "path": "results/a106_legacy_gamma_minus_continuum_segment_catalogue.json",
+      "integrated_sha256": "add7f814fbe7f544516c635222b7eaee15e3ca75c5e9fe6078bec4df25564a9e",
+      "standalone_sha256": "add7f814fbe7f544516c635222b7eaee15e3ca75c5e9fe6078bec4df25564a9e",
+      "equal": true
+    },
+    {
+      "path": "figures/a106_legacy_gamma_minus_continuum_segment_atlas.png",
+      "integrated_sha256": "866d495eafb645fad695a4a1a7c76cf194fd3a1da1d589b2c2cbee583bf168cf",
+      "standalone_sha256": "866d495eafb645fad695a4a1a7c76cf194fd3a1da1d589b2c2cbee583bf168cf",
+      "equal": true
+    }
+  ]
+}

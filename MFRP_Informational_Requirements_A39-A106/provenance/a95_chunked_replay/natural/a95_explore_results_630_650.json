@@ -1,0 +1,1246 @@
+{
+  "count": 28,
+  "no_local_count": 2,
+  "multiple_count": 0,
+  "records": [
+    {
+      "M": 418,
+      "b": 72,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "left",
+      "s": "13/100",
+      "segment": [
+        "129977880072051867/1000000000000000000",
+        "307499479438234698082659429676449124781/2361183241434822606848000000000000000000"
+      ],
+      "compressed_j": 73,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 73,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 72,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 418,
+      "b": 72,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "right",
+      "s": "131/1000",
+      "segment": [
+        "9609358732444834315083154398012909339/73786976294838206464000000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "pass",
+          "failure": null
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_75"
+        }
+      ],
+      "passes": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null
+        }
+      ]
+    },
+    {
+      "M": 419,
+      "b": 71,
+      "cell_phase": "unique_b_plus_2",
+      "side": "full",
+      "s": "1291/10000",
+      "segment": [
+        "129/1000",
+        "129344962676290463/1000000000000000000"
+      ],
+      "compressed_j": 73,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 73,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 72,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 419,
+      "b": 72,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "left",
+      "s": "2587/20000",
+      "segment": [
+        "4042030083634077/31250000000000000",
+        "30544253339645130258986838873608618383/236118324143482260684800000000000000000"
+      ],
+      "compressed_j": 73,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 73,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 72,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 419,
+      "b": 72,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "right",
+      "s": "131/1000",
+      "segment": [
+        "610885066792902605179740432509496077197/4722366482869645213696000000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 420,
+      "b": 72,
+      "cell_phase": "unique_b_plus_2",
+      "side": "full",
+      "s": "13/100",
+      "segment": [
+        "129/1000",
+        "33108221698727977/250000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 420,
+      "b": 73,
+      "cell_phase": "unique_b_plus_1",
+      "side": "full",
+      "s": "1327/10000",
+      "segment": [
+        "132432886794911909/1000000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 421,
+      "b": 72,
+      "cell_phase": "unique_b_plus_2",
+      "side": "full",
+      "s": "13/100",
+      "segment": [
+        "129/1000",
+        "65898474972586759/500000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 421,
+      "b": 73,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "left",
+      "s": "33/250",
+      "segment": [
+        "131796949945173519/1000000000000000000",
+        "156947322123668495194142405986005951537/1180591620717411303424000000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 421,
+      "b": 73,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "right",
+      "s": "831/6250",
+      "segment": [
+        "78473661061834247597071503755516682389/590295810358705651712000000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 422,
+      "b": 72,
+      "cell_phase": "unique_b_plus_2",
+      "side": "full",
+      "s": "13/100",
+      "segment": [
+        "129/1000",
+        "32791016708996841/250000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 422,
+      "b": 73,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "left",
+      "s": "263/2000",
+      "segment": [
+        "26232813367197473/200000000000000000",
+        "38943118334254303216234596020722524101/295147905179352825856000000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 422,
+      "b": 73,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "right",
+      "s": "33/250",
+      "segment": [
+        "77886236668508606432469651024736051361/590295810358705651712000000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_76"
+        }
+      ],
+      "passes": []
+    },
+    {
+      "M": 423,
+      "b": 72,
+      "cell_phase": "unique_b_plus_2",
+      "side": "full",
+      "s": "13/100",
+      "segment": [
+        "129/1000",
+        "13053422280342673/100000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 423,
+      "b": 73,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "left",
+      "s": "131/1000",
+      "segment": [
+        "130534222803426731/1000000000000000000",
+        "30981158620750734121263339365005320191/236118324143482260684800000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 423,
+      "b": 73,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "right",
+      "s": "33/250",
+      "segment": [
+        "61962317241501468242526925307730297709/472236648286964521369600000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 424,
+      "b": 72,
+      "cell_phase": "unique_b_plus_2",
+      "side": "full",
+      "s": "647/5000",
+      "segment": [
+        "129/1000",
+        "16238425406747553/125000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 424,
+      "b": 73,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "left",
+      "s": "13/100",
+      "segment": [
+        "5196296130159217/40000000000000000",
+        "38401460286714416357945442859638670813/295147905179352825856000000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 424,
+      "b": 73,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "right",
+      "s": "131/1000",
+      "segment": [
+        "76802920573428832715891272293870594073/590295810358705651712000000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 425,
+      "b": 72,
+      "cell_phase": "b_plus_2_to_b_plus_3",
+      "side": "left",
+      "s": "1291/10000",
+      "segment": [
+        "129/1000",
+        "19072591515689496082438708104409838961/147573952589676412928000000000000000000"
+      ],
+      "compressed_j": 74,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 74,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 73,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 425,
+      "b": 72,
+      "cell_phase": "b_plus_2_to_b_plus_3",
+      "side": "right",
+      "s": "6463/50000",
+      "segment": [
+        "1192036969730593505152428118827621643/9223372036854775808000000000000000000",
+        "129283593664214653/1000000000000000000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_76"
+        }
+      ],
+      "passes": []
+    },
+    {
+      "M": 425,
+      "b": 73,
+      "cell_phase": "unique_b_plus_2",
+      "side": "full",
+      "s": "131/1000",
+      "segment": [
+        "64641796832107327/500000000000000000",
+        "66478935714614257/500000000000000000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 425,
+      "b": 74,
+      "cell_phase": "unique_b_plus_1",
+      "side": "full",
+      "s": "13297/100000",
+      "segment": [
+        "26591574285845703/200000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 426,
+      "b": 73,
+      "cell_phase": "unique_b_plus_2",
+      "side": "full",
+      "s": "13/100",
+      "segment": [
+        "129/1000",
+        "33082034719719287/250000000000000000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 426,
+      "b": 74,
+      "cell_phase": "unique_b_plus_1",
+      "side": "full",
+      "s": "663/5000",
+      "segment": [
+        "132328138878877149/1000000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 427,
+      "b": 73,
+      "cell_phase": "unique_b_plus_2",
+      "side": "full",
+      "s": "13/100",
+      "segment": [
+        "129/1000",
+        "65850694475310177/500000000000000000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 427,
+      "b": 74,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "left",
+      "s": "33/250",
+      "segment": [
+        "26340277790124071/200000000000000000",
+        "78386668415789439460824538668556856721/590295810358705651712000000000000000000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1
+        }
+      ]
+    },
+    {
+      "M": 427,
+      "b": 74,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "right",
+      "s": "83/625",
+      "segment": [
+        "31354667366315775784329945328527680653/236118324143482260684800000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 76,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 76,
+          "gamma": null,
+          "status": "inactive_slack_infeasible",
+          "failure": "inactive_slack_gamma_+1"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 76,
+          "gamma": 1,
+          "status": "pass",
+          "failure": null
+        }
+      ],
+      "passes": [
+        {
+          "family": "F3",
+          "contact": 76,
+          "gamma": 1
+        }
+      ]
+    }
+  ],
+  "no_local": [
+    {
+      "M": 422,
+      "b": 73,
+      "cell_phase": "b_plus_1_to_b_plus_2",
+      "side": "right",
+      "s": "33/250",
+      "segment": [
+        "77886236668508606432469651024736051361/590295810358705651712000000000000000000",
+        "133/1000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_76"
+        }
+      ],
+      "passes": []
+    },
+    {
+      "M": 425,
+      "b": 72,
+      "cell_phase": "b_plus_2_to_b_plus_3",
+      "side": "right",
+      "s": "6463/50000",
+      "segment": [
+        "1192036969730593505152428118827621643/9223372036854775808000000000000000000",
+        "129283593664214653/1000000000000000000"
+      ],
+      "compressed_j": 75,
+      "local": [
+        {
+          "family": "F2",
+          "contact": 75,
+          "gamma": null,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 74,
+          "gamma": -1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_0"
+        },
+        {
+          "family": "F3",
+          "contact": 75,
+          "gamma": 1,
+          "status": "primal_infeasible",
+          "failure": "basic_p_76"
+        }
+      ],
+      "passes": []
+    }
+  ],
+  "multiple": []
+}

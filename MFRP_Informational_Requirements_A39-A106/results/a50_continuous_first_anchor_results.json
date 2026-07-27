@@ -1,0 +1,429 @@
+{
+  "audit": "A50_CONTINUOUS_FIRST_TARGET_EXCLUDING_ANCHOR",
+  "contract": {
+    "support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mean": "5/2",
+    "target_exponent": 1,
+    "alpha_domain": "[2,3]",
+    "s_definition": "s=2^(-alpha)",
+    "exact_design": "{alpha,3,4}*log(2)",
+    "noisy_design": "{alpha,3,infinity}*log(2)",
+    "epsilon": "1/10000"
+  },
+  "exact_result": {
+    "ratio": "5*(392*s + 779)/(2*(1043*s + 1916))",
+    "derivative": "-307125/(2*(1043*s + 1916)**2)",
+    "distinct_limit_at_alpha_3": "1840/1819",
+    "endpoint_ratio": "3871/3484",
+    "gates": {
+      "all_sign_certificates_pass": true,
+      "normalization": true,
+      "mean": true,
+      "observations_match": true,
+      "primal_dual_identity": true,
+      "closed_ratio_formula": true,
+      "derivative_strictly_negative": true,
+      "winner_ratio_at_alpha_2": true,
+      "duplicated_endpoint_ratio": true,
+      "endpoint_discontinuity": true
+    }
+  },
+  "noisy_phases": {
+    "N1": {
+      "support_p": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "support_q": [
+        1,
+        2,
+        4
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ratio": "18*(12961480*s**4 - 1809993*s**3 - 38419626*s**2 + 30419979*s - 3148508)/(5*(50294848*s**4 - 15876000*s**3 - 130361165*s**2 + 107163000*s - 11212745))",
+      "derivative": "-87372126*(s - 1)*(23638848*s**5 - 76334480*s**4 + 87845053*s**3 - 41954195*s**2 + 7623535*s - 759765)/(5*(50294848*s**4 - 15876000*s**3 - 130361165*s**2 + 107163000*s - 11212745)**2)",
+      "observation_differences": [
+        "1/5000",
+        "-1/5000",
+        "1/5000"
+      ],
+      "sign_expression_count": 16,
+      "inactive_constraint_count": 0,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true,
+        "ratio_derivative_negative": true
+      }
+    },
+    "N2": {
+      "support_p": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "support_q": [
+        1,
+        2,
+        4
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ratio": "4*(25003328*s**4 + 1814664*s**3 - 85430814*s**2 + 65400159*s - 6783172)/(5*(21232128*s**4 - 1666000*s**3 - 65780550*s**2 + 51629755*s - 5414500))",
+      "derivative": "-81157312*(s - 1)*(3952064*s**5 - 12721264*s**4 + 14618423*s**3 - 7060820*s**2 + 1421095*s - 192005)/(5*(21232128*s**4 - 1666000*s**3 - 65780550*s**2 + 51629755*s - 5414500)**2)",
+      "observation_differences": [
+        "1/5000",
+        "-1/5000",
+        "1/5000"
+      ],
+      "sign_expression_count": 16,
+      "inactive_constraint_count": 0,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true,
+        "ratio_derivative_negative": true
+      }
+    },
+    "N3": {
+      "support_p": [
+        0,
+        2,
+        5
+      ],
+      "support_q": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ratio": "3350228*(s - 1)**2*(8*s - 1)/(3*(326928*s**4 + 8092950*s**3 - 18272375*s**2 + 10958580*s - 1106475))",
+      "derivative": "-6700456*(s - 1)*(1307712*s**5 - 4250064*s**4 + 4953281*s**3 - 2439715*s**2 + 484615*s - 53085)/(3*(326928*s**4 + 8092950*s**3 - 18272375*s**2 + 10958580*s - 1106475)**2)",
+      "observation_differences": [
+        "1/5000",
+        "-1/5000",
+        "1/5000"
+      ],
+      "sign_expression_count": 16,
+      "inactive_constraint_count": 0,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true,
+        "ratio_derivative_negative": true
+      }
+    },
+    "N4": {
+      "support_p": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "support_q": [
+        1,
+        2,
+        3
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ratio": "2*(7843136*s**4 - 25489797*s**2 + 19600386*s - 1947061)/(15737856*s**4 - 51205000*s**2 + 39448335*s - 3970950)",
+      "derivative": "-15660406*(s - 1)*(115712*s**4 - 240832*s**3 + 15680*s**2 + 257345*s - 130755)/(15737856*s**4 - 51205000*s**2 + 39448335*s - 3970950)**2",
+      "observation_differences": [
+        "1/5000",
+        "-1/5000",
+        "1/5000"
+      ],
+      "sign_expression_count": 16,
+      "inactive_constraint_count": 0,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true,
+        "ratio_derivative_negative": true
+      }
+    },
+    "N4a": {
+      "support_p": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "support_q": [
+        1,
+        3
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "ratio": "3*(24815744*s**5 + 53838750*s**3 - 223781432*s**2 + 161967894*s - 16826599)/(214375*(s - 1)**2*(8*s - 1)*(64*s**2 + 136*s + 209))",
+      "derivative": "-1758*(94080000*s**6 - 205750848*s**5 + 29318080*s**4 + 207424595*s**3 - 151622905*s**2 + 28350265*s - 1658900)/(214375*(s - 1)**3*(8*s - 1)**2*(64*s**2 + 136*s + 209)**2)",
+      "observation_differences": [
+        "1/5000",
+        "-1/5000",
+        "11*(1066112*s**5 - 3491250*s**3 + 2718052*s**2 - 292914*s - 931)/(245000*(s - 1)**2*(8*s - 1)*(64*s**2 + 136*s + 209))"
+      ],
+      "sign_expression_count": 15,
+      "inactive_constraint_count": 2,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true,
+        "ratio_derivative_negative": true
+      }
+    },
+    "N5a": {
+      "support_p": [
+        1,
+        2,
+        5
+      ],
+      "support_q": [
+        0,
+        1,
+        3
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "ratio": "8*(33320000*s**5 + 93576783*s**3 - 345695000*s**2 + 244059651*s - 25233112)/(5*(81568768*s**5 + 20482000*s**3 - 403082572*s**2 + 336875304*s - 35833259))",
+      "derivative": "-295462264*(s - 1)*(376385536*s**6 - 823134464*s**5 + 117272320*s**4 + 829845132*s**3 - 606541476*s**2 + 113386017*s - 6634767)/(5*(81568768*s**5 + 20482000*s**3 - 403082572*s**2 + 336875304*s - 35833259)**2)",
+      "observation_differences": [
+        "1/5000",
+        "-1/5000",
+        "11*(1066112*s**5 - 3491250*s**3 + 2718052*s**2 - 292914*s - 931)/(122500*(s - 1)**2*(8*s - 1)*(136*s**2 + 289*s + 418))"
+      ],
+      "sign_expression_count": 15,
+      "inactive_constraint_count": 2,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true,
+        "ratio_derivative_negative": true
+      }
+    },
+    "N5b": {
+      "support_p": [
+        1,
+        2,
+        5
+      ],
+      "support_q": [
+        0,
+        1,
+        3
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "ratio": "(40000*s**5 + 127517*s**3 - 415000*s**2 + 247449*s + 68)/(70020*s*(s - 1)**2*(s**2 + 2*s + 3))",
+      "derivative": "-17*(7501*s**6 - 14999*s**5 - 5*s**4 + 15007*s**3 - 7496*s**2 + 10*s - 6)/(35010*s**2*(s - 1)**3*(s**2 + 2*s + 3)**2)",
+      "observation_differences": [
+        "1/5000",
+        "-49*(481088*s**5 - 1567709*s**3 + 1210648*s**2 - 123609*s - 836)/(327680000*s*(s - 1)**2*(s**2 + 2*s + 3))",
+        "-1/5000"
+      ],
+      "sign_expression_count": 15,
+      "inactive_constraint_count": 2,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true,
+        "ratio_derivative_negative": true
+      }
+    }
+  },
+  "transition_polynomials": [
+    "2300416*s**4 - 6174000*s**3 + 5664406*s**2 - 2011563*s + 223828",
+    "2778888*s**4 - 4299425*s**3 + 1786055*s - 268850",
+    "1307712*s**4 - 4299425*s**2 + 3369570*s - 379425",
+    "11702144*s**4 - 38403750*s**2 + 30009165*s - 3317800",
+    "1066112*s**5 - 3491250*s**3 + 2718052*s**2 - 292914*s - 931",
+    "23507776*s**5 - 76817741*s**3 + 59583896*s**2 - 6253449*s - 40964"
+  ],
+  "transition_table": [
+    {
+      "transition": 1,
+      "root_object": "CRootOf(2300416*x**4 - 6174000*x**3 + 5664406*x**2 - 2011563*x + 223828, 0)",
+      "s_decimal": "0.2059775835873189124424366678505776609486",
+      "alpha_decimal": "2.279440756542554790044157997230864393903",
+      "future_risk_decimal": "0.01352077641070646974851596873825275202435"
+    },
+    {
+      "transition": 2,
+      "root_object": "CRootOf(2778888*x**4 - 4299425*x**3 + 1786055*x - 268850, 1)",
+      "s_decimal": "0.1592482935647698065912847572436935660681",
+      "alpha_decimal": "2.650650181613537313053203116310586176114",
+      "future_risk_decimal": "0.02758368151466877715026448300779585299155"
+    },
+    {
+      "transition": 3,
+      "root_object": "CRootOf(1307712*x**4 - 4299425*x**2 + 3369570*x - 379425, 1)",
+      "s_decimal": "0.1361076780093285348727208167433955972985",
+      "alpha_decimal": "2.877179641465427868986407598227094867326",
+      "future_risk_decimal": "0.07131554934593035705484644558486921624747"
+    },
+    {
+      "transition": 4,
+      "root_object": "CRootOf(11702144*x**4 - 38403750*x**2 + 30009165*x - 3317800, 1)",
+      "s_decimal": "0.1331127343254702540567594496561660844304",
+      "alpha_decimal": "2.909279500576673141697415102115793545466",
+      "future_risk_decimal": "0.08603324753556237549969797395502841484535"
+    },
+    {
+      "transition": 5,
+      "root_object": "CRootOf(1066112*x**5 - 3491250*x**3 + 2718052*x**2 - 292914*x - 931, 2)",
+      "s_decimal": "0.1329115828357821091473459840310571217980",
+      "alpha_decimal": "2.911461258357648182471052549931548342598",
+      "future_risk_decimal": "0.08664846221205302140021290229171998395519"
+    },
+    {
+      "transition": 6,
+      "root_object": "CRootOf(23507776*x**5 - 76817741*x**3 + 59583896*x**2 - 6253449*x - 40964, 2)",
+      "s_decimal": "0.1327186563169017257987745376250193500445",
+      "alpha_decimal": "2.913556909680130823735837218492218250706",
+      "future_risk_decimal": "0.08725068219658625410970701882896523719887"
+    }
+  ],
+  "continuity": {
+    "N1_to_N2": true,
+    "N2_to_N3": true,
+    "N3_to_N4": true,
+    "N4_to_N4a": true,
+    "N4a_to_N5a": true,
+    "N5a_to_N5b": true
+  },
+  "endpoints": {
+    "exact_alpha_2_ratio": "8770/8707",
+    "exact_distinct_alpha_3_limit": "1840/1819",
+    "exact_duplicated_alpha_3_ratio": "3871/3484",
+    "noisy_alpha_2_ratio": "26593405/26235854",
+    "noisy_alpha_2_future_risk": "0.009764379451330052697897778083581113334252",
+    "noisy_alpha_3_ratio": "202875104/179268705",
+    "noisy_alpha_3_future_risk": "0.08923408796504970774355636179422208829175"
+  },
+  "formal_results": [
+    "exact ratio strictly increases with alpha for distinct anchors",
+    "exact duplicated endpoint is discontinuous",
+    "seven exact noisy primal-dual phases cover [2,3]",
+    "six unique algebraic transitions",
+    "noisy ratio is continuous and strictly increasing in alpha",
+    "alpha=2 is the unique minimizer in both controlled contracts",
+    "the optimum is a declared-domain boundary, not a universal physical constant"
+  ],
+  "gates": {
+    "transition_1_unique_domain_root": true,
+    "transition_2_unique_domain_root": true,
+    "transition_3_unique_domain_root": true,
+    "transition_4_unique_domain_root": true,
+    "transition_5_unique_domain_root": true,
+    "transition_6_unique_domain_root": true,
+    "transition_roots_strictly_ordered": true,
+    "exact_audit_pass": true,
+    "all_noisy_phase_gates_pass": true,
+    "all_noisy_transitions_continuous": true,
+    "exact_alpha_2_matches_A43": true,
+    "noisy_alpha_2_matches_A44": true,
+    "noisy_alpha_2_unique_lower_endpoint": true,
+    "noisy_alpha_3_ratio_exact": true
+  },
+  "verdict": "PASS_CONTINUOUS_FIRST_ANCHOR_BOUNDARY_OPTIMALITY",
+  "boundary": "The result is exact only for alpha in [2,3], the six-point support, exact mean, contract-specific third observations, common error, and direct future-Q risk. It does not cover anchors between the target exponent 1 and the declared lower boundary 2."
+}

@@ -1,0 +1,149 @@
+{
+  "audit": "A88_NINE_TERM_LOCAL_SECANT_REDUCTION_AND_EXTENDED_POSITIVITY_STRESS",
+  "contract": {
+    "maximum_range": [
+      10,
+      900
+    ],
+    "probe_count": 9,
+    "probes": [
+      {
+        "name": "local_0",
+        "value": "129/1000"
+      },
+      {
+        "name": "local_1",
+        "value": "259/2000"
+      },
+      {
+        "name": "local_2",
+        "value": "13/100"
+      },
+      {
+        "name": "local_3",
+        "value": "261/2000"
+      },
+      {
+        "name": "local_4",
+        "value": "131/1000"
+      },
+      {
+        "name": "local_5",
+        "value": "263/2000"
+      },
+      {
+        "name": "local_6",
+        "value": "33/250"
+      },
+      {
+        "name": "local_7",
+        "value": "53/400"
+      },
+      {
+        "name": "local_8",
+        "value": "133/1000"
+      }
+    ],
+    "base_contact": "b=ceil(M c(s))",
+    "slope": "c(s)=log(2)/(-2 log(s))",
+    "exact_slope_comparison": "sign(c(s)-p/q)=sign(2^q s^(2p)-1)"
+  },
+  "exact_nine_term_secant_reduction": {
+    "pure_term": "c r^k -> c(1-r) r^k",
+    "affine_term": "(a+b k)r^k -> ([(1-r)a-rb]+(1-r)b k)r^k",
+    "constant_channel": "cancels exactly",
+    "ordered_terms": [
+      "(beta*s)^k",
+      "(beta*target)^k",
+      "(s*target)^k",
+      "beta^k",
+      "k beta^k",
+      "s^k",
+      "k s^k",
+      "target^k",
+      "k target^k"
+    ],
+    "coefficient_sign_pattern": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "sign_variation_count": 6,
+    "interpretation": "The exact secant has one fewer term than E because the constant cancels. Six coefficient sign variations still do not imply one zero or positivity."
+  },
+  "finite_exact_stress": {
+    "cell_count": 8019,
+    "nonpositive_full_secant_count": 0,
+    "four_term_core_sign_mismatch_count": 0,
+    "four_term_core_dominance_failure_count": 0,
+    "minimum_core_to_residual_ratio": {
+      "maximum": 12,
+      "probe_name": "local_8",
+      "probe_value": "133/1000",
+      "base_contact": 3,
+      "ratio": "357592799029147013817090870461111000360863/78748695268574477536378760663812231360000",
+      "ratio_decimal": "4.54093617436539682671391434956"
+    },
+    "A87_original_subset_cell_count": 873,
+    "verdict": "POSITIVE_EXACT_LOCAL_SECANT_IN_ALL_8019_DECLARED_CELLS"
+  },
+  "parity_phase_asymptotic_limit": {
+    "interval": [
+      "129/1000",
+      "133/1000"
+    ],
+    "leading_limits": {
+      "even": "((t-s)/2)(1-st)s^delta-(1-t)C_even(s)(1-c(s))",
+      "odd": "((t-s)/(2 sqrt(2)))(1-st)s^delta-(1-t)C_odd(s)(1-c(s))"
+    },
+    "constants": {
+      "C_even": "s-beta-2/1875",
+      "C_odd": "3(s-beta)/4-1/1250"
+    },
+    "shared_positive_lower": "88389381/4000000000",
+    "shared_positive_lower_decimal": "0.02209734525",
+    "even_negative_upper": "13/3750",
+    "even_margin_lower": "223568143/12000000000",
+    "even_margin_lower_decimal": "0.0186306785833333333333333333333",
+    "odd_positive_lower_using_1_over_sqrt2_gt_7_over_10": "618725667/40000000000",
+    "odd_negative_upper": "13/5000",
+    "odd_margin_lower": "514725667/40000000000",
+    "odd_margin_lower_decimal": "0.012868141675",
+    "sqrt_bound_exact": "(7/10)^2=49/100<1/2=(1/sqrt(2))^2",
+    "even_positive": true,
+    "odd_positive": true
+  },
+  "gates": {
+    "generic_affine_secant_identity_verified_symbolically": true,
+    "nine_rational_probes_cover_full_local_interval": true,
+    "record_count_is_exactly_8019": true,
+    "all_8019_exact_local_secants_are_positive": true,
+    "four_term_secant_core_matches_all_full_signs": true,
+    "four_term_secant_core_strictly_dominates_all_residuals": true,
+    "minimum_core_to_residual_ratio_exceeds_four": true,
+    "one_invariant_nine_term_coefficient_sign_pattern": true,
+    "nine_term_pattern_has_six_sign_variations": true,
+    "coefficient_sign_variation_route_remains_insufficient": true,
+    "A87_original_873_base_contacts_reproduced": true,
+    "even_parity_phase_leading_margin_strictly_positive": true,
+    "odd_parity_phase_leading_margin_strictly_positive": true,
+    "finite_scope_extended_to_M900_without_all_M_claim": true,
+    "claim_boundary_preserved": true
+  },
+  "gate_count": 15,
+  "pass_count": 15,
+  "verdict": "PASS_NINE_TERM_SECANT_REDUCTION_EXTENDED_EXACT_POSITIVITY_AND_POSITIVE_PARITY_PHASE_LIMIT",
+  "claim_boundary": [
+    "The exact finite positivity theorem covers only 10<=M<=900 and the nine declared rational probes.",
+    "The parity-phase calculation certifies a strictly positive leading limit, but A88 does not supply an explicit uniform remainder threshold M0.",
+    "The nine-term coefficient pattern has six sign variations, so a raw variation-diminishing argument remains insufficient.",
+    "A88 does not prove global monotonicity of E in k; A87 already showed that global monotonicity is false.",
+    "No physical interpretation, all-M rounding law, periodicity, or pre-spacetime ontology is inferred."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "audit": "A69_CRAMER_CHEBYSHEV_REDUCTION",
+  "verdict": "PASS_CRAMER_REDUCTION_WITH_TOTAL_POSITIVITY_OBSTRUCTION",
+  "fixed_basis_theorem": {
+    "cramer_formula": "lambda_alpha(s,epsilon)=Delta_alpha(epsilon)/Delta(s,epsilon)",
+    "alpha_independence": "Delta_alpha is independent of s because the only s-dependent row is replaced by the objective row.",
+    "epsilon_affinity": "Delta_alpha has degree at most one in epsilon because epsilon occurs only in the single scale column.",
+    "no_internal_sign_flip": "At fixed epsilon with nonzero Delta_alpha, the alpha multiplier cannot change sign on a connected region where the active basis determinant is nonzero."
+  },
+  "family_summary": {
+    "phase_count": 33,
+    "unique_contact_signature_count": 18,
+    "repeated_contact_signature_count": 10,
+    "signature_size_distribution": {
+      "1": 8,
+      "2": 6,
+      "3": 3,
+      "4": 1
+    },
+    "positive_numerator_count": 21,
+    "negative_numerator_count": 12,
+    "finite_positive_flip_threshold_count": 14,
+    "minimum_flip_margin": {
+      "multiple": "102.44043276705599181742846577437647611401080656777",
+      "maximum": 8,
+      "phase": 1
+    },
+    "basis_with_roots_in_full_alpha_domain": 17,
+    "full_domain_basis_root_count": 17,
+    "interpretation": "The numerator orientation is highly robust inside the A67 arithmetic-grid family, but the basis determinant orientation is phase dependent."
+  },
+  "counterexample": {
+    "contact_labels": [
+      "P",
+      "B",
+      "Q",
+      "P",
+      "Q",
+      "P"
+    ],
+    "active_observations": [
+      [
+        "alpha",
+        1
+      ],
+      [
+        "beta",
+        -1
+      ],
+      [
+        "gamma",
+        1
+      ]
+    ],
+    "target_exponent": 1,
+    "beta_exponent": 3,
+    "gamma_exponent": 10,
+    "epsilon": 0,
+    "mean_rule": "(minimum contact + maximum contact)/2",
+    "uniform_contacts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "uniform_numerator": "3022447223738387907/295147905179352825856",
+    "uniform_sign": 1,
+    "stretched_contacts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      9
+    ],
+    "stretched_numerator": "-3887828288997434151887072936457/324518553658426726783156020576256",
+    "stretched_sign": -1,
+    "conclusion": "The same contact order and active-band signs can produce opposite Cramer-numerator signs. Order-only total positivity is insufficient for the coupled dual-envelope matrix."
+  },
+  "next_target": "Arithmetic-grid q-Vandermonde and Schur-positive factorization of the Cramer numerator."
+}

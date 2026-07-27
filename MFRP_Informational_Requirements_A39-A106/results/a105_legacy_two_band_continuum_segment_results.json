@@ -1,0 +1,75 @@
+{
+  "audit": "A105_EXACT_LEGACY_TWO_BAND_CONTINUUM_SEGMENT_ATLAS",
+  "evidence_class": "exact sparse rational-function KKT reduction, rational interval arithmetic, exact algebraic root brackets, exact root ordering, and exact outside counterexamples",
+  "scope": {
+    "source_segment_count": 40,
+    "source": "A102 records with detailed_class=legacy_two_band_compressed",
+    "tested_family": "P={0,j,M}, Q={1,h,h+1}, alpha+ and beta- active, gamma inactive",
+    "symbolic_method": "exact Sherman-Morrison rank-one alpha-row update around s=1/8",
+    "claim": "exact classification of the strict KKT component containing each of the 40 rational witnesses inside its A95/A102 source segment",
+    "explicit_nonclaim": "not a continuum theorem for the 940 legacy three-band witnesses, not an all-cell or all-M theorem, and not a physical claim"
+  },
+  "continuum_atlas": {
+    "record_count": 40,
+    "unique_key_count": 40,
+    "status_counts": {
+      "proper_strict_subcomponent": 40
+    },
+    "phase_status_counts": {
+      "b_plus_1_to_b_plus_2::proper_strict_subcomponent": 26,
+      "unique_b_plus_2::proper_strict_subcomponent": 14
+    },
+    "condition_count": 24312,
+    "numerator_plus_denominator_count": 24352,
+    "selected_boundary_count": 80,
+    "left_boundary_mechanisms": {
+      "inactive_slack_gamma_-1": 6,
+      "basic_p_support_mass": 34
+    },
+    "right_boundary_mechanisms": {
+      "inactive_slack_gamma_+1": 40
+    },
+    "outside_counterexample_count": 80,
+    "core_failure_count": 0,
+    "hull_failure_count": 0,
+    "root_failure_count": 0,
+    "ordering_failure_count": 0
+  },
+  "structural_result": {
+    "full_segment_count": 0,
+    "partial_segment_count": 40,
+    "unresolved_count": 0,
+    "interpretation": "the forty legacy two-band pointwise certificates are promoted only to the exact witness-containing components supported by the KKT signs; no segment is silently promoted beyond its certified boundaries"
+  },
+  "provenance": {
+    "source_hashes": {
+      "A95_result": "005aefe165635744e57f78e49189cbf7acbe19c57c9080aaeeb967ec77e35b3a",
+      "A102_result": "a502b5a44362834454806ec11359055057fec0ab786d55fbd35f4b56060e80af",
+      "A102_catalogue": "e00ce851350cc15e138bbfd7e8ac6109a6a3a3c02ccc610224ad7b2b42f33bd1"
+    }
+  },
+  "gates": {
+    "A95_and_A102_sources_are_present_and_passed": true,
+    "exactly_40_legacy_two_band_source_segments_are_loaded": true,
+    "computed_records_cover_exactly_all_40_source_keys": true,
+    "all_record_keys_are_unique": true,
+    "all_KKT_condition_counts_match_A102": true,
+    "exact_KKT_condition_count_matches_source_sum": true,
+    "numerator_plus_denominator_count_is_condition_count_plus_40": true,
+    "classification_exhausts_all_40_segments": true,
+    "no_witness_certificate_fails": true,
+    "all_selected_boundaries_are_locally_unique_and_simple": true,
+    "all_competing_root_brackets_are_exactly_ordered": true,
+    "all_core_KKT_polynomial_certificates_pass": true,
+    "all_nonselected_boundary_hull_certificates_pass": true,
+    "every_selected_boundary_has_a_negative_rational_outside_counterexample": true,
+    "every_certified_component_contains_its_rational_witness": true,
+    "no_internal_failure_or_unresolved_segment_remains": true,
+    "formal_contract_and_nonphysical_scope_are_preserved": true
+  },
+  "gate_count": 17,
+  "pass_count": 17,
+  "fail_count": 0,
+  "failed_gates": [],
+  "verdict": "PASS_EXACT_CONTINUUM_CLASSIFICATION_OF_40_LEGACY_TWO_BAND_SEGMENTS_WITH_0_FULL_AND_40_PARTIAL_COMPONENTS"
+}

@@ -1,0 +1,16 @@
+{
+  "audit": "A65_CONTINUOUS_FIRST_ANCHOR",
+  "gate_count": 9,
+  "pass_count": 9,
+  "grid_LP_count": 30960,
+  "grid_monotone": "240/240",
+  "exact_derivative_certificates": 232,
+  "strict_local_certificates": 226,
+  "degenerate_positive_derivatives": 6,
+  "unresolved_degenerate": 8,
+  "minimum_kappa_alpha": 0.0001729037379110538,
+  "minimum_grid_increment": 4.872092742580492e-07,
+  "maximum_cross_solver_gap": 3.1041835768519377e-12,
+  "failed_gates": [],
+  "verdict": "PASS_CONTINUOUS_FIRST_ANCHOR_STRESS_AND_EXACT_LOCAL_SENSITIVITY"
+}

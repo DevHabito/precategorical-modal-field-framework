@@ -1,0 +1,16 @@
+{
+  "audit": "A103_SAMPLE_EXACT_CHUNK_REPLAY_VALIDATION",
+  "replay_file": "provenance/a103_continuum_atlas/a103_sample_replay_000_004.json",
+  "replay_source_slice": [
+    0,
+    4
+  ],
+  "record_count": 4,
+  "timing_fields_excluded_from_identity_check": [
+    "seconds"
+  ],
+  "normalized_records_match_committed_chunk": true,
+  "replay_file_sha256": "7dfd9d92361b87a26aa7f788ab041243452e424332b0774dd11392107a8e5ab2",
+  "committed_chunk_sha256": "30b8a870ff50900dc1c9eabb114bc2eec031e01cea1b140c252e0989f263c964",
+  "verdict": "PASS_SAMPLE_EXACT_CHUNK_REPLAY_MATCH"
+}

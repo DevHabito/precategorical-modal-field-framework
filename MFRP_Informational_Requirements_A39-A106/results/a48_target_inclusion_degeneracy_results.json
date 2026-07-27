@@ -1,0 +1,553 @@
+{
+  "audit": "A48_TARGET_INCLUSION_DEGENERACY",
+  "contract": {
+    "support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mean": "5/2",
+    "target_exponent": 1,
+    "additional_exponent_domain": "alpha,beta >= 1",
+    "epsilon_theorem_domain": "[0, 1/128]",
+    "expanded_integer_catalogue": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "theorem": {
+    "ratio": "(32*epsilon + 3)/3",
+    "future_risk": "0.5*log2(1 + 32*epsilon/3)",
+    "q": [
+      "0",
+      "0",
+      "1/2",
+      "1/2",
+      "0",
+      "0"
+    ],
+    "p_epsilon": [
+      "0",
+      "0",
+      "32*epsilon + 1/2",
+      "1/2 - 64*epsilon",
+      "32*epsilon",
+      "0"
+    ],
+    "finite_catalogue_differences": {
+      "1": "2*epsilon",
+      "2": "9*epsilon/8",
+      "3": "49*epsilon/128",
+      "4": "225*epsilon/2048",
+      "5": "961*epsilon/32768",
+      "6": "3969*epsilon/524288"
+    }
+  },
+  "exact_catalogue": {
+    "epsilon": "0",
+    "included_ratio": "1",
+    "included_future_risk_decimal": "0",
+    "ranking": [
+      {
+        "design": [
+          1,
+          2,
+          3
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          2,
+          4
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          2,
+          5
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          2,
+          6
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          3,
+          4
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          3,
+          5
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          3,
+          6
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          4,
+          5
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          4,
+          6
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          5,
+          6
+        ],
+        "ratio_exact": "1",
+        "ratio_decimal": "1",
+        "future_score_risk_decimal": "0",
+        "contains_target": true
+      },
+      {
+        "design": [
+          2,
+          3,
+          4
+        ],
+        "ratio_exact": "8770/8707",
+        "ratio_decimal": "1.00723555759733552",
+        "future_score_risk_decimal": "0.00520055966453553987",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          3,
+          5
+        ],
+        "ratio_exact": "5758/5713",
+        "ratio_decimal": "1.0078767722737616",
+        "future_score_risk_decimal": "0.00565962948974306317",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          3,
+          6
+        ],
+        "ratio_exact": "34282/34003",
+        "ratio_decimal": "1.00820515836837932",
+        "future_score_risk_decimal": "0.00589462043291408538",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          4,
+          5
+        ],
+        "ratio_exact": "33526/33211",
+        "ratio_decimal": "1.00948480924994732",
+        "future_score_risk_decimal": "0.00680960056269661572",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          4,
+          6
+        ],
+        "ratio_exact": "22178/21961",
+        "ratio_decimal": "1.0098811529529621",
+        "future_score_risk_decimal": "0.00709276028355554887",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          5,
+          6
+        ],
+        "ratio_exact": "131038/129643",
+        "ratio_decimal": "1.01076031872141181",
+        "future_score_risk_decimal": "0.00772046598596649435",
+        "contains_target": false
+      },
+      {
+        "design": [
+          3,
+          4,
+          5
+        ],
+        "ratio_exact": "4220/4157",
+        "ratio_decimal": "1.01515515997113304",
+        "future_score_risk_decimal": "0.0108501254850875261",
+        "contains_target": false
+      },
+      {
+        "design": [
+          3,
+          4,
+          6
+        ],
+        "ratio_exact": "125620/123667",
+        "ratio_decimal": "1.01579241026304512",
+        "future_score_risk_decimal": "0.0113027998325653124",
+        "contains_target": false
+      },
+      {
+        "design": [
+          3,
+          5,
+          6
+        ],
+        "ratio_exact": "82468/81073",
+        "ratio_decimal": "1.01720671493592185",
+        "future_score_risk_decimal": "0.0123064454523470427",
+        "contains_target": false
+      },
+      {
+        "design": [
+          4,
+          5,
+          6
+        ],
+        "ratio_exact": "480136/470371",
+        "ratio_decimal": "1.02076020843121706",
+        "future_score_risk_decimal": "0.0148219978787386773",
+        "contains_target": false
+      }
+    ],
+    "winner_count": 10,
+    "all_winners_contain_target": true
+  },
+  "noisy_catalogue": {
+    "epsilon": "1/10000",
+    "included_ratio": "1877/1875",
+    "included_future_risk_decimal": "0.00076902728013435943",
+    "ranking": [
+      {
+        "design": [
+          1,
+          2,
+          3
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          2,
+          4
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          2,
+          5
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          2,
+          6
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          3,
+          4
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          3,
+          5
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          3,
+          6
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          4,
+          5
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          4,
+          6
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          1,
+          5,
+          6
+        ],
+        "ratio_exact": "1877/1875",
+        "ratio_decimal": "1.00106666666666677",
+        "future_score_risk_decimal": "0.00076902728013435943",
+        "contains_target": true
+      },
+      {
+        "design": [
+          2,
+          3,
+          6
+        ],
+        "ratio_exact": "1828961429248/1804118444725",
+        "ratio_decimal": "1.0137701516192783",
+        "future_score_risk_decimal": "0.00986529623594506987",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          3,
+          5
+        ],
+        "ratio_exact": "522712930768/515460125745",
+        "ratio_decimal": "1.01407054524832052",
+        "future_score_risk_decimal": "0.0100790094742548002",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          3,
+          4
+        ],
+        "ratio_exact": "1384952831/1362663390",
+        "ratio_decimal": "1.01635726120153569",
+        "future_score_risk_decimal": "0.0117038075340311094",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          4,
+          6
+        ],
+        "ratio_exact": "38376251275948/37723035874025",
+        "ratio_decimal": "1.01731608781712035",
+        "future_score_risk_decimal": "0.0123840025646346514",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          4,
+          5
+        ],
+        "ratio_exact": "439245342931/430300944334",
+        "ratio_decimal": "1.02078637919524851",
+        "future_score_risk_decimal": "0.014840491912485123",
+        "contains_target": false
+      },
+      {
+        "design": [
+          2,
+          5,
+          6
+        ],
+        "ratio_exact": "300845512945939/291981170554720",
+        "ratio_decimal": "1.03035929465717979",
+        "future_score_risk_decimal": "0.0215737523123727196",
+        "contains_target": false
+      },
+      {
+        "design": [
+          3,
+          4,
+          6
+        ],
+        "ratio_exact": "54756141074237/52062204895646",
+        "ratio_decimal": "1.05174456564009833",
+        "future_score_risk_decimal": "0.0363921818632702149",
+        "contains_target": false
+      },
+      {
+        "design": [
+          3,
+          4,
+          5
+        ],
+        "ratio_exact": "139450088725057/130590843111622",
+        "ratio_decimal": "1.06783971526902999",
+        "future_score_risk_decimal": "0.0473475560311983762",
+        "contains_target": false
+      },
+      {
+        "design": [
+          3,
+          5,
+          6
+        ],
+        "ratio_exact": "1404250535781335/1293233484634562",
+        "ratio_decimal": "1.08584455356732734",
+        "future_score_risk_decimal": "0.0594087928929066603",
+        "contains_target": false
+      },
+      {
+        "design": [
+          4,
+          5,
+          6
+        ],
+        "ratio_exact": "1902345060919/1650301275000",
+        "ratio_decimal": "1.15272592328270496",
+        "future_score_risk_decimal": "0.102524766414978943",
+        "contains_target": false
+      }
+    ],
+    "winner_count": 10,
+    "all_winners_contain_target": true
+  },
+  "comparison_at_1e-4": {
+    "target_inclusive_ratio": "1877/1875",
+    "target_inclusive_future_risk": "0.0007690272801343594679816259139478736387129",
+    "best_target_excluding_design": [
+      2,
+      3,
+      6
+    ],
+    "best_target_excluding_ratio": "1828961429248/1804118444725",
+    "best_target_excluding_future_risk": "0.009865296235945143429737135628953509582710",
+    "excluding_to_including_risk_ratio": "12.82827864600790590385748209564108499203",
+    "including_improvement_percent": "92.20472186803336363383306421944485270394"
+  },
+  "formal_results": [
+    "sharp target transform lower bound L(log2)>=3/16",
+    "universal target-inclusive minimax ratio 1+32*epsilon/3",
+    "additional parameters alpha,beta>=1 are minimax-irrelevant",
+    "ten target-inclusive catalogue designs tie at both benchmarks",
+    "direct target inclusion changes the question from prediction to measurement"
+  ],
+  "gates": {
+    "q_normalized": true,
+    "p_normalized_symbolically": true,
+    "q_mean_exact": true,
+    "p_mean_exact_symbolically": true,
+    "target_lower_bound_affine_envelope_on_support": true,
+    "q_attains_target_lower_bound": true,
+    "target_difference_is_2epsilon": true,
+    "ratio_formula_exact": true,
+    "p_weights_nonnegative_through_1_over_128": true,
+    "finite_catalogue_difference_formulas_exact": true,
+    "all_expanded_catalogue_extra_constraints_satisfied": true,
+    "A43_target_excluding_certificates_pass": true,
+    "expanded_catalogue_has_20_designs_exact": true,
+    "expanded_catalogue_has_20_designs_noisy": true,
+    "exact_data_has_10_target_inclusive_winners": true,
+    "noisy_data_has_10_target_inclusive_winners": true,
+    "noisy_inclusive_ratio_is_1877_over_1875": true,
+    "noisy_inclusive_beats_best_excluding": true
+  },
+  "verdict": "PASS_TARGET_INCLUSION_DEGENERACY_AND_HONEST_ANCHOR_CONTRACT",
+  "boundary": "The universal theorem covers additional exponents at least as large as the target exponent and epsilon<=1/128. The catalogue comparison is limited to integer exponents {1,...,6}. No physical cost or noise law is inferred."
+}

@@ -1,0 +1,41 @@
+{
+  "audit": "A76_CANDIDATE_ORIENTATION_VERSUS_ACTUAL_ACTIVE_SET",
+  "verdict": "PASS_NO_ACTIVE_REENTRY_AT_M22_AND_ACTUAL_SIGN_FLIP_AT_M23",
+  "interval": {
+    "s_lower": "13/100",
+    "s_upper": "33/250",
+    "alpha_lower_decimal": "2.9213901653036336059578562977945610601314482456995",
+    "alpha_upper_decimal": "2.9434164716336325353438262047220856181012263842581",
+    "probe_s": "131/1000",
+    "probe_alpha_decimal": "2.9323612831246367645933635843121551247211225136260"
+  },
+  "candidate_gamma_plus_signs": {
+    "21": -1,
+    "22": 1,
+    "23": 1
+  },
+  "actual_selected_gamma_signs": {
+    "21": 1,
+    "22": 1,
+    "23": -1
+  },
+  "selected_condition_counts": {
+    "21": 51,
+    "22": 53,
+    "23": 55
+  },
+  "one_pivot_neighbors": {
+    "21": 145,
+    "22": 152,
+    "23": 159,
+    "total": 456
+  },
+  "one_pivot_failure_counts": {
+    "primal_infeasible": 329,
+    "active_dual_multiplier_infeasible": 55,
+    "reduced_cost_infeasible": 68,
+    "inactive_observation_slack_infeasible": 4
+  },
+  "central_result": "The A75 orientation re-entry at M=22 is not an active-set re-entry. The actual selected sequence is gamma+, gamma+, gamma-, with the real numerator-driven sign flip at M=23.",
+  "scope": "Exact on the declared interval and at the one-pivot probe; full-alpha phase atlases are numerical discovery only."
+}

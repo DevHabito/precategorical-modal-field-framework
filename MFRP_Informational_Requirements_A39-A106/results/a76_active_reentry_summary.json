@@ -1,0 +1,34 @@
+{
+  "audit": "A76_CANDIDATE_ORIENTATION_VERSUS_ACTUAL_ACTIVE_SET",
+  "gate_count": 6,
+  "pass_count": 6,
+  "candidate_gamma_plus_signs": {
+    "21": -1,
+    "22": 1,
+    "23": 1
+  },
+  "actual_selected_gamma_signs": {
+    "21": 1,
+    "22": 1,
+    "23": -1
+  },
+  "selected_condition_counts": {
+    "21": 51,
+    "22": 53,
+    "23": 55
+  },
+  "neighbor_counts": {
+    "21": 145,
+    "22": 152,
+    "23": 159,
+    "total": 456
+  },
+  "neighbor_failure_counts": {
+    "primal_infeasible": 329,
+    "active_dual_multiplier_infeasible": 55,
+    "reduced_cost_infeasible": 68,
+    "inactive_observation_slack_infeasible": 4
+  },
+  "failed_gates": [],
+  "verdict": "PASS_NO_ACTIVE_REENTRY_AT_M22_AND_ACTUAL_SIGN_FLIP_AT_M23"
+}

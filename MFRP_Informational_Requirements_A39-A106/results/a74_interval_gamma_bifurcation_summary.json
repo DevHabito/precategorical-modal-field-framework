@@ -1,0 +1,28 @@
+{
+  "audit": "A74_INTERVAL_STABLE_GAMMA_BIFURCATION_AND_M14_EXTENSION",
+  "verdict": "PASS_INTERVAL_STABLE_GAMMA_BIFURCATION_AND_M14_EXTENSION",
+  "common_interval": {
+    "lower": "13/100",
+    "upper": "33/250",
+    "alpha_lower_decimal": "2.9213901653036336059578562977945610601314482456995",
+    "alpha_upper_decimal": "2.9434164716336325353438262047220856181012263842581"
+  },
+  "signs": {
+    "M12_gamma_plus": "positive",
+    "M13_gamma_plus": "negative",
+    "M13_gamma_minus": "positive"
+  },
+  "M13_interval_stability": "gamma-plus negative and gamma-minus positive throughout exact phase 7",
+  "M14": {
+    "phase_count": 7,
+    "transition_count": 6,
+    "catalogue_winner": [
+      2,
+      3,
+      4
+    ],
+    "boundary_risk": "0.47782525205358922124201482550708069246660781964958",
+    "coalescence_risk": "1.1718060558950103085195664937838298326625372165651"
+  },
+  "scope": "Exact for the declared M=12,13 signature and the independent M=14 contract."
+}

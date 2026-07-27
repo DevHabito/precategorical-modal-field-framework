@@ -1,0 +1,369 @@
+{
+  "audit": "A92_EXACT_CONTINUUM_OFFSET_THREE_WINDOW_ATLAS",
+  "evidence_class": "exact finite continuum-parameter certificate by rational interval arithmetic and algebraic boundary bracketing",
+  "scope": {
+    "maximum_range": [
+      10,
+      520
+    ],
+    "probe_interval": [
+      "129/1000",
+      "133/1000"
+    ],
+    "claim": "complete decisive-factor atlas and strict local compressed-maximizer windows",
+    "explicit_nonclaim": "not a continuum global-maximizer or global one-variation theorem"
+  },
+  "summary": {
+    "nonempty_b_cell_count": 858,
+    "negative_cell_count": 833,
+    "full_positive_cell_count": 14,
+    "single_root_cell_count": 11,
+    "undecided_cell_count": 0,
+    "local_window_count": 25,
+    "full_positive_supports": [
+      325,
+      372,
+      378,
+      384,
+      390,
+      443,
+      449,
+      455,
+      490,
+      496,
+      502,
+      508,
+      514,
+      520
+    ],
+    "single_root_supports": [
+      360,
+      366,
+      425,
+      431,
+      437,
+      454,
+      460,
+      466,
+      472,
+      478,
+      484
+    ],
+    "all_window_supports": [
+      325,
+      360,
+      366,
+      372,
+      378,
+      384,
+      390,
+      425,
+      431,
+      437,
+      443,
+      449,
+      454,
+      455,
+      460,
+      466,
+      472,
+      478,
+      484,
+      490,
+      496,
+      502,
+      508,
+      514,
+      520
+    ],
+    "new_supports_beyond_A91_nine_probe_grid": [
+      360,
+      366,
+      425,
+      431,
+      437,
+      454,
+      466,
+      472,
+      478,
+      484
+    ],
+    "A91_grid_support_count": 15,
+    "continuum_window_support_count": 25,
+    "sparse_regression_count": 42
+  },
+  "root_windows": [
+    {
+      "maximum": 360,
+      "base_contact": 61,
+      "local_maximum_contact": 64,
+      "root_lower": "15258989594349144108948205319533518501/118059162071741130342400000000000000000",
+      "root_upper": "38147473985872860272370680605182959619/295147905179352825856000000000000000000",
+      "root_midpoint_decimal": "0.129248669282242563092131",
+      "upper_boundary_lower": "32333653174581683/250000000000000000",
+      "upper_boundary_upper": "129334612698326733/1000000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129334612698326732500000"
+    },
+    {
+      "maximum": 366,
+      "base_contact": 62,
+      "local_maximum_contact": 65,
+      "root_lower": "762021435454998053615005800960690651/5902958103587056517120000000000000000",
+      "root_upper": "1524042870909996107230022142750373631/11805916207174113034240000000000000000",
+      "root_midpoint_decimal": "0.129091452468879919329264",
+      "upper_boundary_lower": "4039485022650257/31250000000000000",
+      "upper_boundary_upper": "5170540828992329/40000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129263520724808224500000"
+    },
+    {
+      "maximum": 425,
+      "base_contact": 72,
+      "local_maximum_contact": 75,
+      "root_lower": "19072591515689496082438708104409838961/147573952589676412928000000000000000000",
+      "root_upper": "1192036969730593505152428118827621643/9223372036854775808000000000000000000",
+      "root_midpoint_decimal": "0.129240907226494696744036",
+      "upper_boundary_lower": "129283593664214653/1000000000000000000",
+      "upper_boundary_upper": "64641796832107327/500000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129283593664214653500000"
+    },
+    {
+      "maximum": 431,
+      "base_contact": 73,
+      "local_maximum_contact": 76,
+      "root_lower": "19055405192344790028349283593091566503/147573952589676412928000000000000000000",
+      "root_upper": "38110810384689580056698791120109664403/295147905179352825856000000000000000000",
+      "root_midpoint_decimal": "0.129124448169573642714452",
+      "upper_boundary_lower": "32305983481632849/250000000000000000",
+      "upper_boundary_upper": "129223933926531397/1000000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129223933926531396500000"
+    },
+    {
+      "maximum": 437,
+      "base_contact": 74,
+      "local_maximum_contact": 77,
+      "root_lower": "7615426303636977898676041592414169903/59029581035870565171200000000000000000",
+      "root_upper": "475964143977311118667254673438873977/3689348814741910323200000000000000000",
+      "root_midpoint_decimal": "0.129010339731351033977083",
+      "upper_boundary_lower": "32291478259767161/250000000000000000",
+      "upper_boundary_upper": "25833182607813729/200000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129165913039068644500000"
+    },
+    {
+      "maximum": 454,
+      "base_contact": 77,
+      "local_maximum_contact": 80,
+      "root_lower": "38235438466510801072409094256634218863/295147905179352825856000000000000000000",
+      "root_upper": "9558859616627700268102346435604270233/73786976294838206464000000000000000000",
+      "root_midpoint_decimal": "0.129546704535396358424613",
+      "upper_boundary_lower": "129582971565724137/1000000000000000000",
+      "upper_boundary_upper": "64791485782862069/500000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129582971565724137500000"
+    },
+    {
+      "maximum": 460,
+      "base_contact": 78,
+      "local_maximum_contact": 81,
+      "root_lower": "7640936064099563640551240433049401873/59029581035870565171200000000000000000",
+      "root_upper": "19102340160248909101378231873909463147/147573952589676412928000000000000000000",
+      "root_midpoint_decimal": "0.129442491883118538475402",
+      "upper_boundary_lower": "129523165143833857/1000000000000000000",
+      "upper_boundary_upper": "64761582571916929/500000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129523165143833857500000"
+    },
+    {
+      "maximum": 466,
+      "base_contact": 79,
+      "local_maximum_contact": 82,
+      "root_lower": "38174637508343791736424907849212467647/295147905179352825856000000000000000000",
+      "root_upper": "76349275016687583472850280597796718191/590295810358705651712000000000000000000",
+      "root_midpoint_decimal": "0.129340702876228009063362",
+      "upper_boundary_lower": "8091556210736431/62500000000000000",
+      "upper_boundary_upper": "129464899371782897/1000000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129464899371782896500000"
+    },
+    {
+      "maximum": 472,
+      "base_contact": 80,
+      "local_maximum_contact": 83,
+      "root_lower": "19072634862061739915261536822839345899/147573952589676412928000000000000000000",
+      "root_upper": "15258107889649391932209311081367511157/118059162071741130342400000000000000000",
+      "root_midpoint_decimal": "0.129241200952938172549761",
+      "upper_boundary_lower": "32352028870043047/250000000000000000",
+      "upper_boundary_upper": "129408115480172189/1000000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129408115480172188500000"
+    },
+    {
+      "maximum": 478,
+      "base_contact": 81,
+      "local_maximum_contact": 84,
+      "root_lower": "76233075047729877118495470396648547383/590295810358705651712000000000000000000",
+      "root_upper": "38116537523864938559247911577149712607/295147905179352825856000000000000000000",
+      "root_midpoint_decimal": "0.129143852471873800616972",
+      "upper_boundary_lower": "12935275765087783/100000000000000000",
+      "upper_boundary_upper": "129352757650877831/1000000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129352757650877830500000"
+    },
+    {
+      "maximum": 484,
+      "base_contact": 82,
+      "local_maximum_contact": 85,
+      "root_lower": "3047072165064726682346801063255990373/23611832414348226068480000000000000000",
+      "root_upper": "1523536082532363341173406507084677303/11805916207174113034240000000000000000",
+      "root_midpoint_decimal": "0.129048525823565868611968",
+      "upper_boundary_lower": "4040586651065807/31250000000000000",
+      "upper_boundary_upper": "5171950913364233/40000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129298772834105824500000"
+    }
+  ],
+  "full_positive_windows": [
+    {
+      "maximum": 325,
+      "base_contact": 55,
+      "local_maximum_contact": 58,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "129001034966776203/1000000000000000000",
+      "upper_boundary_upper": "32250258741694051/250000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129001034966776203500000"
+    },
+    {
+      "maximum": 372,
+      "base_contact": 63,
+      "local_maximum_contact": 66,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "64597361437939233/500000000000000000",
+      "upper_boundary_upper": "129194722875878467/1000000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129194722875878466500000"
+    },
+    {
+      "maximum": 378,
+      "base_contact": 64,
+      "local_maximum_contact": 67,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "8070506867353347/62500000000000000",
+      "upper_boundary_upper": "129128109877653553/1000000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129128109877653552500000"
+    },
+    {
+      "maximum": 384,
+      "base_contact": 65,
+      "local_maximum_contact": 68,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "129063579287150369/1000000000000000000",
+      "upper_boundary_upper": "12906357928715037/100000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129063579287150369500000"
+    },
+    {
+      "maximum": 390,
+      "base_contact": 66,
+      "local_maximum_contact": 69,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "129001034966776203/1000000000000000000",
+      "upper_boundary_upper": "32250258741694051/250000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129001034966776203500000"
+    },
+    {
+      "maximum": 443,
+      "base_contact": 75,
+      "local_maximum_contact": 78,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "129109464393673369/1000000000000000000",
+      "upper_boundary_upper": "12910946439367337/100000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129109464393673369500000"
+    },
+    {
+      "maximum": 449,
+      "base_contact": 76,
+      "local_maximum_contact": 79,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "129054524943216899/1000000000000000000",
+      "upper_boundary_upper": "1290545249432169/10000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129054524943216899500000"
+    },
+    {
+      "maximum": 455,
+      "base_contact": 77,
+      "local_maximum_contact": 80,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "129001034966776203/1000000000000000000",
+      "upper_boundary_upper": "32250258741694051/250000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129001034966776203500000"
+    },
+    {
+      "maximum": 490,
+      "base_contact": 83,
+      "local_maximum_contact": 86,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "129246110578887623/1000000000000000000",
+      "upper_boundary_upper": "16155763822360953/125000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129246110578887623500000"
+    },
+    {
+      "maximum": 496,
+      "base_contact": 84,
+      "local_maximum_contact": 87,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "64597361437939233/500000000000000000",
+      "upper_boundary_upper": "129194722875878467/1000000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129194722875878466500000"
+    },
+    {
+      "maximum": 502,
+      "base_contact": 85,
+      "local_maximum_contact": 88,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "6457228200571463/50000000000000000",
+      "upper_boundary_upper": "129144564011429261/1000000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129144564011429260500000"
+    },
+    {
+      "maximum": 508,
+      "base_contact": 86,
+      "local_maximum_contact": 89,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "129095590431999997/1000000000000000000",
+      "upper_boundary_upper": "64547795215999999/500000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129095590431999997500000"
+    },
+    {
+      "maximum": 514,
+      "base_contact": 87,
+      "local_maximum_contact": 90,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "25809552123613949/200000000000000000",
+      "upper_boundary_upper": "64523880309034873/500000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129047760618069745500000"
+    },
+    {
+      "maximum": 520,
+      "base_contact": 88,
+      "local_maximum_contact": 91,
+      "window_lower": "129/1000",
+      "upper_boundary_lower": "129001034966776203/1000000000000000000",
+      "upper_boundary_upper": "32250258741694051/250000000000000000",
+      "upper_boundary_midpoint_decimal": "0.129001034966776203500000"
+    }
+  ],
+  "gate_count": 18,
+  "pass_count": 18,
+  "gates": {
+    "sparse_generator_matches_A84_on_all_regressions": true,
+    "exact_algebraic_boundary_brackets_all_valid": true,
+    "all_858_nonempty_b_cells_classified": true,
+    "no_undecided_b_cells": true,
+    "classification_is_833_negative_14_positive_11_root": true,
+    "full_positive_support_set_matches_declared": true,
+    "root_window_support_set_matches_declared": true,
+    "all_25_window_supports_match_declared": true,
+    "all_11_roots_have_positive_derivative_certificates": true,
+    "all_root_brackets_have_width_at_most_1e_minus_24": true,
+    "all_isolated_roots_lie_strictly_inside_their_b_cells": true,
+    "all_nonwindow_cells_are_strictly_negative": true,
+    "ten_additional_supports_missed_by_nine_probe_grid": true,
+    "all_25_left_neighbor_factors_positive": true,
+    "all_25_right_neighbor_factors_negative": true,
+    "all_25_windows_are_strict_local_maximum_windows": true,
+    "local_not_global_claim_boundary_recorded": true,
+    "no_physical_interpretation_promoted": true
+  },
+  "verdict": "PASS_EXACT_CONTINUUM_DECISIVE_FACTOR_ATLAS_AND_25_LOCAL_OFFSET_THREE_WINDOWS"
+}

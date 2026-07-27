@@ -1,0 +1,231 @@
+{
+  "audit": "A41_PROVISIONAL_ROBUST_INTERVAL_DATA",
+  "general_results_proved_in_note": [
+    "compact noisy feasible classes attain sharp continuous-observable extrema",
+    "interval widths are monotone in observational tolerances",
+    "zero-noise limits converge to the exact finite-grid interval",
+    "dual envelopes incur the support-function penalty of the declared error set",
+    "finite-grid structural ambiguity is distinct from observational enlargement",
+    "no strong inverse stability for the full measure is possible on a nonidentifying finite grid"
+  ],
+  "continuous_support_A39_reuse": {
+    "exact_L_interval": {
+      "lower": [
+        "0.559957172058794458819917479126819715636352009",
+        "0.559957172058794458819917479126819715636352009"
+      ],
+      "upper": [
+        "0.563073517387442865855842794041514628784443068",
+        "0.563073517387442865855842794041514628784443068"
+      ]
+    },
+    "transform_only_penalty_coefficients": {
+      "lower": "0.7972062090339338333653528039798137933229190702071821384",
+      "upper": "0.8708803547704874735651802121547946613553679422842243288"
+    },
+    "table": [
+      {
+        "epsilon": "0.0",
+        "certified_L_lower": "0.5599571720587944588199174791268197156364",
+        "certified_L_upper": "0.5630735173874428658558427940415146287844",
+        "certified_future_lower": "1.828604795590842348631745597275476919959",
+        "certified_future_upper": "1.836611607040731068456574739280142840366",
+        "certified_future_width": "0.008006811449888719824829142004665920407478"
+      },
+      {
+        "epsilon": "1.0e-6",
+        "certified_L_lower": "0.5599563748525854248860841137740157358226",
+        "certified_L_upper": "0.5630743882677976363433163592217267835791",
+        "certified_future_lower": "1.82860256424136733590050315119433448081",
+        "certified_future_upper": "1.836613660994712625841498790982912533003",
+        "certified_future_width": "0.008011096753345289940995639788578052192421"
+      },
+      {
+        "epsilon": "1.0e-5",
+        "certified_L_lower": "0.5599491999967041194815838255987799174984",
+        "certified_L_upper": "0.5630822261909905707305784458436361767311",
+        "certified_future_lower": "1.828582482251391311264405272694873256456",
+        "certified_future_upper": "1.836632146712136770171429258088260101769",
+        "certified_future_width": "0.008049664460745458907023985393386845313041"
+      },
+      {
+        "epsilon": "0.0001",
+        "certified_L_lower": "0.559877451437891065436580943846421734257",
+        "certified_L_upper": "0.5631606054229199146031993120627301082506",
+        "certified_future_lower": "1.828381677724655874641817096847628989334",
+        "certified_future_upper": "1.836817016915037474460102712057862033122",
+        "certified_future_width": "0.008435339190381599818285615210233043787548"
+      },
+      {
+        "epsilon": "0.001",
+        "certified_L_lower": "0.559159965849760524986552126322839901843",
+        "certified_L_upper": "0.5639443977422133533294079742536694234458",
+        "certified_future_lower": "1.826375168178107323731599066994084868136",
+        "certified_future_upper": "1.838667023046656906807144938774464638797",
+        "certified_future_width": "0.0122918548685495830755458717803797706615"
+      }
+    ],
+    "gates": {
+      "A39_lower_krawczyk_recomputed": true,
+      "A39_upper_krawczyk_recomputed": true,
+      "A39_lower_global_sign_inputs_recomputed": true,
+      "A39_upper_global_sign_inputs_recomputed": true,
+      "lower_penalty_positive": true,
+      "upper_penalty_positive": true,
+      "noisy_intervals_nested_in_epsilon": true
+    }
+  },
+  "exact_finite_support_stress_test": {
+    "support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mean_exact": "5/2",
+    "observed_centers": {
+      "L_2log2": "455/2048",
+      "L_3log2": "12483/65536",
+      "L_4log2": "372827/2097152"
+    },
+    "target": "L_log2",
+    "epsilon_star": {
+      "exact": "437325/2210299904",
+      "decimal": "0.000197857765459143774183505552013994929803"
+    },
+    "dual_certificates": {
+      "lower_coefficients": [
+        "3427/25935",
+        "-31/1482",
+        "8876/2223",
+        "-11456/1729",
+        "2048/585"
+      ],
+      "lower_target_minus_envelope": [
+        "0",
+        "0",
+        "0",
+        "21/3952",
+        "0",
+        "0"
+      ],
+      "upper_coefficients": [
+        "3287/20475",
+        "-31/1170",
+        "1204/351",
+        "-480/91",
+        "23552/8775"
+      ],
+      "upper_target_minus_envelope": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-7/1664",
+        "0"
+      ]
+    },
+    "sharp_formulas": {
+      "L_lower": "-(23436032*epsilon - 543165)/1659840",
+      "L_upper": "(59696128*epsilon + 1723575)/5241600",
+      "L_width": "(2540388352*epsilon + 158025)/99590400",
+      "structural_width": "301/189696",
+      "observational_width_slope": "9923392/389025"
+    },
+    "primal_extremizers": {
+      "lower_weights": [
+        "-(16949888*epsilon - 519225)/3112200",
+        "(997495168*epsilon + 1760325)/10892700",
+        "-(478385792*epsilon - 310905)/1452360",
+        "0",
+        "(271935488*epsilon + 158025)/418950",
+        "-(2210299904*epsilon - 437325)/5446350"
+      ],
+      "upper_weights": [
+        "(164185088*epsilon + 4582725)/27518400",
+        "-(23407616*epsilon - 37275)/218400",
+        "(13085934592*epsilon + 3553725)/27518400",
+        "-(271935488*epsilon - 158025)/529200",
+        "0",
+        "(119996416*epsilon + 202125)/859950"
+      ]
+    },
+    "table": [
+      {
+        "epsilon": "0",
+        "sharp_L_lower": "5173/15808",
+        "sharp_L_upper": "3283/9984",
+        "sharp_future_lower": "2.052301592144633847018667977486516274762",
+        "sharp_future_upper": "2.055790877690461301866263950554876453468",
+        "sharp_future_width": "0.003489285545827454847595973068360178706429"
+      },
+      {
+        "epsilon": "1/1000000",
+        "sharp_L_lower": "8486586937/25935000000",
+        "sharp_L_upper": "26931792127/81900000000",
+        "sharp_future_lower": "2.052276608660765366979451650944253300675",
+        "sharp_future_upper": "2.055822002465245187563864312700547544544",
+        "sharp_future_width": "0.003545393804479820584412661756294243869432"
+      },
+      {
+        "epsilon": "1/100000",
+        "sharp_L_lower": "130512173/399000000",
+        "sharp_L_upper": "5388037379/16380000000",
+        "sharp_future_lower": "2.052051796235439461428984216342057038699",
+        "sharp_future_upper": "2.056102185888690026962635390554844008189",
+        "sharp_future_width": "0.004050389653250565533651174212786969489682"
+      },
+      {
+        "epsilon": "1/10000",
+        "sharp_L_lower": "338013373/1037400000",
+        "sharp_L_upper": "1080965383/3276000000",
+        "sharp_future_lower": "2.049807517126117864676811574479961154697",
+        "sharp_future_upper": "2.05891002198285678279593618117828140599",
+        "sharp_future_width": "0.009102504856738918119124606698320251293124"
+      }
+    ],
+    "gates": {
+      "lower_envelope_is_below_target_on_declared_support": true,
+      "lower_envelope_has_exact_positive_slack_only_at_x3": true,
+      "upper_envelope_is_above_target_on_declared_support": true,
+      "upper_envelope_has_exact_negative_slack_only_at_x4": true,
+      "lower_penalty_exact": true,
+      "upper_penalty_exact": true,
+      "primal_lower_equals_dual_formula_symbolically": true,
+      "primal_upper_equals_dual_formula_symbolically": true,
+      "lower_primal_constraints_exact": true,
+      "upper_primal_constraints_exact": true,
+      "lower_weights_nonnegative_on_certified_interval": true,
+      "upper_weights_nonnegative_on_certified_interval": true,
+      "breakpoint_is_lower_p5_zero": true,
+      "width_decomposition_exact": true
+    }
+  },
+  "gates": {
+    "continuous::A39_lower_krawczyk_recomputed": true,
+    "continuous::A39_upper_krawczyk_recomputed": true,
+    "continuous::A39_lower_global_sign_inputs_recomputed": true,
+    "continuous::A39_upper_global_sign_inputs_recomputed": true,
+    "continuous::lower_penalty_positive": true,
+    "continuous::upper_penalty_positive": true,
+    "continuous::noisy_intervals_nested_in_epsilon": true,
+    "finite::lower_envelope_is_below_target_on_declared_support": true,
+    "finite::lower_envelope_has_exact_positive_slack_only_at_x3": true,
+    "finite::upper_envelope_is_above_target_on_declared_support": true,
+    "finite::upper_envelope_has_exact_negative_slack_only_at_x4": true,
+    "finite::lower_penalty_exact": true,
+    "finite::upper_penalty_exact": true,
+    "finite::primal_lower_equals_dual_formula_symbolically": true,
+    "finite::primal_upper_equals_dual_formula_symbolically": true,
+    "finite::lower_primal_constraints_exact": true,
+    "finite::upper_primal_constraints_exact": true,
+    "finite::lower_weights_nonnegative_on_certified_interval": true,
+    "finite::upper_weights_nonnegative_on_certified_interval": true,
+    "finite::breakpoint_is_lower_p5_zero": true,
+    "finite::width_decomposition_exact": true
+  },
+  "verdict": "PASS_ROBUST_DUAL_STABILITY_WITH_EXACT_STRUCTURAL_NOISE_DECOMPOSITION",
+  "boundary": "The continuous-support noisy bounds reuse certified A39 envelopes and are rigorous outer bounds, not claimed sharp for positive tolerance. The six-point support result is sharp only under the explicitly declared finite-support, exact-mean, common-absolute-tolerance contract and only up to the certified breakpoint. No physical noise law, support, mark, or contraction is inferred."
+}

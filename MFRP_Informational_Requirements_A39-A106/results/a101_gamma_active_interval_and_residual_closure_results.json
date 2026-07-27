@@ -1,0 +1,142 @@
+{
+  "audit": "A101_GAMMA_ACTIVE_INTERVAL_AND_FINAL_RESIDUAL_CLOSURE",
+  "evidence_class": "exact rank-one symbolic interval certificate plus exact rational unrestricted KKT certificates at the final three residual witnesses",
+  "scope": {
+    "interval_contract": {
+      "maximum": 443,
+      "reference_probe": "13/100",
+      "search_interval": [
+        "129/1000",
+        "133/1000"
+      ]
+    },
+    "final_residual_keys": [
+      [
+        449,
+        "13/100",
+        79
+      ],
+      [
+        484,
+        "13/100",
+        85
+      ],
+      [
+        490,
+        "13/100",
+        86
+      ]
+    ],
+    "claim": "strict interval persistence of the A100 basis at M=443 and strict resolution of the final three A99 rational residual witnesses",
+    "explicit_nonclaim": "not an all-s interval theorem, not continuous certification of all 83 former obstructions, not a universal support law, and not a physical or ontological result"
+  },
+  "M443_interval_theorem": {
+    "P_support": [
+      77,
+      78,
+      443
+    ],
+    "Q_support": [
+      0,
+      1,
+      221,
+      222
+    ],
+    "active_bands": [
+      [
+        "alpha",
+        1
+      ],
+      [
+        "beta",
+        -1
+      ],
+      [
+        "gamma",
+        -1
+      ]
+    ],
+    "condition_count": 895,
+    "lower_boundary_condition": "active_dual_gamma_-1",
+    "upper_boundary_condition": "basic_p_77",
+    "lower_root_bracket": [
+      "129950386680648955573451/1000000000000000000000000",
+      "32487596670162238893363/250000000000000000000000"
+    ],
+    "upper_root_bracket": [
+      "130103853082902466513379/1000000000000000000000000",
+      "6505192654145123325669/50000000000000000000000"
+    ],
+    "component_width_midpoint_decimal": "0.000153466402253510939928000000000000000000000",
+    "nonboundary_numerator_count": 893,
+    "nonboundary_sign_failure_count": 0,
+    "pass": true
+  },
+  "final_residual_atlas": {
+    "tested_family": "P={j-1,j,M}, Q={0,1,h,h+1}, alpha+, beta-, gamma- active",
+    "record_count": 3,
+    "strict_pass_count": 3,
+    "failure_count": 0,
+    "pass_keys": [
+      [
+        449,
+        "13/100",
+        79
+      ],
+      [
+        484,
+        "13/100",
+        85
+      ],
+      [
+        490,
+        "13/100",
+        86
+      ]
+    ],
+    "failure_keys": [],
+    "total_strict_condition_count": 2873
+  },
+  "A95_obstruction_closure_accounting": {
+    "original_no_natural_lift_phase_count": 83,
+    "A97_endpoint_released_strict_pass_count": 76,
+    "A98_A99_q0q1_gamma_inactive_resolution_count": 3,
+    "A100_A101_q0q1_gamma_active_resolution_count": 4,
+    "resolved_count": 83,
+    "unresolved_rational_witness_count": 0,
+    "statement": "all 83 A95 rational witness obstructions now possess a strict exact full-LP KKT certificate, distributed across three active-set architectures"
+  },
+  "interpretation": {
+    "positive_result": "The A100 gamma-active basis persists on an exact open algebraic interval at M=443 and resolves the remaining M=449,484,490 witnesses without changing the contract.",
+    "structural_result": "The final seven A97 residuals split into three q0/q1 gamma-inactive bases and four q0/q1 plus lower-adjacent-P gamma-active bases.",
+    "negative_boundary": "The closure is at selected rational witnesses. It does not prove that the chosen bases persist throughout every A92 cell or that the three architectures exhaust all future contracts."
+  },
+  "gate_count": 23,
+  "pass_count": 23,
+  "gates": {
+    "A95_exact_rational_witness_obstruction_source_present_and_passed": true,
+    "A97_76_of_83_endpoint_released_source_present_and_passed": true,
+    "A99_four_remaining_residual_source_present_and_passed": true,
+    "A100_M443_gamma_active_source_present_and_passed": true,
+    "rank_one_symbolic_condition_count_is_895": true,
+    "rank_one_common_denominator_has_seven_terms": true,
+    "common_denominator_is_strictly_positive_on_boundary_hull": true,
+    "lower_boundary_is_active_gamma_minus_dual": true,
+    "upper_boundary_is_basic_p77_mass": true,
+    "lower_boundary_root_is_unique_and_simple": true,
+    "upper_boundary_root_is_unique_and_simple": true,
+    "both_boundary_conditions_are_positive_between_roots": true,
+    "all_893_nonboundary_numerators_are_positive_on_full_hull": true,
+    "M443_strict_component_certificate_passes": true,
+    "final_residual_atlas_contains_exactly_three_points": true,
+    "all_three_final_residuals_have_strict_global_KKT_passes": true,
+    "final_residual_pass_keys_are_M449_M484_M490": true,
+    "final_residual_condition_counts_are_907_977_989": true,
+    "all_2873_final_residual_KKT_conditions_are_strictly_positive": true,
+    "all_final_residual_primal_systems_close_exactly": true,
+    "all_final_residual_primal_and_dual_objectives_are_exactly_equal": true,
+    "all_83_A95_rational_witness_obstructions_are_now_resolved": true,
+    "formal_contract_and_nonphysical_scope_preserved": true
+  },
+  "verdict": "PASS_GAMMA_ACTIVE_M443_INTERVAL_AND_THREE_OF_THREE_FINAL_RESIDUAL_RESOLUTIONS"
+}

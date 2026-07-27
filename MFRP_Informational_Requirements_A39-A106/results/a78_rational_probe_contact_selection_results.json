@@ -1,0 +1,3096 @@
+{
+  "audit": "A78_EXACT_RATIONAL_PROBE_CONTACT_SELECTION",
+  "contract": {
+    "M_min": 10,
+    "M_max": 80,
+    "support": "{0,...,M}",
+    "mean": "M/2",
+    "target_exponent": 1,
+    "s0": "131/1000",
+    "alpha0_decimal": "2.932361283124637",
+    "beta_exponent": 3,
+    "gamma_exponent": 4,
+    "epsilon_even": "1/(1875*2^(M/2))",
+    "epsilon_odd": "1/(2500*2^floor(M/2))"
+  },
+  "candidate_families": {
+    "three_band_adjacent": "P={0,k,k+1,M}, Q={1,h,h+1}, active={alpha+,beta-,gamma\u00b1}",
+    "two_band_compressed": "P={0,k,M}, Q={1,h,h+1}, active={alpha+,beta-}, gamma inactive"
+  },
+  "branch_count": 9230,
+  "expected_branch_count": 9230,
+  "status_counts": {
+    "three_band_adjacent": {
+      "primal_infeasible": 5964,
+      "active_dual_infeasible": 74,
+      "pass": 68
+    },
+    "two_band_compressed": {
+      "primal_infeasible": 2620,
+      "reduced_cost_infeasible": 441,
+      "inactive_slack_infeasible": 60,
+      "pass": 3
+    }
+  },
+  "selected_support_count": 71,
+  "three_band_selection_count": 68,
+  "two_band_compression_count": 3,
+  "compressed_supports": [
+    40,
+    57,
+    74
+  ],
+  "negative_gamma_supports": [
+    13,
+    18,
+    23,
+    28,
+    29,
+    34,
+    45,
+    51,
+    56,
+    62,
+    68
+  ],
+  "contact_runs": [
+    {
+      "M_start": 10,
+      "M_end": 13,
+      "family": "three_band_adjacent",
+      "contact": 3,
+      "length": 4
+    },
+    {
+      "M_start": 14,
+      "M_end": 18,
+      "family": "three_band_adjacent",
+      "contact": 4,
+      "length": 5
+    },
+    {
+      "M_start": 19,
+      "M_end": 23,
+      "family": "three_band_adjacent",
+      "contact": 5,
+      "length": 5
+    },
+    {
+      "M_start": 24,
+      "M_end": 29,
+      "family": "three_band_adjacent",
+      "contact": 6,
+      "length": 6
+    },
+    {
+      "M_start": 30,
+      "M_end": 34,
+      "family": "three_band_adjacent",
+      "contact": 7,
+      "length": 5
+    },
+    {
+      "M_start": 35,
+      "M_end": 39,
+      "family": "three_band_adjacent",
+      "contact": 8,
+      "length": 5
+    },
+    {
+      "M_start": 40,
+      "M_end": 40,
+      "family": "two_band_compressed",
+      "contact": 9,
+      "length": 1
+    },
+    {
+      "M_start": 41,
+      "M_end": 45,
+      "family": "three_band_adjacent",
+      "contact": 9,
+      "length": 5
+    },
+    {
+      "M_start": 46,
+      "M_end": 51,
+      "family": "three_band_adjacent",
+      "contact": 10,
+      "length": 6
+    },
+    {
+      "M_start": 52,
+      "M_end": 56,
+      "family": "three_band_adjacent",
+      "contact": 11,
+      "length": 5
+    },
+    {
+      "M_start": 57,
+      "M_end": 57,
+      "family": "two_band_compressed",
+      "contact": 12,
+      "length": 1
+    },
+    {
+      "M_start": 58,
+      "M_end": 62,
+      "family": "three_band_adjacent",
+      "contact": 12,
+      "length": 5
+    },
+    {
+      "M_start": 63,
+      "M_end": 68,
+      "family": "three_band_adjacent",
+      "contact": 13,
+      "length": 6
+    },
+    {
+      "M_start": 69,
+      "M_end": 73,
+      "family": "three_band_adjacent",
+      "contact": 14,
+      "length": 5
+    },
+    {
+      "M_start": 74,
+      "M_end": 74,
+      "family": "two_band_compressed",
+      "contact": 15,
+      "length": 1
+    },
+    {
+      "M_start": 75,
+      "M_end": 79,
+      "family": "three_band_adjacent",
+      "contact": 15,
+      "length": 5
+    },
+    {
+      "M_start": 80,
+      "M_end": 80,
+      "family": "three_band_adjacent",
+      "contact": 16,
+      "length": 1
+    }
+  ],
+  "compressed_transition_witnesses": [
+    {
+      "maximum": 40,
+      "compressed_contact": 9,
+      "left_adjacent_family": {
+        "contact": 8,
+        "gamma_sign": 1,
+        "status": "active_dual_infeasible",
+        "first_failure": {
+          "name": "active_dual_gamma_+1",
+          "value": "-1302314554019738896625653273902926406821098893481597790772557067145317370376039632490742124198682960140100652542252683522115121819743912641285071900246016/457133880228332009933117632432748319581478892201663463729425326638444005962618914197360951048444828557440045359716312897804628139511050417932127433377"
+        }
+      },
+      "right_adjacent_family": {
+        "contact": 9,
+        "gamma_sign": -1,
+        "status": "active_dual_infeasible",
+        "first_failure": {
+          "name": "active_dual_gamma_-1",
+          "value": "-3305819150895474911217353733591001020987049400133286878085611541470937691077229057497419066583151578704836155493462888210933371540342286060530316288720896/157439969645345765641359273500758704896445561202023790833819576625942325765442825447928025159946829163061418910866617153102069307543920569839875808349"
+        }
+      }
+    },
+    {
+      "maximum": 57,
+      "compressed_contact": 12,
+      "left_adjacent_family": {
+        "contact": 11,
+        "gamma_sign": 1,
+        "status": "active_dual_infeasible",
+        "first_failure": {
+          "name": "active_dual_gamma_+1",
+          "value": "-28440469161139901781017029129937392143892149730067069483743684853409781467371369712952672176907364608467064679048853288340651816704260419812310484662860067991184086372092003062941727095410232115849417063775415513085116416/275888332095428002863103868408320834485943958726324477235327259778644508719715417344487221702377724123204722085274996587194864872056873880240886097026551758392107276007992309461217631834497463584720356099346243535103"
+        }
+      },
+      "right_adjacent_family": {
+        "contact": 12,
+        "gamma_sign": -1,
+        "status": "active_dual_infeasible",
+        "first_failure": {
+          "name": "active_dual_gamma_-1",
+          "value": "-2625617557857984565918598221548591319461715600062780424115599896992774160820358166424183283595471160350317257613355771378704755377301603050975227621363322361196288530412805523838857368702625585182045821613010851719020544/2902316753834656766964766994439930336463749832694817875857464461710476443170665346886623012948005500001445740150937489026495016492871369274228981537081727575146376396477854840885674541784263059088254580834340489353"
+        }
+      }
+    },
+    {
+      "maximum": 74,
+      "compressed_contact": 15,
+      "left_adjacent_family": {
+        "contact": 14,
+        "gamma_sign": 1,
+        "status": "active_dual_infeasible",
+        "first_failure": {
+          "name": "active_dual_gamma_+1",
+          "value": "-96213084838767140230204180161154212232701915064262673709865648749752958179445497556150473416044981243129110551396815720677716351522297535503836796455959251093905073273284777355401972209486559443531517209269222498628653252944313374082286508243012461499253395913310748043634337606795264/19058605646555412013547052564006793354770730782456721927136538881130796886082646324024603668473766146143311607373666866590612423537122186952804304131745755663069703477822320918900151306280923014404105788860195889091463116671121250438663196121218974395056897894698631971096592607"
+        }
+      },
+      "right_adjacent_family": {
+        "contact": 15,
+        "gamma_sign": -1,
+        "status": "active_dual_infeasible",
+        "first_failure": {
+          "name": "active_dual_gamma_-1",
+          "value": "-277482883917058341374448103230654156350143958186516147288047325273490872508412205674144034403320071673395284980083236891944381085487883055389063811447278085603200179534530992938617370887533184489063366674576369839526997616303409220604324200608928203562587355575542872490532979287558979584/6659034863292444211880448258947695088633738405252118353013541155466585862208955707092002730266147792249999761603672051696224827076453715659013372029860682334159953098205306113618992308726331247261924673021950572369086495343715722021198731347743438685527936233755829725013278566237"
+        }
+      }
+    }
+  ],
+  "selected": [
+    {
+      "family": "three_band_adjacent",
+      "maximum": 10,
+      "contact": 3,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        3,
+        4,
+        10
+      ],
+      "q_support": [
+        1,
+        5,
+        6
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "1282078264232052789891413109800021447/592659235193930755471714751682590192",
+      "condition_count": 29,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 15,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 11,
+      "contact": 3,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        3,
+        4,
+        11
+      ],
+      "q_support": [
+        1,
+        5,
+        6
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "1276957454785697605353749437000285828540717/521616769780266201631145173283691832504912",
+      "condition_count": 31,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 17,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 12,
+      "contact": 3,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        3,
+        4,
+        12
+      ],
+      "q_support": [
+        1,
+        6,
+        7
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "172874622506232016203346823900400439933425187/57641982624166514736644035943804941001175472",
+      "condition_count": 33,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 19,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 13,
+      "contact": 3,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        3,
+        4,
+        13
+      ],
+      "q_support": [
+        1,
+        6,
+        7
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "1924934608898149518612574276712417477692260469115893/535803440643590521952149064149152223661554253472208",
+      "condition_count": 35,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 21,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 14,
+      "contact": 4,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        4,
+        5,
+        14
+      ],
+      "q_support": [
+        1,
+        7,
+        8
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "625390620896035558144837834571514788332631153372967887/134226952365222880431256520263365322374060871665150560",
+      "condition_count": 37,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 23,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 15,
+      "contact": 4,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        4,
+        5,
+        15
+      ],
+      "q_support": [
+        1,
+        7,
+        8
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "4738535313447985024884757432950068735318998429494711618557/894339843887829591009016261865800692965326528986805840160",
+      "condition_count": 39,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 25,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 16,
+      "contact": 4,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        4,
+        5,
+        16
+      ],
+      "q_support": [
+        1,
+        8,
+        9
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "8347499706818736452289882019229013863952919088268142184393701/1271264575302173357232501850939514574089482537694767839483136",
+      "condition_count": 41,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 27,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 17,
+      "contact": 4,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        4,
+        5,
+        17
+      ],
+      "q_support": [
+        1,
+        8,
+        9
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "1068059036911574711170560818090166686792361927975754162645378345769/136718301650074458176638495214966758467739912791477198694944790784",
+      "condition_count": 43,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 29,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 18,
+      "contact": 4,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        4,
+        5,
+        18
+      ],
+      "q_support": [
+        1,
+        9,
+        10
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "120530402677163561593993544179210067370603224640364801441703739924426197/11596624657981803738885531834847966844661173447036172978502606591164928",
+      "condition_count": 45,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 31,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 19,
+      "contact": 5,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        5,
+        6,
+        19
+      ],
+      "q_support": [
+        1,
+        9,
+        10
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "177461868239555157549597424454326479649315894245546924207031662104303516461/13980948139793716183043955802893345737406580521972388525227530459523837184",
+      "condition_count": 47,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 33,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 20,
+      "contact": 5,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        5,
+        6,
+        20
+      ],
+      "q_support": [
+        1,
+        10,
+        11
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "469893435703544823130981289411258154176347642359722555314462647066756871346899/30578663265083775641924127002297889617164102958849814172750489163127944566528",
+      "condition_count": 49,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 35,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 21,
+      "contact": 5,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        5,
+        6,
+        21
+      ],
+      "q_support": [
+        1,
+        10,
+        11
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "107947149661496166202094030698349292032675952732232433818368694987171956454726279/6009220568805723521582305129029929707072907187113960975642087545762291213957888",
+      "condition_count": 51,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 37,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 22,
+      "contact": 5,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        5,
+        6,
+        22
+      ],
+      "q_support": [
+        1,
+        11,
+        12
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "1084147809969504582260443620397703294456978569361378263466518009477410425562058806640501/46741625535624491060807188604301029294544311840611553410137185160469525324691318198272",
+      "condition_count": 53,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 39,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 23,
+      "contact": 5,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        5,
+        6,
+        23
+      ],
+      "q_support": [
+        1,
+        11,
+        12
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "17868404421091541992447122908890140996504685374067046869592450296276988419184895063176653511/629877087488476948764428552945390238342409242285983136336717278417016265618807928954580992",
+      "condition_count": 55,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 41,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 24,
+      "contact": 6,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        6,
+        7,
+        24
+      ],
+      "q_support": [
+        1,
+        12,
+        13
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "5162920418375118847365984902256772820045933935817544644727102892379821491639596237616836315/134601925960575742614795542998860882622741697158411446286446753748416744283843247721132032",
+      "condition_count": 57,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 43,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 25,
+      "contact": 6,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        6,
+        7,
+        25
+      ],
+      "q_support": [
+        1,
+        12,
+        13
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "392335268766826084676782147515016808195581967381311895688033837383223452073388537477314637982695/8975469249875645209998945874529847374903437095234933771796788906665649330868997472936262660096",
+      "condition_count": 59,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 45,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 26,
+      "contact": 6,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        6,
+        7,
+        26
+      ],
+      "q_support": [
+        1,
+        13,
+        14
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "38460816449952544454281216131866429324861281415090370783577178181577237208638399884598348191106951695/706483678701484044010955014497244475835121592119495560254158930112064340128335655528463120674212864",
+      "condition_count": 61,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 47,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 27,
+      "contact": 6,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        6,
+        7,
+        27
+      ],
+      "q_support": [
+        1,
+        13,
+        14
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "489787952631760300206004332322838570780125364031941085905132108076679395049386672759288720491517233545/7542657797637695337398085607342120903713409176494589023881922313352841234293724093974876962395689984",
+      "condition_count": 63,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 49,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 28,
+      "contact": 6,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        6,
+        7,
+        28
+      ],
+      "q_support": [
+        1,
+        14,
+        15
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "842613769552523240731821554859689570939549114534139217226969783447660183622748845387852076117142727780609303575/9787847238093487037340603857310781259406634522497473014481048475723843688080373164451370938600248931688841216",
+      "condition_count": 65,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 51,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 29,
+      "contact": 6,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        6,
+        7,
+        29
+      ],
+      "q_support": [
+        1,
+        14,
+        15
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "484006413857319205429265805710903764604017891122874124809930702755189622668145140033076048367503098525771311871737575/4506212948163983632858789956529162655885392687221921902180463058569533594248057491099564384879815598314748493889536",
+      "condition_count": 67,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 53,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 30,
+      "contact": 7,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        7,
+        8,
+        30
+      ],
+      "q_support": [
+        1,
+        15,
+        16
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "82902231398269618244175934230169839925984982866902929537501457772175648215541680067601845413170234613568020485220358963/611677256669457874130318716565307291835270254028439489041428367651038174875754395394891826804546814032391343816507392",
+      "condition_count": 69,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 55,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 31,
+      "contact": 7,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        7,
+        8,
+        31
+      ],
+      "q_support": [
+        1,
+        15,
+        16
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "106231617300035031590828418548156334263016650006113632005095818215418737393483628163797654570035361392285473086294547449287/676782058030910806380811003869172061281176705468909255467935787346519306640225718258947482567235651837163370629464260608",
+      "condition_count": 71,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 57,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 32,
+      "contact": 7,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        7,
+        8,
+        32
+      ],
+      "q_support": [
+        1,
+        16,
+        17
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "353922110442102432350383694409865937422248711981444394530780414117587721874903368765641335972723789374611763487957860868904711/1770125161998088113226152035051895719545345769839455719050145486121774134908232768589608380862540184697020976747558215286784",
+      "condition_count": 73,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 59,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 33,
+      "contact": 7,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        7,
+        8,
+        33
+      ],
+      "q_support": [
+        1,
+        16,
+        17
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "1160165414686628165983495250823596188177618029018666606635087448271981727484635470307930929959524353074139446376473167685728470396241/4789597552475875758002090213227384948758431244211259825129443327406358201220552312521570313096862122056722357372073158666321199104",
+      "condition_count": 75,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 61,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 34,
+      "contact": 7,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        7,
+        8,
+        34
+      ],
+      "q_support": [
+        1,
+        17,
+        18
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "2522859687709479798009276666858532037435683719958599409481755310625018656222394433178447451875019016378111681934820590670241523903712931/7687416971993604597485575514776027445400684011694153053802724783761087991839641337656796282260488866798750220041472862605298159845376",
+      "condition_count": 77,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 63,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 35,
+      "contact": 8,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        8,
+        9,
+        35
+      ],
+      "q_support": [
+        1,
+        17,
+        18
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "77451665056054765499826628725210668178772704650795776989095343170962713157200439285805250759802133575990970033162042021842234924045847083/191066879630416843671769864903084841312649569327234401089462913813272321535222660084125008341327943830242785403397434445750315603197952",
+      "condition_count": 79,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 65,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 36,
+      "contact": 8,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        8,
+        9,
+        36
+      ],
+      "q_support": [
+        1,
+        18,
+        19
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "33568716285219386860439756814717935528777462030768176099585900115708876767628756116811841434699665731784463390494809157699181536084370293/68145108898635159745995652293547989986621824973043474370035453388408027993351316043509056656815763889350331414905207316691828211712000",
+      "condition_count": 81,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 67,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 37,
+      "contact": 8,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        8,
+        9,
+        37
+      ],
+      "q_support": [
+        1,
+        18,
+        19
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "864206065083596817774082388886068783059901757777769776541251834643973150087229623749561783921723021374990816168756640539210801233418715620912196033/1493993473172925263688071848539582467972275526572347299050238933102628907334470226244173894561344513690399775836805215462882312012627823951872000",
+      "condition_count": 83,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 69,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 38,
+      "contact": 8,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        8,
+        9,
+        38
+      ],
+      "q_support": [
+        1,
+        19,
+        20
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "1178416940133534464093253298435885142080626578101995334909959480468744836264518268757319658232590670366599751310015526814336917113258091486282394940037/1570021372330595664848282545092547223717457447271961175875524221439048359322981006215209770222967075091730262526841373099444878928391411231145066496",
+      "condition_count": 85,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 71,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 39,
+      "contact": 8,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        8,
+        9,
+        39
+      ],
+      "q_support": [
+        1,
+        19,
+        20
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "69378661435606137977831990163325894795249180692791365588858012178569154565491534397886323916294017343113375484228471560444140192329080857972254640699/75368184962858499325091314805217099783902314333941966791941473782546157208979340639603302349378785865680728405403344154422602544583697182587092992",
+      "condition_count": 87,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 73,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "two_band_compressed",
+      "maximum": 40,
+      "contact": 9,
+      "gamma_sign": null,
+      "p_support": [
+        0,
+        9,
+        40
+      ],
+      "q_support": [
+        1,
+        20,
+        21
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "ratio_exact": "425014490581740837262844489964161931161771557465874012782735391930131951642314649933697269300768849286622836038357289879961815389326033095680000/335402961830173624198481680459780119778958430727254763507877714395660095163146710301950283794680835868191473303985676269786542055874898862179",
+      "condition_count": 89,
+      "condition_class_counts": {
+        "basic": 7,
+        "active_dual": 2,
+        "reduced_cost": 76,
+        "inactive_slack": 4
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 41,
+      "contact": 9,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        9,
+        10,
+        41
+      ],
+      "q_support": [
+        1,
+        20,
+        21
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "727294721590236399917803025419313113037768090136047114917000683701102325869256831479194202523404467950836213803387368844712240668881568493692817478342820084787549/492319929562357724330199704639012521058118017409960335282415060571126444846701039554070108560471164460536667601694962595011715660410710446875236418804182417408",
+      "condition_count": 91,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 77,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 42,
+      "contact": 9,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        9,
+        10,
+        42
+      ],
+      "q_support": [
+        1,
+        21,
+        22
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "81021735495910024289891938899979954637744785418887332390174101400287185370933402290808649957629729632756705695321369813673007404767631987521965725696641392723636221/44381681593670757653030501709167764841146070080844927650959602602029883889197595200892607630796882359561578620218624144549701732263866543436060880172316767551488",
+      "condition_count": 93,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 79,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 43,
+      "contact": 9,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        9,
+        10,
+        43
+      ],
+      "q_support": [
+        1,
+        21,
+        22
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "175065332126162988868882342199721238242296441118364127189156859747743100801662633414799467280850185343656319758681930529541304978208309726985027956327512895804650551290439/80698584336444126199486012285164815183854972649178192914794403128491013076783726111284680129950676592278432384220018199891305271788613326946016544993902798146468052992",
+      "condition_count": 95,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 81,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 44,
+      "contact": 9,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        9,
+        10,
+        44
+      ],
+      "q_support": [
+        1,
+        22,
+        23
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "354531459726934688678066628780993762294629646668256831940059404219252929063163404410192985450123416545599360150296849922567931567985622463612216454923892205596020156305991071507/124025581106303127752875101076977363997152272960109882869204999803212741741422335627085916484808287397023395641340881962874229593475703038420530563173478769214199168805896192",
+      "condition_count": 97,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 83,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 45,
+      "contact": 9,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        9,
+        10,
+        45
+      ],
+      "q_support": [
+        1,
+        22,
+        23
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "4076867160077002403475670892566710144172482059253689129815853395824479313416742559501422101040389275270335597825077969076671215972879045360943428917827364004536935447851096643/1150588894514897753333514354402811882300164807462865654320065755839757614622578918121017859257399377452831923656665817545900935033786750853688886088851599760857039800107008",
+      "condition_count": 99,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 85,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 46,
+      "contact": 10,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        10,
+        11,
+        46
+      ],
+      "q_support": [
+        1,
+        23,
+        24
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "739466560140355013482844748303509067295119475723464465575326443550373447519051721051805892598298023115190050817853665953375617282192749200318824724617809725289770336002562931726762575/154888301477890142505052765402060206165848694121776507020367167170302501034625351406641977844827057225719764329201847320910620822932151631479517610232497087488692809031594213900288",
+      "condition_count": 101,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 87,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 47,
+      "contact": 10,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        10,
+        11,
+        47
+      ],
+      "q_support": [
+        1,
+        23,
+        24
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "15682257731193078536230866311241294180249873639929942017832880946828191074397098377850697951909142113037675019369376714507916384859418292720555568996986329500280157342297880117203822604975/2867220809135338364070206877612459452428244030352447171899602044113473657865854074990426005508640512112557403868577034724463137387252906397783656389264423489734072193764750615960879104",
+      "condition_count": 103,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 89,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 48,
+      "contact": 10,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        10,
+        11,
+        48
+      ],
+      "q_support": [
+        1,
+        24,
+        25
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "862270193671632475424027913449579775864345094314003001866088949749311570747110511064741505722590353352639770794105121961053864995855369357147628069364196291213510479440621943515922340131646519/125677846000712780066726885199745663363062279098196792912726587973521174386809071336813269147951021775221016745243305204351344599357357839721070557599137067632191793998683050362731273125888",
+      "condition_count": 105,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 91,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 49,
+      "contact": 10,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        10,
+        11,
+        49
+      ],
+      "q_support": [
+        1,
+        24,
+        25
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "9565088570859015670165551094133966279434970034689672008311307945829461711610700506803999481187755902202764696705905549849568581013338168535707908806040061474073036953073287602191693311961151433401/1161161391565425541801337912043667823155047419565341286299071895525788161327806784070205273904567976404306692703579403512393180192080555422671353344045638175591194959680161233476173308679421952",
+      "condition_count": 107,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 93,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 50,
+      "contact": 10,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        10,
+        11,
+        50
+      ],
+      "q_support": [
+        1,
+        25,
+        26
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "52456834622867901269496905604103380595541663244580910817505493221472984624911395125854078545764415173598198208009965917968571902014360697253412061108725349074834836020246142718265969058717338815989/4770432373642094872843159151380108492699744525100329779838432766247154269745183543779777247532760482455619841712493829788050981453974315577480205139576915454506759220132786971031209830097354752",
+      "condition_count": 109,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 95,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 51,
+      "contact": 10,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        10,
+        11,
+        51
+      ],
+      "q_support": [
+        1,
+        25,
+        26
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "26249519858279941538037063675320239499780086456116201845180810245013200905296578007581433080792926992470260631577673686250155442549042935169292266457099572800638381965848590333539997808639993520497393402843/1906857668217921750347478485873076760265177810104155126329146528693095638122184264821642432396131875183395122783293027385810275189560788691493243245923265498047153947690708586223899649266397230424653824",
+      "condition_count": 111,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 97,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 52,
+      "contact": 11,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        11,
+        12,
+        52
+      ],
+      "q_support": [
+        1,
+        26,
+        27
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "136172332534945627532245958877672498003933204856958844359153797270886254772523831739162031419296170784572929129970665740059462881154836672438662772464429061407150144947297173222896960190428193277723876132054837/7686117815283617454947479888887831481261172688963309972824232957295690653341743330415536465103027320980919333077235548056057615666637226371785389447266554870707598929083109176205212190365677983882765402112",
+      "condition_count": 113,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 99,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 53,
+      "contact": 11,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        11,
+        12,
+        53
+      ],
+      "q_support": [
+        1,
+        26,
+        27
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "3294753209646161037593530623296464304594503740409020565108539325259335827492348058268129992615431164569546845331592590781653199250001397553378282046966852922706159374372370841770726295670571226149393727885547753/160756194961177033283510779533315674307643327560829249491591298280031289697245718697884798137340287482412782044602257730750596360361032261360979233576560632639367145123510709414153105757266636821435124809728",
+      "condition_count": 115,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 101,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 54,
+      "contact": 11,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        11,
+        12,
+        54
+      ],
+      "q_support": [
+        1,
+        27,
+        28
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "484135511681773552156704181846055757906115753688622157740651719078856633986561838474826871804984262923077554058898765221156381123207777481730933991044978181465988822099009087217514565782765763381759536329831688169/18580164345095081174217911072086871974121087753827867940006740095063803215987734999463186840921000594272916796425910021489593957043240886279173456293263209654887135084032700360355754981108719132297877310668800",
+      "condition_count": 117,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 103,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 55,
+      "contact": 11,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        11,
+        12,
+        55
+      ],
+      "q_support": [
+        1,
+        27,
+        28
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "12632001530053368416005488028929256913760856724340796461877714527215239215637936221029419660664812802366289934061119735045862516225074420927452089941944486926235805293639596673055916799326432387590246345188736875369707/400164685593308006809118325980019230206844741303282846994627603413549267413626140359724705451210824999681540793040380810512112640627659084886352375907831891643689673359824013926606584505823224004059477485971046400",
+      "condition_count": 119,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 105,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 56,
+      "contact": 11,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        11,
+        12,
+        56
+      ],
+      "q_support": [
+        1,
+        28,
+        29
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "24917317807938995661181861001558352241841256771354874748522851344418835146720048109245581699863225525002664101736780192331723601329925617794874574749183607477595879817568611179460615929246213244014654394234793456978472610563/584780131960878602910281299804612391535740969992773589798904138978347324795796732539267753810502210142550411381951157885261794708476301853584591813830193226253082667748797394285042767817513796183048884222543487872008192",
+      "condition_count": 121,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 107,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "two_band_compressed",
+      "maximum": 57,
+      "contact": 12,
+      "gamma_sign": null,
+      "p_support": [
+        0,
+        12,
+        57
+      ],
+      "q_support": [
+        1,
+        28,
+        29
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "ratio_exact": "460816889457541018073531691910874774463248945047864149545929293366620018504671154924247808295588180402747076285841322688254691031782732079261351456689990532566873279358607954525021057806396973301760000/8575127745032534497149298536878370069012033288217449987681340081228607886067072413352994425432751771304869945166437751008330465722461840292062031803755990337633964492991431800586090350027664548421",
+      "condition_count": 123,
+      "condition_class_counts": {
+        "basic": 7,
+        "active_dual": 2,
+        "reduced_cost": 110,
+        "inactive_slack": 4
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 58,
+      "contact": 12,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        12,
+        13,
+        58
+      ],
+      "q_support": [
+        1,
+        29,
+        30
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "6112854688394764609901826151597859105812782422711295417496047532100425899678054516926732751751389309447042474984052174955950895754590508717672158752867588711873552368393919030027703349458288937670569048604119215864321740142153806913/92037716831601650406020865648240746715622558315347234518601221884420912172039387041970661843891565240357440796438247886827166094337579468560401519281912073529733847994099823405871557452080641688150725361031126715922519783636992",
+      "condition_count": 125,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 111,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 59,
+      "contact": 12,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        12,
+        13,
+        59
+      ],
+      "q_support": [
+        1,
+        29,
+        30
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "612579325191271315698184381580420738688564895437753754482576690832809226082060799351335450057010819974493418047121208952521965545196095820574011813454950373931014473701801501061170925400797385413811103364133469953073567696801618193536277/7901743710502873706731171287195560339535123030283821542878207309806544627191066588166210552209928153267193263175003348201808095434817303332777770011614480723537941761427544289396744577995208971742349415573496636036283563543749459968",
+      "condition_count": 127,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 113,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 60,
+      "contact": 12,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        12,
+        13,
+        60
+      ],
+      "q_support": [
+        1,
+        30,
+        31
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "571111282982677245141274614108368610208829015556425538401581103861361680122322029567035785911392043989083166748477964622378277000861831087175661034030375767968290313580039244331999227162127697191806336980848699670317110911583505835181/5725082474246366713537701065033023787653227405650147645939551721679627310712531374022938838485236070366858709282131669549379858896027684167120270470416556612896739871377097513029590110691964869483013590456876930653133389149765632",
+      "condition_count": 129,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 115,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 61,
+      "contact": 12,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        12,
+        13,
+        61
+      ],
+      "q_support": [
+        1,
+        30,
+        31
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "156846923158237519372549001995155368246322103772628016941515284433769095513980088949300839920257551466986580060754944340284058309358405214865393842864968645973884736897179850447238373607601355298122814375387981079492423168780454689506955310371/1287628381437657410644937469713432987439137573219415351575170212841481664021907201798905968023299051733167046397936555550359554618606248469028305428232289706251958662561266778934075169555578626161371206384172334731323568111070638675853312",
+      "condition_count": 131,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 117,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 62,
+      "contact": 12,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        12,
+        13,
+        62
+      ],
+      "q_support": [
+        1,
+        31,
+        32
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "56982303966556334024416451606362178022562722491947000535201031356317167137276244712847195673379573571127880661012576111916826556833871475640148298905661065184271046153577788498850648046472510138083284983172273095864831355527257792804063246329475507199/342730740598303560872491212802580549757080147060551600607755605683716301034815127655522279606197929932118627540251872976764911542272758357132146686762994342122527169715464000580121139104696924379252652256595336801516467592377597003083800513609728",
+      "condition_count": 133,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 119,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 63,
+      "contact": 13,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        13,
+        14,
+        63
+      ],
+      "q_support": [
+        1,
+        31,
+        32
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "2288885116795110548409971947473220745607946099540107348919284705533440375388382046025575960948920906804380349837748082487077752398189291901055033085613799688635545235923291859798681535474540739786109471899303703747757445896373426272807389585924529910631/11096900516635579425668144893599030269457887878491865385584854860945928952427741645037251436804600356344047696864081715189430611834969749349485384781109039495496541666648529740660079599320834464690287904573344825408636502053686537344466285787873280",
+      "condition_count": 135,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 121,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 64,
+      "contact": 13,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        13,
+        14,
+        64
+      ],
+      "q_support": [
+        1,
+        32,
+        33
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "2546522101212709357765757712767056135566521818381211455246567757746649704211580236042989046638914978557439205981906593411338676532351575821280557046304839638203534020474848466050431727605503588771396327418882486875457484297552750378972717762148255369351290323/10144185511435315975016860625094265451757256177563213706653266869543844498427854912401439685974845730671926096251988445373867040415503255957419015587021305447913095467898522875341472688329403742341583783381883131031872410817711926082330551262325002731520",
+      "condition_count": 137,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 123,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 65,
+      "contact": 13,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        13,
+        14,
+        65
+      ],
+      "q_support": [
+        1,
+        32,
+        33
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "9169492744083456093445601709121310406455691399219748289617808850828237914498250812272002349245397299596691223238889599538105320742442627702298877248462971932195883030380498832585962393542712718017679475784501393818901828989358076830109467669064953733775422534439/31036433913958679337259969034227867374355861210182309645209070418214735306316317597523497195898577700702740550597451933892574991852057529720069596020591913813685158193876579679227260590731351449073031385956701143928713673738685549027927014731561697657487360",
+      "condition_count": 139,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 125,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 66,
+      "contact": 13,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        13,
+        14,
+        66
+      ],
+      "q_support": [
+        1,
+        33,
+        34
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "1801104063720342480648105772872210895544267009536586273551467511496142791631471604435764670610915312901769735925550068014167938499023356185449303661472003801756687282770885105374964417617978750309831849627245810210668420259097816458732172647046774734716891652695091/4686392941162571335161457825227945009674527572723352388626449524266113197780855906913944658965990862285002858873610849694640772651280465058509087286261985471373203032271113881753033236542890516578107891802629024100783828135596586918876280989879791878993346560",
+      "condition_count": 141,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 127,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 67,
+      "contact": 13,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        13,
+        14,
+        67
+      ],
+      "q_support": [
+        1,
+        33,
+        34
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "2489898957265259708072862415931067900230096016161465007085266527613950148184708103720423614748710637842389004378605312715661992729128139233224324781943623366050575783285606115821140661188990194016491056207851222793866503637120863309073964352757840166247595997967686193/5268671210856894109670769668918089820935883159826908749643000651518608775525184906650120324530377340068241688588062806554768523315867495689104756052728202044036639463880496237440252718082520488200576716409125198124627552283516108492411824309455720671641212026880",
+      "condition_count": 143,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 129,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 68,
+      "contact": 13,
+      "gamma_sign": -1,
+      "p_support": [
+        0,
+        13,
+        14,
+        68
+      ],
+      "q_support": [
+        1,
+        34,
+        35
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio_exact": "12915262473228862460411720550941655032921740605806986922025458059002630969652590768015843026354587328396622154714345177883494703649456446311768813664868221168429652403458719862765931458297490505554789918458415851031331675195152580451347188565543754151626322705603900389027419/19830017444214316970214016536883659023762165068704762465093357349756365125195916811948155863301294963952117392231351910565734611130905760908188393212238669378513263771320878113156726771184784341158932928134718471138047823079450052079048446936778157056070576082918572032",
+      "condition_count": 145,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 131,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 69,
+      "contact": 14,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        14,
+        15,
+        69
+      ],
+      "q_support": [
+        1,
+        34,
+        35
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "5518055034657618004738129811278536038028585910050954592545250741409057411501727240352658788825670322677652167030799466419316346519630995512483543214721054646964440610852457651762684028525788328388591228268692254008510506342007459839633750091627803114511280353689926881310335/7107686236762685557232209407861760700383216347932534371979606573057606147825409625443094505263939171933048719980439278135291084974316840682858186516130763695213965383500669824519909460770116220813775916287778049568428065458389134081445054554226704710279729123350806528",
+      "condition_count": 147,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 133,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 70,
+      "contact": 14,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        14,
+        15,
+        70
+      ],
+      "q_support": [
+        1,
+        35,
+        36
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "6543377268394660670452568422764890199382317436319346237090401651158657446100546404176464929998651969725598091933597397424365840493108579360416464097916020100744119889952296372020591759509931133103122628137233262724101473425039342018890789720192941172598800585301220624838797/6850243677090550474749561842365550768060210226996373033950485209576251644023276302804884632818220942746912057273990888291508746301674391931450609028781111900579101680585195113381246965642880480892007425374338710115743619320154621656952435386492571895755716264332361728",
+      "condition_count": 149,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 135,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 71,
+      "contact": 14,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        14,
+        15,
+        71
+      ],
+      "q_support": [
+        1,
+        35,
+        36
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "36977403628534570730543678007253272538033417072720429868281652888419808385056989970875378195543855435923142831614520641670229854515171150349422824674197339547820789537371531652549697133050017749095483347549053049036152297807158736991281841199230024139569031869468044542961595579591/32643084200035939462177249253564945441164550267873374884761976981402316463442501294084376286148165778670865662216739607831794990974811203335666605570732123937877462051041581471681737980247808045357590650943238475371987044764691679029411058851633786766839549022834103873961984",
+      "condition_count": 151,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 137,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 72,
+      "contact": 14,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        14,
+        15,
+        72
+      ],
+      "q_support": [
+        1,
+        36,
+        37
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "752300399832738697656371287576093064755415391918782950041555163458102568560676629377525407472633165165759335522922403696229419605358312798004771012696133767116095923413128336370336388896523208740145467382254729251842838539957437291490995617888639892973186021089880175935698439566397579/505518765058549323052720573783113054858172251896082678820842393574495536900810127991921058431041285378460981332784045672456181209418059039170350934382181220937434102917756309120933393514367443431346767664392720757698841773906192682649166495974628061245617023521819706658973024256",
+      "condition_count": 153,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 139,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 73,
+      "contact": 14,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        14,
+        15,
+        73
+      ],
+      "q_support": [
+        1,
+        36,
+        37
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "33821565529553418105432901333972090666544906217645544707179961162944687203509315411683763860493134650437986175461221870057769224115821580133981506515361619492032835366907606773469579502545771392113591942252876703909728804868902661743036436216469009791621241291178974236074248540753787428699129/18367905980949475092018493954161143740227088464430914030205397194967583161330982656686340181256560214744367682034959986594524064171404462893981195647320261167416650226570031167406824145866900849232880286170067845617908858155289209758712187183966278211729126002311718630662594078447763456",
+      "condition_count": 155,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 141,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "two_band_compressed",
+      "maximum": 74,
+      "contact": 15,
+      "gamma_sign": null,
+      "p_support": [
+        0,
+        15,
+        74
+      ],
+      "q_support": [
+        1,
+        37,
+        38
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "ratio_exact": "25180895191522575294188450900880544981219547560613076665974119179795668566990244733807904297686418523759463623978171249135721269901313700444186055950973911403818139065405986171685782592786534172106277019731793979366945514735196924548946176839293308041392029696000/9865375355183317785529311264413876154574383379536439656362911162334154984373707852309370579919497648926828917141645392342493295497670513353093636461222866320083376968221684497691604276673404668388421959015267162817810644410238136618571511858608477771886177",
+      "condition_count": 157,
+      "condition_class_counts": {
+        "basic": 7,
+        "active_dual": 2,
+        "reduced_cost": 144,
+        "inactive_slack": 4
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 75,
+      "contact": 15,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        15,
+        16,
+        75
+      ],
+      "q_support": [
+        1,
+        37,
+        38
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "221266353983362748147280662350908718276289090045197740133861770058691747326716855686900871148480823415706533100095950573955340334566087881038298946243955684640302032130753895499985572299271800638030377993271389612847541980967966371264633370821968387647922940814474439607854031069871031917136214779/75253253949313705696469704689605110762162916234428517270515070282431771188350577834420251776133674705155620830730854621006426722183233205679660667802037054261185130213889033676304742080681338820239553275562160541802194561868397411322910698563443080147013321358512320196547069492820541702144",
+      "condition_count": 159,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 145,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 76,
+      "contact": 15,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        15,
+        16,
+        76
+      ],
+      "q_support": [
+        1,
+        38,
+        39
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "7768096734376250901397112870779697662100920912502508966437251985536766616821433220399164625695700312254563733185698895961541725292082652917357282086092864442002526064422221519163875461238722423429649585385692812755552605414842781548031130206673095021128316840221803961495181482448585472228948038569522927/2125348850406698534063859398414276982195193501196479894105603747445476500986775252173175205924264929714034574883072987508949023977219077221566955432299383356741291180520888543791510134539633753438525655742942499603259635800982843987329168220492779429621318907541463733489497613283118003762170429440",
+      "condition_count": 161,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 147,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 77,
+      "contact": 15,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        15,
+        16,
+        77
+      ],
+      "q_support": [
+        1,
+        38,
+        39
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "7893337204954785908436062255180149561511490011548024169448303398502503835402371543435607169532959060957592425835942910558062795427434320958595740989069476594480316769060097090908495764188215462009492281285602313140710831301590770652135069943274060154042160226224916324977016454563212044378570366166226625533019/1808298712428970180680915331122992574108902363744416577830630028799552086811831515026150002569963308786200534319120653310397040941218278169297417730395343572278982224333010517374928660467898060623715670326041438879759843088495378882101272297251010992167632694292635711567053668671645073684256733716807680",
+      "condition_count": 163,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 149,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 78,
+      "contact": 15,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        15,
+        16,
+        78
+      ],
+      "q_support": [
+        1,
+        39,
+        40
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "1542827789748040535491133969035680446326981049311370066599690631538151153613099079931612280559530124556475051437480728869801897424882122464028817349465532071322325971542570039393678580415888432972824363907826681935103096945850540392288149648759990445343559196010760160092580688081682155859807748453543782691688083/266640110370672034519288708045206547333515019387504661166979312376295688223689166629877895367323470088699744186615565302793477550264633649374007163030021432607056922316528820274941223297097400121239354713869486356475314183214218470686620356772207226299792080740299786171602338572820266661029532662818144256",
+      "condition_count": 165,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 151,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 79,
+      "contact": 15,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        15,
+        16,
+        79
+      ],
+      "q_support": [
+        1,
+        39,
+        40
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "14452245283802562496995742669477972977657523288493283183328984002172160323908187318575799189356423794872433339467713298684664335685020859097755732275534881582358985531744624751698951001881708109355522592488940070397486521872514663414857079578225741363252151944971018028263769663992147627284249428807999783155636388669/2007467172877940414471246414099582015666754299061768410950078681451706670863118448638461594455543252803310753223772987394271039955897439305921875982415620894956339258858916951326930179338651412533714975672973298975313286804586173016006326735544001854747199812921025640526670754190768206857965152723559627358208",
+      "condition_count": 167,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 153,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    },
+    {
+      "family": "three_band_adjacent",
+      "maximum": 80,
+      "contact": 16,
+      "gamma_sign": 1,
+      "p_support": [
+        0,
+        16,
+        17,
+        80
+      ],
+      "q_support": [
+        1,
+        40,
+        41
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio_exact": "9516646483168030989295719382202421614161215601304482276937688346816045848798629818218213173445931120293197927972666192304443621941516558897185777769561070294762823308670879655062415594163133048853229813140017773061917352242378362833895100514167544738886454755661605123309009334840584084106379295528907089195252279564927/974372189746458013064409632696202816649853438604487682934515782887073663796152149755065601667465498767143017767618248338489828581453742578483475451151977312816493966824086799489406097014153052838552193066448220843068710791040013332073801443864703409078326952429006706627536596177649385515216603477302631173455872",
+      "condition_count": 169,
+      "condition_class_counts": {
+        "basic": 8,
+        "active_dual": 3,
+        "reduced_cost": 155,
+        "inactive_slack": 3
+      },
+      "all_conditions_strictly_positive": true
+    }
+  ],
+  "gates": {
+    "declared_branch_count_exact": true,
+    "all_supports_have_one_strict_selection": true,
+    "no_singular_candidate_basis": true,
+    "no_zero_condition_boundary_at_probe": true,
+    "A77_M23_M25_sequence_reproduced": true,
+    "exactly_three_gamma_inactive_compressions": true,
+    "all_other_supports_use_adjacent_three_band_family": true,
+    "compressed_transitions_are_forced_by_dual_failure": true,
+    "contact_blocks_are_not_uniform_five_support_blocks": true,
+    "selected_conditions_are_strictly_positive": true,
+    "negative_gamma_set_frozen": true,
+    "finite_probe_scope_preserved": true
+  },
+  "gate_count": 12,
+  "pass_count": 12,
+  "verdict": "PASS_EXACT_RATIONAL_PROBE_CONTACT_SELECTION_AND_COMPRESSION_RESETS",
+  "claim_boundary": [
+    "Exact only at s=s0=131/1000.",
+    "Exact only for integer supports 10<=M<=80.",
+    "No interval theorem is claimed.",
+    "No all-M recurrence is claimed.",
+    "No physical interpretation is inferred from the LP contact sequence."
+  ]
+}

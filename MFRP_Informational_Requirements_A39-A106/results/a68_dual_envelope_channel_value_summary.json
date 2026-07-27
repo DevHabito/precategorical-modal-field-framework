@@ -1,0 +1,123 @@
+{
+  "audit": "A68_DUAL_ENVELOPE_AND_FIRST_CHANNEL_VALUE",
+  "verdict": "PASS_DUAL_ENVELOPE_AND_EXACT_FIRST_CHANNEL_VALUE",
+  "phase_activity_counts": {
+    "alpha_positive": 33,
+    "alpha_negative": 0,
+    "alpha_inactive": 0,
+    "beta_positive": 0,
+    "beta_negative": 28,
+    "beta_inactive": 5,
+    "gamma_positive": 21,
+    "gamma_negative": 7,
+    "gamma_inactive": 5
+  },
+  "removal_table": [
+    {
+      "maximum": 5,
+      "mean": "5/2",
+      "epsilon": "1/10000",
+      "remaining_design": [
+        3,
+        10
+      ],
+      "primal_ratio": "441938162655374364239/390605214984835914470",
+      "dual_ratio": "441938162655374364239/390605214984835914470",
+      "primal_dual_equal": true,
+      "full_boundary_ratio": "2263558795360587104/2233113362221566575",
+      "coalescence_ratio": "441938162655374364239/390605214984835914470",
+      "removal_equals_coalescence": true,
+      "removal_strictly_worse": true,
+      "full_boundary_risk_decimal": "0.0097681452113756748881978026104657257056548058426406",
+      "removed_risk_decimal": "0.089066653294909667174066303390545901413652444911754",
+      "absolute_risk_premium_decimal": "0.079298508083533992285868500780080175707997639069113",
+      "relative_risk_premium_percent": "811.80721997442710231888138811313397463818781101403",
+      "risk_multiplier": "9.1180721997442710231888138811313397463818781101403"
+    },
+    {
+      "maximum": 6,
+      "mean": "3",
+      "epsilon": "1/15000",
+      "remaining_design": [
+        3,
+        5
+      ],
+      "primal_ratio": "41943665524563/32567081345221",
+      "dual_ratio": "41943665524563/32567081345221",
+      "primal_dual_equal": true,
+      "full_boundary_ratio": "100069758737/96796725000",
+      "coalescence_ratio": "41943665524563/32567081345221",
+      "removal_equals_coalescence": true,
+      "removal_strictly_worse": true,
+      "full_boundary_risk_decimal": "0.023987956688136372156681508105204518303350088683229",
+      "removed_risk_decimal": "0.18251925743998746584514654965504115826705171709197",
+      "absolute_risk_premium_decimal": "0.15853130075185109368846504154983663996370162840874",
+      "relative_risk_premium_percent": "660.87871848732862414035537167311565792641882022260",
+      "risk_multiplier": "7.6087871848732862414035537167311565792641882022260"
+    },
+    {
+      "maximum": 7,
+      "mean": "7/2",
+      "epsilon": "1/20000",
+      "remaining_design": [
+        3,
+        4
+      ],
+      "primal_ratio": "290309808488030/199206715018229",
+      "dual_ratio": "290309808488030/199206715018229",
+      "primal_dual_equal": true,
+      "full_boundary_ratio": "356097928188/329542975477",
+      "coalescence_ratio": "290309808488030/199206715018229",
+      "removal_equals_coalescence": true,
+      "removal_strictly_worse": true,
+      "full_boundary_risk_decimal": "0.055903711799154043031087216330833696913381730409777",
+      "removed_risk_decimal": "0.27166351817400682544949561323015623320590076909390",
+      "absolute_risk_premium_decimal": "0.21575980637485278241840839689932253629251903868412",
+      "relative_risk_premium_percent": "385.94898161684810475293707023398076645196906502708",
+      "risk_multiplier": "4.8594898161684810475293707023398076645196906502708"
+    },
+    {
+      "maximum": 8,
+      "mean": "4",
+      "epsilon": "1/30000",
+      "remaining_design": [
+        3,
+        4
+      ],
+      "primal_ratio": "5005768448242664/3029347188287543",
+      "dual_ratio": "5005768448242664/3029347188287543",
+      "primal_dual_equal": true,
+      "full_boundary_ratio": "353907689100193/311364071082334",
+      "coalescence_ratio": "5005768448242664/3029347188287543",
+      "removal_equals_coalescence": true,
+      "removal_strictly_worse": true,
+      "full_boundary_risk_decimal": "0.092385313965809433915730953665081025603334107295089",
+      "removed_risk_decimal": "0.36229231271614368042974806062713382949374266996033",
+      "absolute_risk_premium_decimal": "0.26990699875033424651401710696205280389040856266524",
+      "relative_risk_premium_percent": "292.15357632515402620704877562747476247162896857095",
+      "risk_multiplier": "3.9215357632515402620704877562747476247162896857095"
+    },
+    {
+      "maximum": 9,
+      "mean": "9/2",
+      "epsilon": "1/40000",
+      "remaining_design": [
+        3,
+        4
+      ],
+      "primal_ratio": "1617156363541786558/856218616145181955",
+      "dual_ratio": "1617156363541786558/856218616145181955",
+      "primal_dual_equal": true,
+      "full_boundary_ratio": "15873666780561651/13323376703212334",
+      "coalescence_ratio": "1617156363541786558/856218616145181955",
+      "removal_equals_coalescence": true,
+      "removal_strictly_worse": true,
+      "full_boundary_risk_decimal": "0.12633782882273029271627923597316032545305239065949",
+      "removed_risk_decimal": "0.45870403594457901330336426687576910647672201231506",
+      "absolute_risk_premium_decimal": "0.33236620712184872058708503090260878102366962165556",
+      "relative_risk_premium_percent": "263.07734604827281134982886110288129199552809639609",
+      "risk_multiplier": "3.6307734604827281134982886110288129199552809639609"
+    }
+  ],
+  "central_result": "The positive alpha multiplier is exact in all 33 phases; deleting alpha equals the coalescence limit and strictly increases risk for M=5,...,9."
+}

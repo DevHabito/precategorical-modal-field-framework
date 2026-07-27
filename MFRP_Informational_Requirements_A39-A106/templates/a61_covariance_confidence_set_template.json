@@ -1,0 +1,35 @@
+{
+  "centre": [
+    1.05,
+    1.05,
+    1.05
+  ],
+  "covariance_estimate": [
+    [
+      0.0009,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.000625,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.000225
+    ]
+  ],
+  "spectral_radius_tau": 0.0001,
+  "requirements": {
+    "covariance_estimate_symmetric": true,
+    "covariance_estimate_positive_definite": true,
+    "maximum_diagonal_after_inflation": 0.0025,
+    "channel_order": [
+      "u2",
+      "u_beta",
+      "u_infinity"
+    ]
+  }
+}

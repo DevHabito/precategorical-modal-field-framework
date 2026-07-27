@@ -1,0 +1,20 @@
+{
+  "input": {
+    "calibration_residuals_csv": "rows are repeated calibrations; columns are u2, u_beta, u_infinity",
+    "confidence_level": 0.95,
+    "bootstrap_replicates": 399,
+    "model_family": "gaussian or student_t_5 after separate validation",
+    "safety_factor": {
+      "gaussian": 1.5,
+      "student_t_5": 1.9
+    }
+  },
+  "outputs": {
+    "covariance_estimate": "3x3 matrix",
+    "raw_spectral_radius": "scalar",
+    "calibrated_spectral_radius": "scalar",
+    "upper_covariance": "Sigma_hat + tau_calibrated*I",
+    "contract_status": "valid only if max diagonal <= 0.0025",
+    "robust_risk_upper": "A60 quadratic root when contract valid"
+  }
+}

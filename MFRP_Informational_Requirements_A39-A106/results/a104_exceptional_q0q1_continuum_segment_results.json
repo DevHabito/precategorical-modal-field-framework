@@ -1,0 +1,97 @@
+{
+  "audit": "A104_EXACT_EXCEPTIONAL_Q0Q1_CONTINUUM_SEGMENT_ATLAS",
+  "evidence_class": "exact sparse rational-function KKT reduction, exact rational interval arithmetic, exact algebraic root brackets, exact root-ordering inequalities, and exact rational counterexamples",
+  "scope": {
+    "source_segment_count": 7,
+    "source": "the seven A102 rational source segments assigned to q0/q1 exceptional architectures",
+    "gamma_inactive_family": "P={j,M}, Q={0,1,h,h+1}, alpha+ and beta- active, gamma inactive",
+    "gamma_active_family": "P={j-1,j,M}, Q={0,1,h,h+1}, alpha+, beta-, and gamma- active",
+    "symbolic_method": "exact Sherman-Morrison rank-one alpha-row update around s=1/8",
+    "boundary_method": "exact rational sign-change isolation, derivative-certified simple roots, exact competing-bracket ordering, exact interval positivity, and exact outside counterexamples",
+    "claim": "complete exact classification of the witness-containing strict KKT component inside each of the seven declared rational source segments",
+    "explicit_nonclaim": "not a continuum lift theorem for the other 1,056 A102 witnesses, not full A92-cell coverage, not an all-M theorem, and not a physical claim"
+  },
+  "continuum_atlas": {
+    "record_count": 7,
+    "unique_key_count": 7,
+    "status_counts": {
+      "proper_two_sided_strict_subcomponent": 7
+    },
+    "architecture_counts": {
+      "q0q1_gamma_inactive": 3,
+      "q0q1_gamma_active": 4
+    },
+    "condition_count": 6489,
+    "numerator_plus_denominator_count": 6496,
+    "candidate_root_count": 25,
+    "selected_boundary_count": 14,
+    "selected_boundary_counts": {
+      "inactive_slack_gamma_-1": 3,
+      "basic_q_0": 3,
+      "active_dual_gamma_-1": 4,
+      "basic_p_77": 1,
+      "basic_p_78": 1,
+      "basic_p_84": 1,
+      "basic_p_85": 1
+    },
+    "root_ordering_check_count": 11,
+    "outside_counterexample_count": 14,
+    "core_failure_count": 0,
+    "root_failure_count": 0,
+    "ordering_failure_count": 0,
+    "hull_failure_count": 0
+  },
+  "structural_result": {
+    "q0q1_gamma_inactive": {
+      "segment_count": 3,
+      "maxima": [
+        396,
+        455,
+        496
+      ],
+      "lower_boundary": "inactive gamma-minus slack reaches zero",
+      "upper_boundary": "basic q0 mass reaches zero"
+    },
+    "q0q1_gamma_active": {
+      "segment_count": 4,
+      "maxima": [
+        443,
+        449,
+        484,
+        490
+      ],
+      "lower_boundary": "active gamma-minus dual multiplier reaches zero",
+      "upper_boundary": "lower adjacent basic P mass reaches zero"
+    },
+    "interpretation": "all seven exceptional pointwise bases persist on nontrivial open algebraic phases, but none covers its complete A95 rational source segment"
+  },
+  "gates": {
+    "A99_q0q1_gamma_inactive_source_present_and_passed": true,
+    "A101_gamma_active_source_present_and_passed": true,
+    "A102_complete_pointwise_atlas_source_present_and_passed": true,
+    "A103_endpoint_released_continuum_source_present_and_passed": true,
+    "exactly_the_seven_exceptional_A102_segments_are_present": true,
+    "architecture_partition_is_three_gamma_inactive_and_four_gamma_active": true,
+    "all_seven_keys_are_unique": true,
+    "all_seven_source_condition_counts_match_A102": true,
+    "exact_KKT_condition_count_is_6489": true,
+    "exact_numerator_plus_denominator_count_is_6496": true,
+    "all_seven_segments_have_proper_two_sided_strict_subcomponents": true,
+    "exactly_25_candidate_sign_change_roots_are_isolated": true,
+    "exactly_14_nearest_boundaries_are_selected": true,
+    "selected_boundary_mechanisms_match_the_two_architectures": true,
+    "all_14_selected_roots_are_locally_unique_and_simple": true,
+    "all_competing_boundary_brackets_are_strictly_ordered": true,
+    "all_6496_core_polynomial_certificates_pass": true,
+    "all_nonselected_conditions_pass_on_complete_boundary_hulls": true,
+    "all_14_exact_outside_counterexamples_are_negative": true,
+    "every_component_contains_its_A102_witness": true,
+    "no_witness_core_root_ordering_or_hull_failure_remains": true,
+    "formal_contract_and_nonphysical_scope_are_preserved": true
+  },
+  "gate_count": 22,
+  "pass_count": 22,
+  "fail_count": 0,
+  "failed_gates": [],
+  "verdict": "PASS_EXACT_CONTINUUM_CLASSIFICATION_OF_SEVEN_EXCEPTIONAL_Q0Q1_SEGMENTS_AS_TWO_SIDED_STRICT_SUBCOMPONENTS"
+}

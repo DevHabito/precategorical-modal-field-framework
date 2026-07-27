@@ -1,0 +1,9 @@
+[project]
+name = "mfrp-informational-requirements-a39-a106"
+version = "0.25.0"
+description = "Computational audits A39-A106 for informational requirements in pre-categorical relational models"
+requires-python = ">=3.11"
+authors = [{name = "Felipe Gianini Romero"}]
+
+[tool.ruff]
+line-length = 88

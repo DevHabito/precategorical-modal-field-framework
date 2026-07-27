@@ -1,0 +1,28 @@
+{
+  "audit": "A70_SIGNED_Q_SCHUR_ARITHMETIC_GRID_DOMINANCE",
+  "verdict": "PASS_SIGNED_Q_SCHUR_ARITHMETIC_GRID_DOMINANCE",
+  "family_summary": {
+    "phase_count": 33,
+    "term_count_distribution": {
+      "2": 3,
+      "5": 9,
+      "8": 21
+    },
+    "minor_class_counts": {
+      "confluent_norm_mean": 270,
+      "derivative_only": 84,
+      "ordinary_q_schur": 84
+    },
+    "all_decompositions_mixed_sign": true,
+    "minimum_dominance_ratio": "834925121797410/824381054550353",
+    "minimum_dominance_decimal": "1.0127902833148053269148115865317456688148174932836",
+    "minimum_dominance_surplus_percent": "1.2790283314805326914811586531745668814817493283584",
+    "minimum_dominance_location": {
+      "maximum": 9,
+      "phase": 7
+    },
+    "interpretation": "Arithmetic-grid positivity does not make the Cramer expansion sign coherent. The proven sign comes from exact magnitude dominance after cancellation."
+  },
+  "central_result": "All 33 exact q-Schur/confluent expansions are mixed-sign, but aligned magnitudes dominate. The weakest exact ratio is 1.0127902833148053 at M=9 phase 7.",
+  "next_target": "A recurrence, condensation identity, or term-pairing injection proving signed-Schur dominance uniformly in M."
+}

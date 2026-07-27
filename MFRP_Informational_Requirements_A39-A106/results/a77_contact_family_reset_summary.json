@@ -1,0 +1,41 @@
+{
+  "audit": "A77_FIXED_FAMILY_ORIENTATION_AND_ACTIVE_CONTACT_RESET",
+  "gate_count": 25,
+  "pass_count": 25,
+  "fixed_family_multiplier_sign": {
+    "M19_M22": "positive",
+    "M23_M34": "negative",
+    "all_M_at_least_35": "positive"
+  },
+  "actual_selected_sequence": {
+    "23": {
+      "contact_pair": [
+        5,
+        6
+      ],
+      "gamma_sign": -1
+    },
+    "24": {
+      "contact_pair": [
+        6,
+        7
+      ],
+      "gamma_sign": 1
+    },
+    "25": {
+      "contact_pair": [
+        6,
+        7
+      ],
+      "gamma_sign": 1
+    }
+  },
+  "one_pivot_neighbor_count": 498,
+  "one_pivot_failure_counts": {
+    "primal_infeasible": 366,
+    "active_dual_multiplier_infeasible": 51,
+    "reduced_cost_infeasible": 77,
+    "inactive_observation_slack_infeasible": 4
+  },
+  "verdict": "PASS_FIXED_FAMILY_DOUBLE_BIFURCATION_AND_ACTIVE_CONTACT_RESET"
+}

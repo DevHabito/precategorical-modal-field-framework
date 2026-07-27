@@ -1,0 +1,2132 @@
+[
+  {
+    "repository_path": ".gitignore",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5a53663970e9d44ac070524fa7b4395d30c21fe859db0df568e773e9d5a158a7"
+  },
+  {
+    "repository_path": "AUDIT_INDEX.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "dfcca7c34b93af362a078272632317358d4082eee927705f7aa669750aa68fab"
+  },
+  {
+    "repository_path": "CHANGELOG.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "09367e104e896ee0ba6499541acb7a1c4accfa48b95a1a84925e7ddba9c7c82c"
+  },
+  {
+    "repository_path": "CHANGELOG_A72_A77.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1d5f34570c15b3999975e6b0061daa635583ea4386bf00c70f04daf406dd4f52"
+  },
+  {
+    "repository_path": "CHANGELOG_A78.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0d1b382337ca5acbc3f02cd4275d2ea1f7da77a4c065877deb50a6833906d230"
+  },
+  {
+    "repository_path": "CHANGELOG_A79.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b2304075c3e64ae44905ff996f9d9fe70ce60f13e91685f32d239df9377265d5"
+  },
+  {
+    "repository_path": "CHANGELOG_A80.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a04c09d1d9509fed17f69f8d6aa49f7a5bcf7f8136fdf20faed178dc26f8300d"
+  },
+  {
+    "repository_path": "CHANGELOG_A81.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3841f040b9a2e1e17cfc6c496ff0f204bd9d290f4008fde5b3341577d23a07d4"
+  },
+  {
+    "repository_path": "CHANGELOG_A82.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "15ecdf6cdc43524d0c88328596779949c749d2aaf30306274444c93fc8ef47b3"
+  },
+  {
+    "repository_path": "CHANGELOG_A83.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "79cab749a1e1623c83892f640eaa82f96b63b9329928d42a59b0c178a87dae6d"
+  },
+  {
+    "repository_path": "CHANGELOG_A84.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "479ecf89f138b8fda44aae1cbff1b95ca77aa17979f8be30cccd3753af713ff4"
+  },
+  {
+    "repository_path": "CHANGELOG_A85.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5d1cd25d2f435d696bc3fcb5e4afe801e4a192a22d207b9ef8d9acd26b550afe"
+  },
+  {
+    "repository_path": "CHANGELOG_A86.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0afc431b1fd187bf2113ae93e0ad9ffef2166017cd32ac40fdfc318b5bfa1824"
+  },
+  {
+    "repository_path": "CHANGELOG_A87.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "2d2c452700fea5133ceb3c8714f5af76a6515ee25dd6419e138d94b3443b8d66"
+  },
+  {
+    "repository_path": "CHANGELOG_A88.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "383135972a61c92481f3c53e699973bf3271acd446098491fd56e841f725273e"
+  },
+  {
+    "repository_path": "CHANGELOG_A89.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "caba73bc8108cc5c5571f0d35ab62d86dfbbb0ca9eebccc100fdf0efe91c5220"
+  },
+  {
+    "repository_path": "CHANGELOG_A90.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e3f18de76e42d815b9e7f934f5c8292d130b112666cd208dbd6e0f71231758a3"
+  },
+  {
+    "repository_path": "CHANGELOG_A91.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "545ce01ca3eb82232aa5a2ed60738dae66da53e1f4c6a61dcf156ddb490ac187"
+  },
+  {
+    "repository_path": "CHANGELOG_A92.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "43e22f68ef23061e9838c9d1c2b3b9af804de16c3c2a76832d100eb2e1dda4a4"
+  },
+  {
+    "repository_path": "CITATION.cff",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "0b2d6c1095a8f28774212f3885955c0d3dffbfec9fc73b7e5e7c3c04c99e9463"
+  },
+  {
+    "repository_path": "FILE_INVENTORY.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "16b963f7a224dd9c9feb9afb7d017013c7f1f6101903ba44b62130ef6fbaa708"
+  },
+  {
+    "repository_path": "GITHUB_RELEASE_CHECKLIST.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "bb4025bc3ba419914656c7e38b9d41ed2f8906826b4ebdd13117e145eb1ae733"
+  },
+  {
+    "repository_path": "LICENSE_NOTICE.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "279d650e3dd2f9acc96e25f77bc0734fac815e7484cc4ff579073ea93779308f"
+  },
+  {
+    "repository_path": "README.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "d04c9c4d9bb38ed8b3ed134e4dd09d43924722def871bf637f07d7c893eabd00"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "363c5c32965a962f713f751c876f94fde6c958436d3c59da771cecdbd819b2e3"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A72_A77.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4bffb2532af1fb64613b8369b3ca674fc7905561e2f3c20aba5d6a60ec059abe"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A78.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "77a3cf9b41d70c6c95f9d9d3e316d622833fed01bb7f65f0c01aac0b293290fd"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A79.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "18eb9c0b865467c15a309aa7d60d704108aed1bd85032d113dbd38fe2aa620c9"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A80.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "dc675fb855ed6c1aed180ebcfd999b1a9adbdb3c79b2e893354b4d68289f8832"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A81.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ad00bfe34ce58153bb69b1ff026b168dae2c023bd3381c54fefeee67315d3613"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A82.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a46f4beffc245afdbf0f17af74f54a8bf434ca7e3831de14495c9cda5ac7a473"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A83.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "acadb128141b9800f1eaf487003f906096e2a3d25947d4bf136a17f70f20188e"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A84.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b7d72be018270ba21d5ff6d7c119a4561169c05c0f157e3c868fb1544dd5219f"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A85.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7370b298de4444994b182b123a16c44e5fa1ddaa66cf6b9cd1cc31011d374152"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A86.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "800723214f95754f7854611d1f043b16a5a33f464a80d350852fd7752e3b3750"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A87.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c7be7fd89c16025c679e5421a8134d820d70df4c1cb43ebf00643af3c2114ef7"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A88.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4ff7cccae03adcf18b147efb6d24e585a20818502a43bc90d6b7a1db180139df"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A89.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "54640c9b1906231cf582a64fb20c3ae89887f4a1047e7377fcaf65f6a12ed1c6"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A90.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7a77fcd96d4f41953e3078a3042af31f3db249ab3bf3cedda6279778911156f3"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A91.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "fc3ec6eaae5ab02a0c6baf161ff1261f5ef71eab18f0b574d66349fe87ec79cb"
+  },
+  {
+    "repository_path": "REPRODUCIBILITY_A92.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "4d1b0d4d668f15b95bed9267b5d0be55f990ab06763bf70abc5c302860ab1f55"
+  },
+  {
+    "repository_path": "RUNBOOK.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "2899a5a508f9ec5aeb8524dff69d64e4219ff4fa8334d3677e4551f0a32037ec"
+  },
+  {
+    "repository_path": "RUNBOOK_A72_A77.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f5c507b80a45f3c51a6f08f86bae51d0b57a4214a51a7ac16e98dd5ccc04fb11"
+  },
+  {
+    "repository_path": "RUNBOOK_A78.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "603fa5ea6bf3d95ea09284141c3e85c878fb7646fa30362bd32a830c572685a3"
+  },
+  {
+    "repository_path": "RUNBOOK_A79.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "cb4ebbb87a251511d3d443cefc4b3720707efe6a180257d93471b4fa07eccd9c"
+  },
+  {
+    "repository_path": "RUNBOOK_A80.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ff9c43be481b0edfeb691f83cc93af737eda79ab04900827686729d35fbf72a2"
+  },
+  {
+    "repository_path": "RUNBOOK_A81.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "12de57bd19f569023df6a47b39dab1aff008183c28203fd79f341abe2908b5e7"
+  },
+  {
+    "repository_path": "RUNBOOK_A82.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d81a025aa786b4ad355e0e3b75cc4b2a8a835b9c34dccdfecabe24b4054af53f"
+  },
+  {
+    "repository_path": "RUNBOOK_A83.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "bb5bcf3dfa393a5eaf7115d72e3eec54dd636f12547a08ba1730e05dfca8aff9"
+  },
+  {
+    "repository_path": "RUNBOOK_A84.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "40b778cf7756e888a8ffc40cf1ba3e708bfd3c78543c709cf57e7a7f83f5349e"
+  },
+  {
+    "repository_path": "RUNBOOK_A85.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5e9f76028f24fc9ddae7b70355cb45501088e57a41c4a5968eb52b25369e86c5"
+  },
+  {
+    "repository_path": "RUNBOOK_A86.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "eb1a7887626fdeef311b720b2513363abb386f95c6c2459f470789ebb77bb0ca"
+  },
+  {
+    "repository_path": "RUNBOOK_A87.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "2500d801a04424e581dafaff7bcc43dca90ad66baaab8b21de5105dc67f545a8"
+  },
+  {
+    "repository_path": "RUNBOOK_A88.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "751fb393b89f969e8c9b13a357bbb79271dc120c3464a176da6a2f31f8af5aa6"
+  },
+  {
+    "repository_path": "RUNBOOK_A89.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f783d6a8624c849d4c0242b5b73cbd5613035263528e25627b8b75aa6aced418"
+  },
+  {
+    "repository_path": "RUNBOOK_A90.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "80a21fd8afde247a4cd00d31d7c721b6e0cd3b6c774e615ea2b637a5cfac675a"
+  },
+  {
+    "repository_path": "RUNBOOK_A91.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "8d1f175318f5b37f4129ebcfebf9639e53e09ee3ac33c869add63886321e4034"
+  },
+  {
+    "repository_path": "RUNBOOK_A92.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "fc0bde5e668c2da3d8bff9e2ee6f5c7a456fe1cd878888ca1d03ae36933fe6bf"
+  },
+  {
+    "repository_path": "VERIFICATION_REPORT.json",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "86115b3d439bd3c3a6584bfa2755395c6bf2887e2f858241a5f7c7d74d8772ef"
+  },
+  {
+    "repository_path": "VERIFICATION_REPORT.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "248d6c5e77f79f94fa20f4aad2120256012b94653aeeff9117eb083ac3096f11"
+  },
+  {
+    "repository_path": "VERIFICATION_REPORT_A89.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "677f019e060968552089477287638f4d73afc9f1b2783322dfb2bcf3ee3c2f79"
+  },
+  {
+    "repository_path": "VERIFICATION_REPORT_A90.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "524411d08e4de9ac9f53217b767fd50a3c0d8aec4673ebfa6a3bb1e75926c1bd"
+  },
+  {
+    "repository_path": "VERIFICATION_REPORT_A91.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a15c04a3941a6c4d4444b050de91007929789f2189f6c2ae41c7b6b1eb3df4e9"
+  },
+  {
+    "repository_path": "VERIFICATION_REPORT_A92.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "d20f98872565fc077eecf5ef8b38dfd8759fcdfb83925bc41853f75b62787bd4"
+  },
+  {
+    "repository_path": "audit_registry.json",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "bd99de8a08600852f88eea0673f6d3eccde4b8e48e619a0a3ddd5998820f8676"
+  },
+  {
+    "repository_path": "audits/a39_sharp_prediction_interval_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5d05c6464a045dbd49060e2924e3c411b0db1189f01776fdffd73f478b5ffb17"
+  },
+  {
+    "repository_path": "audits/a40_monotone_refinement_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1ce096e87e450d1f43a5cef462e7e3923a58a583ddfd7786ad6852b34c8d3330"
+  },
+  {
+    "repository_path": "audits/a41_robust_interval_data_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "71431c90d3ba2934d8df113cb5925cca3129aea7721639025d2dfce7cfbfd4f1"
+  },
+  {
+    "repository_path": "audits/a42_finite_budget_design_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "756fc95eea1a4ddf5b8a53601f21f53170e1585760795399e224a0a079b003e0"
+  },
+  {
+    "repository_path": "audits/a43_direct_q_minimax_design_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "62516a018aea6c638668705700c0440f22c07019c747677770ddcd80f64e8295"
+  },
+  {
+    "repository_path": "audits/a44_continuous_parameter_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "bee61a0590cbaa7ad23b4e232a92eb8faab17e7587b8118c170bc7e009e7361d"
+  },
+  {
+    "repository_path": "audits/a45_positive_noise_phase_diagram_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "029d473d35c74522d38dc8917569219730129158f413f6658eaea323809db8be"
+  },
+  {
+    "repository_path": "audits/a46_noise_separation_boundary_layer_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c2118bf07881c6d2e091b035e8507d6327824d2241bb59e7663a6519f70ee566"
+  },
+  {
+    "repository_path": "audits/a47_global_noise_separation_phase_diagram_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7eecb097982358838dfa7cc40edd81431bfc7e66f3188083db36bc13a3a7df0e"
+  },
+  {
+    "repository_path": "audits/a48_target_inclusion_degeneracy_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "81cbe052a7a9a5f5533e553b2221a769166458d4bbb55382214b06378c5dd067"
+  },
+  {
+    "repository_path": "audits/a49_expanded_anchor_catalogue_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "8bf07b5681c8c4ef637cc2c461fa74b0052602c8b2f7e37c8145c85e6f5c4828"
+  },
+  {
+    "repository_path": "audits/a50_continuous_first_anchor_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e03f2fa61fadc8d2f5c09b63970b7adb96188f6e825120491a814690c9303849"
+  },
+  {
+    "repository_path": "audits/a51_target_exclusion_distance_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "6ac6eb38aca18222efef28cb7bf81ab122efc4d5f48c3e6d18bba1a61d28a3a5"
+  },
+  {
+    "repository_path": "audits/a52_continuous_second_anchor_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "77aa01a4a2331df2bd762df1afb6c07be462eb29fb032ebe2582a9a0e90f86e0"
+  },
+  {
+    "repository_path": "audits/a53_coupled_second_third_anchor_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e39b123b07854fdab66bf251d63630f29183332f32b5e67206ae1f8cab26d43a"
+  },
+  {
+    "repository_path": "audits/a54_universal_continuum_witness_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "31e21b59b74b3085bcde50db4dbecb81cf20411b739e998f1299a1dd1f61977d"
+  },
+  {
+    "repository_path": "audits/a55_finite_cap_implementability_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c850aefd2a624f35dd7d57e1166d4931fac2eab09906ad58885503fc8ba4af5e"
+  },
+  {
+    "repository_path": "audits/a56_cost_regularized_finite_cap_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "214e3c64c6849b9cfcd2ea6296fb0499b55457fb718844a3811d684df04b40e6"
+  },
+  {
+    "repository_path": "audits/a57_heteroscedastic_third_channel_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "47b074238e0641117d357d2b0ba3753d662434ed177ade061559f627c94b3f40"
+  },
+  {
+    "repository_path": "audits/a58_independent_three_channel_error_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f2cbe637c0fa5eea273bc4d91845abdb25e6ab62ae413cfacc439045b49695f2"
+  },
+  {
+    "repository_path": "audits/a59_correlated_ellipsoidal_calibration_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "fd90e0f6a51d881a92879361d65ac77bc1457feafc49400c6f2a1c403d9713b3"
+  },
+  {
+    "repository_path": "audits/a60_general_covariance_matrix_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e64f5aeb92f59b9f8739f1fae7c808ec8836edd4473473282c76afe206dbca19"
+  },
+  {
+    "repository_path": "audits/a61_spectral_covariance_uncertainty_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7cc258311c7fa0b3e06b20c6fbd4f7d393de37dee10d8a091699cf639b8b3ed1"
+  },
+  {
+    "repository_path": "audits/a62_bootstrap_spectral_protocol_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ecad2aca48f0ac0dcc52eabfd3e009a3599e8baeb5e92e12b5f3b1e8a62441b4"
+  },
+  {
+    "repository_path": "audits/a63_structural_generalization_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "85533ceacaf6bc3614e197fc7382b45598bfe35b1833d626461094e958a16085"
+  },
+  {
+    "repository_path": "audits/a63_structural_generalization_exact_helpers.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d55e5673385dba3cb8863024d22edce974e0f1f85b31674907fd1ccf5ecee5af"
+  },
+  {
+    "repository_path": "audits/a64_scale_normalized_boundary_pair_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9ff1e2fb0bf60911305aaaa7cd839b9051662349c2015dc8f9b6efaeca2028b3"
+  },
+  {
+    "repository_path": "audits/a64_scale_normalized_boundary_pair_exact_helpers.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "fc5615bcd195baadb7e7af78dab379cf706f6365249451cc3f2313ea784d4275"
+  },
+  {
+    "repository_path": "audits/a65_continuous_first_anchor_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0e5b635a5bc504cb418bfe00437d38605c7f1f4265746ed37606c677b25fdf4f"
+  },
+  {
+    "repository_path": "audits/a66_exact_global_phase_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0665a89c5162b98e3fe8abff50730b1a569870576c56a93b0cdbeb970765c04f"
+  },
+  {
+    "repository_path": "audits/a67_central_mean_support_family_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "92273f935ccb769223b1233606bb7966c48ebacf7bcd897115cd2cc92a268217"
+  },
+  {
+    "repository_path": "audits/a68_dual_envelope_channel_value_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f83fd797afa9c09026de4384cd3c4d442f2c2875e88b2815ccd9f1a20609e81d"
+  },
+  {
+    "repository_path": "audits/a69_cramer_chebyshev_reduction_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "788dbefa422f2ca1f91c8c62e03771d2380ee09ac0c22c344443eb4f2f9ce42b"
+  },
+  {
+    "repository_path": "audits/a70_signed_q_schur_dominance_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1ed3dfa10aa0ac7964943f1a5a74b21430ea46461a83c9c6de5bb9e80404c277"
+  },
+  {
+    "repository_path": "audits/a71_orientation_bifurcation_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3cd47c4ed325c3dcd1d8ac96c0dbcc26f656eef25707531b05fc3ace38c6f914"
+  },
+  {
+    "repository_path": "audits/a72_exact_catalogue_generator.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9e9f6d07b63c7be555b4d1fd94d5464c23dd62d6b0d6381749096ea044ed7ccd"
+  },
+  {
+    "repository_path": "audits/a72_exact_phase_generator.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4d14c34a80aaa89818872676a81a4bc399880c9595e3888a5374042e824af28b"
+  },
+  {
+    "repository_path": "audits/a72_local_pivot_diamond_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4367f3dfce42bc571d728c0c49d6a8577369b0fc1a27b52b9b311fbb3316cb23"
+  },
+  {
+    "repository_path": "audits/a73_complete_one_pivot_neighborhood_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d809a095d0a8cf81ac798d6c724cf33338093b15529e7524093c3c886929a58c"
+  },
+  {
+    "repository_path": "audits/a73_exact_catalogue_generator.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5e8e184eb93a395165c58515e9fb0dd8cf928b7c2a99e8ce7623a6869e01b132"
+  },
+  {
+    "repository_path": "audits/a73_exact_phase_generator.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0a1d8e4c4fef08ea0c3c1e1a9b36cc466ef294c253257d9d2b94102212eb24ee"
+  },
+  {
+    "repository_path": "audits/a74_M14_phase_discovery.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "889175e42c6731966c1fcbee0722434592ba648a2fc0697c571aeb5fddab1725"
+  },
+  {
+    "repository_path": "audits/a74_exact_catalogue_generator.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "2a54fbd5d1a82ee377bbaf8ae7c5de5f1d17749ac81ab40ef6479f9d3889b5d7"
+  },
+  {
+    "repository_path": "audits/a74_exact_phase_generator.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "513633304b004c038a2c4e404c1fd675c138737f44c7fa4a30c5d30a64809381"
+  },
+  {
+    "repository_path": "audits/a74_interval_gamma_bifurcation_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "149f5bb2248dd35b63d7820cf6675918d06b44b451526e206059dd178baeacc5"
+  },
+  {
+    "repository_path": "audits/a75_M15_M16_phase_discovery.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b595e76da67d5924c28fbc796e55b1552a35c5ef75da99ba6dec67b99e56c936"
+  },
+  {
+    "repository_path": "audits/a75_domain_restricted_phase_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "13e4d97948bdd2cf3f28ea186f7b19b3897ec7e890f4df8ef332f87b4564c092"
+  },
+  {
+    "repository_path": "audits/a75_exact_catalogue_generator.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "beccea2a68e14d2b6adf7e226a664b4feb5898c96a4e80e1c141fe6eb6007847"
+  },
+  {
+    "repository_path": "audits/a75_exact_phase_generator.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "29be038f768cae06e16ee522fdb3782c4e571f8fbfc6c56518af246a13a6a13a"
+  },
+  {
+    "repository_path": "audits/a75_parity_orientation_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9a520afb404717ae9c6a359b2b59f6fc6ce5b048e5ecc754fd1de1b8583e9a3d"
+  },
+  {
+    "repository_path": "audits/a76_M21_M23_phase_discovery.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4cdf04191d3b17de281ad73f17e0584826f992e750a6142168e6cab929cb6021"
+  },
+  {
+    "repository_path": "audits/a76_active_reentry_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c436ffb5a291fe06ece301f3f4ca7638412c6091aafa9fc4ff732db691e17fea"
+  },
+  {
+    "repository_path": "audits/a76_active_reentry_core.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "772303df310d802d85bf0599da3912c58efe49becf0a28357f116f077cb08a58"
+  },
+  {
+    "repository_path": "audits/a76_interval_certificate.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "47a726c12c9e05407608191a80ae6090b8b8655a60f183faa010d99f2bf7e00f"
+  },
+  {
+    "repository_path": "audits/a76_one_pivot_neighborhood_certificate.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1beab884f9c1c9a7edee636b6a08f2b0a4ddcfe2c2807f823ea0c9d882cfd231"
+  },
+  {
+    "repository_path": "audits/a77_active_contact_reset_core.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9dd3a8ffd23a9c7f813b4161dcf7881a5b47567a302ea77fd0776eb2566eeabc"
+  },
+  {
+    "repository_path": "audits/a77_fixed_family_parity_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "571ba2cacc6be38b661d29c0ff4c89dd2a6412112a6b97decab3f7f6fc3c9c8a"
+  },
+  {
+    "repository_path": "audits/a77_one_pivot_contact_reset_certificate.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5c99b4275b0c97328aec40d1db2d0be5fa3ff3d8d9f84d6191c04fe626809804"
+  },
+  {
+    "repository_path": "audits/a77_support_interval_certificate.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a5f2b3ced062b8e6e147670d650cbb648449f0ee5ff801443bcd4bfc43953a24"
+  },
+  {
+    "repository_path": "audits/a78_rational_probe_contact_selection_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "27fc53e4426cd0e3a656f3444895c4bcfcbc54090477162a8d7ae96109a43b4f"
+  },
+  {
+    "repository_path": "audits/a79_compression_interval_certificate_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "13bfd7357dd8782be9c81ebe7a49781623b981f93bf2a2d9213859fdfc52b68c"
+  },
+  {
+    "repository_path": "audits/a80_local_compression_window_atlas_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ffe341d160ffda3869d2cd14dd641aaa7d6fd89b27f4eff424dd049aef0f44e2"
+  },
+  {
+    "repository_path": "audits/a80_local_compression_window_worker.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a09063c71a2e4ceb3333518429f108adcd49a6966610364e043076b577960ff9"
+  },
+  {
+    "repository_path": "audits/a81_reduced_boundary_system_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a25939cec3e639255b4d931335ea893bfb17bd2d3c1a7dda9ca6fa9a2f28b8e1"
+  },
+  {
+    "repository_path": "audits/a82_adjacent_contact_locator_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1a8d30effe06ea6a8a9ba725e3c071ad193d0d41ccf063d1afe163d9341b8d6e"
+  },
+  {
+    "repository_path": "audits/a83_seven_term_adjacent_sign_atlas_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7c31005e234beed74e64a4ce98938a8b124177d9e3f3f889bbba8afb5a19229d"
+  },
+  {
+    "repository_path": "audits/a84_k_space_exponential_polynomial_stress_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9cada1e46a7019a6d4238d203ca22fd36c5181b46d49f7958b2cb16b0e8ebd50"
+  },
+  {
+    "repository_path": "audits/a85_parity_dominant_balance_contact_localization_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "62ebb0bcb12cac62c46979c3efc29573231e3b849cec6135027fad107dd7d59f"
+  },
+  {
+    "repository_path": "audits/a86_exact_rational_contact_strip_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a73a4f1c1cf0d01ecf515db31988b7f1e0bc9eea22bec18743eaad45a1edce93"
+  },
+  {
+    "repository_path": "audits/a87_exact_secant_offset_classifier_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d471d1e785a17b54a5e4b3d703e03372009dc0cfbfc33ee3ffa88f1e809129d9"
+  },
+  {
+    "repository_path": "audits/a88_nine_term_secant_positivity_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5e0e40307441d747137f704131b1349937318d82edf152fc2bfed25fa80a1c51"
+  },
+  {
+    "repository_path": "audits/a89_uniform_secant_threshold_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "80002f4bc8db3259bf0a8536b75e534f2403187fe8b91d27c23f1d094f0a68fd"
+  },
+  {
+    "repository_path": "audits/a90_prethreshold_all_k_one_variation_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ceb3f45649bb8ebec650e205256195f43d36ebf5ebf276ec8833e51efa45d50c"
+  },
+  {
+    "repository_path": "audits/a91_exact_four_term_offset_three_mechanism_audit.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "dfaee0b64730a0fe6f149d3166c6947fa00243f310c18cd7c6d33f61489bc5c6"
+  },
+  {
+    "repository_path": "audits/a92_exact_continuum_offset_three_window_audit.py",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "65c0c5902f10172b57ea2c0e8c0a76f29549e46471440818f0eb6d89109be6fc"
+  },
+  {
+    "repository_path": "audits/validate_finite_grid_nonclosure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "eb065d29ec661390ab6b4b05079d086b7c8d606c259215b221a8a4e2f11dbed4"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_adjacent_contact_locator.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ce233ef76a034e0de8ec831e25777ff2653881e66b78b3ee637b4b2064fda2d7"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_bootstrap_spectral_protocol.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "707fc549db624ed48f0a8bb30c6bd9abae655f471341fa72280d25cc4f3f11aa"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_candidate_vs_actual_active_set.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "19f41633d11f7c921241f770482b50f482dc209b79cbf0ad65bbbea6d1510817"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_central_mean_support_family.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "32eeb6565d5b618cc67f69a750a49f9e8574e04a7f582a6365cb507227747f35"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_complete_one_pivot_neighborhood.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "583f88ad8200f84d917b0672f6ca37cbb86a3fc7f668216885ce6e0a4eaaf6ac"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_compression_interval_certificate.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "fb963a639389c8e0c16860e426bf9922d9296029a43df905c16bd516a7ef3d4f"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_continuous_first_anchor.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "40b5952f0a49b51861b82348c169dfe782fa20a2bbd75bdf4e77a0ce580bf202"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_continuous_first_anchor_stress.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d5c794fb9d896c7fa2041b5a884d3fb06a7deade2bc1dc3baaa9b34455d01d97"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_continuous_parameter_audit.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f2728aa250771efa78cd615104d4494b3fbf7d38726231fc142200f3c55cb288"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_continuous_second_anchor.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "80379a4e9d651cbaae305d652c60d1be8fd6ebb58389d6600c26f7563365e3c8"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_continuum_offset_three_window_atlas.md",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "8eda1e3a5f282ec781de451690f3cfb08e261e90f49448419030367025d8516f"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_correlated_ellipsoidal_calibration.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5ebaed6b1885d89a629483c0ea48f4c90c2f28ab211660760c0fabd6a5d72a15"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_cost_regularized_finite_cap.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5cfcc3753ed42af5f261339876e54a95f182c75f34ee5c88962ca02305ffacc6"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_coupled_second_third_anchor.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0e0df42ed4eec702144dea6607df4bfe4c0981dc423c240affc9ffd140fc0990"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_cramer_chebyshev_reduction.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "805e3054fa880898094c8f2b5fbcaa2be0304245c565c41ba973e801d16916c3"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_direct_q_minimax_design.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c8473083a53ca49e5bad4ebdd5ad4c9bd930df287e38fcf52aa9cc5d33abe21c"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_dual_envelope_channel_value.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "363928c80a2cd950355a35dec209a7a2095c9f3259a54c2005c2b0a459135cbe"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_exact_global_phase_theorems.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "53a453b1ba05ac2c09c692e7953cc1f4a6ae093e4a3620d567a5d027c235d69f"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_exact_rational_contact_strip.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "6e1a979e35e3f81706e3a06ca014f8ec43213c8bbf48e45d65f5ebf29878790f"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_exact_secant_offset_classifier.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "aa1b961176e337117e1de96248999eac2f6e81345b297b9402e5a0d8e12daca7"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_expanded_anchor_catalogue.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "79f2dbd521fab7ce6ed04e6e34354fcdad0ee2134395fd926c6787b68077830c"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_finite_budget_design.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "6c1252a8edb5e14fde5345b30a1ee5805ebc6c16fcf72aa2ed42643c81a28dcc"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_finite_cap_implementability.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d175e8bef3be184b1b331bb106b94f6bd9492171c2492bbfea645b73577590b1"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_finite_grid_nonclosure.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e4ca7bb282889c19bcf8fcbace3486b8f3348aafdb891610324c313fec94a5b8"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_fixed_family_contact_reset.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "811f4598ebb1fc0e53a35910072680c015c62c39588d05eced5078c34823ea53"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_four_term_offset_three_mechanism.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c9e14731723355dd630f2b3cfbe8b207bae74c4d05960a4f735911d8ce3fc81c"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_general_covariance_matrix.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "6bcb7616db4720a94293aebb1e5d4338c99c092a12e9e17771e4f265122c288f"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_global_noise_separation_phase_diagram.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e4fbcd9a8dec891a7a9869691904355e0035140a69b903e58de61938dbb3434d"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_heteroscedastic_third_channel.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4e1317bec1cbc54b186daf15f91e7f98410cb622dc2b4cb6fb49672b51e79770"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_independent_three_channel_error.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0819fc6802d3e4e9b6be39cd47610dca77e9f75302ab5418943f3e88e217f74d"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_interval_gamma_bifurcation.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "db54c64d2ab5b7b3b4f0b26f177c5bfd948ab187836f79c29cfa1fcd00c4caf4"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_k_space_exponential_polynomial_stress.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0a8d5ed1816fb22545b79fa1d4d9c82359aace9e1b92868a5697e78cb7157f94"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_local_compression_window_atlas.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "080afb8f08bfedf2bb779942986d88eff4357b6a68811f0dfd3f33ad46db7177"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_local_pivot_diamond.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1ca3809af5a63b8e694ed90f3b15ce8c2669fe5cbe4baf64a97c25e374baf984"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_monotone_refinement.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0028d746e4752fff6be96e76766f42660badc033a1a53102fc97f4c4d5ad9058"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_nine_term_secant_positivity.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3360bbf6d31ed6b8645e71586cf70d57e1f6d33da54cbcff0e59d4561f35951e"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_noise_separation_boundary_layer.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "09f25410b94b2217b27ee516c27e93816448b2c05fec25d97cca562172cee3de"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_orientation_bifurcation.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b687fa970fea8a8b5d95426af21f7c95b3b3d15be29426f63e32ca5a351b53cc"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_parity_dominant_balance_contact_localization.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "bf248708d09edff1ae8c51b6410a751f0bf4496c0709c5a33bbbb704cdc5d91e"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_parity_double_bifurcation.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "acc9f0f7e753bf834d626fb342f7184208b7d70219c4a325d1dc4cc2e76bd3dc"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_positive_noise_phase_diagram.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3f9521b14d953e91c0cd8532ab880f1947567b57721d6712bc4756d9a9097289"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_prethreshold_all_k_one_variation.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3becced8c287fc6643123f7cc909edb5e36284e191b27e0eb4bc828709cc79c9"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_rational_probe_contact_selection.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c7eab9a1674e353964b74d51506d6fafd7b22e6a839c4dc7e0123a73cb6f94bd"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_reduced_boundary_system.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "90b0583088d9ed5e82d1acd1cf3700de4f937702c77330dead836acf4d82e125"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_robust_interval_data.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "aff7efd8127bcd7f49e24022dbb04941cebbcebc32d4864a806d71fe885822e7"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_scale_normalized_boundary_pair.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "44e0316e7964f6ca6ad6808d22622e5243af9d705a0e02d9da0e3bdebe477fde"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_seven_term_adjacent_sign_atlas.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7dfab9d25177bea5233f884f0c5730eb4c9fd803e4e707281cc26542cf2d8143"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_sharp_prediction_intervals.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "88aa11373b63d4c1343bfa17b3609967c93f59f57e621b978c16a41a5e77c133"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_signed_q_schur_dominance.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a2926a341778143a54be03be901abb5e45ed8c6f9af48fcb2dbe9b26f7630f7a"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_spectral_covariance_uncertainty.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "083db7a946afc5f93f7dbb1050e118def23bba8aeb3e42fa82e1160accb5e137"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_structural_generalization.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "46971246d7016e423be15f8a729b0224aafa0d1ecabde5d95eeb2fbdf546fc63"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_target_exclusion_distance.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4bc18d61eaeb59423e9941cb0a9800b5535be24ba4e64c364d7096791ebd039c"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_target_inclusion_degeneracy.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "dc74506cdc9abac716a5d2ef812050d0a426e95dda273fc5b51bd3a78a8000d3"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_uniform_secant_threshold.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e471229860ff3547d6c7f60e6b55283b17ddd20f6afa1b9ad61bb135bb20ed84"
+  },
+  {
+    "repository_path": "docs/technical_notes/MFRP_next_step_universal_continuum_witness.md",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e3192a9d2042dbcadeffd8d41aca12acdd92f5f7531c12dae902b122622529f2"
+  },
+  {
+    "repository_path": "figures/a47_global_phase_diagram.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "afc59896048f9143dc8f1d8c9aa08d822933c133fd3e1f91478c6806363188c1"
+  },
+  {
+    "repository_path": "figures/a51_target_exclusion_distance_risk.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5ed538f6530b9e9b26cef2c15caba9df79f1ceec8d94fb8db668e37ae550b077"
+  },
+  {
+    "repository_path": "figures/a52_continuous_second_anchor_risk.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "94dffe7a110f34ce4244dc6a11271adae03b1fcc5536ff2792b62f4a608baaf2"
+  },
+  {
+    "repository_path": "figures/a53_coupled_anchor_risk_curves.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "2d454a28bbf528e86196902c7cc4d69e8338599545ab73c79526ba6cbc721674"
+  },
+  {
+    "repository_path": "figures/a54_universal_continuum_witness_band.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "627afc21a70788daeec1aa23b78c67b9ebe87d0670a3edf10480cbe741d41bce"
+  },
+  {
+    "repository_path": "figures/a55_finite_cap_absolute_convergence.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "aa419abf52782bf2ddd017fb1285da08f1f52a6126960de9f1336be10990105d"
+  },
+  {
+    "repository_path": "figures/a55_finite_cap_relative_convergence.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "104ddb9bc88f445448f9b17c4dab04ef57c7017d4c8890a02ca552d771ebb361"
+  },
+  {
+    "repository_path": "figures/a56_break_even_costs.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ca56a5c59d00a79aed080d56008ca4dd6f1f4dc1b9337d95015edefcd18f93b0"
+  },
+  {
+    "repository_path": "figures/a56_cost_selected_cap_policy.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4f19cf8822918bd777d7fe0c3bf7cebce32adb45be3d664dba80f7e6683b6768"
+  },
+  {
+    "repository_path": "figures/a56_risk_complexity_frontier.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "bcc027910dc5ef177ee7230437115251cc8471c05215f6122e48014eab05f173"
+  },
+  {
+    "repository_path": "figures/a57_allowed_noise_increase.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "86111451bb137ec79a51a10b5b6e55e34a16d2d14fc863b4528c7d1c85f0bc91"
+  },
+  {
+    "repository_path": "figures/a57_upgrade_threshold_map.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5c21d1b322d258be163d5cd64c20944079ccf78c1d36b98cc8152ad08179a3b0"
+  },
+  {
+    "repository_path": "figures/a58_channel_sensitivity_priority.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1e8ea4800437626d1b240ad9a67faf63dd0ee3d32371ddc91c0ce3b49f00279a"
+  },
+  {
+    "repository_path": "figures/a58_individual_error_impacts.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4b2867e5a3f48f04fa4963b93b0bb4e571f7289fe6c29b95467cc2e87375ab93"
+  },
+  {
+    "repository_path": "figures/a59_exact_vs_linear_correlation.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "39bc7739c97ff4129ddf8c7e1504f711ccc4c8760415d674ff700ed15379b876"
+  },
+  {
+    "repository_path": "figures/a59_risk_vs_correlation.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b9fbb42952c7470ffc198da0bc55b6a8cf1cf1154575459f70bca9d1f724ad2b"
+  },
+  {
+    "repository_path": "figures/a59_worst_direction_vs_correlation.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "2e5f754749fca6dba14c313ff41e4201e381552ef0077270ccdacf9b657bc8cd"
+  },
+  {
+    "repository_path": "figures/a60_covariance_contributions.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d354870470db687ae89ceef39a031b55e26e2da298a147974e4b03499294d4b2"
+  },
+  {
+    "repository_path": "figures/a60_general_covariance_risks.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a40a8bb019c8fd8e2fb84b7751cc4b183cb4f9b434bcaefb81730f7225e642ef"
+  },
+  {
+    "repository_path": "figures/a60_general_covariance_worst_vectors.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9ccffbad74961dffbba26e97c04bf49433e19bb8e7c3c45ead7439c9c1d68e3c"
+  },
+  {
+    "repository_path": "figures/a61_covariance_uncertainty_premium.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f4a6472d1cf62d57b2405ce74b74c15e2843e09bb977f701462e7380e8fe13ab"
+  },
+  {
+    "repository_path": "figures/a61_spectral_risk_interval.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e0c221ccfd77245149ae5e74dd9f060a48c2b9405364fa9949846f7eb2d3e50f"
+  },
+  {
+    "repository_path": "figures/a61_worst_vector_vs_tau.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0a4076fe3d53213930a10c78750c471120f7eedf59bc6bbcaec2c9acb05a793d"
+  },
+  {
+    "repository_path": "figures/a62_bootstrap_coverage_validation.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "699c5da9a35a2095d2053893185cd78805b19d8147c063d5d3ed1fda72173306"
+  },
+  {
+    "repository_path": "figures/a62_contract_availability.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "fca4ffc41f85098b96f2ded6e4e931ecd83a142135fe77120c0a02bf77fcf9d7"
+  },
+  {
+    "repository_path": "figures/a62_required_inflation_factors.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a9aef95a57878e91e2fc45e30f649f8ec7c705868f656a041c177e66f536c8fd"
+  },
+  {
+    "repository_path": "figures/a63_noisy_anchor_atlas.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7ba36cd3ce701cab17a1f428526fccf51c16da8afcbe9b5d1826cbb7190ddd93"
+  },
+  {
+    "repository_path": "figures/a63_noisy_third_anchor_offsets.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "13e1a99b67cc3b1f65bb89352be4b39c5b898362b586d3b5eadea9c979ea6f01"
+  },
+  {
+    "repository_path": "figures/a63_risk_vs_support_size.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9316324dc62cf2dc0097c2339cc2bc296e4381de39d8ee5963979001e82e9619"
+  },
+  {
+    "repository_path": "figures/a64_boundary_pair_counts.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7289be6874096175eaad99e820a508b8e6c7cea1cdf3bdf47d5ab43a0016f214"
+  },
+  {
+    "repository_path": "figures/a64_normalized_third_anchor_offsets.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "33e0539492b9d31cfb16ea5bfb08a5301c71cb65e954f850ec89172b90409746"
+  },
+  {
+    "repository_path": "figures/a64_target_translation_alignment.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e49065aaaebe33674c7b92fd308ada1b0431355cf335708a4eda51de0acdba1b"
+  },
+  {
+    "repository_path": "figures/a65_boundary_sensitivity_distribution.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "491457f456f4f76bf6782652b411ce12dc50d771b883ee15d5ac184e4741003d"
+  },
+  {
+    "repository_path": "figures/a65_continuous_grid_margins.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "2c0885e6e56b281a043e7a2c10b4e22881eb94fce313ce0bff9f1a42134a5a3b"
+  },
+  {
+    "repository_path": "figures/a65_local_certificate_coverage.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "08f132d0c8bd6efb40f8bb7f959f4761f99a07cb2e6b635dfa278820bcb5922b"
+  },
+  {
+    "repository_path": "figures/a65_representative_first_anchor_curves.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "893c105c95fe699bbc38cec23ceef4cd639b88405fa92361ff5fa0062ea8e0bf"
+  },
+  {
+    "repository_path": "figures/a66_canonical_global_monotonicity.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "38eda9d16c6eb3ea097640c47a831bb0f1d170d678670b5d35a22197eb517492"
+  },
+  {
+    "repository_path": "figures/a66_canonical_phase_map.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "cfe8e9f6e8d0bea3b8e92fbbd07f6fe553bb5b0644cf26bd5b6b7347b23f1a15"
+  },
+  {
+    "repository_path": "figures/a66_degenerate_global_monotonicity.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d3e2272d8c8d053daf5b72be82415f19899ddca30c9e2ae1db484695fbe58e42"
+  },
+  {
+    "repository_path": "figures/a67_risk_vs_support_size.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "443e2de5b5e561d563cc126fd3e0046db0c1e95aa26850df7e0ce1428b36e8f4"
+  },
+  {
+    "repository_path": "figures/a67_support_family_phase_counts.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a135eefeead2d8da85a04edb76e8ce58fed3e310adbd96b6c35b9a69e3581787"
+  },
+  {
+    "repository_path": "figures/a67_support_family_risk_curves.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1f61491d64744a314060dcc93ab041df61e0b2cefaf5ee7b7c55325d424abe68"
+  },
+  {
+    "repository_path": "figures/a67_support_family_transition_map.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0423abc70ac168283858cbc86d2facd9ea0dfad29c127c9f04a649522d326c49"
+  },
+  {
+    "repository_path": "figures/a68_dual_channel_activity.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e874e5ce87f31ec38d15d966c34236525b4ab9bdf6ce47c25e3d51bda900db60"
+  },
+  {
+    "repository_path": "figures/a68_first_channel_removal_risk.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "42c369d062596ca628f97fd036306ace126f0ab3b31198ef7b345a51e8262211"
+  },
+  {
+    "repository_path": "figures/a68_first_channel_value_multiplier.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4a80461094a3d91a136a8938280b561e2cd60afac7eccf09740242ccea50b696"
+  },
+  {
+    "repository_path": "figures/a69_contact_signature_counts.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "97cc60256b80b3e5cdebe791c1ce8597f8d774e8b647fb8eea414180966edd66"
+  },
+  {
+    "repository_path": "figures/a69_cramer_orientation_map.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0673636723c3c00e7bebd3ae1c5d884dd3722282e9e04bd91d1a363a75e3a5aa"
+  },
+  {
+    "repository_path": "figures/a69_numerator_flip_margins.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "033a87b5a073064a403a00759970846ff90b58fc6a770db1e03df2cd3489d237"
+  },
+  {
+    "repository_path": "figures/a69_order_only_counterexample.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9933050ed0c747b2abbd248f18beaa78d7499fe10d0496ab86fed3ccc5f385b8"
+  },
+  {
+    "repository_path": "figures/a70_minor_class_counts.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "6bd245347ac70daea12a8e5101b559407d6e45290614336a34d30f51e16fc58b"
+  },
+  {
+    "repository_path": "figures/a70_phase_dominance_ratios.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b7fe509bd210545e6a00a8bee1540f16de72766c4c51e0d62a7f1ca5beafd538"
+  },
+  {
+    "repository_path": "figures/a70_signed_term_counts.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "21d5ecf601f16deaaf18e572342515012407fa3a7aaf0ca1a8231bf4b1b1a7fc"
+  },
+  {
+    "repository_path": "figures/a70_weakest_dominance_phase.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5847474a41dc742a8b67eb6f7b1d9865763c878a07f573f591bd1ad5b2686de2"
+  },
+  {
+    "repository_path": "figures/a71_M10_exact_catalogue_top10.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4c57990e5d698312b0e45bcf78e422fecbc0ef7c3316447f539b526782f51595"
+  },
+  {
+    "repository_path": "figures/a71_M10_global_risk_curve.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4f26abe471cac6b20d921012c1b55bbd3267e7a979b9ffb31c205985a8eea187"
+  },
+  {
+    "repository_path": "figures/a71_M10_phase_map.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "454369fca20a3e2c53a1418fef1a8a9731b8bbe1933a7090563b26e8a369f0de"
+  },
+  {
+    "repository_path": "figures/a71_weak_signature_bifurcation.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1c01f019ac6ac810ff6f53999587b3038175655d22a8296c149c5e18d320eedd"
+  },
+  {
+    "repository_path": "figures/a72_M10_M12_global_risk_curves.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "fab946081ef0514e4ff167c3389f64e0defb389299cfa4116d1f185b205e42cf"
+  },
+  {
+    "repository_path": "figures/a72_exact_catalogue_M11_M12.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "916ee369d8ffb7da03d79f9b8acb23b2c33c5aad4117b3f91486ecc1e0e3db50"
+  },
+  {
+    "repository_path": "figures/a72_exact_local_pivot_diamond.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "193ce73c8c6ff74e0d6685f221f9d39b4d75a2618e0fcf376d6fcc6dcdfc08e6"
+  },
+  {
+    "repository_path": "figures/a72_transition_map_M10_M12.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ddb88c99f87222a59462d0992f6f023cd3850ec4f6874f4b3ffb3a1d06e29247"
+  },
+  {
+    "repository_path": "figures/a73_M13_gamma_sign_selection.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0e66e860f7b697bbc509818f12c0977f8fe33cb7da659f7205d9b2cba2724beb"
+  },
+  {
+    "repository_path": "figures/a73_M13_global_risk_curve.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "10e2f8c25ec41ddea5492f14e8cdefa478005db7e70429de9304ce877e1665d4"
+  },
+  {
+    "repository_path": "figures/a73_neighbor_classification_by_pivot.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "549ae1d7ccef017cba47ead6eb58b8cb179d1b5aaaeda82d104cf0b4bd0cc370"
+  },
+  {
+    "repository_path": "figures/a73_neighbor_classification_by_support.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b74e02de402aaa57d8679a5a939233cc50f5631914ec71e71d207e605b88ee33"
+  },
+  {
+    "repository_path": "figures/a74_M13_M14_phase_complexity.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b7d19681c607c6b9b69d86486d2141e4ba6ac2f524af026d75d8a6c5cdb0cb8a"
+  },
+  {
+    "repository_path": "figures/a74_M13_full_phase_gamma_multipliers.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "441e3af5f10a9c1d73c869de22ad50ad947dc26f994a1d7d115130ed1b35b956"
+  },
+  {
+    "repository_path": "figures/a74_M14_global_risk_curve.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b4eb1d687981bfc4debc34a8f3ccce8ad8253db7019f8cc0c957d09d28c81124"
+  },
+  {
+    "repository_path": "figures/a74_gamma_multiplier_common_interval.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e21b48d35ca3347b51447817fdad8c9b673e53ebcd6e98187e23563026e1136a"
+  },
+  {
+    "repository_path": "figures/a75_M15_M16_global_risk_curves.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e6f714a6c7ac766c9f5a7bab820db4e3dd24cfb2a2e1c9e51d3d191126918f23"
+  },
+  {
+    "repository_path": "figures/a75_M15_M16_transition_map.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "848943b183b519423f1f014db783edb30e12fb9b07a67d69109cf01f8274085c"
+  },
+  {
+    "repository_path": "figures/a75_asymptotic_remainder_bounds.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3814095d8d3e99e78a00b21cd36e0c1c9b104889900aa7a504e459018d6df78d"
+  },
+  {
+    "repository_path": "figures/a75_support_size_orientation_theorem.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3def4455c2f9fadef676bac3bb281bcc010aaacf781411e5c6b0ab45824c434d"
+  },
+  {
+    "repository_path": "figures/a76_actual_gamma_multiplier_interval.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "164ffc5146ee3da7206d6b6ec8273c31f79300fcfaafa6b1469a17c00eb9721b"
+  },
+  {
+    "repository_path": "figures/a76_candidate_vs_actual_signs.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "dda892354b719a1aa24867f07510150f4b40ce8da9bfa14d7c3a5e76970245cb"
+  },
+  {
+    "repository_path": "figures/a76_numerical_phase_transition_map.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0ac7a4d9ebfaecfcbbe3cfc9b17c4f6416d0d63b37d09c88cf2e281b1c214915"
+  },
+  {
+    "repository_path": "figures/a76_one_pivot_failure_counts.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0b08c9bd48a8883bfc37d7822f14841390ad9f56b829976517847587ee561251"
+  },
+  {
+    "repository_path": "figures/a77_actual_contact_gamma_reset.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0b28fa101d26fe53c79d0d273c1fea63746f206491dccfc3cb66b559c1efe46f"
+  },
+  {
+    "repository_path": "figures/a77_fixed_family_double_bifurcation.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "29e2f324f8c8322eabf4587278b86543a05611ade22249d30ac455514e495b7d"
+  },
+  {
+    "repository_path": "figures/a77_one_pivot_failure_counts.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "aa666107425272cf177f7c74850dd120728dc98e59c47704b1e6e5ca9a4060ff"
+  },
+  {
+    "repository_path": "figures/a77_reset_interval_gamma_multipliers.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f7c45ca220971586ee2f0aedda6b3052b792fdee9081caac31e4a1df31b4d01f"
+  },
+  {
+    "repository_path": "figures/a78_rational_probe_contact_selection.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "6a5fb76dce32b91a4404738a3abe038e9ecf42b42579efac7d3e1558a65434d6"
+  },
+  {
+    "repository_path": "figures/a79_exact_compression_intervals.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a39f75c52627275d9dae671eec60f32ee1f287e6376d001d5a9c6c668897a9d1"
+  },
+  {
+    "repository_path": "figures/a80_local_compression_window_atlas.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "acfe90affe737f5b0e8b149be43a25992b774e2887d50e707c406ad19dec6461"
+  },
+  {
+    "repository_path": "figures/a82_compressed_contact_locator.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9c599d4604fb37213db5f0e81c3dea47acc7f21a420f5cb54ddadd174540cbd4"
+  },
+  {
+    "repository_path": "figures/a83_local_adjacent_contact_sign_atlas.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a975019029c8e2d3ec0d8d8fd221d97ac57646bb1cad5c7552c129c1cd16ba6d"
+  },
+  {
+    "repository_path": "figures/a84_exact_probe_contact_scaling.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a1d3507dccf9e0215454a8aecaaf9c26a53943785a2054907de3ab5391f5df24"
+  },
+  {
+    "repository_path": "figures/a85_parity_asymptotic_contact_localization.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "dfeefd295c5b07e54b7d2cd48f2a436b0d3e6c083d75e9f2209bf430c37b8625"
+  },
+  {
+    "repository_path": "figures/a86_exact_three_contact_localizer.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ece7259c089841b70f7fb327c268840b110f3e53313254f43a0d9e089b40719a"
+  },
+  {
+    "repository_path": "figures/a87_exact_secant_offset_classifier.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "62841dfdea9414c3e51961bb055cae47d49b60018a7a5efe896d51e717a73374"
+  },
+  {
+    "repository_path": "figures/a88_exact_local_secant_base_contacts.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d5477503cc0f28c84bb6605a93621d334d4b64e18a77f3a8e1ffc37875a55a4a"
+  },
+  {
+    "repository_path": "figures/a89_uniform_secant_threshold_budget.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ee274887cd3dc7012d6773216be48c9626a1a0687ec031fe4c716b76c3ff6760"
+  },
+  {
+    "repository_path": "figures/a90_exact_prethreshold_contact_offsets.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e13c8e158418f4249d9ca3d3c6f637a217b33736581785af94015edebc8e5ef1"
+  },
+  {
+    "repository_path": "figures/a91_offset_three_screen_and_exact_cases.png",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5a1a0e5aeeb951d8845fed39c3681caee7393480b86af09ed5c404943bd7cb61"
+  },
+  {
+    "repository_path": "figures/a92_continuum_offset_three_windows.png",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "55bc71d91a322ffea03491f610e986568a2c663fecdcac3c45956c9868da7d32"
+  },
+  {
+    "repository_path": "paper/MFRP-TR-2026-01_Informational_Requirements_v1.1.pdf",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1068775641419b73cd08d1c95cb20452616d82d727c330a386e48e16c8210fd3"
+  },
+  {
+    "repository_path": "pyproject.toml",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "9abd5f76744e85b1be0d583bf89556430c4dd0429c01405b0999ed045bd012b9"
+  },
+  {
+    "repository_path": "requirements-lock.txt",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c9802682d61bf1c12f5f1f5224eb9281f7ca5583521e0bee4115d4bded11400e"
+  },
+  {
+    "repository_path": "requirements.txt",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f00bb222db389ea883732d1a179a12bc485d1f07f2db0f6d2b2e02b6a7171664"
+  },
+  {
+    "repository_path": "results/a39_sharp_prediction_interval_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9265ca2d203717ee4a139c5abf68577f01266a63c2ae7cf47b5ef59d705c3249"
+  },
+  {
+    "repository_path": "results/a40_monotone_refinement_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "cdcf2320c50d95b8ff2e10d691abea8dbbcb87ed4421fdd7ec2e9f86f6005fcb"
+  },
+  {
+    "repository_path": "results/a41_robust_interval_data_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "563c8ff50b6dfa574a466c22684cbbc162369cc771d8fd050f15412ac2491f97"
+  },
+  {
+    "repository_path": "results/a42_finite_budget_design_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9e83159f596c4a1415dcde392188035acfe42d1e8b73cc83f9a985bfdad1409f"
+  },
+  {
+    "repository_path": "results/a43_direct_q_minimax_design_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1d7005b7770bcd1ddb25ab3b00e0b322bcbfff5a621998f6c7e41499cf8f0f69"
+  },
+  {
+    "repository_path": "results/a44_continuous_parameter_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "72298dd6e576a6982f99234dd897acc7cc7a942ccffa9429028aaa6d7144dd32"
+  },
+  {
+    "repository_path": "results/a45_positive_noise_phase_diagram_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "55ee618908de35437969087ce86752445cad2b53a75737b3d97347572a7b11ed"
+  },
+  {
+    "repository_path": "results/a46_noise_separation_boundary_layer_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ffbc0f8be58bfdb2e7458373fde9e51987710cd2dac1ef8ba7063237942440d5"
+  },
+  {
+    "repository_path": "results/a47_global_noise_separation_phase_diagram_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "026736fc9f8c46d87c561f1340c9f5ce196e35990da9cba14a5f4c3dafc26841"
+  },
+  {
+    "repository_path": "results/a48_target_inclusion_degeneracy_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7fd4fa6e46daf20bdec386c6d56bdc03d7c163e9210507056e7b959251faa60e"
+  },
+  {
+    "repository_path": "results/a49_expanded_target_excluding_anchor_catalogue_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3764f3181a824350957685a75998e61154713c6cb6c3377684aeca361203903c"
+  },
+  {
+    "repository_path": "results/a50_continuous_first_anchor_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "aae01481d91dee279135e04d4c7670f55ce9e4d407e3db39c7e341f8f4dffe51"
+  },
+  {
+    "repository_path": "results/a51_target_exclusion_distance_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b42824440f4da207ca4c49e0f0a8ed3ae98dd738c46da6a84b1190c2ddafaa21"
+  },
+  {
+    "repository_path": "results/a52_continuous_second_anchor_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "fea76ca59d917d50f566678335bded643f291316c13949081ee75cfd15daf76d"
+  },
+  {
+    "repository_path": "results/a53_coupled_second_third_anchor_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c59b8a3825bc9927072fea9504ce6735357ff0c849f87e22964a88b830bb1115"
+  },
+  {
+    "repository_path": "results/a54_universal_continuum_witness_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a6c65a7f8632928833167161dd0bfc0f18a09cfd39c196feef053424be044f70"
+  },
+  {
+    "repository_path": "results/a55_finite_cap_implementability_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e96df359fc3cdbfddc234be6e4b30ba8cca73f66c1990d2a1e0c36d9aeece245"
+  },
+  {
+    "repository_path": "results/a56_cost_regularized_finite_cap_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c73fb79ef4a50ac5fabbe0357e8072ea95537f96c9e1009f2bb88b0ab70c65b6"
+  },
+  {
+    "repository_path": "results/a57_heteroscedastic_third_channel_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d2701b7c15608a33981fb11f73b71d020abdb49182d505e8ea041e6da256c15f"
+  },
+  {
+    "repository_path": "results/a58_independent_three_channel_error_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "cadece4f99597a9e46327ebd9dbd15af0b8e03fd43fce036365a5caed6ec38cd"
+  },
+  {
+    "repository_path": "results/a59_correlated_ellipsoidal_calibration_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3daf412e75f3f127a795323f6c8d982bf6b9467ef07b75f2e9a8bde21c300af7"
+  },
+  {
+    "repository_path": "results/a60_general_covariance_matrix_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "596e4f818c1d564ecd1c02641a31b6b0c9ee907775df877d464925c00054074c"
+  },
+  {
+    "repository_path": "results/a61_spectral_covariance_uncertainty_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "fabb1e8e050429675c5bb08a79ff5707b54eff3023eb3933da189a5f58dafd96"
+  },
+  {
+    "repository_path": "results/a62_bootstrap_spectral_protocol_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7e01fd1ba72d1200fa53df71051cd5efcfe89f408d21928a3999709790c76125"
+  },
+  {
+    "repository_path": "results/a63_structural_generalization_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d3c9d5c937daacfe023e31c3cd8fe27d6bb0014e5d7eca6fe5eed07607098a80"
+  },
+  {
+    "repository_path": "results/a64_scale_normalized_boundary_pair_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9d823ec6f7aa0df70fc56a335c805f23b36a5e969e9677de5ce93cd069362508"
+  },
+  {
+    "repository_path": "results/a65_continuous_first_anchor_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "930cf29cbaa96d574a572b87e9091ab097ee1d00e03f196c7486a29bce78f0d4"
+  },
+  {
+    "repository_path": "results/a65_continuous_first_anchor_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3f74599dc5bb81c0586b621a7b8ea8b99828e442fce04a43ab1d695a44f8b08b"
+  },
+  {
+    "repository_path": "results/a66_exact_global_phase_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7e74a4ea898b5ab640b1022083bcf816f132063fac60762fbffa9fe8d36ca299"
+  },
+  {
+    "repository_path": "results/a66_exact_global_phase_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "6049d2a1991e848fedaba5ad67a53b6bb1d9ef7030715add472e0e6e8dc2c978"
+  },
+  {
+    "repository_path": "results/a67_central_mean_support_family_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ac7831d183e08c35498e19e77e5a27476dc7c35ae5d8dc71ea1e08437be476ef"
+  },
+  {
+    "repository_path": "results/a67_central_mean_support_family_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "47dda8fb661860f5643fdc704d78f822294cd2a6233a4b22481f34418b531eea"
+  },
+  {
+    "repository_path": "results/a68_dual_envelope_channel_value_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a9160acd0fa45ad1bcbe3fc3f73f2d983c683b8e9a83c5f1126c945789fd60a2"
+  },
+  {
+    "repository_path": "results/a68_dual_envelope_channel_value_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f4fed9d62f71cd13ca2b4dc2b2d3099e6d6ce8f5289d46c7eacf43d264a69d1a"
+  },
+  {
+    "repository_path": "results/a69_cramer_chebyshev_reduction_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4f1942668691097a6412c793c07187cccdf1ecf654ab81e243820b1e62297be2"
+  },
+  {
+    "repository_path": "results/a69_cramer_chebyshev_reduction_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3fa45027ecd52f2380dd585b1723452a25f1459d808ac99b7deed609a11f79d8"
+  },
+  {
+    "repository_path": "results/a70_signed_q_schur_dominance_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "38f545c440ff56185d527c5907f566e735c6cef72bae36389c539f360c13d773"
+  },
+  {
+    "repository_path": "results/a70_signed_q_schur_dominance_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d373a17fa73277e639b8d82f161f4e3f7a4efabf62c8ab0fd8485e8fd12c98d3"
+  },
+  {
+    "repository_path": "results/a71_orientation_bifurcation_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ba2911ef17f870a3421cd5f640a246fa958a0a2e586cf87b6e6a42c3d912c082"
+  },
+  {
+    "repository_path": "results/a71_orientation_bifurcation_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c437f1dcdeb8b4c497b62b09900549726895578fc7358b3acd98a93f54913a72"
+  },
+  {
+    "repository_path": "results/a72_exact_catalogue_M11.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "42486469b4e44bdd87d939567cf1fe1f9cfd6ec4ce27fa1bca8ab515828023aa"
+  },
+  {
+    "repository_path": "results/a72_exact_catalogue_M12.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e487f930ec428731056f67699323c8c49b9638231b0653150994829c753cf2b1"
+  },
+  {
+    "repository_path": "results/a72_exact_phases_M11.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0f572b057a5a88103dd0b71332a17d7c83b202fa1c91ed05f1f8f258e79b24d2"
+  },
+  {
+    "repository_path": "results/a72_exact_phases_M12.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1daff14f8fb119cf81627a7150e482096b52f5b75f227a50dde61672ada2e7b8"
+  },
+  {
+    "repository_path": "results/a72_local_pivot_diamond_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c17d6b90da9bf8c68beb850df82508a095b4c0cfa18fa63915646806243a44d1"
+  },
+  {
+    "repository_path": "results/a72_local_pivot_diamond_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "69559eae044f31bcae3f8bc7b29396cab88f8e15fd47c0f82871d5dd7ed4d9cc"
+  },
+  {
+    "repository_path": "results/a73_complete_one_pivot_neighborhood_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ccf5979c6ff89ecafc7b143e12ab058ea2fe729aa1d42785ed71f8ea58dddd6e"
+  },
+  {
+    "repository_path": "results/a73_complete_one_pivot_neighborhood_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d55634dfc11fa4b11b75fdd6cbd3145c55629ce57eb3258cb09ea42949c1c9da"
+  },
+  {
+    "repository_path": "results/a73_exact_catalogue_M13.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "03ad39a82da6fd7a82a35fec00184243343b7de3b92ffdc86ca2aa03583fda61"
+  },
+  {
+    "repository_path": "results/a73_exact_phases_M13.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c3eedf4a1229a5d427685ccc1cd3724a0e5fe3604cceed855825a42af584be00"
+  },
+  {
+    "repository_path": "results/a74_M14_phase_discovery.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b4f859a478bff820f23d464cdb703d9473b2305efe4f94a20edfb2a3f0c2d8cc"
+  },
+  {
+    "repository_path": "results/a74_exact_catalogue_M14.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b73c3ae3c7580e5d8244e0d58f17c76d0a0e3af46fafbe52049f8a3a33369c16"
+  },
+  {
+    "repository_path": "results/a74_exact_phases_M14.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "567d3ca2919448deeb3f70be2209e7713608461f30a758996d2e1bb5f4f6b73a"
+  },
+  {
+    "repository_path": "results/a74_interval_gamma_bifurcation_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a3f4314721a1f74b8329d5905d7866f95e86f9e874c41a24dc5045c0a926fe6c"
+  },
+  {
+    "repository_path": "results/a74_interval_gamma_bifurcation_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "acf4fe1fc2d63666bce7747e7a74ded341e2f0cc3789073b423ad4c181bfba7a"
+  },
+  {
+    "repository_path": "results/a75_M15_M16_phase_discovery.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "736afb5dadf9cea6fb6a560eaae068514daa83e902614908fd25d041767d7196"
+  },
+  {
+    "repository_path": "results/a75_exact_catalogue_M15.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7a1a71f1c73bb0536940ef1898f6e072c2c27b6eb957857349d0ba4f6b4cfc5d"
+  },
+  {
+    "repository_path": "results/a75_exact_catalogue_M16.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f63c16f48380f00e3d8bb70cbf364c58021356d4d17bd4091ce26772b3c2fe09"
+  },
+  {
+    "repository_path": "results/a75_exact_phases_M15.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "42067eca1ada032221b5aeb996d0cd3a7cbc6fd86585e2c7c0cfc257c30eb144"
+  },
+  {
+    "repository_path": "results/a75_exact_phases_M16.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5d66dbe1009259dc5aef3081a0d9b4bc4e247f155662fb774041932cb59e56a0"
+  },
+  {
+    "repository_path": "results/a75_parity_formula_cache.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "6f24a44ff10252020a8dcec80733cecb81924f0172cd97920d911d8e6d351bdf"
+  },
+  {
+    "repository_path": "results/a75_parity_orientation_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7043372fbc10e9742c0b30c47af57d605a9e02b986cb238ee00528831bb81987"
+  },
+  {
+    "repository_path": "results/a75_parity_orientation_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "15ae9c57acb362193d374d0e240a91d6545e9c0d34ecb53a618d0982345b0417"
+  },
+  {
+    "repository_path": "results/a76_M21_M23_phase_discovery.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "856cf4ca6cc4e9b5fa4c9f7042f79bb5080864b72ed17dc6a094455d82196e3a"
+  },
+  {
+    "repository_path": "results/a76_active_reentry_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "606e1972ede00a357b03a50077f87510270f3c2ca90c6683028048c13255eea8"
+  },
+  {
+    "repository_path": "results/a76_active_reentry_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0eacb5841c25c56bab3e3a776ece6c687bb69dc65bc514e846155adcaf25e2c3"
+  },
+  {
+    "repository_path": "results/a76_candidate_vs_actual_active_set_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1142fbc3e3bab0197841bb026bc2fb0ea943fa116f793a481d712848f129fa78"
+  },
+  {
+    "repository_path": "results/a76_interval_certificate_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "fe3665754b61882905651a8fe2ff79fdb073bd868242f80c83c151d5d1a25ca3"
+  },
+  {
+    "repository_path": "results/a76_one_pivot_neighborhood_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e486c456b2395ad7460352ae9933e4a90bd3d5581aa9ccd932b23c5aab328dc4"
+  },
+  {
+    "repository_path": "results/a77_contact_family_reset_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9d3bc899e58ff116acd896a94241380d564ab32d0cab3660748cda0e2933be0f"
+  },
+  {
+    "repository_path": "results/a77_contact_family_reset_summary.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "88d70bb5005cff8861f3979814f70423e248244fd2f55e6f998e1317c11c9bcc"
+  },
+  {
+    "repository_path": "results/a77_fixed_family_parity_formula_cache.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e4234b7a4d2c45ff765589e48ad4c8879703a5d6284cb57fc20e3d6a5627b82b"
+  },
+  {
+    "repository_path": "results/a77_fixed_family_parity_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f039453fab28105e68eac93f7bf28dfa04d393b4707cd7c8a9978268968080ed"
+  },
+  {
+    "repository_path": "results/a77_interval_support_M23.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7ca9400b237ff04b0dee3f7f698543548e379458d3be29f3ec1b7b9f584a5210"
+  },
+  {
+    "repository_path": "results/a77_interval_support_M24.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d40ee914067b4fb986be0b772653142f0dc3cf1c8ad46a27b007b78ceab90675"
+  },
+  {
+    "repository_path": "results/a77_interval_support_M25.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "829541e2ca12ea4b7fba160364f94e004e1aecc7675ab1ac0998597e63bdae46"
+  },
+  {
+    "repository_path": "results/a77_one_pivot_contact_reset_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3060f2a83282614c401d5af6e570f25f573e8c1278e3221c442563f935e40688"
+  },
+  {
+    "repository_path": "results/a78_rational_probe_branch_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "dc961a0827592c2849579c6d3053305c91ac46d8fb84eefc8fc50557f1850fb5"
+  },
+  {
+    "repository_path": "results/a78_rational_probe_contact_selection_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "3e2b1e0cbddbf0081ed9176a946271b36274ad37ce329bfd2c0f76893a6684dd"
+  },
+  {
+    "repository_path": "results/a79_boundary_polynomials.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "02b93f03a97d9e1bb248766cfba1a5f53dc2a3e48d775b682c24f202c1bd9cf1"
+  },
+  {
+    "repository_path": "results/a79_compression_interval_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e30978ce88a0a29b3ee38418fc86ae5de9466d6e62aba325922b5a592b799fbc"
+  },
+  {
+    "repository_path": "results/a80_boundary_polynomial_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "806caa63639956b1776af0a6329a53505f9d64823afdf7cc140261fb8de7d562"
+  },
+  {
+    "repository_path": "results/a80_interval_KKT_condition_certificates.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "2d8f672f94ddd45b4347692c442537f6b2b00c57d749a637f2936447faa67f4c"
+  },
+  {
+    "repository_path": "results/a80_local_compression_window_atlas_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "33c4e7bdd37ae3b6cb450010dc2c712631e09729151862ff98c466c3b6a365b4"
+  },
+  {
+    "repository_path": "results/a81_all_contact_positive_gap_certificates.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a97ce6c7e87d5e190ce82594b9b5eb8a613a1568dde6d555d414788008c6ec66"
+  },
+  {
+    "repository_path": "results/a81_reduced_boundary_system_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "309e510c417722958c77475620cdefbc5d71992d248b84eaacf7b59cacbe21d2"
+  },
+  {
+    "repository_path": "results/a81_selected_contact_coefficient_formulas.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "08505cda254b4c8a4bd568b5ed88f3c3c22ea907e2b5d9a4f537a87a176cd296"
+  },
+  {
+    "repository_path": "results/a82_adjacent_contact_locator_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1f20217770a0917d81e449bf6393c6bd22a141049f2c80abb9492cbbdbd49cab"
+  },
+  {
+    "repository_path": "results/a82_adjacent_difference_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a4a8f1d04f22b788cb79155ca3a37ee4922535b1198f61dceaf3875a4339ed68"
+  },
+  {
+    "repository_path": "results/a83_seven_term_adjacent_factor_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5755a5fc4c65d7bc3e1a42a5652cac485fc41bd26d13e2c9b125e55ca39cd151"
+  },
+  {
+    "repository_path": "results/a83_seven_term_adjacent_sign_atlas_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7ce5c4430be609cfdc2af8a81d2c74cdc9239370f73456a9a17097dd16764924"
+  },
+  {
+    "repository_path": "results/a84_k_space_exponential_polynomial_stress_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "b69279661caf548ae601b888deb5afcb1d73fb70fe491a86c2a94ef6686cbb7c"
+  },
+  {
+    "repository_path": "results/a84_probe_contact_and_crossing_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7ef1e83f3789f8b75841e580dafce7d758740a77744616b6b48375c9d8e67e1a"
+  },
+  {
+    "repository_path": "results/a85_parity_dominant_balance_contact_localization_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "0ec088c75c436594957bbed71eddbd8dca63799b91159a002294ee3511a1de13"
+  },
+  {
+    "repository_path": "results/a85_transition_dominant_balance_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "8f8f1ceef2808bf44bb49bc791f0a091f0fc4efb1c752f112e4a5787a8d77030"
+  },
+  {
+    "repository_path": "results/a86_exact_rational_contact_strip_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "c332a50f75160062dee1b1f94d6b00f1b378a3fa793a0e36a124f322d5ef813e"
+  },
+  {
+    "repository_path": "results/a86_exact_rational_contact_strip_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "48db4bb11d248f4fc2f3edebcdf656213dfacb8a283c7ca968d75f638c9f1754"
+  },
+  {
+    "repository_path": "results/a87_exact_secant_offset_classifier_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "04d021ddbfda43da106e18af03556bba393e2e31270e01a5355104dc1226cb88"
+  },
+  {
+    "repository_path": "results/a87_exact_secant_offset_classifier_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "78f80de0af885abdd650ebbabc62ae20c44f6c7b27b168b659dad4c1af76f920"
+  },
+  {
+    "repository_path": "results/a88_nine_term_secant_positivity_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "28547d20cdd6764ac15e59f63e0f7e6a28158310d51b8fec513af53784d6a935"
+  },
+  {
+    "repository_path": "results/a88_nine_term_secant_positivity_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d78dc26ab0290ff8d0233bbe32a7e957b1dcbc2a2c8af6c593355a00eb88345e"
+  },
+  {
+    "repository_path": "results/a89_uniform_secant_threshold_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "f947bbdb6d047f606276dbd8d995ab02fa2ad2e29b9130032141f6b766dc0d17"
+  },
+  {
+    "repository_path": "results/a89_uniform_secant_threshold_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "83b56fd1805e7d2ae9e5c017e0f943137be9cebe57ff6a804ff4e2d5aa09b87f"
+  },
+  {
+    "repository_path": "results/a90_prethreshold_all_k_one_variation_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "9e418a71669f17c9b4756e8d6c3da32714d3a2f025e232e69cf76cc55245a5f1"
+  },
+  {
+    "repository_path": "results/a90_prethreshold_contact_sequence_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ec1e71bc1d6939061ca9aeae5b4e83e9e2d9f0fc6795f069dbd5333637f963a5"
+  },
+  {
+    "repository_path": "results/a91_four_term_offset_three_catalogue.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "541ae677ba98aa7edb9efc05ec701f155f8fbbbbde1f7bbe36a54f632121857a"
+  },
+  {
+    "repository_path": "results/a91_four_term_offset_three_results.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "ed58d9421fff9bb0c143b278fe5b129fff12999c6cdb73bf4bf3167f45ded569"
+  },
+  {
+    "repository_path": "results/a92_continuum_offset_three_window_catalogue.json",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "29b71ec71e068c3d851cf04fbcd0fcd679988eeca012f8a22670d6bdfdbd91e3"
+  },
+  {
+    "repository_path": "results/a92_continuum_offset_three_window_results.json",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "8796d5e31d31f67ba582a27f3d1c60f45c0f8904739d2dedfc3e02ecf3626ea0"
+  },
+  {
+    "repository_path": "templates/a60_covariance_input_template.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "30ee323ac903c8ab5a9a769472f8e9342a8e2dc2b937482ff1e5d665e66e7856"
+  },
+  {
+    "repository_path": "templates/a61_covariance_confidence_set_template.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "1917b95acfd25ae08ffc38aab5d77ad83753608c2c209aee0f89e3f58bcee0ec"
+  },
+  {
+    "repository_path": "templates/a62_bootstrap_protocol_template.json",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "581470347a175577a53c38a5465c4f395f70b9dd5313c5badebf2633160fb3ad"
+  },
+  {
+    "repository_path": "tests/test_audit_integrity.py",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "e52246a9e0dc709b65f81b979b12926e85d8189ceeee5ccf006a960da87e01f0"
+  },
+  {
+    "repository_path": "tools/generate_a79_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "42b3674c5e75f25188301ee77ee0571474996985c5beb5f16d55a990712be2dd"
+  },
+  {
+    "repository_path": "tools/generate_a80_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "4e5ad4e87fd094b1ee59015f59ef92759d260f4fafbafb820f7a5aea181a6ede"
+  },
+  {
+    "repository_path": "tools/generate_a82_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "7f5bbfd6ae939952841e25ed6e1768eff7138d3cf7a99b7e3241ab5a90a721bc"
+  },
+  {
+    "repository_path": "tools/generate_a83_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "57d0a6a1cefe475a31f125a2e641a15643cd76f6817f14f620e67e371ee5c1d5"
+  },
+  {
+    "repository_path": "tools/generate_a84_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "e409efab08b7f01b99aac636c0405b4dded9225af67b27296070bddce8fc46b2"
+  },
+  {
+    "repository_path": "tools/generate_a85_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "80f95e11190674c3d217b8ee7721c6d95822cd12f42cb0da20c7f3cb90823e04"
+  },
+  {
+    "repository_path": "tools/generate_a86_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "55839e29553a8363711c12a3446a2fb4e05449df233268a9ebb299b318e451e8"
+  },
+  {
+    "repository_path": "tools/generate_a87_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "a21de53e92c372fbb35f187e7cbd036c77aa32768e422c9835ba5c8f611441c2"
+  },
+  {
+    "repository_path": "tools/generate_a88_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "5b81a89de0fad36fd4404358200e77f7c4b991b2447a39742d1ff4c0c0299bed"
+  },
+  {
+    "repository_path": "tools/generate_a89_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "8cad6e52358c598db7ee5b5d784c01b5b52cfabcfa11ed91167730a17e730165"
+  },
+  {
+    "repository_path": "tools/generate_a90_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d667981e7c86c22f37bc8f67b0d86e96c84e3d6d22a4c337b478e95f12361179"
+  },
+  {
+    "repository_path": "tools/generate_a91_figure.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "93d7e048dc87dd666283773b2c5261bcfb6b9f04f80aa46e111b7d14d7e93241"
+  },
+  {
+    "repository_path": "tools/generate_a92_figure.py",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "eb2ce81061f5bf4d5b64be34c5991e8454eadf98b3cf7fd906f010573a09993f"
+  },
+  {
+    "repository_path": "tools/generate_english_figures.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "6f6c80b19a414071cdd1ed9c2d79df47922009b42e19567f0d6ce17ed89db720"
+  },
+  {
+    "repository_path": "tools/materialize_runtime.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "2022c36266ed545a454e949293d8779a188eeb907e8eb420559262f608ed1d0a"
+  },
+  {
+    "repository_path": "tools/run_all_audits.py",
+    "source_or_derivation": "Generated or updated in the A92 continuation from the committed A91 exact layer and the declared A92 contract",
+    "sha256": "5b4af3d834ddd35658c3fb60f763c6d55b33d97c69b843f9d99aaaf60ad254f1"
+  },
+  {
+    "repository_path": "tools/verify_results.py",
+    "source_or_derivation": "Preserved from the A39\u2013A91 archive",
+    "sha256": "d5dc53c718a661718412e7d5a272b3f9a5bd50d6851e36c13c816c4621e77aae"
+  }
+]
