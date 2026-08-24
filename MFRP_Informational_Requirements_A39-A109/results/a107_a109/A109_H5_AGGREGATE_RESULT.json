@@ -1,0 +1,171 @@
+{
+  "audit": "A109_H5_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT_AGGREGATE",
+  "preregistration_sha256": "d510a645173bf6806f83fea4cbc44550446406732790b7a07be598d46f4f858e",
+  "target_only_scan_sha256": "86e00691027e8f51d2882a053cd47e697da31bc059179701217fe19c33bc0c6f",
+  "rank_range": [
+    190,
+    205
+  ],
+  "formal_verdict": "PASS_A109_H5_TWO_SIDED_HOLDOUT",
+  "summary": {
+    "record_count": 16,
+    "class_boundary_match_count": 16,
+    "predicted_class_counts": {
+      "full_segment_coverage": 12,
+      "proper_strict_subcomponent": 4
+    },
+    "atlas_class_counts": {
+      "full_segment_coverage": 12,
+      "proper_strict_subcomponent": 4
+    },
+    "partial_count": 4,
+    "left_partial_count": 4,
+    "right_partial_count": 0,
+    "two_sided_partial_count": 0,
+    "nonadjacent_selected_boundary_count": 0,
+    "direct_comparisons": 20080,
+    "direct_mismatches": 0,
+    "direct_positivity_failures": 0,
+    "direct_outside_sign_failures": 0,
+    "root_failures": 0,
+    "core_condition_count": 6196,
+    "core_failures": 0,
+    "hull_condition_count": 6192,
+    "hull_failures": 0
+  },
+  "partial_records": [
+    {
+      "rank": 192,
+      "M": 185,
+      "j": 34,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_35"
+        }
+      ],
+      "root_bracket": [
+        "39345120843710313358223633/302231454903657293676544000",
+        "157380483374841253432894533/1208925819614629174706176000"
+      ],
+      "root_midpoint_decimal": 0.13018208464189276,
+      "outside_counterexamples": [
+        {
+          "side": "left",
+          "condition": "basic_p_35",
+          "point": "78332978526282104242497809/604462909807314587353088000",
+          "sign": -1
+        }
+      ]
+    },
+    {
+      "rank": 193,
+      "M": 186,
+      "j": 34,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_35"
+        }
+      ],
+      "root_bracket": [
+        "156026377975556259002798757/1208925819614629174706176000",
+        "78013188987778129501399379/604462909807314587353088000"
+      ],
+      "root_midpoint_decimal": 0.12906199490825085,
+      "outside_counterexamples": [
+        {
+          "side": "left",
+          "condition": "basic_p_35",
+          "point": "311977808705843422539895461/2417851639229258349412352000",
+          "sign": -1
+        }
+      ]
+    },
+    {
+      "rank": 200,
+      "M": 190,
+      "j": 35,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_36"
+        }
+      ],
+      "root_bracket": [
+        "79110469637134359933292997/604462909807314587353088000",
+        "31644187854853743973317199/241785163922925834941235200"
+      ],
+      "root_midpoint_decimal": 0.130877293467605,
+      "outside_counterexamples": [
+        {
+          "side": "left",
+          "condition": "basic_p_36",
+          "point": "157086185002277941701841349/1208925819614629174706176000",
+          "sign": -1
+        }
+      ]
+    },
+    {
+      "rank": 201,
+      "M": 191,
+      "j": 35,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_36"
+        }
+      ],
+      "root_bracket": [
+        "157189599482478952694124293/1208925819614629174706176000",
+        "78594799741239476347062147/604462909807314587353088000"
+      ],
+      "root_midpoint_decimal": 0.13002418918688202,
+      "outside_counterexamples": [
+        {
+          "side": "left",
+          "condition": "basic_p_36",
+          "point": "313141030212766116231220997/2417851639229258349412352000",
+          "sign": -1
+        }
+      ]
+    }
+  ],
+  "execution_note": "An outer orchestration timeout occurred before the preregistered 196..197 shard produced a result file. The identical frozen shard was rerun without any protocol or prediction change and completed. A later attempted reproducibility rerun of 192..193 also timed out once without a result, then the identical rerun completed.",
+  "reproducibility_checks": {
+    "rerun_shards_normalized_equal": [
+      "190..191",
+      "192..193",
+      "200..201"
+    ],
+    "normalization": "remove runtime seconds only",
+    "normalized_sha256": {
+      "190..191": "9a5f8fa293622380ad01cbd15b54324e2abee37f58ba157d5c7eb736bf02ed4e",
+      "192..193": "50f9f07dfbd9cf5d332db3344f0f5390072593e00d0b66b807078364d2399ac4",
+      "200..201": "a1f03a898270e1630c84b6021907ae256cbc39747888d54b86bfacc16f0f4bc2"
+    }
+  },
+  "updated_prospective_status": {
+    "mathematically_resolved_contiguous_ranks_106_206_mixed_exact_protocol": {
+      "record_count": 101,
+      "full": 73,
+      "partial": 28,
+      "left_partial": 26,
+      "right_partial": 2,
+      "two_sided_partial": 0,
+      "all_rule_matches": true,
+      "direct_comparisons": 107486,
+      "direct_mismatches": 0,
+      "warning": "Rank 183 remains resolved by a separately preregistered exact sufficient-certificate diagnostic rather than completed full-atlas execution; all other ranks 106..206 are full-atlas/direct-regression resolved under their preregistered protocols."
+    }
+  },
+  "scope": {
+    "supported": "The unchanged A109 two-adjacent-variable predictor matched all 16 preregistered ranks 190..205, including all four predicted left-boundary partial cases.",
+    "not_found": "No non-adjacent selected boundary and no two-sided selected-boundary case occurred in H5.",
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim",
+      "does not remove the formal full-atlas gap at rank 183"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "baseline": {"audit_results": 68, "gates": 1013, "figures": 110, "failures": 0, "status": "PASS"},
+  "parent_preregistration_sha256": "9547703c849fa4af246855d8128e3e81a50485a9af6dc48c7f222b20cbd9737a",
+  "p1_result_sha256": "0ea599c1d130a12ef7a7ee83b3d0e2045c3abda108f2a1b3dbfb67d583e11c60",
+  "p2_preregistration_sha256": "66f8bb6cd01efafbee1da7ffabd044b85d08ae530aa994dc4f7fddaadb7012c6",
+  "p2_normalized_logical_sha256": "44a82ef98f397a35e4f076af3a7f986ccec5ec62df1f60a3a425da1c9e1a2ac1",
+  "p3_preregistration_sha256": "1038a3a6b75907ba1467b356b2ad6964770b5219d3d9ba39abf97386bf8b3a1a",
+  "p3_normalized_logical_sha256": "156c314926f1f0e045a225f5e13246659a11211a9355ab7589165d05211bb8c6",
+  "p4_preregistration_sha256": "4dde3688f9127aef475a7f81f4a5c0a18ceb9f0375aff7172ec38a8af3719a98",
+  "p4_aggregate_sha256": "33ea3a4fe068efebdfacc599fca7aeafa331e5aa6cb5c941d721a532dc941406",
+  "cumulative_r42_r97_sha256": "7ef9575eb64a0e808a160cd8ce2530d7c583d0fa16d9c7ac4454141cbbc86364"
+}

@@ -1,0 +1,37 @@
+{
+  "audit": "A107-B3_PROSPECTIVE_GAMMA_PLUS_BATCH",
+  "baseline_repository_verification": {
+    "audit_results": 68,
+    "gate_count": 1013,
+    "figures": 110,
+    "failures": [],
+    "status": "PASS"
+  },
+  "files": {
+    "preregistration": {
+      "path": "/mnt/data/A107_B3_PREREGISTRATION.json",
+      "sha256": "1eb7952fc98af4a865ef9943ff960ee27c53e74fc7bb7742e13dcae5677917d9"
+    },
+    "audit_script": {
+      "path": "/mnt/data/A107_B3_AUDIT.py",
+      "sha256": "3e28fe443112cf75d4f272f8d694480db1fc19a7c098b66df088850f7945e75e"
+    },
+    "result_run1": {
+      "path": "/mnt/data/A107_B3_RESULT_RUN1.json",
+      "sha256": "b23157ac018285527d35869a1907ee1b7841a8481d06f635272a4938361d30a2"
+    },
+    "result_run2": {
+      "path": "/mnt/data/A107_B3_RESULT_RUN2.json",
+      "sha256": "b23157ac018285527d35869a1907ee1b7841a8481d06f635272a4938361d30a2"
+    },
+    "canonical_result": {
+      "path": "/mnt/data/A107_B3_RESULT.json",
+      "sha256": "b23157ac018285527d35869a1907ee1b7841a8481d06f635272a4938361d30a2"
+    }
+  },
+  "deterministic_rerun": {
+    "byte_identical": true,
+    "run1_sha256": "b23157ac018285527d35869a1907ee1b7841a8481d06f635272a4938361d30a2",
+    "run2_sha256": "b23157ac018285527d35869a1907ee1b7841a8481d06f635272a4938361d30a2"
+  }
+}

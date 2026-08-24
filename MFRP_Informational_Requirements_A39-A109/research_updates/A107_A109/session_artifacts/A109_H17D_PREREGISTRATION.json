@@ -1,0 +1,238 @@
+{
+  "audit": "A109-H17D_EXACT_SUFFICIENT_CERTIFICATES_AFTER_REPEATED_FULL_ATLAS_TIMEOUTS",
+  "status": "FROZEN_NOT_EXECUTED",
+  "frozen_after": "A109-H17 full-atlas attempts A1 and A2 each timed out at the preregistered 55-second window without result for ranks 392, 395, and 398.",
+  "parent_preregistration_sha256": "6ce9427d24839288d758f6993f1796d05459cb5d221d8c033da7afcaf51e0e82",
+  "ranks": [
+    392,
+    395,
+    398
+  ],
+  "timeout_policy_evidence": {
+    "392": [
+      "A109_H17_logs/R392_attempt1.log (no result after 55-second timeout)",
+      "A109_H17_logs/R392_attempt2.log (no result after 55-second timeout)"
+    ],
+    "395": [
+      "A109_H17_logs/R395_attempt1.log (no result after 55-second timeout)",
+      "A109_H17_logs/R395_attempt2.log (no result after 55-second timeout)"
+    ],
+    "398": [
+      "A109_H17_logs/R398_attempt1.log (no result after 55-second timeout)",
+      "A109_H17_logs/R398_attempt2.log (no result after 55-second timeout)"
+    ]
+  },
+  "frozen_predictions": [
+    {
+      "canonical_rank": 392,
+      "source_key": "M=299|b=52|phase=b_plus_1_to_b_plus_2|side=right|s=83/625|j=54",
+      "maximum": 299,
+      "contact_j": 54,
+      "witness": "83/625",
+      "segment_open_bounds": [
+        "7832175258170602663558274879003379703/59029581035870565171200000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 395,
+      "source_key": "M=300|b=52|phase=b_plus_1_to_b_plus_2|side=right|s=33/250|j=54",
+      "maximum": 300,
+      "contact_j": 54,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "19343285271368537992205599778985774869/147573952589676412928000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 398,
+      "source_key": "M=302|b=52|phase=unique_b_plus_2|side=full|s=131/1000|j=54",
+      "maximum": 302,
+      "contact_j": 54,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ]
+    }
+  ],
+  "condition_counts": {
+    "392": 607,
+    "395": 609,
+    "398": 613
+  },
+  "condition_blocks_inclusive": {
+    "392": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        606
+      ]
+    ],
+    "395": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        608
+      ]
+    ],
+    "398": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        612
+      ]
+    ]
+  },
+  "direct_probe_indices": {
+    "392": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "395": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "398": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "method": {
+    "denominator": "Certify D(s)>0 on the complete frozen source segment exactly.",
+    "witness": "Require every frozen KKT condition positive at the source witness.",
+    "partial_target": "For the frozen single adjacent boundary, certify the declared monotonic derivative, exact endpoint/witness sign pattern, and isolate exactly one rationally bracketed target root.",
+    "other_conditions": "Certify every non-target KKT numerator strictly positive over the complete source segment.",
+    "direct_regression": "At four frozen rational probes, independently compute direct matrix KKT quantities and require exact equality N_i(s)=D(s)*direct_i(s); require strict positivity at interior probes and target failure at the outside probe."
+  },
+  "adjudication": {
+    "support": "All base applicability checks, every required certificate block, and every direct probe pass exactly.",
+    "refute": "Any exact non-target KKT condition is nonpositive on the source segment, the target pattern is false, or direct rational evaluation contradicts the symbolic reconstruction.",
+    "inconclusive": "A positivity certificate remains unresolved without an exact contradiction or execution fails."
+  },
+  "protocol_separation": "Successful H17D certificates mathematically resolve ranks 392, 395, and 398 but do not retroactively mark their H17 full-atlas executions complete.",
+  "no_posthoc_changes": "No rank, witness, source interval, support, prediction, boundary, tolerance, or certification rule may change after this file is frozen.",
+  "scope": [
+    "finite A102 legacy_three_band_gamma_plus records only",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ]
+}

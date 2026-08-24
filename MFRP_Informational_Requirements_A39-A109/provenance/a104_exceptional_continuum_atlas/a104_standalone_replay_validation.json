@@ -1,0 +1,24 @@
+{
+  "audit": "A104_STANDALONE_EXACT_REPLAY_VALIDATION",
+  "standalone_replayed_record_count": 7,
+  "standalone_assembly_verdict": "PASS_EXACT_CONTINUUM_CLASSIFICATION_OF_SEVEN_EXCEPTIONAL_Q0Q1_SEGMENTS_AS_TWO_SIDED_STRICT_SUBCOMPONENTS",
+  "byte_identity_checks": {
+    "result": {
+      "full_sha256": "6ebf0ddf28683cb0e173538e4764e356ff9d0af2ff1f491eb3381a2b4e7e9270",
+      "standalone_sha256": "6ebf0ddf28683cb0e173538e4764e356ff9d0af2ff1f491eb3381a2b4e7e9270",
+      "match": true
+    },
+    "catalogue": {
+      "full_sha256": "2580033a5819823b18e19215d5c196abb101d5701ec966921878a2f45a98e02b",
+      "standalone_sha256": "2580033a5819823b18e19215d5c196abb101d5701ec966921878a2f45a98e02b",
+      "match": true
+    },
+    "figure": {
+      "full_sha256": "4a49d6098c452fe943f3d5c2a7f42c2db034ccfb3cd3e645ea81fcbe09362801",
+      "standalone_sha256": "4a49d6098c452fe943f3d5c2a7f42c2db034ccfb3cd3e645ea81fcbe09362801",
+      "match": true
+    }
+  },
+  "all_central_outputs_match": true,
+  "note": "Per-record wall-clock seconds remain provenance-only; the assembled mathematical catalogue omits timing and is byte-deterministic."
+}

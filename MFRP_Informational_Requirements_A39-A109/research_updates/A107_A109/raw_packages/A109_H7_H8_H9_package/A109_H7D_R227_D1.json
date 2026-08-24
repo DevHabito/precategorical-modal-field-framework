@@ -1,0 +1,18 @@
+{
+  "audit": "A109-H7D_SHARDED_DIRECT",
+  "rank": 227,
+  "probe_index": 1,
+  "probe_label": "left_mid",
+  "probe": "16315650650170597/125000000000000000",
+  "strict_expected": true,
+  "target": null,
+  "verdict": "DIRECT_SUPPORT",
+  "comparison_count": 421,
+  "mismatches": [],
+  "nonpositive_conditions": [],
+  "positivity_failure": false,
+  "outside_failure": false,
+  "seconds": 3.168788433074951,
+  "preregistration_sha256": "7d7269e4680ba2b0227dba9afef266bfb1dca9cb60209dc68b8b50d91ded719f",
+  "manifest_sha256": "da4b7fd34567f40a131a0d3156871225e45328def5fb720975961cdef6327dcf"
+}

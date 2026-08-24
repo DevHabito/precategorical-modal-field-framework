@@ -1,0 +1,42 @@
+{
+  "audit": "A109-H4_EXECUTION_MANIFEST",
+  "scientific_preregistration_sha256": "804612fe7a9455b626721804b382f7a7e5dfb6e2fc29187ab3455e762bd77a3b",
+  "event": "Frozen shard 182..183 exceeded runtime and produced no result file. No mathematical outcome from ranks 182..183 was available at repartition time.",
+  "scientific_changes": "none",
+  "replacement": "none",
+  "remaining_execution_subshards": [
+    [
+      182,
+      182
+    ],
+    [
+      183,
+      183
+    ],
+    [
+      184,
+      184
+    ],
+    [
+      185,
+      185
+    ],
+    [
+      186,
+      186
+    ],
+    [
+      187,
+      187
+    ],
+    [
+      188,
+      188
+    ],
+    [
+      189,
+      189
+    ]
+  ],
+  "adjudication": "unchanged aggregate over all preregistered ranks 182..189"
+}

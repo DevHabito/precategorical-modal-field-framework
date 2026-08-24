@@ -1,0 +1,102 @@
+{
+  "audit": "A109-R1_FIRST_FUTURE_RIGHT_BRANCH_PROSPECTIVE_TEST",
+  "preregistration_sha256": "857d75f1890bbba742f709269b924561c072f7f9e3c573465568159b1a646918",
+  "verdict": "PASS_A109_R1_RIGHT_BRANCH",
+  "source_key": "M=171|b=30|phase=unique_b_plus_1|side=full|s=131/1000|j=31",
+  "rank": 173,
+  "M": 171,
+  "j": 31,
+  "frozen_prediction": {
+    "class": "proper_strict_subcomponent",
+    "boundaries": [
+      {
+        "side": "right",
+        "condition": "basic_p_31"
+      }
+    ],
+    "logic": "N_{j+1}(L)>0, N_j(R)<0, both target numerators positive at the witness, D positive, N_{j+1} increasing and N_j decreasing on the source segment."
+  },
+  "atlas_class": "proper_strict_subcomponent",
+  "selected_boundaries": [
+    {
+      "side": "right",
+      "condition": "basic_p_31"
+    }
+  ],
+  "strict_component": {
+    "lower": "12956286115339291/100000000000000000",
+    "upper": "32136258176174219253426149/241785163922925834941235200",
+    "selected_left_boundary": null,
+    "selected_right_boundary": {
+      "condition": "basic_p_31",
+      "side": "right",
+      "bracket": [
+        "32136258176174219253426149/241785163922925834941235200",
+        "80340645440435548133565373/604462909807314587353088000"
+      ],
+      "endpoint_signs": [
+        1,
+        -1
+      ],
+      "width": "1/1208925819614629174706176000",
+      "bisection_steps": 81,
+      "derivative_interval_signs": [
+        -1,
+        -1
+      ],
+      "unique_simple_in_bracket": true
+    }
+  },
+  "endpoint_nonpositive_conditions": {
+    "left": [],
+    "right": [
+      "basic_p_31"
+    ]
+  },
+  "outside_counterexamples": [
+    {
+      "side": "right",
+      "condition": "basic_p_31",
+      "point": "160734212444808388251526077/1208925819614629174706176000",
+      "sign": -1
+    }
+  ],
+  "core_certificate_summary": {
+    "condition_count": 352,
+    "pass_count": 352,
+    "failure_count": 0,
+    "method_counts": {
+      "single_interval": 347,
+      "monotone_decreasing": 1,
+      "strictly_concave_endpoint_minimum": 1,
+      "monotone_increasing": 3
+    }
+  },
+  "hull_certificate_summary": {
+    "condition_count": 351,
+    "pass_count": 351,
+    "failure_count": 0,
+    "method_counts": {
+      "single_interval": 347,
+      "strictly_concave_endpoint_minimum": 1,
+      "monotone_increasing": 3
+    }
+  },
+  "root_failures": [],
+  "direct_regression_summary": {
+    "checkpoint_count": 4,
+    "comparison_count": 1404,
+    "mismatch_count": 0,
+    "positivity_failure_count": 0,
+    "outside_sign_failure_count": 0
+  },
+  "failures": [],
+  "seconds": 11.67835259437561,
+  "scope": {
+    "nonclaims": [
+      "one prospective right-branch witness only",
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

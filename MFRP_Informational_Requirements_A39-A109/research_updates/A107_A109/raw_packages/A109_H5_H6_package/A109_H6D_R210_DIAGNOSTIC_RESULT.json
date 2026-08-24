@@ -1,0 +1,132 @@
+{
+  "audit": "A109-H6D_TIMEOUT_EXACT_SUFFICIENT_CERTIFICATE",
+  "preregistration_sha256": "ac533ef4fc567a7da804a38ed27ec9e67266edce359bbc227934799fb3b7ff79",
+  "rank": 210,
+  "source_key": "M=196|b=34|phase=unique_b_plus_2|side=full|s=131/1000|j=36",
+  "M": 196,
+  "j": 36,
+  "segment": [
+    "129/1000",
+    "133/1000"
+  ],
+  "witness": "131/1000",
+  "frozen_prediction": {
+    "canonical_rank": 210,
+    "source_key": "M=196|b=34|phase=unique_b_plus_2|side=full|s=131/1000|j=36",
+    "maximum": 196,
+    "contact_j": 36,
+    "witness": "131/1000",
+    "segment_open_bounds": [
+      "129/1000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_37"
+      }
+    ]
+  },
+  "verdict": "RESOLVED_SUPPORT_A109_H6D_CERTIFICATE",
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_37",
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "unique_root_certificate": {
+    "lower": "8771327163/67108864000",
+    "upper": "14034123461/107374182400",
+    "exact_rational_root": false,
+    "steps": 30,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "1/536870912000"
+  },
+  "certified_condition_count": 400,
+  "certificate_methods": {
+    "single_interval": 238,
+    "monotone_increasing": 158,
+    "adaptive_interval": 3,
+    "convex_increasing": 1
+  },
+  "exact_failure_count": 0,
+  "unresolved_count": 0,
+  "exact_failures_detail": [],
+  "unresolved_detail": [],
+  "direct_checks": [
+    {
+      "label": "outside_left",
+      "probe": "17428370619/134217728000",
+      "comparison_count": 401,
+      "mismatches": [],
+      "nonpositive_conditions": [
+        "basic_p_37"
+      ]
+    },
+    {
+      "label": "inside",
+      "probe": "140500706777/1073741824000",
+      "comparison_count": 401,
+      "mismatches": [],
+      "nonpositive_conditions": []
+    },
+    {
+      "label": "witness",
+      "probe": "131/1000",
+      "comparison_count": 401,
+      "mismatches": [],
+      "nonpositive_conditions": []
+    },
+    {
+      "label": "right_mid",
+      "probe": "33/250",
+      "comparison_count": 401,
+      "mismatches": [],
+      "nonpositive_conditions": []
+    }
+  ],
+  "direct_comparison_count": 1604,
+  "direct_mismatch_count": 0,
+  "direct_positivity_failures": [],
+  "direct_outside_failures": [],
+  "exact_verdict_failures": [],
+  "seconds": 4.312073707580566,
+  "scope": [
+    "mathematical resolution attempt for ranks 209,210,217,218 only",
+    "does not complete the original H6 full-atlas protocol",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ]
+}

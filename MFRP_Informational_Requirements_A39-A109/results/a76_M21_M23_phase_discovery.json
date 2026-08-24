@@ -1,0 +1,615 @@
+{
+  "audit": "A76_M21_M23_NUMERICAL_PHASE_DISCOVERY",
+  "role": "Discovery only. Exact interval and KKT results are provided by a76_active_reentry_audit.py.",
+  "grid_count": 1600,
+  "supports": [
+    {
+      "maximum": 21,
+      "mean": 10.5,
+      "epsilon": "3.90625e-07",
+      "phase_count": 7,
+      "phases": [
+        {
+          "approx_alpha_start": 2.0,
+          "p_support": [
+            1,
+            7,
+            21
+          ],
+          "q_support": [
+            0,
+            2,
+            10,
+            11
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 5.193584698398748
+        },
+        {
+          "approx_alpha_start": 2.255529080675422,
+          "p_support": [
+            1,
+            6,
+            21
+          ],
+          "q_support": [
+            0,
+            2,
+            10,
+            11
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 6.522235585123909
+        },
+        {
+          "approx_alpha_start": 2.7784577861163227,
+          "p_support": [
+            0,
+            1,
+            6,
+            21
+          ],
+          "q_support": [
+            2,
+            10,
+            11
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 12.369535091196667
+        },
+        {
+          "approx_alpha_start": 2.8078217636022513,
+          "p_support": [
+            0,
+            6,
+            21
+          ],
+          "q_support": [
+            1,
+            2,
+            10,
+            11
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 13.342765333000163
+        },
+        {
+          "approx_alpha_start": 2.8390600375234523,
+          "p_support": [
+            0,
+            5,
+            6,
+            21
+          ],
+          "q_support": [
+            1,
+            10,
+            11
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 14.302569065394275
+        },
+        {
+          "approx_alpha_start": 2.9652626641651034,
+          "p_support": [
+            0,
+            5,
+            21
+          ],
+          "q_support": [
+            1,
+            10,
+            11
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ]
+          ],
+          "ratio": 22.94310189240358
+        },
+        {
+          "approx_alpha_start": 2.9665121951219513,
+          "p_support": [
+            0,
+            5,
+            21
+          ],
+          "q_support": [
+            1,
+            10,
+            11
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "gamma",
+              -1
+            ]
+          ],
+          "ratio": 23.169166789510037
+        }
+      ]
+    },
+    {
+      "maximum": 22,
+      "mean": 11.0,
+      "epsilon": "2.604166666666667e-07",
+      "phase_count": 7,
+      "phases": [
+        {
+          "approx_alpha_start": 2.0,
+          "p_support": [
+            1,
+            7,
+            22
+          ],
+          "q_support": [
+            0,
+            2,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 6.350178582146831
+        },
+        {
+          "approx_alpha_start": 2.497313320825516,
+          "p_support": [
+            0,
+            1,
+            7,
+            22
+          ],
+          "q_support": [
+            2,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 10.466402877167667
+        },
+        {
+          "approx_alpha_start": 2.5610393996247653,
+          "p_support": [
+            0,
+            6,
+            7,
+            22
+          ],
+          "q_support": [
+            2,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 11.074462855655122
+        },
+        {
+          "approx_alpha_start": 2.8596772983114445,
+          "p_support": [
+            0,
+            6,
+            22
+          ],
+          "q_support": [
+            1,
+            2,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 19.02965950034866
+        },
+        {
+          "approx_alpha_start": 2.8821688555347094,
+          "p_support": [
+            0,
+            5,
+            6,
+            22
+          ],
+          "q_support": [
+            1,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 20.781987628948322
+        },
+        {
+          "approx_alpha_start": 2.9646378986866795,
+          "p_support": [
+            0,
+            5,
+            6,
+            22
+          ],
+          "q_support": [
+            1,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              -1
+            ]
+          ],
+          "ratio": 27.610248054501405
+        },
+        {
+          "approx_alpha_start": 2.9771332082551596,
+          "p_support": [
+            0,
+            5,
+            22
+          ],
+          "q_support": [
+            1,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "gamma",
+              -1
+            ]
+          ],
+          "ratio": 31.610519514387622
+        }
+      ]
+    },
+    {
+      "maximum": 23,
+      "mean": 11.5,
+      "epsilon": "1.953125e-07",
+      "phase_count": 7,
+      "phases": [
+        {
+          "approx_alpha_start": 2.0,
+          "p_support": [
+            1,
+            7,
+            23
+          ],
+          "q_support": [
+            0,
+            2,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 7.172332044787087
+        },
+        {
+          "approx_alpha_start": 2.5666622889305817,
+          "p_support": [
+            0,
+            1,
+            7,
+            23
+          ],
+          "q_support": [
+            2,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 13.593641449976866
+        },
+        {
+          "approx_alpha_start": 2.621016885553471,
+          "p_support": [
+            0,
+            6,
+            7,
+            23
+          ],
+          "q_support": [
+            2,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 14.409858341985434
+        },
+        {
+          "approx_alpha_start": 2.875921200750469,
+          "p_support": [
+            0,
+            6,
+            7,
+            23
+          ],
+          "q_support": [
+            1,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              1
+            ]
+          ],
+          "ratio": 22.954228031177678
+        },
+        {
+          "approx_alpha_start": 2.90715947467167,
+          "p_support": [
+            0,
+            6,
+            23
+          ],
+          "q_support": [
+            1,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ]
+          ],
+          "ratio": 26.95774920236371
+        },
+        {
+          "approx_alpha_start": 2.915906191369606,
+          "p_support": [
+            0,
+            5,
+            6,
+            23
+          ],
+          "q_support": [
+            1,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "beta",
+              -1
+            ],
+            [
+              "gamma",
+              -1
+            ]
+          ],
+          "ratio": 27.38388082980165
+        },
+        {
+          "approx_alpha_start": 2.9821313320825515,
+          "p_support": [
+            0,
+            5,
+            23
+          ],
+          "q_support": [
+            1,
+            11,
+            12
+          ],
+          "active_observations": [
+            [
+              "alpha",
+              1
+            ],
+            [
+              "gamma",
+              -1
+            ]
+          ],
+          "ratio": 38.69771472191466
+        }
+      ]
+    }
+  ]
+}

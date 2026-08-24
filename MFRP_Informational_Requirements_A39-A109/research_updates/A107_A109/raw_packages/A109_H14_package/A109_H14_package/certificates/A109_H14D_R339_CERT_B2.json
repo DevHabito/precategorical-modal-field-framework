@@ -1,0 +1,21 @@
+{
+  "audit": "A109-H14D_SHARDED_CERT_BLOCK",
+  "rank": 339,
+  "block_index": 2,
+  "condition_index_range": [
+    180,
+    269
+  ],
+  "preregistration_sha256": "722f2d04cc93e2ac634273ad3297f60f36c202bfc2723d385cfc8502a8fe489e",
+  "verdict": "CERT_SUPPORT",
+  "checked_condition_count": 90,
+  "skipped": [],
+  "certificate_methods": {
+    "single_interval": 90
+  },
+  "exact_failure_count": 0,
+  "unresolved_count": 0,
+  "failures": [],
+  "unresolved": [],
+  "seconds": 0.8547499179840088
+}

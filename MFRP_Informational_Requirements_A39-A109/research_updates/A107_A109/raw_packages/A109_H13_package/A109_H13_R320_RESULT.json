@@ -1,0 +1,140 @@
+{
+  "audit": "A109_H13_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT_SHARD",
+  "preregistration_sha256": "24f6ab5bf007089a1c7b04260010406835bd1b9f6bc23ef3ffe0e5af4bedf11a",
+  "rank_range": [
+    320,
+    320
+  ],
+  "verdict": "PASS_A109_H13_TWO_SIDED_HOLDOUT",
+  "summary": {
+    "record_count": 1,
+    "predicted_class_counts": {
+      "proper_strict_subcomponent": 1
+    },
+    "atlas_class_counts": {
+      "proper_strict_subcomponent": 1
+    },
+    "match_count": 1,
+    "partial_count": 1,
+    "direct_comparisons": 2124,
+    "direct_mismatches": 0,
+    "core_failures": 0,
+    "hull_failures": 0
+  },
+  "failures": [],
+  "records": [
+    {
+      "canonical_rank": 320,
+      "source_key": "M=261|b=45|phase=unique_b_plus_2|side=full|s=131/1000|j=47",
+      "maximum": 261,
+      "contact_j": 47,
+      "frozen_prediction": {
+        "canonical_rank": 320,
+        "source_key": "M=261|b=45|phase=unique_b_plus_2|side=full|s=131/1000|j=47",
+        "maximum": 261,
+        "contact_j": 47,
+        "witness": "131/1000",
+        "segment_open_bounds": [
+          "129/1000",
+          "133/1000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": -1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "proper_strict_subcomponent",
+        "predicted_boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_48"
+          }
+        ]
+      },
+      "atlas_class": "proper_strict_subcomponent",
+      "selected_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_48"
+        }
+      ],
+      "endpoint_nonpositive_conditions": {
+        "left": [
+          "basic_p_48"
+        ],
+        "right": []
+      },
+      "core_certificate_summary": {
+        "condition_count": 532,
+        "pass_count": 532,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 528,
+          "monotone_increasing": 1,
+          "convex_increasing": 1,
+          "adaptive_interval": 2
+        }
+      },
+      "hull_certificate_summary": {
+        "condition_count": 531,
+        "pass_count": 531,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 528,
+          "convex_increasing": 1,
+          "adaptive_interval": 2
+        }
+      },
+      "root_failure_count": 0,
+      "direct_regression_summary": {
+        "checkpoint_count": 4,
+        "comparison_count": 2124,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "failures": [],
+      "strict_component": {
+        "lower": "157459540119288233397400083/1208925819614629174706176000",
+        "upper": "133/1000",
+        "selected_left_boundary": {
+          "condition": "basic_p_48",
+          "side": "left",
+          "bracket": [
+            "78729770059644116698700041/604462909807314587353088000",
+            "157459540119288233397400083/1208925819614629174706176000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 81,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        },
+        "selected_right_boundary": null
+      },
+      "outside_counterexamples": [
+        {
+          "side": "left",
+          "condition": "basic_p_48",
+          "point": "156705485424787698467248393/1208925819614629174706176000",
+          "sign": -1
+        }
+      ],
+      "seconds": 26.092479705810547
+    }
+  ],
+  "scope": {
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

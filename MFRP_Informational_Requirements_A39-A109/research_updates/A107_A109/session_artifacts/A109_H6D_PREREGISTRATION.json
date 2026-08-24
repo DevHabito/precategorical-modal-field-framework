@@ -1,0 +1,128 @@
+{
+  "audit": "A109-H6D_TIMEOUT_EXACT_SUFFICIENT_CERTIFICATE",
+  "status": "FROZEN_BEFORE_DIAGNOSTIC_EXECUTION",
+  "parent_preregistration_sha256": "6a325f6eedd0772ec7ad2cbe66c8d5a98b37276336431fff68b265d975b3862a",
+  "reason": "The preregistered full-atlas shards 209..210 and 217..218 timed out without result files. This diagnostic is a separate exact sufficient-certificate protocol and cannot retroactively convert those full-atlas shards into PASS results.",
+  "ranks": [
+    209,
+    210,
+    217,
+    218
+  ],
+  "frozen_predictions": [
+    {
+      "canonical_rank": 209,
+      "source_key": "M=195|b=34|phase=b_plus_1_to_b_plus_2|side=right|s=33/250|j=36",
+      "maximum": 195,
+      "contact_j": 36,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "77346761412013601888528103224528118559/590295810358705651712000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_37"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 210,
+      "source_key": "M=196|b=34|phase=unique_b_plus_2|side=full|s=131/1000|j=36",
+      "maximum": 196,
+      "contact_j": 36,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_37"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 217,
+      "source_key": "M=200|b=35|phase=b_plus_1_to_b_plus_2|side=left|s=131/1000|j=36",
+      "maximum": 200,
+      "contact_j": 36,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "130202001331322977/1000000000000000000",
+        "19571438591641694204230725241691709451/147573952589676412928000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 218,
+      "source_key": "M=200|b=35|phase=b_plus_1_to_b_plus_2|side=right|s=83/625|j=37",
+      "maximum": 200,
+      "contact_j": 37,
+      "witness": "83/625",
+      "segment_open_bounds": [
+        "2446429823955211775528851584893763201/18446744073709551616000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_38"
+        }
+      ]
+    }
+  ],
+  "method": {
+    "common": "Build the exact A109 rank-one gamma-plus denominator and all KKT numerators; require the denominator positive on the complete source segment; compare symbolic numerators against independent direct rational matrix evaluations at preregistered rational probes.",
+    "full_prediction": "Certify every KKT numerator strictly positive on the complete closed source interval using exact interval/monotonicity/concavity/adaptive certificates. Any exact nonpositive condition refutes the predicted full class; unresolved certification is inconclusive.",
+    "left_partial_prediction": "For target basic_p_{j+1}, certify strictly positive derivative, target negative at L and positive at witness, isolate a unique exact sign-change bracket in (L,witness), certify every non-target KKT numerator strictly positive on the complete source interval, and verify direct rational inside/witness/outside-left probes.",
+    "right_partial_prediction": "Symmetric rule for basic_p_j with strictly negative derivative and a unique root in (witness,R).",
+    "no_atlas": "Do not call the full root atlas or use any non-target root ordering result."
+  },
+  "adjudication": {
+    "support": "All sufficient certificates required by the frozen predicted class pass, exact direct symbolic-vs-matrix regression has zero mismatches, and the predicted outside target sign is witnessed when partial.",
+    "refute": "An exact non-target nonpositive condition, target sign/monotonicity contradiction, or exact direct contradiction.",
+    "inconclusive": "Adaptive certificate unresolved, execution timeout, or implementation disagreement without an exact contradiction."
+  },
+  "no_posthoc_changes": "No rank replacement, prediction change, target change, tolerance/support change, or rescue classifier after diagnostic outcomes.",
+  "scope": [
+    "mathematical resolution attempt for ranks 209,210,217,218 only",
+    "does not complete the original H6 full-atlas protocol",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ]
+}

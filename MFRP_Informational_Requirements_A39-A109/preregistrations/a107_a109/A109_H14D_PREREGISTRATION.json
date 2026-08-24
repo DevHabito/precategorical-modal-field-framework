@@ -1,0 +1,498 @@
+{
+  "audit": "A109-H14D_EXACT_SUFFICIENT_CERTIFICATES_AFTER_REPEATED_FULL_ATLAS_TIMEOUTS",
+  "status": "FROZEN_NOT_EXECUTED",
+  "frozen_after": "A109-H14 full-atlas attempts A1 and A2 each timed out at 55 seconds without result for exactly the listed ranks.",
+  "parent_preregistration_sha256": "10900de0f0405a1f8db1f8af9c917fd042bdc6a9dad75507d3a7034622478320",
+  "ranks": [
+    339,
+    341,
+    342,
+    343,
+    344,
+    349,
+    350
+  ],
+  "timeout_policy_evidence": {
+    "339": [
+      "A109_H14_R339_A1.wrapper.out",
+      "A109_H14_R339_A2.wrapper.out"
+    ],
+    "341": [
+      "A109_H14_R341_A1.wrapper.out",
+      "A109_H14_R341_A2.wrapper.out"
+    ],
+    "342": [
+      "A109_H14_R342_A1.wrapper.out",
+      "A109_H14_R342_A2.wrapper.out"
+    ],
+    "343": [
+      "A109_H14_R343_A1.wrapper.out",
+      "A109_H14_R343_A2.wrapper.out"
+    ],
+    "344": [
+      "A109_H14_R344_A1.wrapper.out",
+      "A109_H14_R344_A2.wrapper.out"
+    ],
+    "349": [
+      "A109_H14_R349_A1.wrapper.out",
+      "A109_H14_R349_A2.wrapper.out"
+    ],
+    "350": [
+      "A109_H14_R350_A1.wrapper.out",
+      "A109_H14_R350_A2.wrapper.out"
+    ]
+  },
+  "frozen_predictions": [
+    {
+      "canonical_rank": 339,
+      "source_key": "M=270|b=47|phase=b_plus_1_to_b_plus_2|side=right|s=663/5000|j=49",
+      "maximum": 270,
+      "contact_j": 49,
+      "witness": "663/5000",
+      "segment_open_bounds": [
+        "312323245368959748656006398118702811299/2361183241434822606848000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_50"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 341,
+      "source_key": "M=271|b=47|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=48",
+      "maximum": 271,
+      "contact_j": 48,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "25959739764091453/200000000000000000",
+        "38646848915106971713993508115206291671/295147905179352825856000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 342,
+      "source_key": "M=272|b=47|phase=unique_b_plus_2|side=full|s=131/1000|j=49",
+      "maximum": 272,
+      "contact_j": 49,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_50"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 343,
+      "source_key": "M=273|b=47|phase=unique_b_plus_2|side=full|s=131/1000|j=49",
+      "maximum": 273,
+      "contact_j": 49,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_50"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 344,
+      "source_key": "M=274|b=47|phase=unique_b_plus_2|side=full|s=13/100|j=49",
+      "maximum": 274,
+      "contact_j": 49,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "26519148959271907/200000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_50"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 349,
+      "source_key": "M=276|b=48|phase=b_plus_1_to_b_plus_2|side=left|s=131/1000|j=49",
+      "maximum": 276,
+      "contact_j": 49,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "130654596660466201/1000000000000000000",
+        "62341331883270335482357937172749729/472236648286964521369600000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 350,
+      "source_key": "M=276|b=48|phase=b_plus_1_to_b_plus_2|side=right|s=53/400|j=50",
+      "maximum": 276,
+      "contact_j": 50,
+      "witness": "53/400",
+      "segment_open_bounds": [
+        "779266648540879193529480078167720447/5902958103587056517120000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_51"
+        }
+      ]
+    }
+  ],
+  "condition_counts": {
+    "339": 549,
+    "341": 551,
+    "342": 553,
+    "343": 555,
+    "344": 557,
+    "349": 561,
+    "350": 561
+  },
+  "condition_blocks_inclusive": {
+    "339": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        548
+      ]
+    ],
+    "341": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        550
+      ]
+    ],
+    "342": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        552
+      ]
+    ],
+    "343": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        554
+      ]
+    ],
+    "344": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        556
+      ]
+    ],
+    "349": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        560
+      ]
+    ],
+    "350": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        560
+      ]
+    ]
+  },
+  "direct_probe_indices": {
+    "339": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "341": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "342": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "343": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "344": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "349": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "350": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "method": {
+    "denominator": "Certify D(s)>0 on the complete frozen source segment exactly.",
+    "witness": "Require every frozen KKT condition positive at the source witness.",
+    "partial_target": "For a frozen single adjacent boundary, certify the declared monotonic derivative, exact endpoint/witness sign pattern, and isolate exactly one rationally bracketed target root.",
+    "other_conditions": "Certify every non-target KKT numerator strictly positive over the complete source segment. For predicted full coverage, certify every KKT numerator positive over the complete segment.",
+    "direct_regression": "At frozen rational probes, independently compute direct matrix KKT quantities and require exact equality N_i(s)=D(s)*direct_i(s); require strict positivity at interior/full probes and target failure at the outside probe for partial cases."
+  },
+  "adjudication": {
+    "support": "All base applicability checks, every required certificate block, and every direct probe pass exactly.",
+    "refute": "Any exact non-target/full KKT condition is nonpositive on the source segment, the target pattern is false, or direct rational evaluation contradicts the symbolic reconstruction.",
+    "inconclusive": "A positivity certificate remains unresolved without an exact contradiction or execution fails."
+  },
+  "protocol_separation": "These certificates mathematically resolve the timeout ranks if successful but do not retroactively mark the H14 full-atlas executions complete.",
+  "no_posthoc_changes": "No rank, witness, source interval, support, prediction, boundary, tolerance, or certification rule may change after this file is frozen.",
+  "scope": [
+    "finite A102 legacy_three_band_gamma_plus records only",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ]
+}

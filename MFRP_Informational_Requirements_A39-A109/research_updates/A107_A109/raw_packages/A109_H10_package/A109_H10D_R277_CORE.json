@@ -1,0 +1,89 @@
+{
+  "audit": "A109-H10D_SHARDED_CORE",
+  "rank": 277,
+  "preregistration_sha256": "e545aec22d76b989732da4505988d1be316ad3115116365aecf2ae61cbbcb836",
+  "manifest_sha256": "cf6aaf3ee7325f161d7708e3cfb00272162323717f1a5b0abaa75d7fd805344d",
+  "frozen_prediction": {
+    "canonical_rank": 277,
+    "source_key": "M=238|b=41|phase=unique_b_plus_2|side=full|s=131/1000|j=43",
+    "maximum": 238,
+    "contact_j": 43,
+    "witness": "131/1000",
+    "segment_open_bounds": [
+      "129/1000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_44"
+      }
+    ]
+  },
+  "M": 238,
+  "j": 43,
+  "segment": [
+    "129/1000",
+    "133/1000"
+  ],
+  "witness": "131/1000",
+  "verdict": "CORE_SUPPORT",
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_44",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "unique_root_certificate": {
+    "lower": "17411004237/134217728000",
+    "upper": "69644016949/536870912000",
+    "exact_rational_root": false,
+    "steps": 30,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "1/536870912000"
+  },
+  "certified_condition_count": 484,
+  "certificate_methods": {
+    "single_interval": 286,
+    "strictly_concave_endpoint_minimum": 1,
+    "monotone_increasing": 189,
+    "adaptive_interval": 7,
+    "convex_increasing": 1
+  },
+  "exact_failures": [],
+  "unresolved": [],
+  "exact_verdict_failures": [],
+  "seconds": 0.42795228958129883
+}

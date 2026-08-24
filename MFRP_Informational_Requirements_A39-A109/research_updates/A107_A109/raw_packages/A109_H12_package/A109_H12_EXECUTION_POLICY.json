@@ -1,0 +1,6 @@
+{
+  "status": "FROZEN_BEFORE_H12_EXECUTION",
+  "parent_preregistration_sha256": "9d3671fe1bf7d73f4e69d8edc8093a93161ef83a4139927e2bed1f6f06c63057",
+  "policy": "Run each preregistered single-rank full-atlas shard with the same 55-second wall-clock execution window used in H11. If a rank times out with no result, repeat the identical full-atlas shard once. Only ranks with two such timeouts may be moved to a separately frozen exact sufficient-certificate protocol. No mathematical outcome from a timed-out run is counted.",
+  "no_changes": "No rank, prediction, support, witness, interval, tolerance, or scientific adjudication changes are permitted."
+}

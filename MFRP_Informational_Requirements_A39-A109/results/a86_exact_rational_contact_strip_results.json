@@ -1,0 +1,187 @@
+{
+  "audit": "A86_EXACT_RATIONAL_CONTACT_STRIP_AND_FINITE_EXCLUSION_THRESHOLDS",
+  "contract": {
+    "maximum_range": [
+      10,
+      300
+    ],
+    "probes": [
+      {
+        "name": "local_lower",
+        "value": "129/1000"
+      },
+      {
+        "name": "probe",
+        "value": "131/1000"
+      },
+      {
+        "name": "local_upper",
+        "value": "133/1000"
+      }
+    ],
+    "source_theorem": "A84 exact strict one-sign-variation records",
+    "asymptotic_slope": "c(s)=log(2)/(-2 log(s))",
+    "comparison_lemma": "sign(c(s)-p/q)=sign(2^q s^(2p)-1)"
+  },
+  "exact_slope_brackets": {
+    "local_lower": {
+      "probe_value": "129/1000",
+      "lower": "16923/100000",
+      "upper": "4231/25000",
+      "width": "1/100000",
+      "lower_comparison": "2^q s^(2p) > 1",
+      "upper_comparison": "2^q s^(2p) < 1"
+    },
+    "probe": {
+      "probe_value": "131/1000",
+      "lower": "17051/100000",
+      "upper": "4263/25000",
+      "width": "1/100000",
+      "lower_comparison": "2^q s^(2p) > 1",
+      "upper_comparison": "2^q s^(2p) < 1"
+    },
+    "local_upper": {
+      "probe_value": "133/1000",
+      "lower": "17179/100000",
+      "upper": "859/5000",
+      "width": "1/100000",
+      "lower_comparison": "2^q s^(2p) > 1",
+      "upper_comparison": "2^q s^(2p) < 1"
+    }
+  },
+  "finite_exact_contact_strip": {
+    "record_count": 873,
+    "uniform_statement": "9/10 < k*(M,s)-M c(s) < 3",
+    "probe_specific_statements": {
+      "local_lower": "9/10 < k*-M c(s) < 3",
+      "probe": "9/10 < k*-M c(s) < 14/5",
+      "local_upper": "9/10 < k*-M c(s) < 27/10"
+    },
+    "integer_localizer": "k* in {ceil(M c), ceil(M c)+1, ceil(M c)+2}",
+    "ceil_offset_counts": {
+      "local_lower": {
+        "0": 1,
+        "1": 65,
+        "2": 225
+      },
+      "probe": {
+        "0": 1,
+        "1": 105,
+        "2": 185
+      },
+      "local_upper": {
+        "0": 1,
+        "1": 133,
+        "2": 157
+      }
+    },
+    "sign_exclusion_consequence": {
+      "left": "E_{M,k}(s)>0 for every admissible integer k with k/M<=c(s)",
+      "right": "E_{M,k}(s)<0 for every admissible integer k with k/M>=c(s)+3/M",
+      "dependence": "Uses A84 strict one-sign-variation plus the A86 contact strip."
+    }
+  },
+  "finite_exact_delta_thresholds": {
+    "local_lower": {
+      "1/20": {
+        "smallest_verified_tail_start": 46,
+        "verified_through": 300,
+        "failure_count_before_tail": 28,
+        "last_failure": 45,
+        "statement": "For every integer M in [46,300], 0 < k*/M-c(s) < 1/20."
+      },
+      "1/50": {
+        "smallest_verified_tail_start": 133,
+        "verified_through": 300,
+        "failure_count_before_tail": 103,
+        "last_failure": 132,
+        "statement": "For every integer M in [133,300], 0 < k*/M-c(s) < 1/50."
+      },
+      "1/100": {
+        "smallest_verified_tail_start": 291,
+        "verified_through": 300,
+        "failure_count_before_tail": 237,
+        "last_failure": 290,
+        "statement": "For every integer M in [291,300], 0 < k*/M-c(s) < 1/100."
+      }
+    },
+    "probe": {
+      "1/20": {
+        "smallest_verified_tail_start": 46,
+        "verified_through": 300,
+        "failure_count_before_tail": 27,
+        "last_failure": 45,
+        "statement": "For every integer M in [46,300], 0 < k*/M-c(s) < 1/20."
+      },
+      "1/50": {
+        "smallest_verified_tail_start": 132,
+        "verified_through": 300,
+        "failure_count_before_tail": 95,
+        "last_failure": 131,
+        "statement": "For every integer M in [132,300], 0 < k*/M-c(s) < 1/50."
+      },
+      "1/100": {
+        "smallest_verified_tail_start": 272,
+        "verified_through": 300,
+        "failure_count_before_tail": 217,
+        "last_failure": 271,
+        "statement": "For every integer M in [272,300], 0 < k*/M-c(s) < 1/100."
+      }
+    },
+    "local_upper": {
+      "1/20": {
+        "smallest_verified_tail_start": 46,
+        "verified_through": 300,
+        "failure_count_before_tail": 26,
+        "last_failure": 45,
+        "statement": "For every integer M in [46,300], 0 < k*/M-c(s) < 1/20."
+      },
+      "1/50": {
+        "smallest_verified_tail_start": 126,
+        "verified_through": 300,
+        "failure_count_before_tail": 91,
+        "last_failure": 125,
+        "statement": "For every integer M in [126,300], 0 < k*/M-c(s) < 1/50."
+      },
+      "1/100": {
+        "smallest_verified_tail_start": 265,
+        "verified_through": 300,
+        "failure_count_before_tail": 210,
+        "last_failure": 264,
+        "statement": "For every integer M in [265,300], 0 < k*/M-c(s) < 1/100."
+      }
+    }
+  },
+  "search_compression": {
+    "full_adjacent_contact_probe_count": 64821,
+    "localized_candidate_probe_count": 2607,
+    "compression_factor_decimal": "24.864211737629",
+    "interpretation": "Within the finite A84 contract, only the three contacts adjacent to ceil(M c) need be inspected to recover the exact transition contact."
+  },
+  "gates": {
+    "A84_support_records_complete": true,
+    "A84_all_probe_sequences_strictly_single_variation": true,
+    "three_exact_slope_brackets_certified": true,
+    "all_slope_brackets_have_width_1_over_100000": true,
+    "all_873_transitions_strictly_above_cM": true,
+    "all_873_transitions_more_than_9_over_10_contact_above_cM": true,
+    "all_probe_specific_upper_contact_bounds_certified": true,
+    "all_873_transitions_in_three_contact_strip": true,
+    "only_ceil_offsets_0_1_2_occur": true,
+    "offset_zero_occurs_only_at_M12_for_each_probe": true,
+    "finite_delta_thresholds_match_exact_expected_values": true,
+    "localized_candidate_count_strictly_smaller_than_full_count": true,
+    "catalogue_record_count_exact": true,
+    "finite_scope_and_nonclaim_boundary_preserved": true
+  },
+  "gate_count": 14,
+  "pass_count": 14,
+  "verdict": "PASS_EXACT_RATIONAL_THREE_CONTACT_LOCALIZATION_AND_FINITE_EXCLUSION_THRESHOLDS",
+  "claim_boundary": [
+    "The rational comparison lemma is exact for the declared rational probes.",
+    "The three-contact strip is a finite theorem for 10<=M<=300 and the three A84 probes.",
+    "The sign exclusion statement depends on the exact A84 one-sign-variation theorem.",
+    "The finite tail starts are verified only through M=300; they are not all-M thresholds.",
+    "No universal rounding rule, all-M unimodality theorem, periodic block law, or physical interpretation is inferred."
+  ]
+}

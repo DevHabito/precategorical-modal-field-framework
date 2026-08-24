@@ -1,0 +1,62 @@
+{
+  "audit": "A109_PROSPECTIVE_STATUS_THROUGH_RANK_173",
+  "ordinary_holdout_106_121": {
+    "records": 16,
+    "class_boundary_matches": 16,
+    "direct_comparisons": 13624,
+    "direct_mismatches": 0
+  },
+  "contiguous_holdout_122_172": {
+    "record_count": 51,
+    "rank_range": [
+      122,
+      172
+    ],
+    "class_counts": {
+      "proper_strict_subcomponent": 13,
+      "full_segment_coverage": 38
+    },
+    "prediction_counts": {
+      "proper_strict_subcomponent": 13,
+      "full_segment_coverage": 38
+    },
+    "class_match_count": 51,
+    "boundary_set_match_count": 51,
+    "partial_count": 13,
+    "left_boundary_partial_count": 13,
+    "right_boundary_partial_count": 0,
+    "two_sided_partial_count": 0,
+    "nonadjacent_selected_boundary_count": 0,
+    "direct_comparisons": 51894,
+    "direct_mismatches": 0,
+    "direct_positivity_failures": 0,
+    "direct_outside_sign_failures": 0,
+    "core_certificate_failures": 0,
+    "hull_certificate_failures": 0,
+    "root_failures": 0
+  },
+  "dedicated_right_branch_rank_173": {
+    "records": 1,
+    "class_boundary_matches": 1,
+    "direct_comparisons": 1404,
+    "direct_mismatches": 0,
+    "observed_boundary": "right basic_p_31"
+  },
+  "combined_prospective": {
+    "record_count": 68,
+    "rank_range": [
+      106,
+      173
+    ],
+    "class_boundary_match_count": 68,
+    "full_count": 50,
+    "partial_count": 18,
+    "left_partial_count": 17,
+    "right_partial_count": 1,
+    "two_sided_partial_count": 0,
+    "nonadjacent_selected_boundary_count": 0,
+    "direct_comparisons": 66922,
+    "direct_mismatches": 0
+  },
+  "methodological_note": "Ranks 1..105 were development/post-hoc for the two-sided rule. The combined prospective count begins at rank 106. Rank 173 was a separately preregistered target-only-selected right-branch test; ranks 122..172 were later completed as deterministic contiguous coverage under the unchanged rule."
+}

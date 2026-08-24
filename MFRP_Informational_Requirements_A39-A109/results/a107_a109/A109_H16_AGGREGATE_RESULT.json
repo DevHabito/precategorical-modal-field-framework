@@ -1,0 +1,438 @@
+{
+  "audit": "A109_H16_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT",
+  "parent_preregistration_sha256": "3ed8d491b92e8f6ac001f7f9834100555f806b49e2c79f83d0b973957d0af0ff",
+  "fallback_preregistration_sha256": "ec64754f341a011e38a30c5d2ea1870543cab93d7f4b64fb4933cc788976ee62",
+  "verdict": "RESOLVED_SUPPORT_A109_H16_MIXED_EXACT_PROTOCOL",
+  "summary": {
+    "record_count": 16,
+    "class_match_count": 16,
+    "boundary_match_count": 16,
+    "full_segment_coverage": 12,
+    "proper_strict_subcomponent": 4,
+    "left_boundaries": 3,
+    "right_boundaries": 1,
+    "two_sided": 0,
+    "non_adjacent_boundaries": 0,
+    "full_atlas_completed": 14,
+    "fallback_exact_certificates": 2,
+    "direct_comparisons": 30728,
+    "direct_mismatches": 0,
+    "certificate_exact_failures": 0,
+    "certificate_unresolved": 0,
+    "full_atlas_core_failures": 0,
+    "full_atlas_hull_failures": 0,
+    "full_atlas_root_failures": 0
+  },
+  "failures": [],
+  "records": [
+    {
+      "canonical_rank": 367,
+      "source_key": "M=287|b=49|phase=unique_b_plus_2|side=full|s=13/100|j=51",
+      "maximum": 287,
+      "contact_j": 51,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1749,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 12.639078140258789
+    },
+    {
+      "canonical_rank": 368,
+      "source_key": "M=287|b=50|phase=unique_b_plus_1|side=full|s=33/250|j=51",
+      "maximum": 287,
+      "contact_j": 51,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1749,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 20.06296157836914
+    },
+    {
+      "canonical_rank": 369,
+      "source_key": "M=288|b=49|phase=unique_b_plus_2|side=full|s=13/100|j=51",
+      "maximum": 288,
+      "contact_j": 51,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1755,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 17.834986209869385
+    },
+    {
+      "canonical_rank": 370,
+      "source_key": "M=288|b=50|phase=b_plus_1_to_b_plus_2|side=left|s=131/1000|j=51",
+      "maximum": 288,
+      "contact_j": 51,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1755,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 43.1377489566803
+    },
+    {
+      "canonical_rank": 371,
+      "source_key": "M=289|b=50|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=51",
+      "maximum": 289,
+      "contact_j": 51,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1761,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 43.569918155670166
+    },
+    {
+      "canonical_rank": 372,
+      "source_key": "M=289|b=49|phase=unique_b_plus_2|side=full|s=323/2500|j=51",
+      "maximum": 289,
+      "contact_j": 51,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1761,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 13.892114162445068
+    },
+    {
+      "canonical_rank": 373,
+      "source_key": "M=290|b=50|phase=unique_b_plus_2|side=full|s=131/1000|j=52",
+      "maximum": 290,
+      "contact_j": 52,
+      "resolution_method": "full_atlas",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_53"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_53"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 2356,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 36.584333419799805
+    },
+    {
+      "canonical_rank": 374,
+      "source_key": "M=291|b=50|phase=unique_b_plus_2|side=full|s=131/1000|j=52",
+      "maximum": 291,
+      "contact_j": 52,
+      "resolution_method": "full_atlas",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_53"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_53"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 2364,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 35.29576086997986
+    },
+    {
+      "canonical_rank": 375,
+      "source_key": "M=292|b=50|phase=unique_b_plus_2|side=full|s=13/100|j=52",
+      "maximum": 292,
+      "contact_j": 52,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1779,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 14.295037984848022
+    },
+    {
+      "canonical_rank": 376,
+      "source_key": "M=292|b=51|phase=unique_b_plus_1|side=full|s=53/400|j=52",
+      "maximum": 292,
+      "contact_j": 52,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1779,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 13.121081113815308
+    },
+    {
+      "canonical_rank": 377,
+      "source_key": "M=293|b=50|phase=unique_b_plus_2|side=full|s=13/100|j=52",
+      "maximum": 293,
+      "contact_j": 52,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1785,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 13.803303241729736
+    },
+    {
+      "canonical_rank": 378,
+      "source_key": "M=293|b=51|phase=b_plus_1_to_b_plus_2|side=left|s=33/250|j=52",
+      "maximum": 293,
+      "contact_j": 52,
+      "resolution_method": "preregistered_exact_sufficient_certificate_after_two_full_atlas_timeouts",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_52"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_52"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "base_verdict": "BASE_SUPPORT",
+      "target": "basic_p_52",
+      "target_side": "right",
+      "target_signs": {
+        "L": 1,
+        "witness": 1,
+        "R": -1
+      },
+      "target_derivative_certificate_pass": true,
+      "unique_root_certificate": {
+        "lower": "2105197019791448089870789381884881780318605417/15845632502852867518708790067200000000000000000",
+        "upper": "84207880791794033543864880635408480903752406717/633825300114114700748351602688000000000000000000",
+        "exact_rational_root": false,
+        "steps": 32,
+        "signs": [
+          1,
+          -1
+        ],
+        "width": "136109949033305360013209691008190037/633825300114114700748351602688000000000000000000"
+      },
+      "root_midpoint_decimal_for_orientation_only": 0.132856610136208,
+      "certified_non_target_condition_count": 594,
+      "certificate_exact_failures": 0,
+      "certificate_unresolved": 0,
+      "direct_comparisons": 2380,
+      "direct_mismatches": 0,
+      "direct_positivity_failures": 0,
+      "direct_outside_failures": 0,
+      "outside_probe_nonpositive_conditions": [
+        {
+          "probe": "outside_right",
+          "conditions": [
+            "basic_p_52"
+          ]
+        }
+      ]
+    },
+    {
+      "canonical_rank": 379,
+      "source_key": "M=293|b=51|phase=b_plus_1_to_b_plus_2|side=right|s=831/6250|j=53",
+      "maximum": 293,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1785,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 33.0714168548584
+    },
+    {
+      "canonical_rank": 380,
+      "source_key": "M=294|b=50|phase=unique_b_plus_2|side=full|s=13/100|j=52",
+      "maximum": 294,
+      "contact_j": 52,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1791,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 13.513636112213135
+    },
+    {
+      "canonical_rank": 381,
+      "source_key": "M=294|b=51|phase=b_plus_1_to_b_plus_2|side=left|s=131/1000|j=52",
+      "maximum": 294,
+      "contact_j": 52,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1791,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 48.797687292099
+    },
+    {
+      "canonical_rank": 382,
+      "source_key": "M=294|b=51|phase=b_plus_1_to_b_plus_2|side=right|s=33/250|j=53",
+      "maximum": 294,
+      "contact_j": 53,
+      "resolution_method": "preregistered_exact_sufficient_certificate_after_two_full_atlas_timeouts",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_54"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_54"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "base_verdict": "BASE_SUPPORT",
+      "target": "basic_p_54",
+      "target_side": "left",
+      "target_signs": {
+        "L": -1,
+        "witness": 1,
+        "R": 1
+      },
+      "target_derivative_certificate_pass": true,
+      "unique_root_certificate": {
+        "lower": "26745457475238784806281585306494435407539989011/202824096036516704239472512860160000000000000000",
+        "upper": "21396365980217656303598539403551396832365549221/162259276829213363391578010288128000000000000000",
+        "exact_rational_root": false,
+        "steps": 32,
+        "signs": [
+          -1,
+          1
+        ],
+        "width": "133142292866355791779242531667790061/811296384146066816957890051440640000000000000000"
+      },
+      "root_midpoint_decimal_for_orientation_only": 0.13186528621550045,
+      "certified_non_target_condition_count": 596,
+      "certificate_exact_failures": 0,
+      "certificate_unresolved": 0,
+      "direct_comparisons": 2388,
+      "direct_mismatches": 0,
+      "direct_positivity_failures": 0,
+      "direct_outside_failures": 0,
+      "outside_probe_nonpositive_conditions": [
+        {
+          "probe": "outside_left",
+          "conditions": [
+            "basic_p_54"
+          ]
+        }
+      ]
+    }
+  ],
+  "protocol_note": "Ranks 378 and 382 had two no-result 55-second full-atlas timeouts each and were resolved only by the separately frozen H16D exact sufficient-certificate protocol. Their full-atlas executions remain incomplete.",
+  "scope": {
+    "not_all_922_theorem": true,
+    "not_physical_claim": true
+  }
+}

@@ -1,0 +1,2895 @@
+{
+  "audit": "A69_CRAMER_CHEBYSHEV_REDUCTION",
+  "general_fixed_basis_theorem": {
+    "cramer_formula": "lambda_alpha(s,epsilon)=Delta_alpha(epsilon)/Delta(s,epsilon)",
+    "alpha_independence": "Delta_alpha is independent of s because the only s-dependent row is replaced by the objective row.",
+    "epsilon_affinity": "Delta_alpha has degree at most one in epsilon because epsilon occurs only in the single scale column.",
+    "no_internal_sign_flip": "At fixed epsilon with nonzero Delta_alpha, the alpha multiplier cannot change sign on a connected region where the active basis determinant is nonzero."
+  },
+  "family_summary": {
+    "phase_count": 33,
+    "unique_contact_signature_count": 18,
+    "repeated_contact_signature_count": 10,
+    "signature_size_distribution": {
+      "1": 8,
+      "2": 6,
+      "3": 3,
+      "4": 1
+    },
+    "positive_numerator_count": 21,
+    "negative_numerator_count": 12,
+    "finite_positive_flip_threshold_count": 14,
+    "minimum_flip_margin": {
+      "multiple": "102.44043276705599181742846577437647611401080656777",
+      "maximum": 8,
+      "phase": 1
+    },
+    "basis_with_roots_in_full_alpha_domain": 17,
+    "full_domain_basis_root_count": 17,
+    "interpretation": "The numerator orientation is highly robust inside the A67 arithmetic-grid family, but the basis determinant orientation is phase dependent."
+  },
+  "contact_signatures": [
+    {
+      "contact_labels": [
+        "P",
+        "B",
+        "Q",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 3,
+      "instance_count": 1,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 5,
+          "phase": 1
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "Q",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 3,
+      "instance_count": 3,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 5,
+          "phase": 2
+        },
+        {
+          "maximum": 6,
+          "phase": 2
+        },
+        {
+          "maximum": 7,
+          "phase": 3
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "Q",
+        "B",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 3,
+      "q_count": 4,
+      "instance_count": 2,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 5,
+          "phase": 3
+        },
+        {
+          "maximum": 6,
+          "phase": 3
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "B",
+        "B",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 3,
+      "instance_count": 1,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 5,
+          "phase": 4
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 2,
+      "instance_count": 1,
+      "numerator_signs": [
+        -1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 5,
+          "phase": 5
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "Q",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "p_count": 3,
+      "q_count": 3,
+      "instance_count": 1,
+      "numerator_signs": [
+        -1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 5,
+          "phase": 6
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "Q",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "p_count": 3,
+      "q_count": 3,
+      "instance_count": 1,
+      "numerator_signs": [
+        -1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 5,
+          "phase": 7
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "P",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 5,
+      "q_count": 2,
+      "instance_count": 2,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 6,
+          "phase": 1
+        },
+        {
+          "maximum": 7,
+          "phase": 2
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "B",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 3,
+      "instance_count": 2,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 6,
+          "phase": 4
+        },
+        {
+          "maximum": 7,
+          "phase": 4
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "p_count": 3,
+      "q_count": 3,
+      "instance_count": 3,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 6,
+          "phase": 5
+        },
+        {
+          "maximum": 7,
+          "phase": 5
+        },
+        {
+          "maximum": 9,
+          "phase": 6
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "p_count": 3,
+      "q_count": 3,
+      "instance_count": 4,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 6,
+          "phase": 6
+        },
+        {
+          "maximum": 7,
+          "phase": 6
+        },
+        {
+          "maximum": 8,
+          "phase": 6
+        },
+        {
+          "maximum": 9,
+          "phase": 8
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "Q",
+        "P",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 3,
+      "instance_count": 1,
+      "numerator_signs": [
+        -1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 7,
+          "phase": 1
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "Q",
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 3,
+      "q_count": 4,
+      "instance_count": 3,
+      "numerator_signs": [
+        -1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 8,
+          "phase": 1
+        },
+        {
+          "maximum": 9,
+          "phase": 1
+        },
+        {
+          "maximum": 9,
+          "phase": 3
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 3,
+      "instance_count": 2,
+      "numerator_signs": [
+        -1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 8,
+          "phase": 2
+        },
+        {
+          "maximum": 9,
+          "phase": 4
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "Q",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 3,
+      "q_count": 4,
+      "instance_count": 2,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 8,
+          "phase": 3
+        },
+        {
+          "maximum": 9,
+          "phase": 5
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 3,
+      "instance_count": 1,
+      "numerator_signs": [
+        1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 8,
+          "phase": 4
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 3,
+      "instance_count": 2,
+      "numerator_signs": [
+        -1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 8,
+          "phase": 5
+        },
+        {
+          "maximum": 9,
+          "phase": 7
+        }
+      ]
+    },
+    {
+      "contact_labels": [
+        "Q",
+        "P",
+        "Q",
+        "P",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "p_count": 4,
+      "q_count": 3,
+      "instance_count": 1,
+      "numerator_signs": [
+        -1
+      ],
+      "sign_consistent_within_A67": true,
+      "instances": [
+        {
+          "maximum": 9,
+          "phase": 2
+        }
+      ]
+    }
+  ],
+  "phase_records": [
+    {
+      "maximum": 5,
+      "phase": 1,
+      "positive_indices": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12
+      ],
+      "p_support": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "q_support": [
+        1,
+        2,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "B",
+        "Q",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(1024*s - 1)*(81605753034506240*epsilon*s**4 + 79693118197760*epsilon*s**3 - 165960894465966080*epsilon*s**2 - 162071186001920*epsilon*s + 89853993428656680*epsilon + 3415337503894008*s**4 - 1078901590283055*s**3 - 8860545656802378*s**2 + 7296446068877889*s - 772336325686464)/36893488147419103232",
+      "alpha_cramer_numerator": "63*(2760990284658872320*epsilon + 47975352757752189)/295147905179352825856",
+      "numerator_constant": "3022447223738387907/295147905179352825856",
+      "numerator_epsilon_slope": "42466403304079335/72057594037927936",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/10000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 5,
+      "phase": 2,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12
+      ],
+      "p_support": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "q_support": [
+        1,
+        2,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(1024*s - 1)*(44068361658695680*epsilon*s**4 + 43035509432320*epsilon*s**3 - 133349995205160960*epsilon*s**2 + 89723927096606720*epsilon*s + 87621022555280*epsilon + 1440992855898288*s**4 - 113070892527054*s**3 - 4465466648422857*s**2 + 3506174550833724*s - 368629865782101)/36893488147419103232",
+      "alpha_cramer_numerator": "21*(40225179094470400*epsilon + 1046390940847791)/4611686018427387904",
+      "numerator_constant": "21974209757803611/4611686018427387904",
+      "numerator_epsilon_slope": "3299721722593275/18014398509481984",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/10000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 5,
+      "phase": 3,
+      "positive_indices": [
+        0,
+        2,
+        5,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "p_support": [
+        0,
+        2,
+        5
+      ],
+      "q_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "B",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(1024*s - 1)*(1310549224685568*epsilon*s**4 + 106681309618847744*epsilon*s**3 - 266595893497626624*epsilon*s**2 + 209823338957283328*epsilon*s - 53135109288359784*epsilon + 159844026390048*s**4 + 3955227896158308*s**3 - 8926849928016405*s**2 + 5348640061997694*s - 536862056529645)/73786976294838206464",
+      "alpha_cramer_numerator": "21*(231655177239658496*epsilon + 39920218497068679)/295147905179352825856",
+      "numerator_constant": "838324588438442259/295147905179352825856",
+      "numerator_epsilon_slope": "1159848862179/70368744177664",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/10000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [
+        {
+          "left": "183249/1455142",
+          "right": "259234/2058523",
+          "multiplicity": 1,
+          "decimal": "0.1259320396224168449527514819129960342217"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 5,
+      "phase": 4,
+      "positive_indices": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        8,
+        9,
+        12
+      ],
+      "p_support": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "q_support": [
+        1,
+        2,
+        3
+      ],
+      "contact_labels": [
+        "P",
+        "B",
+        "B",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(1024*s - 1)*(1985719073505280*epsilon*s**4 + 1939178782720*epsilon*s**3 + 1893729280*epsilon*s**2 - 8298048612714496*epsilon*s + 6659398298502928*epsilon + 53350809329664*s**4 + 52100399736*s**3 - 174334450066623*s**2 + 135109361615382*s - 14177821278159)/4611686018427387904",
+      "alpha_cramer_numerator": "21*(188439440367225856*epsilon + 1278394020872199)/18446744073709551616",
+      "numerator_constant": "26846274438316179/18446744073709551616",
+      "numerator_epsilon_slope": "3864480710655999/18014398509481984",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/10000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 5,
+      "phase": 5,
+      "positive_indices": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        9,
+        12
+      ],
+      "p_support": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "q_support": [
+        1,
+        3
+      ],
+      "contact_labels": [
+        "P",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "basis_determinant": "-343*(s - 1)**2*(8*s - 1)*(64*s**2 + 136*s + 209)/524288",
+      "alpha_cramer_numerator": "-301497/2097152",
+      "numerator_constant": "-301497/2097152",
+      "numerator_epsilon_slope": "0",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 0,
+      "declared_epsilon": "1/10000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [
+        {
+          "left": "1/8",
+          "right": "1/8",
+          "multiplicity": 1,
+          "decimal": "0.1250000000000000000000000000000000000000"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 5,
+      "phase": 6,
+      "positive_indices": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        12
+      ],
+      "p_support": [
+        1,
+        2,
+        5
+      ],
+      "q_support": [
+        0,
+        1,
+        3
+      ],
+      "contact_labels": [
+        "Q",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "basis_determinant": "-(655360*epsilon*s**5 - 2621440*epsilon*s**2 + 1966080*epsilon*s + 204820*epsilon + 163072*s**5 + 40964*s**3 - 805903*s**2 + 673554*s - 71687)/524288",
+      "alpha_cramer_numerator": "-(1392640*epsilon + 295323)/2097152",
+      "numerator_constant": "-295323/2097152",
+      "numerator_epsilon_slope": "-85/128",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/10000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 5,
+      "phase": 7,
+      "positive_indices": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        12
+      ],
+      "p_support": [
+        1,
+        2,
+        5
+      ],
+      "q_support": [
+        0,
+        1,
+        3
+      ],
+      "contact_labels": [
+        "Q",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "basis_determinant": "-(22517998136852480*epsilon*s**5 - 90071992547409920*epsilon*s**2 + 67553994410557440*epsilon*s + 65884798320660*epsilon + 7861524240531456*s**5 + 13176959664132*s**3 - 31495510560866319*s**2 + 23643869040082962*s - 23059679412231)/18014398509481984",
+      "alpha_cramer_numerator": "-(47850746040811520*epsilon + 16689267811549179)/72057594037927936",
+      "numerator_constant": "-16689267811549179/72057594037927936",
+      "numerator_epsilon_slope": "-85/128",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/10000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 6,
+      "phase": 1,
+      "positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        9,
+        11,
+        14
+      ],
+      "p_support": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ],
+      "q_support": [
+        2,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "P",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "706335*(s - 1)**2*(8*s - 1)*(32*s - 1)*(1024*s**2 + 2208*s + 3413)/8796093022208",
+      "alpha_cramer_numerator": "151710162975/35184372088832",
+      "numerator_constant": "151710162975/35184372088832",
+      "numerator_epsilon_slope": "0",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 0,
+      "declared_epsilon": "1/15000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [
+        {
+          "left": "1/8",
+          "right": "1/8",
+          "multiplicity": 1,
+          "decimal": "0.1250000000000000000000000000000000000000"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 6,
+      "phase": 2,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        6,
+        8,
+        9,
+        11,
+        14
+      ],
+      "p_support": [
+        0,
+        2,
+        3,
+        6
+      ],
+      "q_support": [
+        1,
+        2,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "5*(32*s - 1)*(67144515584*epsilon*s**5 + 2098266112*epsilon*s**4 + 65570816*epsilon*s**3 - 271453568000*epsilon*s**2 + 197266954880*epsilon*s + 6164592340*epsilon + 1157259264*s**5 + 36164352*s**4 + 1130136*s**3 - 5221934655*s**2 + 4509525174*s - 482144271)/8796093022208",
+      "alpha_cramer_numerator": "205065*(53417984*epsilon + 739815)/35184372088832",
+      "numerator_constant": "151710162975/35184372088832",
+      "numerator_epsilon_slope": "5348710395/17179869184",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/15000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 6,
+      "phase": 3,
+      "positive_indices": [
+        0,
+        2,
+        6,
+        8,
+        9,
+        10,
+        11,
+        14
+      ],
+      "p_support": [
+        0,
+        2,
+        6
+      ],
+      "q_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "B",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "3*(32*s - 1)*(9095872512*epsilon*s**5 + 284246016*epsilon*s**4 + 723890528256*epsilon*s**3 - 1787082534912*epsilon*s**2 + 1364629344384*epsilon*s - 319296155772*epsilon + 1060820992*s**5 + 33150656*s**4 + 13926289216*s**3 - 34377936607*s**2 + 21540297982*s - 2182622239)/35184372088832",
+      "alpha_cramer_numerator": "81*(54575235072*epsilon + 3931225165)/140737488355328",
+      "numerator_constant": "318429238365/140737488355328",
+      "numerator_epsilon_slope": "4215807/134217728",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/15000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [
+        {
+          "left": "552931/4393344",
+          "right": "29149/231605",
+          "multiplicity": 1,
+          "decimal": "0.1258565229588575008100177352042687981662"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 6,
+      "phase": 4,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        6,
+        8,
+        10,
+        11,
+        14
+      ],
+      "p_support": [
+        0,
+        2,
+        3,
+        6
+      ],
+      "q_support": [
+        1,
+        3,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "B",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(32*s - 1)*(537156124672*epsilon*s**5 + 16786128896*epsilon*s**4 + 524566528*epsilon*s**3 - 2171628544000*epsilon*s**2 + 1578135639040*epsilon*s + 49316738720*epsilon + 6147939840*s**5 + 192123120*s**4 - 4978531614*s**3 - 17149389999*s**2 + 17726183160*s - 1938324507)/17592186044416",
+      "alpha_cramer_numerator": "41013*(213671936*epsilon + 1623315)/35184372088832",
+      "numerator_constant": "66577018095/35184372088832",
+      "numerator_epsilon_slope": "1069742079/4294967296",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/15000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 6,
+      "phase": 5,
+      "positive_indices": [
+        0,
+        2,
+        6,
+        8,
+        10,
+        11,
+        14
+      ],
+      "p_support": [
+        0,
+        2,
+        6
+      ],
+      "q_support": [
+        1,
+        3,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "basis_determinant": "-(1048576*epsilon*s**6 - 3145728*epsilon*s**2 + 4145156*epsilon - 219520*s**6 - 1024002*s**4 + 2560005*s**3 - 877443*s**2 - 512001*s + 72961)/1048576",
+      "alpha_cramer_numerator": "-81*(65536*epsilon - 7399)/4194304",
+      "numerator_constant": "599319/4194304",
+      "numerator_epsilon_slope": "-81/64",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/15000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": "7399/65536",
+      "flip_margin_multiple": "1693.4967041015625000000000000000000000000000000000",
+      "full_domain_determinant_roots": [
+        {
+          "left": "100843/803909",
+          "right": "180059/1435410",
+          "multiplicity": 1,
+          "decimal": "0.1254408148190259501164541127736619916945"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 6,
+      "phase": 6,
+      "positive_indices": [
+        0,
+        2,
+        6,
+        8,
+        10,
+        11,
+        14
+      ],
+      "p_support": [
+        0,
+        2,
+        6
+      ],
+      "q_support": [
+        1,
+        3,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "basis_determinant": "-(4294967296*epsilon*s**6 - 12884901888*epsilon*s**2 + 17167286276*epsilon - 1037203456*s**6 - 4288675842*s**4 + 10721689605*s**3 - 3321403395*s**2 - 2144337921*s + 69931009)/4294967296",
+      "alpha_cramer_numerator": "-27*(805306368*epsilon - 115055725)/17179869184",
+      "numerator_constant": "3106504575/17179869184",
+      "numerator_epsilon_slope": "-81/64",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/15000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": "115055725/805306368",
+      "flip_margin_multiple": "2143.0798806250095367431640625000000000000000000000",
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 7,
+      "phase": 1,
+      "positive_indices": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        10,
+        12,
+        16
+      ],
+      "p_support": [
+        1,
+        2,
+        3,
+        7
+      ],
+      "q_support": [
+        0,
+        2,
+        4
+      ],
+      "contact_labels": [
+        "Q",
+        "P",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "9*(16*s - 1)*(20703084544*epsilon*s**6 + 1293942784*epsilon*s**5 + 80871424*epsilon*s**4 + 5054464*epsilon*s**3 - 112742641664*epsilon*s**2 + 94220992768*epsilon*s - 3338722800*epsilon - 574515200*s**6 - 35907200*s**5 - 2244200*s**4 + 57823675*s**3 + 3231888100*s**2 - 3001643225*s + 324598050)/8796093022208",
+      "alpha_cramer_numerator": "5103*(1528766464*epsilon - 36667925)/70368744177664",
+      "numerator_constant": "-187116421275/70368744177664",
+      "numerator_epsilon_slope": "952306551/8589934592",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/20000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": "36667925/1528766464",
+      "flip_margin_multiple": "479.70603572842372345499070288344577396485850699561",
+      "full_domain_determinant_roots": [
+        {
+          "left": "136005/1086713",
+          "right": "141437/1130116",
+          "multiplicity": 1,
+          "decimal": "0.1251526391976928889764463311726873876706"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 7,
+      "phase": 2,
+      "positive_indices": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        10,
+        12,
+        16
+      ],
+      "p_support": [
+        0,
+        1,
+        2,
+        3,
+        7
+      ],
+      "q_support": [
+        2,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "P",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "77175*(s - 1)**2*(8*s - 1)*(16*s - 1)*(4096*s**3 + 8960*s**2 + 13936*s + 18927)/4398046511104",
+      "alpha_cramer_numerator": "46427476725/17592186044416",
+      "numerator_constant": "46427476725/17592186044416",
+      "numerator_epsilon_slope": "0",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 0,
+      "declared_epsilon": "1/20000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [
+        {
+          "left": "1/8",
+          "right": "1/8",
+          "multiplicity": 1,
+          "decimal": "0.1250000000000000000000000000000000000000"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 7,
+      "phase": 3,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        7,
+        9,
+        10,
+        12,
+        16
+      ],
+      "p_support": [
+        0,
+        2,
+        3,
+        7
+      ],
+      "q_support": [
+        1,
+        2,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "B",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "5*(16*s - 1)*(133714411520*epsilon*s**6 + 8357150720*epsilon*s**5 + 522321920*epsilon*s**4 + 32645120*epsilon*s**3 - 677797552128*epsilon*s**2 + 506336601344*epsilon*s + 31646037584*epsilon + 894136320*s**6 + 55883520*s**5 + 3492720*s**4 + 527396310*s**3 - 6341842395*s**2 + 5443289460*s - 582355935)/8796093022208",
+      "alpha_cramer_numerator": "105*(18621205504*epsilon + 105948045)/4398046511104",
+      "numerator_constant": "11124544725/4398046511104",
+      "numerator_epsilon_slope": "1909400955/4294967296",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/20000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 7,
+      "phase": 4,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        7,
+        9,
+        11,
+        12,
+        16
+      ],
+      "p_support": [
+        0,
+        2,
+        3,
+        7
+      ],
+      "q_support": [
+        1,
+        3,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "B",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(16*s - 1)*(1069715292160*epsilon*s**6 + 66857205760*epsilon*s**5 + 4178575360*epsilon*s**4 + 261160960*epsilon*s**3 - 5422380417024*epsilon*s**2 + 4050692810752*epsilon*s + 253168300672*epsilon + 4922265600*s**6 + 307641600*s**5 + 19227600*s**4 - 2634688350*s**3 - 23143845375*s**2 + 23043043800*s - 2513644875)/17592186044416",
+      "alpha_cramer_numerator": "21*(595878576128*epsilon + 1986870375)/35184372088832",
+      "numerator_constant": "41724277875/35184372088832",
+      "numerator_epsilon_slope": "381880191/1073741824",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/20000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 7,
+      "phase": 5,
+      "positive_indices": [
+        0,
+        2,
+        7,
+        9,
+        11,
+        12,
+        16
+      ],
+      "p_support": [
+        0,
+        2,
+        7
+      ],
+      "q_support": [
+        1,
+        3,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "basis_determinant": "-(33554432*epsilon*s**7 - 117440512*epsilon*s**2 + 165937168*epsilon - 11389952*s**7 - 10256386*s**4 + 66666509*s**3 - 31929870*s**2 - 15384579*s + 2294278)/33554432",
+      "alpha_cramer_numerator": "-(109576192*epsilon - 11554347)/67108864",
+      "numerator_constant": "11554347/67108864",
+      "numerator_epsilon_slope": "-209/128",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/20000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": "11554347/109576192",
+      "flip_margin_multiple": "2108.9155936355225777511961722488038277511961722488",
+      "full_domain_determinant_roots": [
+        {
+          "left": "443057/3533047",
+          "right": "108308/863675",
+          "multiplicity": 1,
+          "decimal": "0.1254036529943074409905395227094983200028"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 7,
+      "phase": 6,
+      "positive_indices": [
+        0,
+        2,
+        7,
+        9,
+        11,
+        12,
+        16
+      ],
+      "p_support": [
+        0,
+        2,
+        7
+      ],
+      "q_support": [
+        1,
+        3,
+        4
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "basis_determinant": "-(4294967296*epsilon*s**7 - 15032385536*epsilon*s**2 + 21416116240*epsilon - 1546444800*s**7 - 1334837250*s**4 + 8676442125*s**3 - 3931303950*s**2 - 2002255875*s + 138399750)/4294967296",
+      "alpha_cramer_numerator": "-(14025752576*epsilon - 1713015675)/8589934592",
+      "numerator_constant": "1713015675/8589934592",
+      "numerator_epsilon_slope": "-209/128",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/20000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": "1713015675/14025752576",
+      "flip_margin_multiple": "2442.6720287811242792594946172248803827751196172249",
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 8,
+      "phase": 1,
+      "positive_indices": [
+        1,
+        3,
+        8,
+        9,
+        11,
+        13,
+        14,
+        18
+      ],
+      "p_support": [
+        1,
+        3,
+        8
+      ],
+      "q_support": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "Q",
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(16*s - 1)*(66024351203328*epsilon*s**7 + 4126521950208*epsilon*s**6 + 257907621888*epsilon*s**5 + 146014961467392*epsilon*s**4 - 226094421852160*epsilon*s**3 - 245216130577408*epsilon*s**2 + 90117600124096*epsilon*s + 170693228016076*epsilon - 438036480000*s**7 - 27377280000*s**6 - 1711080000*s**5 - 2662771406400*s**4 + 6591765903975*s**3 - 2220212074500*s**2 - 1444713497325*s + 203055914250)/1125899906842624",
+      "alpha_cramer_numerator": "189*(36505527517184*epsilon - 124654734575)/9007199254740992",
+      "numerator_constant": "-23559744834675/9007199254740992",
+      "numerator_epsilon_slope": "411244911/536870912",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/30000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": "124654734575/36505527517184",
+      "flip_margin_multiple": "102.44043276705599181742846577437647611401080656777",
+      "full_domain_determinant_roots": [
+        {
+          "left": "165871/1291202",
+          "right": "181653/1414055",
+          "multiplicity": 1,
+          "decimal": "0.1284624714028893953352237451619447066484"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 8,
+      "phase": 2,
+      "positive_indices": [
+        0,
+        1,
+        3,
+        8,
+        11,
+        13,
+        14,
+        18
+      ],
+      "p_support": [
+        0,
+        1,
+        3,
+        8
+      ],
+      "q_support": [
+        2,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(16*s - 1)*(60511794233344*epsilon*s**7 + 3781987139584*epsilon*s**6 + 236374196224*epsilon*s**5 + 14773387264*epsilon*s**4 + 923336704*epsilon*s**3 - 219902268899328*epsilon*s**2 - 13743891806208*epsilon*s + 174753632718976*epsilon - 419973120000*s**7 - 26248320000*s**6 - 1640520000*s**5 - 2650098301200*s**4 + 6459358277925*s**3 - 2107723338000*s**2 - 1456730592975*s + 203055914250)/1125899906842624",
+      "alpha_cramer_numerator": "147*(38602712612864*epsilon - 157788195075)/9007199254740992",
+      "numerator_constant": "-23194864676025/9007199254740992",
+      "numerator_epsilon_slope": "86587505403/137438953472",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/30000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": "157788195075/38602712612864",
+      "flip_margin_multiple": "122.62469479081519069753024006056431878470894304856",
+      "full_domain_determinant_roots": [
+        {
+          "left": "263075/2050174",
+          "right": "178124/1388141",
+          "multiplicity": 1,
+          "decimal": "0.1283183768794064279213579411911892848267"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 8,
+      "phase": 3,
+      "positive_indices": [
+        0,
+        3,
+        8,
+        10,
+        11,
+        13,
+        14,
+        18
+      ],
+      "p_support": [
+        0,
+        3,
+        8
+      ],
+      "q_support": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(16*s - 1)*(14229914517504*epsilon*s**7 + 889369657344*epsilon*s**6 + 55585603584*epsilon*s**5 + 878066603884544*epsilon*s**4 - 1437828157890560*epsilon*s**3 - 127810698581504*epsilon*s**2 + 957881274101408*epsilon*s - 291357672282390*epsilon + 565473484800*s**7 + 35342092800*s**6 + 2208880800*s**5 + 4223980775700*s**4 - 9119201697900*s**3 + 1593233719875*s**2 + 3093803196750*s - 394840452825)/2251799813685248",
+      "alpha_cramer_numerator": "21*(28996274225152*epsilon + 453004780725)/4503599627370496",
+      "numerator_constant": "9513100395225/4503599627370496",
+      "numerator_epsilon_slope": "290356521/2147483648",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/30000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [
+        {
+          "left": "118110/930877",
+          "right": "483793/3812986",
+          "multiplicity": 1,
+          "decimal": "0.1268803504653473346371517869480215483484"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 8,
+      "phase": 4,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        8,
+        10,
+        13,
+        14,
+        18
+      ],
+      "p_support": [
+        0,
+        2,
+        3,
+        8
+      ],
+      "q_support": [
+        1,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(16*s - 1)*(188269891420160*epsilon*s**7 + 11766868213760*epsilon*s**6 + 735429263360*epsilon*s**5 + 45964328960*epsilon*s**4 + 2872770560*epsilon*s**3 - 1145965826080768*epsilon*s**2 + 894246578632704*epsilon*s + 55890411164544*epsilon + 140532940800*s**7 + 8783308800*s**6 + 548956800*s**5 - 1276377832800*s**4 + 3962198170350*s**3 - 5243386420125*s**2 + 2666514438000*s - 258813561825)/2251799813685248",
+      "alpha_cramer_numerator": "567*(5123595665408*epsilon + 4453099175)/4503599627370496",
+      "numerator_constant": "2524907232225/4503599627370496",
+      "numerator_epsilon_slope": "88655967477/137438953472",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/30000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 8,
+      "phase": 5,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        8,
+        10,
+        13,
+        14,
+        18
+      ],
+      "p_support": [
+        0,
+        2,
+        3,
+        8
+      ],
+      "q_support": [
+        1,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "basis_determinant": "-(49134425866240*epsilon*s**8 - 145135351037952*epsilon*s**3 + 21165323091968*epsilon*s**2 + 149718447778944*epsilon + 2248527052800*s**8 - 20422594281600*s**5 + 64671548558400*s**4 - 87856380892350*s**3 + 47907617428125*s**2 - 6807531427200*s + 258813561825)/2251799813685248",
+      "alpha_cramer_numerator": "-189*(657957093376*epsilon + 13359297525)/4503599627370496",
+      "numerator_constant": "-2524907232225/4503599627370496",
+      "numerator_epsilon_slope": "-3794979573/137438953472",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/30000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 8,
+      "phase": 6,
+      "positive_indices": [
+        0,
+        2,
+        8,
+        10,
+        13,
+        14,
+        18
+      ],
+      "p_support": [
+        0,
+        2,
+        8
+      ],
+      "q_support": [
+        1,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "basis_determinant": "-(94489280512*epsilon*s**8 - 377957122048*epsilon*s**2 + 565459288086*epsilon - 46339891200*s**8 - 76906758150*s**5 + 243538067475*s**4 - 96631881750*s**2 - 25635586050*s + 1976049675)/68719476736",
+      "alpha_cramer_numerator": "-27*(14025752576*epsilon - 1656513775)/137438953472",
+      "numerator_constant": "44725871925/137438953472",
+      "numerator_epsilon_slope": "-5643/2048",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/30000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": "1656513775/14025752576",
+      "flip_margin_multiple": "3543.1548489623092578358627392344497607655502392344",
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 9,
+      "phase": 1,
+      "positive_indices": [
+        1,
+        3,
+        9,
+        10,
+        12,
+        15,
+        16,
+        20
+      ],
+      "p_support": [
+        1,
+        3,
+        9
+      ],
+      "q_support": [
+        0,
+        2,
+        5,
+        6
+      ],
+      "contact_labels": [
+        "Q",
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "27*(16*s - 1)*(1742339919839232*epsilon*s**8 + 108896244989952*epsilon*s**7 + 6806015311872*epsilon*s**6 + 5357246098702336*epsilon*s**5 - 7146249335078912*epsilon*s**4 - 446640583442432*epsilon*s**3 - 6997274715822080*epsilon*s**2 + 2194901202644608*epsilon*s + 5364201084682984*epsilon - 19816409088000*s**8 - 1238525568000*s**7 - 77407848000*s**6 - 99496522416200*s**5 + 198238127390800*s**4 + 12389882961925*s**3 - 71082830665175*s**2 - 22808486269625*s + 3892171502275)/576460752303423488",
+      "alpha_cramer_numerator": "15309*(394100696154112*epsilon - 1436219320375)/4611686018427387904",
+      "numerator_constant": "-21987081575620875/4611686018427387904",
+      "numerator_epsilon_slope": "44951495211/34359738368",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/40000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": "1436219320375/394100696154112",
+      "flip_margin_multiple": "145.77181257384740680747041472387331040408626019530",
+      "full_domain_determinant_roots": [
+        {
+          "left": "295100/2295307",
+          "right": "226643/1762844",
+          "multiplicity": 1,
+          "decimal": "0.1285666797514596664344329300155561497328"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 9,
+      "phase": 2,
+      "positive_indices": [
+        1,
+        3,
+        4,
+        9,
+        10,
+        12,
+        15,
+        20
+      ],
+      "p_support": [
+        1,
+        3,
+        4,
+        9
+      ],
+      "q_support": [
+        0,
+        2,
+        5
+      ],
+      "contact_labels": [
+        "Q",
+        "P",
+        "Q",
+        "P",
+        "P",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(16*s - 1)*(740473836666880*epsilon*s**8 + 46279614791680*epsilon*s**7 + 2892475924480*epsilon*s**6 + 180779745280*epsilon*s**5 + 11298734080*epsilon*s**4 - 4519816778645504*epsilon*s**3 + 3535342331891712*epsilon*s**2 + 220958895743232*epsilon*s - 24677301423600*epsilon - 13640726937600*s**8 - 852545433600*s**7 - 53284089600*s**6 - 3330255600*s**5 + 584814091050*s**4 + 83982659614875*s**3 - 67456879046550*s**2 - 3943487764125*s + 1382779821150)/18014398509481984",
+      "alpha_cramer_numerator": "189*(29958584385536*epsilon - 517013461125)/36028797018963968",
+      "numerator_constant": "-97715544152625/36028797018963968",
+      "numerator_epsilon_slope": "345591580131/2199023255552",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/40000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": "517013461125/29958584385536",
+      "flip_margin_multiple": "690.30426067075989165702606004732402952004951084998",
+      "full_domain_determinant_roots": [
+        {
+          "left": "308029/2462789",
+          "right": "314006/2510577",
+          "multiplicity": 1,
+          "decimal": "0.1250732401355532923871478856065809117880"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 9,
+      "phase": 3,
+      "positive_indices": [
+        1,
+        3,
+        9,
+        10,
+        12,
+        14,
+        15,
+        20
+      ],
+      "p_support": [
+        1,
+        3,
+        9
+      ],
+      "q_support": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "Q",
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "9*(16*s - 1)*(234753248722944*epsilon*s**8 + 14672078045184*epsilon*s**7 + 917004877824*epsilon*s**6 + 57312804864*epsilon*s**5 + 623426683404288*epsilon*s**4 - 965439717801984*epsilon*s**3 - 999352977254400*epsilon*s**2 + 387790456566144*epsilon*s + 728496649704216*epsilon - 2635966054400*s**8 - 164747878400*s**7 - 10296742400*s**6 - 643546400*s**5 - 2574671714300*s**4 + 18493773847675*s**3 - 9071193684525*s**2 - 4734285546375*s + 698031319125)/36028797018963968",
+      "alpha_cramer_numerator": "32319*(8384044597248*epsilon - 28036958425)/288230376151711744",
+      "numerator_constant": "-906126459337575/288230376151711744",
+      "numerator_epsilon_slope": "1009419327/1073741824",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/40000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": "28036958425/8384044597248",
+      "flip_margin_multiple": "133.76340309164348735790394974866327282041430538213",
+      "full_domain_determinant_roots": [
+        {
+          "left": "151643/1183945",
+          "right": "121599/949378",
+          "multiplicity": 1,
+          "decimal": "0.1280828079011496823024555036306896679177"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 9,
+      "phase": 4,
+      "positive_indices": [
+        0,
+        1,
+        3,
+        9,
+        12,
+        14,
+        15,
+        20
+      ],
+      "p_support": [
+        0,
+        1,
+        3,
+        9
+      ],
+      "q_support": [
+        2,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "(16*s - 1)*(3872754830934016*epsilon*s**8 + 242047176933376*epsilon*s**7 + 15127948558336*epsilon*s**6 + 945496784896*epsilon*s**5 + 59093549056*epsilon*s**4 + 3693346816*epsilon*s**3 - 16114442194255872*epsilon*s**2 - 1007152637140992*epsilon*s + 13425586757042688*epsilon - 45378050457600*s**8 - 2836128153600*s**7 - 177258009600*s**6 - 11078625600*s**5 - 50969071213200*s**4 + 328108895243325*s**3 - 155152286427600*s**2 - 86149586100375*s + 12564563744250)/72057594037927936",
+      "alpha_cramer_numerator": "1323*(337722569129984*epsilon - 1340647072275)/576460752303423488",
+      "numerator_constant": "-1773676076619825/576460752303423488",
+      "numerator_epsilon_slope": "1704433284603/2199023255552",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/40000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": "1340647072275/337722569129984",
+      "flip_margin_multiple": "158.78679067598901807706029701044763269402340390198",
+      "full_domain_determinant_roots": [
+        {
+          "left": "133171/1040721",
+          "right": "123856/967925",
+          "multiplicity": 1,
+          "decimal": "0.1279603275042173348563548474347662063833"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 9,
+      "phase": 5,
+      "positive_indices": [
+        0,
+        3,
+        9,
+        11,
+        12,
+        14,
+        15,
+        20
+      ],
+      "p_support": [
+        0,
+        3,
+        9
+      ],
+      "q_support": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_determinant": "21*(16*s - 1)*(21683679264768*epsilon*s**8 + 1355229954048*epsilon*s**7 + 84701872128*epsilon*s**6 + 5293867008*epsilon*s**5 + 1605778163826688*epsilon*s**4 - 2629461180792832*epsilon*s**3 - 229392361593856*epsilon*s**2 + 1752018593656384*epsilon*s - 532809971080476*epsilon + 1276408627200*s**8 + 79775539200*s**7 + 4985971200*s**6 + 311623200*s**5 + 3395136735900*s**4 - 11599544497275*s**3 + 2995854090075*s**2 + 4425206632875*s - 578134722375)/72057594037927936",
+      "alpha_cramer_numerator": "3087*(30718545625088*epsilon + 438621699825)/576460752303423488",
+      "numerator_constant": "1354025187359775/576460752303423488",
+      "numerator_epsilon_slope": "706524777/4294967296",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/40000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [
+        {
+          "left": "46288/365291",
+          "right": "500867/3952692",
+          "multiplicity": 1,
+          "decimal": "0.1267154131914733625219569042282325661474"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 9,
+      "phase": 6,
+      "positive_indices": [
+        0,
+        3,
+        9,
+        11,
+        14,
+        15,
+        20
+      ],
+      "p_support": [
+        0,
+        3,
+        9
+      ],
+      "q_support": [
+        1,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "basis_determinant": "-3*(5905580032*epsilon*s**9 - 17716740096*epsilon*s**3 + 23587717164*epsilon - 1418174464*s**9 + 535298050*s**5 + 6155927575*s**4 - 4577894433*s**3 - 802947075*s + 107790347)/8589934592",
+      "alpha_cramer_numerator": "-147*(1568669696*epsilon - 76280217)/68719476736",
+      "numerator_constant": "11213191899/68719476736",
+      "numerator_epsilon_slope": "-27489/8192",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/40000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": "76280217/1568669696",
+      "flip_margin_multiple": "1945.0931498073639079211229946524064171122994652406",
+      "full_domain_determinant_roots": [
+        {
+          "left": "142260/1132577",
+          "right": "144173/1147807",
+          "multiplicity": 1,
+          "decimal": "0.1256073538491737103122589417253983503700"
+        }
+      ],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 9,
+      "phase": 7,
+      "positive_indices": [
+        0,
+        2,
+        3,
+        9,
+        11,
+        14,
+        15,
+        20
+      ],
+      "p_support": [
+        0,
+        2,
+        3,
+        9
+      ],
+      "q_support": [
+        1,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "basis_determinant": "-5*(314460325543936*epsilon*s**9 - 1044975703687168*epsilon*s**3 + 152392090583040*epsilon*s**2 + 1156586735707392*epsilon - 24101435473920*s**9 + 26293793097600*s**5 + 302378620622400*s**4 - 551404145389230*s**3 + 284791298550885*s**2 - 39440689646400*s + 1482558238665)/72057594037927936",
+      "alpha_cramer_numerator": "-2205*(2205050011648*epsilon + 16815381345)/144115188075855872",
+      "numerator_constant": "-37077915865725/144115188075855872",
+      "numerator_epsilon_slope": "-74190296565/2199023255552",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/40000",
+      "declared_numerator_sign": -1,
+      "declared_determinant_sign": -1,
+      "signs_match": true,
+      "positive_flip_threshold": null,
+      "flip_margin_multiple": null,
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    },
+    {
+      "maximum": 9,
+      "phase": 8,
+      "positive_indices": [
+        0,
+        2,
+        9,
+        11,
+        14,
+        15,
+        20
+      ],
+      "p_support": [
+        0,
+        2,
+        9
+      ],
+      "q_support": [
+        1,
+        4,
+        5
+      ],
+      "contact_labels": [
+        "P",
+        "Q",
+        "P",
+        "Q",
+        "Q",
+        "P"
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "basis_determinant": "-(6047313952768*epsilon*s**9 - 27212912787456*epsilon*s**2 + 42224897228888*epsilon - 3727274803200*s**9 + 957240836100*s**5 + 11008269615150*s**4 - 6918974079075*s**2 - 1435861254150*s + 116599685175)/4398046511104",
+      "alpha_cramer_numerator": "-(57496727191552*epsilon - 6481694672775)/17592186044416",
+      "numerator_constant": "6481694672775/17592186044416",
+      "numerator_epsilon_slope": "-13387/4096",
+      "numerator_s_degree": 0,
+      "numerator_epsilon_degree": 1,
+      "declared_epsilon": "1/40000",
+      "declared_numerator_sign": 1,
+      "declared_determinant_sign": 1,
+      "signs_match": true,
+      "positive_flip_threshold": "6481694672775/57496727191552",
+      "flip_margin_multiple": "4509.2616497499398960065937847235190856801374467767",
+      "full_domain_determinant_roots": [],
+      "cramer_identity_exact": true
+    }
+  ],
+  "order_only_counterexample": {
+    "contact_labels": [
+      "P",
+      "B",
+      "Q",
+      "P",
+      "Q",
+      "P"
+    ],
+    "active_observations": [
+      [
+        "alpha",
+        1
+      ],
+      [
+        "beta",
+        -1
+      ],
+      [
+        "gamma",
+        1
+      ]
+    ],
+    "target_exponent": 1,
+    "beta_exponent": 3,
+    "gamma_exponent": 10,
+    "epsilon": 0,
+    "mean_rule": "(minimum contact + maximum contact)/2",
+    "uniform_contacts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "uniform_numerator": "3022447223738387907/295147905179352825856",
+    "uniform_sign": 1,
+    "stretched_contacts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      9
+    ],
+    "stretched_numerator": "-3887828288997434151887072936457/324518553658426726783156020576256",
+    "stretched_sign": -1,
+    "conclusion": "The same contact order and active-band signs can produce opposite Cramer-numerator signs. Order-only total positivity is insufficient for the coupled dual-envelope matrix."
+  },
+  "formal_results": [
+    "the alpha Cramer numerator is exactly independent of alpha in every fixed active basis",
+    "the numerator is affine in the common tolerance",
+    "within a nonsingular basis phase the alpha multiplier has no internal zero",
+    "the 33 A67 numerator orientations have at least a 102.44-fold declared-noise margin before any possible numerator sign reversal",
+    "18 contact-order signatures compress the 33 phases and all repeated signatures agree inside the arithmetic-grid family",
+    "an exact same-order counterexample proves that abstract contact order alone cannot determine the sign",
+    "17 active bases have determinant roots somewhere in the full alpha domain, so the phase partition cannot be discarded"
+  ],
+  "gates": {
+    "A67_family_theorem_passed": true,
+    "all_33_cramer_identities_exact": true,
+    "all_33_numerators_independent_of_alpha": true,
+    "all_33_numerators_affine_in_epsilon": true,
+    "all_33_declared_numerator_and_basis_signs_match": true,
+    "all_33_alpha_multipliers_positive_on_certified_phases": true,
+    "minimum_finite_numerator_flip_margin_above_100": true,
+    "repeated_A67_contact_signatures_have_consistent_orientation": true,
+    "same_order_exact_counterexample_rejects_order_only_theorem": true,
+    "full_domain_basis_roots_show_phase_partition_is_necessary": true
+  },
+  "verdict": "PASS_CRAMER_REDUCTION_WITH_TOTAL_POSITIVITY_OBSTRUCTION",
+  "boundary": "A69 does not prove alpha-multiplier positivity for arbitrary supports. It proves a general fixed-basis Cramer reduction, audits its exact arithmetic-grid orientation on A67, and rejects the stronger order-only total-positivity conjecture."
+}

@@ -1,0 +1,67 @@
+{
+  "audit": "A67_CENTRAL_MEAN_SUPPORT_SIZE_FAMILY",
+  "verdict": "PASS_EXACT_CENTRAL_MEAN_SUPPORT_SIZE_FAMILY_THEOREM",
+  "phase_counts": {
+    "5": 7,
+    "6": 6,
+    "7": 6,
+    "8": 6,
+    "9": 8
+  },
+  "transition_counts": {
+    "5": 6,
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "9": 7
+  },
+  "total_phase_count": 33,
+  "total_transition_count": 28,
+  "support_table": [
+    {
+      "M": 5,
+      "gamma": 10,
+      "epsilon": "1/10000",
+      "phase_count": 7,
+      "transition_count": 6,
+      "boundary_risk": "0.0097681452113756748881978026104657257056548058426406",
+      "coalescence_risk_limit": "0.089066653294909667174066303390545901413652444911754"
+    },
+    {
+      "M": 6,
+      "gamma": 5,
+      "epsilon": "1/15000",
+      "phase_count": 6,
+      "transition_count": 5,
+      "boundary_risk": "0.023987956688136372156681508105204518303350088683229",
+      "coalescence_risk_limit": "0.18251925743998746584514654965504115826705171709197"
+    },
+    {
+      "M": 7,
+      "gamma": 4,
+      "epsilon": "1/20000",
+      "phase_count": 6,
+      "transition_count": 5,
+      "boundary_risk": "0.055903711799154043031087216330833696913381730409777",
+      "coalescence_risk_limit": "0.27166351817400682544949561323015623320590076909390"
+    },
+    {
+      "M": 8,
+      "gamma": 4,
+      "epsilon": "1/30000",
+      "phase_count": 6,
+      "transition_count": 5,
+      "boundary_risk": "0.092385313965809433915730953665081025603334107295089",
+      "coalescence_risk_limit": "0.36229231271614368042974806062713382949374266996033"
+    },
+    {
+      "M": 9,
+      "gamma": 4,
+      "epsilon": "1/40000",
+      "phase_count": 8,
+      "transition_count": 7,
+      "boundary_risk": "0.12633782882273029271627923597316032545305239065949",
+      "coalescence_risk_limit": "0.45870403594457901330336426687576910647672201231506"
+    }
+  ]
+}

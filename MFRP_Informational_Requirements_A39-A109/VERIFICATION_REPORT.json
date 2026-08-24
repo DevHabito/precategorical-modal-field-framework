@@ -1,0 +1,27 @@
+{
+  "audit_range": "A39-A105",
+  "status": "PASS",
+  "audit_results": 67,
+  "gate_count": 994,
+  "gate_pass_count": 994,
+  "unit_test_count": 61,
+  "unit_test_pass_count": 61,
+  "figures": 109,
+  "a105": {
+    "source_segments": 40,
+    "unique_b_plus_2_segments": 14,
+    "b_plus_1_to_b_plus_2_right_segments": 26,
+    "full_segment_certificates": 0,
+    "proper_two_sided_strict_subcomponents": 40,
+    "exact_KKT_conditions": 24312,
+    "numerator_plus_denominator_obligations": 24352,
+    "candidate_roots": 181,
+    "selected_algebraic_boundaries": 80,
+    "root_ordering_checks": 101,
+    "outside_counterexamples": 80,
+    "standalone_replay_record_count": 40,
+    "standalone_sha256_comparison_count": 43,
+    "standalone_all_equal": true
+  },
+  "failures": []
+}

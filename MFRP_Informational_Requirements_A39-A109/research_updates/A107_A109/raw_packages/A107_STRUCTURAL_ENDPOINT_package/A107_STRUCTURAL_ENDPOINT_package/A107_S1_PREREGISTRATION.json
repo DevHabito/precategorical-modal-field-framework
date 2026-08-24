@@ -1,0 +1,228 @@
+{
+  "audit": "A107-S1_STRUCTURAL_ENDPOINT_SIGN_HOLDOUT",
+  "status": "FROZEN_BEFORE_HOLDOUT_EXECUTION",
+  "derivation_dataset": "canonical gamma-plus ranks 1..25 only",
+  "derivation_observation": {
+    "statement": "In ranks 1..25, exact sign of the frozen basic_p_{j+1} numerator at the lower source-segment endpoint matched all observed full-vs-partial classifications: negative for every partial case, positive for every full case; every selected partial boundary was basic_p_{j+1}.",
+    "count": "25/25 classification matches; 8/8 partial-boundary matches",
+    "scope": "empirical derivation on already executed ranks 1..25, not a theorem"
+  },
+  "holdout_selection": {
+    "canonical_ranks_inclusive": [
+      26,
+      33
+    ],
+    "batch_size": 8,
+    "replacement_if_failure": "none",
+    "selection_rule": "next eight canonical gamma-plus records after ranks 1..25, ordered as A102/A107 source_records()"
+  },
+  "frozen_predictor": {
+    "condition": "N_{j+1}(s) is the exact rank-one numerator of basic_p_{j+1} under the frozen A102 gamma-plus architecture; D(s) is the common rank-one denominator.",
+    "rule_negative": "If D is positive at lower/witness/upper checkpoints, N_{j+1}(witness)>0, and N_{j+1}(lower)<0, predict proper_strict_subcomponent with selected left boundary basic_p_{j+1}.",
+    "rule_positive": "Under the same applicability checks, if N_{j+1}(lower)>0, predict full_segment_coverage.",
+    "rule_zero": "If N_{j+1}(lower)=0, no classification is declared.",
+    "applicability_failure": "If the denominator checkpoint signs are not positive or the source witness is not positive for basic_p_{j+1}, the predictor is not adjudicated for that record.",
+    "no_other_KKT_conditions_used_for_prediction": true,
+    "no_root_isolation_used_for_prediction": true,
+    "no_full_analyze_record_used_for_prediction": true
+  },
+  "holdout_predictions": [
+    {
+      "canonical_rank": 26,
+      "source_key": "M=44|b=8|phase=unique_b_plus_1|side=full|s=131/1000|j=9",
+      "maximum": 44,
+      "contact_j": 9,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_10",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null,
+      "prediction_uses_full_atlas_outcome": false
+    },
+    {
+      "canonical_rank": 27,
+      "source_key": "M=46|b=8|phase=unique_b_plus_2|side=full|s=131/1000|j=10",
+      "maximum": 46,
+      "contact_j": 10,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_11",
+      "exact_endpoint_signs": {
+        "N_lower": -1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "if_partial_predicted_boundary": "basic_p_11",
+      "prediction_uses_full_atlas_outcome": false
+    },
+    {
+      "canonical_rank": 28,
+      "source_key": "M=47|b=8|phase=unique_b_plus_2|side=full|s=13/100|j=10",
+      "maximum": 47,
+      "contact_j": 10,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "13053422280342673/100000000000000000"
+      ],
+      "predictor_condition": "basic_p_11",
+      "exact_endpoint_signs": {
+        "N_lower": -1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "if_partial_predicted_boundary": "basic_p_11",
+      "prediction_uses_full_atlas_outcome": false
+    },
+    {
+      "canonical_rank": 29,
+      "source_key": "M=47|b=9|phase=unique_b_plus_1|side=full|s=131/1000|j=10",
+      "maximum": 47,
+      "contact_j": 10,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "130534222803426731/1000000000000000000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_11",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null,
+      "prediction_uses_full_atlas_outcome": false
+    },
+    {
+      "canonical_rank": 30,
+      "source_key": "M=48|b=9|phase=unique_b_plus_1|side=full|s=131/1000|j=10",
+      "maximum": 48,
+      "contact_j": 10,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_11",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null,
+      "prediction_uses_full_atlas_outcome": false
+    },
+    {
+      "canonical_rank": 31,
+      "source_key": "M=49|b=9|phase=unique_b_plus_1|side=full|s=131/1000|j=10",
+      "maximum": 49,
+      "contact_j": 10,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_11",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null,
+      "prediction_uses_full_atlas_outcome": false
+    },
+    {
+      "canonical_rank": 32,
+      "source_key": "M=50|b=9|phase=unique_b_plus_1|side=full|s=131/1000|j=10",
+      "maximum": 50,
+      "contact_j": 10,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_11",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null,
+      "prediction_uses_full_atlas_outcome": false
+    },
+    {
+      "canonical_rank": 33,
+      "source_key": "M=52|b=9|phase=unique_b_plus_2|side=full|s=131/1000|j=11",
+      "maximum": 52,
+      "contact_j": 11,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_12",
+      "exact_endpoint_signs": {
+        "N_lower": -1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "if_partial_predicted_boundary": "basic_p_12",
+      "prediction_uses_full_atlas_outcome": false
+    }
+  ],
+  "adjudication": {
+    "structural_support": "Every classifiable rank exactly matches the full exact atlas classification, and every predicted partial record has selected left boundary basic_p_{j+1}; at least one partial prediction must occur for the boundary part to be tested.",
+    "refute": "Any classifiable rank has a class mismatch, or any predicted partial rank is bounded by a different selected condition/side.",
+    "inconclusive": "Full audit/certification cannot be executed or disagrees internally without a mathematical counterexample.",
+    "primary_local_stability": "Separately report whether all 8 holdout records satisfy the existing exact A107 local-stability criteria; this is not allowed to rescue a failed structural predictor."
+  },
+  "no_posthoc_changes": "No rank replacement, batch resizing, endpoint-rule edits, condition substitution, tolerance changes, or reclassification after the holdout outcomes are inspected.",
+  "nonclaims": [
+    "not a theorem for all 922 gamma-plus records",
+    "not a proof that basic_p_{j+1} is the only possible boundary globally",
+    "not beyond the A95/A102 source segments",
+    "not a physical claim"
+  ]
+}

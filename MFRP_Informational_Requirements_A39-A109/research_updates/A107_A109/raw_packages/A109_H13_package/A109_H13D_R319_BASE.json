@@ -1,0 +1,80 @@
+{
+  "audit": "A109-H13D_SHARDED_BASE",
+  "rank": 319,
+  "preregistration_sha256": "fb15ea204528f2c676ae616c601426a046f1e5978ccf5eaa9a76efdd9ba561e7",
+  "manifest_sha256": "1a69e16bd3a9554f0cc1419a2c74cd7944c41a571e6aaf57c743cce4914c197d",
+  "verdict": "BASE_SUPPORT",
+  "M": 260,
+  "j": 47,
+  "segment": [
+    "30489375728763383233475813892062534959/236118324143482260684800000000000000000",
+    "133/1000"
+  ],
+  "witness": "131/1000",
+  "frozen_prediction": {
+    "canonical_rank": 319,
+    "source_key": "M=260|b=45|phase=b_plus_1_to_b_plus_2|side=right|s=131/1000|j=47",
+    "maximum": 260,
+    "contact_j": 47,
+    "witness": "131/1000",
+    "segment_open_bounds": [
+      "30489375728763383233475813892062534959/236118324143482260684800000000000000000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_48"
+      }
+    ]
+  },
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_48",
+  "target_side": "left",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "unique_root_certificate": {
+    "lower": "4150377727890713731144343070313119684831525461/31691265005705735037417580134400000000000000000",
+    "upper": "33203021823567834583187537478737943586589668729/253530120045645880299340641075200000000000000000",
+    "exact_rational_root": false,
+    "steps": 30,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "442124734032792916232986107937465041/253530120045645880299340641075200000000000000000"
+  },
+  "failures": [],
+  "seconds": 0.8371074199676514
+}

@@ -1,0 +1,254 @@
+{
+  "audit": "A109_H14_INDEPENDENT_ARTIFACT_CONSISTENCY_CHECK",
+  "check_count": 41,
+  "pass_count": 41,
+  "failure_count": 0,
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "H14 prereg hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "H14D prereg hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 335 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "full_atlas"
+      }
+    },
+    {
+      "check": "rank 335 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 336 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "full_atlas"
+      }
+    },
+    {
+      "check": "rank 336 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 337 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "full_atlas"
+      }
+    },
+    {
+      "check": "rank 337 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 338 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "full_atlas"
+      }
+    },
+    {
+      "check": "rank 338 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 339 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts"
+      }
+    },
+    {
+      "check": "rank 339 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 340 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "full_atlas"
+      }
+    },
+    {
+      "check": "rank 340 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 341 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts"
+      }
+    },
+    {
+      "check": "rank 341 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 342 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts"
+      }
+    },
+    {
+      "check": "rank 342 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 343 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts"
+      }
+    },
+    {
+      "check": "rank 343 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 344 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts"
+      }
+    },
+    {
+      "check": "rank 344 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 345 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "full_atlas"
+      }
+    },
+    {
+      "check": "rank 345 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 346 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "full_atlas"
+      }
+    },
+    {
+      "check": "rank 346 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 347 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "full_atlas"
+      }
+    },
+    {
+      "check": "rank 347 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 348 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "full_atlas"
+      }
+    },
+    {
+      "check": "rank 348 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 349 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts"
+      }
+    },
+    {
+      "check": "rank 349 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rank 350 prediction/outcome match",
+      "pass": true,
+      "detail": {
+        "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts"
+      }
+    },
+    {
+      "check": "rank 350 direct mismatch zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "class counts",
+      "pass": true,
+      "detail": {
+        "full_segment_coverage": 11,
+        "proper_strict_subcomponent": 5
+      }
+    },
+    {
+      "check": "left boundary count",
+      "pass": true,
+      "detail": {
+        "left": 5
+      }
+    },
+    {
+      "check": "right boundary count",
+      "pass": true,
+      "detail": {
+        "left": 5
+      }
+    },
+    {
+      "check": "two-sided count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "non-adjacent count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "certificate exact failures zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "certificate unresolved zero",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "aggregate_sha256": "f3d45000d9ffafec1b1c042c2bfef782358686762e644a6584f908a5ab3f51bf"
+}

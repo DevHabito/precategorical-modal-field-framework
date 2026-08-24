@@ -1,0 +1,123 @@
+{
+  "audit": "A109-H9D_EXECUTION_PARTITION_MANIFEST",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "parent_preregistration_sha256": "d143f195ed509fdc16ba320e4c3a191447c0f6f88e28049d5081930257a379c4",
+  "reason": "Partition each exact diagnostic into a core certificate and independent direct-matrix probe subprocesses to avoid monolithic process-memory/time accumulation; all scientific criteria and probes are frozen above.",
+  "execution_partition": {
+    "255": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "left_endpoint",
+        "left_mid",
+        "witness",
+        "right_mid",
+        "right_endpoint"
+      ]
+    },
+    "256": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "outside_left",
+        "inside",
+        "witness",
+        "right_mid"
+      ]
+    },
+    "257": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "outside_left",
+        "inside",
+        "witness",
+        "right_mid"
+      ]
+    },
+    "258": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "outside_left",
+        "inside",
+        "witness",
+        "right_mid"
+      ]
+    },
+    "261": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "left_endpoint",
+        "left_mid",
+        "witness",
+        "right_mid",
+        "right_endpoint"
+      ]
+    },
+    "262": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "left_mid",
+        "witness",
+        "inside",
+        "outside_right"
+      ]
+    },
+    "263": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "left_endpoint",
+        "left_mid",
+        "witness",
+        "right_mid",
+        "right_endpoint"
+      ]
+    },
+    "264": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "left_endpoint",
+        "left_mid",
+        "witness",
+        "right_mid",
+        "right_endpoint"
+      ]
+    },
+    "265": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "outside_left",
+        "inside",
+        "witness",
+        "right_mid"
+      ]
+    },
+    "266": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "outside_left",
+        "inside",
+        "witness",
+        "right_mid"
+      ]
+    },
+    "267": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "outside_left",
+        "inside",
+        "witness",
+        "right_mid"
+      ]
+    },
+    "268": {
+      "core": "all frozen sufficient certificates",
+      "direct_probe_labels": [
+        "left_endpoint",
+        "left_mid",
+        "witness",
+        "right_mid",
+        "right_endpoint"
+      ]
+    }
+  },
+  "aggregation": "Support per rank only if core has no exact failure/unresolved item and every frozen direct probe passes with zero symbolic/direct mismatch; strict probes positive and predicted outside target present.",
+  "no_changes": "No condition/probe omission, target/endpoints/tolerances/ranks/classifier changes."
+}

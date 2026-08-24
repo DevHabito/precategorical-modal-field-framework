@@ -1,0 +1,79 @@
+{
+  "audit": "A109-H13D2_SHARDED_BASE",
+  "rank": 327,
+  "preregistration_sha256": "4c543c8256d845118b5f33e8494a75573dcc86f135d255d2a0f7e8887795fa2d",
+  "verdict": "BASE_SUPPORT",
+  "M": 264,
+  "j": 48,
+  "segment": [
+    "7824227607417444994717626235370368217/59029581035870565171200000000000000000",
+    "133/1000"
+  ],
+  "witness": "1327/10000",
+  "frozen_prediction": {
+    "canonical_rank": 327,
+    "source_key": "M=264|b=46|phase=b_plus_1_to_b_plus_2|side=right|s=1327/10000|j=48",
+    "maximum": 264,
+    "contact_j": 48,
+    "witness": "1327/10000",
+    "segment_open_bounds": [
+      "7824227607417444994717626235370368217/59029581035870565171200000000000000000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_49"
+      }
+    ]
+  },
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_49",
+  "target_side": "left",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "unique_root_certificate": {
+    "lower": "262694953068639372188382298625975754127403893/1980704062856608439838598758400000000000000000",
+    "upper": "8406238498205457706070812559531837896706556359/63382530011411470074835160268800000000000000000",
+    "exact_rational_root": false,
+    "steps": 30,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "8997796042579003500613764629631783/63382530011411470074835160268800000000000000000"
+  },
+  "failures": [],
+  "seconds": 0.955089807510376
+}

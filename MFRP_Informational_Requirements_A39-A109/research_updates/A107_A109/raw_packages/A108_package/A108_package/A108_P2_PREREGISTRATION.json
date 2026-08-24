@@ -1,0 +1,47 @@
+{
+  "audit": "A108-P2_NON_TARGET_POSITIVITY_HOLDOUT",
+  "status": "FROZEN_BEFORE_NON_TARGET_KKT_OR_FULL_ATLAS_INSPECTION",
+  "parent_preregistration": {
+    "path": "/mnt/data/A108_COMPLETE_PREREGISTRATION.json",
+    "sha256": "9547703c849fa4af246855d8128e3e81a50485a9af6dc48c7f222b20cbd9737a"
+  },
+  "derivation_evidence": {
+    "target_only_scan": "After the parent preregistration was frozen, an exact target-only scan (without constructing non-target KKT conditions or calling the full atlas classifier) found D(s)>0 and dN_{j+1}/ds>0 on every one of the 922 finite A102 gamma-plus source segments. This is treated as derivation evidence for the target variable, not as prospective evidence for P2.",
+    "logical_consequence_if_non_target_positivity_holds": "Because D>0 and N_{j+1} is strictly increasing, N_{j+1}(L)<0<N_{j+1}(witness) implies exactly one target zero in (L,witness), while N_{j+1}(L)>0 implies no target zero on the segment. If every other KKT numerator is strictly positive on the whole source segment, this is sufficient to determine full-versus-partial classification and, in the partial case, the unique selected left boundary basic_p_{j+1}."
+  },
+  "holdout_selection": {
+    "canonical_ranks_inclusive": [42, 49],
+    "batch_size": 8,
+    "replacement_if_failure": "none",
+    "reason": "first eight records of the still-uninspected parent A108 holdout"
+  },
+  "frozen_predictions_from_parent": [
+    {"rank": 42, "M": 61, "j": 12, "class": "full_segment_coverage"},
+    {"rank": 43, "M": 63, "j": 13, "class": "proper_strict_subcomponent", "boundary": "left basic_p_14"},
+    {"rank": 44, "M": 64, "j": 13, "class": "proper_strict_subcomponent", "boundary": "left basic_p_14"},
+    {"rank": 45, "M": 65, "j": 13, "class": "full_segment_coverage"},
+    {"rank": 46, "M": 65, "j": 13, "class": "full_segment_coverage"},
+    {"rank": 47, "M": 66, "j": 13, "class": "full_segment_coverage"},
+    {"rank": 48, "M": 67, "j": 13, "class": "full_segment_coverage"},
+    {"rank": 49, "M": 69, "j": 14, "class": "proper_strict_subcomponent", "boundary": "left basic_p_15"}
+  ],
+  "certificate_test": {
+    "target": "Reconfirm exact positivity of D(s) and exact positivity of derivative N'_{j+1}(s) on the closed source segment.",
+    "non_target": "For every KKT condition except basic_p_{j+1}, certify its exact numerator is strictly positive on the entire closed source segment. First use exact interval enclosure; if that is insufficient, use the existing exact adaptive positivity certifier. A rational nonpositive witness is a mathematical failure; unresolved certification is inconclusive, not failure.",
+    "classification": "Derive classification only from the endpoint sign of N_{j+1} plus the target monotonicity and non-target positivity certificates; do not use root atlas information to generate the certificate-based prediction."
+  },
+  "independent_adjudication": {
+    "full_atlas": "After certificate-based predictions are fixed, run the existing exact A105/A107 gamma-plus atlas on all eight records and compare class and selected boundary.",
+    "direct_matrix": "Run independent exact direct-matrix checkpoint regression on all eight records; any symbolic/direct mismatch blocks support."
+  },
+  "pass": "All eight records obtain a complete sufficient certificate; certificate-based classes match the frozen parent predictions and full exact atlas classes; every partial case has exactly one selected left boundary basic_p_{j+1}; all exact direct-matrix regressions match.",
+  "refute": "Any exact non-target KKT condition is shown nonpositive inside the source segment, any certificate-based class disagrees with the full exact atlas, any partial boundary differs from left basic_p_{j+1}, or any exact symbolic/direct mismatch occurs.",
+  "inconclusive": "Any exact positivity certificate remains unresolved without a mathematical counterexample, or execution cannot be completed.",
+  "no_posthoc_changes": "No rank replacement, batch resizing, condition substitution, support changes, tolerance changes, or rescue classifier after outcomes are inspected.",
+  "nonclaims": [
+    "not an all-922 theorem",
+    "not an all-M theorem",
+    "not beyond the frozen A102 gamma-plus architecture and source segments",
+    "not a physical claim"
+  ]
+}

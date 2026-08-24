@@ -1,0 +1,15 @@
+{
+  "audit": "A109_H10_INDEPENDENT_ARTIFACT_CONSISTENCY_CHECK",
+  "preregistration_sha256": "8d4444e53f594b29dbab84060d623525cf2922c5060e6aa9d9102e2b2ca2c555",
+  "check_count": 140,
+  "failure_count": 0,
+  "failures": [],
+  "rank_count": 16,
+  "rank_range": [
+    271,
+    286
+  ],
+  "direct_comparisons": 27703,
+  "direct_mismatches": 0,
+  "status": "PASS"
+}

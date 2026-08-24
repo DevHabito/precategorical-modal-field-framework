@@ -1,0 +1,3925 @@
+{
+  "audit": "A82_EXACT_ADJACENT_CONTACT_LOCATOR",
+  "contract": {
+    "maximum_range": [
+      10,
+      80
+    ],
+    "compressed_contact_rule": "2 <= k < floor(M/2)",
+    "probe": "131/1000",
+    "local_interval": [
+      "129/1000",
+      "133/1000"
+    ],
+    "target_exponent": 1,
+    "beta_exponent": 3,
+    "gamma_exponent": 4
+  },
+  "analytic_identity": {
+    "compressed_value": "V_(M,k)(s)",
+    "adjacent_difference": "D_(M,k)=V_(M,k+1)-V_(M,k)",
+    "forward_reduced_cost": "rho_forward=-D/z_(M,k+1)",
+    "backward_reduced_cost": "rho_backward=D/z_(M,k)",
+    "ratio_identity": "rho_backward/rho_forward=-z_(M,k+1)/z_(M,k)",
+    "consequence": "Positive adjacent basic masses force opposite cross-reduced-cost signs."
+  },
+  "probe_theorem": {
+    "compressed_contact_count": 1438,
+    "adjacent_comparison_count": 1367,
+    "strict_unimodal_support_count": 71,
+    "unique_compressed_maximizer_count": 71,
+    "classification_counts": {
+      "gamma_plus": 57,
+      "gamma_minus": 11,
+      "compressed": 3,
+      "invalid": 0
+    },
+    "selection_matches_A78_count": 71,
+    "predicted_full_KKT_pass_count": 71,
+    "non_gamma_KKT_condition_count": 6887,
+    "non_gamma_KKT_positive_count": 6872,
+    "non_gamma_KKT_negative_count": 15,
+    "non_gamma_KKT_zero_count": 0,
+    "compressed_maximizer_primal_feasibility_exceptions": [
+      {
+        "maximum": 23,
+        "compressed_maximizer": 6,
+        "failures": [
+          {
+            "name": "basic_p_0",
+            "sign": -1
+          }
+        ]
+      },
+      {
+        "maximum": 28,
+        "compressed_maximizer": 7,
+        "failures": [
+          {
+            "name": "basic_p_0",
+            "sign": -1
+          },
+          {
+            "name": "basic_q_1",
+            "sign": -1
+          },
+          {
+            "name": "basic_q_15",
+            "sign": -1
+          }
+        ]
+      },
+      {
+        "maximum": 34,
+        "compressed_maximizer": 8,
+        "failures": [
+          {
+            "name": "basic_p_0",
+            "sign": -1
+          }
+        ]
+      },
+      {
+        "maximum": 45,
+        "compressed_maximizer": 10,
+        "failures": [
+          {
+            "name": "basic_p_0",
+            "sign": -1
+          },
+          {
+            "name": "basic_q_1",
+            "sign": -1
+          }
+        ]
+      },
+      {
+        "maximum": 51,
+        "compressed_maximizer": 11,
+        "failures": [
+          {
+            "name": "basic_p_0",
+            "sign": -1
+          }
+        ]
+      },
+      {
+        "maximum": 56,
+        "compressed_maximizer": 12,
+        "failures": [
+          {
+            "name": "basic_p_0",
+            "sign": -1
+          },
+          {
+            "name": "basic_q_1",
+            "sign": -1
+          },
+          {
+            "name": "basic_q_29",
+            "sign": -1
+          }
+        ]
+      },
+      {
+        "maximum": 62,
+        "compressed_maximizer": 13,
+        "failures": [
+          {
+            "name": "basic_p_0",
+            "sign": -1
+          },
+          {
+            "name": "basic_q_1",
+            "sign": -1
+          },
+          {
+            "name": "basic_q_32",
+            "sign": -1
+          }
+        ]
+      },
+      {
+        "maximum": 68,
+        "compressed_maximizer": 14,
+        "failures": [
+          {
+            "name": "basic_p_0",
+            "sign": -1
+          }
+        ]
+      }
+    ],
+    "interpretation": "The algebraic compressed objective is strictly unimodal, but its maximizer is not always a feasible compressed LP basis. Eight gamma-minus supports have 15 negative basic variables, so the exact full KKT check of the predicted adjacent lift remains necessary.",
+    "locator": [
+      {
+        "maximum": 10,
+        "compressed_contact_count": 3,
+        "adjacent_difference_signs": [
+          1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 3,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 3,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 3,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 27,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 11,
+        "compressed_contact_count": 3,
+        "adjacent_difference_signs": [
+          1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 3,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 3,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 3,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 29,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 12,
+        "compressed_contact_count": 4,
+        "adjacent_difference_signs": [
+          1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 3,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 3,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 3,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 31,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 13,
+        "compressed_contact_count": 4,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 4,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 3,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 3,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 33,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 14,
+        "compressed_contact_count": 5,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 4,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 35,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 15,
+        "compressed_contact_count": 5,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 4,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 37,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 16,
+        "compressed_contact_count": 6,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 4,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 39,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 17,
+        "compressed_contact_count": 6,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 4,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 41,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 18,
+        "compressed_contact_count": 7,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 5,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 4,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 43,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 19,
+        "compressed_contact_count": 7,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 5,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 45,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 20,
+        "compressed_contact_count": 8,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 5,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 47,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 21,
+        "compressed_contact_count": 8,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 5,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 49,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 22,
+        "compressed_contact_count": 9,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 5,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 51,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 23,
+        "compressed_contact_count": 9,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 6,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 5,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 53,
+        "all_non_gamma_conditions_positive": false,
+        "non_gamma_failure_names": [
+          "basic_p_0"
+        ]
+      },
+      {
+        "maximum": 24,
+        "compressed_contact_count": 10,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 6,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 55,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 25,
+        "compressed_contact_count": 10,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 6,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 57,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 26,
+        "compressed_contact_count": 11,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 6,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 59,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 27,
+        "compressed_contact_count": 11,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 6,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 61,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 28,
+        "compressed_contact_count": 12,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 7,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 63,
+        "all_non_gamma_conditions_positive": false,
+        "non_gamma_failure_names": [
+          "basic_p_0",
+          "basic_q_1",
+          "basic_q_15"
+        ]
+      },
+      {
+        "maximum": 29,
+        "compressed_contact_count": 12,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 7,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 6,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 65,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 30,
+        "compressed_contact_count": 13,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 7,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 67,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 31,
+        "compressed_contact_count": 13,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 7,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 69,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 32,
+        "compressed_contact_count": 14,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 7,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 71,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 33,
+        "compressed_contact_count": 14,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 7,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 73,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 34,
+        "compressed_contact_count": 15,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 8,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 7,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 75,
+        "all_non_gamma_conditions_positive": false,
+        "non_gamma_failure_names": [
+          "basic_p_0"
+        ]
+      },
+      {
+        "maximum": 35,
+        "compressed_contact_count": 15,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 8,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 77,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 36,
+        "compressed_contact_count": 16,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 8,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 79,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 37,
+        "compressed_contact_count": 16,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 8,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 81,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 38,
+        "compressed_contact_count": 17,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 8,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 83,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 39,
+        "compressed_contact_count": 17,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 8,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 8,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 85,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 40,
+        "compressed_contact_count": 18,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 9,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": 1
+        },
+        "classification": "compressed",
+        "predicted_selection": {
+          "family": "two_band_compressed",
+          "contact": 9,
+          "gamma_sign": null
+        },
+        "actual_A78_selection": {
+          "family": "two_band_compressed",
+          "contact": 9,
+          "gamma_sign": null
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 87,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 41,
+        "compressed_contact_count": 18,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 9,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 89,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 42,
+        "compressed_contact_count": 19,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 9,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 91,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 43,
+        "compressed_contact_count": 19,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 9,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 93,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 44,
+        "compressed_contact_count": 20,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 9,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 95,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 45,
+        "compressed_contact_count": 20,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 10,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 9,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 97,
+        "all_non_gamma_conditions_positive": false,
+        "non_gamma_failure_names": [
+          "basic_p_0",
+          "basic_q_1"
+        ]
+      },
+      {
+        "maximum": 46,
+        "compressed_contact_count": 21,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 10,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 99,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 47,
+        "compressed_contact_count": 21,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 10,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 101,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 48,
+        "compressed_contact_count": 22,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 10,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 103,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 49,
+        "compressed_contact_count": 22,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 10,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 105,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 50,
+        "compressed_contact_count": 23,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 10,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 107,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 51,
+        "compressed_contact_count": 23,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 11,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 10,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 109,
+        "all_non_gamma_conditions_positive": false,
+        "non_gamma_failure_names": [
+          "basic_p_0"
+        ]
+      },
+      {
+        "maximum": 52,
+        "compressed_contact_count": 24,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 11,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 111,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 53,
+        "compressed_contact_count": 24,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 11,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 113,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 54,
+        "compressed_contact_count": 25,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 11,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 115,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 55,
+        "compressed_contact_count": 25,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 11,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 117,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 56,
+        "compressed_contact_count": 26,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 12,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 11,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 119,
+        "all_non_gamma_conditions_positive": false,
+        "non_gamma_failure_names": [
+          "basic_p_0",
+          "basic_q_1",
+          "basic_q_29"
+        ]
+      },
+      {
+        "maximum": 57,
+        "compressed_contact_count": 26,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 12,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": 1
+        },
+        "classification": "compressed",
+        "predicted_selection": {
+          "family": "two_band_compressed",
+          "contact": 12,
+          "gamma_sign": null
+        },
+        "actual_A78_selection": {
+          "family": "two_band_compressed",
+          "contact": 12,
+          "gamma_sign": null
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 121,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 58,
+        "compressed_contact_count": 27,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 12,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 123,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 59,
+        "compressed_contact_count": 27,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 12,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 125,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 60,
+        "compressed_contact_count": 28,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 12,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 127,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 61,
+        "compressed_contact_count": 28,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 12,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 129,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 62,
+        "compressed_contact_count": 29,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 13,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 12,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 131,
+        "all_non_gamma_conditions_positive": false,
+        "non_gamma_failure_names": [
+          "basic_p_0",
+          "basic_q_1",
+          "basic_q_32"
+        ]
+      },
+      {
+        "maximum": 63,
+        "compressed_contact_count": 29,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 13,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 133,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 64,
+        "compressed_contact_count": 30,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 13,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 135,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 65,
+        "compressed_contact_count": 30,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 13,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 137,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 66,
+        "compressed_contact_count": 31,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 13,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 139,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 67,
+        "compressed_contact_count": 31,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 13,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 141,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 68,
+        "compressed_contact_count": 32,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 14,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": -1
+        },
+        "classification": "gamma_minus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": -1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 13,
+          "gamma_sign": -1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 143,
+        "all_non_gamma_conditions_positive": false,
+        "non_gamma_failure_names": [
+          "basic_p_0"
+        ]
+      },
+      {
+        "maximum": 69,
+        "compressed_contact_count": 32,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 14,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 145,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 70,
+        "compressed_contact_count": 33,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 14,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 147,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 71,
+        "compressed_contact_count": 33,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 14,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 149,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 72,
+        "compressed_contact_count": 34,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 14,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 151,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 73,
+        "compressed_contact_count": 34,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 14,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 14,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 153,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 74,
+        "compressed_contact_count": 35,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 15,
+        "gamma_slack_signs": {
+          "gamma_plus": 1,
+          "gamma_minus": 1
+        },
+        "classification": "compressed",
+        "predicted_selection": {
+          "family": "two_band_compressed",
+          "contact": 15,
+          "gamma_sign": null
+        },
+        "actual_A78_selection": {
+          "family": "two_band_compressed",
+          "contact": 15,
+          "gamma_sign": null
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 155,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 75,
+        "compressed_contact_count": 35,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 15,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 157,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 76,
+        "compressed_contact_count": 36,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 15,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 159,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 77,
+        "compressed_contact_count": 36,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 15,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 161,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 78,
+        "compressed_contact_count": 37,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 15,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 163,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 79,
+        "compressed_contact_count": 37,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 15,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 15,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 165,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      },
+      {
+        "maximum": 80,
+        "compressed_contact_count": 38,
+        "adjacent_difference_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sign_transition_count": 1,
+        "strict_unimodal": true,
+        "compressed_maximizer": 16,
+        "gamma_slack_signs": {
+          "gamma_plus": -1,
+          "gamma_minus": 1
+        },
+        "classification": "gamma_plus",
+        "predicted_selection": {
+          "family": "three_band_adjacent",
+          "contact": 16,
+          "gamma_sign": 1
+        },
+        "actual_A78_selection": {
+          "family": "three_band_adjacent",
+          "contact": 16,
+          "gamma_sign": 1
+        },
+        "selection_matches_A78": true,
+        "predicted_branch_full_KKT_pass": true,
+        "non_gamma_condition_count": 167,
+        "all_non_gamma_conditions_positive": true,
+        "non_gamma_failure_names": []
+      }
+    ]
+  },
+  "local_interval_extension": {
+    "status": "certified endpoint-crossing roots; not a complete same-sign root atlas",
+    "adjacent_polynomial_count": 1367,
+    "endpoint_crossing_candidate_count": 2,
+    "candidate_pairs": [
+      [
+        28,
+        6,
+        7
+      ],
+      [
+        79,
+        15,
+        16
+      ]
+    ],
+    "certified_transitions": [
+      {
+        "maximum": 28,
+        "contact_pair": [
+          6,
+          7
+        ],
+        "objective_difference": "V_(k+1)-V_k",
+        "polynomial": {
+          "degree": 56,
+          "term_count": 20,
+          "coefficient_sha256": "28a22a3b7d3019473525355db07efc0878c871546a60e110b2c85a86b709920b",
+          "nonzero_coefficients_by_exponent": {
+            "56": "16532907740341030357949840331468724138094933028500523712512000000",
+            "43": "-1719335117778064477999201974155042780187303148549902933823460474880",
+            "42": "1763430856538072209276799012860872877454686923107865219346087280640",
+            "35": "77031565807789265449072720619695827617477663791684026315571200000",
+            "34": "-38468745242379457140858137743487567509810019739001571141222400000",
+            "30": "-9101159584111846781702267034810458711683356731112545507911680000",
+            "29": "5617050975164673931057279556757920239914773072584805404636093194240",
+            "28": "-6054284602974056718891747547728601530077055921603539433503284838400",
+            "22": "-8011283887322561428718171665798825561324442429015158991288942604288",
+            "21": "12474223388650729235914715351283219401788438309574072774408710666240",
+            "20": "-4231562537759300100695674362042879316806811474579293119425368854528",
+            "16": "-1400178397555668735646502620740070571028208727863468539678720000",
+            "15": "442418751603391325902720880973066258995193182168168616596551108439",
+            "14": "-55270476185974723831763846781317292031769151218997841531322855242",
+            "8": "-616252606717120109901397820446063504717264802231935307022226354176",
+            "7": "384781557795070254343944779857151124439328550912896286419176486912",
+            "6": "-38468740233428253706032989194250882159866333565821917625392824320",
+            "2": "-53853015290602643678711639259233483501084951071671866910720000",
+            "1": "12640521645110831049609773527624884437093625065144747712546803",
+            "0": "-738611868507041610999464507878275252655733769923396611604480"
+          }
+        },
+        "endpoint_signs": {
+          "local_lower": 1,
+          "s0": 1,
+          "local_upper": -1
+        },
+        "root_bracket": {
+          "lower": "41631085134775688670392357181393/316912650057057350374175801344000",
+          "upper": "20815542567387844335196178590697/158456325028528675187087900672000",
+          "width": "1/316912650057057350374175801344000",
+          "midpoint_decimal": "0.131364542019008629"
+        },
+        "simple_root_certificate": {
+          "derivative_fixed_sign_on_bracket": {
+            "pass": true,
+            "sign": -1,
+            "piece_count": 1,
+            "maximum_depth_used": 0
+          },
+          "pass": true
+        },
+        "side_witnesses": [
+          {
+            "side": "below",
+            "witness": "131364542019/1000000000000",
+            "contact_pair": [
+              6,
+              7
+            ],
+            "gamma_sign": -1,
+            "status": "pass",
+            "first_failure": null
+          },
+          {
+            "side": "below",
+            "witness": "131364542019/1000000000000",
+            "contact_pair": [
+              6,
+              7
+            ],
+            "gamma_sign": 1,
+            "status": "active_dual_infeasible",
+            "first_failure": {
+              "name": "active_dual_gamma_+1",
+              "value": "-4385905233475607898516847845975814193828366220151803481839311593931679098394728016299234819482472969736970220574878601915711579645009981730773676322242904424786750990559071851288091724652359381054221337591009726048737701506023126559818855033444940258841452981271157060877764370482882623206728727048273946545624375908954769961367691206016096010240/51543338930182306602149995444487148186999619619916222898844382901221869012440369602284261097574380027494733325692556098395984053076377105402211300220550799920213776974305913285794962640682567946363852881615583555489927647218386492827505971307375219164622358415343722575190761460257172944241497405967782782814807407263572485533481590484855300322442583522919"
+            }
+          },
+          {
+            "side": "above",
+            "witness": "6568227101/50000000000",
+            "contact_pair": [
+              6,
+              7
+            ],
+            "gamma_sign": -1,
+            "status": "active_dual_infeasible",
+            "first_failure": {
+              "name": "active_dual_gamma_-1",
+              "value": "-340541773329973915755532112705416755676836523449622999681550705598094746206354730984781564523259862218839289168273626313082814942788377911215164384414712640815746439762791069308629705537684781921482989245557268732186233292390624616264672796640627884371302804579939403361263468692614150736192256479414853115576320/34065495010906609931248833638145289808331974487665128891112468981277793852290845050560563534923079702881848367051366599042631159842851404952935826735110868050331669211289685012353925353069642648203910523473555819184318606581437819175821447635738847551020108260428438587872696831671335840231594675183440971936261033789717"
+            }
+          },
+          {
+            "side": "above",
+            "witness": "6568227101/50000000000",
+            "contact_pair": [
+              6,
+              7
+            ],
+            "gamma_sign": 1,
+            "status": "pass",
+            "first_failure": null
+          }
+        ],
+        "passing_orientation_by_side": {
+          "below": [
+            -1
+          ],
+          "above": [
+            1
+          ]
+        }
+      },
+      {
+        "maximum": 79,
+        "contact_pair": [
+          15,
+          16
+        ],
+        "objective_difference": "V_(k+1)-V_k",
+        "polynomial": {
+          "degree": 158,
+          "term_count": 20,
+          "coefficient_sha256": "b16588f9cd3694a1869b38e7683d9579f2eda0d190a793abd5edd5662148b771",
+          "nonzero_coefficients_by_exponent": {
+            "158": "238177788940136928021118698265996582633336208371532308447191160074536806103744622610302497204481636715278612978019261102309259481537157933534466223980975814774452387840000",
+            "119": "-72972381691121569682329011523222920461832308055024138754567214491064590570300624299159976872553033346601605235204318823928900047040543992396027462694336728453069837516668928",
+            "118": "73745136295865318217536885100900153542280589158253096026256358014958581395945432361426212850808453598234530203702935944267978933658627105219371389115238906496805361191747584",
+            "95": "836268665762550454300206121746211535804275384819132805852535142394747172318809214513936785358697344711137595912959431804567704277520260220910562393529677505171701104640000",
+            "94": "-418134325807183656963487960993844179609543827438663592535800747041386236265709536145205657439585006045640749356758232659267165743349396803406429880932338864432076554240000",
+            "80": "98182177324257731604629470907911720841528131313213464933007962240351448180863589997789682923948210892069067179336179550338283950752747439223236002205686028262825070736441344",
+            "79": "-1730758555282200261548067184226182814686498026185186322032827332654023782418792884477549261234987344987050969734881884201857477560291722651698577107227447601878440123301888",
+            "78": "-102056536064937408931439992308205857896623879325852456533376202770306441373440370385825381842171884800022428607357481161740056133976900047952585902072523885876625801216000000",
+            "56": "-255061943057578628455655391950675958359413119601841267440433675975059102537233176572720482327365250142705563533155076979576874222009235214112764701935529136274151854454079488",
+            "55": "387610524423345335973257632050939906327412702849985845562047948729484876788833626313252570390426635570420334138178323097123490239896768089068536254750222035745164933906563072",
+            "54": "-130039775326034496998133180576350895903767994772025471946170947995706386477202001798862144121505312220765771763684311169632055355146341103691608603138539362002805972191412224",
+            "41": "2625248514490600043264533861950226781995455297921297508617060215968128780545944957050171493972483771207173427544013453452877217094744895537008065607808560682491707392000000",
+            "40": "2297092452383329293502799322194525176282823438358470778356255135638590083820666312021085551066058636212732277754105299522622548488824966508528901492768086774240718157000738",
+            "39": "-328156064584918708637022776042234787234389089552066118261745364914146751355886268406543943773210604644018327973363610296326234294873568943845515541342198783821807307793389",
+            "17": "-6690149326100423105298820679708677547989706426763740385120556337701693562234588614689645935315961915736695419401108356520323855729781972470838266830052617336025793509195776",
+            "16": "4181343272220027011594384492819730522888097839142315408811233497350819926702464010820855625024287338716120386620408907753394819356612723821336699116844049996616110878752768",
+            "15": "-418134325807182440032435317701327699502796951047024330261463982616601499206482806860244573216884136597456249184821284222636518235408921710305327053009887885104872928837632",
+            "2": "-14325897695592198804384966796246412099554643933958452637271884240111324604899272098515885107426078857620069883395329681206264480270282464778087855066762444800000",
+            "1": "3525450827975189875470757076620906060491223664562838681100491969525501743155455814225183936441052391038502523677802529651804025373283790265924612925836384072651",
+            "0": "-216839202003270668877860461265308738721939966154823276551062616330450732456344397736436768314368205774967363822182195189328095408084750643703089880073452388352"
+          }
+        },
+        "endpoint_signs": {
+          "local_lower": -1,
+          "s0": -1,
+          "local_upper": 1
+        },
+        "root_bracket": {
+          "lower": "259746162508056634742313376037/1980704062856608439838598758400",
+          "upper": "41559386001289061558770140165921/316912650057057350374175801344000",
+          "width": "1/316912650057057350374175801344000",
+          "midpoint_decimal": "0.131138299445625328"
+        },
+        "simple_root_certificate": {
+          "derivative_fixed_sign_on_bracket": {
+            "pass": true,
+            "sign": 1,
+            "piece_count": 1,
+            "maximum_depth_used": 0
+          },
+          "pass": true
+        },
+        "side_witnesses": [
+          {
+            "side": "below",
+            "witness": "26227659889/200000000000",
+            "contact_pair": [
+              15,
+              16
+            ],
+            "gamma_sign": -1,
+            "status": "active_dual_infeasible",
+            "first_failure": {
+              "name": "active_dual_gamma_-1",
+              "value": "-33041678644781007792145514615958999193241017173748777572977311418587204390364132372736828362929569583091924688898055749810164872721660685845011797789161655863450411384974572411668901440274900559982643567943430294823785314934593000634316038785887625110036987088699056621411646225580601344187285806735442447856699827601505073525453094698440677302330738139762036210831706863144736430982411431373084690057146600638372405412636868818855512605336351703725828512864242635546255437256187524269967681868471729604586107888927535148294618626126148478217563052673590495789299611189433695621178835645929040403059458261786154638467201480856023101713402495959160390435247128815879777188298162465103305138092836721662622925822872804468693241357590311322626419987745951774473363787333969047246608782286140830448630606753740700161940209967810970290412599649626043864720530967867089659780796817761111071543604940980356105774293750157952261655800087090422611968/42659204113233251455271802219688698177940324317545903721538281975851541507445338913311250205394157609396819281919674803594720901878976305885520390377206655399748269996845527469568939914415060010417102544726683235391528248857179944587359964930758544163147267956065220085196108910055950008140403954083089846703486332527340173084683963825765567773402236308638307151653534846890964979688326084701038227646501895143940011321874984444010577693519387307408375570906692500239778212971354021412581787933448654416240310672666860725982446069001456554302992640713810200283878661397088787058278945433404179700656947034915794411343315949493282547204007200715687742367921108064640441759022558352210492654088558062836064284958950665916451190805332447803984507051425843667767359609473585800410657045049191564382845471020160486590442114496668256572829366835190458881326517516736646514096143629592953156676219376533573521406239634349420363262876614594535576750999"
+            }
+          },
+          {
+            "side": "below",
+            "witness": "26227659889/200000000000",
+            "contact_pair": [
+              15,
+              16
+            ],
+            "gamma_sign": 1,
+            "status": "pass",
+            "first_failure": null
+          },
+          {
+            "side": "above",
+            "witness": "65569149723/500000000000",
+            "contact_pair": [
+              15,
+              16
+            ],
+            "gamma_sign": -1,
+            "status": "pass",
+            "first_failure": null
+          },
+          {
+            "side": "above",
+            "witness": "65569149723/500000000000",
+            "contact_pair": [
+              15,
+              16
+            ],
+            "gamma_sign": 1,
+            "status": "active_dual_infeasible",
+            "first_failure": {
+              "name": "active_dual_gamma_+1",
+              "value": "-232201831581430662325956191925228708846055567430125356915817844228927205304021911644983848306363830326094806722714656615632606979881836571270308579994284823189929736380463865790811395507484643405086112234754682337307509894054836817001825980933067014205048972391352424621448785269469699422419783793705518305449169673197076803856549998771713318653825979016549879882741266312556008903014866232739171738635663211863983307125858986718952010266896699134232270364969222715929578761313961654103550725479234696644599907199752165431569858648681834117787306642655334270226750725085342231690472218555495767453033537260917384409284354639887981376260277414085624839158097154769994340191546494411583754011938370262106778060856954619428575085098374730762253932255462383185812667882809665023865924930205040575881630005498211572638393096377387327379376571097626272075397108888139443146420652547651809409615627224107304344851023982641408084586914504807587711400338215146891708322883624239104/509654856961332578753498779703759908844143303482376065216910483347636083918030880019437815445097745824964402361166663124761204140078523535431204613624055331466911005159901694762631731235366317309850142368876377223048853248069517992988312693513138057293492800856034916886543230040067303629459015915216021101742643542664131134104450925496953033993204226453449415381252465050572318109748626817481349706538002316996751378877429999612525640869354117074391093341102019309425237214054061779956230200651978813512324648295269096671169269026123274972501564730960238669561439159566123287216670360164640861833057894924760797138157753283193942891135858642223091363332755097335391741260292596779896740449794802144392090804983839728563257598932951307640284299235019558827555915753517822196869000094430233675333155511452966541970440502351059436733488527663403044723441395670787042217330870123980479703224436459366298372807936252427456508614469458970077191611954802439807282359067170627979097"
+            }
+          }
+        ],
+        "passing_orientation_by_side": {
+          "below": [
+            1
+          ],
+          "above": [
+            -1
+          ]
+        }
+      }
+    ],
+    "nonclaim": "Same endpoint signs do not by themselves exclude an even number of interior roots. A82 therefore does not promote the endpoint scan to a complete interval atlas."
+  },
+  "direct_pivot_witnesses": {
+    "declared": [
+      [
+        10,
+        2
+      ],
+      [
+        13,
+        3
+      ],
+      [
+        28,
+        6
+      ],
+      [
+        40,
+        8
+      ],
+      [
+        57,
+        11
+      ],
+      [
+        64,
+        12
+      ],
+      [
+        79,
+        15
+      ],
+      [
+        80,
+        15
+      ]
+    ],
+    "pass_count": 8,
+    "failure_count": 0
+  },
+  "gates": {
+    "compressed_contact_count_exact": true,
+    "adjacent_comparison_count_exact": true,
+    "all_probe_determinants_positive": true,
+    "all_probe_interior_masses_positive": true,
+    "all_probe_scaled_masses_positive": true,
+    "all_probe_adjacent_differences_nonzero": true,
+    "all_probe_pivot_sign_identities_hold": true,
+    "direct_dual_pivot_witnesses_match": true,
+    "all_supports_have_strict_unimodal_compressed_objective": true,
+    "locator_non_gamma_condition_census_exact": true,
+    "locator_primal_feasibility_exceptions_exact": true,
+    "gamma_slack_trichotomy_exact": true,
+    "locator_reproduces_all_A78_selections": true,
+    "all_predicted_full_branches_pass_KKT": true,
+    "local_endpoint_crossing_candidates_exact": true,
+    "both_local_candidate_roots_are_simple_on_isolating_brackets": true,
+    "local_orientation_switches_certified_by_exact_side_KKT": true,
+    "scope_and_nonclaim_boundary_preserved": true
+  },
+  "gate_count": 18,
+  "pass_count": 18,
+  "verdict": "PASS_EXACT_ADJACENT_CONTACT_LOCATOR_AND_LOCAL_ORIENTATION_SWITCHES",
+  "claim_boundary": [
+    "The complete contact-locator theorem is exact only at s=131/1000.",
+    "The support range is finite: 10<=M<=80.",
+    "The two local roots are certified inside narrow brackets, but A82 is not a complete root atlas for all adjacent-difference polynomials on I.",
+    "No all-M recurrence or closed formula for the maximizing contact is claimed.",
+    "The algebraic compressed maximizer is not asserted to be primal feasible; eight exact finite exceptions are recorded.",
+    "No physical interpretation is inferred from contacts, gamma orientation, or objective switches."
+  ]
+}

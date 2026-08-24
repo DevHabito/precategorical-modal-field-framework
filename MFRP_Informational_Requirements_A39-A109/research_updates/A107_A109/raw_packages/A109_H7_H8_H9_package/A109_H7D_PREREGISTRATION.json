@@ -1,0 +1,76 @@
+{
+  "audit": "A109-H7D_TIMEOUT_EXACT_SUFFICIENT_CERTIFICATE",
+  "status": "FROZEN_BEFORE_DIAGNOSTIC_EXECUTION",
+  "parent_preregistration_sha256": "7271e73abc02f7e0c37d2a8f4ff5c3d71f8a0fa86dbf5cba8c3515efc9fa440a",
+  "reason": "The preregistered full-atlas shard 227..228 timed out twice without producing a result file. This is a separate exact sufficient-certificate protocol and cannot retroactively convert that full-atlas shard into a PASS result.",
+  "ranks": [
+    227,
+    228
+  ],
+  "frozen_predictions": [
+    {
+      "canonical_rank": 227,
+      "source_key": "M=206|b=36|phase=b_plus_1_to_b_plus_2|side=left|s=131/1000|j=37",
+      "maximum": 206,
+      "contact_j": 37,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "8128150650170597/62500000000000000",
+        "624295989542709321914042392771363442809/4722366482869645213696000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 228,
+      "source_key": "M=206|b=36|phase=b_plus_1_to_b_plus_2|side=right|s=53/400|j=38",
+      "maximum": 206,
+      "contact_j": 38,
+      "witness": "53/400",
+      "segment_open_bounds": [
+        "312147994771354660957022671180480356629/2361183241434822606848000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_39"
+        }
+      ]
+    }
+  ],
+  "method": {
+    "common": "Build the exact A109 rank-one gamma-plus denominator and all KKT numerators; require denominator positivity on the complete source segment; compare symbolic numerators against independent direct rational matrix evaluations at preregistered rational probes.",
+    "full_prediction": "Certify every KKT numerator strictly positive on the complete closed source interval using exact interval/monotonicity/concavity/adaptive certificates. Any exact nonpositive condition refutes the predicted full class; unresolved certification is inconclusive.",
+    "left_partial_prediction": "For target basic_p_{j+1}, certify strictly positive derivative, target negative at L and positive at witness, isolate a unique exact sign-change bracket in (L,witness), certify every non-target KKT numerator strictly positive on the complete source interval, and verify direct rational inside/witness/outside-left probes.",
+    "right_partial_prediction": "Symmetric rule for basic_p_j with strictly negative derivative and a unique root in (witness,R).",
+    "no_atlas": "Do not call the full root atlas or use any non-target root ordering result."
+  },
+  "adjudication": {
+    "support": "All sufficient certificates required by the frozen predicted class pass, exact direct symbolic-vs-matrix regression has zero mismatches, and the predicted outside target sign is witnessed when partial.",
+    "refute": "An exact non-target nonpositive condition, target sign/monotonicity contradiction, or exact direct contradiction.",
+    "inconclusive": "Adaptive certificate unresolved, execution timeout, or implementation disagreement without an exact contradiction."
+  },
+  "no_posthoc_changes": "No rank replacement, prediction change, target change, tolerance/support change, or rescue classifier after diagnostic outcomes.",
+  "scope": [
+    "mathematical resolution attempt for ranks 227 and 228 only",
+    "does not complete the original H7 full-atlas protocol",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ]
+}

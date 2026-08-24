@@ -1,0 +1,165 @@
+{
+  "audit": "A46_PROVISIONAL_NOISE_SEPARATION_BOUNDARY_LAYER",
+  "contract": {
+    "support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mean": "5/2",
+    "anchors": [
+      "2*log(2)",
+      "3*log(2)"
+    ],
+    "third_parameter": "gamma*log(2)",
+    "r_definition": "r=2^(-gamma)",
+    "target": "direct future-Q minimax ratio under a=1/2"
+  },
+  "redundancy_boundary": {
+    "T0": "-1323*(r - 1)**2*(8*r - 1)*(8*r + 19)/(32*(174080*r**4 + 43520*r**3 + 10880*r**2 - 800228*r + 535439))",
+    "r_expansion": "1/8 - (63232/735)*epsilon + O(epsilon^2)",
+    "gamma_expansion": "3 + 505856/(735*log(2))*epsilon + O(epsilon^2)"
+  },
+  "regular_stationary_branch": {
+    "E5": "1323*(r - 1)**3*(8*r - 1)**2/(16*(348160*r**5 + 522240*r**4 - 2258368*r**3 + 394480*r**2 + 1826712*r - 1035937))",
+    "r_expansion": "1/8 - 8*sqrt(174)/7*sqrt(epsilon) + 19456/147*epsilon + O(epsilon^(3/2))",
+    "gamma_expansion": "3 + 64*sqrt(174)/(7*log(2))*sqrt(epsilon) + 913408/(147*log(2))*epsilon + O(epsilon^(3/2))",
+    "ratio_expansion": "7391973997568*h**2/383564377413 + 226816*sqrt(174)*h/5229021 + 502/499",
+    "future_risk_sqrt_coefficient": "56704*sqrt(174)/(2630229*log(2))"
+  },
+  "branch_annihilation": {
+    "J": "123904*r**5 - 359168*r**4 + 338000*r**3 - 96856*r**2 - 8379*r + 441",
+    "r_a_object": "CRootOf(123904*x**5 - 359168*x**4 + 338000*x**3 - 96856*x**2 - 8379*x + 441, 1)",
+    "r_a_decimal": "0.03803800406316863706805174073793686659536",
+    "gamma_a_decimal": "4.716414642937835252555098474904018396103",
+    "epsilon_a_object": "-1323*(-1 + CRootOf(123904*x**5 - 359168*x**4 + 338000*x**3 - 96856*x**2 - 8379*x + 441, 1))**2*(-1 + 8*CRootOf(123904*x**5 - 359168*x**4 + 338000*x**3 - 96856*x**2 - 8379*x + 441, 1))*CRootOf(123904*x**5 - 359168*x**4 + 338000*x**3 - 96856*x**2 - 8379*x + 441, 1)/(8*(-2290672*CRootOf(123904*x**5 - 359168*x**4 + 338000*x**3 - 96856*x**2 - 8379*x + 441, 1)**2 - 442304*CRootOf(123904*x**5 - 359168*x**4 + 338000*x**3 - 96856*x**2 - 8379*x + 441, 1)**3 + 1090048*CRootOf(123904*x**5 - 359168*x**4 + 338000*x**3 - 96856*x**2 - 8379*x + 441, 1)**4 + 53361 + 1571780*CRootOf(123904*x**5 - 359168*x**4 + 338000*x**3 - 96856*x**2 - 8379*x + 441, 1)))",
+    "epsilon_a_decimal": "0.00003687849908801988817913861099263387049041",
+    "T4": "-1323*r*(r - 1)**2*(8*r - 1)/(8*(1090048*r**4 - 442304*r**3 - 2290672*r**2 + 1571780*r + 53361))"
+  },
+  "boundary_active_branch": {
+    "E4": "1323*(r - 1)**3*(8*r - 1)**2/(4*(1516544*r**5 + 1729792*r**4 - 8695472*r**3 + 1481064*r**2 + 7298469*r - 4143307))",
+    "epsilon_b_exact": "189/2367604",
+    "epsilon_b_decimal": "0.00007982753872691548079830917670353657114957",
+    "near_boundary_r_coefficient": "350346793801/482114457",
+    "infinity_ratio": "(10998100*epsilon + 52087)/(2*(4128540*epsilon + 25823))"
+  },
+  "representative_stationary_values": [
+    {
+      "epsilon": "1/100000000",
+      "branch": "regular",
+      "r_decimal": "0.123493789879982443764871937463",
+      "gamma_decimal": "3.01748959991641206248025842795",
+      "future_risk_decimal": "0.00436493822351836154098192452960"
+    },
+    {
+      "epsilon": "1/10000000",
+      "branch": "regular",
+      "r_decimal": "0.120245951650236274121618420964",
+      "gamma_decimal": "3.05593977164002140937145960229",
+      "future_risk_decimal": "0.00445488127800913603578972428532"
+    },
+    {
+      "epsilon": "1/1000000",
+      "branch": "regular",
+      "r_decimal": "0.110055527840296329154542022964",
+      "gamma_decimal": "3.18369648452844018462839012424",
+      "future_risk_decimal": "0.00474768768757007282239755180538"
+    },
+    {
+      "epsilon": "1/200000",
+      "branch": "regular",
+      "r_decimal": "0.0919361060634580336782337102727",
+      "gamma_decimal": "3.44322462740406922142623325550",
+      "future_risk_decimal": "0.00530903092035063843251845520964"
+    },
+    {
+      "epsilon": "1/100000",
+      "branch": "regular",
+      "r_decimal": "0.0786064811314057666679818292706",
+      "gamma_decimal": "3.66920792168447793658836429309",
+      "future_risk_decimal": "0.00575637119275873562001688276166"
+    },
+    {
+      "epsilon": "1/50000",
+      "branch": "regular",
+      "r_decimal": "0.0601060357161018994494965526322",
+      "gamma_decimal": "4.05634631929633633739868798825",
+      "future_risk_decimal": "0.00642752298150504008513706851595"
+    },
+    {
+      "epsilon": "1/20000",
+      "branch": "boundary-active",
+      "r_decimal": "0.0245675079981167703698222249243",
+      "gamma_decimal": "5.34710466423141977016738328582",
+      "future_risk_decimal": "0.00788975961047973888342731773117"
+    },
+    {
+      "epsilon": "7/100000",
+      "branch": "boundary-active",
+      "r_decimal": "0.00740993334464867460780745636863",
+      "gamma_decimal": "7.07632371969876719837916451961",
+      "future_risk_decimal": "0.00868206530533002575982168167376"
+    },
+    {
+      "epsilon": "1/10000",
+      "branch": "compactified",
+      "r_decimal": "0",
+      "gamma_decimal": "infinity",
+      "future_risk_decimal": "0.00976437945133005269789777808358"
+    }
+  ],
+  "transition_factor_gates": {
+    "E5_minus_T4_contains_J": true,
+    "E4_minus_T4_contains_J": true,
+    "E5_minus_E4_contains_J": true
+  },
+  "H_bernstein_coefficients": [
+    "147571",
+    "1032409/8",
+    "112896",
+    "98784",
+    "86436"
+  ],
+  "formal_status": {
+    "established": [
+      "linear redundancy-plateau scaling near zero noise",
+      "unique regular stationary local-minimum branch and sqrt-noise separation",
+      "algebraic annihilation threshold epsilon_a",
+      "unique boundary-active stationary branch between epsilon_a and epsilon_b",
+      "exact compactified local threshold epsilon_b"
+    ],
+    "not_established": [
+      "complete globally optimal two-dimensional phase partition",
+      "global optimality of every small-noise local stationary branch",
+      "empirical noise or cost model",
+      "physical interpretation"
+    ]
+  },
+  "gates": {
+    "duplicate_primal_dual_identity": true,
+    "duplicate_third_difference_at_anchor": true,
+    "redundancy_boundary_derivative_exact": true,
+    "H_bernstein_coefficients_all_positive": true,
+    "J_has_one_domain_root": true,
+    "r_a_in_certified_interval": true,
+    "epsilon_a_in_certified_interval": true,
+    "transition_curve_identities_pass": true,
+    "E5_denominator_has_no_branch_root": true,
+    "E4_denominator_has_no_branch_root": true,
+    "E5_anchor_endpoint_zero": true,
+    "E4_compactified_endpoint_exact": true,
+    "stationary_expansion_cancels_through_h3": true,
+    "stationary_ratio_series_exact": true,
+    "gamma_sqrt_coefficient_exact": true,
+    "gamma_epsilon_coefficient_exact": true,
+    "risk_sqrt_coefficient_exact": true,
+    "boundary_linear_coefficient_exact": true,
+    "compactified_ratio_formula_exact": true,
+    "benchmark_1e-4_above_epsilon_b": true
+  },
+  "verdict": "PASS_NOISE_SEPARATION_BOUNDARY_LAYER_AND_LOCAL_BIFURCATION_SKELETON",
+  "boundary": "A46 certifies local and asymptotic bifurcation structure. It deliberately does not claim a complete global (epsilon,gamma) phase diagram. A45 remains the global theorem at epsilon=1/10000."
+}

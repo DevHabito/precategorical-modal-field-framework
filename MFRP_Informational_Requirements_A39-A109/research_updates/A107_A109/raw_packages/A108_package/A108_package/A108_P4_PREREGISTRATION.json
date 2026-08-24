@@ -1,0 +1,237 @@
+{
+  "audit": "A108-P4_UNCHANGED_SUFFICIENT_CERTIFICATE_REPLICATION",
+  "status": "FROZEN_BEFORE_NON_TARGET_KKT_OR_FULL_ATLAS_INSPECTION",
+  "parent_preregistration": {
+    "path": "/mnt/data/A108_COMPLETE_PREREGISTRATION.json",
+    "sha256": "9547703c849fa4af246855d8128e3e81a50485a9af6dc48c7f222b20cbd9737a"
+  },
+  "prior_replications": "P2 ranks 42..49 and P3 ranks 50..65 passed the unchanged sufficient-certificate protocol. P4 changes no rule and uses the next 32 canonical records.",
+  "holdout_selection": {
+    "canonical_ranks_inclusive": [
+      66,
+      97
+    ],
+    "batch_size": 32,
+    "replacement_if_failure": "none",
+    "selection_rule": "next 32 canonical records immediately after P3"
+  },
+  "frozen_predictions_from_parent": [
+    {
+      "rank": 66,
+      "M": 84,
+      "j": 16,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 67,
+      "M": 86,
+      "j": 17,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_18"
+    },
+    {
+      "rank": 68,
+      "M": 87,
+      "j": 17,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_18"
+    },
+    {
+      "rank": 69,
+      "M": 88,
+      "j": 17,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 70,
+      "M": 88,
+      "j": 17,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 71,
+      "M": 89,
+      "j": 17,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 72,
+      "M": 90,
+      "j": 17,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 73,
+      "M": 92,
+      "j": 18,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_19"
+    },
+    {
+      "rank": 74,
+      "M": 93,
+      "j": 18,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_19"
+    },
+    {
+      "rank": 75,
+      "M": 94,
+      "j": 18,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 76,
+      "M": 94,
+      "j": 18,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 77,
+      "M": 95,
+      "j": 18,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 78,
+      "M": 96,
+      "j": 18,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 79,
+      "M": 98,
+      "j": 19,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_20"
+    },
+    {
+      "rank": 80,
+      "M": 99,
+      "j": 19,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 81,
+      "M": 99,
+      "j": 19,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 82,
+      "M": 100,
+      "j": 19,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 83,
+      "M": 100,
+      "j": 19,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 84,
+      "M": 101,
+      "j": 19,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 85,
+      "M": 103,
+      "j": 20,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_21"
+    },
+    {
+      "rank": 86,
+      "M": 104,
+      "j": 20,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_21"
+    },
+    {
+      "rank": 87,
+      "M": 105,
+      "j": 20,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 88,
+      "M": 105,
+      "j": 20,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 89,
+      "M": 106,
+      "j": 20,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 90,
+      "M": 106,
+      "j": 20,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 91,
+      "M": 107,
+      "j": 20,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 92,
+      "M": 109,
+      "j": 21,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_22"
+    },
+    {
+      "rank": 93,
+      "M": 110,
+      "j": 21,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_22"
+    },
+    {
+      "rank": 94,
+      "M": 111,
+      "j": 21,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 95,
+      "M": 111,
+      "j": 21,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 96,
+      "M": 112,
+      "j": 21,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 97,
+      "M": 112,
+      "j": 21,
+      "class": "full_segment_coverage"
+    }
+  ],
+  "frozen_certificate_protocol": {
+    "target": "Require exact D(s)>0 and exact N'_{j+1}(s)>0 on the closed source segment.",
+    "non_target": "Certify every KKT numerator except basic_p_{j+1} strictly positive on the entire closed source segment, first by exact interval enclosure and then by existing exact adaptive positivity certification if required.",
+    "classification": "Use only the frozen lower-endpoint sign of N_{j+1} plus these sufficient certificates; negative predicts exactly one left basic_p_{j+1} boundary, positive predicts full coverage.",
+    "full_atlas_after_certificate": "Only after certificate classification is fixed, run exact atlas and independent direct-matrix checkpoint regression."
+  },
+  "pass": "All 32 records obtain complete sufficient certificates; classes match frozen parent predictions and exact atlas; every partial boundary is left basic_p_{j+1}; all direct exact regressions agree.",
+  "refute": "Any exact non-target nonpositive witness, class mismatch, boundary mismatch, or symbolic/direct exact mismatch refutes P4 support.",
+  "inconclusive": "Any unresolved exact certificate or execution failure without a mathematical counterexample is inconclusive.",
+  "no_posthoc_changes": "No rank replacement, batch resizing, condition substitution, support changes, tolerance changes, or rescue classifier after outcomes are inspected.",
+  "nonclaims": [
+    "not an all-922 full-KKT theorem",
+    "not an all-M theorem",
+    "not beyond A102 gamma-plus architecture/source segments",
+    "not a physical claim"
+  ]
+}

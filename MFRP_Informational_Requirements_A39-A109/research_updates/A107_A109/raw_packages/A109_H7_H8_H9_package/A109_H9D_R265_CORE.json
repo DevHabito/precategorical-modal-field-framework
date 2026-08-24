@@ -1,0 +1,88 @@
+{
+  "audit": "A109-H9D_SHARDED_CORE",
+  "rank": 265,
+  "preregistration_sha256": "d143f195ed509fdc16ba320e4c3a191447c0f6f88e28049d5081930257a379c4",
+  "manifest_sha256": "5c50a0f5a89390107f418aaf6f5c079758ea2163684ae8815c5cdda610a788f2",
+  "frozen_prediction": {
+    "canonical_rank": 265,
+    "source_key": "M=231|b=40|phase=unique_b_plus_2|side=full|s=131/1000|j=42",
+    "maximum": 231,
+    "contact_j": 42,
+    "witness": "131/1000",
+    "segment_open_bounds": [
+      "129/1000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_43"
+      }
+    ]
+  },
+  "M": 231,
+  "j": 42,
+  "segment": [
+    "129/1000",
+    "133/1000"
+  ],
+  "witness": "131/1000",
+  "verdict": "CORE_SUPPORT",
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_43",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "unique_root_certificate": {
+    "lower": "70282569239/536870912000",
+    "upper": "1757064231/13421772800",
+    "exact_rational_root": false,
+    "steps": 30,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "1/536870912000"
+  },
+  "certified_condition_count": 470,
+  "certificate_methods": {
+    "single_interval": 279,
+    "monotone_increasing": 185,
+    "adaptive_interval": 5,
+    "convex_increasing": 1
+  },
+  "exact_failures": [],
+  "unresolved": [],
+  "exact_verdict_failures": [],
+  "seconds": 0.3787689208984375
+}

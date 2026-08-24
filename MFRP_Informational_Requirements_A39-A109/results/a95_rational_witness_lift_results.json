@@ -1,0 +1,246 @@
+{
+  "audit": "A95_EXACT_RATIONAL_WITNESS_LIFT_AND_RESTRICTED_FAMILY_OBSTRUCTION",
+  "evidence_class": "exact finite rational-witness KKT audit with an exhaustive restricted-family prefix certificate",
+  "scope": {
+    "source_cell_count": 858,
+    "maximum_range": [
+      14,
+      520
+    ],
+    "probe_interval": [
+      "129/1000",
+      "133/1000"
+    ],
+    "phase_segment_witness_count": 1063,
+    "claim": "pointwise natural-lift classification on every open A94 phase side, plus exhaustive F2/F3 obstruction certificates through M=325",
+    "explicit_nonclaim": "not a full continuum lifted-KKT atlas, not a complete LP basis classification, and not a physical theorem"
+  },
+  "natural_lift_result": {
+    "candidate_evaluation_count": 3189,
+    "unique_strict_lift_count": 980,
+    "no_strict_lift_count": 83,
+    "multiple_strict_lift_count": 0,
+    "pass_family_counts": {
+      "three_band_gamma_plus": 922,
+      "three_band_gamma_minus": 18,
+      "two_band_compressed": 40
+    },
+    "candidate_status_counts": {
+      "inactive_slack_infeasible": 925,
+      "primal_infeasible": 1284,
+      "pass": 980
+    },
+    "obstruction_phase_counts": {
+      "b_plus_1_to_b_plus_2::right": 46,
+      "unique_b_plus_2::full": 12,
+      "unique_b_plus_3::full": 14,
+      "b_plus_2_to_b_plus_3::right": 11
+    },
+    "obstruction_support_count": 75,
+    "obstruction_supports": [
+      125,
+      131,
+      137,
+      143,
+      148,
+      149,
+      160,
+      166,
+      172,
+      183,
+      201,
+      207,
+      212,
+      213,
+      219,
+      230,
+      236,
+      242,
+      248,
+      271,
+      277,
+      283,
+      289,
+      295,
+      306,
+      312,
+      318,
+      324,
+      325,
+      353,
+      359,
+      360,
+      365,
+      366,
+      371,
+      372,
+      378,
+      384,
+      388,
+      390,
+      393,
+      394,
+      396,
+      400,
+      406,
+      422,
+      425,
+      431,
+      435,
+      437,
+      441,
+      443,
+      447,
+      449,
+      453,
+      454,
+      455,
+      459,
+      460,
+      463,
+      466,
+      470,
+      472,
+      476,
+      478,
+      482,
+      484,
+      488,
+      490,
+      494,
+      496,
+      502,
+      508,
+      514,
+      520
+    ]
+  },
+  "first_obstruction": {
+    "maximum": 125,
+    "witness": "33/250",
+    "compressed_maximizer_contact": 24,
+    "candidates": [
+      {
+        "family": "two_band_compressed",
+        "contact": 24,
+        "gamma_sign": null,
+        "status": "primal_infeasible",
+        "first_failure": {
+          "name": "basic_p_0",
+          "exact_value": "-17966603407937311390273370227111782362058245191156667426930813831851804251432298027070540772015406906496583125112902122903926870052510932528097027448927326786624275452391015863236216456196706587194293386711217105384610435406636874736664855791090438821471371229871955291663880543632731509583912141976993568268936468549384331154049581802798684568984214929127590033612261696716152607835422720000/15640259154398294928062722446482108066901374634928920184868468616157730177595892515012733222073894864144456028324313733973448678925064586297775668244622459624527664355403424169110098694512206735799506593176002719515775669594627086645276905480866055083516027791295738300665120572042454547104544697602122131509572389395568452435770533598950628947634147640636404726911147244511831641260952002574861"
+        }
+      },
+      {
+        "family": "three_band_adjacent",
+        "contact": 23,
+        "gamma_sign": -1,
+        "status": "primal_infeasible",
+        "first_failure": {
+          "name": "basic_p_0",
+          "exact_value": "-18892804832855036100884856601014387625954538500362420089367932464221878758820584924878084774299200899088738990270980864406932403779422584881561487041282450433869130803001995845864449240205851448133341493696093437409913256185726814586124107377561501844950636056169786264785704890568511177436530063358140518349288694322651670987235973172363347500262122263717919619043584172149708148633179650484360786617239167945490349767653388938596401240604012539111538688/79310703078422699805205104645411302949616470499037256885420562826626133076590295395130024176042601983906633855053491093172799706607085144964714037983200877401336217175484173182688701127037572524414724344453990469768845159282779387070549369211973040062695860596036922828791757930385703529328264450878300928165635253067606184251496993240648360946728530562131753098555915231057195020455481814513282729161349406751020853433805555696145485843671692929200274016089"
+        }
+      },
+      {
+        "family": "three_band_adjacent",
+        "contact": 24,
+        "gamma_sign": 1,
+        "status": "primal_infeasible",
+        "first_failure": {
+          "name": "basic_p_25",
+          "exact_value": "-140524631315529781216365232572559672090830190565998635497925749692203843095626940790514678383644206311534558195889613437659641190512991131658300496828427068995258144610806109211499149784867662787789064693741356015781521534554829925503783023207713078047438581848520946873388128883558624189197624898289863967402043511827327197377146847539785657253540678245307860920310808825104554760223621765355834581376430281246022588826134206963363628991379268135363897844866069918463819776/233351147380035625273441528172127783277409896920088496925196244326232972393941272161412237503967605426351170692579494899682958796174391690849023549254877539120212894851916512757296665655847490395161533538873483133634861616211079811089522795163760324111375225134461829369457923418544657450258247317833446028225429533054325969455891902210598261940531061885950005351183076942922673186599418216469482496259788290622208713141585583969112006429493346761514847589"
+        }
+      }
+    ],
+    "full_restricted_catalogue": {
+      "maximum": 125,
+      "base_contact": 22,
+      "compressed_phase": "b_plus_1_to_b_plus_2",
+      "phase_side": "right",
+      "witness": "33/250",
+      "compressed_maximizer_contact": 24,
+      "candidate_count": 370,
+      "status_counts": {
+        "primal_infeasible": 349,
+        "reduced_cost_infeasible": 20,
+        "active_dual_infeasible": 1
+      },
+      "strict_pass_count": 0,
+      "strict_passes": []
+    }
+  },
+  "restricted_family_prefix_stress": {
+    "definition": "all natural-lift obstruction witnesses through and including the first A90 offset-three support M=325",
+    "obstruction_record_count": 29,
+    "candidate_count": 19421,
+    "status_counts": {
+      "primal_infeasible": 18323,
+      "reduced_cost_infeasible": 1069,
+      "active_dual_infeasible": 29
+    },
+    "strict_pass_count": 0,
+    "supports": [
+      125,
+      131,
+      137,
+      143,
+      148,
+      149,
+      160,
+      166,
+      172,
+      183,
+      201,
+      207,
+      212,
+      213,
+      219,
+      230,
+      236,
+      242,
+      248,
+      271,
+      277,
+      283,
+      289,
+      295,
+      306,
+      312,
+      318,
+      324,
+      325
+    ]
+  },
+  "interpretation": {
+    "positive_result": "980 open phase segments admit exactly one strict KKT lift inside the natural triad.",
+    "negative_result": "83 open phase segments admit no strict KKT lift inside the natural triad.",
+    "structural_obstruction": "At M=125, s=33/250, no candidate anywhere in the previously declared F2/F3 contact catalogue passes the complete strict KKT system.",
+    "consequence": "Compressed-objective globality does not imply liftability to the frozen contact-support architecture; a broader active-set family or changed Q support is required before a continuum lifted theorem can be attempted."
+  },
+  "gate_count": 22,
+  "pass_count": 22,
+  "gates": {
+    "A94_source_certificate_present_and_passed": true,
+    "exactly_1063_open_phase_segment_witnesses": true,
+    "exactly_3189_natural_lift_candidate_evaluations": true,
+    "exactly_980_segments_have_one_strict_natural_lift": true,
+    "exactly_83_segments_have_no_strict_natural_lift": true,
+    "no_segment_has_multiple_strict_natural_lifts": true,
+    "natural_lift_pass_family_counts_match": true,
+    "obstruction_phase_counts_match": true,
+    "obstructions_span_exactly_75_supports": true,
+    "first_obstruction_is_M125": true,
+    "last_obstruction_in_declared_domain_is_M520": true,
+    "no_obstruction_occurs_on_transition_left_sides": true,
+    "no_obstruction_occurs_in_unique_b_plus_1_phase": true,
+    "prefix_through_first_offset_three_contains_29_obstructions": true,
+    "prefix_restricted_family_candidate_count_exact": true,
+    "prefix_restricted_family_status_counts_match": true,
+    "no_prefix_obstruction_is_repaired_anywhere_in_declared_F2_F3_catalogue": true,
+    "first_obstruction_exhaustive_catalogue_has_370_candidates": true,
+    "first_obstruction_exhaustive_catalogue_has_no_strict_pass": true,
+    "all_natural_lift_decisions_are_exact_KKT_statuses": true,
+    "rational_witness_and_restricted_family_scope_recorded": true,
+    "no_continuum_lift_or_physical_claim_promoted": true
+  },
+  "verdict": "PASS_EXACT_RATIONAL_WITNESS_LIFT_ATLAS_AND_RESTRICTED_FAMILY_OBSTRUCTION"
+}

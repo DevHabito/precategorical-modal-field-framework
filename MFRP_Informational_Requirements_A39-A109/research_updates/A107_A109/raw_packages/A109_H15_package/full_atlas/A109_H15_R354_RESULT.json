@@ -1,0 +1,143 @@
+{
+  "audit": "A109_H15_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT_SHARD",
+  "preregistration_sha256": "7c12da017762a0cef7733172991be68f3d621488dedf579be038abd3631d630b",
+  "rank_range": [
+    354,
+    354
+  ],
+  "verdict": "PASS_A109_H15_TWO_SIDED_HOLDOUT",
+  "summary": {
+    "record_count": 1,
+    "predicted_class_counts": {
+      "proper_strict_subcomponent": 1
+    },
+    "atlas_class_counts": {
+      "proper_strict_subcomponent": 1
+    },
+    "match_count": 1,
+    "partial_count": 1,
+    "direct_comparisons": 2268,
+    "direct_mismatches": 0,
+    "core_failures": 0,
+    "hull_failures": 0
+  },
+  "failures": [],
+  "records": [
+    {
+      "canonical_rank": 354,
+      "source_key": "M=279|b=48|phase=unique_b_plus_2|side=full|s=131/1000|j=50",
+      "maximum": 279,
+      "contact_j": 50,
+      "frozen_prediction": {
+        "canonical_rank": 354,
+        "source_key": "M=279|b=48|phase=unique_b_plus_2|side=full|s=131/1000|j=50",
+        "maximum": 279,
+        "contact_j": 50,
+        "witness": "131/1000",
+        "segment_open_bounds": [
+          "129/1000",
+          "133/1000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": -1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "proper_strict_subcomponent",
+        "predicted_boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_51"
+          }
+        ]
+      },
+      "atlas_class": "proper_strict_subcomponent",
+      "selected_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_51"
+        }
+      ],
+      "endpoint_nonpositive_conditions": {
+        "left": [
+          "basic_p_51"
+        ],
+        "right": []
+      },
+      "core_certificate_summary": {
+        "condition_count": 568,
+        "pass_count": 568,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 558,
+          "monotone_increasing": 4,
+          "strictly_concave_endpoint_minimum": 1,
+          "convex_increasing": 3,
+          "adaptive_interval": 2
+        }
+      },
+      "hull_certificate_summary": {
+        "condition_count": 567,
+        "pass_count": 567,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 558,
+          "strictly_concave_endpoint_minimum": 1,
+          "monotone_increasing": 3,
+          "convex_increasing": 3,
+          "adaptive_interval": 2
+        }
+      },
+      "root_failure_count": 0,
+      "direct_regression_summary": {
+        "checkpoint_count": 4,
+        "comparison_count": 2268,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "failures": [],
+      "strict_component": {
+        "lower": "19632362450151469597138831/151115727451828646838272000",
+        "upper": "133/1000",
+        "selected_left_boundary": {
+          "condition": "basic_p_51",
+          "side": "left",
+          "bracket": [
+            "157058899601211756777110647/1208925819614629174706176000",
+            "19632362450151469597138831/151115727451828646838272000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 81,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        },
+        "selected_right_boundary": null
+      },
+      "outside_counterexamples": [
+        {
+          "side": "left",
+          "condition": "basic_p_51",
+          "point": "313010330331498920314207351/2417851639229258349412352000",
+          "sign": -1
+        }
+      ],
+      "seconds": 30.81668210029602
+    }
+  ],
+  "scope": {
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

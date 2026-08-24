@@ -1,0 +1,135 @@
+{
+  "audit": "A108-P3_UNCHANGED_SUFFICIENT_CERTIFICATE_REPLICATION",
+  "status": "FROZEN_BEFORE_NON_TARGET_KKT_OR_FULL_ATLAS_INSPECTION",
+  "parent_preregistration": {
+    "path": "/mnt/data/A108_COMPLETE_PREREGISTRATION.json",
+    "sha256": "9547703c849fa4af246855d8128e3e81a50485a9af6dc48c7f222b20cbd9737a"
+  },
+  "prior_P2": "Ranks 42..49 passed the frozen sufficient-certificate protocol. P3 changes no rule and doubles the replication batch to 16 records.",
+  "holdout_selection": {
+    "canonical_ranks_inclusive": [
+      50,
+      65
+    ],
+    "batch_size": 16,
+    "replacement_if_failure": "none",
+    "selection_rule": "next sixteen canonical records immediately after P2"
+  },
+  "frozen_predictions_from_parent": [
+    {
+      "rank": 50,
+      "M": 70,
+      "j": 14,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 51,
+      "M": 70,
+      "j": 14,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 52,
+      "M": 71,
+      "j": 14,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 53,
+      "M": 72,
+      "j": 14,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 54,
+      "M": 73,
+      "j": 14,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 55,
+      "M": 75,
+      "j": 15,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_16"
+    },
+    {
+      "rank": 56,
+      "M": 76,
+      "j": 15,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 57,
+      "M": 76,
+      "j": 15,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 58,
+      "M": 77,
+      "j": 15,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 59,
+      "M": 78,
+      "j": 15,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 60,
+      "M": 79,
+      "j": 15,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 61,
+      "M": 80,
+      "j": 16,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_17"
+    },
+    {
+      "rank": 62,
+      "M": 81,
+      "j": 16,
+      "class": "proper_strict_subcomponent",
+      "boundary": "left basic_p_17"
+    },
+    {
+      "rank": 63,
+      "M": 82,
+      "j": 16,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 64,
+      "M": 82,
+      "j": 16,
+      "class": "full_segment_coverage"
+    },
+    {
+      "rank": 65,
+      "M": 83,
+      "j": 16,
+      "class": "full_segment_coverage"
+    }
+  ],
+  "frozen_certificate_protocol": {
+    "target": "Require exact D(s)>0 and exact N'_{j+1}(s)>0 on the closed source segment.",
+    "non_target": "Certify every KKT numerator except basic_p_{j+1} strictly positive on the entire closed source segment, first by exact interval enclosure and then by the existing exact adaptive positivity certifier if required.",
+    "classification": "Use only the frozen lower-endpoint sign of N_{j+1} together with the sufficient certificates. Negative lower sign predicts one unique left basic_p_{j+1} boundary; positive lower sign predicts full coverage.",
+    "full_atlas_after_certificate": "Only after certificate classification is fixed, run the existing exact atlas and direct-matrix checkpoint regression."
+  },
+  "pass": "All 16 records obtain a complete sufficient certificate; certificate classes equal frozen parent predictions and exact atlas classes; every partial boundary is exactly left basic_p_{j+1}; direct exact regressions have zero mismatches and zero positivity/outside-sign failures.",
+  "refute": "Any exact non-target nonpositive witness, class mismatch, boundary mismatch, or symbolic/direct exact mismatch refutes P3 support.",
+  "inconclusive": "Any unresolved exact certificate or execution failure without a mathematical counterexample is inconclusive.",
+  "no_posthoc_changes": "No rank replacement, batch resizing, condition substitution, support changes, tolerance changes, or rescue classifier after outcomes are inspected.",
+  "nonclaims": [
+    "not an all-922 full-KKT theorem",
+    "not an all-M theorem",
+    "not beyond the A102 gamma-plus architecture/source segments",
+    "not a physical claim"
+  ]
+}

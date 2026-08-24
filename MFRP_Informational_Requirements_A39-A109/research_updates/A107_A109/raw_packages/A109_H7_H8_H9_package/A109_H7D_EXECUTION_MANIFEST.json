@@ -1,0 +1,29 @@
+{
+  "audit": "A109-H7D_EXECUTION_PARTITION_MANIFEST",
+  "status": "FROZEN_BEFORE_SHARDED_DIRECT_EVALUATION",
+  "parent_preregistration_sha256": "7d7269e4680ba2b0227dba9afef266bfb1dca9cb60209dc68b8b50d91ded719f",
+  "reason": "Monolithic H7D rank 227 execution timed out twice. Instrumentation showed the 421 exact positivity certificates themselves terminate; partition only the expensive independent direct-matrix probe evaluations. Scientific criteria, probes, targets and predictions are unchanged.",
+  "execution_partition": {
+    "227": {
+      "core": "all 421 KKT positivity certificates plus denominator/witness checks",
+      "direct_probe_labels": [
+        "left_endpoint",
+        "left_mid",
+        "witness",
+        "right_mid",
+        "right_endpoint"
+      ]
+    },
+    "228": {
+      "core": "target derivative/sign/root certificate plus all 420 non-target KKT positivity certificates and denominator/witness checks",
+      "direct_probe_labels": [
+        "outside_left",
+        "inside",
+        "witness",
+        "right_mid"
+      ]
+    }
+  },
+  "aggregation": "Support only if core has no exact failure/unresolved item and every preregistered direct probe has zero symbolic-vs-direct mismatch; all strict-inside probes must be positive, and partial outside probe must contain predicted target among nonpositive conditions.",
+  "no_changes": "No condition omission, probe omission, target change, endpoint change, tolerance change, rank replacement, or classifier change."
+}

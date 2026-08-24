@@ -1,0 +1,81 @@
+{
+  "audit": "A109-H8D_TIMEOUT_EXACT_SUFFICIENT_CERTIFICATE",
+  "status": "FROZEN_BEFORE_DIAGNOSTIC_EXECUTION",
+  "parent_preregistration_sha256": "3acf7079c7c150bc44e3cfb19fe6d4419394a561eebc850144a62de4906250de",
+  "reason": "The preregistered full-atlas shard 239..240 timed out twice without producing a result file. This separate exact sufficient-certificate protocol cannot retroactively convert that full-atlas shard into PASS.",
+  "ranks": [
+    239,
+    240
+  ],
+  "frozen_predictions": [
+    {
+      "canonical_rank": 239,
+      "source_key": "M=214|b=37|phase=unique_b_plus_2|side=full|s=131/1000|j=39",
+      "maximum": 214,
+      "contact_j": 39,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_40"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 240,
+      "source_key": "M=215|b=37|phase=unique_b_plus_2|side=full|s=131/1000|j=39",
+      "maximum": 215,
+      "contact_j": 39,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_40"
+        }
+      ]
+    }
+  ],
+  "method": {
+    "common": "Build exact A109 rank-one gamma-plus denominator and all KKT numerators; require denominator positivity on complete source segment; compare symbolic numerators against independent direct rational matrix evaluations at the frozen probe pattern.",
+    "full_prediction": "Certify every KKT numerator strictly positive on complete closed source interval using exact interval/monotonicity/concavity/adaptive certificates.",
+    "left_partial_prediction": "For target basic_p_{j+1}, certify positive derivative, negative target at L and positive target at witness, isolate a unique sign-change bracket in (L,witness), certify every non-target KKT numerator strictly positive on complete source interval, and verify outside-left/inside/witness/right-mid direct probes.",
+    "right_partial_prediction": "Symmetric rule for basic_p_j.",
+    "no_atlas": "Do not call full root atlas or use non-target root ordering."
+  },
+  "adjudication": {
+    "support": "All required exact certificates pass, direct symbolic-vs-matrix regression has zero mismatches, strict probes remain positive, and outside partial probe witnesses the frozen target nonpositive.",
+    "refute": "Exact non-target nonpositive condition, target sign/monotonicity contradiction, or exact direct contradiction.",
+    "inconclusive": "Adaptive certificate unresolved, timeout, or implementation disagreement without exact contradiction."
+  },
+  "no_posthoc_changes": "No rank replacement, prediction/target/tolerance/support/probe change after diagnostic outcomes.",
+  "scope": [
+    "mathematical resolution attempt for ranks 239 and 240 only",
+    "does not complete original H8 full-atlas shard",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ]
+}

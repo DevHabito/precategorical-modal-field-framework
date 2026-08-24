@@ -1,0 +1,17 @@
+{
+  "audit": "A109-H13D2_SHARDED_DIRECT",
+  "rank": 330,
+  "probe_index": 1,
+  "probe_label": "inside",
+  "probe": "83622437409304380832727336026405094853837723777/633825300114114700748351602688000000000000000000",
+  "strict_expected": true,
+  "target": "basic_p_49",
+  "preregistration_sha256": "4c543c8256d845118b5f33e8494a75573dcc86f135d255d2a0f7e8887795fa2d",
+  "verdict": "DIRECT_SUPPORT",
+  "comparison_count": 539,
+  "mismatches": [],
+  "nonpositive_conditions": [],
+  "positivity_failure": false,
+  "outside_failure": false,
+  "seconds": 31.432846069335938
+}

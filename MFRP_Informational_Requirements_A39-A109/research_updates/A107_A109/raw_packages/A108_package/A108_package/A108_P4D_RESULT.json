@@ -1,0 +1,600 @@
+{
+  "audit": "A108-P4D_EXECUTION_SHARD",
+  "preregistration_sha256": "4dde3688f9127aef475a7f81f4a5c0a18ceb9f0375aff7172ec38a8af3719a98",
+  "verdict": "PASS_SUFFICIENT_CERTIFICATE_HOLDOUT",
+  "summary": {
+    "record_count": 8,
+    "certificate_class_counts": {
+      "full_segment_coverage": 6,
+      "proper_strict_subcomponent": 2
+    },
+    "atlas_class_counts": {
+      "full_segment_coverage": 6,
+      "proper_strict_subcomponent": 2
+    },
+    "certificate_parent_match_count": 8,
+    "certificate_atlas_match_count": 8,
+    "boundary_match_count": 8,
+    "partial_count": 2,
+    "direct_comparisons": 5940,
+    "direct_mismatches": 0,
+    "non_target_failure_count": 0,
+    "non_target_unresolved_count": 0
+  },
+  "exact_failures": [],
+  "inconclusive_items": [],
+  "records": [
+    {
+      "canonical_rank": 90,
+      "source_key": "M=106|b=18|phase=unique_b_plus_2|side=full|s=647/5000|j=20",
+      "maximum": 106,
+      "contact_j": 20,
+      "witness": "647/5000",
+      "segment_open_bounds": [
+        "129/1000",
+        "16238425406747553/125000000000000000"
+      ],
+      "frozen_parent_prediction": "full_segment_coverage",
+      "sufficient_certificate": {
+        "target_condition": "basic_p_21",
+        "exact_signs": {
+          "N_lower": 1,
+          "N_witness": 1,
+          "N_upper": 1,
+          "D_lower": 1,
+          "D_witness": 1,
+          "D_upper": 1
+        },
+        "D_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "target_derivative_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "non_target_condition_count": 220,
+        "non_target_certificate_methods": {
+          "single_interval": 220
+        },
+        "non_target_failures": [],
+        "non_target_unresolved": [],
+        "certificate_class": "full_segment_coverage",
+        "target_root_if_partial": null
+      },
+      "atlas_class": "full_segment_coverage",
+      "selected_boundaries": [],
+      "certificate_matches_parent": true,
+      "certificate_matches_atlas": true,
+      "boundary_match": true,
+      "direct_regression_summary": {
+        "checkpoint_count": 3,
+        "comparison_count": 663,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "seconds": 1.4073596000671387
+    },
+    {
+      "canonical_rank": 91,
+      "source_key": "M=107|b=19|phase=unique_b_plus_1|side=full|s=131/1000|j=20",
+      "maximum": 107,
+      "contact_j": 20,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "frozen_parent_prediction": "full_segment_coverage",
+      "sufficient_certificate": {
+        "target_condition": "basic_p_21",
+        "exact_signs": {
+          "N_lower": 1,
+          "N_witness": 1,
+          "N_upper": 1,
+          "D_lower": 1,
+          "D_witness": 1,
+          "D_upper": 1
+        },
+        "D_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "target_derivative_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "non_target_condition_count": 222,
+        "non_target_certificate_methods": {
+          "single_interval": 217,
+          "strictly_concave_endpoint_minimum": 1,
+          "monotone_increasing": 4
+        },
+        "non_target_failures": [],
+        "non_target_unresolved": [],
+        "certificate_class": "full_segment_coverage",
+        "target_root_if_partial": null
+      },
+      "atlas_class": "full_segment_coverage",
+      "selected_boundaries": [],
+      "certificate_matches_parent": true,
+      "certificate_matches_atlas": true,
+      "boundary_match": true,
+      "direct_regression_summary": {
+        "checkpoint_count": 3,
+        "comparison_count": 669,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "seconds": 0.572206974029541
+    },
+    {
+      "canonical_rank": 92,
+      "source_key": "M=109|b=19|phase=unique_b_plus_2|side=full|s=131/1000|j=21",
+      "maximum": 109,
+      "contact_j": 21,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "frozen_parent_prediction": "proper_strict_subcomponent",
+      "sufficient_certificate": {
+        "target_condition": "basic_p_22",
+        "exact_signs": {
+          "N_lower": -1,
+          "N_witness": 1,
+          "N_upper": 1,
+          "D_lower": 1,
+          "D_witness": 1,
+          "D_upper": 1
+        },
+        "D_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "target_derivative_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "non_target_condition_count": 226,
+        "non_target_certificate_methods": {
+          "single_interval": 221,
+          "monotone_increasing": 4,
+          "adaptive_interval": 1
+        },
+        "non_target_failures": [],
+        "non_target_unresolved": [],
+        "certificate_class": "proper_strict_subcomponent",
+        "target_root_if_partial": {
+          "bracket": [
+            "39488445145087936631581737/302231454903657293676544000",
+            "157953780580351746526326949/1208925819614629174706176000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 81,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        }
+      },
+      "atlas_class": "proper_strict_subcomponent",
+      "selected_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_22"
+        }
+      ],
+      "certificate_matches_parent": true,
+      "certificate_matches_atlas": true,
+      "boundary_match": true,
+      "direct_regression_summary": {
+        "checkpoint_count": 4,
+        "comparison_count": 908,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "seconds": 3.1041204929351807
+    },
+    {
+      "canonical_rank": 93,
+      "source_key": "M=110|b=19|phase=unique_b_plus_2|side=full|s=131/1000|j=21",
+      "maximum": 110,
+      "contact_j": 21,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "frozen_parent_prediction": "proper_strict_subcomponent",
+      "sufficient_certificate": {
+        "target_condition": "basic_p_22",
+        "exact_signs": {
+          "N_lower": -1,
+          "N_witness": 1,
+          "N_upper": 1,
+          "D_lower": 1,
+          "D_witness": 1,
+          "D_upper": 1
+        },
+        "D_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "target_derivative_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "non_target_condition_count": 228,
+        "non_target_certificate_methods": {
+          "single_interval": 223,
+          "monotone_increasing": 4,
+          "convex_increasing": 1
+        },
+        "non_target_failures": [],
+        "non_target_unresolved": [],
+        "certificate_class": "proper_strict_subcomponent",
+        "target_root_if_partial": {
+          "bracket": [
+            "78114202158568381994902533/604462909807314587353088000",
+            "156228404317136763989805067/1208925819614629174706176000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 81,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        }
+      },
+      "atlas_class": "proper_strict_subcomponent",
+      "selected_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_22"
+        }
+      ],
+      "certificate_matches_parent": true,
+      "certificate_matches_atlas": true,
+      "boundary_match": true,
+      "direct_regression_summary": {
+        "checkpoint_count": 4,
+        "comparison_count": 916,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "seconds": 3.1755197048187256
+    },
+    {
+      "canonical_rank": 94,
+      "source_key": "M=111|b=19|phase=unique_b_plus_2|side=full|s=13/100|j=21",
+      "maximum": 111,
+      "contact_j": 21,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "66015443202753929/500000000000000000"
+      ],
+      "frozen_parent_prediction": "full_segment_coverage",
+      "sufficient_certificate": {
+        "target_condition": "basic_p_22",
+        "exact_signs": {
+          "N_lower": 1,
+          "N_witness": 1,
+          "N_upper": 1,
+          "D_lower": 1,
+          "D_witness": 1,
+          "D_upper": 1
+        },
+        "D_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "target_derivative_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "non_target_condition_count": 230,
+        "non_target_certificate_methods": {
+          "single_interval": 228,
+          "monotone_increasing": 2
+        },
+        "non_target_failures": [],
+        "non_target_unresolved": [],
+        "certificate_class": "full_segment_coverage",
+        "target_root_if_partial": null
+      },
+      "atlas_class": "full_segment_coverage",
+      "selected_boundaries": [],
+      "certificate_matches_parent": true,
+      "certificate_matches_atlas": true,
+      "boundary_match": true,
+      "direct_regression_summary": {
+        "checkpoint_count": 3,
+        "comparison_count": 693,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "seconds": 1.4610087871551514
+    },
+    {
+      "canonical_rank": 95,
+      "source_key": "M=111|b=20|phase=unique_b_plus_1|side=full|s=53/400|j=21",
+      "maximum": 111,
+      "contact_j": 21,
+      "witness": "53/400",
+      "segment_open_bounds": [
+        "132030886405507859/1000000000000000000",
+        "133/1000"
+      ],
+      "frozen_parent_prediction": "full_segment_coverage",
+      "sufficient_certificate": {
+        "target_condition": "basic_p_22",
+        "exact_signs": {
+          "N_lower": 1,
+          "N_witness": 1,
+          "N_upper": 1,
+          "D_lower": 1,
+          "D_witness": 1,
+          "D_upper": 1
+        },
+        "D_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "target_derivative_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "non_target_condition_count": 230,
+        "non_target_certificate_methods": {
+          "single_interval": 230
+        },
+        "non_target_failures": [],
+        "non_target_unresolved": [],
+        "certificate_class": "full_segment_coverage",
+        "target_root_if_partial": null
+      },
+      "atlas_class": "full_segment_coverage",
+      "selected_boundaries": [],
+      "certificate_matches_parent": true,
+      "certificate_matches_atlas": true,
+      "boundary_match": true,
+      "direct_regression_summary": {
+        "checkpoint_count": 3,
+        "comparison_count": 693,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "seconds": 1.484623670578003
+    },
+    {
+      "canonical_rank": 96,
+      "source_key": "M=112|b=19|phase=unique_b_plus_2|side=full|s=1293/10000|j=21",
+      "maximum": 112,
+      "contact_j": 21,
+      "witness": "1293/10000",
+      "segment_open_bounds": [
+        "129/1000",
+        "64822190277886999/500000000000000000"
+      ],
+      "frozen_parent_prediction": "full_segment_coverage",
+      "sufficient_certificate": {
+        "target_condition": "basic_p_22",
+        "exact_signs": {
+          "N_lower": 1,
+          "N_witness": 1,
+          "N_upper": 1,
+          "D_lower": 1,
+          "D_witness": 1,
+          "D_upper": 1
+        },
+        "D_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "target_derivative_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "non_target_condition_count": 232,
+        "non_target_certificate_methods": {
+          "single_interval": 232
+        },
+        "non_target_failures": [],
+        "non_target_unresolved": [],
+        "certificate_class": "full_segment_coverage",
+        "target_root_if_partial": null
+      },
+      "atlas_class": "full_segment_coverage",
+      "selected_boundaries": [],
+      "certificate_matches_parent": true,
+      "certificate_matches_atlas": true,
+      "boundary_match": true,
+      "direct_regression_summary": {
+        "checkpoint_count": 3,
+        "comparison_count": 699,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "seconds": 1.5398633480072021
+    },
+    {
+      "canonical_rank": 97,
+      "source_key": "M=112|b=20|phase=unique_b_plus_1|side=full|s=131/1000|j=21",
+      "maximum": 112,
+      "contact_j": 21,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129644380555773999/1000000000000000000",
+        "133/1000"
+      ],
+      "frozen_parent_prediction": "full_segment_coverage",
+      "sufficient_certificate": {
+        "target_condition": "basic_p_22",
+        "exact_signs": {
+          "N_lower": 1,
+          "N_witness": 1,
+          "N_upper": 1,
+          "D_lower": 1,
+          "D_witness": 1,
+          "D_upper": 1
+        },
+        "D_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "target_derivative_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "non_target_condition_count": 232,
+        "non_target_certificate_methods": {
+          "single_interval": 230,
+          "strictly_concave_endpoint_minimum": 1,
+          "monotone_increasing": 1
+        },
+        "non_target_failures": [],
+        "non_target_unresolved": [],
+        "certificate_class": "full_segment_coverage",
+        "target_root_if_partial": null
+      },
+      "atlas_class": "full_segment_coverage",
+      "selected_boundaries": [],
+      "certificate_matches_parent": true,
+      "certificate_matches_atlas": true,
+      "boundary_match": true,
+      "direct_regression_summary": {
+        "checkpoint_count": 3,
+        "comparison_count": 699,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "seconds": 1.5007617473602295
+    }
+  ],
+  "scope": {
+    "claim": "deterministic execution shard of frozen P4 ranks 90..97",
+    "nonclaims": [
+      "not an all-922 full-KKT theorem",
+      "not an all-M theorem",
+      "not beyond A102 gamma-plus architecture/source segments",
+      "not a physical claim"
+    ]
+  }
+}

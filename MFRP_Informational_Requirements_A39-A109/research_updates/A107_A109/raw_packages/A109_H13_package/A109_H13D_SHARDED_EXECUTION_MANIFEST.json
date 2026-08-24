@@ -1,0 +1,57 @@
+{
+  "audit": "A109-H13D rank319 sharded execution manifest",
+  "status": "FROZEN_BEFORE_SHARDED_CERTIFICATION",
+  "parent_preregistration_sha256": "fb15ea204528f2c676ae616c601426a046f1e5978ccf5eaa9a76efdd9ba561e7",
+  "reason": "The preregistered monolithic exact certificate exceeded the current per-command runtime window and produced no result. No mathematical certificate outcome was inspected. This manifest changes execution granularity only.",
+  "prior_execution": {
+    "full_atlas_attempts": 2,
+    "full_atlas_status": "TIMEOUT_NO_RESULT_BOTH",
+    "monolithic_certificate_attempts": 1,
+    "monolithic_certificate_status": "RUNTIME_TIMEOUT_NO_RESULT"
+  },
+  "rank": 319,
+  "condition_count_from_frozen_architecture": 529,
+  "frozen_target_condition": "basic_p_48",
+  "condition_blocks_inclusive": [
+    [
+      0,
+      79
+    ],
+    [
+      80,
+      159
+    ],
+    [
+      160,
+      239
+    ],
+    [
+      240,
+      319
+    ],
+    [
+      320,
+      399
+    ],
+    [
+      400,
+      479
+    ],
+    [
+      480,
+      528
+    ]
+  ],
+  "direct_probe_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "aggregation_rule": {
+    "support": "Base target/denominator/witness checks pass; every non-target condition in every frozen block certifies strictly positive; every direct probe has zero symbolic/matrix mismatches; strict probes have no nonpositive conditions; outside probe contains the frozen target among nonpositive conditions.",
+    "refute_or_failed": "Any exact contradiction or direct mismatch.",
+    "inconclusive": "Any frozen block/probe fails to execute or returns an unresolved exact certificate without contradiction."
+  },
+  "no_posthoc_changes": "No condition may be omitted, added, reordered for selection, or have tolerances/depth changed after block outcomes are inspected."
+}

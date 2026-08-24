@@ -1,0 +1,30 @@
+{
+  "audit": "A66_EXACT_GLOBAL_CONTINUOUS_PHASE_THEOREMS",
+  "verdict": "PASS_EXACT_GLOBAL_CONTINUOUS_PHASE_THEOREMS",
+  "canonical": {
+    "phase_count": 7,
+    "transition_count": 6,
+    "alpha_domain": "[2,3)",
+    "boundary_ratio": "2263558795360587104/2233113362221566575",
+    "boundary_risk": "0.0097681452113756748881978026104657257056548058426406",
+    "coalescence_ratio_limit": "441938162655374364239/390605214984835914470",
+    "coalescence_risk_limit": "0.089066653294909667174066303390545901413652444911754",
+    "transition_alphas": [
+      2.2743863212478126,
+      2.6485868862620903,
+      2.876330478844989,
+      2.908567843186568,
+      2.911461258357643,
+      2.912942078443073
+    ]
+  },
+  "degenerate": {
+    "phase_count": 1,
+    "alpha_domain": "[4,5)",
+    "boundary_ratio": "1813793639768317/1800783220223842",
+    "boundary_risk": "0.0051929034975414565739608315504615090355455835859719",
+    "coalescence_ratio_limit": "320855093923567069/316406530246143196",
+    "coalescence_risk_limit": "0.010071256084466142937003779055233626326000196474874"
+  },
+  "scope": "Exact global continuous theorems for the fixed completions {alpha,3,10} and {alpha,5,7}; no all-contract theorem."
+}

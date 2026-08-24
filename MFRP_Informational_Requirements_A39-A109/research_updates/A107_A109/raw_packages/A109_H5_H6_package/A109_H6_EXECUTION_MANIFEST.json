@@ -1,0 +1,33 @@
+{
+  "audit": "A109-H6 execution manifest",
+  "preregistration_sha256": "6a325f6eedd0772ec7ad2cbe66c8d5a98b37276336431fff68b265d975b3862a",
+  "events": [
+    {
+      "rank_shard": [209, 210],
+      "attempts_without_result": 2,
+      "event": "full-atlas execution timeout before any result file was produced",
+      "mathematical_status": "NO_FULL_ATLAS_RESULT",
+      "protocol_change": false
+    },
+    {
+      "rank_shard": [215, 216],
+      "attempts_without_result": 1,
+      "event": "outer orchestration timeout before a result file was produced; identical preregistered shard later completed",
+      "mathematical_status": "FULL_ATLAS_COMPLETED_ON_IDENTICAL_RERUN",
+      "protocol_change": false
+    },
+    {
+      "rank_shard": [217, 218],
+      "attempts_without_result": 2,
+      "event": "full-atlas execution timeout before any result file was produced",
+      "mathematical_status": "NO_FULL_ATLAS_RESULT",
+      "protocol_change": false
+    }
+  ],
+  "diagnostic_followup": {
+    "preregistration": "A109_H6D_PREREGISTRATION.json",
+    "preregistration_sha256": "ac533ef4fc567a7da804a38ed27ec9e67266edce359bbc227934799fb3b7ff79",
+    "ranks": [209, 210, 217, 218],
+    "note": "The separately preregistered exact sufficient-certificate diagnostic mathematically addresses these ranks but does not retroactively complete the original H6 full-atlas protocol."
+  }
+}

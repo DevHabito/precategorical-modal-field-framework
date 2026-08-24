@@ -1,0 +1,43 @@
+{
+  "audit": "A109_PROSPECTIVE_STATUS_R106_R366",
+  "prior_status": {
+    "range": [
+      106,
+      350
+    ],
+    "mathematically_resolved": 245,
+    "strict_clean_prospective": 244,
+    "full": 170,
+    "partial": 75,
+    "left": 70,
+    "right": 5,
+    "two_sided": 0,
+    "non_adjacent": 0,
+    "direct_comparisons_math": 349685,
+    "direct_comparisons_strict": 347673,
+    "direct_mismatches": 0
+  },
+  "h15_sha256": "82809e82cc8a0caf34e3a943c62e630c4fd0e8738616018a47f314db0437ce3b",
+  "status": {
+    "range": [
+      106,
+      366
+    ],
+    "mathematically_resolved": 261,
+    "strict_clean_prospective": 260,
+    "full": 181,
+    "partial": 80,
+    "left": 75,
+    "right": 5,
+    "two_sided": 0,
+    "non_adjacent": 0,
+    "direct_comparisons_math": 379998,
+    "direct_comparisons_strict": 377986,
+    "direct_mismatches": 0
+  },
+  "accounting_note": "H15 adds 16 clean prospective full-atlas resolutions. Ranks 352, 360, and 361 produced no result on the first preregistered 55-second-window attempt and completed on the identical allowed retry; no fallback certificate protocol was used. The sole gap between mathematical and strict-clean counts remains the previously documented rank-295 ordering issue.",
+  "scope": {
+    "not_all_922_theorem": true,
+    "not_physical_claim": true
+  }
+}

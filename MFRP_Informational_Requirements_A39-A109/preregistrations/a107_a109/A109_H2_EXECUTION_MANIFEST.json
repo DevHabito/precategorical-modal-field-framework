@@ -1,0 +1,66 @@
+{
+  "audit": "A109-H2_EXECUTION_PARTITION_MANIFEST",
+  "status": "FROZEN_AFTER_TWO_TIMEOUTS_BEFORE_ANY_RESULT_FOR_RANKS_130_172",
+  "parent_preregistration_sha256": "879c061ccaf5bcec45182b08b85858b1119c26404026e0f80fb1ac04f58c8aea",
+  "reason": "The frozen 8-record shard 130..137 exceeded runtime twice and produced no result file. To complete the unchanged frozen 122..172 holdout, only execution is repartitioned into deterministic consecutive subshards. Record selection, predictions, adjudication, and aggregate verdict are unchanged.",
+  "already_completed_parent_shard": [
+    122,
+    129
+  ],
+  "remaining_execution_subshards": [
+    [
+      130,
+      133
+    ],
+    [
+      134,
+      137
+    ],
+    [
+      138,
+      141
+    ],
+    [
+      142,
+      145
+    ],
+    [
+      146,
+      149
+    ],
+    [
+      150,
+      153
+    ],
+    [
+      154,
+      157
+    ],
+    [
+      158,
+      161
+    ],
+    [
+      162,
+      165
+    ],
+    [
+      166,
+      169
+    ],
+    [
+      170,
+      172
+    ]
+  ],
+  "aggregate_rule": "All ranks 122..172 remain mandatory. A mathematical mismatch in any subshard refutes the frozen H2 rule. Execution/certification failure without contradiction is inconclusive. No record may be skipped or replaced.",
+  "no_changes": [
+    "no prediction edits",
+    "no rank changes",
+    "no record replacement",
+    "no tolerance changes",
+    "no support changes",
+    "no condition substitutions",
+    "no rescue classifier"
+  ]
+}

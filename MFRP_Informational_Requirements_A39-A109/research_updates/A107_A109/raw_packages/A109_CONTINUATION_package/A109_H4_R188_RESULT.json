@@ -1,0 +1,107 @@
+{
+  "audit": "A109_H4_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT_SUBSHARD",
+  "preregistration_sha256": "804612fe7a9455b626721804b382f7a7e5dfb6e2fc29187ab3455e762bd77a3b",
+  "rank_range": [
+    188,
+    188
+  ],
+  "verdict": "PASS_A109_H4_TWO_SIDED_HOLDOUT",
+  "summary": {
+    "record_count": 1,
+    "predicted_class_counts": {
+      "full_segment_coverage": 1
+    },
+    "atlas_class_counts": {
+      "full_segment_coverage": 1
+    },
+    "match_count": 1,
+    "partial_count": 0,
+    "direct_comparisons": 1119,
+    "direct_mismatches": 0,
+    "core_failures": 0,
+    "hull_failures": 0
+  },
+  "failures": [],
+  "records": [
+    {
+      "canonical_rank": 188,
+      "source_key": "M=182|b=31|phase=unique_b_plus_2|side=full|s=13/100|j=33",
+      "maximum": 182,
+      "contact_j": 33,
+      "frozen_prediction": {
+        "canonical_rank": 188,
+        "source_key": "M=182|b=31|phase=unique_b_plus_2|side=full|s=13/100|j=33",
+        "maximum": 182,
+        "contact_j": 33,
+        "witness": "13/100",
+        "segment_open_bounds": [
+          "129/1000",
+          "8169798032988181/62500000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "target_monotonicity_certified": {
+          "upper_adjacent_strictly_increasing": true,
+          "lower_adjacent_strictly_decreasing": true,
+          "common_denominator_positive": true
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "atlas_class": "full_segment_coverage",
+      "selected_boundaries": [],
+      "endpoint_nonpositive_conditions": {
+        "left": [],
+        "right": []
+      },
+      "core_certificate_summary": {
+        "condition_count": 374,
+        "pass_count": 374,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 372,
+          "strictly_concave_endpoint_minimum": 1,
+          "monotone_increasing": 1
+        }
+      },
+      "hull_certificate_summary": {
+        "condition_count": 374,
+        "pass_count": 374,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 372,
+          "strictly_concave_endpoint_minimum": 1,
+          "monotone_increasing": 1
+        }
+      },
+      "root_failure_count": 0,
+      "direct_regression_summary": {
+        "checkpoint_count": 3,
+        "comparison_count": 1119,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "failures": [],
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "8169798032988181/62500000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      },
+      "outside_counterexamples": [],
+      "seconds": 3.8023383617401123
+    }
+  ],
+  "scope": {
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

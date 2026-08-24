@@ -1,0 +1,44 @@
+{
+  "audit": "A109_PROSPECTIVE_STATUS_R106_R334",
+  "prior_status": {
+    "range": [
+      106,
+      318
+    ],
+    "mathematically_resolved": 213,
+    "strict_clean_prospective": 212,
+    "full": 151,
+    "partial": 62,
+    "left": 57,
+    "right": 5,
+    "two_sided": 0,
+    "non_adjacent": 0,
+    "direct_comparisons_math": 287996,
+    "direct_comparisons_strict": 285984,
+    "direct_mismatches": 0,
+    "source": "A109_H12_TECHNICAL_NOTE.md"
+  },
+  "h13_sha256": "293932ae8d9b597d03fb7172febb6826b23d48e6a11bc61b4e7525c5b16469c3",
+  "status": {
+    "range": [
+      106,
+      334
+    ],
+    "mathematically_resolved": 229,
+    "strict_clean_prospective": 228,
+    "full": 159,
+    "partial": 70,
+    "left": 65,
+    "right": 5,
+    "two_sided": 0,
+    "non_adjacent": 0,
+    "direct_comparisons_math": 318088,
+    "direct_comparisons_strict": 316076,
+    "direct_mismatches": 0
+  },
+  "accounting_note": "The one-record gap between mathematically_resolved and strict_clean_prospective is the previously documented rank-295 protocol-ordering issue; H13 adds 16 clean prospective mathematical resolutions.",
+  "scope": {
+    "not_all_922_theorem": true,
+    "not_physical_claim": true
+  }
+}

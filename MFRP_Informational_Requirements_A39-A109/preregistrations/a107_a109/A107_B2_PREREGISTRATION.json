@@ -1,0 +1,44 @@
+{
+  "audit": "A107-B2_PROSPECTIVE_GAMMA_PLUS_BATCH",
+  "status": "FROZEN_NOT_EXECUTED",
+  "frozen_after": "A107-MIN and A107-B1 outcomes",
+  "source": "A102 records with resolution.detailed_class == legacy_three_band_gamma_plus",
+  "canonical_order": ["maximum as int", "compressed_maximizer_contact as int", "witness as string"],
+  "batch_selection": {
+    "canonical_ranks_inclusive": [10, 17],
+    "batch_size": 8,
+    "replacement_if_failure": "none"
+  },
+  "primary_prediction": {
+    "statement": "All eight ranks 10..17 retain a nonzero witness-containing open strict-KKT component under the frozen A102 architecture.",
+    "pass": "8/8 satisfy the same exact A107-B1 local-stability criteria",
+    "fail": "at least one exact source witness or local-open-stability claim is mathematically refuted",
+    "inconclusive": "execution/certification disagreement without a mathematical counterexample"
+  },
+  "boundary_mechanism_prediction": {
+    "statement": "For every proper strict subcomponent among ranks 10..17, every selected internal boundary is basic_p_{j+1}.",
+    "support": "at least one partial record and all selected boundaries equal basic_p_{j+1}",
+    "refute": "any selected boundary differs from basic_p_{j+1}",
+    "not_tested": "all eight records have full source-segment coverage"
+  },
+  "prospective_residue_prediction": {
+    "derivation": "Post-hoc pattern observed only in prior unique_b_plus_1 records: residues M mod 5 = 0 or 4 were partial; residues 1 or 2 were full. No prior classification prediction is asserted for residue 3.",
+    "scope": "Only rank-10..17 records whose phase is unique_b_plus_1 and whose M mod 5 is in {0,1,2,4}.",
+    "predictions": {
+      "M_mod_5_in_{0,4}": "proper_strict_subcomponent",
+      "M_mod_5_in_{1,2}": "full_segment_coverage",
+      "M_mod_5_equals_3": "NO_PREDECLARED_CLASSIFICATION",
+      "non_unique_b_plus_1_phase": "NO_PREDECLARED_CLASSIFICATION"
+    },
+    "evaluation": "Exact match on every in-scope rank is prospective support; any in-scope mismatch refutes this finite predictive rule for B2. Out-of-scope ranks are reported but do not count for or against this residue prediction."
+  },
+  "frozen_method": "Same exact rank-one rational reconstruction, exact root isolation/order, core/hull positivity certificates, rational outside counterexamples, and direct-matrix exact checkpoint regression as A107-B1.",
+  "no_posthoc_changes": "No witness replacement, rank changes, batch resizing, support/active-band changes, tolerance changes, or residue-rule edits after B2 outcomes are inspected.",
+  "nonclaims": [
+    "not a theorem for all 922 gamma-plus records",
+    "not an all-M theorem",
+    "not a claim for residue 3",
+    "not a claim for non-unique_b_plus_1 phases",
+    "not a physical claim"
+  ]
+}

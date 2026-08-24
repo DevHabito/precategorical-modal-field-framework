@@ -1,0 +1,153 @@
+{
+  "audit": "A109-H13D2_EXACT_SUFFICIENT_CERTIFICATES_FOR_REPEATED_TIMEOUT_RANKS_327_330",
+  "status": "FROZEN_NOT_EXECUTED",
+  "frozen_after": "Two identical 55-second full-atlas executions for each preregistered H13 rank 327 and 330 timed out with no result file.",
+  "parent_preregistration_sha256": "24f6ab5bf007089a1c7b04260010406835bd1b9f6bc23ef3ffe0e5af4bedf11a",
+  "ranks": [
+    327,
+    330
+  ],
+  "frozen_predictions": [
+    {
+      "canonical_rank": 327,
+      "source_key": "M=264|b=46|phase=b_plus_1_to_b_plus_2|side=right|s=1327/10000|j=48",
+      "maximum": 264,
+      "contact_j": 48,
+      "witness": "1327/10000",
+      "segment_open_bounds": [
+        "7824227607417444994717626235370368217/59029581035870565171200000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 330,
+      "source_key": "M=265|b=46|phase=b_plus_1_to_b_plus_2|side=right|s=33/250|j=48",
+      "maximum": 265,
+      "contact_j": 48,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "38723381438200433166701184092563271457/295147905179352825856000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ]
+    }
+  ],
+  "condition_counts": {
+    "327": 537,
+    "330": 539
+  },
+  "condition_blocks_inclusive": {
+    "327": [
+      [
+        0,
+        79
+      ],
+      [
+        80,
+        159
+      ],
+      [
+        160,
+        239
+      ],
+      [
+        240,
+        319
+      ],
+      [
+        320,
+        399
+      ],
+      [
+        400,
+        479
+      ],
+      [
+        480,
+        536
+      ]
+    ],
+    "330": [
+      [
+        0,
+        79
+      ],
+      [
+        80,
+        159
+      ],
+      [
+        160,
+        239
+      ],
+      [
+        240,
+        319
+      ],
+      [
+        320,
+        399
+      ],
+      [
+        400,
+        479
+      ],
+      [
+        480,
+        538
+      ]
+    ]
+  },
+  "direct_probe_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "method": {
+    "denominator_and_target": "Certify D(s)>0 exactly; for the frozen single left boundary certify the target numerator is strictly increasing, negative at L, positive at witness, and isolate the unique root by exact rational bisection.",
+    "non_target_conditions": "Certify every non-target KKT numerator strictly positive over the complete source segment. Fixed index blocks are only execution partitions; no conditions may be omitted.",
+    "independent_regression": "At four frozen exact rational probes, compare every symbolic numerator identity to direct 8x8 matrix evaluation; require zero mismatches, positivity on strict probes, and frozen target nonpositive on the outside probe.",
+    "classification": "Resolved only if target crossing and all non-target positivity/direct checks pass exactly."
+  },
+  "adjudication": {
+    "support": "Every frozen block and direct probe passes exactly.",
+    "refute_or_failed": "Any exact contradiction, wrong target sign/monotonicity, non-target nonpositivity, or direct symbolic/matrix mismatch.",
+    "inconclusive": "Any frozen block/probe cannot be completed or returns an unresolved certificate without contradiction."
+  },
+  "no_posthoc_changes": "No rank, condition block, target, witness, support, threshold, tolerance, or prediction may be changed after diagnostic outcomes are inspected.",
+  "scope": {
+    "meaning": "These certificates can mathematically resolve the frozen H13 predictions for repeated-timeout ranks 327 and 330 but do not retroactively make their original full-atlas executions complete.",
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

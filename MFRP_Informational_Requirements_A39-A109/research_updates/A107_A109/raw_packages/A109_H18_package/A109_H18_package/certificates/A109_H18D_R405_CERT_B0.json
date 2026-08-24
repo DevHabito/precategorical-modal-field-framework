@@ -1,0 +1,28 @@
+{
+  "audit": "A109-H18D_SHARDED_CERT_BLOCK",
+  "rank": 405,
+  "block_index": 0,
+  "condition_index_range": [
+    0,
+    89
+  ],
+  "preregistration_sha256": "2ebcd6612c005291a11913ef705555bd306e860b06a8eda1dc39e4b2164835a1",
+  "verdict": "CERT_SUPPORT",
+  "checked_condition_count": 89,
+  "skipped": [
+    {
+      "index": 2,
+      "condition": "basic_p_56",
+      "reason": "frozen_target"
+    }
+  ],
+  "certificate_methods": {
+    "single_interval": 88,
+    "monotone_increasing": 1
+  },
+  "exact_failure_count": 0,
+  "unresolved_count": 0,
+  "failures": [],
+  "unresolved": [],
+  "seconds": 1.0297467708587646
+}

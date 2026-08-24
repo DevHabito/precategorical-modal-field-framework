@@ -1,0 +1,143 @@
+{
+  "audit": "A109_H4_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT_SUBSHARD",
+  "preregistration_sha256": "804612fe7a9455b626721804b382f7a7e5dfb6e2fc29187ab3455e762bd77a3b",
+  "rank_range": [
+    184,
+    184
+  ],
+  "verdict": "PASS_A109_H4_TWO_SIDED_HOLDOUT",
+  "summary": {
+    "record_count": 1,
+    "predicted_class_counts": {
+      "proper_strict_subcomponent": 1
+    },
+    "atlas_class_counts": {
+      "proper_strict_subcomponent": 1
+    },
+    "match_count": 1,
+    "partial_count": 1,
+    "direct_comparisons": 1468,
+    "direct_mismatches": 0,
+    "core_failures": 0,
+    "hull_failures": 0
+  },
+  "failures": [],
+  "records": [
+    {
+      "canonical_rank": 184,
+      "source_key": "M=179|b=31|phase=unique_b_plus_2|side=full|s=131/1000|j=33",
+      "maximum": 179,
+      "contact_j": 33,
+      "frozen_prediction": {
+        "canonical_rank": 184,
+        "source_key": "M=179|b=31|phase=unique_b_plus_2|side=full|s=131/1000|j=33",
+        "maximum": 179,
+        "contact_j": 33,
+        "witness": "131/1000",
+        "segment_open_bounds": [
+          "129/1000",
+          "133/1000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": -1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "target_monotonicity_certified": {
+          "upper_adjacent_strictly_increasing": true,
+          "lower_adjacent_strictly_decreasing": true,
+          "common_denominator_positive": true
+        },
+        "predicted_class": "proper_strict_subcomponent",
+        "predicted_boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_34"
+          }
+        ]
+      },
+      "atlas_class": "proper_strict_subcomponent",
+      "selected_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_34"
+        }
+      ],
+      "endpoint_nonpositive_conditions": {
+        "left": [
+          "basic_p_34"
+        ],
+        "right": []
+      },
+      "core_certificate_summary": {
+        "condition_count": 368,
+        "pass_count": 368,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 366,
+          "monotone_increasing": 1,
+          "convex_increasing": 1
+        }
+      },
+      "hull_certificate_summary": {
+        "condition_count": 367,
+        "pass_count": 367,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 366,
+          "convex_increasing": 1
+        }
+      },
+      "root_failure_count": 0,
+      "direct_regression_summary": {
+        "checkpoint_count": 4,
+        "comparison_count": 1468,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "failures": [],
+      "strict_component": {
+        "lower": "157583728297417479318503093/1208925819614629174706176000",
+        "upper": "133/1000",
+        "selected_left_boundary": {
+          "condition": "basic_p_34",
+          "side": "left",
+          "bracket": [
+            "39395932074354369829625773/302231454903657293676544000",
+            "157583728297417479318503093/1208925819614629174706176000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 81,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        },
+        "selected_right_boundary": null
+      },
+      "outside_counterexamples": [
+        {
+          "side": "left",
+          "condition": "basic_p_34",
+          "point": "78383789756926160713899949/604462909807314587353088000",
+          "sign": -1
+        }
+      ],
+      "seconds": 10.022271156311035
+    }
+  ],
+  "scope": {
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

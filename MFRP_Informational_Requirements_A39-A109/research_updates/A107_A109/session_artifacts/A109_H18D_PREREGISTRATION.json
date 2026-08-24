@@ -1,0 +1,171 @@
+{
+  "audit": "A109-H18D_EXACT_SUFFICIENT_CERTIFICATES_AFTER_REPEATED_FULL_ATLAS_TIMEOUTS",
+  "status": "FROZEN_NOT_EXECUTED",
+  "frozen_after": "A109-H18 full-atlas attempts A1 and A2 each timed out at the preregistered 55-second window without result for ranks 405 and 410.",
+  "parent_preregistration_sha256": "ea471ffc0a5e62c2ec0c15adea3d759b424802e7d35bcd92f13fb90e67cd6ef3",
+  "ranks": [
+    405,
+    410
+  ],
+  "timeout_policy_evidence": {
+    "405": [
+      "A109_H18_work/logs/R405_attempt1.log (no result after 55-second timeout)",
+      "A109_H18_work/logs/R405_attempt2.log (no result after 55-second timeout)"
+    ],
+    "410": [
+      "A109_H18_work/logs/R410_attempt1.log (no result after 55-second timeout)",
+      "A109_H18_work/logs/R410_attempt2.log (no result after 55-second timeout)"
+    ]
+  },
+  "frozen_predictions": [
+    {
+      "canonical_rank": 405,
+      "source_key": "M=305|b=53|phase=b_plus_1_to_b_plus_2|side=right|s=1327/10000|j=55",
+      "maximum": 305,
+      "contact_j": 55,
+      "witness": "1327/10000",
+      "segment_open_bounds": [
+        "156371917846938522082048323379150181851/1180591620717411303424000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_56"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 410,
+      "source_key": "M=307|b=53|phase=b_plus_1_to_b_plus_2|side=right|s=131/1000|j=55",
+      "maximum": 307,
+      "contact_j": 55,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "611872735018037590153680164365260227529/4722366482869645213696000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_56"
+        }
+      ]
+    }
+  ],
+  "condition_counts": {
+    "405": 619,
+    "410": 623
+  },
+  "condition_blocks_inclusive": {
+    "405": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        618
+      ]
+    ],
+    "410": [
+      [
+        0,
+        89
+      ],
+      [
+        90,
+        179
+      ],
+      [
+        180,
+        269
+      ],
+      [
+        270,
+        359
+      ],
+      [
+        360,
+        449
+      ],
+      [
+        450,
+        539
+      ],
+      [
+        540,
+        622
+      ]
+    ]
+  },
+  "direct_probe_indices": {
+    "405": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "410": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "method": {
+    "denominator": "Certify D(s)>0 on the complete frozen source segment exactly.",
+    "witness": "Require every frozen KKT condition positive at the source witness.",
+    "partial_target": "For the frozen single adjacent boundary, certify the declared monotonic derivative, exact endpoint/witness sign pattern, and isolate exactly one rationally bracketed target root.",
+    "other_conditions": "Certify every non-target KKT numerator strictly positive over the complete source segment.",
+    "direct_regression": "At four frozen rational probes, independently compute direct matrix KKT quantities and require exact equality N_i(s)=D(s)*direct_i(s); require strict positivity at interior probes and target failure at the outside probe."
+  },
+  "adjudication": {
+    "support": "All base applicability checks, every required certificate block, and every direct probe pass exactly.",
+    "refute": "Any exact non-target KKT condition is nonpositive on the source segment, the target pattern is false, or direct rational evaluation contradicts the symbolic reconstruction.",
+    "inconclusive": "A positivity certificate remains unresolved without an exact contradiction or execution fails."
+  },
+  "protocol_separation": "Successful H18D certificates mathematically resolve ranks 405 and 410 but do not retroactively mark their H18 full-atlas executions complete.",
+  "no_posthoc_changes": "No rank, witness, source interval, support, prediction, boundary, tolerance, or certification rule may change after this file is frozen.",
+  "scope": [
+    "finite A102 legacy_three_band_gamma_plus records only",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ]
+}

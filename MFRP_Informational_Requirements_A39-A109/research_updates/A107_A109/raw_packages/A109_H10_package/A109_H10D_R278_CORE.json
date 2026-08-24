@@ -1,0 +1,89 @@
+{
+  "audit": "A109-H10D_SHARDED_CORE",
+  "rank": 278,
+  "preregistration_sha256": "e545aec22d76b989732da4505988d1be316ad3115116365aecf2ae61cbbcb836",
+  "manifest_sha256": "cf6aaf3ee7325f161d7708e3cfb00272162323717f1a5b0abaa75d7fd805344d",
+  "frozen_prediction": {
+    "canonical_rank": 278,
+    "source_key": "M=239|b=41|phase=unique_b_plus_2|side=full|s=13/100|j=43",
+    "maximum": 239,
+    "contact_j": 43,
+    "witness": "13/100",
+    "segment_open_bounds": [
+      "129/1000",
+      "132619594467371/1000000000000000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_44"
+      }
+    ]
+  },
+  "M": 239,
+  "j": 43,
+  "segment": [
+    "129/1000",
+    "132619594467371/1000000000000000"
+  ],
+  "witness": "13/100",
+  "verdict": "CORE_SUPPORT",
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_44",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "unique_root_certificate": {
+    "lower": "4329836883/33554432000",
+    "upper": "138554780257/1073741824000",
+    "exact_rational_root": false,
+    "steps": 30,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "1/1073741824000"
+  },
+  "certified_condition_count": 486,
+  "certificate_methods": {
+    "single_interval": 287,
+    "strictly_concave_endpoint_minimum": 1,
+    "monotone_increasing": 193,
+    "convex_increasing": 2,
+    "adaptive_interval": 3
+  },
+  "exact_failures": [],
+  "unresolved": [],
+  "exact_verdict_failures": [],
+  "seconds": 0.7695508003234863
+}

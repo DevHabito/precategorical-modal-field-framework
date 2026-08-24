@@ -1,0 +1,1287 @@
+{
+  "key": "M=18|b=4|phase=unique_b_plus_1|side=full|s=131/1000|j=5",
+  "maximum": 18,
+  "base_contact": 4,
+  "compressed_phase": "unique_b_plus_1",
+  "phase_side": "full",
+  "witness": "131/1000",
+  "compressed_contact": 5,
+  "architecture_class": "legacy_three_band_gamma_minus",
+  "architecture": "P={0,j,j+1,M}; Q={1,h,h+1}; gamma- active",
+  "P_support": [
+    0,
+    4,
+    5,
+    18
+  ],
+  "Q_support": [
+    1,
+    9,
+    10
+  ],
+  "active_bands": [
+    [
+      "alpha",
+      1
+    ],
+    [
+      "beta",
+      -1
+    ],
+    [
+      "gamma",
+      -1
+    ]
+  ],
+  "segment_open_bounds": [
+    "129/1000",
+    "133/1000"
+  ],
+  "reference_probe_for_rank_one": "1/8",
+  "orientation": 1,
+  "condition_count": 45,
+  "expected_source_condition_count": 45,
+  "condition_count_matches_A102_source": true,
+  "numerator_plus_denominator_count": 46,
+  "status": "proper_strict_subcomponent",
+  "strict_component": {
+    "lower": "129/1000",
+    "upper": "79660199720182081043296801/604462909807314587353088000",
+    "selected_left_boundary": null,
+    "selected_right_boundary": {
+      "condition": "basic_p_4",
+      "side": "right",
+      "bracket": [
+        "79660199720182081043296801/604462909807314587353088000",
+        "159320399440364162086593603/1208925819614629174706176000"
+      ],
+      "endpoint_signs": [
+        1,
+        -1
+      ],
+      "width": "1/1208925819614629174706176000",
+      "bisection_steps": 81,
+      "derivative_interval_signs": [
+        -1,
+        -1
+      ],
+      "unique_simple_in_bracket": true
+    }
+  },
+  "candidate_roots": {
+    "left": [],
+    "right": [
+      {
+        "condition": "basic_p_4",
+        "side": "right",
+        "bracket": [
+          "79660199720182081043296801/604462909807314587353088000",
+          "159320399440364162086593603/1208925819614629174706176000"
+        ],
+        "endpoint_signs": [
+          1,
+          -1
+        ],
+        "width": "1/1208925819614629174706176000",
+        "bisection_steps": 81,
+        "derivative_interval_signs": [
+          -1,
+          -1
+        ],
+        "unique_simple_in_bracket": true
+      }
+    ],
+    "count": 1
+  },
+  "endpoint_nonpositive_conditions": {
+    "left": [],
+    "right": [
+      "basic_p_4"
+    ]
+  },
+  "root_ordering_certificate": {
+    "check_count": 0,
+    "pass_count": 0,
+    "failure_count": 0,
+    "checks": [],
+    "failures": []
+  },
+  "core_certificate": {
+    "interval": [
+      "129/1000",
+      "79660199720182081043296801/604462909807314587353088000"
+    ],
+    "condition_count": 46,
+    "pass_count": 46,
+    "failure_count": 0,
+    "method_counts": {
+      "single_interval": 29,
+      "monotone_decreasing": 1,
+      "monotone_increasing": 16
+    },
+    "certificates": [
+      {
+        "name": "common_denominator",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_0",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_4",
+        "pass": true,
+        "method": "monotone_decreasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          -1,
+          -1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_5",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_18",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_9",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_10",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_t",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_alpha_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_beta_-1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_gamma_-1",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_0",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_2",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_2",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_3",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_3",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_4",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_5",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_6",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_6",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_7",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_7",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_8",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_8",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_9",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_10",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_11",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_11",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_12",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_12",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_13",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_13",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_14",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_14",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_15",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_15",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_16",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_16",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_17",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_17",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_18",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_alpha_-1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_beta_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_gamma_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      }
+    ],
+    "failures": []
+  },
+  "nonselected_boundary_hull_certificate": {
+    "hull": [
+      "129/1000",
+      "159320399440364162086593603/1208925819614629174706176000"
+    ],
+    "selected_boundary_conditions": [
+      "basic_p_4"
+    ],
+    "condition_count": 45,
+    "pass_count": 45,
+    "failure_count": 0,
+    "method_counts": {
+      "single_interval": 29,
+      "monotone_increasing": 16
+    },
+    "certificates": [
+      {
+        "name": "common_denominator",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_0",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_5",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_18",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_9",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_10",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_t",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_alpha_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_beta_-1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_gamma_-1",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_0",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_2",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_2",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_3",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_3",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_4",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_5",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_6",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_6",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_7",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_7",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_8",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_8",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_9",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_10",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_11",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_11",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_12",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_12",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_13",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_13",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_14",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_14",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_15",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_15",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_16",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_16",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_17",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_17",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_18",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_alpha_-1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_beta_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_gamma_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      }
+    ],
+    "failures": []
+  },
+  "root_failures": [],
+  "outside_counterexamples": [
+    {
+      "side": "right",
+      "condition": "basic_p_4",
+      "point": "320107533449109842322515011/2417851639229258349412352000",
+      "sign": -1
+    }
+  ]
+}

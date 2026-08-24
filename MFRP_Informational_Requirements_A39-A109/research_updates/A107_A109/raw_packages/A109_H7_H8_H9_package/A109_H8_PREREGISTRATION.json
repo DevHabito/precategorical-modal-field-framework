@@ -1,0 +1,417 @@
+{
+  "audit": "A109-H8_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT",
+  "status": "FROZEN_NOT_EXECUTED",
+  "frozen_after": "A109-H7 mathematical resolution; no full-atlas outcomes for ranks 239..254 inspected",
+  "target_only_scan_sha256": "86e00691027e8f51d2882a053cd47e697da31bc059179701217fe19c33bc0c6f",
+  "holdout_selection": {
+    "canonical_ranks_inclusive": [
+      239,
+      254
+    ],
+    "record_count": 16,
+    "replacement_if_failure": "none",
+    "shards": [
+      [
+        239,
+        240
+      ],
+      [
+        241,
+        242
+      ],
+      [
+        243,
+        244
+      ],
+      [
+        245,
+        246
+      ],
+      [
+        247,
+        248
+      ],
+      [
+        249,
+        250
+      ],
+      [
+        251,
+        252
+      ],
+      [
+        253,
+        254
+      ]
+    ]
+  },
+  "frozen_rule": {
+    "applicability": "Require D>0 on source segment, N_{j+1} strictly increasing, N_j strictly decreasing, both target numerators positive at witness, and nonzero relevant endpoint signs.",
+    "left_partial": "N_{j+1}(L)<0 and N_j(R)>0 -> left basic_p_{j+1}.",
+    "right_partial": "N_{j+1}(L)>0 and N_j(R)<0 -> right basic_p_j.",
+    "two_sided_partial": "Both endpoint target signs negative -> both adjacent boundaries.",
+    "full": "Both endpoint target signs positive -> full source-segment coverage.",
+    "zero_or_failed_applicability": "NO_CLASSIFICATION."
+  },
+  "prediction_generation_constraint": "Only the frozen target-only scan; no non-adjacent KKT condition or atlas outcome.",
+  "predeclared_batch_prediction": {
+    "full_segment_coverage": 12,
+    "proper_strict_subcomponent": 4,
+    "left_boundaries": 4,
+    "right_boundaries": 0,
+    "two_sided": 0
+  },
+  "adjudication": {
+    "support": "Every classifiable rank matches exact full-atlas class/boundaries, nonselected conditions certify positive, and direct rational regression has zero discrepancies.",
+    "refute": "Any exact class/boundary mismatch or non-adjacent selected obstruction.",
+    "inconclusive": "Execution/certification failure without exact mathematical contradiction."
+  },
+  "execution_policy": "Use only preregistered rank-pair shards. Repeated timeout ranks may be addressed only by a separately preregistered exact sufficient-certificate protocol, which does not retroactively complete the full-atlas protocol.",
+  "no_posthoc_changes": "No witness/rank/batch/predictor/support/tolerance changes after outcomes.",
+  "nonclaims": [
+    "not an all-922 theorem",
+    "not a physical claim"
+  ],
+  "holdout_predictions": [
+    {
+      "canonical_rank": 239,
+      "source_key": "M=214|b=37|phase=unique_b_plus_2|side=full|s=131/1000|j=39",
+      "maximum": 214,
+      "contact_j": 39,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_40"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 240,
+      "source_key": "M=215|b=37|phase=unique_b_plus_2|side=full|s=131/1000|j=39",
+      "maximum": 215,
+      "contact_j": 39,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_40"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 241,
+      "source_key": "M=216|b=37|phase=unique_b_plus_2|side=full|s=13/100|j=39",
+      "maximum": 216,
+      "contact_j": 39,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "66113150755043121/500000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 242,
+      "source_key": "M=216|b=38|phase=unique_b_plus_1|side=full|s=663/5000|j=39",
+      "maximum": 216,
+      "contact_j": 39,
+      "witness": "663/5000",
+      "segment_open_bounds": [
+        "132226301510086243/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 243,
+      "source_key": "M=217|b=37|phase=unique_b_plus_2|side=full|s=13/100|j=39",
+      "maximum": 217,
+      "contact_j": 39,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "65496769819944579/500000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 244,
+      "source_key": "M=217|b=38|phase=unique_b_plus_1|side=full|s=131/1000|j=39",
+      "maximum": 217,
+      "contact_j": 39,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "130993539639889159/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 245,
+      "source_key": "M=218|b=37|phase=unique_b_plus_2|side=full|s=1293/10000|j=39",
+      "maximum": 218,
+      "contact_j": 39,
+      "witness": "1293/10000",
+      "segment_open_bounds": [
+        "129/1000",
+        "32443067739587153/250000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 246,
+      "source_key": "M=218|b=38|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=39",
+      "maximum": 218,
+      "contact_j": 39,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129772270958348613/1000000000000000000",
+        "38789372412193601961926250339755963273/295147905179352825856000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 247,
+      "source_key": "M=219|b=38|phase=b_plus_1_to_b_plus_2|side=left|s=1291/10000|j=39",
+      "maximum": 219,
+      "contact_j": 39,
+      "witness": "1291/10000",
+      "segment_open_bounds": [
+        "129/1000",
+        "152624768620333991249261/1180591620717411303424000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 248,
+      "source_key": "M=220|b=38|phase=unique_b_plus_2|side=full|s=131/1000|j=40",
+      "maximum": 220,
+      "contact_j": 40,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_41"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 249,
+      "source_key": "M=221|b=38|phase=unique_b_plus_2|side=full|s=131/1000|j=40",
+      "maximum": 221,
+      "contact_j": 40,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_41"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 250,
+      "source_key": "M=222|b=38|phase=unique_b_plus_2|side=full|s=13/100|j=40",
+      "maximum": 222,
+      "contact_j": 40,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "66015443202753929/500000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 251,
+      "source_key": "M=222|b=39|phase=unique_b_plus_1|side=full|s=53/400|j=40",
+      "maximum": 222,
+      "contact_j": 40,
+      "witness": "53/400",
+      "segment_open_bounds": [
+        "132030886405507859/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 252,
+      "source_key": "M=223|b=38|phase=unique_b_plus_2|side=full|s=13/100|j=40",
+      "maximum": 223,
+      "contact_j": 40,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "5233287682865803/40000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 253,
+      "source_key": "M=223|b=39|phase=unique_b_plus_1|side=full|s=131/1000|j=40",
+      "maximum": 223,
+      "contact_j": 40,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "32708048017911269/250000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 254,
+      "source_key": "M=224|b=38|phase=unique_b_plus_2|side=full|s=1293/10000|j=40",
+      "maximum": 224,
+      "contact_j": 40,
+      "witness": "1293/10000",
+      "segment_open_bounds": [
+        "129/1000",
+        "64822190277886999/500000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    }
+  ]
+}

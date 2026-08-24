@@ -1,0 +1,83 @@
+{
+  "audit": "A109-H13D_EXACT_SUFFICIENT_CERTIFICATE_FOR_REPEATED_TIMEOUT_RANK_319_AGGREGATE",
+  "parent_preregistration_sha256": "24f6ab5bf007089a1c7b04260010406835bd1b9f6bc23ef3ffe0e5af4bedf11a",
+  "certificate_preregistration_sha256": "fb15ea204528f2c676ae616c601426a046f1e5978ccf5eaa9a76efdd9ba561e7",
+  "sharded_execution_manifest_sha256": "1a69e16bd3a9554f0cc1419a2c74cd7944c41a571e6aaf57c743cce4914c197d",
+  "rank": 319,
+  "verdict": "RESOLVED_SUPPORT_A109_H13D_CERTIFICATE",
+  "full_atlas_protocol_status": "INCOMPLETE_EXECUTION_TWO_TIMEOUTS_NO_RESULT",
+  "monolithic_certificate_status": "RUNTIME_TIMEOUT_NO_RESULT_BEFORE_SHARDING",
+  "frozen_prediction": {
+    "canonical_rank": 319,
+    "source_key": "M=260|b=45|phase=b_plus_1_to_b_plus_2|side=right|s=131/1000|j=47",
+    "maximum": 260,
+    "contact_j": 47,
+    "witness": "131/1000",
+    "segment_open_bounds": [
+      "30489375728763383233475813892062534959/236118324143482260684800000000000000000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_48"
+      }
+    ]
+  },
+  "M": 260,
+  "j": 47,
+  "segment": [
+    "30489375728763383233475813892062534959/236118324143482260684800000000000000000",
+    "133/1000"
+  ],
+  "witness": "131/1000",
+  "target": "basic_p_48",
+  "target_side": "left",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "unique_root_certificate": {
+    "lower": "4150377727890713731144343070313119684831525461/31691265005705735037417580134400000000000000000",
+    "upper": "33203021823567834583187537478737943586589668729/253530120045645880299340641075200000000000000000",
+    "exact_rational_root": false,
+    "steps": 30,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "442124734032792916232986107937465041/253530120045645880299340641075200000000000000000"
+  },
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "non_target_condition_count": 528,
+  "non_target_failure_count": 0,
+  "non_target_unresolved_count": 0,
+  "direct_probe_count": 4,
+  "direct_comparison_count": 2116,
+  "direct_mismatch_count": 0,
+  "direct_positivity_failure_count": 0,
+  "direct_outside_failure_count": 0,
+  "outside_nonpositive_conditions": [
+    "basic_p_48"
+  ],
+  "methodological_note": "Mathematically resolved by the separately frozen exact sufficient-certificate protocol. This does not retroactively complete the original H13 full-atlas protocol for rank 319."
+}

@@ -1,0 +1,28 @@
+{
+  "audit": "A109-H8D_EXECUTION_PARTITION_MANIFEST",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "parent_preregistration_sha256": "65f281a7fec2ab904af0afe3028a301b1ccf37a456b0374251569d5bfa9feb9d",
+  "reason": "Partition exact sufficient-certificate computation into one core certificate and independent direct-matrix probe processes to avoid process-memory/time accumulation observed in prior diagnostic runs; scientific criteria and probe pattern are unchanged.",
+  "execution_partition": {
+    "239": {
+      "core": "target derivative/sign/root plus all non-target positivity certificates and denominator/witness checks",
+      "direct_probe_labels": [
+        "outside_left",
+        "inside",
+        "witness",
+        "right_mid"
+      ]
+    },
+    "240": {
+      "core": "target derivative/sign/root plus all non-target positivity certificates and denominator/witness checks",
+      "direct_probe_labels": [
+        "outside_left",
+        "inside",
+        "witness",
+        "right_mid"
+      ]
+    }
+  },
+  "aggregation": "Support only if each core has no exact failure or unresolved item and all frozen direct probes have zero symbolic-vs-direct mismatch; inside/witness/right-mid strictly positive; outside-left contains predicted target among nonpositive conditions.",
+  "no_changes": "No condition/probe omission, target/endpoints/tolerances/ranks/classifier changes."
+}

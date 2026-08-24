@@ -1,0 +1,546 @@
+[
+  {
+    "audit": 39,
+    "result": "a39_sharp_prediction_interval_results.json",
+    "program": "a39_sharp_prediction_interval_audit.py",
+    "note": null,
+    "audit_name": "A39_PROVISIONAL_SHARP_PREDICTION_INTERVAL",
+    "verdict": "PASS_SHARP_OMITTED_TRANSFORM_AND_FUTURE_SCORE_INTERVAL"
+  },
+  {
+    "audit": 40,
+    "result": "a40_monotone_refinement_results.json",
+    "program": "a40_monotone_refinement_audit.py",
+    "note": null,
+    "audit_name": "A40_PROVISIONAL_MONOTONE_REFINEMENT",
+    "verdict": "PASS_MONOTONE_REFINEMENT_THEOREM_WITH_EXACT_FINITE_GRID_OBSTRUCTION"
+  },
+  {
+    "audit": 41,
+    "result": "a41_robust_interval_data_results.json",
+    "program": "a41_robust_interval_data_audit.py",
+    "note": null,
+    "audit_name": "A41_PROVISIONAL_ROBUST_INTERVAL_DATA",
+    "verdict": "PASS_ROBUST_DUAL_STABILITY_WITH_EXACT_STRUCTURAL_NOISE_DECOMPOSITION"
+  },
+  {
+    "audit": 42,
+    "result": "a42_finite_budget_design_results.json",
+    "program": "a42_finite_budget_design_audit.py",
+    "note": null,
+    "audit_name": "A42_PROVISIONAL_FINITE_BUDGET_DESIGN",
+    "verdict": "PASS_FINITE_CATALOGUE_MINIMAX_DESIGN_WITH_NOISE_DEPENDENT_OPTIMUM"
+  },
+  {
+    "audit": 43,
+    "result": "a43_direct_q_minimax_design_results.json",
+    "program": "a43_direct_q_minimax_design_audit.py",
+    "note": null,
+    "audit_name": "A43_PROVISIONAL_DIRECT_Q_MINIMAX_DESIGN",
+    "verdict": "PASS_DIRECT_Q_MINIMAX_DESIGN_WITH_EXACT_FRACTIONAL_CERTIFICATES"
+  },
+  {
+    "audit": 44,
+    "result": "a44_continuous_parameter_results.json",
+    "program": "a44_continuous_parameter_audit.py",
+    "note": null,
+    "audit_name": "A44_PROVISIONAL_CONTINUOUS_THIRD_PARAMETER",
+    "verdict": "PASS_CONTINUOUS_PARAMETER_SINGULAR_LIMIT_AND_COMPACTIFIED_NOISY_OPTIMUM"
+  },
+  {
+    "audit": 45,
+    "result": "a45_positive_noise_phase_diagram_results.json",
+    "program": "a45_positive_noise_phase_diagram_audit.py",
+    "note": null,
+    "audit_name": "A45_PROVISIONAL_COMPLETE_POSITIVE_NOISE_PHASE_DIAGRAM",
+    "verdict": "PASS_COMPLETE_POSITIVE_NOISE_PHASE_DIAGRAM_AND_HARD_CAP_RULE"
+  },
+  {
+    "audit": 46,
+    "result": "a46_noise_separation_boundary_layer_results.json",
+    "program": "a46_noise_separation_boundary_layer_audit.py",
+    "note": null,
+    "audit_name": "A46_PROVISIONAL_NOISE_SEPARATION_BOUNDARY_LAYER",
+    "verdict": "PASS_NOISE_SEPARATION_BOUNDARY_LAYER_AND_LOCAL_BIFURCATION_SKELETON"
+  },
+  {
+    "audit": 47,
+    "result": "a47_global_noise_separation_phase_diagram_results.json",
+    "program": "a47_global_noise_separation_phase_diagram_audit.py",
+    "note": null,
+    "audit_name": "A47_COMPLETE_GLOBAL_NOISE_SEPARATION_PHASE_DIAGRAM",
+    "verdict": "PASS_COMPLETE_GLOBAL_NOISE_SEPARATION_PHASE_DIAGRAM"
+  },
+  {
+    "audit": 48,
+    "result": "a48_target_inclusion_degeneracy_results.json",
+    "program": "a48_target_inclusion_degeneracy_audit.py",
+    "note": null,
+    "audit_name": "A48_TARGET_INCLUSION_DEGENERACY",
+    "verdict": "PASS_TARGET_INCLUSION_DEGENERACY_AND_HONEST_ANCHOR_CONTRACT"
+  },
+  {
+    "audit": 49,
+    "result": "a49_expanded_target_excluding_anchor_catalogue_results.json",
+    "program": "a49_expanded_anchor_catalogue_audit.py",
+    "note": null,
+    "audit_name": "A49_EXPANDED_TARGET_EXCLUDING_ANCHOR_CATALOGUE",
+    "verdict": "PASS_EXPANDED_TARGET_EXCLUDING_ANCHOR_CATALOGUE"
+  },
+  {
+    "audit": 50,
+    "result": "a50_continuous_first_anchor_results.json",
+    "program": "a50_continuous_first_anchor_audit.py",
+    "note": null,
+    "audit_name": "A50_CONTINUOUS_FIRST_TARGET_EXCLUDING_ANCHOR",
+    "verdict": "PASS_CONTINUOUS_FIRST_ANCHOR_BOUNDARY_OPTIMALITY"
+  },
+  {
+    "audit": 51,
+    "result": "a51_target_exclusion_distance_results.json",
+    "program": "a51_target_exclusion_distance_audit.py",
+    "note": null,
+    "audit_name": "A51_TARGET_EXCLUSION_DISTANCE_LAW",
+    "verdict": "PASS_TARGET_EXCLUSION_DISTANCE_BOUNDARY_LAW"
+  },
+  {
+    "audit": 52,
+    "result": "a52_continuous_second_anchor_results.json",
+    "program": "a52_continuous_second_anchor_audit.py",
+    "note": null,
+    "audit_name": "A52_CONTINUOUS_SECOND_ANCHOR",
+    "verdict": "PASS_CONTINUOUS_SECOND_ANCHOR_INTERIOR_OPTIMUM"
+  },
+  {
+    "audit": 53,
+    "result": "a53_coupled_second_third_anchor_results.json",
+    "program": "a53_coupled_second_third_anchor_audit.py",
+    "note": null,
+    "audit_name": "A53_COUPLED_SECOND_THIRD_ANCHOR",
+    "verdict": "PASS_COUPLED_ANCHOR_COORDINATEWISE_GLOBAL_CERTIFICATE"
+  },
+  {
+    "audit": 54,
+    "result": "a54_universal_continuum_witness_results.json",
+    "program": "a54_universal_continuum_witness_audit.py",
+    "note": null,
+    "audit_name": "A54_UNIVERSAL_CONTINUUM_WITNESS",
+    "verdict": "PASS_UNIVERSAL_CONTINUUM_WITNESS_AND_COMPLETE_GLOBAL_ANCHOR_OPTIMUM"
+  },
+  {
+    "audit": 55,
+    "result": "a55_finite_cap_implementability_results.json",
+    "program": "a55_finite_cap_implementability_audit.py",
+    "note": null,
+    "audit_name": "A55_FINITE_CAP_IMPLEMENTABILITY",
+    "verdict": "PASS_FINITE_CAP_IMPLEMENTABILITY_AND_EXPONENTIAL_CONVERGENCE"
+  },
+  {
+    "audit": 56,
+    "result": "a56_cost_regularized_finite_cap_results.json",
+    "program": "a56_cost_regularized_finite_cap_audit.py",
+    "note": null,
+    "audit_name": "A56_COST_REGULARIZED_FINITE_CAP_POLICY",
+    "verdict": "PASS_COST_REGULARIZED_FINITE_CAP_POLICY_AND_DIMINISHING_RETURNS"
+  },
+  {
+    "audit": 57,
+    "result": "a57_heteroscedastic_third_channel_results.json",
+    "program": "a57_heteroscedastic_third_channel_audit.py",
+    "note": null,
+    "audit_name": "A57_HETEROSCEDASTIC_THIRD_CHANNEL",
+    "verdict": "PASS_HETEROSCEDASTIC_THIRD_CHANNEL_THRESHOLD_POLICY"
+  },
+  {
+    "audit": 58,
+    "result": "a58_independent_three_channel_error_results.json",
+    "program": "a58_independent_three_channel_error_audit.py",
+    "note": null,
+    "audit_name": "A58_INDEPENDENT_THREE_CHANNEL_ERROR_VECTOR",
+    "verdict": "PASS_INDEPENDENT_THREE_CHANNEL_ERROR_VECTOR_AND_CALIBRATION_PRIORITY"
+  },
+  {
+    "audit": 59,
+    "result": "a59_correlated_ellipsoidal_calibration_results.json",
+    "program": "a59_correlated_ellipsoidal_calibration_audit.py",
+    "note": null,
+    "audit_name": "A59_CORRELATED_ELLIPSOIDAL_CALIBRATION",
+    "verdict": "PASS_EXACT_CORRELATED_ELLIPSOIDAL_CALIBRATION_RISK"
+  },
+  {
+    "audit": 60,
+    "result": "a60_general_covariance_matrix_results.json",
+    "program": "a60_general_covariance_matrix_audit.py",
+    "note": null,
+    "audit_name": "A60_GENERAL_COVARIANCE_MATRIX",
+    "verdict": "PASS_GENERAL_COVARIANCE_MATRIX_ROBUST_CALIBRATION_THEOREM"
+  },
+  {
+    "audit": 61,
+    "result": "a61_spectral_covariance_uncertainty_results.json",
+    "program": "a61_spectral_covariance_uncertainty_audit.py",
+    "note": null,
+    "audit_name": "A61_SPECTRAL_COVARIANCE_ESTIMATION_UNCERTAINTY",
+    "verdict": "PASS_SPECTRAL_COVARIANCE_ESTIMATION_UNCERTAINTY"
+  },
+  {
+    "audit": 62,
+    "result": "a62_bootstrap_spectral_protocol_results.json",
+    "program": "a62_bootstrap_spectral_protocol_audit.py",
+    "note": null,
+    "audit_name": "A62_BOOTSTRAP_SPECTRAL_COVARIANCE_PROTOCOL",
+    "verdict": "PASS_MODEL_CONDITIONAL_BOOTSTRAP_SPECTRAL_PROTOCOL_RAW_BOOTSTRAP_REJECTED"
+  },
+  {
+    "audit": 63,
+    "result": "a63_structural_generalization_results.json",
+    "program": "a63_structural_generalization_audit.py",
+    "note": null,
+    "audit_name": "A63_STRUCTURAL_GENERALIZATION_BEYOND_SIX_STATE_EXAMPLE",
+    "verdict": "PASS_GENERAL_FINITE_SUPPORT_NONIDENTIFIABILITY_AND_CROSS_CONTRACT_ATLAS"
+  },
+  {
+    "audit": 64,
+    "result": "a64_scale_normalized_boundary_pair_results.json",
+    "program": "a64_scale_normalized_boundary_pair_audit.py",
+    "note": null,
+    "audit_name": "A64_SCALE_NORMALIZED_NOISE_AND_BOUNDARY_PAIR",
+    "verdict": "PASS_SCALE_NORMALIZED_NOISE_AND_BOUNDARY_PAIR_STRESS_ATLAS"
+  },
+  {
+    "audit": 65,
+    "result": "a65_continuous_first_anchor_results.json",
+    "program": "a65_continuous_first_anchor_audit.py",
+    "note": null,
+    "audit_name": "A65_CONTINUOUS_FIRST_ANCHOR",
+    "verdict": "PASS_CONTINUOUS_FIRST_ANCHOR_STRESS_AND_EXACT_LOCAL_SENSITIVITY"
+  },
+  {
+    "audit": 66,
+    "result": "a66_exact_global_phase_results.json",
+    "program": "a66_exact_global_phase_audit.py",
+    "note": null,
+    "audit_name": "A66_EXACT_GLOBAL_CONTINUOUS_PHASE_THEOREMS",
+    "verdict": "PASS_EXACT_GLOBAL_CONTINUOUS_PHASE_THEOREMS"
+  },
+  {
+    "audit": 67,
+    "result": "a67_central_mean_support_family_results.json",
+    "program": "a67_central_mean_support_family_audit.py",
+    "note": null,
+    "audit_name": "A67_CENTRAL_MEAN_SUPPORT_SIZE_FAMILY",
+    "verdict": "PASS_EXACT_CENTRAL_MEAN_SUPPORT_SIZE_FAMILY_THEOREM"
+  },
+  {
+    "audit": 68,
+    "result": "a68_dual_envelope_channel_value_results.json",
+    "program": "a68_dual_envelope_channel_value_audit.py",
+    "note": null,
+    "audit_name": "A68_DUAL_ENVELOPE_AND_FIRST_CHANNEL_VALUE",
+    "verdict": "PASS_DUAL_ENVELOPE_AND_EXACT_FIRST_CHANNEL_VALUE"
+  },
+  {
+    "audit": 69,
+    "result": "a69_cramer_chebyshev_reduction_results.json",
+    "program": "a69_cramer_chebyshev_reduction_audit.py",
+    "note": null,
+    "audit_name": "A69_CRAMER_CHEBYSHEV_REDUCTION",
+    "verdict": "PASS_CRAMER_REDUCTION_WITH_TOTAL_POSITIVITY_OBSTRUCTION"
+  },
+  {
+    "audit": 70,
+    "result": "a70_signed_q_schur_dominance_results.json",
+    "program": "a70_signed_q_schur_dominance_audit.py",
+    "note": null,
+    "audit_name": "A70_SIGNED_Q_SCHUR_ARITHMETIC_GRID_DOMINANCE",
+    "verdict": "PASS_SIGNED_Q_SCHUR_ARITHMETIC_GRID_DOMINANCE"
+  },
+  {
+    "audit": 71,
+    "result": "a71_orientation_bifurcation_results.json",
+    "program": "a71_orientation_bifurcation_audit.py",
+    "note": null,
+    "audit_name": "A71_ORIENTATION_BIFURCATION_AND_ACTIVE_SET_PROTECTION",
+    "verdict": "PASS_ORIENTATION_BIFURCATION_AND_ACTIVE_SET_PROTECTION"
+  },
+  {
+    "audit": 72,
+    "result": "a72_local_pivot_diamond_results.json",
+    "program": "a72_local_pivot_diamond_audit.py",
+    "note": "MFRP_next_step_local_pivot_diamond.md",
+    "audit_name": "A72_LOCAL_PIVOT_DIAMOND_AND_ORIENTATION_SELECTION",
+    "verdict": "PASS_EXACT_LOCAL_PIVOT_DIAMOND_AND_ORIENTATION_SELECTION"
+  },
+  {
+    "audit": 73,
+    "result": "a73_complete_one_pivot_neighborhood_results.json",
+    "program": "a73_complete_one_pivot_neighborhood_audit.py",
+    "note": "MFRP_next_step_complete_one_pivot_neighborhood.md",
+    "audit_name": "A73_COMPLETE_ONE_PIVOT_NEIGHBORHOOD",
+    "verdict": "PASS_COMPLETE_ONE_PIVOT_NEIGHBORHOOD_AND_M13_SIGN_SELECTION"
+  },
+  {
+    "audit": 74,
+    "result": "a74_interval_gamma_bifurcation_results.json",
+    "program": "a74_interval_gamma_bifurcation_audit.py",
+    "note": "MFRP_next_step_interval_gamma_bifurcation.md",
+    "audit_name": "A74_INTERVAL_STABLE_GAMMA_BIFURCATION_AND_M14_EXTENSION",
+    "verdict": "PASS_INTERVAL_STABLE_GAMMA_BIFURCATION_AND_M14_EXTENSION"
+  },
+  {
+    "audit": 75,
+    "result": "a75_parity_orientation_results.json",
+    "program": "a75_parity_orientation_audit.py",
+    "note": "MFRP_next_step_parity_double_bifurcation.md",
+    "audit_name": "A75_PARITY_REDUCED_SUPPORT_SIZE_ORIENTATION",
+    "verdict": "PASS_PARITY_REDUCED_DOUBLE_BIFURCATION_AND_M15_M16_EXTENSION"
+  },
+  {
+    "audit": 76,
+    "result": "a76_active_reentry_results.json",
+    "program": "a76_active_reentry_audit.py",
+    "note": "MFRP_next_step_candidate_vs_actual_active_set.md",
+    "audit_name": "A76_CANDIDATE_ORIENTATION_VERSUS_ACTUAL_ACTIVE_SET",
+    "verdict": "PASS_NO_ACTIVE_REENTRY_AT_M22_AND_ACTUAL_SIGN_FLIP_AT_M23"
+  },
+  {
+    "audit": 77,
+    "result": "a77_contact_family_reset_results.json",
+    "program": "a77_fixed_family_parity_audit.py",
+    "note": "MFRP_next_step_fixed_family_contact_reset.md",
+    "audit_name": "A77_FIXED_FAMILY_ORIENTATION_AND_ACTIVE_CONTACT_RESET",
+    "verdict": "PASS_FIXED_FAMILY_DOUBLE_BIFURCATION_AND_ACTIVE_CONTACT_RESET"
+  },
+  {
+    "audit": 78,
+    "result": "a78_rational_probe_contact_selection_results.json",
+    "program": "a78_rational_probe_contact_selection_audit.py",
+    "note": "MFRP_next_step_rational_probe_contact_selection.md",
+    "audit_name": "A78_EXACT_RATIONAL_PROBE_CONTACT_SELECTION",
+    "verdict": "PASS_EXACT_RATIONAL_PROBE_CONTACT_SELECTION_AND_COMPRESSION_RESETS"
+  },
+  {
+    "audit": 79,
+    "result": "a79_compression_interval_results.json",
+    "program": "a79_compression_interval_certificate_audit.py",
+    "note": "MFRP_next_step_compression_interval_certificate.md",
+    "audit_name": "A79_EXACT_COMPRESSION_INTERVAL_AND_CONTACT_ENTRY",
+    "verdict": "PASS_EXACT_COMPRESSION_INTERVALS_AND_CONTACT_ENTRY_POLYNOMIALS"
+  },
+  {
+    "audit": 80,
+    "result": "a80_local_compression_window_atlas_results.json",
+    "program": "a80_local_compression_window_atlas_audit.py",
+    "note": "MFRP_next_step_local_compression_window_atlas.md",
+    "audit_name": "A80_EXACT_LOCAL_COMPRESSION_WINDOW_ATLAS",
+    "verdict": "PASS_EXACT_LOCAL_COMPRESSION_WINDOW_ATLAS_AND_SIX_TERM_BOUNDARY_LAW"
+  },
+  {
+    "audit": 81,
+    "result": "a81_reduced_boundary_system_results.json",
+    "program": "a81_reduced_boundary_system_audit.py",
+    "note": "MFRP_next_step_reduced_boundary_system.md",
+    "audit_name": "A81_REDUCED_TWO_VARIABLE_BOUNDARY_SYSTEM",
+    "verdict": "PASS_REDUCED_BOUNDARY_SYSTEM_AND_ORDERED_ROOT_THEOREM"
+  },
+  {
+    "audit": 82,
+    "result": "a82_adjacent_contact_locator_results.json",
+    "program": "a82_adjacent_contact_locator_audit.py",
+    "note": "MFRP_next_step_adjacent_contact_locator.md",
+    "audit_name": "A82_EXACT_ADJACENT_CONTACT_LOCATOR",
+    "verdict": "PASS_EXACT_ADJACENT_CONTACT_LOCATOR_AND_LOCAL_ORIENTATION_SWITCHES"
+  },
+  {
+    "audit": 83,
+    "result": "a83_seven_term_adjacent_sign_atlas_results.json",
+    "program": "a83_seven_term_adjacent_sign_atlas_audit.py",
+    "note": "MFRP_next_step_seven_term_adjacent_sign_atlas.md",
+    "audit_name": "A83_SEVEN_TERM_ADJACENT_DIFFERENCE_SIGN_ATLAS",
+    "verdict": "PASS_SEVEN_TERM_ADJACENT_DIFFERENCE_FACTORIZATION_AND_COMPLETE_LOCAL_SIGN_ATLAS"
+  },
+  {
+    "audit": 84,
+    "result": "a84_k_space_exponential_polynomial_stress_results.json",
+    "program": "a84_k_space_exponential_polynomial_stress_audit.py",
+    "note": "MFRP_next_step_k_space_exponential_polynomial_stress.md",
+    "audit_name": "A84_K_SPACE_EXPONENTIAL_POLYNOMIAL_STRESS",
+    "verdict": "PASS_K_SPACE_EXPONENTIAL_POLYNOMIAL_REDUCTION_AND_FINITE_ONE_VARIATION_STRESS"
+  },
+  {
+    "audit": 85,
+    "result": "a85_parity_dominant_balance_contact_localization_results.json",
+    "program": "a85_parity_dominant_balance_contact_localization_audit.py",
+    "note": "MFRP_next_step_parity_dominant_balance_contact_localization.md",
+    "audit_name": "A85_PARITY_DOMINANT_BALANCE_AND_ASYMPTOTIC_CONTACT_LOCALIZATION",
+    "verdict": "PASS_PARITY_DOMINANT_BALANCE_AND_ASYMPTOTIC_CONTACT_LOCALIZATION"
+  },
+  {
+    "audit": 86,
+    "result": "a86_exact_rational_contact_strip_results.json",
+    "program": "a86_exact_rational_contact_strip_audit.py",
+    "note": "MFRP_next_step_exact_rational_contact_strip.md",
+    "audit_name": "A86_EXACT_RATIONAL_CONTACT_STRIP_AND_FINITE_EXCLUSION_THRESHOLDS",
+    "verdict": "PASS_EXACT_RATIONAL_THREE_CONTACT_LOCALIZATION_AND_FINITE_EXCLUSION_THRESHOLDS"
+  },
+  {
+    "audit": 87,
+    "result": "a87_exact_secant_offset_classifier_results.json",
+    "program": "a87_exact_secant_offset_classifier_audit.py",
+    "note": "MFRP_next_step_exact_secant_offset_classifier.md",
+    "audit_name": "A87_EXACT_SECANT_RESIDUAL_OFFSET_CLASSIFIER",
+    "verdict": "PASS_EXACT_SECANT_RESIDUAL_THREE_OFFSET_CLASSIFIER_WITH_EIGHT_TERM_FALLBACK"
+  },
+  {
+    "audit": 88,
+    "result": "a88_nine_term_secant_positivity_results.json",
+    "program": "a88_nine_term_secant_positivity_audit.py",
+    "note": "MFRP_next_step_nine_term_secant_positivity.md",
+    "audit_name": "A88_NINE_TERM_LOCAL_SECANT_REDUCTION_AND_EXTENDED_POSITIVITY_STRESS",
+    "verdict": "PASS_NINE_TERM_SECANT_REDUCTION_EXTENDED_EXACT_POSITIVITY_AND_POSITIVE_PARITY_PHASE_LIMIT"
+  },
+  {
+    "audit": 89,
+    "result": "a89_uniform_secant_threshold_results.json",
+    "program": "a89_uniform_secant_threshold_audit.py",
+    "note": "MFRP_next_step_uniform_secant_threshold.md",
+    "audit_name": "A89_EXPLICIT_UNIFORM_LOCAL_SECANT_THRESHOLD",
+    "verdict": "PASS_EXPLICIT_UNIFORM_LOCAL_SECANT_POSITIVITY_THRESHOLD_M521"
+  },
+  {
+    "audit": 90,
+    "result": "a90_prethreshold_all_k_one_variation_results.json",
+    "program": "a90_prethreshold_all_k_one_variation_audit.py",
+    "note": "MFRP_next_step_prethreshold_all_k_one_variation.md",
+    "audit_name": "A90_EXACT_PRETHRESHOLD_ALL_K_ONE_VARIATION",
+    "verdict": "PASS_EXACT_PRETHRESHOLD_NINE_PROBE_ALL_K_ONE_VARIATION_AND_FOUR_CONTACT_STRIP"
+  },
+  {
+    "audit": 91,
+    "result": "a91_four_term_offset_three_results.json",
+    "program": "a91_exact_four_term_offset_three_mechanism_audit.py",
+    "note": "MFRP_next_step_four_term_offset_three_mechanism.md",
+    "audit_name": "A91_EXACT_FOUR_TERM_OFFSET_THREE_MECHANISM",
+    "verdict": "PASS_EXACT_FOUR_TERM_OFFSET_THREE_CLASSIFIER_AND_PARITY_SCREENING_OBSTRUCTION"
+  },
+  {
+    "audit": 92,
+    "result": "a92_continuum_offset_three_window_results.json",
+    "program": "a92_exact_continuum_offset_three_window_audit.py",
+    "note": "MFRP_next_step_continuum_offset_three_window_atlas.md",
+    "audit_name": "A92_EXACT_CONTINUUM_OFFSET_THREE_WINDOW_ATLAS",
+    "verdict": "PASS_EXACT_CONTINUUM_DECISIVE_FACTOR_ATLAS_AND_25_LOCAL_OFFSET_THREE_WINDOWS"
+  },
+  {
+    "audit": 93,
+    "result": "a93_continuum_global_one_variation_results.json",
+    "program": "a93_exact_continuum_global_one_variation_audit.py",
+    "note": "MFRP_next_step_continuum_global_one_variation.md",
+    "audit_name": "A93_EXACT_CONTINUUM_FULL_SEQUENCE_ONE_VARIATION",
+    "verdict": "PASS_EXACT_FULL_SEQUENCE_CONTINUUM_ONE_VARIATION_AND_25_GLOBAL_OFFSET_THREE_WINDOWS"
+  },
+  {
+    "audit": 94,
+    "result": "a94_all_cell_continuum_one_variation_results.json",
+    "program": "a94_exact_all_cell_continuum_one_variation_audit.py",
+    "note": "MFRP_next_step_all_cell_continuum_one_variation.md",
+    "audit_name": "A94_EXACT_CONTINUUM_ALL_CELL_ONE_VARIATION",
+    "verdict": "PASS_EXACT_CONTINUUM_ALL_858_CELL_ONE_VARIATION_AND_205_GLOBAL_ADJACENT_TRANSITIONS"
+  },
+  {
+    "audit": 95,
+    "result": "a95_rational_witness_lift_results.json",
+    "program": "a95_rational_witness_lift_obstruction_audit.py",
+    "note": "MFRP_next_step_rational_witness_lift_obstruction.md",
+    "audit_name": "A95_EXACT_RATIONAL_WITNESS_LIFT_AND_RESTRICTED_FAMILY_OBSTRUCTION",
+    "verdict": "PASS_EXACT_RATIONAL_WITNESS_LIFT_ATLAS_AND_RESTRICTED_FAMILY_OBSTRUCTION"
+  },
+  {
+    "audit": 96,
+    "result": "a96_full_lp_active_set_resolution_results.json",
+    "program": "a96_full_lp_active_set_resolution_audit.py",
+    "note": "MFRP_next_step_full_lp_active_set_resolution.md",
+    "audit_name": "A96_EXACT_UNRESTRICTED_FULL_LP_ACTIVE_SET_RESOLUTION",
+    "verdict": "PASS_EXACT_UNRESTRICTED_FULL_LP_ACTIVE_SET_RESOLUTION_AT_M125"
+  },
+  {
+    "audit": 97,
+    "result": "a97_endpoint_released_interval_and_obstruction_results.json",
+    "program": "a97_endpoint_released_interval_and_obstruction_audit.py",
+    "note": "MFRP_next_step_endpoint_released_interval_and_obstruction_atlas.md",
+    "audit_name": "A97_ENDPOINT_RELEASED_INTERVAL_AND_OBSTRUCTION_ATLAS",
+    "verdict": "PASS_ENDPOINT_RELEASED_M125_INTERVAL_AND_76_OF_83_OBSTRUCTION_RESOLUTION_WITH_SEVEN_Q0_ENTRY_RESIDUALS"
+  },
+  {
+    "audit": 98,
+    "result": "a98_full_lp_active_set_resolution_results.json",
+    "program": "a98_full_lp_active_set_resolution_audit.py",
+    "note": "MFRP_next_step_second_unrestricted_full_lp_resolution.md",
+    "audit_name": "A98_EXACT_UNRESTRICTED_FULL_LP_ACTIVE_SET_RESOLUTION",
+    "verdict": "PASS_EXACT_UNRESTRICTED_FULL_LP_ACTIVE_SET_RESOLUTION_AT_M396"
+  },
+  {
+    "audit": 99,
+    "result": "a99_q0q1_interval_and_residual_atlas_results.json",
+    "program": "a99_q0q1_interval_and_residual_atlas_audit.py",
+    "note": "MFRP_next_step_q0q1_interval_and_residual_atlas.md",
+    "audit_name": "A99_Q0Q1_INTERVAL_AND_REMAINING_RESIDUAL_ATLAS",
+    "verdict": "PASS_Q0Q1_M396_INTERVAL_AND_TWO_OF_SIX_REMAINING_RESIDUAL_RESOLUTIONS"
+  },
+  {
+    "audit": 100,
+    "result": "a100_full_lp_active_set_resolution_results.json",
+    "program": "a100_full_lp_active_set_resolution_audit.py",
+    "note": "MFRP_next_step_third_unrestricted_full_lp_resolution.md",
+    "audit_name": "A100_EXACT_UNRESTRICTED_FULL_LP_ACTIVE_SET_RESOLUTION",
+    "verdict": "PASS_EXACT_UNRESTRICTED_FULL_LP_ACTIVE_SET_RESOLUTION_AT_M443"
+  },
+  {
+    "audit": 101,
+    "result": "a101_gamma_active_interval_and_residual_closure_results.json",
+    "program": "a101_gamma_active_interval_and_residual_closure_audit.py",
+    "note": "MFRP_next_step_gamma_active_interval_and_residual_closure.md",
+    "audit_name": "A101_GAMMA_ACTIVE_INTERVAL_AND_FINAL_RESIDUAL_CLOSURE",
+    "verdict": "PASS_GAMMA_ACTIVE_M443_INTERVAL_AND_THREE_OF_THREE_FINAL_RESIDUAL_RESOLUTIONS"
+  },
+  {
+    "audit": 102,
+    "result": "a102_complete_rational_witness_lift_atlas_results.json",
+    "program": "a102_complete_rational_witness_lift_atlas_audit.py",
+    "note": "MFRP_next_step_complete_rational_witness_lift_atlas.md",
+    "audit_name": "A102_COMPLETE_EXACT_RATIONAL_WITNESS_LIFT_ATLAS",
+    "verdict": "PASS_COMPLETE_EXACT_1063_RATIONAL_WITNESS_LIFT_ATLAS"
+  },
+  {
+    "audit": 103,
+    "result": "a103_endpoint_released_continuum_segment_results.json",
+    "program": "a103_endpoint_released_continuum_segment_atlas_audit.py",
+    "note": "MFRP_next_step_endpoint_released_continuum_segment_atlas.md",
+    "audit_name": "A103_EXACT_ENDPOINT_RELEASED_CONTINUUM_SEGMENT_ATLAS",
+    "verdict": "PASS_EXACT_CONTINUUM_CLASSIFICATION_OF_76_ENDPOINT_RELEASED_SEGMENTS_WITH_25_FULL_AND_51_PARTIAL_COMPONENTS"
+  },
+  {
+    "audit": 104,
+    "result": "a104_exceptional_q0q1_continuum_segment_results.json",
+    "program": "a104_exceptional_q0q1_continuum_segment_atlas_audit.py",
+    "note": "MFRP_next_step_exceptional_q0q1_continuum_segment_atlas.md",
+    "audit_name": "A104_EXACT_EXCEPTIONAL_Q0Q1_CONTINUUM_SEGMENT_ATLAS",
+    "verdict": "PASS_EXACT_CONTINUUM_CLASSIFICATION_OF_SEVEN_EXCEPTIONAL_Q0Q1_SEGMENTS_AS_TWO_SIDED_STRICT_SUBCOMPONENTS"
+  },
+  {
+    "audit": 105,
+    "result": "a105_legacy_two_band_continuum_segment_results.json",
+    "program": "a105_legacy_two_band_continuum_segment_atlas_audit.py",
+    "note": "MFRP_next_step_legacy_two_band_continuum_segment_atlas.md",
+    "audit_name": "A105_EXACT_LEGACY_TWO_BAND_CONTINUUM_SEGMENT_ATLAS",
+    "verdict": "PASS_EXACT_CONTINUUM_CLASSIFICATION_OF_40_LEGACY_TWO_BAND_SEGMENTS_WITH_0_FULL_AND_40_PARTIAL_COMPONENTS"
+  },
+  {
+    "audit": 106,
+    "result": "a106_legacy_gamma_minus_continuum_segment_results.json",
+    "program": "a106_legacy_gamma_minus_continuum_segment_atlas_audit.py",
+    "note": "MFRP_next_step_legacy_gamma_minus_continuum_segment_atlas.md",
+    "audit_name": "A106_EXACT_LEGACY_GAMMA_MINUS_CONTINUUM_SEGMENT_ATLAS",
+    "verdict": "PASS_EXACT_CONTINUUM_CLASSIFICATION_OF_18_LEGACY_GAMMA_MINUS_SEGMENTS_WITH_1_FULL_AND_17_PARTIAL_COMPONENTS"
+  }
+]

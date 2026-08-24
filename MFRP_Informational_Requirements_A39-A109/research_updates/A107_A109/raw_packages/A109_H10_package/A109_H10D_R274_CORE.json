@@ -1,0 +1,58 @@
+{
+  "audit": "A109-H10D_SHARDED_CORE",
+  "rank": 274,
+  "preregistration_sha256": "e545aec22d76b989732da4505988d1be316ad3115116365aecf2ae61cbbcb836",
+  "manifest_sha256": "cf6aaf3ee7325f161d7708e3cfb00272162323717f1a5b0abaa75d7fd805344d",
+  "frozen_prediction": {
+    "canonical_rank": 274,
+    "source_key": "M=236|b=41|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=42",
+    "maximum": 236,
+    "contact_j": 42,
+    "witness": "13/100",
+    "segment_open_bounds": [
+      "129408115480172189/1000000000000000000",
+      "153934071029135338330063911581582149597/1180591620717411303424000000000000000000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": 1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "full_segment_coverage",
+    "predicted_boundaries": []
+  },
+  "M": 236,
+  "j": 42,
+  "segment": [
+    "129408115480172189/1000000000000000000",
+    "153934071029135338330063911581582149597/1180591620717411303424000000000000000000"
+  ],
+  "witness": "13/100",
+  "verdict": "CORE_SUPPORT",
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": null,
+  "target_signs": null,
+  "target_derivative_certificate": null,
+  "unique_root_certificate": null,
+  "certified_condition_count": 481,
+  "certificate_methods": {
+    "single_interval": 480,
+    "monotone_decreasing": 1
+  },
+  "exact_failures": [],
+  "unresolved": [],
+  "exact_verdict_failures": [],
+  "seconds": 1.540966272354126
+}

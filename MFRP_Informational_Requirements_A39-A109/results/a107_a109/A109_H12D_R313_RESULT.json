@@ -1,0 +1,131 @@
+{
+  "audit": "A109-H12D_EXACT_SUFFICIENT_CERTIFICATE_FOR_REPEATED_TIMEOUT_RANK_313",
+  "preregistration_sha256": "e6e337b1dd2c94565607bc99082f6e223fb1ab7e42c17eddf442c8c01afdff2a",
+  "rank": 313,
+  "source_key": "M=258|b=45|phase=b_plus_1_to_b_plus_2|side=left|s=33/250|j=46",
+  "M": 258,
+  "j": 46,
+  "segment": [
+    "131049324120680821/1000000000000000000",
+    "7841164459600498545702859862099531207/59029581035870565171200000000000000000"
+  ],
+  "witness": "33/250",
+  "frozen_prediction": {
+    "canonical_rank": 313,
+    "source_key": "M=258|b=45|phase=b_plus_1_to_b_plus_2|side=left|s=33/250|j=46",
+    "maximum": 258,
+    "contact_j": 46,
+    "witness": "33/250",
+    "segment_open_bounds": [
+      "131049324120680821/1000000000000000000",
+      "7841164459600498545702859862099531207/59029581035870565171200000000000000000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": 1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": -1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "right",
+        "condition": "basic_p_46"
+      }
+    ]
+  },
+  "verdict": "RESOLVED_SUPPORT_A109_H12D_CERTIFICATE",
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_46",
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "target_signs": {
+    "L": 1,
+    "witness": 1,
+    "R": -1
+  },
+  "unique_root_certificate": {
+    "lower": "4208603834367395646598394053227700000185252717/31691265005705735037417580134400000000000000000",
+    "upper": "8417207668784051056062372049559859862470036641/63382530011411470074835160268800000000000000000",
+    "exact_rational_root": false,
+    "steps": 30,
+    "signs": [
+      1,
+      -1
+    ],
+    "width": "49259762865583943104459862099531207/63382530011411470074835160268800000000000000000"
+  },
+  "certified_condition_count": 524,
+  "certificate_methods": {
+    "single_interval": 523,
+    "strictly_concave_endpoint_minimum": 1
+  },
+  "exact_failure_count": 0,
+  "unresolved_count": 0,
+  "exact_failures_detail": [],
+  "unresolved_detail": [],
+  "direct_checks": [
+    {
+      "label": "left_mid",
+      "probe": "263049324120680821/2000000000000000000",
+      "comparison_count": 525,
+      "mismatches": [],
+      "nonpositive_conditions": []
+    },
+    {
+      "label": "witness",
+      "probe": "33/250",
+      "comparison_count": 525,
+      "mismatches": [],
+      "nonpositive_conditions": []
+    },
+    {
+      "label": "inside",
+      "probe": "8391850815120552671537514630968500000185252717/63382530011411470074835160268800000000000000000",
+      "comparison_count": 525,
+      "mismatches": [],
+      "nonpositive_conditions": []
+    },
+    {
+      "label": "outside_right",
+      "probe": "16836593897919464675834708159906998970219138209/126765060022822940149670320537600000000000000000",
+      "comparison_count": 525,
+      "mismatches": [],
+      "nonpositive_conditions": [
+        "basic_p_46"
+      ]
+    }
+  ],
+  "direct_comparison_count": 2100,
+  "direct_mismatch_count": 0,
+  "direct_positivity_failures": [],
+  "direct_outside_failures": [],
+  "exact_verdict_failures": [],
+  "seconds": 66.66559553146362,
+  "scope": {
+    "meaning": "This protocol can mathematically resolve the frozen H12 prediction for repeated-timeout rank 313, but does not retroactively make the original full-atlas rank complete.",
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

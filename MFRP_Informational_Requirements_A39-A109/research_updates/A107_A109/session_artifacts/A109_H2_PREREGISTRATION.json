@@ -1,0 +1,1406 @@
+{
+  "audit": "A109-H2_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT",
+  "status": "FROZEN_BEFORE_FULL_ATLAS_EXECUTION",
+  "parent_rule": "A109 two-sided adjacent-variable rule, unchanged from preregistration before ranks 106..121.",
+  "prior_information": "Full-atlas outcomes for ranks 122..172 have not been used to generate or alter these predictions. Target-only adjacent-variable quantities were previously eligible for the separate right-branch search; this holdout is deterministic contiguous coverage, not outcome-selected.",
+  "holdout_selection": {
+    "canonical_ranks_inclusive": [
+      122,
+      172
+    ],
+    "record_count": 51,
+    "replacement_if_failure": "none",
+    "shards": [
+      [
+        122,
+        129
+      ],
+      [
+        130,
+        137
+      ],
+      [
+        138,
+        145
+      ],
+      [
+        146,
+        153
+      ],
+      [
+        154,
+        161
+      ],
+      [
+        162,
+        169
+      ],
+      [
+        170,
+        172
+      ]
+    ]
+  },
+  "frozen_rule": {
+    "applicability": "Require D>0 on source segment, N_{j+1} strictly increasing, N_j strictly decreasing, both target numerators positive at witness, and nonzero relevant endpoint signs.",
+    "left_partial": "If N_{j+1}(L)<0 and N_j(R)>0, predict one left boundary basic_p_{j+1}.",
+    "right_partial": "If N_{j+1}(L)>0 and N_j(R)<0, predict one right boundary basic_p_j.",
+    "two_sided_partial": "If both endpoint target signs are negative, predict a witness-containing strict component with left basic_p_{j+1} and right basic_p_j boundaries.",
+    "full": "If both endpoint target signs are positive, predict full source-segment coverage.",
+    "zero_or_failed_applicability": "NO_CLASSIFICATION."
+  },
+  "prediction_generation_constraint": "Only D, basic_p_{j+1}, basic_p_j, their exact endpoint/witness signs, and exact monotonicity applicability certificates were used. No non-adjacent KKT condition, full root atlas, analyze_record result, or direct-matrix result was consulted.",
+  "adjudication": {
+    "support": "Every classifiable record matches exact full-atlas class and exactly the predicted boundary set; all non-selected KKT conditions certify positive on the relevant core/hull; exact direct rational matrix regression has zero discrepancies.",
+    "refute": "Any classifiable record has an exact class or boundary mismatch, or any non-adjacent KKT condition becomes a selected boundary/exact obstruction contrary to the frozen two-sided rule.",
+    "inconclusive": "Execution/certification failure without an exact mathematical contradiction."
+  },
+  "no_posthoc_changes": "No witness replacement, rank changes, batch resizing, predictor edits, condition substitutions, tolerance changes, support/active-band changes, or rescue classifier after outcomes.",
+  "nonclaims": [
+    "not an all-922 theorem",
+    "not a proof outside the finite audited catalogue",
+    "not a physical claim"
+  ],
+  "holdout_predictions": [
+    {
+      "canonical_rank": 122,
+      "source_key": "M=133|b=23|phase=unique_b_plus_2|side=full|s=131/1000|j=25",
+      "maximum": 133,
+      "contact_j": 25,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_26"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 123,
+      "source_key": "M=134|b=23|phase=unique_b_plus_2|side=full|s=13/100|j=25",
+      "maximum": 134,
+      "contact_j": 25,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "33191474276959091/250000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 124,
+      "source_key": "M=134|b=24|phase=unique_b_plus_1|side=full|s=83/625|j=25",
+      "maximum": 134,
+      "contact_j": 25,
+      "witness": "83/625",
+      "segment_open_bounds": [
+        "26553179421567273/200000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 125,
+      "source_key": "M=135|b=23|phase=unique_b_plus_2|side=full|s=13/100|j=25",
+      "maximum": 135,
+      "contact_j": 25,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "130780322513719471/1000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 126,
+      "source_key": "M=135|b=24|phase=unique_b_plus_1|side=full|s=131/1000|j=25",
+      "maximum": 135,
+      "contact_j": 25,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "8173770157107467/62500000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 127,
+      "source_key": "M=136|b=24|phase=unique_b_plus_1|side=full|s=131/1000|j=25",
+      "maximum": 136,
+      "contact_j": 25,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 128,
+      "source_key": "M=137|b=24|phase=b_plus_1_to_b_plus_2|side=left|s=647/5000|j=25",
+      "maximum": 137,
+      "contact_j": 25,
+      "witness": "647/5000",
+      "segment_open_bounds": [
+        "129/1000",
+        "9580047680125964464547/73786976294838206464000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 129,
+      "source_key": "M=138|b=24|phase=unique_b_plus_2|side=full|s=131/1000|j=26",
+      "maximum": 138,
+      "contact_j": 26,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_27"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 130,
+      "source_key": "M=139|b=24|phase=unique_b_plus_2|side=full|s=131/1000|j=26",
+      "maximum": 139,
+      "contact_j": 26,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_27"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 131,
+      "source_key": "M=140|b=24|phase=unique_b_plus_2|side=full|s=13/100|j=26",
+      "maximum": 140,
+      "contact_j": 26,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "33108221698727977/250000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 132,
+      "source_key": "M=140|b=25|phase=unique_b_plus_1|side=full|s=1327/10000|j=26",
+      "maximum": 140,
+      "contact_j": 26,
+      "witness": "1327/10000",
+      "segment_open_bounds": [
+        "132432886794911909/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 133,
+      "source_key": "M=141|b=24|phase=unique_b_plus_2|side=full|s=13/100|j=26",
+      "maximum": 141,
+      "contact_j": 26,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "13053422280342673/100000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 134,
+      "source_key": "M=141|b=25|phase=unique_b_plus_1|side=full|s=131/1000|j=26",
+      "maximum": 141,
+      "contact_j": 26,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "130534222803426731/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 135,
+      "source_key": "M=142|b=25|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=26",
+      "maximum": 142,
+      "contact_j": 26,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "15666877358820632838169/118059162071741130342400"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 136,
+      "source_key": "M=142|b=25|phase=b_plus_1_to_b_plus_2|side=right|s=83/625|j=27",
+      "maximum": 142,
+      "contact_j": 27,
+      "witness": "83/625",
+      "segment_open_bounds": [
+        "156668773588206328381691/1180591620717411303424000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_28"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 137,
+      "source_key": "M=144|b=25|phase=unique_b_plus_2|side=full|s=131/1000|j=27",
+      "maximum": 144,
+      "contact_j": 27,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_28"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 138,
+      "source_key": "M=145|b=25|phase=unique_b_plus_2|side=full|s=131/1000|j=27",
+      "maximum": 145,
+      "contact_j": 27,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_28"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 139,
+      "source_key": "M=146|b=25|phase=unique_b_plus_2|side=full|s=13/100|j=27",
+      "maximum": 146,
+      "contact_j": 27,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "66063627535086273/500000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 140,
+      "source_key": "M=146|b=26|phase=unique_b_plus_1|side=full|s=53/400|j=27",
+      "maximum": 146,
+      "contact_j": 27,
+      "witness": "53/400",
+      "segment_open_bounds": [
+        "132127255070172547/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 141,
+      "source_key": "M=147|b=25|phase=unique_b_plus_2|side=full|s=13/100|j=27",
+      "maximum": 147,
+      "contact_j": 27,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "130308220105140173/1000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 142,
+      "source_key": "M=147|b=26|phase=unique_b_plus_1|side=full|s=131/1000|j=27",
+      "maximum": 147,
+      "contact_j": 27,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "65154110052570087/500000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 143,
+      "source_key": "M=148|b=26|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=27",
+      "maximum": 148,
+      "contact_j": 27,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "155775916707579247074769/1180591620717411303424000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 144,
+      "source_key": "M=150|b=26|phase=unique_b_plus_2|side=full|s=131/1000|j=28",
+      "maximum": 150,
+      "contact_j": 28,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_29"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 145,
+      "source_key": "M=151|b=26|phase=unique_b_plus_2|side=full|s=131/1000|j=28",
+      "maximum": 151,
+      "contact_j": 28,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_29"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 146,
+      "source_key": "M=152|b=26|phase=unique_b_plus_2|side=full|s=13/100|j=28",
+      "maximum": 152,
+      "contact_j": 28,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "65922879780102917/500000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 147,
+      "source_key": "M=152|b=27|phase=unique_b_plus_1|side=full|s=33/250|j=28",
+      "maximum": 152,
+      "contact_j": 28,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "26369151912041167/200000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 148,
+      "source_key": "M=153|b=26|phase=unique_b_plus_2|side=full|s=13/100|j=28",
+      "maximum": 153,
+      "contact_j": 28,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "8131246846708053/62500000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 149,
+      "source_key": "M=153|b=27|phase=unique_b_plus_1|side=full|s=131/1000|j=28",
+      "maximum": 153,
+      "contact_j": 28,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "130099949547328849/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 150,
+      "source_key": "M=154|b=27|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=28",
+      "maximum": 154,
+      "contact_j": 28,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "77463585806728664621511/590295810358705651712000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 151,
+      "source_key": "M=156|b=27|phase=unique_b_plus_2|side=full|s=131/1000|j=29",
+      "maximum": 156,
+      "contact_j": 29,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_30"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 152,
+      "source_key": "M=157|b=27|phase=unique_b_plus_2|side=full|s=131/1000|j=29",
+      "maximum": 157,
+      "contact_j": 29,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 153,
+      "source_key": "M=158|b=27|phase=unique_b_plus_2|side=full|s=13/100|j=29",
+      "maximum": 158,
+      "contact_j": 29,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "6579282516493473/50000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 154,
+      "source_key": "M=158|b=28|phase=unique_b_plus_1|side=full|s=33/250|j=29",
+      "maximum": 158,
+      "contact_j": 29,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "131585650329869461/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 155,
+      "source_key": "M=159|b=28|phase=unique_b_plus_1|side=full|s=131/1000|j=29",
+      "maximum": 159,
+      "contact_j": 29,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "5196296130159217/40000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 156,
+      "source_key": "M=159|b=27|phase=unique_b_plus_2|side=full|s=647/5000|j=29",
+      "maximum": 159,
+      "contact_j": 29,
+      "witness": "647/5000",
+      "segment_open_bounds": [
+        "129/1000",
+        "16238425406747553/125000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 157,
+      "source_key": "M=160|b=28|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=29",
+      "maximum": 160,
+      "contact_j": 29,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "1540978425622462063251/11805916207174113034240"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 158,
+      "source_key": "M=161|b=28|phase=unique_b_plus_2|side=full|s=131/1000|j=30",
+      "maximum": 161,
+      "contact_j": 30,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_31"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 159,
+      "source_key": "M=162|b=28|phase=unique_b_plus_2|side=full|s=131/1000|j=30",
+      "maximum": 162,
+      "contact_j": 30,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_31"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 160,
+      "source_key": "M=163|b=28|phase=unique_b_plus_2|side=full|s=13/100|j=30",
+      "maximum": 163,
+      "contact_j": 30,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "13298041721867783/100000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 161,
+      "source_key": "M=163|b=29|phase=unique_b_plus_1|side=full|s=13299/100000|j=30",
+      "maximum": 163,
+      "contact_j": 30,
+      "witness": "13299/100000",
+      "segment_open_bounds": [
+        "132980417218677831/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 162,
+      "source_key": "M=164|b=28|phase=unique_b_plus_2|side=full|s=13/100|j=30",
+      "maximum": 164,
+      "contact_j": 30,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "32836144957913107/250000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 163,
+      "source_key": "M=164|b=29|phase=unique_b_plus_1|side=full|s=33/250|j=30",
+      "maximum": 164,
+      "contact_j": 30,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "131344579831652429/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 164,
+      "source_key": "M=165|b=28|phase=unique_b_plus_2|side=full|s=1293/10000|j=30",
+      "maximum": 165,
+      "contact_j": 30,
+      "witness": "1293/10000",
+      "segment_open_bounds": [
+        "129/1000",
+        "129728865437265781/1000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 165,
+      "source_key": "M=165|b=29|phase=unique_b_plus_1|side=full|s=131/1000|j=30",
+      "maximum": 165,
+      "contact_j": 30,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "64864432718632891/500000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 166,
+      "source_key": "M=166|b=29|phase=b_plus_1_to_b_plus_2|side=left|s=1293/10000|j=30",
+      "maximum": 166,
+      "contact_j": 30,
+      "witness": "1293/10000",
+      "segment_open_bounds": [
+        "129/1000",
+        "76620271691468640290977/590295810358705651712000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 167,
+      "source_key": "M=167|b=29|phase=unique_b_plus_2|side=full|s=131/1000|j=31",
+      "maximum": 167,
+      "contact_j": 31,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_32"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 168,
+      "source_key": "M=168|b=29|phase=unique_b_plus_2|side=full|s=131/1000|j=31",
+      "maximum": 168,
+      "contact_j": 31,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_32"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 169,
+      "source_key": "M=169|b=29|phase=unique_b_plus_2|side=full|s=13/100|j=31",
+      "maximum": 169,
+      "contact_j": 31,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "6634846489464769/50000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 170,
+      "source_key": "M=169|b=30|phase=unique_b_plus_1|side=full|s=83/625|j=31",
+      "maximum": 169,
+      "contact_j": 31,
+      "witness": "83/625",
+      "segment_open_bounds": [
+        "132696929789295381/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 171,
+      "source_key": "M=170|b=29|phase=unique_b_plus_2|side=full|s=13/100|j=31",
+      "maximum": 170,
+      "contact_j": 31,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "8195033244711207/62500000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 172,
+      "source_key": "M=170|b=30|phase=unique_b_plus_1|side=full|s=33/250|j=31",
+      "maximum": 170,
+      "contact_j": 31,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "131120531915379313/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    }
+  ]
+}

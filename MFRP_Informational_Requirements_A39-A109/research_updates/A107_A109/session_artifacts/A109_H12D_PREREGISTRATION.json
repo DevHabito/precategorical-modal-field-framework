@@ -1,0 +1,57 @@
+{
+  "audit": "A109-H12D_EXACT_SUFFICIENT_CERTIFICATE_FOR_REPEATED_TIMEOUT_RANK_313",
+  "status": "FROZEN_NOT_EXECUTED",
+  "frozen_after": "Two identical 55-second full-atlas executions for preregistered H12 rank 313 timed out with no result file.",
+  "parent_preregistration_sha256": "9d3671fe1bf7d73f4e69d8edc8093a93161ef83a4139927e2bed1f6f06c63057",
+  "execution_policy_sha256": "883cd0f8ffb7fbb8edc7bbce24d19252e6b0e20c89a3462c58ea0889ab8507c8",
+  "ranks": [
+    313
+  ],
+  "frozen_predictions": [
+    {
+      "canonical_rank": 313,
+      "source_key": "M=258|b=45|phase=b_plus_1_to_b_plus_2|side=left|s=33/250|j=46",
+      "maximum": 258,
+      "contact_j": 46,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "131049324120680821/1000000000000000000",
+        "7841164459600498545702859862099531207/59029581035870565171200000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": -1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_46"
+        }
+      ]
+    }
+  ],
+  "method": {
+    "denominator": "Certify D(s)>0 on entire source segment exactly.",
+    "target": "For the frozen single right boundary, certify the target numerator is strictly decreasing, has positive sign at the witness and negative sign at R, and isolate the unique root by exact rational bisection.",
+    "non_target_conditions": "Certify every required non-target KKT numerator strictly positive on the complete source segment using exact polynomial positivity certificates.",
+    "independent_regression": "At exact rational probes, compare every symbolic numerator identity to direct matrix evaluation; require zero mismatches, strict positivity inside the predicted component, and the frozen target nonpositive outside.",
+    "classification": "Resolved only if the target has the prescribed unique right crossing and every other KKT condition certifies positive across the full source segment."
+  },
+  "adjudication": {
+    "support": "All exact sufficient conditions pass and direct rational regression has zero discrepancies.",
+    "refute_or_failed": "Any exact contradiction, wrong target sign/monotonicity, non-target nonpositivity, or direct symbolic/matrix mismatch.",
+    "inconclusive": "A required exact positivity certificate cannot be completed without a mathematical contradiction."
+  },
+  "no_posthoc_changes": "No rank, witness, source segment, target boundary, support, tolerance, or prediction may be changed after diagnostic outcomes are inspected.",
+  "scope": {
+    "meaning": "This protocol can mathematically resolve the frozen H12 prediction for repeated-timeout rank 313, but does not retroactively make the original full-atlas rank complete.",
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

@@ -19,6 +19,12 @@ This repository preserves the computational and formal development of a pre-cate
 - the A8.1 formal resolution of **5,234 versus 6,942**;
 - manuscript PDFs and an explicit supersession notice.
 
+## Latest research package
+
+The newest package is [`MFRP_Informational_Requirements_A39-A109/`](MFRP_Informational_Requirements_A39-A109/). It keeps the verified A39-A106 baseline intact and adds the A107-A109 gamma-plus continuum investigation.
+
+For a readable overview, start with [`README_A107_A109_UPDATE.md`](MFRP_Informational_Requirements_A39-A109/README_A107_A109_UPDATE.md). The update records both the promising evidence and the result that failed: A108's original one-sided boundary rule has an exact counterexample, while the replacement two-sided local rule remains a finite computational conjecture. The stored prospective sequence currently covers ranks 106-414. The H19 holdout for ranks 415-430 is frozen but deliberately unexecuted.
+
 ## Central correction
 
 For loopless labeled digraphs on five vertices:
@@ -49,6 +55,7 @@ Both exact counts are independently reproduced by exhaustive enumeration and clo
 - `MFRP_Informational_Requirements_A39-A71/` — English computational audit archive for informational requirements A39-A71;
 - `MFRP_Informational_Requirements_A39-A77/` — expanded English computational audit archive for informational requirements A39-A77;
 - `MFRP_Informational_Requirements_A39-A106/` — expanded English computational audit archive for informational requirements A39-A106;
+- `MFRP_Informational_Requirements_A39-A109/` — latest complete English package, preserving the A39-A106 baseline and adding the organized A107-A109 research update;
 - `tools/validate_protocols.py` — validates protocol structure, hashes, seeds, verdicts, gates, metrics, outputs, and claim IDs;
 - `MANIFEST.csv` and `SHA256SUMS.txt` — integrity and completeness records.
 

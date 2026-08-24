@@ -1,0 +1,144 @@
+{
+  "audit": "A109_H18_EXECUTION_MANIFEST",
+  "parent_preregistration_sha256": "ea471ffc0a5e62c2ec0c15adea3d759b424802e7d35bcd92f13fb90e67cd6ef3",
+  "wall_clock_window_seconds": 55,
+  "ranks": [
+    399,
+    414
+  ],
+  "records": [
+    {
+      "rank": 399,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 50.91970086097717,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 400,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 14.29147744178772,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 401,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 15.619023561477661,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 402,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 13.948792934417725,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 403,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 14.453925371170044,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 404,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 49.47350478172302,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 405,
+      "attempt1_exit_status": 124,
+      "attempt2_exit_status": 124,
+      "full_atlas_result_exists": false,
+      "full_atlas_record_seconds": null,
+      "final_resolution": "H18D_exact_sufficient_certificate"
+    },
+    {
+      "rank": 406,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 13.904910802841187,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 407,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 48.70318627357483,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 408,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 16.14507794380188,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 409,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 51.84531807899475,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 410,
+      "attempt1_exit_status": 124,
+      "attempt2_exit_status": 124,
+      "full_atlas_result_exists": false,
+      "full_atlas_record_seconds": null,
+      "final_resolution": "H18D_exact_sufficient_certificate"
+    },
+    {
+      "rank": 411,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 40.28637742996216,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 412,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 52.0127968788147,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 413,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 15.931314468383789,
+      "final_resolution": "full_atlas"
+    },
+    {
+      "rank": 414,
+      "attempt1_exit_status": 0,
+      "attempt2_exit_status": null,
+      "full_atlas_result_exists": true,
+      "full_atlas_record_seconds": 15.21998119354248,
+      "final_resolution": "full_atlas"
+    }
+  ],
+  "repeated_timeout_ranks": [
+    405,
+    410
+  ],
+  "protocol_note": "Only ranks with two identical 55-second timeouts and no full-atlas result were moved to the separately frozen H18D certificate protocol."
+}

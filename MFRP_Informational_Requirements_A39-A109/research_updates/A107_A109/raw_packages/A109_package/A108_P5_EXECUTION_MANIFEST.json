@@ -1,0 +1,41 @@
+{
+  "audit": "A108-P5_DETERMINISTIC_EXECUTION_BLOCK",
+  "status": "FROZEN_BEFORE_P5_EXECUTION",
+  "parent_preregistration": {
+    "path": "/mnt/data/A108_COMPLETE_PREREGISTRATION.json",
+    "sha256": "9547703c849fa4af246855d8128e3e81a50485a9af6dc48c7f222b20cbd9737a"
+  },
+  "selection": {
+    "canonical_ranks_inclusive": [
+      98,
+      129
+    ],
+    "record_count": 32,
+    "shards": [
+      [
+        98,
+        105
+      ],
+      [
+        106,
+        113
+      ],
+      [
+        114,
+        121
+      ],
+      [
+        122,
+        129
+      ]
+    ],
+    "replacement_if_failure": "none"
+  },
+  "method": "Unchanged A108 sufficient-certificate and exact atlas/direct-regression method used in P2-P4. No predictor, KKT condition, support, tolerance, or boundary rule changes.",
+  "adjudication": {
+    "pass": "Every selected record receives the sufficient certificate, matches its already-frozen parent prediction and exact atlas classification, has the predeclared boundary behavior, and has zero exact direct-regression mismatches/failures.",
+    "refute": "Any exact non-target nonpositivity, parent-prediction mismatch, atlas mismatch, boundary mismatch, or exact direct-regression failure.",
+    "inconclusive": "Certification/execution failure without a mathematical counterexample."
+  },
+  "no_posthoc_changes": "No deletion, replacement, rank changes, shard resizing based on outcomes, predictor edits, condition substitution, tolerance changes, or rescue classifier."
+}

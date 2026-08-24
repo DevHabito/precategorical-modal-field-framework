@@ -1,0 +1,96 @@
+{
+  "audit": "A102_SOURCE_CERTIFICATE_HASHES",
+  "source_count": 18,
+  "sources": {
+    "A95_result": {
+      "path": "results/a95_rational_witness_lift_results.json",
+      "sha256": "005aefe165635744e57f78e49189cbf7acbe19c57c9080aaeeb967ec77e35b3a",
+      "size_bytes": 9036
+    },
+    "A95_catalogue": {
+      "path": "results/a95_rational_witness_lift_catalogue.json",
+      "sha256": "326edd554a3e4b0b3a74e2f985aef462c826910d5f708cefa1cfe5d011e96b85",
+      "size_bytes": 1293786
+    },
+    "A95_audit": {
+      "path": "audits/a95_rational_witness_lift_obstruction_audit.py",
+      "sha256": "093b35877f4a8b14b723c714c4f7a36812a875564bedc5b7a45647c8ffaa2a04",
+      "size_bytes": 22114
+    },
+    "A97_result": {
+      "path": "results/a97_endpoint_released_interval_and_obstruction_results.json",
+      "sha256": "974cfdc39b4f5b9951601a6c26e43bc3f4b59dc8882cc7a31caea88e680d9f79",
+      "size_bytes": 6512
+    },
+    "A97_catalogue": {
+      "path": "results/a97_endpoint_released_obstruction_catalogue.json",
+      "sha256": "ddc65d33830f8fafb8253253e65b7d65876dc15369df0bf2edf7b5e75e8a1707",
+      "size_bytes": 106329
+    },
+    "A97_audit": {
+      "path": "audits/a97_endpoint_released_interval_and_obstruction_audit.py",
+      "sha256": "0a559dee21d38320c59ae1293aacb5153188fa037288a54a389d4be5d5ceed4b",
+      "size_bytes": 31678
+    },
+    "A98_result": {
+      "path": "results/a98_full_lp_active_set_resolution_results.json",
+      "sha256": "7bb3bbd9c291f568e02134648f142757ff19037cef06b5c5180e467064792367",
+      "size_bytes": 43778
+    },
+    "A98_certificate": {
+      "path": "results/a98_full_lp_active_set_certificate.json",
+      "sha256": "ed61067769f1e1cbc104f7a74a94f2ef3c113f9baaefd2641df7efa87155294b",
+      "size_bytes": 1827374
+    },
+    "A98_audit": {
+      "path": "audits/a98_full_lp_active_set_resolution_audit.py",
+      "sha256": "5c5a48fd9b372c6b51c10511f11325fad759346b2d4b97cd46d9090e6da9c25a",
+      "size_bytes": 16673
+    },
+    "A99_result": {
+      "path": "results/a99_q0q1_interval_and_residual_atlas_results.json",
+      "sha256": "cc014167c1c331aa3003592fc757ba09256202a69d1184379235338f3d67677e",
+      "size_bytes": 4157
+    },
+    "A99_atlas": {
+      "path": "results/a99_q0q1_remaining_residual_atlas.json",
+      "sha256": "ba62e7af42298488273a1cf0cb4051fdd025ae157a3ab09493b8aae69d963aff",
+      "size_bytes": 49290
+    },
+    "A99_audit": {
+      "path": "audits/a99_q0q1_interval_and_residual_atlas_audit.py",
+      "sha256": "7780913adc852feb17b8de884b9d56ef755797527809d3bae2adcdf901c4ceef",
+      "size_bytes": 31323
+    },
+    "A100_result": {
+      "path": "results/a100_full_lp_active_set_resolution_results.json",
+      "sha256": "65b2ae8820523d4103a6a151fdda17b56aa06769ba75ad8fe5e82836ec725ecc",
+      "size_bytes": 70506
+    },
+    "A100_certificate": {
+      "path": "results/a100_full_lp_active_set_certificate.json",
+      "sha256": "92abdf14fb21f85a96e42eb9571429b1aa5850dc9dcb41045e73d4e0cd84eca7",
+      "size_bytes": 2778742
+    },
+    "A100_audit": {
+      "path": "audits/a100_full_lp_active_set_resolution_audit.py",
+      "sha256": "7854cf64eeb1f340c5419c4914248c4752c72d78e00af685f31d4b7e5dcb8147",
+      "size_bytes": 17445
+    },
+    "A101_result": {
+      "path": "results/a101_gamma_active_interval_and_residual_closure_results.json",
+      "sha256": "7585036b70b06b7b1bd12c9b4af23d76bcc46063967bb6e4b0494e7a7221f59a",
+      "size_bytes": 5022
+    },
+    "A101_atlas": {
+      "path": "results/a101_gamma_active_final_residual_atlas.json",
+      "sha256": "d6813d2524856862a30bae95901417e5e44aed229ea0cb2c7eedfcfc7466f716",
+      "size_bytes": 9555018
+    },
+    "A101_audit": {
+      "path": "audits/a101_gamma_active_interval_and_residual_closure_audit.py",
+      "sha256": "e1fe865f84ef0e0cc9aff7601855a0955114591cdbe35dac629c16054c3e1c5e",
+      "size_bytes": 36952
+    }
+  }
+}

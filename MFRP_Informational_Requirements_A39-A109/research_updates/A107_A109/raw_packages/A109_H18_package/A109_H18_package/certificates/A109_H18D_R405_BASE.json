@@ -1,0 +1,79 @@
+{
+  "audit": "A109-H18D_SHARDED_BASE",
+  "rank": 405,
+  "preregistration_sha256": "2ebcd6612c005291a11913ef705555bd306e860b06a8eda1dc39e4b2164835a1",
+  "verdict": "BASE_SUPPORT",
+  "M": 305,
+  "j": 55,
+  "segment": [
+    "156371917846938522082048323379150181851/1180591620717411303424000000000000000000",
+    "133/1000"
+  ],
+  "witness": "1327/10000",
+  "frozen_prediction": {
+    "canonical_rank": 405,
+    "source_key": "M=305|b=53|phase=b_plus_1_to_b_plus_2|side=right|s=1327/10000|j=55",
+    "maximum": 305,
+    "contact_j": 55,
+    "witness": "1327/10000",
+    "segment_open_bounds": [
+      "156371917846938522082048323379150181851/1180591620717411303424000000000000000000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_56"
+      }
+    ]
+  },
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_56",
+  "target_side": "left",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "unique_root_certificate": {
+    "lower": "336063341980713777647155503552774981715914150653/2535301200456458802993406410752000000000000000000",
+    "upper": "134425336792344029103314592997573288010535623891/1014120480182583521197362564300800000000000000000",
+    "exact_rational_root": false,
+    "steps": 32,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "292590222261957882316476620849818149/5070602400912917605986812821504000000000000000000"
+  },
+  "failures": [],
+  "seconds": 1.4162805080413818
+}

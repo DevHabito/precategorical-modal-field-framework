@@ -1,0 +1,19 @@
+{
+  "audit": "A109_PROSPECTIVE_STATUS_THROUGH_RANK_286",
+  "rank_range": [
+    106,
+    286
+  ],
+  "record_count": 181,
+  "full": 128,
+  "partial": 53,
+  "left_partial": 50,
+  "right_partial": 3,
+  "two_sided_partial": 0,
+  "all_rule_matches": true,
+  "nonadjacent_selected_or_certified_boundary_count": 0,
+  "direct_comparisons": 234171,
+  "direct_mismatches": 0,
+  "methodological_warning": "The sequence is mathematically resolved under mixed exact protocols. Some ranks, including six in H10, use separately preregistered exact sufficient certificates after repeated full-atlas timeouts. This is not uniform full-atlas completion and not an all-922 theorem.",
+  "H10_aggregate_sha256": "ef066e6476613df221269687b2058e0aa50295e4ea2201eaa4fd740d04756311"
+}

@@ -1,0 +1,43 @@
+% A107-A109 manuscript insert. This file intentionally does not modify the historical paper PDF.
+\section{Prospective adjacent-boundary structure in the legacy gamma-plus family}
+
+After the A106 gamma-minus continuum atlas, the remaining large legacy class is the three-band gamma-plus family. Its declared basic supports are
+\[
+P=\{0,j,j+1,M\},\qquad Q=\{1,h,h+1\},\qquad h=\lfloor M/2\rfloor,
+\]
+with active $\alpha^+$, $\beta^-$, and $\gamma^+$. Only the source-probe alpha row varies along a frozen source segment, which permits an exact rank-one reconstruction with a common denominator $D(s)$ and exact numerator polynomials for every KKT condition.
+
+The original one-sided structural conjecture is false. Canonical rank 105 ($M=119$, $j=22$) gives an exact proper strict subcomponent whose selected boundary is the right zero of $p_{22}$, not a left zero of $p_{23}$. The root is isolated by an exact rational bracket, the derivative is negative throughout the bracket, the core certificate passes all 248 conditions, and an independent direct-matrix regression gives 988 exact comparisons with zero discrepancy.
+
+The replacement candidate is two-sided and local. For
+\[
+p_k(s)=\frac{N_k(s)}{D(s)},
+\]
+we require
+\[
+D(s)>0,\qquad N'_{j+1}(s)>0,\qquad N'_j(s)<0,
+\]
+throughout the frozen source segment, with
+\[
+N_{j+1}(s_0)>0,\qquad N_j(s_0)>0
+\]
+at the frozen witness. The endpoint classifier is
+\[
+\mathcal C=
+\begin{cases}
+\text{full}, & N_{j+1}(L)>0,\;N_j(R)>0,\\
+\text{left partial}, & N_{j+1}(L)<0,\;N_j(R)>0,\\
+\text{right partial}, & N_{j+1}(L)>0,\;N_j(R)<0,\\
+\text{two-sided partial}, & N_{j+1}(L)<0,\;N_j(R)<0.
+\end{cases}
+\]
+The corresponding adjacent boundary identities are
+\[
+N_{j+1}(s_L^*)=0\iff p_{j+1}(s_L^*)=0,
+\qquad
+N_j(s_R^*)=0\iff p_j(s_R^*)=0.
+\]
+
+The development fit on canonical ranks 1--105 is post-hoc and is not counted as prospective evidence. In the stored prospective sequence through rank 414, 309 records are mathematically resolved and 308 count as strict-clean prospective cases because rank 295 has a documented protocol-ordering exception. The resolved sequence contains 215 full source-segment coverages and 94 proper strict subcomponents; 88 partials terminate on the left and 6 on the right. No two-sided case and no non-adjacent selected KKT boundary has been observed. Independent symbolic/direct matrix checks total 475,782 exact rational comparisons with zero mismatch; the strict-clean comparison count is 473,770.
+
+These results are finite prospective evidence rather than an all-922 theorem. A single exact future record with a non-adjacent first KKT obstruction would refute the universal form of the conjecture. A109-H19 (ranks 415--430) is frozen but unexecuted in this update; it includes a preregistered right-boundary prediction at rank 428, where $p_{56}$ is predicted to vanish on the right.

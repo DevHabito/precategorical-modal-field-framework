@@ -1,0 +1,97 @@
+{
+  "audit": "A94_EXACT_CONTINUUM_ALL_CELL_ONE_VARIATION",
+  "evidence_class": "exact finite continuum-parameter certificate by rational outer-hull interval arithmetic, derivative/convexity root isolation, and inherited A92 decisive-root certificates",
+  "scope": {
+    "maximum_range": [
+      10,
+      520
+    ],
+    "effective_A92_cell_support_range": [
+      14,
+      520
+    ],
+    "probe_interval": [
+      "129/1000",
+      "133/1000"
+    ],
+    "cell_count": 858,
+    "explicit_nonclaim": "not an arbitrary-M, arbitrary-interval, lifted-KKT, or physical theorem"
+  },
+  "summary": {
+    "cell_count": 858,
+    "nondecisive_factor_classification_count": 124956,
+    "full_sequence_factor_classification_count": 125814,
+    "direct_outer_hull_sign_count": 119984,
+    "initially_ambiguous_factor_count": 4972,
+    "adaptive_fixed_positive_count": 4674,
+    "adaptive_fixed_negative_count": 104,
+    "nondecisive_increasing_root_count": 193,
+    "nondecisive_decreasing_root_count": 1,
+    "strict_convexity_fallback_count": 12,
+    "decisive_negative_cell_count": 833,
+    "decisive_positive_cell_count": 14,
+    "decisive_increasing_root_cell_count": 11,
+    "fixed_unique_global_cell_count": 653,
+    "simple_adjacent_global_transition_cell_count": 205,
+    "total_simple_root_count": 205,
+    "phase_counts": {
+      "unique_b_plus_1": 195,
+      "unique_b_plus_2": 444,
+      "b_plus_1_to_b_plus_2": 193,
+      "b_plus_2_to_b_plus_1": 1,
+      "unique_b_plus_3": 14,
+      "b_plus_2_to_b_plus_3": 11
+    },
+    "independent_regression_count": 48,
+    "classification_failure_count": 0,
+    "regression_failure_count": 0
+  },
+  "global_phase_theorem": {
+    "remote_sign_law": "E_(M,k)>0 for k<b+1 and E_(M,k)<0 for k>b+2 on every exact A92 b-cell",
+    "central_factors": "only E_(M,b+1) and E_(M,b+2) can determine the global compressed-maximizer phase",
+    "fixed_phase_counts": {
+      "unique_b_plus_1": 195,
+      "unique_b_plus_2": 444,
+      "unique_b_plus_3": 14
+    },
+    "transition_phase_counts": {
+      "b_plus_1_to_b_plus_2": 193,
+      "b_plus_2_to_b_plus_1": 1,
+      "b_plus_2_to_b_plus_3": 11
+    },
+    "one_decreasing_transition": {
+      "maximum": 28,
+      "base_contact": 5,
+      "transition": "b+2 -> tie -> b+1"
+    }
+  },
+  "gate_count": 24,
+  "pass_count": 24,
+  "gates": {
+    "A92_source_certificate_present_and_passed": true,
+    "all_858_A92_cells_loaded": true,
+    "all_124956_nondecisive_factors_generated": true,
+    "all_119984_direct_outer_hull_sign_certificates_close": true,
+    "exactly_4972_initially_ambiguous_factors_resolved": true,
+    "adaptive_fixed_sign_counts_match": true,
+    "nondecisive_root_counts_match": true,
+    "exactly_12_strict_convexity_fallbacks_close": true,
+    "all_194_nondecisive_roots_are_at_contact_b_plus_1": true,
+    "all_nondecisive_roots_are_simple_and_inside_exact_cells": true,
+    "A92_decisive_classification_counts_match": true,
+    "no_cell_contains_overlapping_factor_roots": true,
+    "all_remote_factors_have_required_fixed_signs": true,
+    "all_858_complete_sequences_have_one_variation": true,
+    "six_phase_counts_match_exactly": true,
+    "exactly_653_fixed_unique_global_cells": true,
+    "exactly_205_simple_adjacent_global_transition_cells": true,
+    "exactly_one_decreasing_global_transition_at_M28": true,
+    "all_125814_full_sequence_factors_classified": true,
+    "all_205_roots_are_simple_adjacent_global_exchange_roots": true,
+    "all_48_independent_sparse_vs_A84_regressions_match": true,
+    "no_unresolved_factor_or_cell_failures": true,
+    "finite_continuum_compressed_objective_scope_recorded": true,
+    "no_lifted_KKT_or_physical_interpretation_promoted": true
+  },
+  "verdict": "PASS_EXACT_CONTINUUM_ALL_858_CELL_ONE_VARIATION_AND_205_GLOBAL_ADJACENT_TRANSITIONS"
+}

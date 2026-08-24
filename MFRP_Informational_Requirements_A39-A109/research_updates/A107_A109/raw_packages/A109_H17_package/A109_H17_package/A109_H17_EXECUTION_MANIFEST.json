@@ -1,0 +1,243 @@
+{
+  "audit": "A109_H17_EXECUTION_MANIFEST",
+  "parent_preregistration_sha256": "6ce9427d24839288d758f6993f1796d05459cb5d221d8c033da7afcaf51e0e82",
+  "wall_clock_full_atlas_seconds": 55,
+  "policy": "single-rank shard; if no result by 55s, repeat identical shard once; only after two timeouts use separately preregistered exact sufficient certificate",
+  "rank_383_note": "Rank 383 was run before the supervisor under the same frozen single-rank/55-second command and completed in 48.42783331871033 seconds; result and attempt log are retained.",
+  "supervisor_state": {
+    "started_at": 1787065062.0841362,
+    "ranks": {
+      "383": {
+        "status": "existing_completed",
+        "attempts": []
+      },
+      "384": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 15.395047903060913,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R384_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R384_RESULT.json"
+          }
+        ]
+      },
+      "385": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 37.73241066932678,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R385_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R385_RESULT.json"
+          }
+        ]
+      },
+      "386": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 46.889477252960205,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R386_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R386_RESULT.json"
+          }
+        ]
+      },
+      "387": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 15.429750919342041,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R387_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R387_RESULT.json"
+          }
+        ]
+      },
+      "388": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 15.86659026145935,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R388_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R388_RESULT.json"
+          }
+        ]
+      },
+      "389": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 15.12013840675354,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R389_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R389_RESULT.json"
+          }
+        ]
+      },
+      "390": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 14.219541311264038,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R390_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R390_RESULT.json"
+          }
+        ]
+      },
+      "391": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 48.72288775444031,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R391_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R391_RESULT.json"
+          }
+        ]
+      },
+      "392": {
+        "status": "timeout",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "timeout",
+            "seconds": 55.00835967063904,
+            "output_exists": false,
+            "log": "/mnt/data/A109_H17_logs/R392_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R392_RESULT.json"
+          },
+          {
+            "attempt": 2,
+            "status": "timeout",
+            "seconds": 55.00878858566284,
+            "output_exists": false,
+            "log": "/mnt/data/A109_H17_logs/R392_attempt2.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R392_RESULT.json"
+          }
+        ]
+      },
+      "393": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 14.392348289489746,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R393_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R393_RESULT.json"
+          }
+        ]
+      },
+      "394": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 48.16520929336548,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R394_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R394_RESULT.json"
+          }
+        ]
+      },
+      "395": {
+        "status": "timeout",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "timeout",
+            "seconds": 55.0083167552948,
+            "output_exists": false,
+            "log": "/mnt/data/A109_H17_logs/R395_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R395_RESULT.json"
+          },
+          {
+            "attempt": 2,
+            "status": "timeout",
+            "seconds": 55.0094952583313,
+            "output_exists": false,
+            "log": "/mnt/data/A109_H17_logs/R395_attempt2.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R395_RESULT.json"
+          }
+        ]
+      },
+      "396": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 16.37748885154724,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R396_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R396_RESULT.json"
+          }
+        ]
+      },
+      "397": {
+        "status": "completed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "completed",
+            "seconds": 49.80807280540466,
+            "output_exists": true,
+            "log": "/mnt/data/A109_H17_logs/R397_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R397_RESULT.json"
+          }
+        ]
+      },
+      "398": {
+        "status": "timeout",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "timeout",
+            "seconds": 55.35110068321228,
+            "output_exists": false,
+            "log": "/mnt/data/A109_H17_logs/R398_attempt1.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R398_RESULT.json"
+          },
+          {
+            "attempt": 2,
+            "status": "timeout",
+            "seconds": 55.20250153541565,
+            "output_exists": false,
+            "log": "/mnt/data/A109_H17_logs/R398_attempt2.log",
+            "out": "/mnt/data/A109_H17_full_atlas/A109_H17_R398_RESULT.json"
+          }
+        ]
+      }
+    },
+    "done": true,
+    "finished_at": 1787065730.81182
+  },
+  "repeated_timeout_ranks": [
+    392,
+    395,
+    398
+  ],
+  "fallback_preregistration_sha256": "5e0caeb3ea1a81b40b5fc9bba9485edb517238798ac9b31c015af6e3b474b53c"
+}

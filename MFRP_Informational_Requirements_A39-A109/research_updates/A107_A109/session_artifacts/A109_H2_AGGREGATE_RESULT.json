@@ -1,0 +1,204 @@
+{
+  "audit": "A109-H2_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT_AGGREGATE",
+  "verdict": "PASS_A109_H2_UNCHANGED_TWO_SIDED_RULE",
+  "preregistration_sha256": "879c061ccaf5bcec45182b08b85858b1119c26404026e0f80fb1ac04f58c8aea",
+  "execution_manifest_sha256": "ed9a68a9c04814ae565377863b5ed87563797ee6becce5ac2966cdc3ea03fcdd",
+  "execution_supplement_2_sha256": "1abeaee97a896052fb9244153c75ead5be50ad97d1eb7f0a0bea0fbbb880832b",
+  "summary": {
+    "record_count": 51,
+    "rank_range": [
+      122,
+      172
+    ],
+    "class_counts": {
+      "proper_strict_subcomponent": 13,
+      "full_segment_coverage": 38
+    },
+    "prediction_counts": {
+      "proper_strict_subcomponent": 13,
+      "full_segment_coverage": 38
+    },
+    "class_match_count": 51,
+    "boundary_set_match_count": 51,
+    "partial_count": 13,
+    "left_boundary_partial_count": 13,
+    "right_boundary_partial_count": 0,
+    "two_sided_partial_count": 0,
+    "nonadjacent_selected_boundary_count": 0,
+    "direct_comparisons": 51894,
+    "direct_mismatches": 0,
+    "direct_positivity_failures": 0,
+    "direct_outside_sign_failures": 0,
+    "core_certificate_failures": 0,
+    "hull_certificate_failures": 0,
+    "root_failures": 0
+  },
+  "partial_records": [
+    {
+      "rank": 122,
+      "M": 133,
+      "j": 25,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_26"
+        }
+      ]
+    },
+    {
+      "rank": 129,
+      "M": 138,
+      "j": 26,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_27"
+        }
+      ]
+    },
+    {
+      "rank": 130,
+      "M": 139,
+      "j": 26,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_27"
+        }
+      ]
+    },
+    {
+      "rank": 136,
+      "M": 142,
+      "j": 27,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_28"
+        }
+      ]
+    },
+    {
+      "rank": 137,
+      "M": 144,
+      "j": 27,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_28"
+        }
+      ]
+    },
+    {
+      "rank": 138,
+      "M": 145,
+      "j": 27,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_28"
+        }
+      ]
+    },
+    {
+      "rank": 144,
+      "M": 150,
+      "j": 28,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_29"
+        }
+      ]
+    },
+    {
+      "rank": 145,
+      "M": 151,
+      "j": 28,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_29"
+        }
+      ]
+    },
+    {
+      "rank": 151,
+      "M": 156,
+      "j": 29,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_30"
+        }
+      ]
+    },
+    {
+      "rank": 158,
+      "M": 161,
+      "j": 30,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_31"
+        }
+      ]
+    },
+    {
+      "rank": 159,
+      "M": 162,
+      "j": 30,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_31"
+        }
+      ]
+    },
+    {
+      "rank": 167,
+      "M": 167,
+      "j": 31,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_32"
+        }
+      ]
+    },
+    {
+      "rank": 168,
+      "M": 168,
+      "j": 31,
+      "boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_32"
+        }
+      ]
+    }
+  ],
+  "execution_note": "The frozen 122..172 selection and predictions were unchanged. Runtime-only repartitioning occurred after timeout(s) that produced no result files; manifests were written before executing smaller units.",
+  "adjudication": "No class mismatch, no boundary-set mismatch, no non-adjacent selected boundary, no root/certificate failure, and no direct exact regression discrepancy occurred in ranks 122..172.",
+  "scope": [
+    "finite prospective holdout only",
+    "does not establish an all-922 theorem",
+    "does not prove that a later non-adjacent boundary cannot occur",
+    "does not establish existence of a two-sided-boundary record"
+  ],
+  "result_files": [
+    "A109_H2_S1_RESULT.json",
+    "A109_H2_S2A_RESULT.json",
+    "A109_H2_S2B_RESULT.json",
+    "A109_H2_S3A_RESULT.json",
+    "A109_H2_S3B1_RESULT.json",
+    "A109_H2_S3B2_RESULT.json",
+    "A109_H2_S4A_RESULT.json",
+    "A109_H2_S4B_RESULT.json",
+    "A109_H2_S5A_RESULT.json",
+    "A109_H2_S5B_RESULT.json",
+    "A109_H2_S6A_RESULT.json",
+    "A109_H2_S6B_RESULT.json",
+    "A109_H2_S7_RESULT.json"
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "audit": "A109-H10D_EXACT_SUFFICIENT_CERTIFICATES_FOR_REPEATED_TIMEOUT_RANKS",
+  "status": "FROZEN_NOT_EXECUTED",
+  "frozen_after": "Repeated full-atlas timeouts for preregistered H10 shards 273-274, 277-278, and 283-284, each with no output/result file produced.",
+  "parent_preregistration_sha256": "8d4444e53f594b29dbab84060d623525cf2922c5060e6aa9d9102e2b2ca2c555",
+  "ranks": [
+    273,
+    274,
+    277,
+    278,
+    283,
+    284
+  ],
+  "frozen_predictions": [
+    {
+      "canonical_rank": 273,
+      "source_key": "M=235|b=41|phase=b_plus_1_to_b_plus_2|side=right|s=83/625|j=43",
+      "maximum": 235,
+      "contact_j": 43,
+      "witness": "83/625",
+      "segment_open_bounds": [
+        "31330831847132751460364682238515299783/236118324143482260684800000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_44"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 274,
+      "source_key": "M=236|b=41|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=42",
+      "maximum": 236,
+      "contact_j": 42,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129408115480172189/1000000000000000000",
+        "153934071029135338330063911581582149597/1180591620717411303424000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 277,
+      "source_key": "M=238|b=41|phase=unique_b_plus_2|side=full|s=131/1000|j=43",
+      "maximum": 238,
+      "contact_j": 43,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_44"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 278,
+      "source_key": "M=239|b=41|phase=unique_b_plus_2|side=full|s=13/100|j=43",
+      "maximum": 239,
+      "contact_j": 43,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "132619594467371/1000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_44"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 283,
+      "source_key": "M=241|b=42|phase=b_plus_1_to_b_plus_2|side=left|s=131/1000|j=43",
+      "maximum": 241,
+      "contact_j": 43,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "26079273937563407/200000000000000000",
+        "312532999908436924709125949024982772909/2361183241434822606848000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 284,
+      "source_key": "M=241|b=42|phase=b_plus_1_to_b_plus_2|side=right|s=663/5000|j=44",
+      "maximum": 241,
+      "contact_j": 44,
+      "witness": "663/5000",
+      "segment_open_bounds": [
+        "39066624988554615588640906355017358049/295147905179352825856000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_45"
+        }
+      ]
+    }
+  ],
+  "method": {
+    "denominator": "Certify D(s)>0 on entire source segment exactly.",
+    "target": "For a single frozen boundary, certify the target numerator monotonicity with the predeclared side, endpoint/witness sign pattern, and isolate the unique root by exact rational bisection. For full predictions, no target is removed.",
+    "non_target_conditions": "Certify every required non-target KKT numerator strictly positive on the complete source segment using exact polynomial positivity certificates.",
+    "independent_regression": "At exact rational probes, compare each symbolic numerator identity to direct matrix evaluation; require zero mismatches, strict positivity inside the predicted component, and the frozen target nonpositive outside when partial.",
+    "classification": "A full prediction is resolved only if every KKT condition certifies positive across the full segment. A single-boundary prediction is resolved only if the target has the prescribed unique crossing and every other KKT condition certifies positive across the full segment."
+  },
+  "adjudication": {
+    "support": "All exact sufficient conditions pass and direct rational regression has zero discrepancies.",
+    "refute_or_failed": "Any exact contradiction, wrong target sign/monotonicity, non-target nonpositivity, or direct symbolic/matrix mismatch.",
+    "inconclusive": "A required exact positivity certificate cannot be completed without a mathematical contradiction."
+  },
+  "no_posthoc_changes": "No rank, witness, source segment, target boundary, support, tolerance, or prediction may be changed after diagnostic outcomes are inspected.",
+  "scope": {
+    "meaning": "This protocol can mathematically resolve the frozen H10 prediction for timeout ranks, but does not retroactively make the original full-atlas shard complete.",
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

@@ -1,0 +1,1697 @@
+{
+  "audit": "A43_PROVISIONAL_DIRECT_Q_MINIMAX_DESIGN",
+  "contract": {
+    "support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mean": "5/2",
+    "target": "future Q at 2*log(2) under contraction a=1/2",
+    "candidate_parameters": [
+      "2*log(2)",
+      "3*log(2)",
+      "4*log(2)",
+      "5*log(2)",
+      "6*log(2)"
+    ],
+    "budget": 3,
+    "risk": "worst possible nonlinear future-score interval width over all compatible reported-data boxes"
+  },
+  "method": "pairwise maximum target-transform ratio followed by Charnes-Cooper exact linear-programme reduction",
+  "exact_data_contract": {
+    "epsilon": "0",
+    "ranking": [
+      {
+        "design": [
+          2,
+          3,
+          4
+        ],
+        "ratio_exact": "8770/8707",
+        "ratio_decimal": "1.00723555759733552",
+        "future_score_risk_decimal": "0.00520055966453553987"
+      },
+      {
+        "design": [
+          2,
+          3,
+          5
+        ],
+        "ratio_exact": "5758/5713",
+        "ratio_decimal": "1.0078767722737616",
+        "future_score_risk_decimal": "0.00565962948974306317"
+      },
+      {
+        "design": [
+          2,
+          3,
+          6
+        ],
+        "ratio_exact": "34282/34003",
+        "ratio_decimal": "1.00820515836837932",
+        "future_score_risk_decimal": "0.00589462043291408538"
+      },
+      {
+        "design": [
+          2,
+          4,
+          5
+        ],
+        "ratio_exact": "33526/33211",
+        "ratio_decimal": "1.00948480924994732",
+        "future_score_risk_decimal": "0.00680960056269661572"
+      },
+      {
+        "design": [
+          2,
+          4,
+          6
+        ],
+        "ratio_exact": "22178/21961",
+        "ratio_decimal": "1.0098811529529621",
+        "future_score_risk_decimal": "0.00709276028355554887"
+      },
+      {
+        "design": [
+          2,
+          5,
+          6
+        ],
+        "ratio_exact": "131038/129643",
+        "ratio_decimal": "1.01076031872141181",
+        "future_score_risk_decimal": "0.00772046598596649435"
+      },
+      {
+        "design": [
+          3,
+          4,
+          5
+        ],
+        "ratio_exact": "4220/4157",
+        "ratio_decimal": "1.01515515997113304",
+        "future_score_risk_decimal": "0.0108501254850875261"
+      },
+      {
+        "design": [
+          3,
+          4,
+          6
+        ],
+        "ratio_exact": "125620/123667",
+        "ratio_decimal": "1.01579241026304512",
+        "future_score_risk_decimal": "0.0113027998325653124"
+      },
+      {
+        "design": [
+          3,
+          5,
+          6
+        ],
+        "ratio_exact": "82468/81073",
+        "ratio_decimal": "1.01720671493592185",
+        "future_score_risk_decimal": "0.0123064454523470427"
+      },
+      {
+        "design": [
+          4,
+          5,
+          6
+        ],
+        "ratio_exact": "480136/470371",
+        "ratio_decimal": "1.02076020843121706",
+        "future_score_risk_decimal": "0.0148219978787386773"
+      }
+    ],
+    "winner": [
+      2,
+      3,
+      4
+    ],
+    "winner_ratio_exact": "8770/8707",
+    "winner_future_score_risk_decimal": "0.00520055966453553987",
+    "unique_winner": true,
+    "certificates": [
+      {
+        "design": [
+          2,
+          3,
+          4
+        ],
+        "epsilon": "0",
+        "ratio_exact": "8770/8707",
+        "ratio_decimal": "1.00723555759733552",
+        "future_score_risk_decimal": "0.00520055966453553987",
+        "t": "32192/8707",
+        "p": [
+          "0",
+          "887/2012",
+          "0",
+          "741/2012",
+          "0",
+          "96/503"
+        ],
+        "q": [
+          "3/8048",
+          "1729/4024",
+          "843/8048",
+          "0",
+          "234/503",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "0",
+          "3": "0",
+          "4": "0"
+        },
+        "dual_values": [
+          "485061/3047450",
+          "-251718/1523725",
+          "-1142/43535",
+          "1247/43535",
+          "8770/8707",
+          "91000/26121",
+          "-330368/60949",
+          "1814528/653025"
+        ],
+        "reduced_costs": [
+          "21/17414",
+          "0",
+          "21/34828",
+          "0",
+          "567/139312",
+          "0",
+          "0",
+          "0",
+          "0",
+          "147/69656",
+          "0",
+          "1743/278624",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          3,
+          5
+        ],
+        "epsilon": "0",
+        "ratio_exact": "5758/5713",
+        "ratio_decimal": "1.0078767722737616",
+        "future_score_risk_decimal": "0.00565962948974306317",
+        "t": "21056/5713",
+        "p": [
+          "0",
+          "585/1316",
+          "0",
+          "475/1316",
+          "0",
+          "64/329"
+        ],
+        "q": [
+          "1/5264",
+          "1147/2632",
+          "505/5264",
+          "0",
+          "22/47",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "0",
+          "3": "0",
+          "5": "0"
+        },
+        "dual_values": [
+          "88172145/538038914",
+          "-45851910/269019457",
+          "-33630/1239721",
+          "36885/1239721",
+          "5758/5713",
+          "128040/39991",
+          "-1084800/279937",
+          "58064896/38431351"
+        ],
+        "reduced_costs": [
+          "15/11426",
+          "0",
+          "15/22852",
+          "0",
+          "405/91408",
+          "0",
+          "0",
+          "0",
+          "0",
+          "105/45704",
+          "0",
+          "1245/182816",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          3,
+          6
+        ],
+        "epsilon": "0",
+        "ratio_exact": "34282/34003",
+        "ratio_decimal": "1.00820515836837932",
+        "future_score_risk_decimal": "0.00589462043291408538",
+        "t": "125120/34003",
+        "p": [
+          "0",
+          "3491/7820",
+          "0",
+          "2793/7820",
+          "0",
+          "384/1955"
+        ],
+        "q": [
+          "3/31280",
+          "1373/3128",
+          "2859/31280",
+          "0",
+          "54/115",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "0",
+          "3": "0",
+          "6": "0"
+        },
+        "dual_values": [
+          "104599735/629803566",
+          "-54453050/314901783",
+          "-137702/4998441",
+          "151373/4998441",
+          "34282/34003",
+          "1575544/510045",
+          "-40049024/11663029",
+          "1858076672/1574508915"
+        ],
+        "reduced_costs": [
+          "93/68006",
+          "0",
+          "93/136012",
+          "0",
+          "2511/544048",
+          "0",
+          "0",
+          "0",
+          "0",
+          "651/272024",
+          "0",
+          "7719/1088096",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          4,
+          5
+        ],
+        "epsilon": "0",
+        "ratio_exact": "33526/33211",
+        "ratio_decimal": "1.00948480924994732",
+        "future_score_risk_decimal": "0.00680960056269661572",
+        "t": "121664/33211",
+        "p": [
+          "0",
+          "3437/7604",
+          "0",
+          "2631/7604",
+          "0",
+          "384/1901"
+        ],
+        "q": [
+          "3/30416",
+          "6793/15208",
+          "2427/30416",
+          "0",
+          "900/1901",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "0",
+          "4": "0",
+          "5": "0"
+        },
+        "dual_values": [
+          "11214063/63831542",
+          "-5859294/31915771",
+          "-30240/1029541",
+          "33495/1029541",
+          "33526/33211",
+          "82840/33211",
+          "-231424/33211",
+          "169148416/31915771"
+        ],
+        "reduced_costs": [
+          "105/66422",
+          "0",
+          "105/132844",
+          "0",
+          "2835/531376",
+          "0",
+          "0",
+          "0",
+          "0",
+          "735/265688",
+          "0",
+          "8715/1062752",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          4,
+          6
+        ],
+        "epsilon": "0",
+        "ratio_exact": "22178/21961",
+        "ratio_decimal": "1.0098811529529621",
+        "future_score_risk_decimal": "0.00709276028355554887",
+        "t": "80320/21961",
+        "p": [
+          "0",
+          "2279/5020",
+          "0",
+          "1717/5020",
+          "0",
+          "256/1255"
+        ],
+        "q": [
+          "1/20080",
+          "903/2008",
+          "1513/20080",
+          "0",
+          "596/1255",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "0",
+          "4": "0",
+          "6": "0"
+        },
+        "dual_values": [
+          "2992753609/16810047450",
+          "-1565586242/8405023725",
+          "-795832/26682615",
+          "883717/26682615",
+          "22178/21961",
+          "64216376/26682615",
+          "-640784384/133413075",
+          "5412749312/1681004745"
+        ],
+        "reduced_costs": [
+          "217/131766",
+          "0",
+          "217/263532",
+          "0",
+          "1953/351376",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1519/527064",
+          "0",
+          "18011/2108256",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          5,
+          6
+        ],
+        "epsilon": "0",
+        "ratio_exact": "131038/129643",
+        "ratio_decimal": "1.01076031872141181",
+        "future_score_risk_decimal": "0.00772046598596649435",
+        "t": "472640/129643",
+        "p": [
+          "0",
+          "13529/29540",
+          "0",
+          "9867/29540",
+          "0",
+          "1536/7385"
+        ],
+        "q": [
+          "3/118160",
+          "5381/11816",
+          "7899/118160",
+          "0",
+          "504/1055",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "0",
+          "5": "0",
+          "6": "0"
+        },
+        "dual_values": [
+          "649564705/3544698906",
+          "-340674890/1772349453",
+          "-27980/907501",
+          "31235/907501",
+          "131038/129643",
+          "2007560/907501",
+          "-330727424/28132531",
+          "592445440/57172563"
+        ],
+        "reduced_costs": [
+          "465/259286",
+          "0",
+          "465/518572",
+          "0",
+          "12555/2074288",
+          "0",
+          "0",
+          "0",
+          "0",
+          "3255/1037144",
+          "0",
+          "38595/4148576",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          3,
+          4,
+          5
+        ],
+        "epsilon": "0",
+        "ratio_exact": "4220/4157",
+        "ratio_decimal": "1.01515515997113304",
+        "future_score_risk_decimal": "0.0108501254850875261",
+        "t": "75392/20785",
+        "p": [
+          "0",
+          "1101/2356",
+          "0",
+          "743/2356",
+          "0",
+          "128/589"
+        ],
+        "q": [
+          "1/18848",
+          "4375/9424",
+          "1009/18848",
+          "0",
+          "284/589",
+          "0"
+        ],
+        "original_observation_differences": {
+          "3": "0",
+          "4": "0",
+          "5": "0"
+        },
+        "dual_values": [
+          "303845121/1398206950",
+          "-160751748/699103475",
+          "-24027/644335",
+          "27282/644335",
+          "4220/4157",
+          "397632/29099",
+          "-3277824/103925",
+          "74547200/3994877"
+        ],
+        "reduced_costs": [
+          "21/8314",
+          "0",
+          "21/16628",
+          "0",
+          "567/66512",
+          "0",
+          "0",
+          "0",
+          "0",
+          "147/33256",
+          "0",
+          "1743/133024",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          3,
+          4,
+          6
+        ],
+        "epsilon": "0",
+        "ratio_exact": "125620/123667",
+        "ratio_decimal": "1.01579241026304512",
+        "future_score_risk_decimal": "0.0113027998325653124",
+        "t": "447872/123667",
+        "p": [
+          "0",
+          "6571/13996",
+          "0",
+          "4353/13996",
+          "0",
+          "768/3499"
+        ],
+        "q": [
+          "3/111968",
+          "26149/55984",
+          "5523/111968",
+          "0",
+          "1692/3499",
+          "0"
+        ],
+        "original_observation_differences": {
+          "3": "0",
+          "4": "0",
+          "6": "0"
+        },
+        "dual_values": [
+          "1801224899/8180572050",
+          "-954442012/4090286025",
+          "-491567/12985035",
+          "559922/12985035",
+          "125620/123667",
+          "73390144/6059683",
+          "-201669632/9275025",
+          "1703936000/163611441"
+        ],
+        "reduced_costs": [
+          "651/247334",
+          "0",
+          "651/494668",
+          "0",
+          "17577/1978672",
+          "0",
+          "0",
+          "0",
+          "0",
+          "4557/989336",
+          "0",
+          "54033/3957344",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          3,
+          5,
+          6
+        ],
+        "epsilon": "0",
+        "ratio_exact": "82468/81073",
+        "ratio_decimal": "1.01720671493592185",
+        "future_score_risk_decimal": "0.0123064454523470427",
+        "t": "292736/81073",
+        "p": [
+          "0",
+          "4335/9148",
+          "0",
+          "2765/9148",
+          "0",
+          "512/2287"
+        ],
+        "q": [
+          "1/73184",
+          "17287/36592",
+          "3025/73184",
+          "0",
+          "1112/2287",
+          "0"
+        ],
+        "original_observation_differences": {
+          "3": "0",
+          "5": "0",
+          "6": "0"
+        },
+        "dual_values": [
+          "1171829345/5172295254",
+          "-622997260/2586147627",
+          "-155385/3972577",
+          "178170/3972577",
+          "82468/81073",
+          "240907200/27808039",
+          "-104087552/2513263",
+          "2797076480/83424117"
+        ],
+        "reduced_costs": [
+          "465/162146",
+          "0",
+          "465/324292",
+          "0",
+          "12555/1297168",
+          "0",
+          "0",
+          "0",
+          "0",
+          "3255/648584",
+          "0",
+          "38595/2594336",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          4,
+          5,
+          6
+        ],
+        "epsilon": "0",
+        "ratio_exact": "480136/470371",
+        "ratio_decimal": "1.02076020843121706",
+        "future_score_risk_decimal": "0.0148219978787386773",
+        "t": "1689344/470371",
+        "p": [
+          "0",
+          "12743/26396",
+          "0",
+          "7509/26396",
+          "0",
+          "1536/6599"
+        ],
+        "q": [
+          "3/422336",
+          "101773/211168",
+          "11427/422336",
+          "0",
+          "3240/6599",
+          "0"
+        ],
+        "original_observation_differences": {
+          "4": "0",
+          "5": "0",
+          "6": "0"
+        },
+        "dual_values": [
+          "445680797/1837269126",
+          "-238732936/918634563",
+          "-19885/470371",
+          "23140/470371",
+          "480136/470371",
+          "25696768/470371",
+          "-2121211904/14581501",
+          "2714501120/29633373"
+        ],
+        "reduced_costs": [
+          "3255/940742",
+          "0",
+          "3255/1881484",
+          "0",
+          "87885/7525936",
+          "0",
+          "0",
+          "0",
+          "0",
+          "22785/3762968",
+          "0",
+          "270165/15051872",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      }
+    ]
+  },
+  "noisy_contract": {
+    "epsilon": "1/10000",
+    "ranking": [
+      {
+        "design": [
+          2,
+          3,
+          6
+        ],
+        "ratio_exact": "1828961429248/1804118444725",
+        "ratio_decimal": "1.0137701516192783",
+        "future_score_risk_decimal": "0.00986529623594506987"
+      },
+      {
+        "design": [
+          2,
+          3,
+          5
+        ],
+        "ratio_exact": "522712930768/515460125745",
+        "ratio_decimal": "1.01407054524832052",
+        "future_score_risk_decimal": "0.0100790094742548002"
+      },
+      {
+        "design": [
+          2,
+          3,
+          4
+        ],
+        "ratio_exact": "1384952831/1362663390",
+        "ratio_decimal": "1.01635726120153569",
+        "future_score_risk_decimal": "0.0117038075340311094"
+      },
+      {
+        "design": [
+          2,
+          4,
+          6
+        ],
+        "ratio_exact": "38376251275948/37723035874025",
+        "ratio_decimal": "1.01731608781712035",
+        "future_score_risk_decimal": "0.0123840025646346514"
+      },
+      {
+        "design": [
+          2,
+          4,
+          5
+        ],
+        "ratio_exact": "439245342931/430300944334",
+        "ratio_decimal": "1.02078637919524851",
+        "future_score_risk_decimal": "0.014840491912485123"
+      },
+      {
+        "design": [
+          2,
+          5,
+          6
+        ],
+        "ratio_exact": "300845512945939/291981170554720",
+        "ratio_decimal": "1.03035929465717979",
+        "future_score_risk_decimal": "0.0215737523123727196"
+      },
+      {
+        "design": [
+          3,
+          4,
+          6
+        ],
+        "ratio_exact": "54756141074237/52062204895646",
+        "ratio_decimal": "1.05174456564009833",
+        "future_score_risk_decimal": "0.0363921818632702149"
+      },
+      {
+        "design": [
+          3,
+          4,
+          5
+        ],
+        "ratio_exact": "139450088725057/130590843111622",
+        "ratio_decimal": "1.06783971526902999",
+        "future_score_risk_decimal": "0.0473475560311983762"
+      },
+      {
+        "design": [
+          3,
+          5,
+          6
+        ],
+        "ratio_exact": "1404250535781335/1293233484634562",
+        "ratio_decimal": "1.08584455356732734",
+        "future_score_risk_decimal": "0.0594087928929066603"
+      },
+      {
+        "design": [
+          4,
+          5,
+          6
+        ],
+        "ratio_exact": "1902345060919/1650301275000",
+        "ratio_decimal": "1.15272592328270496",
+        "future_score_risk_decimal": "0.102524766414978943"
+      }
+    ],
+    "winner": [
+      2,
+      3,
+      6
+    ],
+    "winner_ratio_exact": "1828961429248/1804118444725",
+    "winner_future_score_risk_decimal": "0.00986529623594506987",
+    "unique_winner": true,
+    "certificates": [
+      {
+        "design": [
+          2,
+          3,
+          4
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "1384952831/1362663390",
+        "ratio_decimal": "1.01635726120153569",
+        "future_score_risk_decimal": "0.0117038075340311094",
+        "t": "221025000/45422113",
+        "p": [
+          "34353583/34811437500",
+          "0",
+          "26604175313/34811437500",
+          "880537487/8702859375",
+          "0",
+          "1162689664/8702859375"
+        ],
+        "q": [
+          "0",
+          "4211279/276281250",
+          "66964673/92093750",
+          "0",
+          "35587976/138140625",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "1/5000",
+          "3": "-1/5000",
+          "4": "1/5000"
+        },
+        "dual_values": [
+          "21892675/136266339",
+          "-937701533/5450653560",
+          "-260186689/9811176408",
+          "134509669/4459625640",
+          "1384952831/1362663390",
+          "12598014944/3679191153",
+          "715511168/136266339",
+          "9808875520/3679191153"
+        ],
+        "reduced_costs": [
+          "0",
+          "487379/1090130712",
+          "0",
+          "0",
+          "18390409/4360522848",
+          "0",
+          "27163231/5450653560",
+          "0",
+          "0",
+          "527747/330342640",
+          "0",
+          "320435017/43605228480",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          3,
+          5
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "522712930768/515460125745",
+        "ratio_decimal": "1.01407054524832052",
+        "future_score_risk_decimal": "0.0100790094742548002",
+        "t": "371861833000/103092025149",
+        "p": [
+          "154991549/464827291250",
+          "394026302261/836689124250",
+          "0",
+          "524717018/1707528825",
+          "0",
+          "463181245952/2091722810625"
+        ],
+        "q": [
+          "0",
+          "220460722567/464827291250",
+          "17929384587/464827291250",
+          "0",
+          "113218592048/232413645625",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "1/5000",
+          "3": "-1/5000",
+          "5": "1/5000"
+        },
+        "dual_values": [
+          "51056142863/309276075447",
+          "-543361847141/3092760754470",
+          "-1880414275/68728016766",
+          "31886881939/1030920251490",
+          "522712930768/515460125745",
+          "6836407889176/2164932528129",
+          "1169742510208/309276075447",
+          "3159329210368/2164932528129"
+        ],
+        "reduced_costs": [
+          "0",
+          "0",
+          "21706121/412368100596",
+          "0",
+          "7513278475/1649472402384",
+          "0",
+          "1190712403/343640083830",
+          "0",
+          "0",
+          "7686927443/4123681005960",
+          "0",
+          "126770664751/16494724023840",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          3,
+          6
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "1828961429248/1804118444725",
+        "ratio_decimal": "1.0137701516192783",
+        "future_score_risk_decimal": "0.00986529623594506987",
+        "t": "260732341800/72164737789",
+        "p": [
+          "395536913/1629577136250",
+          "254885367383/543192378750",
+          "0",
+          "253335186866/814788568125",
+          "0",
+          "19880840192/90532063125"
+        ],
+        "q": [
+          "0",
+          "153627846887/325915427250",
+          "4664933369/108638475750",
+          "0",
+          "79146390128/162957713625",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "1/5000",
+          "3": "-1/5000",
+          "6": "1/5000"
+        },
+        "dual_values": [
+          "590881720565/3536072151661",
+          "-31394706651283/176803607583050",
+          "-140159674203/5051531645230",
+          "791271854073/25257658226150",
+          "1828961429248/1804118444725",
+          "5507850664376/1804118444725",
+          "11894138260352/3536072151661",
+          "101098534731776/88401803791525"
+        ],
+        "reduced_costs": [
+          "0",
+          "0",
+          "201316413/1443294755780",
+          "0",
+          "27258781479/5773179023120",
+          "0",
+          "11918201229/3608236889450",
+          "0",
+          "0",
+          "28869312783/14432947557800",
+          "0",
+          "454541362971/57731790231200",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          4,
+          5
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "439245342931/430300944334",
+        "ratio_decimal": "1.02078637919524851",
+        "future_score_risk_decimal": "0.014840491912485123",
+        "t": "1043718075000/215150472167",
+        "p": [
+          "384592499/521859037500",
+          "0",
+          "684062927731/869765062500",
+          "44632100837/652323796875",
+          "0",
+          "31387919872/217441265625"
+        ],
+        "q": [
+          "0",
+          "25161905461/1304647593750",
+          "313580945707/434882531250",
+          "0",
+          "169371425584/652323796875",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "1/5000",
+          "4": "-1/5000",
+          "5": "1/5000"
+        },
+        "dual_values": [
+          "342618546287/1936354249503",
+          "-2966627134105/15490833996024",
+          "-50976378145/1721203777336",
+          "59041887947/1721203777336",
+          "439245342931/430300944334",
+          "4758294065840/1936354249503",
+          "13017130043392/1936354249503",
+          "1094730186752/215150472167"
+        ],
+        "reduced_costs": [
+          "0",
+          "878888795/1721203777336",
+          "0",
+          "0",
+          "37690882625/6884815109344",
+          "0",
+          "10702176187/1721203777336",
+          "0",
+          "0",
+          "7186621007/3442407554672",
+          "0",
+          "130961445069/13769630218688",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          4,
+          6
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "38376251275948/37723035874025",
+        "ratio_decimal": "1.01731608781712035",
+        "future_score_risk_decimal": "0.0123840025646346514",
+        "t": "5379761205000/1508921434961",
+        "p": [
+          "2319179017/6724701506250",
+          "5445401699987/11207835843750",
+          "0",
+          "4663992238214/16811753765625",
+          "0",
+          "147180038144/622657546875"
+        ],
+        "q": [
+          "0",
+          "3329259521563/6724701506250",
+          "16545615781/2241567168750",
+          "0",
+          "1672902568672/3362350753125",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "1/5000",
+          "4": "-1/5000",
+          "6": "1/5000"
+        },
+        "dual_values": [
+          "7295616093811/40740878743947",
+          "-391415113197209/2037043937197350",
+          "-4077899881601/135802929146490",
+          "23388663626251/679014645732450",
+          "38376251275948/37723035874025",
+          "2420929568959832/1018521968598675",
+          "190306212165632/40740878743947",
+          "3172857301434368/1018521968598675"
+        ],
+        "reduced_costs": [
+          "0",
+          "0",
+          "2653107093/30178428699220",
+          "0",
+          "685052687039/120713714796880",
+          "0",
+          "319974933229/75446071748050",
+          "0",
+          "0",
+          "706277543783/301784286992200",
+          "0",
+          "11529158967571/1207137147968800",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          2,
+          5,
+          6
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "300845512945939/291981170554720",
+        "ratio_decimal": "1.03035929465717979",
+        "future_score_risk_decimal": "0.0215737523123727196",
+        "t": "17577305400375/3649764631934",
+        "p": [
+          "78144233039/117182036002500",
+          "0",
+          "58512873768211/70309221601500",
+          "0",
+          "0",
+          "14686826616832/87886527001875"
+        ],
+        "q": [
+          "0",
+          "1126077969307/35154610800750",
+          "1626775289519/2343640720050",
+          "10193029771/651011311125",
+          "4538239940512/17577305400375",
+          "0"
+        ],
+        "original_observation_differences": {
+          "2": "1/5000",
+          "5": "-1/5000",
+          "6": "1/5000"
+        },
+        "dual_values": [
+          "50655804774991/255483524235380",
+          "-1798929675427337/8175472775532160",
+          "-39476860089491/1167924682218880",
+          "47754969081569/1167924682218880",
+          "300845512945939/291981170554720",
+          "7771284817259563/3832252863530700",
+          "620431989486592/63870881058845",
+          "8131762585960448/958063215882675"
+        ],
+        "reduced_costs": [
+          "0",
+          "586233399141/1167924682218880",
+          "0",
+          "7691875592937/2335849364437760",
+          "39631844762967/4671698728875520",
+          "0",
+          "10036809189501/1167924682218880",
+          "0",
+          "0",
+          "0",
+          "0",
+          "136624219071339/9343397457751040",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          3,
+          4,
+          5
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "139450088725057/130590843111622",
+        "ratio_decimal": "1.06783971526902999",
+        "future_score_risk_decimal": "0.0473475560311983762",
+        "t": "325532143125000/65295421555811",
+        "p": [
+          "58032542357/54255357187500",
+          "0",
+          "27069646051393/32553214312500",
+          "0",
+          "0",
+          "6810935919616/40691517890625"
+        ],
+        "q": [
+          "0",
+          "94178561149/2625259218750",
+          "46045955187643/81383035781250",
+          "10612018554866/40691517890625",
+          "1865584681376/13563839296875",
+          "0"
+        ],
+        "original_observation_differences": {
+          "3": "1/5000",
+          "4": "-1/5000",
+          "5": "1/5000"
+        },
+        "dual_values": [
+          "15039631737859/65295421555811",
+          "-141496054107647/522363372446488",
+          "-20834842790055/522363372446488",
+          "26994720085725/522363372446488",
+          "139450088725057/130590843111622",
+          "796081705245280/65295421555811",
+          "1780905531841024/65295421555811",
+          "1035079616413696/65295421555811"
+        ],
+        "reduced_costs": [
+          "0",
+          "2699368317765/522363372446488",
+          "0",
+          "3460508977905/1044726744892976",
+          "22701281525055/2089453489785952",
+          "0",
+          "14257982248965/522363372446488",
+          "0",
+          "0",
+          "0",
+          "0",
+          "85822335802035/4178906979571904",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          3,
+          4,
+          6
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "54756141074237/52062204895646",
+        "ratio_decimal": "1.05174456564009833",
+        "future_score_risk_decimal": "0.0363921818632702149",
+        "t": "128034482625000/26031102447823",
+        "p": [
+          "10309993537/21339080437500",
+          "0",
+          "10659230225213/12803448262500",
+          "0",
+          "0",
+          "2672540051456/16004310328125"
+        ],
+        "q": [
+          "0",
+          "94328922433/4572660093750",
+          "7153882774181/10669540218750",
+          "518121161366/5334770109375",
+          "677794290848/3200862065625",
+          "0"
+        ],
+        "original_observation_differences": {
+          "3": "1/5000",
+          "4": "-1/5000",
+          "6": "1/5000"
+        },
+        "dual_values": [
+          "18431962944845/78093307343469",
+          "-168955478774329/624746458747752",
+          "-776510637905/18931710871144",
+          "10777944796921/208248819582584",
+          "54756141074237/52062204895646",
+          "176303873248736/16565247012251",
+          "1447455848370688/78093307343469",
+          "4731792532176896/546653151404283"
+        ],
+        "reduced_costs": [
+          "0",
+          "457608398625/208248819582584",
+          "0",
+          "1778719381341/416497639165168",
+          "9808813703955/832995278330336",
+          "0",
+          "3609152975841/208248819582584",
+          "0",
+          "0",
+          "0",
+          "0",
+          "34814313469047/1665990556660672",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          3,
+          5,
+          6
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "1404250535781335/1293233484634562",
+        "ratio_decimal": "1.08584455356732734",
+        "future_score_risk_decimal": "0.0594087928929066603",
+        "t": "3280963510755000/646616742317281",
+        "p": [
+          "82915946567/109365450358500",
+          "0",
+          "54599809232683/65619270215100",
+          "0",
+          "0",
+          "13712139268096/82024087768875"
+        ],
+        "q": [
+          "0",
+          "6722503429273/164048175537750",
+          "401414706461789/820240877688750",
+          "3333615838474/8369804874375",
+          "9753216985024/136706812948125",
+          "0"
+        ],
+        "original_observation_differences": {
+          "3": "1/5000",
+          "5": "-1/5000",
+          "6": "1/5000"
+        },
+        "dual_values": [
+          "154025817639297/646616742317281",
+          "-1487700257183985/5172933938538248",
+          "-1500500423061135/36210537569767736",
+          "2006168750291061/36210537569767736",
+          "1404250535781335/1293233484634562",
+          "248681114152306016/31684220373546769",
+          "23159293573931008/646616742317281",
+          "910261226279534592/31684220373546769"
+        ],
+        "reduced_costs": [
+          "0",
+          "38778718685355/5172933938538248",
+          "0",
+          "33459613776063/10345867877076496",
+          "244855506251025/20691735754152992",
+          "0",
+          "188574488517483/5172933938538248",
+          "0",
+          "0",
+          "0",
+          "0",
+          "956600621046621/41383471508305984",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      },
+      {
+        "design": [
+          4,
+          5,
+          6
+        ],
+        "epsilon": "1/10000",
+        "ratio_exact": "1902345060919/1650301275000",
+        "ratio_decimal": "1.15272592328270496",
+        "future_score_risk_decimal": "0.102524766414978943",
+        "t": "32/7",
+        "p": [
+          "9178022489/28290879000000",
+          "3069084621367/14145439500000",
+          "15376210138873/28290879000000",
+          "0",
+          "0",
+          "105739399936/442044984375"
+        ],
+        "q": [
+          "0",
+          "1/4",
+          "0",
+          "3/4",
+          "0",
+          "0"
+        ],
+        "original_observation_differences": {
+          "4": "1/5000",
+          "5": "-1/5000",
+          "6": "-12752622460809/206007894016000000"
+        },
+        "dual_values": [
+          "17284393/47151465",
+          "-1625169830873/3300602550000",
+          "-13601/202802",
+          "64095801659/550100425000",
+          "1902345060919/1650301275000",
+          "283712/49065",
+          "16185344/3143431"
+        ],
+        "reduced_costs": [
+          "0",
+          "0",
+          "0",
+          "8715/209344",
+          "120225/3349504",
+          "0",
+          "17765050193/660120510000",
+          "0",
+          "74393283989/6601205100000",
+          "0",
+          "9641441934079/211238563200000",
+          "2221776482757/17603213600000",
+          "0"
+        ],
+        "gates": {
+          "primal_variables_nonnegative": true,
+          "p_normalized": true,
+          "q_normalized": true,
+          "p_mean_exact": true,
+          "q_mean_exact": true,
+          "denominator_normalization_exact": true,
+          "observation_constraints_exact": true,
+          "dual_inequality_multipliers_nonnegative": true,
+          "dual_reduced_costs_nonnegative": true,
+          "primal_dual_objectives_equal": true,
+          "ratio_matches_original_distributions": true
+        }
+      }
+    ]
+  },
+  "comparison_with_A42": {
+    "exact_data_A42_outer_bound": 0.009034708626844655,
+    "exact_data_A43_direct_risk": 0.00520055966453554,
+    "exact_data_outer_excess_percent": 73.7256989561246,
+    "noisy_A42_outer_bound": 0.016434200690519877,
+    "noisy_A43_direct_risk": 0.00986529623594507,
+    "noisy_outer_excess_percent": 66.58598279735817
+  },
+  "gates": {
+    "all_10_exact_designs_certified": true,
+    "all_10_noisy_designs_certified": true,
+    "all_internal_certificate_gates_pass": true,
+    "exact_winner_is_234": true,
+    "exact_winner_unique": true,
+    "noisy_winner_is_236": true,
+    "noisy_winner_unique": true,
+    "exact_winner_ratio_matches_closed_form": true,
+    "noisy_winner_ratio_matches_closed_form": true,
+    "A42_and_A43_winners_agree_at_both_benchmarks": true,
+    "direct_risks_are_strictly_below_A42_outer_bounds": true
+  },
+  "verdict": "PASS_DIRECT_Q_MINIMAX_DESIGN_WITH_EXACT_FRACTIONAL_CERTIFICATES",
+  "boundary": "The direct optimum is exact only for the declared finite support, mean, catalogue, budget, target, contraction, and absolute-error contracts. Agreement with A42 at the two benchmarks is not a general equivalence theorem. No continuous-parameter or physical measurement optimum is claimed."
+}

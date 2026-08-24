@@ -1,0 +1,4117 @@
+{
+  "key": "M=85|b=15|phase=unique_b_plus_2|side=full|s=131/1000|j=17",
+  "maximum": 85,
+  "base_contact": 15,
+  "compressed_phase": "unique_b_plus_2",
+  "phase_side": "full",
+  "witness": "131/1000",
+  "compressed_contact": 17,
+  "architecture_class": "legacy_three_band_gamma_minus",
+  "architecture": "P={0,j,j+1,M}; Q={1,h,h+1}; gamma- active",
+  "P_support": [
+    0,
+    16,
+    17,
+    85
+  ],
+  "Q_support": [
+    1,
+    42,
+    43
+  ],
+  "active_bands": [
+    [
+      "alpha",
+      1
+    ],
+    [
+      "beta",
+      -1
+    ],
+    [
+      "gamma",
+      -1
+    ]
+  ],
+  "segment_open_bounds": [
+    "129/1000",
+    "133/1000"
+  ],
+  "reference_probe_for_rank_one": "1/8",
+  "orientation": 1,
+  "condition_count": 179,
+  "expected_source_condition_count": 179,
+  "condition_count_matches_A102_source": true,
+  "numerator_plus_denominator_count": 180,
+  "status": "proper_strict_subcomponent",
+  "strict_component": {
+    "lower": "129/1000",
+    "upper": "19896128374395612455260657/151115727451828646838272000",
+    "selected_left_boundary": null,
+    "selected_right_boundary": {
+      "condition": "basic_p_16",
+      "side": "right",
+      "bracket": [
+        "19896128374395612455260657/151115727451828646838272000",
+        "159169026995164899642085257/1208925819614629174706176000"
+      ],
+      "endpoint_signs": [
+        1,
+        -1
+      ],
+      "width": "1/1208925819614629174706176000",
+      "bisection_steps": 81,
+      "derivative_interval_signs": [
+        -1,
+        -1
+      ],
+      "unique_simple_in_bracket": true
+    }
+  },
+  "candidate_roots": {
+    "left": [],
+    "right": [
+      {
+        "condition": "basic_p_16",
+        "side": "right",
+        "bracket": [
+          "19896128374395612455260657/151115727451828646838272000",
+          "159169026995164899642085257/1208925819614629174706176000"
+        ],
+        "endpoint_signs": [
+          1,
+          -1
+        ],
+        "width": "1/1208925819614629174706176000",
+        "bisection_steps": 81,
+        "derivative_interval_signs": [
+          -1,
+          -1
+        ],
+        "unique_simple_in_bracket": true
+      }
+    ],
+    "count": 1
+  },
+  "endpoint_nonpositive_conditions": {
+    "left": [],
+    "right": [
+      "basic_p_16"
+    ]
+  },
+  "root_ordering_certificate": {
+    "check_count": 0,
+    "pass_count": 0,
+    "failure_count": 0,
+    "checks": [],
+    "failures": []
+  },
+  "core_certificate": {
+    "interval": [
+      "129/1000",
+      "19896128374395612455260657/151115727451828646838272000"
+    ],
+    "condition_count": 180,
+    "pass_count": 180,
+    "failure_count": 0,
+    "method_counts": {
+      "single_interval": 177,
+      "monotone_decreasing": 1,
+      "adaptive_interval": 1,
+      "monotone_increasing": 1
+    },
+    "certificates": [
+      {
+        "name": "common_denominator",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_0",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_16",
+        "pass": true,
+        "method": "monotone_decreasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          -1,
+          -1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_17",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_85",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_42",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_43",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_t",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_alpha_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_beta_-1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_gamma_-1",
+        "pass": true,
+        "method": "adaptive_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 13,
+        "max_depth": 5
+      },
+      {
+        "name": "reduced_cost_q_0",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_2",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_2",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_3",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_3",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_4",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_4",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_5",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_5",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_6",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_6",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_7",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_7",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_8",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_8",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_9",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_9",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_10",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_10",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_11",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_11",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_12",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_12",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_13",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_13",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_14",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_14",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_15",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_15",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_16",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_17",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_18",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_18",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_19",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_19",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_20",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_20",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_21",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_21",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_22",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_22",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_23",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_23",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_24",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_24",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_25",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_25",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_26",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_26",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_27",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_27",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_28",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_28",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_29",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_29",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_30",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_30",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_31",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_31",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_32",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_32",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_33",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_33",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_34",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_34",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_35",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_35",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_36",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_36",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_37",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_37",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_38",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_38",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_39",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_39",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_40",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_40",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_41",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_41",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_42",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_43",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_44",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_44",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_45",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_45",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_46",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_46",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_47",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_47",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_48",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_48",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_49",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_49",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_50",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_50",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_51",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_51",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_52",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_52",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_53",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_53",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_54",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_54",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_55",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_55",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_56",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_56",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_57",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_57",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_58",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_58",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_59",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_59",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_60",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_60",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_61",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_61",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_62",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_62",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_63",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_63",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_64",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_64",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_65",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_65",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_66",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_66",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_67",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_67",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_68",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_68",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_69",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_69",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_70",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_70",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_71",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_71",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_72",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_72",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_73",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_73",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_74",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_74",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_75",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_75",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_76",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_76",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_77",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_77",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_78",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_78",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_79",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_79",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_80",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_80",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_81",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_81",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_82",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_82",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_83",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_83",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_84",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_84",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_85",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_alpha_-1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_beta_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_gamma_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      }
+    ],
+    "failures": []
+  },
+  "nonselected_boundary_hull_certificate": {
+    "hull": [
+      "129/1000",
+      "159169026995164899642085257/1208925819614629174706176000"
+    ],
+    "selected_boundary_conditions": [
+      "basic_p_16"
+    ],
+    "condition_count": 179,
+    "pass_count": 179,
+    "failure_count": 0,
+    "method_counts": {
+      "single_interval": 177,
+      "adaptive_interval": 1,
+      "monotone_increasing": 1
+    },
+    "certificates": [
+      {
+        "name": "common_denominator",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_0",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_17",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_p_85",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_42",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_q_43",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "basic_t",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_alpha_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_beta_-1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "active_dual_gamma_-1",
+        "pass": true,
+        "method": "adaptive_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 13,
+        "max_depth": 5
+      },
+      {
+        "name": "reduced_cost_q_0",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_2",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_2",
+        "pass": true,
+        "method": "monotone_increasing",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "derivative_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_3",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_3",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_4",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_4",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_5",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_5",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_6",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_6",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_7",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_7",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_8",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_8",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_9",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_9",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_10",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_10",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_11",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_11",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_12",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_12",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_13",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_13",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_14",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_14",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_15",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_15",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_16",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_17",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_18",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_18",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_19",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_19",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_20",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_20",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_21",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_21",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_22",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_22",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_23",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_23",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_24",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_24",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_25",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_25",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_26",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_26",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_27",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_27",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_28",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_28",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_29",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_29",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_30",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_30",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_31",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_31",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_32",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_32",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_33",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_33",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_34",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_34",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_35",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_35",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_36",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_36",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_37",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_37",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_38",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_38",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_39",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_39",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_40",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_40",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_41",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_41",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_42",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_43",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_44",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_44",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_45",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_45",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_46",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_46",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_47",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_47",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_48",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_48",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_49",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_49",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_50",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_50",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_51",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_51",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_52",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_52",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_53",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_53",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_54",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_54",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_55",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_55",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_56",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_56",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_57",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_57",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_58",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_58",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_59",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_59",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_60",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_60",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_61",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_61",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_62",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_62",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_63",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_63",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_64",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_64",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_65",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_65",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_66",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_66",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_67",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_67",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_68",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_68",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_69",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_69",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_70",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_70",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_71",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_71",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_72",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_72",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_73",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_73",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_74",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_74",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_75",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_75",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_76",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_76",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_77",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_77",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_78",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_78",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_79",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_79",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_80",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_80",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_81",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_81",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_82",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_82",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_83",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_83",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_p_84",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_84",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "reduced_cost_q_85",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_alpha_-1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_beta_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      },
+      {
+        "name": "inactive_slack_gamma_+1",
+        "pass": true,
+        "method": "single_interval",
+        "endpoint_signs": [
+          1,
+          1
+        ],
+        "nodes": 1,
+        "max_depth": 0
+      }
+    ],
+    "failures": []
+  },
+  "root_failures": [],
+  "outside_counterexamples": [
+    {
+      "side": "right",
+      "condition": "basic_p_16",
+      "point": "63991232200782115975601333/483570327845851669882470400",
+      "sign": -1
+    }
+  ]
+}

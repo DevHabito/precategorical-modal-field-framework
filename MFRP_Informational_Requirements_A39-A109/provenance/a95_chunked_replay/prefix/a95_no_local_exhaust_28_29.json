@@ -1,0 +1,46 @@
+[
+  {
+    "M": 325,
+    "b": 55,
+    "cell_phase": "unique_b_plus_3",
+    "side": "full",
+    "s": "129001/1000000",
+    "segment": [
+      "129/1000",
+      "129001034966776203/1000000000000000000"
+    ],
+    "compressed_j": 58,
+    "local": [
+      {
+        "family": "F2",
+        "contact": 58,
+        "gamma": null,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 57,
+        "gamma": -1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 58,
+        "gamma": 1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_59"
+      }
+    ],
+    "passes": [],
+    "full_catalogue_passes": [],
+    "status_counts": {
+      "primal_infeasible": 916,
+      "reduced_cost_infeasible": 53,
+      "active_dual_infeasible": 1
+    },
+    "candidate_count": 970,
+    "elapsed": 32.306408405303955
+  }
+]

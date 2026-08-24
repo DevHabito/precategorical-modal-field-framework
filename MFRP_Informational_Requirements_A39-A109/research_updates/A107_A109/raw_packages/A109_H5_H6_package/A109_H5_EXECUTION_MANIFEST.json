@@ -1,0 +1,13 @@
+{
+  "audit": "A109-H5 execution manifest",
+  "preregistration_sha256": "d510a645173bf6806f83fea4cbc44550446406732790b7a07be598d46f4f858e",
+  "events": [
+    {
+      "rank_shard": [196, 197],
+      "event": "outer orchestration timeout before the shard produced a result file",
+      "mathematical_status": "NO_RESULT_FROM_THIS_ATTEMPT",
+      "protocol_change": false,
+      "action": "rerun the identical preregistered shard with identical code and predictions; no rank, criterion, support, tolerance, or prediction changes"
+    }
+  ]
+}

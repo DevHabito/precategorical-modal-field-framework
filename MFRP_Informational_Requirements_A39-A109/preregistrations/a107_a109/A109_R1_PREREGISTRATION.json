@@ -1,0 +1,24 @@
+{
+  "audit": "A109-R1_FIRST_FUTURE_RIGHT_BRANCH_PROSPECTIVE_TEST",
+  "status": "FROZEN_BEFORE_FULL_ATLAS_EXECUTION",
+  "parent_rule": "A109 two-sided adjacent-boundary rule frozen before ranks 106..121",
+  "selection_rule": "Starting strictly after rank 121, scan canonical ranks using only the already-frozen target-only quantities D, N_{j+1}, N_j, exact endpoint/witness signs, and monotonicity applicability checks. Select the first rank for which the frozen rule predicts a single right boundary basic_p_j. Do not inspect any other KKT condition, root atlas, analyze_record output, or direct-matrix result during selection.",
+  "selected_rank": 173,
+  "selected_source_key": "M=171|b=30|phase=unique_b_plus_1|side=full|s=131/1000|j=31",
+  "selected_M": 171,
+  "selected_j": 31,
+  "selected_witness": "131/1000",
+  "selected_source_segment": ["12956286115339291/100000000000000000", "133/1000"],
+  "frozen_prediction": {
+    "class": "proper_strict_subcomponent",
+    "boundaries": [{"side": "right", "condition": "basic_p_31"}],
+    "logic": "N_{j+1}(L)>0, N_j(R)<0, both target numerators positive at the witness, D positive, N_{j+1} increasing and N_j decreasing on the source segment."
+  },
+  "adjudication": {
+    "support": "The exact full atlas returns a proper strict subcomponent with exactly one selected right boundary basic_p_31, all nonselected conditions certify positive on the appropriate hull/core, and exact direct-matrix regression has zero discrepancies.",
+    "refute": "Any exact class/boundary mismatch or another KKT obstruction/boundary contradicts the frozen prediction.",
+    "inconclusive": "Execution/certification failure without an exact mathematical contradiction."
+  },
+  "no_posthoc_changes": "No rank replacement, no search continuation after rank 173, no rule edits, no condition substitution, no tolerance changes, no support changes, no rescue classifier.",
+  "nonclaims": ["one prospective right-branch witness only", "not an all-922 theorem", "not a physical claim"]
+}

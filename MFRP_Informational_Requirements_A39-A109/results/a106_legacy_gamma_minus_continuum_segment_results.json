@@ -1,0 +1,180 @@
+{
+  "audit": "A106_EXACT_LEGACY_GAMMA_MINUS_CONTINUUM_SEGMENT_ATLAS",
+  "evidence_class": "exact sparse rational-function KKT reduction, rational interval arithmetic, exact algebraic root brackets, exact root ordering, and exact outside counterexamples",
+  "scope": {
+    "source_segment_count": 18,
+    "source": "A102 records with detailed_class=legacy_three_band_gamma_minus",
+    "tested_family": "P={0,j-1,j,M}, Q={1,h,h+1}, alpha+, beta-, and gamma- active",
+    "symbolic_method": "exact Sherman-Morrison rank-one alpha-row update around s=1/8",
+    "claim": "exact classification of the strict KKT component containing each of the 18 rational witnesses inside its A95/A102 source segment",
+    "explicit_nonclaim": "not a continuum theorem for the 922 legacy gamma-plus witnesses, not an all-cell or all-M theorem, and not a physical claim"
+  },
+  "continuum_atlas": {
+    "record_count": 18,
+    "unique_key_count": 18,
+    "status_counts": {
+      "proper_strict_subcomponent": 17,
+      "full_segment_coverage": 1
+    },
+    "phase_status_counts": {
+      "b_plus_1_to_b_plus_2::proper_strict_subcomponent": 2,
+      "b_plus_2_to_b_plus_1::full_segment_coverage": 1,
+      "unique_b_plus_1::proper_strict_subcomponent": 1,
+      "unique_b_plus_2::proper_strict_subcomponent": 14
+    },
+    "condition_count": 2410,
+    "direct_rank_one_regression_comparison_count": 2410,
+    "direct_rank_one_regression_failure_count": 0,
+    "numerator_plus_denominator_count": 2428,
+    "selected_boundary_count": 17,
+    "left_boundary_mechanisms": {
+      "None": 18
+    },
+    "right_boundary_mechanisms": {
+      "basic_p_support_mass": 17,
+      "None": 1
+    },
+    "outside_counterexample_count": 17,
+    "core_failure_count": 0,
+    "hull_failure_count": 0,
+    "root_failure_count": 0,
+    "ordering_failure_count": 0
+  },
+  "structural_result": {
+    "full_segment_count": 1,
+    "partial_segment_count": 17,
+    "unresolved_count": 0,
+    "interpretation": "the eighteen legacy gamma-minus pointwise certificates are promoted only to the exact witness-containing components supported by the KKT signs; no segment is silently promoted beyond its certified boundaries"
+  },
+  "provenance": {
+    "exact_direct_matrix_vs_rank_one_regression": {
+      "record_count": 18,
+      "comparison_count": 2410,
+      "failure_count": 0,
+      "failures": [],
+      "records": [
+        {
+          "key": "M=18|b=4|phase=unique_b_plus_1|side=full|s=131/1000|j=5",
+          "condition_count": 45,
+          "failure_count": 0
+        },
+        {
+          "key": "M=23|b=4|phase=unique_b_plus_2|side=full|s=131/1000|j=6",
+          "condition_count": 55,
+          "failure_count": 0
+        },
+        {
+          "key": "M=28|b=5|phase=b_plus_2_to_b_plus_1|side=left|s=13/100|j=7",
+          "condition_count": 65,
+          "failure_count": 0
+        },
+        {
+          "key": "M=29|b=5|phase=unique_b_plus_2|side=full|s=131/1000|j=7",
+          "condition_count": 67,
+          "failure_count": 0
+        },
+        {
+          "key": "M=34|b=6|phase=unique_b_plus_2|side=full|s=131/1000|j=8",
+          "condition_count": 77,
+          "failure_count": 0
+        },
+        {
+          "key": "M=35|b=6|phase=unique_b_plus_2|side=full|s=13/100|j=8",
+          "condition_count": 79,
+          "failure_count": 0
+        },
+        {
+          "key": "M=45|b=8|phase=unique_b_plus_2|side=full|s=131/1000|j=10",
+          "condition_count": 99,
+          "failure_count": 0
+        },
+        {
+          "key": "M=51|b=9|phase=unique_b_plus_2|side=full|s=131/1000|j=11",
+          "condition_count": 111,
+          "failure_count": 0
+        },
+        {
+          "key": "M=56|b=10|phase=unique_b_plus_2|side=full|s=131/1000|j=12",
+          "condition_count": 121,
+          "failure_count": 0
+        },
+        {
+          "key": "M=62|b=11|phase=unique_b_plus_2|side=full|s=131/1000|j=13",
+          "condition_count": 133,
+          "failure_count": 0
+        },
+        {
+          "key": "M=68|b=12|phase=unique_b_plus_2|side=full|s=131/1000|j=14",
+          "condition_count": 145,
+          "failure_count": 0
+        },
+        {
+          "key": "M=79|b=14|phase=b_plus_1_to_b_plus_2|side=right|s=33/250|j=16",
+          "condition_count": 167,
+          "failure_count": 0
+        },
+        {
+          "key": "M=85|b=15|phase=unique_b_plus_2|side=full|s=131/1000|j=17",
+          "condition_count": 179,
+          "failure_count": 0
+        },
+        {
+          "key": "M=91|b=16|phase=unique_b_plus_2|side=full|s=131/1000|j=18",
+          "condition_count": 191,
+          "failure_count": 0
+        },
+        {
+          "key": "M=96|b=17|phase=b_plus_1_to_b_plus_2|side=right|s=33/250|j=19",
+          "condition_count": 201,
+          "failure_count": 0
+        },
+        {
+          "key": "M=102|b=18|phase=unique_b_plus_2|side=full|s=131/1000|j=20",
+          "condition_count": 213,
+          "failure_count": 0
+        },
+        {
+          "key": "M=108|b=19|phase=unique_b_plus_2|side=full|s=131/1000|j=21",
+          "condition_count": 225,
+          "failure_count": 0
+        },
+        {
+          "key": "M=114|b=20|phase=unique_b_plus_2|side=full|s=131/1000|j=22",
+          "condition_count": 237,
+          "failure_count": 0
+        }
+      ]
+    },
+    "source_hashes": {
+      "A95_result": "005aefe165635744e57f78e49189cbf7acbe19c57c9080aaeeb967ec77e35b3a",
+      "A102_result": "a502b5a44362834454806ec11359055057fec0ab786d55fbd35f4b56060e80af",
+      "A102_catalogue": "e00ce851350cc15e138bbfd7e8ac6109a6a3a3c02ccc610224ad7b2b42f33bd1"
+    }
+  },
+  "gates": {
+    "A95_and_A102_sources_are_present_and_passed": true,
+    "exactly_18_legacy_gamma_minus_source_segments_are_loaded": true,
+    "computed_records_cover_exactly_all_18_source_keys": true,
+    "all_record_keys_are_unique": true,
+    "all_KKT_condition_counts_match_A102": true,
+    "all_exact_direct_matrix_vs_rank_one_witness_values_match": true,
+    "direct_rank_one_regression_covers_every_KKT_condition": true,
+    "exact_KKT_condition_count_matches_source_sum": true,
+    "numerator_plus_denominator_count_is_condition_count_plus_18": true,
+    "classification_exhausts_all_18_segments": true,
+    "no_witness_certificate_fails": true,
+    "all_selected_boundaries_are_locally_unique_and_simple": true,
+    "all_competing_root_brackets_are_exactly_ordered": true,
+    "all_core_KKT_polynomial_certificates_pass": true,
+    "all_nonselected_boundary_hull_certificates_pass": true,
+    "every_selected_boundary_has_a_negative_rational_outside_counterexample": true,
+    "every_certified_component_contains_its_rational_witness": true,
+    "no_internal_failure_or_unresolved_segment_remains": true,
+    "formal_contract_and_nonphysical_scope_are_preserved": true
+  },
+  "gate_count": 19,
+  "pass_count": 19,
+  "fail_count": 0,
+  "failed_gates": [],
+  "verdict": "PASS_EXACT_CONTINUUM_CLASSIFICATION_OF_18_LEGACY_GAMMA_MINUS_SEGMENTS_WITH_1_FULL_AND_17_PARTIAL_COMPONENTS"
+}

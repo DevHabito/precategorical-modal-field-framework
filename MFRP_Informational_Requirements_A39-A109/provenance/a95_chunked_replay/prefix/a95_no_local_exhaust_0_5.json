@@ -1,0 +1,217 @@
+[
+  {
+    "M": 125,
+    "b": 22,
+    "cell_phase": "b_plus_1_to_b_plus_2",
+    "side": "right",
+    "s": "33/250",
+    "segment": [
+      "155798527919823684976489/1180591620717411303424000",
+      "133/1000"
+    ],
+    "compressed_j": 24,
+    "local": [
+      {
+        "family": "F2",
+        "contact": 24,
+        "gamma": null,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 23,
+        "gamma": -1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 24,
+        "gamma": 1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_25"
+      }
+    ],
+    "passes": [],
+    "full_catalogue_passes": [],
+    "status_counts": {
+      "primal_infeasible": 349,
+      "reduced_cost_infeasible": 20,
+      "active_dual_infeasible": 1
+    },
+    "candidate_count": 370
+  },
+  {
+    "M": 131,
+    "b": 23,
+    "cell_phase": "b_plus_1_to_b_plus_2",
+    "side": "right",
+    "s": "131/1000",
+    "segment": [
+      "154595914196256505686481/1180591620717411303424000",
+      "133/1000"
+    ],
+    "compressed_j": 25,
+    "local": [
+      {
+        "family": "F2",
+        "contact": 25,
+        "gamma": null,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 24,
+        "gamma": -1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 25,
+        "gamma": 1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_26"
+      }
+    ],
+    "passes": [],
+    "full_catalogue_passes": [],
+    "status_counts": {
+      "primal_infeasible": 366,
+      "reduced_cost_infeasible": 21,
+      "active_dual_infeasible": 1
+    },
+    "candidate_count": 388
+  },
+  {
+    "M": 137,
+    "b": 24,
+    "cell_phase": "b_plus_1_to_b_plus_2",
+    "side": "right",
+    "s": "131/1000",
+    "segment": [
+      "153280762882015431432753/1180591620717411303424000",
+      "133/1000"
+    ],
+    "compressed_j": 26,
+    "local": [
+      {
+        "family": "F2",
+        "contact": 26,
+        "gamma": null,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 25,
+        "gamma": -1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 26,
+        "gamma": 1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_27"
+      }
+    ],
+    "passes": [],
+    "full_catalogue_passes": [],
+    "status_counts": {
+      "primal_infeasible": 383,
+      "reduced_cost_infeasible": 22,
+      "active_dual_infeasible": 1
+    },
+    "candidate_count": 406
+  },
+  {
+    "M": 143,
+    "b": 25,
+    "cell_phase": "unique_b_plus_2",
+    "side": "full",
+    "s": "131/1000",
+    "segment": [
+      "129/1000",
+      "133/1000"
+    ],
+    "compressed_j": 27,
+    "local": [
+      {
+        "family": "F2",
+        "contact": 27,
+        "gamma": null,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 26,
+        "gamma": -1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 27,
+        "gamma": 1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_28"
+      }
+    ],
+    "passes": [],
+    "full_catalogue_passes": [],
+    "status_counts": {
+      "primal_infeasible": 400,
+      "reduced_cost_infeasible": 23,
+      "active_dual_infeasible": 1
+    },
+    "candidate_count": 424
+  },
+  {
+    "M": 148,
+    "b": 26,
+    "cell_phase": "b_plus_1_to_b_plus_2",
+    "side": "right",
+    "s": "33/250",
+    "segment": [
+      "15577591670757924707477/118059162071741130342400",
+      "133/1000"
+    ],
+    "compressed_j": 28,
+    "local": [
+      {
+        "family": "F2",
+        "contact": 28,
+        "gamma": null,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 27,
+        "gamma": -1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_0"
+      },
+      {
+        "family": "F3",
+        "contact": 28,
+        "gamma": 1,
+        "status": "primal_infeasible",
+        "failure": "basic_p_29"
+      }
+    ],
+    "passes": [],
+    "full_catalogue_passes": [],
+    "status_counts": {
+      "primal_infeasible": 414,
+      "reduced_cost_infeasible": 24,
+      "active_dual_infeasible": 1
+    },
+    "candidate_count": 439
+  }
+]

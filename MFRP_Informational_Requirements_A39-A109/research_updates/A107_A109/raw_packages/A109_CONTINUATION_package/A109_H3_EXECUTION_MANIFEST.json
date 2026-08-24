@@ -1,0 +1,26 @@
+{
+  "audit": "A109-H3_EXECUTION_MANIFEST",
+  "scientific_preregistration_sha256": "2d9247f90804bff38cddd3c744c8a83a98dc609c2d603c34bb2fa87792fd2e1a",
+  "event": "Frozen shard 178..179 exceeded runtime and produced no result file after shards 174..175 and 176..177 had completed. No mathematical outcome from ranks 178..179 was available at repartition time.",
+  "scientific_changes": "none",
+  "replacement": "none",
+  "remaining_execution_subshards": [
+    [
+      178,
+      178
+    ],
+    [
+      179,
+      179
+    ],
+    [
+      180,
+      180
+    ],
+    [
+      181,
+      181
+    ]
+  ],
+  "adjudication": "unchanged aggregate over all preregistered ranks 174..181"
+}

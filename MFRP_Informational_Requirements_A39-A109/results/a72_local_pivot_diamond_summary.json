@@ -1,0 +1,31 @@
+{
+  "audit": "A72_LOCAL_PIVOT_DIAMOND_AND_ORIENTATION_SELECTION",
+  "verdict": "PASS_EXACT_LOCAL_PIVOT_DIAMOND_AND_ORIENTATION_SELECTION",
+  "phase_counts": {
+    "10": 6,
+    "11": 6,
+    "12": 6
+  },
+  "catalogue_winners": {
+    "11": [
+      2,
+      3,
+      4
+    ],
+    "12": [
+      2,
+      3,
+      4
+    ]
+  },
+  "observed_paths": {
+    "M10": "S -> A -> T",
+    "M11": "S -> A -> T",
+    "M12": "S -> B -> T"
+  },
+  "cross_route_exclusions": {
+    "M11": "Route B has a negative gamma-minus active multiplier throughout the exact competing phase-5 interval.",
+    "M12": "Route A has a negative reduced cost for the omitted primal contact x=4 throughout the exact competing phase-5 interval."
+  },
+  "scope": "Exact local four-signature selection theorem for M=10,11,12; not a complete active-basis enumeration."
+}

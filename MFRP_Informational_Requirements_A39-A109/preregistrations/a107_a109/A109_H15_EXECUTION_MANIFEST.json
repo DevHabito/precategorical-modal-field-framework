@@ -1,0 +1,16 @@
+{
+  "audit": "A109_H15_EXECUTION_MANIFEST",
+  "policy": "Use preregistered single-rank shards with the established 55-second wall-clock full-atlas window. If one times out with no result, repeat the identical shard once. Only after two timeouts may a separately preregistered exact sufficient-certificate protocol be used; it does not retroactively complete the full-atlas protocol.",
+  "no_result_first_attempts": [
+    352,
+    360,
+    361
+  ],
+  "identical_retry_completed": [
+    352,
+    360,
+    361
+  ],
+  "fallback_certificate_used": false,
+  "note": "Ranks 352, 360, and 361 produced no result on the first 55-second-window attempt. The identical preregistered single-rank shard was rerun once and produced a complete full-atlas result within the script-recorded computation time. No alternate certificate protocol was invoked. Rank 355 produced a complete result file with script-recorded runtime below 55 seconds despite an outer container client timeout signal; it is therefore retained as a completed full-atlas shard."
+}

@@ -1,0 +1,332 @@
+{
+  "audit": "A109_H12_AGGREGATE_REVIEW",
+  "parent_preregistration_sha256": "9d3671fe1bf7d73f4e69d8edc8093a93161ef83a4139927e2bed1f6f06c63057",
+  "execution_policy_sha256": "883cd0f8ffb7fbb8edc7bbce24d19252e6b0e20c89a3462c58ea0889ab8507c8",
+  "formal_full_atlas_status": "INCOMPLETE_EXECUTION_R313",
+  "mixed_exact_status": "RESOLVED_SUPPORT_A109_H12_MIXED_EXACT_PROTOCOL",
+  "summary": {
+    "records_total": 16,
+    "full_atlas_completed": 15,
+    "full_atlas_repeated_timeout_ranks": [
+      313
+    ],
+    "mathematically_resolved": 16,
+    "predicted_full": 12,
+    "predicted_partial": 4,
+    "class_matches": 16,
+    "boundary_matches": 16,
+    "left_boundaries": 2,
+    "right_boundaries": 2,
+    "two_sided": 0,
+    "non_adjacent_boundaries": 0,
+    "direct_comparisons_total": 27128,
+    "direct_mismatches_total": 0,
+    "full_atlas_direct_comparisons": 25028,
+    "certificate_direct_comparisons": 2100,
+    "exact_certificate_conditions_rank313": 524
+  },
+  "rank313_execution": {
+    "first_full_atlas_timeout": true,
+    "second_identical_full_atlas_timeout": true,
+    "alternate_certificate_frozen_after_two_timeouts": true,
+    "protocol_deviation": false
+  },
+  "baseline_verification": {
+    "audit_results": 68,
+    "gate_count": 1013,
+    "figures": 110,
+    "failures": [],
+    "status": "PASS"
+  },
+  "records": [
+    {
+      "rank": 303,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_45"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_45"
+        }
+      ],
+      "failures": [],
+      "direct_comparisons": 2052,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 304,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1545,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 305,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1545,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 306,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1551,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 307,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1551,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 308,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_47"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_47"
+        }
+      ],
+      "failures": [],
+      "direct_comparisons": 2076,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 309,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_47"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_47"
+        }
+      ],
+      "failures": [],
+      "direct_comparisons": 2084,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 310,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1569,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 311,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1569,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 312,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1575,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 313,
+      "method": "separately_preregistered_exact_sufficient_certificate_after_two_timeouts",
+      "verdict": "RESOLVED_SUPPORT_A109_H12D_CERTIFICATE",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_46"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_46"
+        }
+      ],
+      "failures": [],
+      "direct_comparisons": 2100,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "target": "basic_p_46",
+      "target_signs": {
+        "L": 1,
+        "witness": 1,
+        "R": -1
+      },
+      "root_certificate": {
+        "lower": "4208603834367395646598394053227700000185252717/31691265005705735037417580134400000000000000000",
+        "upper": "8417207668784051056062372049559859862470036641/63382530011411470074835160268800000000000000000",
+        "exact_rational_root": false,
+        "steps": 30,
+        "signs": [
+          1,
+          -1
+        ],
+        "width": "49259762865583943104459862099531207/63382530011411470074835160268800000000000000000"
+      },
+      "certified_non_target_conditions": 524
+    },
+    {
+      "rank": 314,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1575,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 315,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1581,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 316,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1581,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 317,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1587,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 318,
+      "method": "full_atlas_first_attempt",
+      "verdict": "PASS_A109_H12_TWO_SIDED_HOLDOUT",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "failures": [],
+      "direct_comparisons": 1587,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0
+    }
+  ],
+  "scope": {
+    "nonclaims": [
+      "not an all-922 theorem",
+      "mixed exact resolution does not retroactively complete the full-atlas rank 313 protocol",
+      "not a physical claim"
+    ]
+  }
+}

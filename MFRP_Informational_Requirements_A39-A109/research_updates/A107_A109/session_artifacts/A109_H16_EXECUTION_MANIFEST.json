@@ -1,0 +1,266 @@
+{
+  "audit": "A109_H16_EXECUTION_MANIFEST",
+  "parent_preregistration_sha256": "3ed8d491b92e8f6ac001f7f9834100555f806b49e2c79f83d0b973957d0af0ff",
+  "policy": "Single-rank 55-second full-atlas attempt; identical retry only after no-result timeout; exact fallback only after two no-result timeouts.",
+  "records": [
+    {
+      "rank": 367,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 12.639078140258789
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 368,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 20.06296157836914
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 369,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 17.834986209869385
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 370,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 43.1377489566803
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 371,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 43.569918155670166
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 372,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 13.892114162445068
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 373,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 36.584333419799805
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 374,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 35.29576086997986
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 375,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 14.295037984848022
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 376,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 13.121081113815308
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 377,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 13.803303241729736
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 378,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": false,
+          "log_bytes": 0,
+          "outcome": "timeout_no_result"
+        },
+        {
+          "attempt": 2,
+          "window_seconds": 55,
+          "result_file_created": false,
+          "log_bytes": 0,
+          "outcome": "timeout_no_result"
+        }
+      ],
+      "full_atlas_status": "incomplete_execution",
+      "fallback_allowed_after_second_timeout": true
+    },
+    {
+      "rank": 379,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 33.0714168548584
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 380,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 13.513636112213135
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 381,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": true,
+          "outcome": "completed",
+          "reported_seconds": 48.797687292099
+        }
+      ],
+      "full_atlas_status": "completed",
+      "fallback_allowed_after_second_timeout": false
+    },
+    {
+      "rank": 382,
+      "attempts": [
+        {
+          "attempt": 1,
+          "window_seconds": 55,
+          "result_file_created": false,
+          "log_bytes": 0,
+          "outcome": "timeout_no_result"
+        },
+        {
+          "attempt": 2,
+          "window_seconds": 55,
+          "result_file_created": false,
+          "log_bytes": 0,
+          "outcome": "timeout_no_result"
+        }
+      ],
+      "full_atlas_status": "incomplete_execution",
+      "fallback_allowed_after_second_timeout": true
+    }
+  ],
+  "repeated_timeout_ranks": [
+    378,
+    382
+  ],
+  "completed_full_atlas_ranks": [
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    379,
+    380,
+    381
+  ],
+  "note": "The repeated-timeout ranks were not counted as completed full-atlas executions. H16D was frozen only after both no-result attempts had occurred."
+}

@@ -1,0 +1,43 @@
+{
+  "audit": "A109_PROSPECTIVE_STATUS_R106_R398",
+  "prior_status": {
+    "range": [
+      106,
+      382
+    ],
+    "mathematically_resolved": 277,
+    "strict_clean_prospective": 276,
+    "full": 193,
+    "partial": 84,
+    "left": 78,
+    "right": 6,
+    "two_sided": 0,
+    "non_adjacent": 0,
+    "direct_comparisons_math": 410726,
+    "direct_comparisons_strict": 408714,
+    "direct_mismatches": 0
+  },
+  "h17_sha256": "f4a97986b5b9618a75bc4e695e1777d982876efc244f77aaba7427947d491b6a",
+  "status": {
+    "range": [
+      106,
+      398
+    ],
+    "mathematically_resolved": 293,
+    "strict_clean_prospective": 292,
+    "full": 204,
+    "partial": 89,
+    "left": 83,
+    "right": 6,
+    "two_sided": 0,
+    "non_adjacent": 0,
+    "direct_comparisons_math": 442853,
+    "direct_comparisons_strict": 440841,
+    "direct_mismatches": 0
+  },
+  "accounting_note": "H17 adds 16 clean prospective mathematical resolutions. Thirteen completed under the frozen full-atlas protocol. Ranks 392, 395, and 398 each produced no result on two identical 55-second attempts and were then resolved by the separately frozen H17D exact sufficient-certificate protocol, exactly as allowed prospectively. The sole gap between mathematical and strict-clean counts remains the previously documented rank-295 ordering issue.",
+  "scope": {
+    "not_all_922_theorem": true,
+    "not_physical_claim": true
+  }
+}

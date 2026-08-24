@@ -1,0 +1,79 @@
+{
+  "audit": "A109-H14D_SHARDED_BASE",
+  "rank": 342,
+  "preregistration_sha256": "722f2d04cc93e2ac634273ad3297f60f36c202bfc2723d385cfc8502a8fe489e",
+  "verdict": "BASE_SUPPORT",
+  "M": 272,
+  "j": 49,
+  "segment": [
+    "129/1000",
+    "133/1000"
+  ],
+  "witness": "131/1000",
+  "frozen_prediction": {
+    "canonical_rank": 342,
+    "source_key": "M=272|b=47|phase=unique_b_plus_2|side=full|s=131/1000|j=49",
+    "maximum": 272,
+    "contact_j": 49,
+    "witness": "131/1000",
+    "segment_open_bounds": [
+      "129/1000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_50"
+      }
+    ]
+  },
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_50",
+  "target_side": "left",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "unique_root_certificate": {
+    "lower": "140344187797/1073741824000",
+    "upper": "56137675119/429496729600",
+    "exact_rational_root": false,
+    "steps": 32,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "1/2147483648000"
+  },
+  "failures": [],
+  "seconds": 0.5266165733337402
+}

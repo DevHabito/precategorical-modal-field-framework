@@ -1,0 +1,96 @@
+{
+  "audit": "A109-H4-R183_INDEPENDENT_SUFFICIENT_CERTIFICATE_DIAGNOSTIC",
+  "implementation": "V2 exact monotone bisection; same frozen diagnostic requirements",
+  "preregistration_sha256": "fe222cf6aac119e2bc745a5f1e57cc16fe7c27ed7e8511d9dbce39d879a6e25c",
+  "verdict": "RESOLVED_SUPPORT_R183_LEFT_BOUNDARY",
+  "rank": 183,
+  "source_key": "M=177|b=31|phase=b_plus_1_to_b_plus_2|side=right|s=1327/10000|j=33",
+  "M": 177,
+  "j": 33,
+  "segment": [
+    "78212442283661320781537397222012544733/590295810358705651712000000000000000000",
+    "133/1000"
+  ],
+  "witness": "1327/10000",
+  "target": "basic_p_34",
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "target_signs": {
+    "target_L": -1,
+    "target_witness": 1,
+    "target_R": 1
+  },
+  "non_target_condition_count": 362,
+  "non_target_certificate_methods": {
+    "single_interval": 361,
+    "convex_increasing": 1
+  },
+  "non_target_failure_count": 0,
+  "non_target_unresolved_count": 0,
+  "non_target_failures": [],
+  "non_target_unresolved": [],
+  "unique_root_certificate": {
+    "monotonicity": "strictly increasing",
+    "exact_sign_bracket": {
+      "lower": "262747432526795747430801194371621778385420919/1980704062856608439838598758400000000000000000",
+      "upper": "656868581376895244046462586251555834957279931/4951760157141521099596496896000000000000000000",
+      "exact_rational_root": false,
+      "steps": 24,
+      "signs": [
+        -1,
+        1
+      ],
+      "width": "119811750938919200645002777987455267/9903520314283042199192993792000000000000000000"
+    }
+  },
+  "direct_checks": [
+    {
+      "label": "inside",
+      "probe": "1313967154229575093962917724350755834957279931/9903520314283042199192993792000000000000000000",
+      "comparison_count": 363,
+      "mismatches": [],
+      "nonpositive_conditions": []
+    },
+    {
+      "label": "witness",
+      "probe": "1327/10000",
+      "comparison_count": 363,
+      "mismatches": [],
+      "nonpositive_conditions": []
+    },
+    {
+      "label": "outside_left",
+      "probe": "2625924200714497986751147697129613309622307923/19807040628566084398385987584000000000000000000",
+      "comparison_count": 363,
+      "mismatches": [],
+      "nonpositive_conditions": [
+        "basic_p_34"
+      ]
+    }
+  ],
+  "direct_comparison_count": 1089,
+  "direct_mismatch_count": 0,
+  "inside_failures": [],
+  "outside_failures": [],
+  "exact_failures": [],
+  "seconds": 22.05590796470642,
+  "scope": "This diagnostic does not retroactively count as completion of the preregistered H4 full-atlas execution; it is an independent mathematical resolution attempt."
+}

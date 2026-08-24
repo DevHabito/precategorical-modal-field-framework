@@ -1,0 +1,471 @@
+{
+  "audit": "A109_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT",
+  "status": "FROZEN_BEFORE_FULL_ATLAS_EXECUTION",
+  "derivation_basis": {
+    "ranks": [
+      1,
+      105
+    ],
+    "note": "Post-refutation development set only. The two-sided rule matched 105/105 already observed classes/boundaries; this is not prospective evidence. Rank 105 motivated adding the right-hand basic_p_j mechanism after the earlier upper-adjacent-only rule was refuted."
+  },
+  "holdout_selection": {
+    "canonical_ranks_inclusive": [
+      106,
+      121
+    ],
+    "record_count": 16,
+    "replacement_if_failure": "none",
+    "shards": [
+      [
+        106,
+        113
+      ],
+      [
+        114,
+        121
+      ]
+    ]
+  },
+  "frozen_rule": {
+    "applicability": "Require D>0 on source segment, N_{j+1} strictly increasing, N_j strictly decreasing, both target numerators positive at witness, and nonzero relevant endpoint signs.",
+    "left_partial": "If N_{j+1}(L)<0 and N_j(R)>0, predict one left boundary basic_p_{j+1}.",
+    "right_partial": "If N_{j+1}(L)>0 and N_j(R)<0, predict one right boundary basic_p_j.",
+    "two_sided_partial": "If both endpoint target signs are negative, predict a witness-containing strict component with left basic_p_{j+1} and right basic_p_j boundaries.",
+    "full": "If both endpoint target signs are positive, predict full source-segment coverage.",
+    "zero_or_failed_applicability": "NO_CLASSIFICATION."
+  },
+  "prediction_generation_constraint": "Predictions below were generated using only D, basic_p_{j+1}, basic_p_j, their exact endpoint/witness signs, and derivative positivity/negativity certificates. No other KKT condition, root atlas, full analyze_record result, or parent endpoint-only prediction was consulted.",
+  "adjudication": {
+    "support": "Every classifiable holdout record matches exact full-atlas class and exactly the predeclared boundary set; all non-selected KKT conditions are certified positive on the relevant strict component/hull; direct rational matrix regression has zero discrepancies.",
+    "refute": "Any classifiable record has an exact class or boundary mismatch, or another KKT condition becomes a selected boundary / exact obstruction contrary to prediction.",
+    "inconclusive": "Execution/certification failure without an exact mathematical contradiction."
+  },
+  "no_posthoc_changes": "No record replacement, no rank changes, no rule edits, no condition substitution, no tolerance changes, no support/active-band changes, no rescue classifier after outcomes.",
+  "nonclaims": [
+    "not a theorem for ranks beyond 121",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ],
+  "holdout_predictions": [
+    {
+      "canonical_rank": 106,
+      "source_key": "M=121|b=21|phase=unique_b_plus_2|side=full|s=131/1000|j=23",
+      "maximum": 121,
+      "contact_j": 23,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_24"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 107,
+      "source_key": "M=122|b=21|phase=unique_b_plus_2|side=full|s=131/1000|j=23",
+      "maximum": 122,
+      "contact_j": 23,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 108,
+      "source_key": "M=123|b=21|phase=unique_b_plus_2|side=full|s=13/100|j=23",
+      "maximum": 123,
+      "contact_j": 23,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "32836144957913107/250000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 109,
+      "source_key": "M=123|b=22|phase=unique_b_plus_1|side=full|s=33/250|j=23",
+      "maximum": 123,
+      "contact_j": 23,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "131344579831652429/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 110,
+      "source_key": "M=124|b=21|phase=unique_b_plus_2|side=full|s=1291/10000|j=23",
+      "maximum": 124,
+      "contact_j": 23,
+      "witness": "1291/10000",
+      "segment_open_bounds": [
+        "129/1000",
+        "64597361437939233/500000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 111,
+      "source_key": "M=124|b=22|phase=unique_b_plus_1|side=full|s=131/1000|j=23",
+      "maximum": 124,
+      "contact_j": 23,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129194722875878467/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 112,
+      "source_key": "M=125|b=22|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=23",
+      "maximum": 125,
+      "contact_j": 23,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "19474815989977960622061/147573952589676412928000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 113,
+      "source_key": "M=126|b=22|phase=unique_b_plus_2|side=full|s=131/1000|j=24",
+      "maximum": 126,
+      "contact_j": 24,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_25"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 114,
+      "source_key": "M=127|b=22|phase=unique_b_plus_2|side=full|s=131/1000|j=24",
+      "maximum": 127,
+      "contact_j": 24,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_25"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 115,
+      "source_key": "M=128|b=22|phase=unique_b_plus_2|side=full|s=131/1000|j=24",
+      "maximum": 128,
+      "contact_j": 24,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 116,
+      "source_key": "M=129|b=22|phase=unique_b_plus_2|side=full|s=13/100|j=24",
+      "maximum": 129,
+      "contact_j": 24,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "6552466206034041/50000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 117,
+      "source_key": "M=129|b=23|phase=unique_b_plus_1|side=full|s=33/250|j=24",
+      "maximum": 129,
+      "contact_j": 24,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "131049324120680821/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 118,
+      "source_key": "M=130|b=22|phase=unique_b_plus_2|side=full|s=129001/1000000|j=24",
+      "maximum": 130,
+      "contact_j": 24,
+      "witness": "129001/1000000",
+      "segment_open_bounds": [
+        "129/1000",
+        "129001034966776203/1000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 119,
+      "source_key": "M=130|b=23|phase=unique_b_plus_1|side=full|s=131/1000|j=24",
+      "maximum": 130,
+      "contact_j": 24,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "32250258741694051/250000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 120,
+      "source_key": "M=131|b=23|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=24",
+      "maximum": 131,
+      "contact_j": 24,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "1932448927453206321081/14757395258967641292800"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 121,
+      "source_key": "M=132|b=23|phase=unique_b_plus_2|side=full|s=131/1000|j=25",
+      "maximum": 132,
+      "contact_j": 25,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "target_monotonicity_certified": {
+        "upper_adjacent_strictly_increasing": true,
+        "lower_adjacent_strictly_decreasing": true,
+        "common_denominator_positive": true
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_26"
+        }
+      ]
+    }
+  ]
+}

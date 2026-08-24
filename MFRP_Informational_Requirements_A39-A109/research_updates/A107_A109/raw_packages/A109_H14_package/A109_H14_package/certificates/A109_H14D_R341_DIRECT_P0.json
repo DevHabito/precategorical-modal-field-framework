@@ -1,0 +1,17 @@
+{
+  "audit": "A109-H14D_SHARDED_DIRECT",
+  "rank": 341,
+  "probe_index": 0,
+  "probe_label": "left_endpoint",
+  "probe": "25959739764091453/200000000000000000",
+  "strict_expected": true,
+  "target": null,
+  "preregistration_sha256": "722f2d04cc93e2ac634273ad3297f60f36c202bfc2723d385cfc8502a8fe489e",
+  "verdict": "DIRECT_SUPPORT",
+  "comparison_count": 551,
+  "mismatches": [],
+  "nonpositive_conditions": [],
+  "positivity_failure": false,
+  "outside_failure": false,
+  "seconds": 9.516353130340576
+}

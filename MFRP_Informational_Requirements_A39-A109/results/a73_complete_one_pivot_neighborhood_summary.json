@@ -1,0 +1,137 @@
+{
+  "audit": "A73_COMPLETE_ONE_PIVOT_NEIGHBORHOOD",
+  "verdict": "PASS_COMPLETE_ONE_PIVOT_NEIGHBORHOOD_AND_M13_SIGN_SELECTION",
+  "probe": {
+    "s": "33/256",
+    "alpha_decimal": "2.9556058806415465623468980093263905325369540666257",
+    "reason": "The same exact rational probe lies inside the M=11 and M=12 S phases and the M=13 gamma-minus phase."
+  },
+  "neighbor_counts": {
+    "11": 75,
+    "12": 82,
+    "13": 89,
+    "total": 246
+  },
+  "combined_neighbor_classification_counts": {
+    "primal_infeasible": 181,
+    "active_dual_multiplier_infeasible": 25,
+    "reduced_cost_infeasible": 37,
+    "inactive_observation_slack_infeasible": 2,
+    "locally_optimal": 1
+  },
+  "strict_local_optima": {
+    "11": [
+      {
+        "candidate_index": 1,
+        "kind": "reference",
+        "detail": null,
+        "p_support": [
+          0,
+          3,
+          4,
+          11
+        ],
+        "q_support": [
+          1,
+          5,
+          6
+        ],
+        "active_observations": [
+          [
+            "alpha",
+            1
+          ],
+          [
+            "beta",
+            -1
+          ],
+          [
+            "gamma",
+            1
+          ]
+        ],
+        "strict": true
+      }
+    ],
+    "12": [
+      {
+        "candidate_index": 1,
+        "kind": "reference",
+        "detail": null,
+        "p_support": [
+          0,
+          3,
+          4,
+          12
+        ],
+        "q_support": [
+          1,
+          6,
+          7
+        ],
+        "active_observations": [
+          [
+            "alpha",
+            1
+          ],
+          [
+            "beta",
+            -1
+          ],
+          [
+            "gamma",
+            1
+          ]
+        ],
+        "strict": true
+      }
+    ],
+    "13": [
+      {
+        "candidate_index": 76,
+        "kind": "completion_band_sign_flip",
+        "detail": {
+          "channel": "gamma"
+        },
+        "p_support": [
+          0,
+          3,
+          4,
+          13
+        ],
+        "q_support": [
+          1,
+          6,
+          7
+        ],
+        "active_observations": [
+          [
+            "alpha",
+            1
+          ],
+          [
+            "beta",
+            -1
+          ],
+          [
+            "gamma",
+            -1
+          ]
+        ],
+        "strict": true
+      }
+    ]
+  },
+  "M13": {
+    "catalogue_winner": [
+      2,
+      3,
+      4
+    ],
+    "phase_count": 8,
+    "transition_count": 7,
+    "boundary_risk": "0.36941822889850663235787555113204609350433716957445",
+    "coalescence_risk": "1.0392211789066361911143621891809103601972514108701"
+  },
+  "scope": "Complete only for the declared one-pivot signature neighborhood at s=33/256."
+}

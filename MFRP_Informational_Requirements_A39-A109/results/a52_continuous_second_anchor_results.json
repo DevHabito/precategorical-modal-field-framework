@@ -1,0 +1,446 @@
+{
+  "audit": "A52_CONTINUOUS_SECOND_ANCHOR",
+  "contract": {
+    "support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mean": "5/2",
+    "target_exponent": 1,
+    "beta_domain": "[2,4]",
+    "s_definition": "s=2^(-beta)",
+    "exact_design": "{2,beta,4}*log(2)",
+    "noisy_design": "{2,beta,infinity}*log(2)",
+    "epsilon": "1/10000"
+  },
+  "exact_result": {
+    "ratio": "(1036*s + 2063)/(2*(539*s + 1021))",
+    "derivative": "-54201/(2*(539*s + 1021)**2)",
+    "lower_distinct_limit": "1548/1541",
+    "upper_distinct_limit": "5674/5625",
+    "duplicate_endpoint_ratio": "2033/1898",
+    "gates": {
+      "all_sign_certificates_pass": true,
+      "normalization": true,
+      "mean": true,
+      "observations_exact": true,
+      "primal_dual_identity": true,
+      "closed_formula": true,
+      "derivative_negative": true,
+      "lower_infimum_exact": true,
+      "beta_3_reproduces_A43": true,
+      "upper_limit_exact": true,
+      "duplicate_ratio_exact": true,
+      "both_endpoint_discontinuities": true
+    }
+  },
+  "noisy_phases": {
+    "P0": {
+      "support_p": [
+        1,
+        2,
+        5
+      ],
+      "support_q": [
+        0,
+        1,
+        3
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "ratio": "9734212/8980065",
+      "derivative": "0",
+      "sign_expression_count": 15,
+      "inactive_constraint_count": 2,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "all_active_constraints_exact": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true
+      }
+    },
+    "P0a": {
+      "support_p": [
+        1,
+        2,
+        5
+      ],
+      "support_q": [
+        0,
+        1,
+        3
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "ratio": "4*(1620000*s**5 + 3947662*s**3 - 16807500*s**2 + 13672014*s - 2433553)/(5*(1726976*s**5 + 1026000*s**3 - 10755404*s**2 + 9797928*s - 1796013))",
+      "derivative": "-4774648*(s - 1)*(8637952*s**6 - 20522048*s**5 + 5410240*s**4 + 21116924*s**3 - 20186932*s**2 + 6127319*s - 595929)/(5*(1726976*s**5 + 1026000*s**3 - 10755404*s**2 + 9797928*s - 1796013)**2)",
+      "sign_expression_count": 15,
+      "inactive_constraint_count": 2,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "all_active_constraints_exact": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true
+      }
+    },
+    "P0b": {
+      "support_p": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "support_q": [
+        1,
+        3
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "ratio": "(1981024*s**5 + 2666250*s**3 - 15688772*s**2 + 13473674*s - 2432887)/(39375*(s - 1)**2*(4*s - 1)*(16*s**2 + 36*s + 57))",
+      "derivative": "-158*(2160000*s**6 - 5131536*s**5 + 1352560*s**4 + 5280435*s**3 - 5047065*s**2 + 1531625*s - 148962)/(39375*(s - 1)**3*(4*s - 1)**2*(16*s**2 + 36*s + 57)**2)",
+      "sign_expression_count": 15,
+      "inactive_constraint_count": 2,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "all_active_constraints_exact": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true
+      }
+    },
+    "P1": {
+      "support_p": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "support_q": [
+        1,
+        2,
+        3
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ratio": "2*(360144*s**5 - 1283965*s**3 + 1127048*s**2 - 202921*s - 612)/(719552*s**5 - 2565000*s**3 + 2251279*s**2 - 405318*s - 1026)",
+      "derivative": "492070*(s - 1)*(896*s**6 - 1360*s**5 - 720*s**4 + 1999*s**3 + 1363*s**2 - 1638*s + 162)/(719552*s**5 - 2565000*s**3 + 2251279*s**2 - 405318*s - 1026)**2",
+      "sign_expression_count": 16,
+      "inactive_constraint_count": 0,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "all_active_constraints_exact": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true
+      }
+    },
+    "P2": {
+      "support_p": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "support_q": [
+        1,
+        2,
+        3
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ratio": "4*(270144*s**5 - 962528*s**3 + 844435*s**2 - 152006*s - 90)/(1079840*s**5 - 3847182*s**3 + 3374923*s**2 - 607500*s - 162)",
+      "derivative": "741976*(s - 1)*(896*s**6 - 1360*s**5 - 720*s**4 + 1999*s**3 + 1363*s**2 - 1638*s + 162)/(1079840*s**5 - 3847182*s**3 + 3374923*s**2 - 607500*s - 162)**2",
+      "sign_expression_count": 16,
+      "inactive_constraint_count": 0,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "all_active_constraints_exact": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true
+      }
+    },
+    "P3": {
+      "support_p": [
+        0,
+        2,
+        5
+      ],
+      "support_q": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ratio": "307674*s*(s - 1)**2*(4*s - 1)/(30024*s**5 + 1147394*s**4 - 2688485*s**3 + 1814728*s**2 - 303697*s + 72)",
+      "derivative": "-615348*(s - 1)*(60048*s**7 - 210168*s**6 + 273745*s**5 - 160851*s**4 + 41061*s**3 - 4303*s**2 + 396*s - 36)/(30024*s**5 + 1147394*s**4 - 2688485*s**3 + 1814728*s**2 - 303697*s + 72)**2",
+      "sign_expression_count": 16,
+      "inactive_constraint_count": 0,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "all_active_constraints_exact": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true
+      }
+    },
+    "P4": {
+      "support_p": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "support_q": [
+        1,
+        2,
+        4
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ratio": "2*(2431296*s**5 - 158024*s**4 - 8307198*s**3 + 7362879*s**2 - 1328548*s - 810)/(5*(1007840*s**5 - 162000*s**4 - 3226182*s**3 + 2906923*s**2 - 526500*s - 162))",
+      "derivative": "-2607904*(s - 1)*(179920*s**7 - 630728*s**6 + 822541*s**5 - 483022*s**4 + 121571*s**3 - 12469*s**2 + 1620*s - 162)/(5*(1007840*s**5 - 162000*s**4 - 3226182*s**3 + 2906923*s**2 - 526500*s - 162)**2)",
+      "sign_expression_count": 16,
+      "inactive_constraint_count": 0,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "all_active_constraints_exact": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true
+      }
+    },
+    "P5": {
+      "support_p": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "support_q": [
+        1,
+        2,
+        4
+      ],
+      "active_constraints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ratio": "18*(630180*s**5 - 167813*s**4 - 1867941*s**3 + 1718439*s**2 - 312703*s - 324)/(5*(2375248*s**5 - 900000*s**4 - 6438221*s**3 + 6075000*s**2 - 1111577*s - 900))",
+      "derivative": "-2811366*(s - 1)*(1079248*s**7 - 3781400*s**6 + 4931589*s**5 - 2900539*s**4 + 734375*s**3 - 70149*s**2 + 4896*s - 504)/(5*(2375248*s**5 - 900000*s**4 - 6438221*s**3 + 6075000*s**2 - 1111577*s - 900)**2)",
+      "sign_expression_count": 16,
+      "inactive_constraint_count": 0,
+      "gates": {
+        "all_sign_certificates_pass": true,
+        "all_inactive_constraints_pass": true,
+        "all_active_constraints_exact": true,
+        "normalization": true,
+        "mean": true,
+        "primal_dual_identity": true
+      }
+    }
+  },
+  "transition_polynomials": [
+    "1083344*s**4 - 3848013*s**2 + 3361624*s - 595929",
+    "541024*s**5 - 1923750*s**3 + 1683404*s**2 - 300678*s + 513",
+    "540448*s**5 - 1923750*s**3 + 1686221*s**2 - 303432*s + 1026",
+    "60048*s**5 - 213697*s**3 + 187274*s**2 - 33697*s + 144",
+    "270144*s**5 - 741976*s**4 + 706918*s**3 - 268529*s**2 + 33488*s - 90",
+    "135108*s**5 - 213697*s**4 + 100821*s**2 - 22394*s + 324",
+    "72736*s**5 - 198000*s**4 + 186070*s**3 - 69183*s**2 + 8476*s - 198"
+  ],
+  "transition_table": [
+    {
+      "transition": 1,
+      "s_decimal": "0.24461380476747676341249773058750017",
+      "beta_decimal": "2.0314222703042066556611959699765362",
+      "future_risk_decimal": "0.058169153803579412139349219081305256"
+    },
+    {
+      "transition": 2,
+      "s_decimal": "0.24457363061135029874528794360958635",
+      "beta_decimal": "2.0316592308299853506287027499145291",
+      "future_risk_decimal": "0.057966941338042004336334222929617706"
+    },
+    {
+      "transition": 3,
+      "s_decimal": "0.24453357758212984115819355319841613",
+      "beta_decimal": "2.0318955156599371660240524522596699",
+      "future_risk_decimal": "0.057756038398993038271859058508120287"
+    },
+    {
+      "transition": 4,
+      "s_decimal": "0.24307161455808915601308640940775329",
+      "beta_decimal": "2.0405466668736884592383248918763225",
+      "future_risk_decimal": "0.050556780014126883606257521029164577"
+    },
+    {
+      "transition": 5,
+      "s_decimal": "0.24058163283910234039734183605919755",
+      "beta_decimal": "2.0554015904590632824916816445856484",
+      "future_risk_decimal": "0.038432008669489984932193700445374964"
+    },
+    {
+      "transition": 6,
+      "s_decimal": "0.23027382089361647671709156384149455",
+      "beta_decimal": "2.1185776898953887165709467982898737",
+      "future_risk_decimal": "0.021303009028914167166636017494298902"
+    },
+    {
+      "transition": 7,
+      "s_decimal": "0.17105687129464152137418742109164902",
+      "beta_decimal": "2.5474520370627737730187344696365742",
+      "future_risk_decimal": "0.0097347905380611166077680775923820047"
+    }
+  ],
+  "continuity": {
+    "P0_to_P0a": true,
+    "P0a_to_P0b": true,
+    "P0b_to_P1": true,
+    "P1_to_P2": true,
+    "P2_to_P3": true,
+    "P3_to_P4": true,
+    "P4_to_P5": true
+  },
+  "stationary_result": {
+    "polynomial": "1079248*s**7 - 3781400*s**6 + 4931589*s**5 - 2900539*s**4 + 734375*s**3 - 70149*s**2 + 4896*s - 504",
+    "s_star_object": "CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)",
+    "s_star_decimal": "0.1508931044081924686942727120366305682934",
+    "beta_star_decimal": "2.728401216547027876227382738889235041157",
+    "ratio_star_object": "18*(-312703*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0) - 1867941*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**3 - 324 - 167813*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**4 + 630180*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**5 + 1718439*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**2)/(5*(-1111577*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0) - 6438221*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**3 - 900 - 900000*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**4 + 2375248*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**5 + 6075000*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**2))",
+    "future_risk_star_decimal": "0.009583245232218601709618396637886642385560",
+    "beta_3_ratio": "26593405/26235854",
+    "beta_3_future_risk": "0.009764379451330052697897778083581113334252",
+    "improvement_over_beta_3_percent": "1.855051004667560644055272945224866343088"
+  },
+  "formal_results": [
+    "exact distinct-anchor ratio increases strictly with beta",
+    "exact infimum occurs at unattained coalescence beta->2+",
+    "both exact duplicated endpoints are discontinuous",
+    "eight exact noisy primal-dual phases cover [2,4]",
+    "seven ordered algebraic transitions",
+    "one unique noisy stationary point exists",
+    "the stationary point is the unique global noisy minimizer",
+    "the second anchor has a genuine noisy interior optimum"
+  ],
+  "gates": {
+    "transition_0_unique": true,
+    "transition_1_unique": true,
+    "transition_2_unique": true,
+    "transition_3_unique": true,
+    "transition_4_unique": true,
+    "transition_5_unique": true,
+    "transition_6_unique": true,
+    "transition_roots_strictly_ordered": true,
+    "exact_audit_pass": true,
+    "all_noisy_phase_gates_pass": true,
+    "all_noisy_transitions_continuous": true,
+    "initial_noisy_phase_is_plateau": true,
+    "prestationary_noisy_phases_decrease_with_beta": true,
+    "stationary_polynomial_has_one_phase_root": true,
+    "P5_derivative_negative_below_s_star": true,
+    "P5_derivative_positive_above_s_star": true,
+    "beta_3_noisy_value_matches_A44": true,
+    "beta_3_exact_value_matches_A49": true,
+    "continuous_optimum_improves_beta_3": true
+  },
+  "verdict": "PASS_CONTINUOUS_SECOND_ANCHOR_INTERIOR_OPTIMUM",
+  "boundary": "The result is exact only for beta in [2,4], the six-point support, exact mean, fixed first anchor 2, contract-specific third observations, common error, and direct future-Q risk. The finite-gamma=10 continuous-beta problem is not solved here."
+}

@@ -1,0 +1,85 @@
+{
+  "audit": "A109-H10D_SHARDED_CORE",
+  "rank": 273,
+  "preregistration_sha256": "e545aec22d76b989732da4505988d1be316ad3115116365aecf2ae61cbbcb836",
+  "manifest_sha256": "cf6aaf3ee7325f161d7708e3cfb00272162323717f1a5b0abaa75d7fd805344d",
+  "frozen_prediction": {
+    "canonical_rank": 273,
+    "source_key": "M=235|b=41|phase=b_plus_1_to_b_plus_2|side=right|s=83/625|j=43",
+    "maximum": 235,
+    "contact_j": 43,
+    "witness": "83/625",
+    "segment_open_bounds": [
+      "31330831847132751460364682238515299783/236118324143482260684800000000000000000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_44"
+      }
+    ]
+  },
+  "M": 235,
+  "j": 43,
+  "segment": [
+    "31330831847132751460364682238515299783/236118324143482260684800000000000000000",
+    "133/1000"
+  ],
+  "witness": "83/625",
+  "verdict": "CORE_SUPPORT",
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_44",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "unique_root_certificate": {
+    "lower": "33648445892651211460441168283437485255915921711/253530120045645880299340641075200000000000000000",
+    "upper": "4206055736584611632445357630251780377175077741/31691265005705735037417580134400000000000000000",
+    "exact_rational_root": false,
+    "steps": 30,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "25681599121692758576757761484700217/253530120045645880299340641075200000000000000000"
+  },
+  "certified_condition_count": 478,
+  "certificate_methods": {
+    "single_interval": 478
+  },
+  "exact_failures": [],
+  "unresolved": [],
+  "exact_verdict_failures": [],
+  "seconds": 1.8199193477630615
+}

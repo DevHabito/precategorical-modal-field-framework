@@ -1,0 +1,204 @@
+{
+  "audit": "A97_ENDPOINT_RELEASED_INTERVAL_AND_OBSTRUCTION_ATLAS",
+  "evidence_class": "exact symbolic interval certificate plus exact finite rational-witness unrestricted KKT atlas",
+  "scope": {
+    "interval_theorem": "M=125 on 129/1000 <= s <= 133/1000",
+    "witness_atlas": "all 83 A95 obstruction phase-segment witnesses",
+    "tested_family": "P={j-1,j,M}, Q={1,h,h+1}, alpha+ and beta- active, gamma inactive",
+    "explicit_nonclaims": [
+      "not an interval theorem for the other 82 A95 witnesses",
+      "not a complete resolution of the seven residual q0-entry obstructions",
+      "not an all-M support theorem",
+      "not a physical, spacetime, matter, or ontological result"
+    ]
+  },
+  "M125_interval_theorem": {
+    "contract": {
+      "maximum": 125,
+      "mean": "125/2",
+      "epsilon": "1/11529215046068469760000",
+      "search_interval": [
+        "129/1000",
+        "133/1000"
+      ],
+      "probe": "33/250",
+      "P_support": [
+        23,
+        24,
+        125
+      ],
+      "Q_support": [
+        1,
+        62,
+        63
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "gamma_status": "inactive"
+    },
+    "strict_component": {
+      "lower_boundary_condition": "reduced_cost_p_0",
+      "upper_boundary_condition": "basic_p_23",
+      "lower_root_bracket": [
+        "13196648628180965408239/100000000000000000000000",
+        "131966486281809654082393/1000000000000000000000000"
+      ],
+      "upper_root_bracket": [
+        "5284846278961643161077/40000000000000000000000",
+        "8257572310877567439183/62500000000000000000000"
+      ],
+      "lower_root_midpoint_decimal": "0.13196648628180965408239150000000000",
+      "upper_root_midpoint_decimal": "0.13212115697404107902692650000000000",
+      "root_bracket_width": "3/1000000000000000000000000",
+      "component_statement": "the maximal connected strict-KKT component containing 33/250 inside [129/1000,133/1000] is the open interval between the two isolated algebraic roots"
+    },
+    "boundary_certificates": {
+      "lower_numerator_degree": 125,
+      "lower_numerator_endpoint_signs": [
+        1,
+        -1
+      ],
+      "lower_derivative_interval_signs": [
+        -1,
+        -1
+      ],
+      "lower_denominator_interval_signs": [
+        -1,
+        -1
+      ],
+      "lower_root_unique_and_simple": true,
+      "upper_numerator_degree": 125,
+      "upper_numerator_endpoint_signs": [
+        -1,
+        1
+      ],
+      "upper_derivative_interval_signs": [
+        1,
+        1
+      ],
+      "upper_denominator_interval_signs": [
+        -1,
+        -1
+      ],
+      "upper_root_unique_and_simple": true,
+      "lower_numerator_derivative_signs_on_closed_core": [
+        -1,
+        -1
+      ],
+      "boundary_numerators_have_correct_sign_on_closed_core": true
+    },
+    "complete_sign_census": {
+      "condition_count": 259,
+      "polynomial_part_count": 518,
+      "boundary_numerators_handled_separately": 2,
+      "interval_horner_part_count": 516,
+      "unique_interval_horner_polynomial_count": 370,
+      "interval_horner_failure_count": 0,
+      "all_nonboundary_parts_sign_stable_on_full_hull": true,
+      "failures": []
+    },
+    "pass": true
+  },
+  "obstruction_atlas": {
+    "source_obstruction_count": 83,
+    "endpoint_released_strict_pass_count": 76,
+    "residual_obstruction_count": 7,
+    "pass_support_count": 74,
+    "residual_support_count": 7,
+    "residual_keys": [
+      [
+        396,
+        "13/100",
+        70
+      ],
+      [
+        443,
+        "13/100",
+        78
+      ],
+      [
+        449,
+        "13/100",
+        79
+      ],
+      [
+        455,
+        "13/100",
+        80
+      ],
+      [
+        484,
+        "13/100",
+        85
+      ],
+      [
+        490,
+        "13/100",
+        86
+      ],
+      [
+        496,
+        "13/100",
+        87
+      ]
+    ],
+    "residual_status_counts": {
+      "reduced_cost_infeasible": 7
+    },
+    "residual_failure_names": {
+      "reduced_cost_q_0": 7
+    }
+  },
+  "q0_replacement_stress": {
+    "tested_count": 7,
+    "strict_pass_count": 0,
+    "status_counts": {
+      "primal_infeasible": 3,
+      "inactive_slack_infeasible": 4
+    },
+    "failure_names": {
+      "basic_p_69": 1,
+      "inactive_slack_gamma_-1": 4,
+      "basic_p_79": 1,
+      "basic_p_86": 1
+    },
+    "interpretation": "the negative q0 reduced cost signals a required active-set change, but simply replacing q1 by q0 in the same seven-variable two-band basis is insufficient"
+  },
+  "interpretation": {
+    "positive_result": "The endpoint-released family is not a one-point accident: it is exact on an algebraic interval at M=125 and resolves 76 of the 83 rational A95 obstructions.",
+    "new_boundary": "Seven lower-s witnesses remain unresolved. In each, q0 has negative reduced cost against the q1-based family, but the direct q0 replacement basis is itself infeasible.",
+    "next_target": "Solve the unrestricted full LP at the first residual case M=396, s=13/100 and identify the actual q0-associated pivot structure."
+  },
+  "gate_count": 19,
+  "pass_count": 19,
+  "gates": {
+    "A95_source_is_present_and_passed": true,
+    "A96_source_is_present_and_passed": true,
+    "memory_isolated_interval_phase_is_present_and_passed": true,
+    "memory_isolated_atlas_phase_has_83_records": true,
+    "M125_symbolic_branch_has_259_KKT_conditions": true,
+    "M125_lower_boundary_is_unique_simple_p0_reduced_cost_root": true,
+    "M125_upper_boundary_is_unique_simple_p23_basic_root": true,
+    "M125_all_516_nonboundary_polynomial_parts_are_sign_stable": true,
+    "M125_boundary_numerators_have_correct_core_sign": true,
+    "M125_strict_component_contains_33_over_250": true,
+    "A95_obstruction_witness_count_is_83": true,
+    "endpoint_released_family_passes_76_of_83_obstructions": true,
+    "A96_point_is_reproduced_by_general_endpoint_released_evaluator": true,
+    "all_76_passes_are_complete_strict_global_KKT_certificates": true,
+    "residual_obstruction_keys_match_exact_declared_list": true,
+    "all_seven_residuals_are_q0_negative_reduced_cost_failures": true,
+    "simple_q1_to_q0_replacement_repairs_zero_of_seven": true,
+    "q0_replacement_failures_are_three_primal_and_four_gamma_minus_slack": true,
+    "formal_contract_and_nonphysical_scope_preserved": true
+  },
+  "verdict": "PASS_ENDPOINT_RELEASED_M125_INTERVAL_AND_76_OF_83_OBSTRUCTION_RESOLUTION_WITH_SEVEN_Q0_ENTRY_RESIDUALS"
+}

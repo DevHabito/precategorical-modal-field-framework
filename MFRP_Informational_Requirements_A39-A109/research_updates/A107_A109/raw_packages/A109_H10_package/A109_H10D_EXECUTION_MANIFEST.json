@@ -1,0 +1,23 @@
+{
+  "audit": "A109-H10D_EXECUTION_MANIFEST",
+  "preregistration_sha256": "e545aec22d76b989732da4505988d1be316ad3115116365aecf2ae61cbbcb836",
+  "status": "FROZEN_BEFORE_SHARDED_DIAGNOSTIC_RESULTS",
+  "trigger": "The preregistered monolithic exact-certificate run for rank 273 exceeded the execution window and produced no result file.",
+  "affected_ranks": [
+    273,
+    274,
+    277,
+    278,
+    283,
+    284
+  ],
+  "execution_partition": {
+    "core": "For each rank, execute the full exact denominator/target/non-target positivity certificate as one core job.",
+    "direct": "Execute each predeclared exact rational direct-regression probe as a separate job. Full predictions use five probes; single-boundary predictions use four probes.",
+    "aggregation": "A rank is mathematically resolved only if core is SUPPORT and every required direct probe is SUPPORT. No rank may be omitted or replaced."
+  },
+  "scientific_criteria_unchanged": true,
+  "prediction_changes": false,
+  "tolerance_changes": false,
+  "note": "This changes execution granularity only; it does not retroactively complete any full-atlas shard."
+}

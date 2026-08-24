@@ -1,0 +1,18 @@
+{
+  "audit": "A109-H8D_SHARDED_DIRECT",
+  "rank": 239,
+  "probe_index": 2,
+  "probe_label": "witness",
+  "probe": "131/1000",
+  "strict_expected": true,
+  "target": "basic_p_40",
+  "verdict": "DIRECT_SUPPORT",
+  "comparison_count": 437,
+  "mismatches": [],
+  "nonpositive_conditions": [],
+  "positivity_failure": false,
+  "outside_failure": false,
+  "seconds": 0.41916871070861816,
+  "preregistration_sha256": "65f281a7fec2ab904af0afe3028a301b1ccf37a456b0374251569d5bfa9feb9d",
+  "manifest_sha256": "bd2919930e93e273264734ed549cfcf3b8c10f3d87944f2460a13ed5225b9793"
+}

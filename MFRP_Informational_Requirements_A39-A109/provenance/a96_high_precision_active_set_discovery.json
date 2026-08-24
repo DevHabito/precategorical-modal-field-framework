@@ -1,0 +1,44 @@
+{
+  "audit": "A96_HIGH_PRECISION_ACTIVE_SET_DISCOVERY",
+  "role": "discovery only; the exact proof is independently reconstructed by the A96 rational KKT audit",
+  "method": "two-phase revised simplex on the complete standard-form LP",
+  "arithmetic": "mpmath, 180 decimal digits",
+  "contract": {
+    "maximum": 125,
+    "probe_s": "33/250",
+    "epsilon": "1/(2500*2^62)",
+    "full_atom_columns": 252,
+    "Charnes_Cooper_scale_variable_count": 1,
+    "band_slack_count": 6,
+    "phase_one_artificial_count": 5,
+    "standard_form_constraint_count": 11
+  },
+  "phase_one": {
+    "pivot_iterations": 18,
+    "final_artificial_objective": "0"
+  },
+  "phase_two": {
+    "pivot_iterations": 49,
+    "discovered_standard_form_basis_indices": [125, 252, 254, 24, 258, 257, 189, 127, 23, 255, 188]
+  },
+  "index_map": {
+    "p_x": "0..125",
+    "q_x": "126..251",
+    "t": 252,
+    "slacks": {
+      "alpha_plus": 253,
+      "alpha_minus": 254,
+      "beta_plus": 255,
+      "beta_minus": 256,
+      "gamma_plus": 257,
+      "gamma_minus": 258
+    }
+  },
+  "discovered_active_set": {
+    "P_support": [23, 24, 125],
+    "Q_support": [1, 62, 63],
+    "active_bands": [["alpha", 1], ["beta", -1]],
+    "strictly_positive_inactive_slacks": [["alpha", -1], ["beta", 1], ["gamma", 1], ["gamma", -1]]
+  },
+  "discovery_objective_decimal": "226143135079.40652496707347407763804363598684527448"
+}

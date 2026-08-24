@@ -1,0 +1,254 @@
+{
+  "audit": "A109_H14_FULL_ATLAS_EXECUTION_MANIFEST",
+  "preregistration_sha256": "10900de0f0405a1f8db1f8af9c917fd042bdc6a9dad75507d3a7034622478320",
+  "wall_clock_limit_seconds": 55,
+  "full_atlas_completed_ranks": [
+    335,
+    336,
+    337,
+    338,
+    340,
+    345,
+    346,
+    347,
+    348
+  ],
+  "repeated_timeout_ranks": [
+    339,
+    341,
+    342,
+    343,
+    344,
+    349,
+    350
+  ],
+  "attempts": {
+    "335": [
+      {
+        "attempt": "initial",
+        "status": "completed",
+        "result_exists": true,
+        "note": "completed under same preregistered single-rank full-atlas code before wrapper manifest instrumentation"
+      }
+    ],
+    "336": [
+      {
+        "attempt": "initial",
+        "status": "completed",
+        "result_exists": true,
+        "note": "completed under same preregistered single-rank full-atlas code before wrapper manifest instrumentation"
+      }
+    ],
+    "337": [
+      {
+        "attempt": "initial",
+        "status": "completed",
+        "result_exists": true,
+        "note": "completed under same preregistered single-rank full-atlas code before wrapper manifest instrumentation"
+      }
+    ],
+    "338": [
+      {
+        "attempt": "initial",
+        "status": "completed",
+        "result_exists": true,
+        "note": "completed under same preregistered single-rank full-atlas code before wrapper manifest instrumentation"
+      }
+    ],
+    "339": [
+      {
+        "rank": 339,
+        "attempt": "A1",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.02165675163269,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R339_RESULT.json"
+      },
+      {
+        "rank": 339,
+        "attempt": "A2",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.009822607040405,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R339_RESULT.json"
+      }
+    ],
+    "340": [
+      {
+        "rank": 340,
+        "attempt": "A1",
+        "status": "completed",
+        "exit": 0,
+        "seconds": 40.07698321342468,
+        "result_exists": true,
+        "out": "/mnt/data/A109_H14_R340_RESULT.json"
+      }
+    ],
+    "341": [
+      {
+        "rank": 341,
+        "attempt": "A1",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.013811349868774,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R341_RESULT.json"
+      },
+      {
+        "rank": 341,
+        "attempt": "A2",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.01633930206299,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R341_RESULT.json"
+      }
+    ],
+    "342": [
+      {
+        "rank": 342,
+        "attempt": "A1",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.017046213150024,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R342_RESULT.json"
+      },
+      {
+        "rank": 342,
+        "attempt": "A2",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.01515197753906,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R342_RESULT.json"
+      }
+    ],
+    "343": [
+      {
+        "rank": 343,
+        "attempt": "A1",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.01776051521301,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R343_RESULT.json"
+      },
+      {
+        "rank": 343,
+        "attempt": "A2",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.01027464866638,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R343_RESULT.json"
+      }
+    ],
+    "344": [
+      {
+        "rank": 344,
+        "attempt": "A1",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.01358127593994,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R344_RESULT.json"
+      },
+      {
+        "rank": 344,
+        "attempt": "A2",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.00968861579895,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R344_RESULT.json"
+      }
+    ],
+    "345": [
+      {
+        "rank": 345,
+        "attempt": "A1",
+        "status": "completed",
+        "exit": 0,
+        "seconds": 49.37039613723755,
+        "result_exists": true,
+        "out": "/mnt/data/A109_H14_R345_RESULT.json"
+      }
+    ],
+    "346": [
+      {
+        "rank": 346,
+        "attempt": "A1",
+        "status": "completed",
+        "exit": 0,
+        "seconds": 49.08652400970459,
+        "result_exists": true,
+        "out": "/mnt/data/A109_H14_R346_RESULT.json"
+      }
+    ],
+    "347": [
+      {
+        "rank": 347,
+        "attempt": "A1",
+        "status": "completed",
+        "exit": 0,
+        "seconds": 45.22910809516907,
+        "result_exists": true,
+        "out": "/mnt/data/A109_H14_R347_RESULT.json"
+      }
+    ],
+    "348": [
+      {
+        "rank": 348,
+        "attempt": "A1",
+        "status": "completed",
+        "exit": 0,
+        "seconds": 42.39350247383118,
+        "result_exists": true,
+        "out": "/mnt/data/A109_H14_R348_RESULT.json"
+      }
+    ],
+    "349": [
+      {
+        "rank": 349,
+        "attempt": "A1",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.00778245925903,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R349_RESULT.json"
+      },
+      {
+        "rank": 349,
+        "attempt": "A2",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.02194952964783,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R349_RESULT.json"
+      }
+    ],
+    "350": [
+      {
+        "rank": 350,
+        "attempt": "A1",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.00669717788696,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R350_RESULT.json"
+      },
+      {
+        "rank": 350,
+        "attempt": "A2",
+        "status": "timeout",
+        "exit": 124,
+        "seconds": 55.010714054107666,
+        "result_exists": false,
+        "out": "/mnt/data/A109_H14_R350_RESULT.json"
+      }
+    ]
+  }
+}

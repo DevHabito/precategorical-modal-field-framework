@@ -1,0 +1,209 @@
+{
+  "audit": "A74_M14_NUMERICAL_PHASE_DISCOVERY",
+  "role": "Discovery only. The exact theorem is generated independently by a74_exact_phase_generator.py.",
+  "contract": {
+    "maximum": 14,
+    "mean": 7.0,
+    "target_exponent": 1,
+    "epsilon": "1/240000",
+    "design": "{alpha,3,4}",
+    "alpha_grid": "[2,2.999]",
+    "grid_count": 1000
+  },
+  "phase_count": 7,
+  "phases": [
+    {
+      "approx_alpha_start": 2.0,
+      "p_support": [
+        1,
+        5,
+        14
+      ],
+      "q_support": [
+        0,
+        2,
+        7,
+        8
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio": 1.9394539269968545
+    },
+    {
+      "approx_alpha_start": 2.616,
+      "p_support": [
+        0,
+        1,
+        5,
+        14
+      ],
+      "q_support": [
+        2,
+        7,
+        8
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio": 2.684042692182408
+    },
+    {
+      "approx_alpha_start": 2.686,
+      "p_support": [
+        0,
+        5,
+        14
+      ],
+      "q_support": [
+        1,
+        2,
+        7,
+        8
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio": 2.8461374867114033
+    },
+    {
+      "approx_alpha_start": 2.751,
+      "p_support": [
+        0,
+        4,
+        5,
+        14
+      ],
+      "q_support": [
+        1,
+        7,
+        8
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "ratio": 3.0061106641568056
+    },
+    {
+      "approx_alpha_start": 2.938,
+      "p_support": [
+        0,
+        4,
+        14
+      ],
+      "q_support": [
+        1,
+        7,
+        8
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ]
+      ],
+      "ratio": 4.820401751584032
+    },
+    {
+      "approx_alpha_start": 2.942,
+      "p_support": [
+        0,
+        3,
+        4,
+        14
+      ],
+      "q_support": [
+        1,
+        7,
+        8
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio": 4.872466141789837
+    },
+    {
+      "approx_alpha_start": 2.985,
+      "p_support": [
+        0,
+        3,
+        14
+      ],
+      "q_support": [
+        1,
+        7,
+        8
+      ],
+      "active_observations": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "gamma",
+          -1
+        ]
+      ],
+      "ratio": 5.037072276488259
+    }
+  ]
+}

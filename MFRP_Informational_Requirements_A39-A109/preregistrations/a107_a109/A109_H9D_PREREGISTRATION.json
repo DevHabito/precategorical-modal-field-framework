@@ -1,0 +1,316 @@
+{
+  "audit": "A109-H9D_TIMEOUT_EXACT_SUFFICIENT_CERTIFICATE",
+  "status": "FROZEN_BEFORE_DIAGNOSTIC_EXECUTION",
+  "parent_preregistration_sha256": "61e4d93d144a942afa0cebde8ba375d80261688d63eea4ba6b366bcb032022f2",
+  "reason": "Six preregistered H9 full-atlas rank-pair shards (255..258, 261..268) timed out twice each without producing result files. This separate exact sufficient-certificate protocol is frozen before diagnostic execution and cannot retroactively convert those full-atlas shards into PASS.",
+  "ranks": [
+    255,
+    256,
+    257,
+    258,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268
+  ],
+  "frozen_predictions": [
+    {
+      "canonical_rank": 255,
+      "source_key": "M=224|b=39|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=40",
+      "maximum": 224,
+      "contact_j": 40,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129644380555773999/1000000000000000000",
+        "309464810297638035884656054135587532831/2361183241434822606848000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 256,
+      "source_key": "M=224|b=39|phase=b_plus_1_to_b_plus_2|side=right|s=33/250|j=41",
+      "maximum": 224,
+      "contact_j": 41,
+      "witness": "33/250",
+      "segment_open_bounds": [
+        "38683101287204754485582216493163705729/295147905179352825856000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_42"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 257,
+      "source_key": "M=226|b=39|phase=unique_b_plus_2|side=full|s=131/1000|j=41",
+      "maximum": 226,
+      "contact_j": 41,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_42"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 258,
+      "source_key": "M=227|b=39|phase=unique_b_plus_2|side=full|s=131/1000|j=41",
+      "maximum": 227,
+      "contact_j": 41,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_42"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 261,
+      "source_key": "M=229|b=39|phase=unique_b_plus_2|side=full|s=13/100|j=41",
+      "maximum": 229,
+      "contact_j": 41,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "65339651225405909/500000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 262,
+      "source_key": "M=229|b=40|phase=unique_b_plus_1|side=full|s=131/1000|j=41",
+      "maximum": 229,
+      "contact_j": 41,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "130679302450811819/1000000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": -1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_41"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 263,
+      "source_key": "M=230|b=40|phase=b_plus_1_to_b_plus_2|side=left|s=13/100|j=41",
+      "maximum": 230,
+      "contact_j": 41,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "64761582571916929/500000000000000000",
+        "123460457281303238425792933688175065117/944473296573929042739200000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 264,
+      "source_key": "M=230|b=39|phase=unique_b_plus_2|side=full|s=323/2500|j=41",
+      "maximum": 230,
+      "contact_j": 41,
+      "witness": "323/2500",
+      "segment_open_bounds": [
+        "129/1000",
+        "129523165143833857/1000000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    },
+    {
+      "canonical_rank": 265,
+      "source_key": "M=231|b=40|phase=unique_b_plus_2|side=full|s=131/1000|j=42",
+      "maximum": 231,
+      "contact_j": 42,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_43"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 266,
+      "source_key": "M=232|b=40|phase=unique_b_plus_2|side=full|s=131/1000|j=42",
+      "maximum": 232,
+      "contact_j": 42,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_43"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 267,
+      "source_key": "M=233|b=40|phase=unique_b_plus_2|side=full|s=13/100|j=42",
+      "maximum": 233,
+      "contact_j": 42,
+      "witness": "13/100",
+      "segment_open_bounds": [
+        "129/1000",
+        "66407960413447047/500000000000000000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": -1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_43"
+        }
+      ]
+    },
+    {
+      "canonical_rank": 268,
+      "source_key": "M=233|b=41|phase=unique_b_plus_1|side=full|s=1329/10000|j=42",
+      "maximum": 233,
+      "contact_j": 42,
+      "witness": "1329/10000",
+      "segment_open_bounds": [
+        "26563184165378819/200000000000000000",
+        "133/1000"
+      ],
+      "target_only_applicable": true,
+      "target_only_signs": {
+        "upper_adjacent_at_lower": 1,
+        "upper_adjacent_at_witness": 1,
+        "lower_adjacent_at_right": 1,
+        "lower_adjacent_at_witness": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": []
+    }
+  ],
+  "method": {
+    "common": "Build exact A109 rank-one gamma-plus denominator and all KKT numerators; require denominator positivity on the complete source segment; compare symbolic numerators against independent direct rational matrix evaluations at the frozen probe pattern.",
+    "full_prediction": "Certify every KKT numerator strictly positive on complete closed source interval using exact interval/monotonicity/concavity/adaptive certificates; direct probes are left endpoint, left-mid, witness, right-mid, right endpoint.",
+    "left_partial_prediction": "For target basic_p_{j+1}, certify strictly positive derivative, target negative at L and positive at witness, isolate a unique exact sign-change bracket in (L,witness), certify every non-target KKT numerator strictly positive on complete source interval; direct probes are outside-left, inside, witness, right-mid.",
+    "right_partial_prediction": "For target basic_p_j, certify strictly negative derivative, target positive at witness and negative at R, isolate a unique exact sign-change bracket in (witness,R), certify every non-target KKT numerator strictly positive on complete source interval; direct probes are left-mid, witness, inside, outside-right.",
+    "no_atlas": "Do not call full root atlas or use non-target root ordering."
+  },
+  "adjudication": {
+    "support": "All required exact certificates pass, direct symbolic-vs-matrix regression has zero mismatches, strict probes are positive, and partial outside probe witnesses the predicted target nonpositive.",
+    "refute": "Exact non-target nonpositive condition, target sign/monotonicity contradiction, or exact direct contradiction.",
+    "inconclusive": "Adaptive certificate unresolved, execution timeout, or implementation disagreement without exact contradiction."
+  },
+  "no_posthoc_changes": "No rank replacement, prediction/target/tolerance/support/probe change after diagnostic outcomes.",
+  "scope": [
+    "mathematical resolution attempt for the 12 timed-out H9 ranks only",
+    "does not complete the original H9 full-atlas shards",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ]
+}

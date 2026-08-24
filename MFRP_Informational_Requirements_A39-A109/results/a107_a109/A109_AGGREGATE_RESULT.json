@@ -1,0 +1,309 @@
+{
+  "audit": "A109_POST_A108_REFUTATION_AND_TWO_SIDED_PROSPECTIVE_TEST",
+  "baseline": {
+    "audit_results": 68,
+    "gates": 1013,
+    "figures": 110,
+    "failures": 0,
+    "status": "PASS"
+  },
+  "A108_P5A_refutation": {
+    "verdict": "REFUTED_A108_P5",
+    "rank_range": [
+      98,
+      105
+    ],
+    "summary": {
+      "record_count": 8,
+      "certificate_class_counts": {
+        "full_segment_coverage": 5,
+        "proper_strict_subcomponent": 2,
+        "NO_CLASSIFICATION": 1
+      },
+      "atlas_class_counts": {
+        "full_segment_coverage": 5,
+        "proper_strict_subcomponent": 3
+      },
+      "certificate_parent_match_count": 7,
+      "certificate_atlas_match_count": 7,
+      "boundary_match_count": 7,
+      "partial_count": 3,
+      "direct_comparisons": 6541,
+      "direct_mismatches": 0,
+      "non_target_conditions": 1930,
+      "non_target_failure_count": 1,
+      "non_target_unresolved_count": 0
+    },
+    "exact_failures": [
+      {
+        "rank": 105,
+        "type": "non_target_nonpositive",
+        "details": [
+          {
+            "condition": "basic_p_22",
+            "pass": false,
+            "method": "endpoint_nonpositive",
+            "endpoint_signs": [
+              1,
+              -1
+            ],
+            "nodes": 0,
+            "max_depth": 0
+          }
+        ]
+      },
+      {
+        "rank": 105,
+        "type": "parent_prediction_mismatch"
+      },
+      {
+        "rank": 105,
+        "type": "atlas_mismatch"
+      }
+    ],
+    "rank105": {
+      "canonical_rank": 105,
+      "source_key": "M=119|b=21|phase=unique_b_plus_1|side=full|s=131/1000|j=22",
+      "maximum": 119,
+      "contact_j": 22,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "frozen_parent_prediction": "full_segment_coverage",
+      "sufficient_certificate": {
+        "target_condition": "basic_p_23",
+        "exact_signs": {
+          "N_lower": 1,
+          "N_witness": 1,
+          "N_upper": 1,
+          "D_lower": 1,
+          "D_witness": 1,
+          "D_upper": 1
+        },
+        "D_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "target_derivative_certificate": {
+          "pass": true,
+          "method": "single_interval",
+          "endpoint_signs": [
+            1,
+            1
+          ],
+          "nodes": 1,
+          "max_depth": 0
+        },
+        "non_target_condition_count": 246,
+        "non_target_certificate_methods": {
+          "single_interval": 240,
+          "endpoint_nonpositive": 1,
+          "strictly_concave_endpoint_minimum": 1,
+          "monotone_increasing": 4
+        },
+        "non_target_failures": [
+          {
+            "condition": "basic_p_22",
+            "pass": false,
+            "method": "endpoint_nonpositive",
+            "endpoint_signs": [
+              1,
+              -1
+            ],
+            "nodes": 0,
+            "max_depth": 0
+          }
+        ],
+        "non_target_unresolved": [],
+        "certificate_class": "NO_CLASSIFICATION",
+        "target_root_if_partial": null
+      },
+      "atlas_class": "proper_strict_subcomponent",
+      "selected_boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_22"
+        }
+      ],
+      "certificate_matches_parent": false,
+      "certificate_matches_atlas": false,
+      "boundary_match": null,
+      "direct_regression_summary": {
+        "checkpoint_count": 4,
+        "comparison_count": 988,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "seconds": 3.802401304244995
+    }
+  },
+  "two_sided_development_r1_r105": {
+    "records": 105,
+    "class_matches": 105,
+    "boundary_matches": 105,
+    "upperadj_increasing_all": true,
+    "loweradj_decreasing_all": true,
+    "prediction_counts": {
+      "proper_strict_subcomponent": 30,
+      "full_segment_coverage": 75
+    },
+    "actual_counts": {
+      "proper_strict_subcomponent": 30,
+      "full_segment_coverage": 75
+    },
+    "actual_boundary_counts": {
+      "[('left', 'basic_p_5')]": 2,
+      "[]": 75,
+      "[('left', 'basic_p_6')]": 2,
+      "[('left', 'basic_p_7')]": 2,
+      "[('left', 'basic_p_8')]": 1,
+      "[('left', 'basic_p_9')]": 1,
+      "[('left', 'basic_p_11')]": 2,
+      "[('left', 'basic_p_12')]": 1,
+      "[('left', 'basic_p_13')]": 1,
+      "[('left', 'basic_p_14')]": 2,
+      "[('left', 'basic_p_15')]": 1,
+      "[('left', 'basic_p_16')]": 1,
+      "[('left', 'basic_p_17')]": 2,
+      "[('left', 'basic_p_18')]": 2,
+      "[('left', 'basic_p_19')]": 2,
+      "[('left', 'basic_p_20')]": 1,
+      "[('left', 'basic_p_21')]": 2,
+      "[('left', 'basic_p_22')]": 2,
+      "[('left', 'basic_p_23')]": 2,
+      "[('right', 'basic_p_22')]": 1
+    },
+    "mismatches": []
+  },
+  "A109_preregistration_sha256": "67b286eb336f2cc5ea5831fe4531368d3e36147befa7aefd0a61d7e3feb55829",
+  "A109_holdout_r106_r121": {
+    "record_count": 16,
+    "match_count": 16,
+    "full_count": 12,
+    "partial_count": 4,
+    "direct_comparisons": 13624,
+    "direct_mismatches": 0,
+    "core_failures": 0,
+    "hull_failures": 0,
+    "shard_verdicts": [
+      "PASS_A109_TWO_SIDED_HOLDOUT",
+      "PASS_A109_TWO_SIDED_HOLDOUT"
+    ]
+  },
+  "A109_R1_first_future_right_branch": {
+    "audit": "A109-R1_FIRST_FUTURE_RIGHT_BRANCH_PROSPECTIVE_TEST",
+    "preregistration_sha256": "857d75f1890bbba742f709269b924561c072f7f9e3c573465568159b1a646918",
+    "verdict": "PASS_A109_R1_RIGHT_BRANCH",
+    "source_key": "M=171|b=30|phase=unique_b_plus_1|side=full|s=131/1000|j=31",
+    "rank": 173,
+    "M": 171,
+    "j": 31,
+    "frozen_prediction": {
+      "class": "proper_strict_subcomponent",
+      "boundaries": [
+        {
+          "side": "right",
+          "condition": "basic_p_31"
+        }
+      ],
+      "logic": "N_{j+1}(L)>0, N_j(R)<0, both target numerators positive at the witness, D positive, N_{j+1} increasing and N_j decreasing on the source segment."
+    },
+    "atlas_class": "proper_strict_subcomponent",
+    "selected_boundaries": [
+      {
+        "side": "right",
+        "condition": "basic_p_31"
+      }
+    ],
+    "strict_component": {
+      "lower": "12956286115339291/100000000000000000",
+      "upper": "32136258176174219253426149/241785163922925834941235200",
+      "selected_left_boundary": null,
+      "selected_right_boundary": {
+        "condition": "basic_p_31",
+        "side": "right",
+        "bracket": [
+          "32136258176174219253426149/241785163922925834941235200",
+          "80340645440435548133565373/604462909807314587353088000"
+        ],
+        "endpoint_signs": [
+          1,
+          -1
+        ],
+        "width": "1/1208925819614629174706176000",
+        "bisection_steps": 81,
+        "derivative_interval_signs": [
+          -1,
+          -1
+        ],
+        "unique_simple_in_bracket": true
+      }
+    },
+    "endpoint_nonpositive_conditions": {
+      "left": [],
+      "right": [
+        "basic_p_31"
+      ]
+    },
+    "outside_counterexamples": [
+      {
+        "side": "right",
+        "condition": "basic_p_31",
+        "point": "160734212444808388251526077/1208925819614629174706176000",
+        "sign": -1
+      }
+    ],
+    "core_certificate_summary": {
+      "condition_count": 352,
+      "pass_count": 352,
+      "failure_count": 0,
+      "method_counts": {
+        "single_interval": 347,
+        "monotone_decreasing": 1,
+        "strictly_concave_endpoint_minimum": 1,
+        "monotone_increasing": 3
+      }
+    },
+    "hull_certificate_summary": {
+      "condition_count": 351,
+      "pass_count": 351,
+      "failure_count": 0,
+      "method_counts": {
+        "single_interval": 347,
+        "strictly_concave_endpoint_minimum": 1,
+        "monotone_increasing": 3
+      }
+    },
+    "root_failures": [],
+    "direct_regression_summary": {
+      "checkpoint_count": 4,
+      "comparison_count": 1404,
+      "mismatch_count": 0,
+      "positivity_failure_count": 0,
+      "outside_sign_failure_count": 0
+    },
+    "failures": [],
+    "seconds": 11.478692531585693,
+    "scope": {
+      "nonclaims": [
+        "one prospective right-branch witness only",
+        "not an all-922 theorem",
+        "not a physical claim"
+      ]
+    }
+  },
+  "methodological_status": {
+    "old_one_sided_rule": "REFUTED by exact rank-105 counterexample",
+    "two_sided_rule": "POST_HOC exact fit on ranks 1..105; prospective support on ranks 106..121; right-branch prospectively supported at target-only-selected rank 173",
+    "universal_claim": "NOT ESTABLISHED"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "audit": "A109_CONTINUATION_H3_H4_R2_AND_TARGET_ONLY_SCAN",
+  "baseline_repository_verification": "{\n  \"audit_results\": 68,\n  \"gate_count\": 1013,\n  \"figures\": 110,\n  \"failures\": [],\n  \"status\": \"PASS\"\n}",
+  "h3": {
+    "ranks": [
+      174,
+      181
+    ],
+    "preregistration_sha256": "2d9247f90804bff38cddd3c744c8a83a98dc609c2d603c34bb2fa87792fd2e1a",
+    "record_count": 8,
+    "match_count": 8,
+    "class_counts": {
+      "full_segment_coverage": 6,
+      "proper_strict_subcomponent": 2
+    },
+    "boundary_sets": [
+      {
+        "rank": 175,
+        "boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_33"
+          }
+        ]
+      },
+      {
+        "rank": 176,
+        "boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_33"
+          }
+        ]
+      }
+    ],
+    "direct_comparisons": 9310,
+    "direct_mismatches": 0,
+    "formal_verdict": "PASS_A109_H3_TWO_SIDED_HOLDOUT"
+  },
+  "h4": {
+    "ranks": [
+      182,
+      189
+    ],
+    "preregistration_sha256": "804612fe7a9455b626721804b382f7a7e5dfb6e2fc29187ab3455e762bd77a3b",
+    "formal_full_atlas_status": "INCONCLUSIVE_EXECUTION_R183",
+    "reason": "Ranks 182 and 184..189 completed full-atlas execution and matched. Rank 183 full-atlas execution timed out twice without a result file, so the original H4 full-atlas protocol is not formally complete.",
+    "full_atlas_completed_ranks": [
+      182,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189
+    ],
+    "full_atlas_completed_match_count": 7,
+    "full_atlas_direct_comparisons": 8497,
+    "rank183_independent_diagnostic": {
+      "preregistration_sha256": "fe222cf6aac119e2bc745a5f1e57cc16fe7c27ed7e8511d9dbce39d879a6e25c",
+      "verdict": "RESOLVED_SUPPORT_R183_LEFT_BOUNDARY",
+      "target": "basic_p_34",
+      "non_target_condition_count": 362,
+      "non_target_failure_count": 0,
+      "non_target_unresolved_count": 0,
+      "direct_comparisons": 1089,
+      "direct_mismatches": 0,
+      "unique_root_certificate": {
+        "monotonicity": "strictly increasing",
+        "exact_sign_bracket": {
+          "lower": "262747432526795747430801194371621778385420919/1980704062856608439838598758400000000000000000",
+          "upper": "656868581376895244046462586251555834957279931/4951760157141521099596496896000000000000000000",
+          "exact_rational_root": false,
+          "steps": 24,
+          "signs": [
+            -1,
+            1
+          ],
+          "width": "119811750938919200645002777987455267/9903520314283042199192993792000000000000000000"
+        }
+      },
+      "scope_note": "This diagnostic does not retroactively count as completion of the preregistered H4 full-atlas execution; it is an independent mathematical resolution attempt."
+    },
+    "mathematical_resolution_all_8": {
+      "supported_predictions": 8,
+      "full": 5,
+      "partial": 3,
+      "left_boundaries": 3,
+      "right_boundaries": 0,
+      "non_adjacent_boundaries_found": 0,
+      "mixed_protocol_warning": "7 ranks use preregistered full-atlas execution; rank 183 uses a separately preregistered independent exact sufficient-certificate diagnostic after the atlas timeout."
+    }
+  },
+  "target_only_scan_after_173": {
+    "scan_sha256": "86e00691027e8f51d2882a053cd47e697da31bc059179701217fe19c33bc0c6f",
+    "record_count": 749,
+    "prediction_counts": {
+      "full_segment_coverage": 488,
+      "proper_strict_subcomponent": 261
+    },
+    "left_only_count": 237,
+    "right_only_count": 24,
+    "two_sided_count": 0,
+    "no_classification_count": 0,
+    "first_right_only_rank": 206,
+    "claim_limit": "This is an exact scan of the frozen target-only predictor, not a full-atlas classification of ranks 174..922."
+  },
+  "r2": {
+    "rank": 206,
+    "preregistration_sha256": "75e400b94e7a27cc15b5813085928b5da7c2f7bed62780eeb60ac8c97f3327f6",
+    "verdict": "PASS_A109_R2_RIGHT_BRANCH",
+    "atlas_class": "proper_strict_subcomponent",
+    "selected_boundaries": [
+      {
+        "side": "right",
+        "condition": "basic_p_35"
+      }
+    ],
+    "direct_comparisons": 1588,
+    "direct_mismatches": 0,
+    "core_failures": 0,
+    "hull_failures": 0,
+    "normalized_rerun_sha256": "43ed32093970ef9e86ed572d832357cf72a2b0e6bf863dcba66f6dbe208be79c"
+  },
+  "prospective_status": {
+    "uniform_full_atlas_contiguous_ranks_106_182": {
+      "record_count": 77,
+      "all_rule_matches": true,
+      "direct_comparisons": 77321,
+      "direct_mismatches": 0
+    },
+    "mathematically_resolved_contiguous_ranks_106_189_mixed_exact_protocol": {
+      "record_count": 84,
+      "full": 61,
+      "partial": 23,
+      "left_partial": 22,
+      "right_partial": 1,
+      "all_rule_matches": true,
+      "direct_comparisons": 85818,
+      "direct_mismatches": 0,
+      "warning": "Rank 183 is resolved by independent sufficient certificate rather than completed full-atlas protocol."
+    },
+    "additional_prospective_right_branch_rank_206": {
+      "record_count": 1,
+      "rule_match": true,
+      "boundary": "right basic_p_35",
+      "direct_comparisons": 1588,
+      "direct_mismatches": 0
+    }
+  },
+  "truth_status": {
+    "supported": "The unchanged two-adjacent-variable rule continues to match every prospectively resolved rank in this continuation; a second future right-boundary prediction at rank 206 was confirmed exactly.",
+    "negative_result": "The frozen target-only predictor produces no two-sided prediction anywhere in ranks 174..922, so the two-sided branch cannot be prospectively exercised by target-only selection within the remaining finite catalogue.",
+    "unresolved": "The original H4 full-atlas protocol remains formally incomplete at rank 183 due runtime timeout, despite an independent exact diagnostic resolving the mathematical class/boundary in support of the frozen prediction.",
+    "nonclaim": "No all-922 full-atlas theorem has been established. Non-adjacent KKT boundaries may still exist in unexecuted ranks."
+  }
+}

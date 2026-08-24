@@ -1,0 +1,17 @@
+{
+  "audit": "A109-H17D_SHARDED_DIRECT",
+  "rank": 398,
+  "probe_index": 3,
+  "probe_label": "right_mid",
+  "probe": "33/250",
+  "strict_expected": true,
+  "target": "basic_p_55",
+  "preregistration_sha256": "5e0caeb3ea1a81b40b5fc9bba9485edb517238798ac9b31c015af6e3b474b53c",
+  "verdict": "DIRECT_SUPPORT",
+  "comparison_count": 613,
+  "mismatches": [],
+  "nonpositive_conditions": [],
+  "positivity_failure": false,
+  "outside_failure": false,
+  "seconds": 0.8709006309509277
+}

@@ -1,0 +1,10 @@
+{
+  "audit": "A109-H13 execution manifest",
+  "preregistration_sha256": "24f6ab5bf007089a1c7b04260010406835bd1b9f6bc23ef3ffe0e5af4bedf11a",
+  "rank_319_attempt_1": {
+    "status": "TIMEOUT_NO_RESULT",
+    "command": "timeout 55s python A109_H13_SHARD_AUDIT.py --start 319 --end 319 --out A109_H13_R319_RESULT.json",
+    "result_file_exists": false
+  },
+  "policy": "Identical retry required before any alternate certificate."
+}

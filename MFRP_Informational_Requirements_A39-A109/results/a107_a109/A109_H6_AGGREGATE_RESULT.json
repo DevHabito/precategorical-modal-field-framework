@@ -1,0 +1,222 @@
+{
+  "audit": "A109_H6_UNCHANGED_TWO_SIDED_RULE_MIXED_EXACT_RESOLUTION",
+  "h6_preregistration_sha256": "6a325f6eedd0772ec7ad2cbe66c8d5a98b37276336431fff68b265d975b3862a",
+  "h6d_preregistration_sha256": "ac533ef4fc567a7da804a38ed27ec9e67266edce359bbc227934799fb3b7ff79",
+  "rank_range": [
+    207,
+    222
+  ],
+  "formal_original_full_atlas_status": "INCONCLUSIVE_EXECUTION_SHARDS_209_210_AND_217_218",
+  "full_atlas_completed": {
+    "record_count": 12,
+    "ranks": [
+      207,
+      208,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      219,
+      220,
+      221,
+      222
+    ],
+    "class_boundary_match_count": 12,
+    "direct_comparisons": 15901,
+    "direct_mismatches": 0,
+    "core_failures": 0,
+    "hull_failures": 0
+  },
+  "separate_exact_diagnostics": {
+    "record_count": 4,
+    "ranks": [
+      209,
+      210,
+      217,
+      218
+    ],
+    "resolved_support_count": 4,
+    "certified_condition_count": 1615,
+    "exact_failure_count": 0,
+    "unresolved_count": 0,
+    "direct_comparisons": 6881,
+    "direct_mismatches": 0
+  },
+  "mixed_exact_mathematical_resolution": {
+    "record_count": 16,
+    "all_rule_matches": true,
+    "full": 10,
+    "partial": 6,
+    "left_partial": 6,
+    "right_partial": 0,
+    "two_sided_partial": 0,
+    "direct_comparisons": 22782,
+    "direct_mismatches": 0,
+    "records": [
+      {
+        "rank": 207,
+        "method": "full_atlas",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      },
+      {
+        "rank": 208,
+        "method": "full_atlas",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      },
+      {
+        "rank": 209,
+        "method": "exact_sufficient_certificate",
+        "class": "proper_strict_subcomponent",
+        "boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_37"
+          }
+        ],
+        "match": true
+      },
+      {
+        "rank": 210,
+        "method": "exact_sufficient_certificate",
+        "class": "proper_strict_subcomponent",
+        "boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_37"
+          }
+        ],
+        "match": true
+      },
+      {
+        "rank": 211,
+        "method": "full_atlas",
+        "class": "proper_strict_subcomponent",
+        "boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_37"
+          }
+        ],
+        "match": true
+      },
+      {
+        "rank": 212,
+        "method": "full_atlas",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      },
+      {
+        "rank": 213,
+        "method": "full_atlas",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      },
+      {
+        "rank": 214,
+        "method": "full_atlas",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      },
+      {
+        "rank": 215,
+        "method": "full_atlas",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      },
+      {
+        "rank": 216,
+        "method": "full_atlas",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      },
+      {
+        "rank": 217,
+        "method": "exact_sufficient_certificate",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      },
+      {
+        "rank": 218,
+        "method": "exact_sufficient_certificate",
+        "class": "proper_strict_subcomponent",
+        "boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_38"
+          }
+        ],
+        "match": true
+      },
+      {
+        "rank": 219,
+        "method": "full_atlas",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      },
+      {
+        "rank": 220,
+        "method": "full_atlas",
+        "class": "proper_strict_subcomponent",
+        "boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_38"
+          }
+        ],
+        "match": true
+      },
+      {
+        "rank": 221,
+        "method": "full_atlas",
+        "class": "proper_strict_subcomponent",
+        "boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_38"
+          }
+        ],
+        "match": true
+      },
+      {
+        "rank": 222,
+        "method": "full_atlas",
+        "class": "full_segment_coverage",
+        "boundaries": [],
+        "match": true
+      }
+    ],
+    "warning": "Four ranks (209,210,217,218) are mathematically resolved by a separately preregistered sufficient-certificate protocol after full-atlas shard timeouts. The original H6 full-atlas protocol remains formally incomplete."
+  },
+  "updated_prospective_status": {
+    "mathematically_resolved_contiguous_ranks_106_222_mixed_exact_protocol": {
+      "record_count": 117,
+      "full": 83,
+      "partial": 34,
+      "left_partial": 32,
+      "right_partial": 2,
+      "two_sided_partial": 0,
+      "all_rule_matches": true,
+      "direct_comparisons": 130268,
+      "direct_mismatches": 0,
+      "warning": "Rank 183 and H6 ranks 209,210,217,218 use separately preregistered exact sufficient-certificate diagnostics rather than completed full-atlas execution."
+    }
+  },
+  "truth_status": {
+    "supported": "The unchanged two-adjacent-variable rule is mathematically supported on all 16 ranks 207..222 under the mixed exact protocol, with 10 full and 6 left-partial cases and no contradiction found.",
+    "formal_caveat": "The original H6 full-atlas holdout is not formally PASS because two preregistered shards timed out repeatedly without result files.",
+    "nonclaim": "This is not an all-922 theorem and does not exclude a future non-adjacent boundary in untested ranks."
+  }
+}

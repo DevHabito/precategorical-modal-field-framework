@@ -1,0 +1,122 @@
+{
+  "audit": "A53_COUPLED_SECOND_THIRD_ANCHOR",
+  "contract": {
+    "support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mean": "5/2",
+    "first_anchor": 2,
+    "beta_domain": "(2,4)",
+    "gamma_domain": "(beta,infinity]",
+    "epsilon": "1/10000",
+    "target_exponent": 1
+  },
+  "exact_coordinatewise_certificate": {
+    "s_star": "CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)",
+    "s_star_decimal": "0.150893104408192468694272712036630568293445250",
+    "beta_star_decimal": "2.72840121654702787622738273888923504115710815",
+    "ratio_star": "18*(-312703*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0) - 1867941*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**3 - 324 - 167813*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**4 + 630180*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**5 + 1718439*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**2)/(5*(-1111577*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0) - 6438221*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**3 - 900 - 900000*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**4 + 2375248*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**5 + 6075000*CRootOf(1079248*x**7 - 3781400*x**6 + 4931589*x**5 - 2900539*x**4 + 734375*x**3 - 70149*x**2 + 4896*x - 504, 0)**2))",
+    "risk_star_decimal": "0.00958324523221860170961839663788664238556045157",
+    "stationary_polynomial": "1079248*s**7 - 3781400*s**6 + 4931589*s**5 - 2900539*s**4 + 734375*s**3 - 70149*s**2 + 4896*s - 504",
+    "upper_residual": "-r*(4*r - 1)*(269812*r**3*s**4 - 607581*r**3*s**3 + 405564*r**3*s**2 - 67633*r**3*s - 324*r**3 - 269812*r**2*s**5 + 67453*r**2*s**4 + 809660*r**2*s**3 - 742359*r**2*s**2 + 134986*r**2*s + 144*r**2 + 540128*r*s**5 - 944692*r*s**4 + 202415*r*s**3 + 269076*r*s**2 - 67269*r*s + 684*r - 270532*s**5 + 607577*s**4 - 404062*s**3 + 67269*s**2 - 504)/(90000*s*(s - 1)**2*(4*s - 1)*(9*s + 14))",
+    "lower_residual": "(r - s)*(1079248*r**4*s**4 - 2430324*r**4*s**3 + 1622256*r**4*s**2 - 270532*r**4*s - 1296*r**4 - 2430324*r**3*s**4 + 5468477*r**3*s**3 - 3645532*r**3*s**2 + 606281*r**3*s + 900*r**3 + 1622256*r**2*s**4 - 3645532*r**2*s**3 + 2424944*r**2*s**2 - 403162*r**2*s + 2592*r**2 - 270532*r*s**4 + 606281*r*s**3 - 403162*r*s**2 + 69861*r*s - 2700*r - 1296*s**4 + 900*s**3 + 2592*s**2 - 2700*s + 504)/(90000*s*(s - 1)**2*(4*s - 1)*(9*s + 14))",
+    "lower_core_identity": {
+      "quotient": "1079248*r**3*s**4 - 2430324*r**3*s**3 + 1622256*r**3*s**2 - 270532*r**3*s - 1296*r**3 + 1079248*r**2*s**5 - 4860648*r**2*s**4 + 7090733*r**2*s**3 - 3916064*r**2*s**2 + 604985*r**2*s + 900*r**2 + 1079248*r*s**6 - 4860648*r*s**5 + 8712989*r*s**4 - 7561596*r*s**3 + 3029929*r*s**2 - 402262*r*s + 2592*r + 1079248*s**7 - 4860648*s**6 + 8712989*s**5 - 7832128*s**4 + 3636210*s**3 - 805424*s**2 + 72453*s - 2700",
+      "remainder": "0"
+    },
+    "rational_isolation_interval": [
+      "3/20",
+      "19/125"
+    ],
+    "upper_bernstein_maximum": "-2027399878168/30517578125",
+    "lower_quotient_bernstein_maximum": "-20775505401/20000000",
+    "gates": {
+      "stationary_root_unique_in_rational_box": true,
+      "lower_core_division_identity": true,
+      "upper_bernstein_coefficients_strictly_negative": true,
+      "lower_quotient_bernstein_coefficients_strictly_negative": true,
+      "common_denominator_strictly_negative": true,
+      "A52_stationary_polynomial_zero": true,
+      "A52_primal_dual_identity_retained": true
+    }
+  },
+  "numerical_reconnaissance": {
+    "finite_caps": [
+      {
+        "gamma_cap": 4.0,
+        "beta_optimum": 2.6923785554722186,
+        "future_risk": 0.0109452496939793
+      },
+      {
+        "gamma_cap": 6.0,
+        "beta_optimum": 2.7194235867698207,
+        "future_risk": 0.00964441023836773
+      },
+      {
+        "gamma_cap": 10.0,
+        "beta_optimum": 2.728088573448993,
+        "future_risk": 0.00958533441281895
+      },
+      {
+        "gamma_cap": 20.0,
+        "beta_optimum": 2.728401012109017,
+        "future_risk": 0.009583247168976076
+      },
+      {
+        "gamma_cap": "infinity",
+        "beta_optimum": 2.7284013028397194,
+        "future_risk": 0.009583245232218629
+      }
+    ],
+    "differential_evolution": {
+      "beta": 2.7283955092118544,
+      "gamma": 19.998575252397572,
+      "future_risk": 0.009583247170990202,
+      "success": true,
+      "message": "Optimization terminated successfully."
+    },
+    "adaptive_grid_minimum": {
+      "risk": 0.009584814021353857,
+      "beta": 2.750125,
+      "gamma": "infinity"
+    },
+    "low_beta_grid_best": {
+      "risk": 0.03610065351386996,
+      "beta": 2.0005,
+      "gamma": 2.2366764705882356
+    },
+    "certified_candidate": {
+      "beta": 2.7284012165470277,
+      "gamma": "infinity",
+      "future_risk": 0.009583245232218601
+    },
+    "no_numeric_improvement_found": true
+  },
+  "formal_results": [
+    "A52 beta-star remains globally optimal on the compactified gamma boundary",
+    "the compactified extremal pair is feasible for every finite gamma at beta-star",
+    "gamma=infinity is globally optimal on the beta=beta-star slice",
+    "(beta-star,infinity) is coordinatewise globally optimal",
+    "finite-cap numerical optima converge toward the coordinatewise solution"
+  ],
+  "not_proved": [
+    "full joint global optimality over all 2<beta<gamma<=infinity",
+    "a complete two-dimensional active-basis atlas",
+    "a uniform exact lower bound over the low-beta strip"
+  ],
+  "gates": {
+    "A52_full_audit_passed": true,
+    "stationary_exact_certificate_passed": true,
+    "finite_gamma_upper_residual_certified": true,
+    "finite_gamma_lower_residual_certified": true,
+    "coordinatewise_beta_globality_inherited_from_A52": true,
+    "numerical_reconnaissance_found_no_improvement": true
+  },
+  "verdict": "PASS_COUPLED_ANCHOR_COORDINATEWISE_GLOBAL_CERTIFICATE",
+  "boundary": "The exact theorem is coordinatewise, not a complete joint minimization theorem. The full-plane search is numerical reconnaissance and is not promoted to proof."
+}

@@ -1,0 +1,47 @@
+{
+  "audit": "A109-H10_EXECUTION_MANIFEST",
+  "original_preregistration_sha256": "8d4444e53f594b29dbab84060d623525cf2922c5060e6aa9d9102e2b2ca2c555",
+  "full_atlas_shards": {
+    "271-272": {
+      "attempts": 1,
+      "status": "completed",
+      "output": "A109_H10_S1_RESULT.json"
+    },
+    "273-274": {
+      "attempts": 2,
+      "status": "repeated_timeout_no_output"
+    },
+    "275-276": {
+      "attempts": 1,
+      "status": "completed",
+      "output": "A109_H10_S3_RESULT.json"
+    },
+    "277-278": {
+      "attempts": 2,
+      "status": "repeated_timeout_no_output"
+    },
+    "279-280": {
+      "attempts": 1,
+      "status": "completed",
+      "output": "A109_H10_S5_RESULT.json"
+    },
+    "281-282": {
+      "attempts": 1,
+      "status": "completed",
+      "output": "A109_H10_S6_RESULT.json"
+    },
+    "283-284": {
+      "attempts": 2,
+      "status": "repeated_timeout_no_output"
+    },
+    "285-286": {
+      "attempts": 2,
+      "status": "completed_on_second_attempt_file_written",
+      "output": "A109_H10_S8_RESULT.json",
+      "note": "shell timeout was reported after complete JSON/stdout had been emitted; output file parses and contains both frozen ranks"
+    }
+  },
+  "scientific_handling": "Repeated timeout shards produced no mathematical result and are not counted as pass/fail. A separately frozen exact sufficient-certificate protocol is created before any alternative diagnostic execution.",
+  "no_rank_replacement": true,
+  "no_prediction_change": true
+}

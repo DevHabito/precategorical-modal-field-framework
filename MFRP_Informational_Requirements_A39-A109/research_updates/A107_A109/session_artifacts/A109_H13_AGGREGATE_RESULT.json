@@ -1,0 +1,400 @@
+{
+  "audit": "A109_H13_AGGREGATE_REVIEW",
+  "preregistration_sha256": "24f6ab5bf007089a1c7b04260010406835bd1b9f6bc23ef3ffe0e5af4bedf11a",
+  "formal_full_atlas_status": "INCOMPLETE_EXECUTION_R319_R327_R330",
+  "mixed_exact_status": "RESOLVED_SUPPORT_A109_H13_MIXED_EXACT_PROTOCOL",
+  "summary": {
+    "records_total": 16,
+    "full_atlas_completed": 13,
+    "full_atlas_repeated_timeout_ranks": [
+      319,
+      327,
+      330
+    ],
+    "mathematically_resolved": 16,
+    "predicted_full": 8,
+    "predicted_partial": 8,
+    "observed_full": 8,
+    "observed_partial": 8,
+    "class_matches": 16,
+    "boundary_matches": 16,
+    "left_boundaries": 8,
+    "right_boundaries": 0,
+    "two_sided": 0,
+    "non_adjacent_boundaries": 0,
+    "direct_comparisons_total": 30092,
+    "direct_mismatches_total": 0,
+    "certificate_non_target_conditions_total": 1602
+  },
+  "execution": {
+    "rank319": {
+      "full_atlas_attempts": 2,
+      "full_atlas_results": 0,
+      "alternate_certificate_preregistered_after_two_timeouts": true,
+      "monolithic_certificate_runtime_timeout_no_result": true,
+      "sharded_execution_frozen_before_any_certificate_outcome": true
+    },
+    "rank327": {
+      "full_atlas_attempts": 2,
+      "full_atlas_results": 0,
+      "alternate_certificate_preregistered_after_two_timeouts": true
+    },
+    "rank330": {
+      "full_atlas_attempts": 2,
+      "full_atlas_results": 0,
+      "alternate_certificate_preregistered_after_two_timeouts": true
+    }
+  },
+  "baseline_verification": {
+    "audit_results": 68,
+    "gate_count": 1013,
+    "figures": 110,
+    "failures": [],
+    "status": "PASS"
+  },
+  "records": [
+    {
+      "rank": 319,
+      "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_48"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_48"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 2116,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": 528,
+      "core_failures": null,
+      "hull_failures": null
+    },
+    {
+      "rank": 320,
+      "method": "full_atlas",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_48"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_48"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 2124,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 321,
+      "method": "full_atlas",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_48"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_48"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 2132,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 322,
+      "method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 1599,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 323,
+      "method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 1605,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 324,
+      "method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 1605,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 325,
+      "method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 1611,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 326,
+      "method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 1611,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 327,
+      "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 2148,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": 536,
+      "core_failures": null,
+      "hull_failures": null
+    },
+    {
+      "rank": 328,
+      "method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 1617,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 329,
+      "method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 1617,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 330,
+      "method": "exact_sufficient_certificate_after_two_full_atlas_timeouts",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 2156,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": 538,
+      "core_failures": null,
+      "hull_failures": null
+    },
+    {
+      "rank": 331,
+      "method": "full_atlas",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 2164,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 332,
+      "method": "full_atlas",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 2172,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 333,
+      "method": "full_atlas",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_49"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 2180,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    },
+    {
+      "rank": 334,
+      "method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "failures": [],
+      "direct_comparisons": 1635,
+      "direct_mismatches": 0,
+      "non_target_certified_conditions": null,
+      "core_failures": 0,
+      "hull_failures": 0
+    }
+  ],
+  "scope": {
+    "claim": "Finite preregistered H13 holdout ranks 319..334 only.",
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

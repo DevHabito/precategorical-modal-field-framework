@@ -1,0 +1,43 @@
+{
+  "audit": "A109-R2_FIRST_POST173_RIGHT_BRANCH_PROSPECTIVE_TEST",
+  "status": "FROZEN_BEFORE_FULL_ATLAS_EXECUTION",
+  "parent_rule": "A109 two-sided adjacent-boundary rule, unchanged.",
+  "target_only_scan_sha256": "86e00691027e8f51d2882a053cd47e697da31bc059179701217fe19c33bc0c6f",
+  "selection_rule": "Starting strictly after canonical rank 173, use only the unchanged A109 target-only quantities D, N_{j+1}, N_j, exact endpoint/witness signs, and exact monotonicity applicability checks. Select the first canonical rank predicted to have exactly one right boundary basic_p_j. No non-adjacent KKT condition or full-atlas outcome is consulted.",
+  "selected_rank": 206,
+  "selected_source_key": "M=194|b=34|phase=unique_b_plus_1|side=full|s=131/1000|j=35",
+  "selected_M": 194,
+  "selected_j": 35,
+  "selected_witness": "131/1000",
+  "selected_source_segment": [
+    "65181486340399723/500000000000000000",
+    "133/1000"
+  ],
+  "target_only_signs": {
+    "upper_at_L": 1,
+    "upper_at_witness": 1,
+    "lower_at_R": -1,
+    "lower_at_witness": 1
+  },
+  "frozen_prediction": {
+    "class": "proper_strict_subcomponent",
+    "boundaries": [
+      {
+        "side": "right",
+        "condition": "basic_p_35"
+      }
+    ],
+    "logic": "N_{j+1}(L)>0, N_j(R)<0, both target numerators positive at witness, with frozen applicability certificates."
+  },
+  "adjudication": {
+    "support": "Exact full atlas returns proper_strict_subcomponent with exactly one selected right boundary basic_p_35; all nonselected conditions certify positive on core/hull and exact direct-matrix regression has zero discrepancies.",
+    "refute": "Any exact class/boundary mismatch or any non-adjacent KKT obstruction/boundary contradicts the frozen prediction.",
+    "inconclusive": "Execution/certification failure without exact mathematical contradiction."
+  },
+  "no_posthoc_changes": "No rank replacement, no continuing the search after the selected rank, no rule edits, no tolerance/support changes, no rescue classifier.",
+  "nonclaims": [
+    "second prospective right-branch witness only",
+    "not an all-922 theorem",
+    "not a physical claim"
+  ]
+}

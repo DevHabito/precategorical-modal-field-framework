@@ -1,0 +1,43 @@
+{
+  "audit": "A109_PROSPECTIVE_STATUS_R106_R350",
+  "prior_status": {
+    "range": [
+      106,
+      334
+    ],
+    "mathematically_resolved": 229,
+    "strict_clean_prospective": 228,
+    "full": 159,
+    "partial": 70,
+    "left": 65,
+    "right": 5,
+    "two_sided": 0,
+    "non_adjacent": 0,
+    "direct_comparisons_math": 318088,
+    "direct_comparisons_strict": 316076,
+    "direct_mismatches": 0
+  },
+  "h14_sha256": "f3d45000d9ffafec1b1c042c2bfef782358686762e644a6584f908a5ab3f51bf",
+  "status": {
+    "range": [
+      106,
+      350
+    ],
+    "mathematically_resolved": 245,
+    "strict_clean_prospective": 244,
+    "full": 170,
+    "partial": 75,
+    "left": 70,
+    "right": 5,
+    "two_sided": 0,
+    "non_adjacent": 0,
+    "direct_comparisons_math": 349685,
+    "direct_comparisons_strict": 347673,
+    "direct_mismatches": 0
+  },
+  "accounting_note": "H14 adds 16 clean prospective mathematical resolutions. Seven full-atlas shards timed out twice and were resolved only after a separately frozen exact sufficient-certificate protocol; these do count as clean prospective mathematical tests because the fallback protocol was frozen only after the two required timeouts. The sole gap between mathematical and strict-clean counts remains the previously documented rank-295 ordering issue.",
+  "scope": {
+    "not_all_922_theorem": true,
+    "not_physical_claim": true
+  }
+}

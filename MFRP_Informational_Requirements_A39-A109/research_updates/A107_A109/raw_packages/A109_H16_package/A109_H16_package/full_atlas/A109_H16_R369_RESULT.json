@@ -1,0 +1,100 @@
+{
+  "audit": "A109_H16_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT_SHARD",
+  "preregistration_sha256": "3ed8d491b92e8f6ac001f7f9834100555f806b49e2c79f83d0b973957d0af0ff",
+  "rank_range": [
+    369,
+    369
+  ],
+  "verdict": "PASS_A109_H16_TWO_SIDED_HOLDOUT",
+  "summary": {
+    "record_count": 1,
+    "predicted_class_counts": {
+      "full_segment_coverage": 1
+    },
+    "atlas_class_counts": {
+      "full_segment_coverage": 1
+    },
+    "match_count": 1,
+    "partial_count": 0,
+    "direct_comparisons": 1755,
+    "direct_mismatches": 0,
+    "core_failures": 0,
+    "hull_failures": 0
+  },
+  "failures": [],
+  "records": [
+    {
+      "canonical_rank": 369,
+      "source_key": "M=288|b=49|phase=unique_b_plus_2|side=full|s=13/100|j=51",
+      "maximum": 288,
+      "contact_j": 51,
+      "frozen_prediction": {
+        "canonical_rank": 369,
+        "source_key": "M=288|b=49|phase=unique_b_plus_2|side=full|s=13/100|j=51",
+        "maximum": 288,
+        "contact_j": 51,
+        "witness": "13/100",
+        "segment_open_bounds": [
+          "129/1000",
+          "26083773274175473/200000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "atlas_class": "full_segment_coverage",
+      "selected_boundaries": [],
+      "endpoint_nonpositive_conditions": {
+        "left": [],
+        "right": []
+      },
+      "core_certificate_summary": {
+        "condition_count": 586,
+        "pass_count": 586,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 585,
+          "strictly_concave_endpoint_minimum": 1
+        }
+      },
+      "hull_certificate_summary": {
+        "condition_count": 586,
+        "pass_count": 586,
+        "failure_count": 0,
+        "method_counts": {
+          "single_interval": 585,
+          "strictly_concave_endpoint_minimum": 1
+        }
+      },
+      "root_failure_count": 0,
+      "direct_regression_summary": {
+        "checkpoint_count": 3,
+        "comparison_count": 1755,
+        "mismatch_count": 0,
+        "positivity_failure_count": 0,
+        "outside_sign_failure_count": 0
+      },
+      "failures": [],
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "26083773274175473/200000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      },
+      "outside_counterexamples": [],
+      "seconds": 17.834986209869385
+    }
+  ],
+  "scope": {
+    "nonclaims": [
+      "not an all-922 theorem",
+      "not a physical claim"
+    ]
+  }
+}

@@ -1,0 +1,733 @@
+{
+  "audit": "A79_EXACT_COMPRESSION_INTERVAL_AND_CONTACT_ENTRY",
+  "contract": {
+    "support": "{0,...,M}",
+    "mean": "M/2",
+    "target_exponent": 1,
+    "s0": "131/1000",
+    "alpha0_decimal": "2.932361283124637",
+    "beta_exponent": 3,
+    "gamma_exponent": 4,
+    "compression_supports": [
+      40,
+      57,
+      74
+    ],
+    "epsilon_even": "1/(1875*2^(M/2))",
+    "epsilon_odd": "1/(2500*2^floor(M/2))"
+  },
+  "theorem_summary": [
+    "For M=40,57,74, the A78 compressed branch has a maximal connected strict-KKT interval containing s0 bounded by two simple algebraic roots.",
+    "The lower root is the gamma-minus inactive-slack boundary and the exact Cramer numerator for entry of atom k-1 in the {k-1,k}, gamma-minus branch.",
+    "The upper root is the gamma-plus inactive-slack boundary and the exact Cramer numerator for entry of atom k+1 in the {k,k+1}, gamma-plus branch.",
+    "Exact rational witnesses on the outer sides certify the adjacent branches as strict global KKT optima."
+  ],
+  "support_results": [
+    {
+      "maximum": 40,
+      "compressed_contact": 9,
+      "compressed_signature": {
+        "p_support": [
+          0,
+          9,
+          40
+        ],
+        "q_support": [
+          1,
+          20,
+          21
+        ],
+        "active_bands": [
+          [
+            "alpha",
+            1
+          ],
+          [
+            "beta",
+            -1
+          ]
+        ],
+        "gamma": "inactive"
+      },
+      "strict_KKT_component_containing_s0": {
+        "s_lower_root": {
+          "lower": "136704243/1044071950",
+          "upper": "178181353/1360851343",
+          "width": "1/1420826715346128850",
+          "midpoint_decimal": "0.130933737852070436"
+        },
+        "s_upper_root": {
+          "lower": "290695387/2212008026",
+          "upper": "257971493/1962999891",
+          "width": "1/4342171513929125166",
+          "midpoint_decimal": "0.131416967562124037"
+        },
+        "alpha_lower_decimal": "2.927776537359603",
+        "alpha_upper_decimal": "2.933091208754224",
+        "open_interval_statement": "r_minus(M) < s < r_plus(M)",
+        "maximality_reason": "the gamma-minus inactive slack changes sign at the lower simple root and the gamma-plus inactive slack changes sign at the upper simple root; all other KKT numerators and all denominators are root-free on the enclosing rational hull"
+      },
+      "root_census": {
+        "condition_count": 89,
+        "checked_polynomial_parts": 178,
+        "unique_polynomials": 127,
+        "denominator_root_count": 0,
+        "nonboundary_numerator_root_count": 0,
+        "failures": [],
+        "pass": true
+      },
+      "boundary_signs": {
+        "lower_gamma_minus_slack": {
+          "below": "-1",
+          "at_probe": "1"
+        },
+        "upper_gamma_plus_slack": {
+          "at_probe": "1",
+          "above": "-1"
+        }
+      },
+      "contact_entry_identity": {
+        "lower": {
+          "adjacent_pair": [
+            8,
+            9
+          ],
+          "gamma_sign": -1,
+          "entering_atom": 8,
+          "same_monic_primitive_polynomial": true
+        },
+        "upper": {
+          "adjacent_pair": [
+            9,
+            10
+          ],
+          "gamma_sign": 1,
+          "entering_atom": 10,
+          "same_monic_primitive_polynomial": true
+        }
+      },
+      "exact_outside_witnesses": {
+        "below": {
+          "adjacent": {
+            "s": "1309/10000",
+            "s_decimal": "0.1309000000",
+            "contact_pair": [
+              8,
+              9
+            ],
+            "gamma_sign": -1,
+            "status": "pass",
+            "first_failure": null,
+            "strict_pass_record": {
+              "family": "three_band_adjacent",
+              "maximum": 40,
+              "contact": 8,
+              "gamma_sign": -1,
+              "p_support": [
+                0,
+                8,
+                9,
+                40
+              ],
+              "q_support": [
+                1,
+                20,
+                21
+              ],
+              "active_bands": [
+                [
+                  "alpha",
+                  1
+                ],
+                [
+                  "beta",
+                  -1
+                ],
+                [
+                  "gamma",
+                  -1
+                ]
+              ],
+              "ratio_exact": "25816948861563373005086509993907649432848888224322998173935881486559107626302184797027740743921585308311474930097153625266228344790045729415246281092639616621787433486052533344911950384463738060737/20307727338266650854009965835310037188780027730590841062807565944088574281999328357972366518789058180857462910399857183032402713103462223142204924836111746407788833016304205603923020929671626752",
+              "condition_count": 89,
+              "condition_class_counts": {
+                "basic": 8,
+                "active_dual": 3,
+                "reduced_cost": 75,
+                "inactive_slack": 3
+              },
+              "all_conditions_strictly_positive": true
+            }
+          },
+          "compressed": {
+            "s": "1309/10000",
+            "status": "inactive_slack_infeasible",
+            "first_failure": {
+              "name": "inactive_slack_gamma_-1",
+              "value": "-579838887747063552069526485136398780276837505054055956699672758381511204485558242568643710487009076610384125157048699197349137551646345009960505247388485318863744002802750998683628170907772817053/3788854457199327306487454654525333717294138731763710699562570342272345691300598810083123370999360142075822825611874798878765486046196085268024718090367780712720711936293439293189600693048927850594304"
+            }
+          }
+        },
+        "above": {
+          "adjacent": {
+            "s": "263/2000",
+            "s_decimal": "0.1315000000",
+            "contact_pair": [
+              9,
+              10
+            ],
+            "gamma_sign": 1,
+            "status": "pass",
+            "first_failure": null,
+            "strict_pass_record": {
+              "family": "three_band_adjacent",
+              "maximum": 40,
+              "contact": 9,
+              "gamma_sign": 1,
+              "p_support": [
+                0,
+                9,
+                10,
+                40
+              ],
+              "q_support": [
+                1,
+                20,
+                21
+              ],
+              "active_bands": [
+                [
+                  "alpha",
+                  1
+                ],
+                [
+                  "beta",
+                  -1
+                ],
+                [
+                  "gamma",
+                  1
+                ]
+              ],
+              "ratio_exact": "152662949222986993143273168997489164496332909206820977533453022675417294689075289020994326783873250616951056920135789538752756991566425550173103626445687010849239/123134216310822584100669860406148343179193458827720881871351058322961829655571451098629609183962527173598104426954854073060648556673736711871801629369080741888",
+              "condition_count": 89,
+              "condition_class_counts": {
+                "basic": 8,
+                "active_dual": 3,
+                "reduced_cost": 75,
+                "inactive_slack": 3
+              },
+              "all_conditions_strictly_positive": true
+            }
+          },
+          "compressed": {
+            "s": "263/2000",
+            "status": "inactive_slack_infeasible",
+            "first_failure": {
+              "name": "inactive_slack_gamma_+1",
+              "value": "-302178746137209452350633421318894672991943341668676475337505185423620720471190949979612133039895988114213506801994268452596201697888572901571511429300933392348524800381/936526741721864493847795159568590149780359531670997468348706062828914477506101632685675246389332346049937839200844549807586456891908317843790858732870493265864499929284608"
+            }
+          }
+        }
+      },
+      "gates": {
+        "probe_is_inside_isolated_interval": true,
+        "lower_boundary_is_simple": true,
+        "upper_boundary_is_simple": true,
+        "boundary_intervals_are_disjoint": true,
+        "all_KKT_conditions_positive_at_probe": true,
+        "complete_root_census_passes": true,
+        "no_denominator_root_on_hull": true,
+        "no_other_KKT_numerator_root_on_hull": true,
+        "lower_gamma_slack_crosses_negative_to_positive": true,
+        "upper_gamma_slack_crosses_positive_to_negative": true,
+        "lower_boundary_equals_entering_atom_Cramer_polynomial": true,
+        "upper_boundary_equals_entering_atom_Cramer_polynomial": true,
+        "lower_adjacent_branch_is_strict_global_KKT_at_witness": true,
+        "upper_adjacent_branch_is_strict_global_KKT_at_witness": true,
+        "compressed_branch_fails_below_by_gamma_minus_slack": true,
+        "compressed_branch_fails_above_by_gamma_plus_slack": true
+      },
+      "gate_count": 16,
+      "pass_count": 16,
+      "verdict": "PASS"
+    },
+    {
+      "maximum": 57,
+      "compressed_contact": 12,
+      "compressed_signature": {
+        "p_support": [
+          0,
+          12,
+          57
+        ],
+        "q_support": [
+          1,
+          28,
+          29
+        ],
+        "active_bands": [
+          [
+            "alpha",
+            1
+          ],
+          [
+            "beta",
+            -1
+          ]
+        ],
+        "gamma": "inactive"
+      },
+      "strict_KKT_component_containing_s0": {
+        "s_lower_root": {
+          "lower": "23297253/177959590",
+          "upper": "1234986055/9433627733",
+          "width": "1/1678804523577309470",
+          "midpoint_decimal": "0.130913164050332986"
+        },
+        "s_upper_root": {
+          "lower": "911221364/6936718047",
+          "upper": "149592352/1138779235",
+          "width": "4/7899390470973354045",
+          "midpoint_decimal": "0.131362029972385302"
+        },
+        "alpha_lower_decimal": "2.928379768136589",
+        "alpha_upper_decimal": "2.933317919260128",
+        "open_interval_statement": "r_minus(M) < s < r_plus(M)",
+        "maximality_reason": "the gamma-minus inactive slack changes sign at the lower simple root and the gamma-plus inactive slack changes sign at the upper simple root; all other KKT numerators and all denominators are root-free on the enclosing rational hull"
+      },
+      "root_census": {
+        "condition_count": 123,
+        "checked_polynomial_parts": 246,
+        "unique_polynomials": 177,
+        "denominator_root_count": 0,
+        "nonboundary_numerator_root_count": 0,
+        "failures": [],
+        "pass": true
+      },
+      "boundary_signs": {
+        "lower_gamma_minus_slack": {
+          "below": "-1",
+          "at_probe": "1"
+        },
+        "upper_gamma_plus_slack": {
+          "at_probe": "1",
+          "above": "-1"
+        }
+      },
+      "contact_entry_identity": {
+        "lower": {
+          "adjacent_pair": [
+            11,
+            12
+          ],
+          "gamma_sign": -1,
+          "entering_atom": 11,
+          "same_monic_primitive_polynomial": true
+        },
+        "upper": {
+          "adjacent_pair": [
+            12,
+            13
+          ],
+          "gamma_sign": 1,
+          "entering_atom": 13,
+          "same_monic_primitive_polynomial": true
+        }
+      },
+      "exact_outside_witnesses": {
+        "below": {
+          "adjacent": {
+            "s": "1309/10000",
+            "s_decimal": "0.1309000000",
+            "contact_pair": [
+              11,
+              12
+            ],
+            "gamma_sign": -1,
+            "status": "pass",
+            "first_failure": null,
+            "strict_pass_record": {
+              "family": "three_band_adjacent",
+              "maximum": 57,
+              "contact": 11,
+              "gamma_sign": -1,
+              "p_support": [
+                0,
+                11,
+                12,
+                57
+              ],
+              "q_support": [
+                1,
+                28,
+                29
+              ],
+              "active_bands": [
+                [
+                  "alpha",
+                  1
+                ],
+                [
+                  "beta",
+                  -1
+                ],
+                [
+                  "gamma",
+                  -1
+                ]
+              ],
+              "ratio_exact": "103770507112667831084561347260219148635825397860554645064836986009865751892742499824501363012560292182395251603908479197629656280059533848803183790146999572776272762616092799688305473076556521826498687972044575948023155879684122059551697078554458926615839372399435211848251207511/1923813559787498950466469726905254365549289090976186702428478513397944135022750201489556764448857276812676781970465204599504917596941433642774176331137843743250003837772183568835566579559136366888561762135424765809549315170162082389727892194098232240710207873710510491828224",
+              "condition_count": 123,
+              "condition_class_counts": {
+                "basic": 8,
+                "active_dual": 3,
+                "reduced_cost": 109,
+                "inactive_slack": 3
+              },
+              "all_conditions_strictly_positive": true
+            }
+          },
+          "compressed": {
+            "s": "1309/10000",
+            "status": "inactive_slack_infeasible",
+            "first_failure": {
+              "name": "inactive_slack_gamma_-1",
+              "value": "-1024758427681817368347962458524696964723923733208038856247413746168176098983748475080133505866381193796039689194994535853198613728268444905384220059783225422947389626884959482188920087322035647765441390142002054164801216549521382805095095418800000783024378024937893359405945769/15922435119301173148777979075898044018308362275361585593218783085747236987055457866397447521950496835078894544342980284486040226681658087539215392059025702031732300587202451717422399867475294135341333135084284550433806579377683184198018494227767098857129425313123324857427492339712"
+            }
+          }
+        },
+        "above": {
+          "adjacent": {
+            "s": "657/5000",
+            "s_decimal": "0.1314000000",
+            "contact_pair": [
+              12,
+              13
+            ],
+            "gamma_sign": 1,
+            "status": "pass",
+            "first_failure": null,
+            "strict_pass_record": {
+              "family": "three_band_adjacent",
+              "maximum": 57,
+              "contact": 12,
+              "gamma_sign": 1,
+              "p_support": [
+                0,
+                12,
+                13,
+                57
+              ],
+              "q_support": [
+                1,
+                28,
+                29
+              ],
+              "active_bands": [
+                [
+                  "alpha",
+                  1
+                ],
+                [
+                  "beta",
+                  -1
+                ],
+                [
+                  "gamma",
+                  1
+                ]
+              ],
+              "ratio_exact": "2631848404165512069026668847360484442788410059411860218194749058796272363542120057160732892611426436938632412594813736997075776880348699851040882152545288257578636052287195476776208343276417396794621644623892162460583885671169218534624530356096847431253389382133740223/49823420346549530469956727343171080509028647765684418059101291451194941090508274817237993744715312945304619572883001409048442890194384388096271035153889320593546976166316975335589564219790228686246273412302976334193147229732138813583942865152935000646847874203648",
+              "condition_count": 123,
+              "condition_class_counts": {
+                "basic": 8,
+                "active_dual": 3,
+                "reduced_cost": 109,
+                "inactive_slack": 3
+              },
+              "all_conditions_strictly_positive": true
+            }
+          },
+          "compressed": {
+            "s": "657/5000",
+            "status": "inactive_slack_infeasible",
+            "first_failure": {
+              "name": "inactive_slack_gamma_+1",
+              "value": "-446423301477326753783746025400947896592585588714637426424005631202885617264249621166979640879429565563871219800642184494453781995372674618512973833668100589045852765741301170214130303578897123231497219187454670440028720911879607221321783347735120873674025408874252141/2730488499002918878365235367515798243592950611215869514428858223084463644982383159269948408034521078346672669874364814348593405243474080749854968177122839793071762474381585390504835274975361807322454034554804382279817084268540467708149011550723490794157522215525697978368"
+            }
+          }
+        }
+      },
+      "gates": {
+        "probe_is_inside_isolated_interval": true,
+        "lower_boundary_is_simple": true,
+        "upper_boundary_is_simple": true,
+        "boundary_intervals_are_disjoint": true,
+        "all_KKT_conditions_positive_at_probe": true,
+        "complete_root_census_passes": true,
+        "no_denominator_root_on_hull": true,
+        "no_other_KKT_numerator_root_on_hull": true,
+        "lower_gamma_slack_crosses_negative_to_positive": true,
+        "upper_gamma_slack_crosses_positive_to_negative": true,
+        "lower_boundary_equals_entering_atom_Cramer_polynomial": true,
+        "upper_boundary_equals_entering_atom_Cramer_polynomial": true,
+        "lower_adjacent_branch_is_strict_global_KKT_at_witness": true,
+        "upper_adjacent_branch_is_strict_global_KKT_at_witness": true,
+        "compressed_branch_fails_below_by_gamma_minus_slack": true,
+        "compressed_branch_fails_above_by_gamma_plus_slack": true
+      },
+      "gate_count": 16,
+      "pass_count": 16,
+      "verdict": "PASS"
+    },
+    {
+      "maximum": 74,
+      "compressed_contact": 15,
+      "compressed_signature": {
+        "p_support": [
+          0,
+          15,
+          74
+        ],
+        "q_support": [
+          1,
+          37,
+          38
+        ],
+        "active_bands": [
+          [
+            "alpha",
+            1
+          ],
+          [
+            "beta",
+            -1
+          ]
+        ],
+        "gamma": "inactive"
+      },
+      "strict_KKT_component_containing_s0": {
+        "s_lower_root": {
+          "lower": "874268931/6686664602",
+          "upper": "558985993/4275288438",
+          "width": "2/7146854965428617919",
+          "midpoint_decimal": "0.130748135735491156"
+        },
+        "s_upper_root": {
+          "lower": "624585239/4762434105",
+          "upper": "2715172763/20703069109",
+          "width": "64/98597002402873562445",
+          "midpoint_decimal": "0.131148321473730928"
+        },
+        "alpha_lower_decimal": "2.930728751768041",
+        "alpha_upper_decimal": "2.935137718849840",
+        "open_interval_statement": "r_minus(M) < s < r_plus(M)",
+        "maximality_reason": "the gamma-minus inactive slack changes sign at the lower simple root and the gamma-plus inactive slack changes sign at the upper simple root; all other KKT numerators and all denominators are root-free on the enclosing rational hull"
+      },
+      "root_census": {
+        "condition_count": 157,
+        "checked_polynomial_parts": 314,
+        "unique_polynomials": 240,
+        "denominator_root_count": 0,
+        "nonboundary_numerator_root_count": 0,
+        "failures": [],
+        "pass": true
+      },
+      "boundary_signs": {
+        "lower_gamma_minus_slack": {
+          "below": "-1",
+          "at_probe": "1"
+        },
+        "upper_gamma_plus_slack": {
+          "at_probe": "1",
+          "above": "-1"
+        }
+      },
+      "contact_entry_identity": {
+        "lower": {
+          "adjacent_pair": [
+            14,
+            15
+          ],
+          "gamma_sign": -1,
+          "entering_atom": 14,
+          "same_monic_primitive_polynomial": true
+        },
+        "upper": {
+          "adjacent_pair": [
+            15,
+            16
+          ],
+          "gamma_sign": 1,
+          "entering_atom": 16,
+          "same_monic_primitive_polynomial": true
+        }
+      },
+      "exact_outside_witnesses": {
+        "below": {
+          "adjacent": {
+            "s": "1307/10000",
+            "s_decimal": "0.1307000000",
+            "contact_pair": [
+              14,
+              15
+            ],
+            "gamma_sign": -1,
+            "status": "pass",
+            "first_failure": null,
+            "strict_pass_record": {
+              "family": "three_band_adjacent",
+              "maximum": 74,
+              "contact": 14,
+              "gamma_sign": -1,
+              "p_support": [
+                0,
+                14,
+                15,
+                74
+              ],
+              "q_support": [
+                1,
+                37,
+                38
+              ],
+              "active_bands": [
+                [
+                  "alpha",
+                  1
+                ],
+                [
+                  "beta",
+                  -1
+                ],
+                [
+                  "gamma",
+                  -1
+                ]
+              ],
+              "ratio_exact": "505772908230993759514703824823416454238284545526142070307964665560602631713116326762032572837811820723990619374666481457624913465833115336714366760897287836839977766036275468157667686136628958789199859693746497920700033872330730816421038164087326681957377765785008051110289700512176151602011964655471661314675998753653177706344087560340710175603959710100668779/195740491921485079512193408927254690459864644587169778866126359016560711304458212541052357951529406035109646533861195834317190462512700734070895908950835782417282716501166199477088825100379939316838656672002340257446805103695137895714572016635417341154378921316590214095128890242945151045486929600049774290222666541309125512132057011711545568903932411904",
+              "condition_count": 157,
+              "condition_class_counts": {
+                "basic": 8,
+                "active_dual": 3,
+                "reduced_cost": 143,
+                "inactive_slack": 3
+              },
+              "all_conditions_strictly_positive": true
+            }
+          },
+          "compressed": {
+            "s": "1307/10000",
+            "status": "inactive_slack_infeasible",
+            "first_failure": {
+              "name": "inactive_slack_gamma_-1",
+              "value": "-2547315540878360611686773726419672855692691244122512173685763316889581264593224924706300186380553349130472903975588293413475406139350663917392925501064366415358325740240296915623404640357973712339365829474478122998123005995947307821296573172397885415797005154086664625638220369561200119622310840936868773752441498505222583607184668430523312732951012915330109573/9609108496690728449687911630466461231978035739501315707892250845332358825232057862234354831985667022387261154708426218511520884531497010977707973007518944798177007399720333008054587640227526065494591453236223146021053187510849502740366961808357162142046518084757758328710734168177708710711041849048486678729395388408789435600091100847546532950915737520777876996096"
+            }
+          }
+        },
+        "above": {
+          "adjacent": {
+            "s": "82/625",
+            "s_decimal": "0.1312000000",
+            "contact_pair": [
+              15,
+              16
+            ],
+            "gamma_sign": 1,
+            "status": "pass",
+            "first_failure": null,
+            "strict_pass_record": {
+              "family": "three_band_adjacent",
+              "maximum": 74,
+              "contact": 15,
+              "gamma_sign": 1,
+              "p_support": [
+                0,
+                15,
+                16,
+                74
+              ],
+              "q_support": [
+                1,
+                37,
+                38
+              ],
+              "active_bands": [
+                [
+                  "alpha",
+                  1
+                ],
+                [
+                  "beta",
+                  -1
+                ],
+                [
+                  "gamma",
+                  1
+                ]
+              ],
+              "ratio_exact": "128412184997204092298808124490020120415970571040590022011107314732904665296832287181970139279215678531066910833739707840410991212715289477148601207296415543125066463117595781578777513488103123902731268959702343582641381557483366047170192291181540494524690239701398524027554705506105526891913079747843860417207236296021778068241/50918940026505191588289801814123783896954525734419594929116831479853531756574171805886796972887057701522230275486610284942052191096349367050285902053833278074202514254260517387475390960919606521074328929837644763392114161187514793500096166021076120416864589079875823626506488223843216246177611917864532129620762342424576",
+              "condition_count": 157,
+              "condition_class_counts": {
+                "basic": 8,
+                "active_dual": 3,
+                "reduced_cost": 143,
+                "inactive_slack": 3
+              },
+              "all_conditions_strictly_positive": true
+            }
+          },
+          "compressed": {
+            "s": "82/625",
+            "status": "inactive_slack_infeasible",
+            "first_failure": {
+              "name": "inactive_slack_gamma_+1",
+              "value": "-1038956347918008283762103256670088957506727644111445729648036213725116453964056469951648285695836731219605064795195057444714426738026373834484512401213792521941458048060914879116185841848219806773048377700537605777811298219097777932979921647856256363278525141878374633755228287344239860397030127003033576446546508593429451446411/4110350761327447099468900302954462077804118314658465531130310243761879516236280808293662845645555236084325795447510410058848343539880095000537323770646911038995648355219452773646200633846687139843873742276171010273525310335729717711533532869398942373569767713580669381105525166273377758416980774430782644713606363700099821728694272"
+            }
+          }
+        }
+      },
+      "gates": {
+        "probe_is_inside_isolated_interval": true,
+        "lower_boundary_is_simple": true,
+        "upper_boundary_is_simple": true,
+        "boundary_intervals_are_disjoint": true,
+        "all_KKT_conditions_positive_at_probe": true,
+        "complete_root_census_passes": true,
+        "no_denominator_root_on_hull": true,
+        "no_other_KKT_numerator_root_on_hull": true,
+        "lower_gamma_slack_crosses_negative_to_positive": true,
+        "upper_gamma_slack_crosses_positive_to_negative": true,
+        "lower_boundary_equals_entering_atom_Cramer_polynomial": true,
+        "upper_boundary_equals_entering_atom_Cramer_polynomial": true,
+        "lower_adjacent_branch_is_strict_global_KKT_at_witness": true,
+        "upper_adjacent_branch_is_strict_global_KKT_at_witness": true,
+        "compressed_branch_fails_below_by_gamma_minus_slack": true,
+        "compressed_branch_fails_above_by_gamma_plus_slack": true
+      },
+      "gate_count": 16,
+      "pass_count": 16,
+      "verdict": "PASS"
+    }
+  ],
+  "gates": {
+    "declared_compression_supports_exact": true,
+    "all_three_interval_certificates_pass": true,
+    "all_lower_reentries_have_gamma_minus": true,
+    "all_upper_reentries_have_gamma_plus": true,
+    "contact_entry_sequence_is_left_single_right": true,
+    "scope_remains_finite_and_contract_relative": true
+  },
+  "gate_count": 6,
+  "pass_count": 6,
+  "nested_support_gate_count": 48,
+  "nested_support_pass_count": 48,
+  "verdict": "PASS_EXACT_COMPRESSION_INTERVALS_AND_CONTACT_ENTRY_POLYNOMIALS",
+  "claim_boundary": [
+    "Exact only for M=40,57,74 under the frozen central-mean contract.",
+    "The adjacent branches are certified at exact rational witnesses; their complete maximal intervals are not claimed.",
+    "No periodicity or all-M law for compression supports is claimed.",
+    "No physical interpretation is inferred from support contacts or active-set compression."
+  ]
+}

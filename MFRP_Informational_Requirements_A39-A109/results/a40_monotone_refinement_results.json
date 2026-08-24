@@ -1,0 +1,93 @@
+{
+  "audit": "A40_PROVISIONAL_MONOTONE_REFINEMENT",
+  "support": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "observed_parameters": [
+    "2*log(2)",
+    "3*log(2)",
+    "4*log(2)"
+  ],
+  "omitted_parameter": "log(2)",
+  "contraction": "1/2",
+  "constraint_null_vector": [
+    -1,
+    30,
+    -281,
+    988,
+    -1248,
+    512
+  ],
+  "constraint_null_residual": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "target_dot_null_vector": "21/4",
+  "p_plus": [
+    "4997/30000",
+    "509/3000",
+    "4157/30000",
+    "1991/7500",
+    "157/3750",
+    "817/3750"
+  ],
+  "p_minus": [
+    "5003/30000",
+    "491/3000",
+    "5843/30000",
+    "509/7500",
+    "1093/3750",
+    "433/3750"
+  ],
+  "shared_constraints": {
+    "normalization": "1",
+    "mean": "5/2",
+    "L_2log2": "455/2048",
+    "L_3log2": "12483/65536",
+    "L_4log2": "372827/2097152"
+  },
+  "omitted_transform": {
+    "L_plus_log2": "6573/20000",
+    "L_minus_log2": "819/2500",
+    "difference": "21/20000"
+  },
+  "dynamic_values": {
+    "Q_plus_log2": "1.605376109838071",
+    "Q_minus_log2": "1.6099927379084407",
+    "next_Q_plus_2log2": "2.0526880549190354",
+    "next_Q_minus_2log2": "2.05499636895422",
+    "next_difference": "0.002308314035184722",
+    "exact_next_difference_expression": "0.5*log2(2191/2184)"
+  },
+  "known_support_identification_matrix_determinant": "6251175/1099511627776",
+  "formal_results_proved_in_note": [
+    "nested exact constraints monotonically shrink transform intervals",
+    "Q and centered-contraction future intervals inherit nesting",
+    "finite grids do not universally identify omitted transforms on compact support",
+    "an accumulating exact parameter set identifies the compactly supported measure",
+    "all continuous-observable sharp intervals converge under nested accumulating data",
+    "known finite support permits finite exact identification"
+  ],
+  "gates": {
+    "G1_constraint_matrix_rank_is_5": true,
+    "G2_integer_vector_is_exact_constraint_null_vector": true,
+    "G3_target_not_orthogonal_to_null_vector": true,
+    "G4_both_probability_vectors_are_normalized": true,
+    "G5_all_weights_are_strictly_positive": true,
+    "G6_mean_and_three_observed_transforms_match_exactly": true,
+    "G7_omitted_transform_differs_exactly": true,
+    "G8_full_known_support_matrix_is_nonsingular": true,
+    "G9_dynamic_next_score_difference_is_positive": true,
+    "G10_no_floating_point_used_for_constraint_verification": true
+  },
+  "verdict": "PASS_MONOTONE_REFINEMENT_THEOREM_WITH_EXACT_FINITE_GRID_OBSTRUCTION",
+  "boundary": "The exact witness and determinant are algebraically audited. The monotonicity and convergence statements are mathematical proofs in the note. No quantitative noisy-data stability rate or physical interpretation is claimed."
+}

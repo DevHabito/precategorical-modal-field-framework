@@ -1,0 +1,212 @@
+{
+  "audit": "A107-S2_UNCHANGED_STRUCTURAL_ENDPOINT_SIGN_HOLDOUT",
+  "status": "FROZEN_BEFORE_HOLDOUT_EXECUTION",
+  "parent_rule": "A107-S1 frozen endpoint-sign predictor, unchanged",
+  "parent_preregistration_sha256": "e634534d18afb2008dd047411d6102687d34eae0836ef97d83fd78a1b240c7ef",
+  "evidence_before_S2": "rule derived on ranks 1..25 and prospectively supported 8/8 on ranks 26..33; S2 does not alter the rule after S1",
+  "holdout_selection": {
+    "canonical_ranks_inclusive": [
+      34,
+      41
+    ],
+    "batch_size": 8,
+    "replacement_if_failure": "none"
+  },
+  "frozen_predictor": {
+    "rule": "With positive common denominator checkpoints and positive witness numerator, N_{j+1}(lower)<0 predicts proper_strict_subcomponent with left boundary basic_p_{j+1}; N_{j+1}(lower)>0 predicts full_segment_coverage; endpoint zero or applicability failure is unclassified.",
+    "no_other_KKT_conditions_used_for_prediction": true,
+    "no_root_isolation_used_for_prediction": true,
+    "no_full_analyze_record_used_for_prediction": true,
+    "rule_changed_from_S1": false
+  },
+  "holdout_predictions": [
+    {
+      "canonical_rank": 34,
+      "source_key": "M=53|b=10|phase=unique_b_plus_1|side=full|s=131/1000|j=11",
+      "maximum": 53,
+      "contact_j": 11,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "5196296130159217/40000000000000000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_12",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null
+    },
+    {
+      "canonical_rank": 35,
+      "source_key": "M=53|b=9|phase=unique_b_plus_2|side=full|s=647/5000|j=11",
+      "maximum": 53,
+      "contact_j": 11,
+      "witness": "647/5000",
+      "segment_open_bounds": [
+        "129/1000",
+        "16238425406747553/125000000000000000"
+      ],
+      "predictor_condition": "basic_p_12",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null
+    },
+    {
+      "canonical_rank": 36,
+      "source_key": "M=54|b=10|phase=unique_b_plus_1|side=full|s=131/1000|j=11",
+      "maximum": 54,
+      "contact_j": 11,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_12",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null
+    },
+    {
+      "canonical_rank": 37,
+      "source_key": "M=55|b=10|phase=unique_b_plus_1|side=full|s=131/1000|j=11",
+      "maximum": 55,
+      "contact_j": 11,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_12",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null
+    },
+    {
+      "canonical_rank": 38,
+      "source_key": "M=58|b=10|phase=unique_b_plus_2|side=full|s=131/1000|j=12",
+      "maximum": 58,
+      "contact_j": 12,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_13",
+      "exact_endpoint_signs": {
+        "N_lower": -1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "proper_strict_subcomponent",
+      "if_partial_predicted_boundary": "basic_p_13"
+    },
+    {
+      "canonical_rank": 39,
+      "source_key": "M=59|b=11|phase=unique_b_plus_1|side=full|s=131/1000|j=12",
+      "maximum": 59,
+      "contact_j": 12,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129408115480172189/1000000000000000000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_13",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null
+    },
+    {
+      "canonical_rank": 40,
+      "source_key": "M=59|b=10|phase=unique_b_plus_2|side=full|s=323/2500|j=12",
+      "maximum": 59,
+      "contact_j": 12,
+      "witness": "323/2500",
+      "segment_open_bounds": [
+        "129/1000",
+        "32352028870043047/250000000000000000"
+      ],
+      "predictor_condition": "basic_p_13",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null
+    },
+    {
+      "canonical_rank": 41,
+      "source_key": "M=60|b=11|phase=unique_b_plus_1|side=full|s=131/1000|j=12",
+      "maximum": 60,
+      "contact_j": 12,
+      "witness": "131/1000",
+      "segment_open_bounds": [
+        "129/1000",
+        "133/1000"
+      ],
+      "predictor_condition": "basic_p_13",
+      "exact_endpoint_signs": {
+        "N_lower": 1,
+        "N_witness": 1,
+        "N_upper": 1,
+        "D_lower": 1,
+        "D_witness": 1,
+        "D_upper": 1
+      },
+      "predicted_class": "full_segment_coverage",
+      "if_partial_predicted_boundary": null
+    }
+  ],
+  "adjudication": {
+    "support": "Every classifiable rank matches full exact classification and every predicted partial has exactly the predicted left boundary; at least one predicted partial is required to test the boundary part.",
+    "refute": "Any classifiable rank mismatches, or any predicted partial has a different selected side/condition.",
+    "inconclusive": "Execution/certification disagreement without a mathematical counterexample."
+  },
+  "no_posthoc_changes": "No replacement, resizing, endpoint-rule edits, condition substitution, tolerance changes, or reclassification after outcomes.",
+  "nonclaims": [
+    "not a theorem for all 922 gamma-plus records",
+    "not a proof of global uniqueness of the boundary mechanism",
+    "not beyond A95/A102 source segments",
+    "not a physical claim"
+  ]
+}

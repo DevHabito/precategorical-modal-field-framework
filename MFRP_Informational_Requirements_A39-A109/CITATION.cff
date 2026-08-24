@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using this metadata."
+title: "Informational Requirements for Pre-Categorical Relational Models: Computational Audits A39-A106"
+type: software
+authors:
+  - family-names: "Romero"
+    given-names: "Felipe Gianini"
+version: "0.25.0"
+date-released: "2026-07-26"
+abstract: "English computational audit archive for identifiability, minimax design, covariance uncertainty, bootstrap calibration, exact phase theorems, dual envelopes, Cramer orientation, signed q-Schur dominance, and active-set bifurcation, exact contact selection, compression resets, exact compression intervals, contact-entry polynomial identities, an exact local compression-window atlas with a six-term boundary law, an exact adjacent-contact locator with certified local orientation switches, a seven-term adjacent-difference sign atlas, a ten-term k-space finite one-variation stress, parity-resolved dominant-balance/asymptotic contact localization, and exact rational three-contact localization with finite exclusion thresholds, and exact secant-residual offset classification with an eight-term fallback, a nine-term local-secant reduction, and an explicit uniform continuum positivity threshold for the classifier secant, followed by an exact pre-threshold all-contact one-variation audit, a finite four-contact strip with preserved counterexamples, an exact four-term classifier for the offset-three mechanism, and an exact continuum decisive-factor atlas with twenty-five strict local offset-three windows, followed by exact full-sequence continuum one-variation that promotes all twenty-five to global compressed-maximizer windows, and finally exact full-sequence one-variation over all 858 algebraic cells with 205 simple adjacent global exchanges, followed by exact lifted-KKT obstructions, two unrestricted active-set resolutions, and exact interval persistence plus a residual atlas for the q0/q1 co-entry architecture, followed by a gamma-active interval theorem, exact pointwise closure of all 83 lifted rational-witness obstructions, and a complete 1,063-witness exact lift atlas with frozen provenance and independent replay, followed by an exact continuum classification of all 76 endpoint-released rational source segments with 25 complete-segment certificates and 51 proper strict subcomponents, followed by an exact continuum classification of the seven exceptional q0/q1 source segments as proper two-sided strict components with exact root ordering and outside counterexamples, followed by an exact continuum classification of all forty legacy two-band source segments as proper two-sided strict components with eighty exact algebraic boundaries and outside counterexamples, and finally an exact continuum classification of all eighteen legacy gamma-minus source segments with one complete source-segment certificate, seventeen proper one-sided strict components, exact direct-matrix regressions, and seventeen algebraic boundaries."
+keywords:
+  - identifiability
+  - Laplace transform
+  - minimax design
+  - linear programming
+  - total positivity
+  - q-Vandermonde
+  - Schur polynomials
+license: "LicenseRef-Proprietary"

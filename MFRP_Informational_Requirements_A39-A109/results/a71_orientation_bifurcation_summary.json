@@ -1,0 +1,25 @@
+{
+  "audit": "A71_ORIENTATION_BIFURCATION_AND_ACTIVE_SET_PROTECTION",
+  "verdict": "PASS_ORIENTATION_BIFURCATION_AND_ACTIVE_SET_PROTECTION",
+  "catalogue_winner": [
+    2,
+    3,
+    4
+  ],
+  "weak_signature_signs": {
+    "8": -1,
+    "9": -1,
+    "10": 1,
+    "11": 1,
+    "12": 1,
+    "13": 1,
+    "14": 1,
+    "15": 1,
+    "16": 1
+  },
+  "M10_phase_count": 6,
+  "M10_transition_count": 5,
+  "M10_boundary_risk": "0.17346834992930848267812309234663568001198253981156",
+  "M10_coalescence_risk": "0.61396366834000204376552932214894031105947177818047",
+  "central_result": "The weakest inherited signature flips Cramer orientation at M=10 and becomes dual-infeasible. The optimizer pivots to six new exact phases and preserves the unique boundary optimum alpha=2."
+}

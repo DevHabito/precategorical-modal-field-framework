@@ -1,0 +1,592 @@
+{
+  "audit": "A109_H17_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT",
+  "parent_preregistration_sha256": "6ce9427d24839288d758f6993f1796d05459cb5d221d8c033da7afcaf51e0e82",
+  "fallback_preregistration_sha256": "5e0caeb3ea1a81b40b5fc9bba9485edb517238798ac9b31c015af6e3b474b53c",
+  "verdict": "RESOLVED_SUPPORT_A109_H17_MIXED_EXACT_PROTOCOL",
+  "summary": {
+    "record_count": 16,
+    "class_match_count": 16,
+    "boundary_match_count": 16,
+    "full_segment_coverage": 11,
+    "proper_strict_subcomponent": 5,
+    "left_boundaries": 5,
+    "right_boundaries": 0,
+    "two_sided": 0,
+    "non_adjacent_boundaries": 0,
+    "full_atlas_completed": 13,
+    "fallback_exact_certificates": 3,
+    "fallback_non_target_conditions_certified": 1826,
+    "direct_comparisons": 32127,
+    "direct_mismatches": 0,
+    "certificate_exact_failures": 0,
+    "certificate_unresolved": 0,
+    "full_atlas_core_failures": 0,
+    "full_atlas_hull_failures": 0,
+    "full_atlas_root_failures": 0
+  },
+  "failures": [],
+  "records": [
+    {
+      "canonical_rank": 383,
+      "source_key": "M=295|b=51|phase=b_plus_1_to_b_plus_2|side=left|s=1297/10000|j=52",
+      "maximum": 295,
+      "contact_j": 52,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1797,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 48.42783331871033,
+      "strict_component": {
+        "lower": "129408115480172189/1000000000000000000",
+        "upper": "153474093609658143431896490053646066143/1180591620717411303424000000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 384,
+      "source_key": "M=295|b=50|phase=unique_b_plus_2|side=full|s=323/2500|j=52",
+      "maximum": 295,
+      "contact_j": 52,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1797,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 14.164355278015137,
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "32352028870043047/250000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 385,
+      "source_key": "M=296|b=51|phase=unique_b_plus_2|side=full|s=131/1000|j=53",
+      "maximum": 296,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_54"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_54"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 2404,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 36.69069743156433,
+      "strict_component": {
+        "lower": "157465783126314856462368909/1208925819614629174706176000",
+        "upper": "133/1000",
+        "selected_left_boundary": {
+          "condition": "basic_p_54",
+          "side": "left",
+          "bracket": [
+            "39366445781578714115592227/302231454903657293676544000",
+            "157465783126314856462368909/1208925819614629174706176000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 81,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        },
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 386,
+      "source_key": "M=297|b=51|phase=unique_b_plus_2|side=full|s=13/100|j=53",
+      "maximum": 297,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_54"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_54"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 2412,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 45.81848502159119,
+      "strict_component": {
+        "lower": "156705808465827137708390557/1208925819614629174706176000",
+        "upper": "1063069039822593/8000000000000000",
+        "selected_left_boundary": {
+          "condition": "basic_p_54",
+          "side": "left",
+          "bracket": [
+            "39176452116456784427097639/302231454903657293676544000",
+            "156705808465827137708390557/1208925819614629174706176000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 80,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        },
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 387,
+      "source_key": "M=297|b=52|phase=unique_b_plus_1|side=full|s=1329/10000|j=53",
+      "maximum": 297,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1809,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 14.457081079483032,
+      "strict_component": {
+        "lower": "66441814988912063/500000000000000000",
+        "upper": "133/1000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 388,
+      "source_key": "M=298|b=51|phase=unique_b_plus_2|side=full|s=13/100|j=53",
+      "maximum": 298,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1815,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 14.797342538833618,
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "131983672539354969/1000000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 389,
+      "source_key": "M=298|b=52|phase=unique_b_plus_1|side=full|s=33/250|j=53",
+      "maximum": 298,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1815,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 14.053108215332031,
+      "strict_component": {
+        "lower": "13198367253935497/100000000000000000",
+        "upper": "133/1000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 390,
+      "source_key": "M=299|b=51|phase=unique_b_plus_2|side=full|s=13/100|j=53",
+      "maximum": 299,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1821,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 13.239044189453125,
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "6554490504166207/50000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 391,
+      "source_key": "M=299|b=52|phase=b_plus_1_to_b_plus_2|side=left|s=33/250|j=53",
+      "maximum": 299,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1821,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 47.732282638549805,
+      "strict_component": {
+        "lower": "131089810083324141/1000000000000000000",
+        "upper": "15664350516341205327116454248510925613/118059162071741130342400000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 392,
+      "source_key": "M=299|b=52|phase=b_plus_1_to_b_plus_2|side=right|s=83/625|j=54",
+      "maximum": 299,
+      "contact_j": 54,
+      "resolution_method": "preregistered_exact_sufficient_certificate_after_two_full_atlas_timeouts",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "base_verdict": "BASE_SUPPORT",
+      "target": "basic_p_55",
+      "target_side": "left",
+      "target_signs": {
+        "L": -1,
+        "witness": 1,
+        "R": 1
+      },
+      "target_derivative_certificate_pass": true,
+      "unique_root_certificate": {
+        "lower": "16821994615065068275374925589075273018707711781/126765060022822940149670320537600000000000000000",
+        "upper": "33643989230137089654142859569327631158412043859/253530120045645880299340641075200000000000000000",
+        "exact_rational_root": false,
+        "steps": 32,
+        "signs": [
+          -1,
+          1
+        ],
+        "width": "6953103393008391177085120996620297/253530120045645880299340641075200000000000000000"
+      },
+      "root_midpoint_decimal_for_orientation_only": 0.13270213899664587,
+      "certified_non_target_condition_count": 606,
+      "certificate_exact_failures": 0,
+      "certificate_unresolved": 0,
+      "direct_comparisons": 2428,
+      "direct_mismatches": 0,
+      "direct_positivity_failures": 0,
+      "direct_outside_failures": 0,
+      "outside_probe_nonpositive_conditions": [
+        {
+          "probe": "outside_left",
+          "conditions": [
+            "basic_p_55"
+          ]
+        }
+      ]
+    },
+    {
+      "canonical_rank": 393,
+      "source_key": "M=300|b=51|phase=unique_b_plus_2|side=full|s=13/100|j=53",
+      "maximum": 300,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1827,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 13.333704948425293,
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "4068812541603843/31250000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 394,
+      "source_key": "M=300|b=52|phase=b_plus_1_to_b_plus_2|side=left|s=131/1000|j=53",
+      "maximum": 300,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1827,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 47.08049488067627,
+      "strict_component": {
+        "lower": "130202001331322977/1000000000000000000",
+        "upper": "2417910658921067249025689042690922339/18446744073709551616000000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 395,
+      "source_key": "M=300|b=52|phase=b_plus_1_to_b_plus_2|side=right|s=33/250|j=54",
+      "maximum": 300,
+      "contact_j": 54,
+      "resolution_method": "preregistered_exact_sufficient_certificate_after_two_full_atlas_timeouts",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "base_verdict": "BASE_SUPPORT",
+      "target": "basic_p_55",
+      "target_side": "left",
+      "target_signs": {
+        "L": -1,
+        "witness": 1,
+        "R": 1
+      },
+      "target_derivative_certificate_pass": true,
+      "unique_root_certificate": {
+        "lower": "10436789999934465001241372420980863463228792083/79228162514264337593543950336000000000000000000",
+        "upper": "16698863999922439296079945576427461585368912359/126765060022822940149670320537600000000000000000",
+        "exact_rational_root": false,
+        "steps": 32,
+        "signs": [
+          -1,
+          1
+        ],
+        "width": "136476470468748514290400221014225131/633825300114114700748351602688000000000000000000"
+      },
+      "root_midpoint_decimal_for_orientation_only": 0.13173080971130616,
+      "certified_non_target_condition_count": 608,
+      "certificate_exact_failures": 0,
+      "certificate_unresolved": 0,
+      "direct_comparisons": 2436,
+      "direct_mismatches": 0,
+      "direct_positivity_failures": 0,
+      "direct_outside_failures": 0,
+      "outside_probe_nonpositive_conditions": [
+        {
+          "probe": "outside_left",
+          "conditions": [
+            "basic_p_55"
+          ]
+        }
+      ]
+    },
+    {
+      "canonical_rank": 396,
+      "source_key": "M=301|b=51|phase=unique_b_plus_2|side=full|s=1291/10000|j=53",
+      "maximum": 301,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1833,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 15.306118249893188,
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "64660102642250893/500000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 397,
+      "source_key": "M=301|b=52|phase=b_plus_1_to_b_plus_2|side=left|s=259/2000|j=53",
+      "maximum": 301,
+      "contact_j": 53,
+      "resolution_method": "full_atlas",
+      "predicted_class": "full_segment_coverage",
+      "predicted_boundaries": [],
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "class_match": true,
+      "boundary_match": true,
+      "direct_comparisons": 1833,
+      "direct_mismatches": 0,
+      "core_failures": 0,
+      "hull_failures": 0,
+      "root_failures": 0,
+      "reported_seconds": 48.8230996131897,
+      "strict_component": {
+        "lower": "129320205284501787/1000000000000000000",
+        "upper": "4788058907279050148494021423543589901/36893488147419103232000000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 398,
+      "source_key": "M=302|b=52|phase=unique_b_plus_2|side=full|s=131/1000|j=54",
+      "maximum": 302,
+      "contact_j": 54,
+      "resolution_method": "preregistered_exact_sufficient_certificate_after_two_full_atlas_timeouts",
+      "predicted_class": "proper_strict_subcomponent",
+      "predicted_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ],
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ],
+      "class_match": true,
+      "boundary_match": true,
+      "base_verdict": "BASE_SUPPORT",
+      "target": "basic_p_55",
+      "target_side": "left",
+      "target_signs": {
+        "L": -1,
+        "witness": 1,
+        "R": 1
+      },
+      "target_derivative_certificate_pass": true,
+      "unique_root_certificate": {
+        "lower": "279495829213/2147483648000",
+        "upper": "139747914607/1073741824000",
+        "exact_rational_root": false,
+        "steps": 32,
+        "signs": [
+          -1,
+          1
+        ],
+        "width": "1/2147483648000"
+      },
+      "root_midpoint_decimal_for_orientation_only": 0.13015038762870246,
+      "certified_non_target_condition_count": 612,
+      "certificate_exact_failures": 0,
+      "certificate_unresolved": 0,
+      "direct_comparisons": 2452,
+      "direct_mismatches": 0,
+      "direct_positivity_failures": 0,
+      "direct_outside_failures": 0,
+      "outside_probe_nonpositive_conditions": [
+        {
+          "probe": "outside_left",
+          "conditions": [
+            "basic_p_55"
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "not_all_922_theorem": true,
+    "not_physical_claim": true
+  }
+}

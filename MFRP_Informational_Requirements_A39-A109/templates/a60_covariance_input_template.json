@@ -1,0 +1,34 @@
+{
+  "centre": [
+    1.05,
+    1.05,
+    1.05
+  ],
+  "covariance": [
+    [
+      0.0025,
+      0.001,
+      0.0002
+    ],
+    [
+      0.001,
+      0.0016,
+      0.0002
+    ],
+    [
+      0.0002,
+      0.0002,
+      0.0004
+    ]
+  ],
+  "requirements": {
+    "symmetric": true,
+    "positive_definite": true,
+    "maximum_diagonal_entry": 0.0025,
+    "channel_order": [
+      "u2",
+      "u_beta",
+      "u_infinity"
+    ]
+  }
+}

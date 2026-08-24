@@ -1,0 +1,510 @@
+{
+  "audit": "A109_H17_INDEPENDENT_ARTIFACT_CONSISTENCY_CHECK",
+  "check_count": 71,
+  "pass_count": 71,
+  "failure_count": 0,
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "parent_prereg_hash",
+      "pass": true,
+      "detail": "6ce9427d24839288d758f6993f1796d05459cb5d221d8c033da7afcaf51e0e82"
+    },
+    {
+      "check": "fallback_prereg_hash",
+      "pass": true,
+      "detail": "5e0caeb3ea1a81b40b5fc9bba9485edb517238798ac9b31c015af6e3b474b53c"
+    },
+    {
+      "check": "ranks_exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R383_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R383_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R383_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R383_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R384_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R384_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R384_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R384_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R385_class",
+      "pass": true,
+      "detail": [
+        "proper_strict_subcomponent",
+        "proper_strict_subcomponent"
+      ]
+    },
+    {
+      "check": "R385_boundary",
+      "pass": true,
+      "detail": [
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_54"
+          }
+        ],
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_54"
+          }
+        ]
+      ]
+    },
+    {
+      "check": "R385_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R385_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R386_class",
+      "pass": true,
+      "detail": [
+        "proper_strict_subcomponent",
+        "proper_strict_subcomponent"
+      ]
+    },
+    {
+      "check": "R386_boundary",
+      "pass": true,
+      "detail": [
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_54"
+          }
+        ],
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_54"
+          }
+        ]
+      ]
+    },
+    {
+      "check": "R386_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R386_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R387_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R387_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R387_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R387_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R388_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R388_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R388_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R388_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R389_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R389_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R389_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R389_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R390_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R390_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R390_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R390_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R391_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R391_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R391_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R391_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R392_class",
+      "pass": true,
+      "detail": [
+        "proper_strict_subcomponent",
+        "proper_strict_subcomponent"
+      ]
+    },
+    {
+      "check": "R392_boundary",
+      "pass": true,
+      "detail": [
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_55"
+          }
+        ],
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_55"
+          }
+        ]
+      ]
+    },
+    {
+      "check": "R392_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R392_fallback_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R393_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R393_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R393_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R393_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R394_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R394_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R394_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R394_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R395_class",
+      "pass": true,
+      "detail": [
+        "proper_strict_subcomponent",
+        "proper_strict_subcomponent"
+      ]
+    },
+    {
+      "check": "R395_boundary",
+      "pass": true,
+      "detail": [
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_55"
+          }
+        ],
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_55"
+          }
+        ]
+      ]
+    },
+    {
+      "check": "R395_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R395_fallback_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R396_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R396_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R396_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R396_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R397_class",
+      "pass": true,
+      "detail": [
+        "full_segment_coverage",
+        "full_segment_coverage"
+      ]
+    },
+    {
+      "check": "R397_boundary",
+      "pass": true,
+      "detail": [
+        [],
+        []
+      ]
+    },
+    {
+      "check": "R397_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R397_full_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "R398_class",
+      "pass": true,
+      "detail": [
+        "proper_strict_subcomponent",
+        "proper_strict_subcomponent"
+      ]
+    },
+    {
+      "check": "R398_boundary",
+      "pass": true,
+      "detail": [
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_55"
+          }
+        ],
+        [
+          {
+            "side": "left",
+            "condition": "basic_p_55"
+          }
+        ]
+      ]
+    },
+    {
+      "check": "R398_direct_zero",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "R398_fallback_certificates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "summary_16",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "summary_distribution",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_nonadjacent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "direct_total_zero",
+      "pass": true,
+      "detail": 32127
+    }
+  ]
+}

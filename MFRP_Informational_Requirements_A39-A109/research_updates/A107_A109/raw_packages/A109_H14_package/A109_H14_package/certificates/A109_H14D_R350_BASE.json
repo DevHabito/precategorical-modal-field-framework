@@ -1,0 +1,79 @@
+{
+  "audit": "A109-H14D_SHARDED_BASE",
+  "rank": 350,
+  "preregistration_sha256": "722f2d04cc93e2ac634273ad3297f60f36c202bfc2723d385cfc8502a8fe489e",
+  "verdict": "BASE_SUPPORT",
+  "M": 276,
+  "j": 50,
+  "segment": [
+    "779266648540879193529480078167720447/5902958103587056517120000000000000000",
+    "133/1000"
+  ],
+  "witness": "53/400",
+  "frozen_prediction": {
+    "canonical_rank": 350,
+    "source_key": "M=276|b=48|phase=b_plus_1_to_b_plus_2|side=right|s=53/400|j=50",
+    "maximum": 276,
+    "contact_j": 50,
+    "witness": "53/400",
+    "segment_open_bounds": [
+      "779266648540879193529480078167720447/5902958103587056517120000000000000000",
+      "133/1000"
+    ],
+    "target_only_applicable": true,
+    "target_only_signs": {
+      "upper_adjacent_at_lower": -1,
+      "upper_adjacent_at_witness": 1,
+      "lower_adjacent_at_right": 1,
+      "lower_adjacent_at_witness": 1
+    },
+    "predicted_class": "proper_strict_subcomponent",
+    "predicted_boundaries": [
+      {
+        "side": "left",
+        "condition": "basic_p_51"
+      }
+    ]
+  },
+  "denominator_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "witness_nonpositive_conditions": [],
+  "target": "basic_p_51",
+  "target_side": "left",
+  "target_signs": {
+    "L": -1,
+    "witness": 1,
+    "R": 1
+  },
+  "target_derivative_certificate": {
+    "pass": true,
+    "method": "single_interval",
+    "endpoint_signs": [
+      1,
+      1
+    ],
+    "nodes": 1,
+    "max_depth": 0
+  },
+  "unique_root_certificate": {
+    "lower": "3354278447301944179944295259932868082914002891/25353012004564588029934064107520000000000000000",
+    "upper": "838569611826204870032175263730447001186570611/6338253001141147007483516026880000000000000000",
+    "exact_rational_root": false,
+    "steps": 32,
+    "signs": [
+      -1,
+      1
+    ],
+    "width": "2875300184405794988919921832279553/25353012004564588029934064107520000000000000000"
+  },
+  "failures": [],
+  "seconds": 0.8976263999938965
+}

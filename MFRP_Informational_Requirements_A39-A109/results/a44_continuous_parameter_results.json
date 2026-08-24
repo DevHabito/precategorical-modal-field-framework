@@ -1,0 +1,139 @@
+{
+  "audit": "A44_PROVISIONAL_CONTINUOUS_THIRD_PARAMETER",
+  "contract": {
+    "support": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "mean": "5/2",
+    "design": "{2*log(2), 3*log(2), gamma*log(2)}",
+    "gamma_domain_exact": "gamma > 3",
+    "gamma_domain_noisy_compactified": "[3, infinity]",
+    "target": "direct future Q at 2*log(2), contraction a=1/2",
+    "noise_benchmark": "1/10000"
+  },
+  "exact_continuous_result": {
+    "r_definition": "r = 2^(-gamma)",
+    "ratio_formula": "(532*r + 1063)/(2*(275*r + 527))",
+    "ratio_derivative_in_r": "-11961/(2*(275*r + 527)**2)",
+    "infimum_ratio": "502/499",
+    "infimum_future_risk_decimal": "0.0043237743067557283",
+    "duplicate_gamma_3_ratio": "3665/3458",
+    "duplicate_gamma_3_future_risk_decimal": "0.0419376646894462218",
+    "limiting_p_gamma_3_plus": [
+      "0",
+      "151/348",
+      "0",
+      "133/348",
+      "0",
+      "16/87"
+    ],
+    "limiting_q_gamma_3_plus": [
+      "1/1392",
+      "97/232",
+      "169/1392",
+      "0",
+      "40/87",
+      "0"
+    ]
+  },
+  "noisy_compactified_result": {
+    "epsilon": "1/10000",
+    "infinity_ratio": "26593405/26235854",
+    "infinity_future_risk_decimal": "0.00976437945133005331",
+    "p_infinity": [
+      "1/5000",
+      "249961937/533610000",
+      "0",
+      "166821821/533610000",
+      "0",
+      "1458994/6670125"
+    ],
+    "q_infinity": [
+      "0",
+      "1741651/3705625",
+      "666969/14822500",
+      "0",
+      "7188927/14822500",
+      "0"
+    ],
+    "delta_gamma_formula": "(r - 1)**2*(116719520*r**3 - 25362332*r**2 - 622363*r + 106722)/533610000",
+    "P1_bernstein_coefficients": [
+      "835807",
+      "5926685/3",
+      "180245121/64",
+      "3415104"
+    ],
+    "P2_bernstein_coefficients": [
+      "-213444",
+      "-7701953/32",
+      "-21461863/96",
+      "-362443997/2048",
+      "-114964605/1024"
+    ],
+    "duplicate_gamma_3_ratio": "337423987/317703750",
+    "duplicate_gamma_3_future_risk_decimal": "0.0434402087587414248"
+  },
+  "comparison_with_A43": {
+    "exact_catalogue_gamma": 4,
+    "exact_catalogue_ratio": "8770/8707",
+    "exact_continuous_infimum_improvement_percent": "16.85944233577199679717318964135757194649",
+    "noisy_catalogue_gamma": 6,
+    "noisy_catalogue_ratio": "1828961429248/1804118444725",
+    "noisy_compactified_improvement_percent": "1.022947331752602078285452388599116119432"
+  },
+  "noncommuting_limits": {
+    "noise_then_coalescence": "3665/3458",
+    "coalescence_then_noise": "502/499",
+    "different": true
+  },
+  "formal_results_proved_in_note": [
+    "exact direct ratio is globally certified for every gamma>3",
+    "exact risk is strictly increasing in gamma",
+    "exact continuous infimum is singular and unattained",
+    "duplicated exact parameter has a discontinuously larger risk",
+    "compactified infinity is a global noisy minimizer",
+    "the infinity extremizer is feasible for every finite gamma",
+    "finite noisy risks converge to the compactified boundary value",
+    "zero-noise and coalescing-parameter limits do not commute"
+  ],
+  "gates": {
+    "exact::closed_ratio_formula_exact": true,
+    "exact::closed_primal_p_formula_exact": true,
+    "exact::closed_primal_q_formula_exact": true,
+    "exact::primal_normalization_symbolic": true,
+    "exact::primal_mean_symbolic": true,
+    "exact::three_exact_observations_match_symbolically": true,
+    "exact::dual_objective_matches_primal": true,
+    "exact::dual_reduced_cost_formulas_exact": true,
+    "exact::derivative_formula_exact_and_negative": true,
+    "exact::singular_infimum_ratio_exact": true,
+    "exact::large_gamma_limit_ratio_exact": true,
+    "duplicate::duplicate_exact_ratio": true,
+    "duplicate::duplicate_exact_primal_dual_equal": true,
+    "duplicate::duplicate_exact_reduced_costs_nonnegative": true,
+    "duplicate::duplicate_noisy_ratio": true,
+    "duplicate::duplicate_noisy_primal_dual_equal": true,
+    "duplicate::duplicate_noisy_inequality_duals_nonnegative": true,
+    "duplicate::duplicate_noisy_reduced_costs_nonnegative": true,
+    "noisy_infinity::noisy_infinity_ratio_exact": true,
+    "noisy_infinity::noisy_infinity_primal_dual_equal": true,
+    "noisy_infinity::noisy_infinity_weights_nonnegative": true,
+    "noisy_infinity::noisy_infinity_normalization": true,
+    "noisy_infinity::noisy_infinity_mean": true,
+    "noisy_infinity::noisy_infinity_anchor_differences_exact": true,
+    "noisy_infinity::noisy_infinity_inequality_duals_nonnegative": true,
+    "noisy_infinity::noisy_infinity_reduced_costs_nonnegative": true,
+    "noisy_infinity::finite_gamma_delta_formula_exact": true,
+    "noisy_infinity::upper_residual_factorization_exact": true,
+    "noisy_infinity::lower_residual_factorization_exact": true,
+    "noisy_infinity::P1_bernstein_all_positive": true,
+    "noisy_infinity::P2_bernstein_all_negative": true
+  },
+  "verdict": "PASS_CONTINUOUS_PARAMETER_SINGULAR_LIMIT_AND_COMPACTIFIED_NOISY_OPTIMUM",
+  "boundary": "The results are exact only under the declared finite support, mean, anchors, target, contraction, and common absolute-error contract. Gamma=infinity denotes the limiting functional p->p_0, not a finite physical measurement. No empirical noise model or physical parameter interpretation is claimed."
+}

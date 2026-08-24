@@ -1,0 +1,17 @@
+{
+  "audit": "A109-H18D_SHARDED_DIRECT",
+  "rank": 410,
+  "probe_index": 2,
+  "probe_label": "witness",
+  "probe": "131/1000",
+  "strict_expected": true,
+  "target": "basic_p_56",
+  "preregistration_sha256": "2ebcd6612c005291a11913ef705555bd306e860b06a8eda1dc39e4b2164835a1",
+  "verdict": "DIRECT_SUPPORT",
+  "comparison_count": 623,
+  "mismatches": [],
+  "nonpositive_conditions": [],
+  "positivity_failure": false,
+  "outside_failure": false,
+  "seconds": 0.9717304706573486
+}

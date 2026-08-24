@@ -1,0 +1,119 @@
+{
+  "audit": "A99_Q0Q1_INTERVAL_AND_REMAINING_RESIDUAL_ATLAS",
+  "evidence_class": "exact sparse-polynomial interval certificate plus exact finite rational-witness unrestricted KKT atlas",
+  "scope": {
+    "interval_theorem": "M=396 inside 129/1000 <= s <= 133/1000",
+    "residual_atlas": "the six A97 residual witnesses not solved by A98",
+    "tested_architecture": "P={j,M}, Q={0,1,h,h+1}, alpha+ and beta- active, gamma inactive",
+    "explicit_nonclaims": [
+      "not an interval theorem for M=455 or M=496",
+      "not a resolution of the four remaining residual obstructions",
+      "not an all-M active-set theorem",
+      "not a physical, spacetime, matter, or ontological result"
+    ]
+  },
+  "M396_interval_theorem": {
+    "lower_boundary_condition": "inactive_slack_gamma_-1",
+    "upper_boundary_condition": "basic_q_0",
+    "lower_root_bracket": [
+      "129987460460605135017979/1000000000000000000000000",
+      "6499373023030256750899/50000000000000000000000"
+    ],
+    "upper_root_bracket": [
+      "130017128515377642396099/1000000000000000000000000",
+      "1300171285153776423961/10000000000000000000000"
+    ],
+    "lower_root_midpoint_decimal": "0.1299874604606051350179795000000000000000",
+    "upper_root_midpoint_decimal": "0.1300171285153776423960995000000000000000",
+    "condition_count": 801,
+    "nonboundary_sign_failure_count": 0,
+    "pass": true
+  },
+  "remaining_residual_atlas": {
+    "tested_count": 6,
+    "strict_pass_count": 2,
+    "failure_count": 4,
+    "pass_keys": [
+      [
+        455,
+        "13/100",
+        80
+      ],
+      [
+        496,
+        "13/100",
+        87
+      ]
+    ],
+    "failure_keys": [
+      [
+        443,
+        "13/100",
+        78
+      ],
+      [
+        449,
+        "13/100",
+        79
+      ],
+      [
+        484,
+        "13/100",
+        85
+      ],
+      [
+        490,
+        "13/100",
+        86
+      ]
+    ],
+    "failure_condition_names": {
+      "443": [
+        "basic_q_1",
+        "inactive_slack_gamma_-1"
+      ],
+      "449": [
+        "basic_q_1",
+        "inactive_slack_gamma_-1"
+      ],
+      "484": [
+        "basic_q_1",
+        "basic_q_243",
+        "inactive_slack_gamma_-1"
+      ],
+      "490": [
+        "basic_q_1",
+        "basic_q_246",
+        "inactive_slack_gamma_-1"
+      ]
+    }
+  },
+  "interpretation": {
+    "positive_result": "The A98 q0/q1 basis persists on a narrow exact algebraic interval at M=396 and also gives strict unrestricted optima at the M=455 and M=496 residual witnesses.",
+    "negative_result": "The same architecture fails at M=443,449,484,490. The first two lose q1 mass and gamma-minus feasibility; the latter two additionally lose the upper central Q mass.",
+    "structural_boundary": "q0/q1 co-entry is therefore a reusable but non-universal repair. The first unresolved target is M=443, s=13/100, j=78 and requires a new unrestricted active-set discovery."
+  },
+  "gate_count": 18,
+  "pass_count": 18,
+  "gates": {
+    "A97_source_is_present_and_passed": true,
+    "A98_source_is_present_and_passed": true,
+    "M396_symbolic_condition_count_is_801": true,
+    "M396_common_denominator_is_strictly_negative_on_boundary_hull": true,
+    "M396_lower_boundary_is_unique_simple_gamma_minus_slack_root": true,
+    "M396_upper_boundary_is_unique_simple_q0_mass_root": true,
+    "M396_all_799_nonboundary_numerators_are_sign_stable": true,
+    "M396_boundary_numerators_have_correct_sign_on_core": true,
+    "M396_strict_component_contains_13_over_100": true,
+    "remaining_residual_source_list_has_six_records": true,
+    "q0q1_architecture_passes_exactly_two_of_six_remaining_residuals": true,
+    "q0q1_pass_keys_are_M455_and_M496": true,
+    "q0q1_failure_keys_match_exact_declared_list": true,
+    "all_two_passes_are_complete_strict_global_KKT_certificates": true,
+    "M443_and_M449_fail_by_q1_mass_and_gamma_minus_slack": true,
+    "M484_and_M490_add_upper_central_Q_mass_failure": true,
+    "all_six_atlas_bases_have_exact_primal_dual_equality": true,
+    "formal_contract_and_nonphysical_scope_preserved": true
+  },
+  "verdict": "PASS_Q0Q1_M396_INTERVAL_AND_TWO_OF_SIX_REMAINING_RESIDUAL_RESOLUTIONS"
+}

@@ -1,0 +1,387 @@
+{
+  "audit": "A109_H13_INDEPENDENT_CONSISTENCY_CHECK",
+  "check_count": 75,
+  "pass_count": 75,
+  "failure_count": 0,
+  "status": "PASS",
+  "failures": [],
+  "checks": [
+    {
+      "name": "prereg_sha_matches_aggregate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "frozen_status_not_executed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "rank_range_exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "prediction_counts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "aggregate_counts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_class_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_boundary_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "zero_direct_mismatches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "full_atlas_completed_13",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "timeout_ranks_exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r319_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r319_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r319_certificate_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r319_certificate_support",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r320_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r320_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r320_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r320_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r321_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r321_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r321_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r321_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r322_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r322_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r322_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r322_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r323_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r323_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r323_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r323_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r324_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r324_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r324_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r324_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r325_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r325_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r325_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r325_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r326_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r326_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r326_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r326_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r327_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r327_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r327_certificate_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r327_certificate_support",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r328_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r328_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r328_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r328_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r329_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r329_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r329_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r329_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r330_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r330_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r330_certificate_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r330_certificate_support",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r331_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r331_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r331_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r331_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r332_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r332_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r332_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r332_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r333_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r333_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r333_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r333_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r334_prediction_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r334_match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r334_raw_full_result_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "r334_raw_full_matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "direct_total_recompute",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "aggregate_sha256": "293932ae8d9b597d03fb7172febb6826b23d48e6a11bc61b4e7525c5b16469c3",
+  "preregistration_sha256": "24f6ab5bf007089a1c7b04260010406835bd1b9f6bc23ef3ffe0e5af4bedf11a"
+}

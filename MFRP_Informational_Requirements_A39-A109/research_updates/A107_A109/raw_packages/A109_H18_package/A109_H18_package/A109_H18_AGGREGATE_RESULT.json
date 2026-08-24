@@ -1,0 +1,759 @@
+{
+  "audit": "A109-H18_UNCHANGED_TWO_SIDED_ADJACENT_BOUNDARY_HOLDOUT_AGGREGATE",
+  "parent_preregistration_sha256": "ea471ffc0a5e62c2ec0c15adea3d759b424802e7d35bcd92f13fb90e67cd6ef3",
+  "verdict": "RESOLVED_SUPPORT_A109_H18_MIXED_EXACT_PROTOCOL",
+  "protocol_accounting": {
+    "full_atlas_completed_ranks": [
+      399,
+      400,
+      401,
+      402,
+      403,
+      404,
+      406,
+      407,
+      408,
+      409,
+      411,
+      412,
+      413,
+      414
+    ],
+    "full_atlas_completed_count": 14,
+    "repeated_timeout_ranks": [
+      405,
+      410
+    ],
+    "repeated_timeout_count": 2,
+    "fallback_preregistration": "/mnt/data/A109_H18D_PREREGISTRATION.json",
+    "fallback_preregistration_sha256": "2ebcd6612c005291a11913ef705555bd306e860b06a8eda1dc39e4b2164835a1",
+    "full_atlas_protocol_status": "INCOMPLETE_EXECUTION_FOR_R405_R410",
+    "mathematical_resolution_status": "COMPLETE_16_OF_16"
+  },
+  "summary": {
+    "record_count": 16,
+    "class_and_boundary_match_count": 16,
+    "predicted_full": 11,
+    "predicted_partial": 5,
+    "observed_full": 11,
+    "observed_partial": 5,
+    "left_boundaries": 5,
+    "right_boundaries": 0,
+    "two_sided_cases": 0,
+    "non_adjacent_boundary_count": 0,
+    "full_atlas_direct_comparisons": 27961,
+    "fallback_direct_comparisons": 4968,
+    "total_direct_comparisons": 32929,
+    "direct_mismatches": 0,
+    "core_failures_full_atlas": 0,
+    "hull_failures_full_atlas": 0,
+    "root_failures_full_atlas": 0,
+    "fallback_non_target_conditions_checked": 1240,
+    "fallback_exact_failures": 0,
+    "fallback_unresolved": 0
+  },
+  "non_adjacent_obstructions": [],
+  "records": [
+    {
+      "canonical_rank": 399,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 399,
+        "source_key": "M=303|b=52|phase=unique_b_plus_2|side=full|s=13/100|j=54",
+        "maximum": 303,
+        "contact_j": 54,
+        "witness": "13/100",
+        "segment_open_bounds": [
+          "129/1000",
+          "132727430145053111/1000000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": -1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "proper_strict_subcomponent",
+        "predicted_boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_55"
+          }
+        ]
+      },
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_55"
+        }
+      ],
+      "direct_comparisons": 2460,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "78298622322052976133791019/604462909807314587353088000",
+        "upper": "132727430145053111/1000000000000000000",
+        "selected_left_boundary": {
+          "condition": "basic_p_55",
+          "side": "left",
+          "bracket": [
+            "156597244644105952267582037/1208925819614629174706176000",
+            "78298622322052976133791019/604462909807314587353088000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 80,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        },
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 400,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 400,
+        "source_key": "M=303|b=53|phase=unique_b_plus_1|side=full|s=83/625|j=54",
+        "maximum": 303,
+        "contact_j": 54,
+        "witness": "83/625",
+        "segment_open_bounds": [
+          "16590928768131639/125000000000000000",
+          "133/1000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1845,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "16590928768131639/125000000000000000",
+        "upper": "133/1000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 401,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 401,
+        "source_key": "M=304|b=52|phase=unique_b_plus_2|side=full|s=13/100|j=54",
+        "maximum": 304,
+        "contact_j": 54,
+        "witness": "13/100",
+        "segment_open_bounds": [
+          "129/1000",
+          "65922879780102917/500000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1851,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "65922879780102917/500000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 402,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 402,
+        "source_key": "M=304|b=53|phase=unique_b_plus_1|side=full|s=33/250|j=54",
+        "maximum": 304,
+        "contact_j": 54,
+        "witness": "33/250",
+        "segment_open_bounds": [
+          "26369151912041167/200000000000000000",
+          "133/1000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1851,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "26369151912041167/200000000000000000",
+        "upper": "133/1000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 403,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 403,
+        "source_key": "M=305|b=52|phase=unique_b_plus_2|side=full|s=13/100|j=54",
+        "maximum": 305,
+        "contact_j": 54,
+        "witness": "13/100",
+        "segment_open_bounds": [
+          "129/1000",
+          "65484972831200039/500000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1857,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "65484972831200039/500000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 404,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 404,
+        "source_key": "M=305|b=53|phase=b_plus_1_to_b_plus_2|side=left|s=131/1000|j=54",
+        "maximum": 305,
+        "contact_j": 54,
+        "witness": "131/1000",
+        "segment_open_bounds": [
+          "130969945662400079/1000000000000000000",
+          "15637191784693852208204730835198138189/118059162071741130342400000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1857,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "130969945662400079/1000000000000000000",
+        "upper": "15637191784693852208204730835198138189/118059162071741130342400000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 405,
+      "resolution_method": "H18D_exact_sufficient_certificate",
+      "frozen_prediction": {
+        "canonical_rank": 405,
+        "source_key": "M=305|b=53|phase=b_plus_1_to_b_plus_2|side=right|s=1327/10000|j=55",
+        "maximum": 305,
+        "contact_j": 55,
+        "witness": "1327/10000",
+        "segment_open_bounds": [
+          "156371917846938522082048323379150181851/1180591620717411303424000000000000000000",
+          "133/1000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": -1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "proper_strict_subcomponent",
+        "predicted_boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_56"
+          }
+        ]
+      },
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_56"
+        }
+      ],
+      "non_target_conditions_checked": 618,
+      "certificate_exact_failures": 0,
+      "certificate_unresolved": 0,
+      "target_signs": {
+        "L": -1,
+        "witness": 1,
+        "R": 1
+      },
+      "target_derivative_certificate_pass": true,
+      "unique_root_certificate": {
+        "lower": "336063341980713777647155503552774981715914150653/2535301200456458802993406410752000000000000000000",
+        "upper": "134425336792344029103314592997573288010535623891/1014120480182583521197362564300800000000000000000",
+        "exact_rational_root": false,
+        "steps": 32,
+        "signs": [
+          -1,
+          1
+        ],
+        "width": "292590222261957882316476620849818149/5070602400912917605986812821504000000000000000000"
+      },
+      "root_approx": 0.132553616083281,
+      "direct_comparisons": 2476,
+      "direct_mismatches": 0,
+      "direct_positivity_failures": 0,
+      "direct_outside_failures": 0
+    },
+    {
+      "canonical_rank": 406,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 406,
+        "source_key": "M=306|b=52|phase=unique_b_plus_2|side=full|s=13/100|j=54",
+        "maximum": 306,
+        "contact_j": 54,
+        "witness": "13/100",
+        "segment_open_bounds": [
+          "129/1000",
+          "8131246846708053/62500000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1863,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "8131246846708053/62500000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 407,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 407,
+        "source_key": "M=306|b=53|phase=b_plus_1_to_b_plus_2|side=left|s=163/1250|j=54",
+        "maximum": 306,
+        "contact_j": 54,
+        "witness": "163/1250",
+        "segment_open_bounds": [
+          "130099949547328849/1000000000000000000",
+          "2414010005410509699255336738033711873/18446744073709551616000000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1863,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "130099949547328849/1000000000000000000",
+        "upper": "2414010005410509699255336738033711873/18446744073709551616000000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 408,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 408,
+        "source_key": "M=307|b=52|phase=unique_b_plus_2|side=full|s=1291/10000|j=54",
+        "maximum": 307,
+        "contact_j": 54,
+        "witness": "1291/10000",
+        "segment_open_bounds": [
+          "129/1000",
+          "129235732569115397/1000000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1869,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "129235732569115397/1000000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 409,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 409,
+        "source_key": "M=307|b=53|phase=b_plus_1_to_b_plus_2|side=left|s=647/5000|j=54",
+        "maximum": 307,
+        "contact_j": 54,
+        "witness": "647/5000",
+        "segment_open_bounds": [
+          "64617866284557699/500000000000000000",
+          "305936367509018795076838200048914671463/2361183241434822606848000000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1869,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "64617866284557699/500000000000000000",
+        "upper": "305936367509018795076838200048914671463/2361183241434822606848000000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 410,
+      "resolution_method": "H18D_exact_sufficient_certificate",
+      "frozen_prediction": {
+        "canonical_rank": 410,
+        "source_key": "M=307|b=53|phase=b_plus_1_to_b_plus_2|side=right|s=131/1000|j=55",
+        "maximum": 307,
+        "contact_j": 55,
+        "witness": "131/1000",
+        "segment_open_bounds": [
+          "611872735018037590153680164365260227529/4722366482869645213696000000000000000000",
+          "133/1000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": -1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "proper_strict_subcomponent",
+        "predicted_boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_56"
+          }
+        ]
+      },
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_56"
+        }
+      ],
+      "non_target_conditions_checked": 622,
+      "certificate_exact_failures": 0,
+      "certificate_unresolved": 0,
+      "target_signs": {
+        "L": -1,
+        "witness": 1,
+        "R": 1
+      },
+      "target_derivative_certificate_pass": true,
+      "unique_root_certificate": {
+        "lower": "531175849671848275365040710219060873654505570213/4056481920730334084789450257203200000000000000000",
+        "upper": "165992453022874915691443092745987512744204226471/1267650600228229401496703205376000000000000000000",
+        "exact_rational_root": false,
+        "steps": 32,
+        "signs": [
+          -1,
+          1
+        ],
+        "width": "6757274237885932840495835634739772471/20282409603651670423947251286016000000000000000000"
+      },
+      "root_approx": 0.13094495675131482,
+      "direct_comparisons": 2492,
+      "direct_mismatches": 0,
+      "direct_positivity_failures": 0,
+      "direct_outside_failures": 0
+    },
+    {
+      "canonical_rank": 411,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 411,
+        "source_key": "M=308|b=53|phase=unique_b_plus_2|side=full|s=131/1000|j=55",
+        "maximum": 308,
+        "contact_j": 55,
+        "witness": "131/1000",
+        "segment_open_bounds": [
+          "129/1000",
+          "133/1000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": -1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "proper_strict_subcomponent",
+        "predicted_boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_56"
+          }
+        ]
+      },
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_56"
+        }
+      ],
+      "direct_comparisons": 2500,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "78611630538936442780101677/604462909807314587353088000",
+        "upper": "133/1000",
+        "selected_left_boundary": {
+          "condition": "basic_p_56",
+          "side": "left",
+          "bracket": [
+            "157223261077872885560203353/1208925819614629174706176000",
+            "78611630538936442780101677/604462909807314587353088000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 81,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        },
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 412,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 412,
+        "source_key": "M=309|b=53|phase=unique_b_plus_2|side=full|s=13/100|j=55",
+        "maximum": 309,
+        "contact_j": 55,
+        "witness": "13/100",
+        "segment_open_bounds": [
+          "129/1000",
+          "33144324498300201/250000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": -1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "proper_strict_subcomponent",
+        "predicted_boundaries": [
+          {
+            "side": "left",
+            "condition": "basic_p_56"
+          }
+        ]
+      },
+      "observed_class": "proper_strict_subcomponent",
+      "observed_boundaries": [
+        {
+          "side": "left",
+          "condition": "basic_p_56"
+        }
+      ],
+      "direct_comparisons": 2508,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "78246406657237423901766843/604462909807314587353088000",
+        "upper": "33144324498300201/250000000000000000",
+        "selected_left_boundary": {
+          "condition": "basic_p_56",
+          "side": "left",
+          "bracket": [
+            "31298562662894969560706737/241785163922925834941235200",
+            "78246406657237423901766843/604462909807314587353088000"
+          ],
+          "endpoint_signs": [
+            -1,
+            1
+          ],
+          "width": "1/1208925819614629174706176000",
+          "bisection_steps": 80,
+          "derivative_interval_signs": [
+            1,
+            1
+          ],
+          "unique_simple_in_bracket": true
+        },
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 413,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 413,
+        "source_key": "M=309|b=54|phase=unique_b_plus_1|side=full|s=1327/10000|j=55",
+        "maximum": 309,
+        "contact_j": 55,
+        "witness": "1327/10000",
+        "segment_open_bounds": [
+          "26515459598640161/200000000000000000",
+          "133/1000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1881,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "26515459598640161/200000000000000000",
+        "upper": "133/1000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    },
+    {
+      "canonical_rank": 414,
+      "resolution_method": "full_atlas",
+      "frozen_prediction": {
+        "canonical_rank": 414,
+        "source_key": "M=310|b=53|phase=unique_b_plus_2|side=full|s=13/100|j=55",
+        "maximum": 310,
+        "contact_j": 55,
+        "witness": "13/100",
+        "segment_open_bounds": [
+          "129/1000",
+          "131713186900377877/1000000000000000000"
+        ],
+        "target_only_applicable": true,
+        "target_only_signs": {
+          "upper_adjacent_at_lower": 1,
+          "upper_adjacent_at_witness": 1,
+          "lower_adjacent_at_right": 1,
+          "lower_adjacent_at_witness": 1
+        },
+        "predicted_class": "full_segment_coverage",
+        "predicted_boundaries": []
+      },
+      "observed_class": "full_segment_coverage",
+      "observed_boundaries": [],
+      "direct_comparisons": 1887,
+      "direct_mismatches": 0,
+      "failures": [],
+      "strict_component": {
+        "lower": "129/1000",
+        "upper": "131713186900377877/1000000000000000000",
+        "selected_left_boundary": null,
+        "selected_right_boundary": null
+      }
+    }
+  ],
+  "scope": {
+    "finite_A102_gamma_plus_only": true,
+    "not_all_922_theorem": true,
+    "not_physical_claim": true
+  }
+}

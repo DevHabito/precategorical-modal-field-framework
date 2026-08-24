@@ -1,0 +1,73 @@
+{
+  "audit": "A100_HIGH_PRECISION_ACTIVE_SET_DISCOVERY",
+  "role": "discovery only; the proof is the independent exact rational A100 KKT certificate",
+  "method": "two-phase revised simplex on the complete standard-form LP",
+  "arithmetic": "mpmath, 180 decimal digits",
+  "contract": {
+    "maximum": 443,
+    "probe_s": "13/100",
+    "epsilon": "1/(2500*2^221)",
+    "full_atom_columns": 888,
+    "Charnes_Cooper_scale_variable_count": 1,
+    "band_slack_count": 6,
+    "phase_one_artificial_count": 5,
+    "standard_form_constraint_count": 11
+  },
+  "phase_one": {
+    "pivot_iterations": 7,
+    "final_artificial_objective": "0.0"
+  },
+  "phase_two": {
+    "pivot_iterations": 120,
+    "discovered_standard_form_basis_indices": [
+      443,
+      666,
+      888,
+      78,
+      444,
+      893,
+      890,
+      77,
+      445,
+      665,
+      891
+    ]
+  },
+  "index_map": {
+    "p_x": "0..443",
+    "q_x": "444..887",
+    "t": 888,
+    "slacks": {
+      "alpha_plus": 889,
+      "alpha_minus": 890,
+      "beta_plus": 891,
+      "beta_minus": 892,
+      "gamma_plus": 893,
+      "gamma_minus": 894
+    }
+  },
+  "discovered_active_set": {
+    "P_support": [
+      77,
+      78,
+      443
+    ],
+    "Q_support": [
+      0,
+      1,
+      221,
+      222
+    ],
+    "active_bands": [
+      "alpha_plus",
+      "beta_minus",
+      "gamma_minus"
+    ],
+    "strictly_positive_inactive_slacks": [
+      "alpha_minus",
+      "beta_plus",
+      "gamma_plus"
+    ]
+  },
+  "discovery_objective_decimal": "9096856549957723460911192616636317264178691.7432717283417678178734031030423940514"
+}
