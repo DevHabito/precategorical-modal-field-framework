@@ -1,0 +1,10 @@
+{
+  "audit": "A111_EXACT_TAIL_RECONNAISSANCE",
+  "verdict": "PASS_RECONNAISSANCE_NO_COUNTEREXAMPLE",
+  "case_count": 99,
+  "unique_pair_count": 58,
+  "strict_local_max_cases": 33,
+  "failure_count": 0,
+  "raw_result_sha256": "bc29e26dde9c3a78e1b7998955837aa3c3dc4befe28e72703aa730bcdac746d1",
+  "raw_result_note": "Full row-level execution artifact retained in the research session; this repository update publishes the exact aggregate and its hash."
+}

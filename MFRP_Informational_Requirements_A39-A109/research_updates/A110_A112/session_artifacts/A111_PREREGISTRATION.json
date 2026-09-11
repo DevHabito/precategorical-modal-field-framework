@@ -1,0 +1,39 @@
+{
+  "audit": "A111_EXACT_TAIL_RECONNAISSANCE",
+  "status": "FROZEN_BEFORE_TAIL_OUTCOMES",
+  "parent": "A110 finite A109 structural theorem, independently replicated",
+  "M_values": [
+    521,
+    522,
+    523,
+    600,
+    700,
+    800,
+    900,
+    1000,
+    1200,
+    1500,
+    2000
+  ],
+  "probe_values": [
+    "129/1000",
+    "131/1000",
+    "133/1000"
+  ],
+  "contact_rule_for_reconnaissance": "j = ceil(M log(2)/(-2 log(s))) + offset, offsets 1,2,3",
+  "tests": [
+    "all six residual slopes are negative",
+    "RQ(2) zero threshold is below the other five residual thresholds",
+    "dual denominator is positive",
+    "gamma numerator is a negative scalar multiple of E_(M,j)",
+    "if E_(j-1)>0 and E_j<0 then actual RQ(2)>0",
+    "dp_j/dt<0 and dp_(j+1)/dt>0",
+    "A(s)<0, B(s)>0, and t'(s)>0 at the exact probe",
+    "q_h zero occurs before the p_(j+1) zero in t"
+  ],
+  "adjudication": {
+    "failure": "one exact failed inequality is a tail counterexample to that tested extension",
+    "pass": "reconnaissance support only; not an all-M theorem",
+    "no_post430_full_atlas": true
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "audit": "A110_INDEPENDENT_EXHAUSTIVE_REPLICATION_AGGREGATE",
+  "verdict": "PASS_INDEPENDENT_EXHAUSTIVE_REPLICATION",
+  "parent_scientific_commit": "533af49547d3a92f5153a2f752cea44504b16b90",
+  "scope": {
+    "M": [
+      14,
+      520
+    ],
+    "s": [
+      "129/1000",
+      "133/1000"
+    ],
+    "unique_contact_pairs": 1870,
+    "post430_full_atlas_outcomes_used": false
+  },
+  "preregistration": {
+    "sha256": "d9070d481309649bc4b2343f158e58008b31824865180fccc66b5276288d1a53",
+    "matches_announced_pre_diagnostic_sha": true
+  },
+  "chunk_ranges": [
+    [
+      1,
+      700
+    ],
+    [
+      701,
+      1000
+    ],
+    [
+      1001,
+      1200
+    ],
+    [
+      1201,
+      1300
+    ],
+    [
+      1301,
+      1400
+    ],
+    [
+      1401,
+      1500
+    ],
+    [
+      1501,
+      1575
+    ],
+    [
+      1576,
+      1650
+    ],
+    [
+      1651,
+      1725
+    ],
+    [
+      1726,
+      1800
+    ],
+    [
+      1801,
+      1870
+    ]
+  ],
+  "range_coverage_exact_1_to_1870": true,
+  "totals": {
+    "pairs": 1870,
+    "slope_sign_certificates": 11220,
+    "threshold_order_certificates": 9350,
+    "slope_boxes": 20192,
+    "threshold_boxes": 46830,
+    "dual_denominator_certificates": 1870,
+    "dual_denominator_boxes": 3370,
+    "gamma_proportionality": 1870,
+    "gamma_negative_prefactor": 1870,
+    "conditional_rq2_certificates": 1870,
+    "conditional_boxes": 11402,
+    "primal_slope_pairs": 1870,
+    "A_negative": 1870,
+    "B_positive": 1870,
+    "tder_positive": 1870,
+    "primal_boxes": 23846,
+    "residual_interval_boxes": 67022,
+    "max_depth": 5,
+    "failure_count": 0
+  },
+  "stage6_announced_count_reproduction": {
+    "all_match": true,
+    "per_count": {
+      "pairs": true,
+      "slope_sign_certificates": true,
+      "threshold_order_certificates": true,
+      "residual_interval_boxes": true,
+      "dual_denominator_certificates": true,
+      "dual_denominator_boxes": true,
+      "gamma_proportionality": true,
+      "gamma_negative_prefactor": true,
+      "conditional_rq2_certificates": true,
+      "conditional_boxes": true,
+      "primal_slope_pairs": true,
+      "A_negative": true,
+      "B_positive": true,
+      "tder_positive": true,
+      "primal_boxes": true
+    }
+  },
+  "historical_solver_regression": {
+    "H19_records": 16,
+    "exact_value_comparisons": 240,
+    "failures": 0
+  },
+  "epistemic_conclusion": "The Stage-6 finite structural closure counts have been reproduced by a separately implemented exact Fraction-based program over all 1,870 A94-envelope (M,j) pairs. The implementation also reproduces 240 exact H19 solver values with zero mismatch.",
+  "claim_limit": "This independently supports the finite A109 structural theorem only on the frozen A94/A102 contract. It is not an arbitrary-M, different-support, or physical theorem."
+}
