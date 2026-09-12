@@ -1,0 +1,28 @@
+{
+  "audit": "A114B1_GAMMA_PIVOT_ORIENTATION_CERTIFICATE",
+  "status": "PASS",
+  "parity": {
+    "even": {
+      "DG_equals_detC_times_A": true,
+      "detB8_over_DG": "-(2*U*m + U - 2*m)/4",
+      "detB8_over_DG_exact_identity": true,
+      "detB8_over_DG_positive_tail_gate": true
+    },
+    "odd": {
+      "DG_equals_detC_times_A": true,
+      "detB8_over_DG": "-(U*m + U - 2*m)/4",
+      "detB8_over_DG_exact_identity": true,
+      "detB8_over_DG_positive_tail_gate": true
+    }
+  },
+  "imported_proved_signs": {
+    "A110_generalized_vandermonde": "det(C)<0 for 0<gamma<beta<1 and 0<j<j+1<M",
+    "A112G_branch_regularity": "A(s)<0 on the full localization strip j=b+1 or b+2"
+  },
+  "conclusion": "D_G=det(C)A(s)>0 on the complete analytic-tail localization strip, without assuming p_j>0 or p_(j+1)>0; the full 8x8 basis is nonsingular and has the same determinant orientation.",
+  "claim_limits": [
+    "This certificate closes determinant orientation only; it does not by itself select a lifted contact.",
+    "The signs det(C)<0 and A(s)<0 are imported from already-proved A110 and A112-G theorems, respectively.",
+    "No finite M grid or floating-point sign decision is used."
+  ]
+}

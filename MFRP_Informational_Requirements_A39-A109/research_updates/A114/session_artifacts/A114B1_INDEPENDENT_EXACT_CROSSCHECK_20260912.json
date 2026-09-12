@@ -1,0 +1,154 @@
+{
+  "audit": "A114B1_INDEPENDENT_EXACT_CROSSCHECK",
+  "method": "standalone exact-rational compressed checks and full 8x8 gamma-plus KKT scans; no import from the A114-B1 orientation theorem certificate",
+  "cases": [
+    {
+      "label": "even_left",
+      "M": 522,
+      "s": "131/1000",
+      "b": 90,
+      "b_certified": true,
+      "compressed_values_decimal": {
+        "91": "5.36924335142416309e+50",
+        "92": "4.85267953319717729e+50",
+        "93": "2.71900877464635093e+50"
+      },
+      "compressed_strict_winner": 91,
+      "expected_winner": 91,
+      "DG_sign": 1,
+      "F_bplus1_sign": 1,
+      "F_bplus2_sign": -1,
+      "predicted_gamma_contact": 91,
+      "alternate_contact": 92,
+      "predicted_check": {
+        "pass": true,
+        "condition_count": 1053,
+        "expected_count": 1053,
+        "failures": [],
+        "min_condition": "reduced_cost_p_521",
+        "min_decimal": "3.98934953270e-31",
+        "adjacent_signs": [
+          1,
+          1
+        ]
+      },
+      "alternate_check": {
+        "pass": false,
+        "condition_count": 1053,
+        "expected_count": 1053,
+        "failures": [
+          "basic_p_93"
+        ],
+        "min_condition": "basic_p_93",
+        "min_decimal": "-1.82471255522e+78",
+        "adjacent_signs": [
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "label": "odd_left",
+      "M": 561,
+      "s": "53/400",
+      "b": 97,
+      "b_certified": true,
+      "compressed_values_decimal": {
+        "98": "2.68084883998553939e+54",
+        "99": "2.50836358745557194e+54",
+        "100": "1.42052547961905996e+54"
+      },
+      "compressed_strict_winner": 98,
+      "expected_winner": 98,
+      "DG_sign": 1,
+      "F_bplus1_sign": 1,
+      "F_bplus2_sign": -1,
+      "predicted_gamma_contact": 98,
+      "alternate_contact": 99,
+      "predicted_check": {
+        "pass": true,
+        "condition_count": 1131,
+        "expected_count": 1131,
+        "failures": [],
+        "min_condition": "reduced_cost_p_560",
+        "min_decimal": "2.89422781424e-33",
+        "adjacent_signs": [
+          1,
+          1
+        ]
+      },
+      "alternate_check": {
+        "pass": false,
+        "condition_count": 1131,
+        "expected_count": 1131,
+        "failures": [
+          "basic_p_100"
+        ],
+        "min_condition": "basic_p_100",
+        "min_decimal": "-3.80283451889e+83",
+        "adjacent_signs": [
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "label": "odd_right",
+      "M": 561,
+      "s": "13277/100000",
+      "b": 97,
+      "b_certified": true,
+      "compressed_values_decimal": {
+        "98": "2.44027179375720415e+54",
+        "99": "2.43744301649841813e+54",
+        "100": "1.40742041719288939e+54"
+      },
+      "compressed_strict_winner": 98,
+      "expected_winner": 98,
+      "DG_sign": 1,
+      "F_bplus1_sign": 1,
+      "F_bplus2_sign": 1,
+      "predicted_gamma_contact": 99,
+      "alternate_contact": 98,
+      "predicted_check": {
+        "pass": true,
+        "condition_count": 1131,
+        "expected_count": 1131,
+        "failures": [],
+        "min_condition": "reduced_cost_p_560",
+        "min_decimal": "1.44964890943e-33",
+        "adjacent_signs": [
+          1,
+          1
+        ]
+      },
+      "alternate_check": {
+        "pass": false,
+        "condition_count": 1131,
+        "expected_count": 1131,
+        "failures": [
+          "basic_p_98"
+        ],
+        "min_condition": "basic_p_98",
+        "min_decimal": "-1.26537048528e+81",
+        "adjacent_signs": [
+          -1,
+          1
+        ]
+      }
+    }
+  ],
+  "gates": {
+    "all_b_exact": true,
+    "all_strict_compressed_bplus1": true,
+    "all_DG_positive": true,
+    "all_predicted_full_KKT": true,
+    "all_alternatives_rejected": true,
+    "both_pivot_signs_tested": true
+  },
+  "claim_limits": [
+    "The three cases are adversarial replication controls, not the analytic proof.",
+    "The analytic all-M statement depends on the proved A112/A113 structural theorems and the separate A114-B1 orientation certificate."
+  ],
+  "verdict": "PASS"
+}
