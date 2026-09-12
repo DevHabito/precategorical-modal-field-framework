@@ -1,0 +1,54 @@
+{
+  "audit": "A112_LOGICAL_COMPOSITION_AUDIT",
+  "status": "PASS_CONDITIONAL_GAMMA_PLUS_TAIL_THEOREM",
+  "domain": {
+    "M": "integers >=521",
+    "s": [
+      "129/1000",
+      "133/1000"
+    ],
+    "architecture": "gamma-plus P={0,j,j+1,M}, Q={1,h,h+1}",
+    "compressed_condition": "strict phase; E_j<0 (and E_(j-1)>0 for strict interior maximum)"
+  },
+  "certificate_checks": {
+    "A112B_EXACT_DETERMINANT_INTERLACING_CERTIFICATE_20260911.json": {
+      "status": "PASS",
+      "sha256": "dfb96bbe0a0f6bd4a75951506837e77b578d2ec6f99c5e8d45ab07e2d484b1b8"
+    },
+    "A112C_TAIL_RESIDUAL_COLLAPSE_CERTIFICATE_20260911.json": {
+      "status": "PASS",
+      "sha256": "74a47e07d0b6a1f99fe1d3df77df83bfb74457332b2c20bfdf385937299c32e4"
+    },
+    "A112D_EXACT_ACTIVE_DUAL_CERTIFICATE_20260911.json": {
+      "status": "PASS",
+      "sha256": "216d96aced992770af044cfca50cf0918929717cb0c17df386f8d96cbcbe0fc4"
+    },
+    "A112E_ANALYTIC_TAIL_QH_BARRIER_CERTIFICATE_20260911.json": {
+      "status": "PASS",
+      "sha256": "aa36da15443cce5a16f9be31d84bee4905cb4a2fc1f3d0c5b21ef199537e3137"
+    },
+    "A112F_TAIL_ADJACENT_MONOTONICITY_EVEN_20260911.json": {
+      "status": "PASS",
+      "sha256": "35a8068a9e24329883f2a289077cfb048bf75688fc60bbc515ff5b2d10c3fcce"
+    },
+    "A112F_TAIL_ADJACENT_MONOTONICITY_ODD_20260911.json": {
+      "status": "PASS",
+      "sha256": "8fcc3da0a4c6cb494e8cc179a02027d6b2d74a8ed9aac5a15f043ccf31499eeb"
+    },
+    "A112G_BRANCH_REGULARITY_Q1_CERTIFICATE_20260911.json": {
+      "status": "PASS",
+      "sha256": "49aad5a5b7445f19943f1cca2ee8cdbcfee5055a3070831d20b1d8f62542c8e1"
+    }
+  },
+  "proved": "Within the frozen gamma-plus strict-compressed family, strict KKT iff p_j>0 and p_(j+1)>0; common-positive/KKT set is one interval with only internal adjacent-mass boundaries.",
+  "left_boundary": "p_(j+1)=0",
+  "right_boundary": "p_j=0",
+  "not_proved": [
+    "global selection of gamma-plus architecture for every M,s",
+    "other support/active-band architectures",
+    "outside frozen source window",
+    "physical interpretation"
+  ],
+  "repository_parent": "d1b1a951618d3778b43f04698111db5643ed5414",
+  "repository_note_still_stale_open": true
+}
