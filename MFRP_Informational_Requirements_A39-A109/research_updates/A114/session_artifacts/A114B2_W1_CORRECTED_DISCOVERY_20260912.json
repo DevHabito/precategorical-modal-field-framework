@@ -1,0 +1,73 @@
+{
+  "audit": "A114B2_HIGH_PRECISION_ACTIVE_SET_DISCOVERY",
+  "role": "discovery only; no scientific claim relies on this floating/high-precision solve",
+  "method": "two-phase revised simplex on the complete standard-form LP",
+  "arithmetic": "mpmath, 180 decimal digits",
+  "contract": {
+    "maximum": 521,
+    "probe_s": "129/1000",
+    "epsilon": "1/(2500*2^260)",
+    "full_atom_columns": 1044,
+    "Charnes_Cooper_scale_variable_count": 1,
+    "band_slack_count": 6,
+    "phase_one_artificial_count": 5,
+    "standard_form_constraint_count": 11
+  },
+  "phase_one": {
+    "pivot_iterations": 7,
+    "final_artificial_objective": "0.0"
+  },
+  "phase_two": {
+    "pivot_iterations": 138,
+    "discovered_standard_form_basis_indices": [
+      521,
+      783,
+      1044,
+      91,
+      522,
+      1049,
+      1046,
+      90,
+      523,
+      782,
+      1047
+    ]
+  },
+  "index_map": {
+    "p_x": "0..521",
+    "q_x": "522..1043",
+    "t": 1044,
+    "slacks": {
+      "alpha_plus": 1045,
+      "alpha_minus": 1046,
+      "beta_plus": 1047,
+      "beta_minus": 1048,
+      "gamma_plus": 1049,
+      "gamma_minus": 1050
+    }
+  },
+  "discovered_active_set": {
+    "P_support": [
+      90,
+      91,
+      521
+    ],
+    "Q_support": [
+      0,
+      1,
+      260,
+      261
+    ],
+    "active_bands": [
+      "alpha_plus",
+      "beta_minus",
+      "gamma_minus"
+    ],
+    "strictly_positive_inactive_slacks": [
+      "alpha_minus",
+      "beta_plus",
+      "gamma_plus"
+    ]
+  },
+  "discovery_objective_decimal": "630990891295435032839956276666136729889321290987359.99735964908226466703306803613"
+}

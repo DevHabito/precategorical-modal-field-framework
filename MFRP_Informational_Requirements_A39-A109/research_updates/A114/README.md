@@ -22,11 +22,7 @@ Write
 
 **PROVED.**
 
-If the strict compressed maximizer is
-
-`j=b+3`,
-
-then the unique strict lifted optimum is the endpoint-released architecture
+If the strict compressed maximizer is `j=b+3`, then the unique strict lifted optimum is the endpoint-released architecture
 
 `P={j-1,j,M}`,
 
@@ -81,26 +77,78 @@ Read in this order:
 
 `MANIFEST_A114B1_20260912.sha256` hashes the promoted A114-B1 text and executable artifacts.
 
+## A114-B2-W1 — first exact strict-`b+2` tail witness
+
+**PROVED POINTWISE; A114-B2 REMAINS OPEN.**
+
+At the exact first-tail point
+
+`M=521, s=129/1000`, `h=260`, `b=89`,
+
+the compressed objective has strict maximizer
+
+`j=91=b+2`.
+
+The unique strict global lifted optimum is not gamma-plus. It is
+
+`P={90,91,521}`,
+
+`Q={0,1,260,261}`,
+
+with `alpha+`, `beta-`, `gamma-` active.
+
+The exact certificate checks all
+
+`1051 = 2M+9`
+
+strict KKT conditions. A standalone `fractions.Fraction` implementation independently reproduces the full pass.
+
+The two natural adjacent gamma-plus lifts fail for different reasons:
+
+- contact `b+1`: `active_dual_gamma_+1<0`;
+- contact `b+2`: `basic_p_92<0`.
+
+This proves that non-gamma-plus architecture does not disappear merely because the analytic tail begins at `M>=521`.
+
+A discovery correction is recorded explicitly: the first exploratory M=521 simplex run used the wrong even-parity epsilon scale `1875` and is invalid. The corrected discovery rerun uses the required odd-parity scale `2500`, recovers the same candidate, and is retained only as provenance. The theorem itself depends only on the exact certificates.
+
+Read in this order:
+
+1. `session_artifacts/A114B2_W1_M521_Q0Q1_GAMMA_MINUS_POINTWISE_THEOREM_20260912.md`
+2. `session_artifacts/A114B2_W1_LOGICAL_AUDIT_20260912.md`
+3. `A114B2_W1_CORRECTIONS_AND_SCOPE_20260912.md`
+4. `session_artifacts/a114b2_w1_m521_exact_kkt_certificate.py`
+5. `session_artifacts/A114B2_W1_M521_EXACT_KKT_CERTIFICATE_20260912.json`
+6. `session_artifacts/a114b2_w1_m521_fraction_crosscheck.py`
+7. `session_artifacts/A114B2_W1_M521_FRACTION_CROSSCHECK_20260912.json`
+8. `session_artifacts/a114b2_w1_corrected_discovery.py`
+9. `session_artifacts/A114B2_W1_CORRECTED_DISCOVERY_20260912.json`
+
+`MANIFEST_A114B2_W1_20260912.sha256` hashes the promoted B2-W1 notes and executable artifacts.
+
 ## Current frontier — A114-B2
 
-The strict compressed `b+2` phase remains **OPEN**.
+The strict compressed `b+2` phase remains **OPEN** as an all-tail classification problem.
 
-It cannot be obtained by mechanically copying B1. In that phase
+B2-W1 proves one exact q0/q1 gamma-minus tail point, but it does not justify the all-`M` rule
 
-`E_(b+1)>0>E_(b+2)`,
+`Phi<0 => q0/q1 gamma-minus`.
 
-so when the contact-`b+1` gamma-plus branch is primal-feasible, its active-gamma dual can have the wrong sign. This is the regime where the other finite-atlas architecture families may become genuinely relevant.
-
-Therefore the next rigorous target is to classify the strict compressed `b+2` phase without assuming gamma-plus, two-band, q0/q1, gamma-minus, or endpoint-released in advance.
+The finite atlas contains multiple architectures in the `b+2` region. The next rigorous target is to derive an analytic partition of the strict `b+2` phase without assuming gamma-plus, two-band, q0/q1, gamma-minus or endpoint-released in advance.
 
 ## Claim boundary
 
-A114 currently proves the `b+3` phase (A114-A) and the strict `b+1` phase (A114-B1) on the declared analytic-tail source window.
+A114 currently proves:
+
+- the strict `b+3` phase (A114-A);
+- the strict `b+1` phase (A114-B1);
+- the exact B2-W1 point `M=521, s=129/1000`.
 
 It does **not** yet prove:
 
-- the lifted architecture classification in the strict compressed `b+2` phase;
+- the lifted architecture classification of the complete strict compressed `b+2` phase;
 - that `F_(b+2)^up` is a universal classifier outside B1;
+- that `Phi<0` selects q0/q1 gamma-minus for every tail point;
 - any extension outside the declared source window;
 - any physical interpretation.
 

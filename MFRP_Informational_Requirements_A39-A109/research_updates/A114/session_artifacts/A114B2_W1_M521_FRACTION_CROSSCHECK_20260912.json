@@ -1,0 +1,54 @@
+{
+  "audit": "A114B2_W1_M521_FRACTION_CROSSCHECK",
+  "method": "standalone Python fractions.Fraction; no SymPy and no import from the primary certificate",
+  "status": "PASS",
+  "candidate": {
+    "label": "candidate",
+    "pass": true,
+    "condition_count": 1051,
+    "expected_count": 1051,
+    "failures": [],
+    "min_condition": "reduced_cost_p_520",
+    "min_decimal": "8.001525988147e-31",
+    "all_equations_exact": true,
+    "primal_dual_equal": true
+  },
+  "negative_controls": [
+    {
+      "label": "gamma_plus_bplus1",
+      "pass": false,
+      "condition_count": 1051,
+      "expected_count": 1051,
+      "failures": [
+        "active_dual_gamma_+1"
+      ],
+      "min_condition": "active_dual_gamma_+1",
+      "min_decimal": "-1.526001077986e+51",
+      "all_equations_exact": true,
+      "primal_dual_equal": true
+    },
+    {
+      "label": "gamma_plus_bplus2",
+      "pass": false,
+      "condition_count": 1051,
+      "expected_count": 1051,
+      "failures": [
+        "basic_p_92"
+      ],
+      "min_condition": "basic_p_92",
+      "min_decimal": "-6.675075402290e+77",
+      "all_equations_exact": true,
+      "primal_dual_equal": true
+    }
+  ],
+  "gates": {
+    "candidate_1051_of_1051": true,
+    "candidate_equations_exact": true,
+    "candidate_primal_dual_equal": true,
+    "gamma_plus_bplus1_rejected": true,
+    "gamma_plus_bplus2_rejected": true
+  },
+  "claim_limits": [
+    "Pointwise exact replication only; not an all-M theorem."
+  ]
+}

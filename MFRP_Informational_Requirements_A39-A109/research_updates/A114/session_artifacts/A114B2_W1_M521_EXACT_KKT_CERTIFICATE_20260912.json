@@ -1,0 +1,263 @@
+{
+  "audit": "A114B2_W1_M521_EXACT_KKT_CERTIFICATE",
+  "status": "PASS",
+  "contract": {
+    "M": 521,
+    "s": "129/1000",
+    "epsilon": "1/4631683569492647816942839400347516314130799386625622561578303360316525185597440000",
+    "h": 260,
+    "b": 89
+  },
+  "compressed": {
+    "values_decimal": {
+      "90": "5.22080058759942744637213e+50",
+      "91": "6.44655650387023560329888e+50",
+      "92": "3.98686891122694844600841e+50"
+    },
+    "strict_winner": 91
+  },
+  "upper_gamma_pivot": {
+    "DG_sign": 1,
+    "F_bplus1_sign": 1,
+    "F_bplus2_sign": -1
+  },
+  "candidate": {
+    "label": "q0q1_gamma_minus_candidate",
+    "pass": true,
+    "singular": false,
+    "P_support": [
+      90,
+      91,
+      521
+    ],
+    "Q_support": [
+      0,
+      1,
+      260,
+      261
+    ],
+    "active_bands": [
+      [
+        "alpha",
+        1
+      ],
+      [
+        "beta",
+        -1
+      ],
+      [
+        "gamma",
+        -1
+      ]
+    ],
+    "basis_det_sign": -1,
+    "condition_count": 1051,
+    "expected_count": 1051,
+    "failures": [],
+    "min_condition": "reduced_cost_p_520",
+    "min_decimal": "8.001525988146702e-31",
+    "all_primal_equations_exact": true,
+    "primal_dual_objective_equal": true,
+    "basic_signs": {
+      "basic_p_90": 1,
+      "basic_p_91": 1,
+      "basic_p_521": 1,
+      "basic_q_0": 1,
+      "basic_q_1": 1,
+      "basic_q_260": 1,
+      "basic_q_261": 1,
+      "basic_t": 1
+    },
+    "active_dual_signs": {
+      "alpha_1": 1,
+      "beta_-1": 1,
+      "gamma_-1": 1
+    }
+  },
+  "negative_controls": [
+    {
+      "label": "same_support_gamma_plus_control",
+      "pass": false,
+      "singular": false,
+      "P_support": [
+        90,
+        91,
+        521
+      ],
+      "Q_support": [
+        0,
+        1,
+        260,
+        261
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_det_sign": 1,
+      "condition_count": 1051,
+      "expected_count": 1051,
+      "failures": [
+        "basic_q_0",
+        "active_dual_gamma_+1"
+      ],
+      "min_condition": "active_dual_gamma_+1",
+      "min_decimal": "-2.792740790019174e+50",
+      "all_primal_equations_exact": true,
+      "primal_dual_objective_equal": true,
+      "basic_signs": {
+        "basic_p_90": 1,
+        "basic_p_91": 1,
+        "basic_p_521": 1,
+        "basic_q_0": -1,
+        "basic_q_1": 1,
+        "basic_q_260": 1,
+        "basic_q_261": 1,
+        "basic_t": 1
+      },
+      "active_dual_signs": {
+        "alpha_1": 1,
+        "beta_-1": 1,
+        "gamma_1": -1
+      }
+    },
+    {
+      "label": "gamma_plus_contact_bplus1_control",
+      "pass": false,
+      "singular": false,
+      "P_support": [
+        0,
+        90,
+        91,
+        521
+      ],
+      "Q_support": [
+        1,
+        260,
+        261
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_det_sign": 1,
+      "condition_count": 1051,
+      "expected_count": 1051,
+      "failures": [
+        "active_dual_gamma_+1"
+      ],
+      "min_condition": "active_dual_gamma_+1",
+      "min_decimal": "-1.526001077985738e+51",
+      "all_primal_equations_exact": true,
+      "primal_dual_objective_equal": true,
+      "basic_signs": {
+        "basic_p_0": 1,
+        "basic_p_90": 1,
+        "basic_p_91": 1,
+        "basic_p_521": 1,
+        "basic_q_1": 1,
+        "basic_q_260": 1,
+        "basic_q_261": 1,
+        "basic_t": 1
+      },
+      "active_dual_signs": {
+        "alpha_1": 1,
+        "beta_-1": 1,
+        "gamma_1": -1
+      }
+    },
+    {
+      "label": "gamma_plus_contact_bplus2_control",
+      "pass": false,
+      "singular": false,
+      "P_support": [
+        0,
+        91,
+        92,
+        521
+      ],
+      "Q_support": [
+        1,
+        260,
+        261
+      ],
+      "active_bands": [
+        [
+          "alpha",
+          1
+        ],
+        [
+          "beta",
+          -1
+        ],
+        [
+          "gamma",
+          1
+        ]
+      ],
+      "basis_det_sign": 1,
+      "condition_count": 1051,
+      "expected_count": 1051,
+      "failures": [
+        "basic_p_92"
+      ],
+      "min_condition": "basic_p_92",
+      "min_decimal": "-6.675075402290334e+77",
+      "all_primal_equations_exact": true,
+      "primal_dual_objective_equal": true,
+      "basic_signs": {
+        "basic_p_0": 1,
+        "basic_p_91": 1,
+        "basic_p_92": -1,
+        "basic_p_521": 1,
+        "basic_q_1": 1,
+        "basic_q_260": 1,
+        "basic_q_261": 1,
+        "basic_t": 1
+      },
+      "active_dual_signs": {
+        "alpha_1": 1,
+        "beta_-1": 1,
+        "gamma_1": 1
+      }
+    }
+  ],
+  "gates": {
+    "b_equals_89_exactly": true,
+    "compressed_winner_is_strict_bplus2": true,
+    "upper_gamma_pivot_F_bplus2_is_negative": true,
+    "reduced_gamma_denominator_positive_at_bplus1": true,
+    "candidate_full_exact_KKT_passes": true,
+    "candidate_has_exact_1051_strict_conditions": true,
+    "candidate_equations_exact": true,
+    "candidate_primal_dual_equality_exact": true,
+    "same_support_gamma_plus_is_rejected": true,
+    "gamma_plus_contact_bplus1_is_rejected": true,
+    "gamma_plus_contact_bplus2_is_rejected": true
+  },
+  "claim_limits": [
+    "This is an exact pointwise full-LP KKT theorem at M=521,s=129/1000, not an all-M A114-B2 architecture theorem.",
+    "The high-precision unrestricted simplex was used only for candidate discovery and is not a proof dependency.",
+    "No claim is made that q0/q1 gamma-minus is the only non-gamma-plus architecture in the strict compressed b+2 phase."
+  ]
+}
