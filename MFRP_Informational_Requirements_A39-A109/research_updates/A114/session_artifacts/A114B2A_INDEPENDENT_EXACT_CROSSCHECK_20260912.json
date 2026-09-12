@@ -1,0 +1,198 @@
+{
+  "audit": "A114B2A_INDEPENDENT_EXACT_CROSSCHECK",
+  "method": "standalone exact-rational SymPy solve; full 8x8 gamma-plus KKT scan for each control",
+  "cases": [
+    {
+      "label": "odd_positive_first_tail",
+      "M": 521,
+      "s": "131/1000",
+      "b": 89,
+      "b_certified": true,
+      "compressed_values_decimal": {
+        "90": "2.31208865957069049e+50",
+        "91": "4.31866003169859347e+50",
+        "92": "3.37296966104444889e+50"
+      },
+      "compressed_strict_winner": 91,
+      "expected_winner": 91,
+      "DG_sign": 1,
+      "Phi_sign": 1,
+      "expected_Phi_sign": 1,
+      "gamma_plus_bplus2": {
+        "pass": true,
+        "condition_count": 1051,
+        "expected_count": 1051,
+        "failures": [],
+        "min_condition": "reduced_cost_p_520",
+        "min_decimal": "3.9986410995101e-31",
+        "adjacent_signs": [
+          1,
+          1
+        ]
+      },
+      "gamma_plus_bplus1": {
+        "pass": false,
+        "condition_count": 1051,
+        "expected_count": 1051,
+        "failures": [
+          "basic_p_90",
+          "active_dual_gamma_+1"
+        ],
+        "min_condition": "basic_p_90",
+        "min_decimal": "-1.4699562265135e+77",
+        "adjacent_signs": [
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "label": "even_positive",
+      "M": 522,
+      "s": "129/1000",
+      "b": 89,
+      "b_certified": true,
+      "compressed_values_decimal": {
+        "90": "5.83806325862162718e+50",
+        "91": "8.71745780459313113e+50",
+        "92": "5.87565633763731160e+50"
+      },
+      "compressed_strict_winner": 91,
+      "expected_winner": 91,
+      "DG_sign": 1,
+      "Phi_sign": 1,
+      "expected_Phi_sign": 1,
+      "gamma_plus_bplus2": {
+        "pass": true,
+        "condition_count": 1053,
+        "expected_count": 1053,
+        "failures": [],
+        "min_condition": "reduced_cost_p_521",
+        "min_decimal": "4.0007359419388e-31",
+        "adjacent_signs": [
+          1,
+          1
+        ]
+      },
+      "gamma_plus_bplus1": {
+        "pass": false,
+        "condition_count": 1053,
+        "expected_count": 1053,
+        "failures": [
+          "basic_p_90",
+          "active_dual_gamma_+1"
+        ],
+        "min_condition": "basic_p_90",
+        "min_decimal": "-2.2919459594874e+76",
+        "adjacent_signs": [
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "label": "odd_positive",
+      "M": 523,
+      "s": "33/250",
+      "b": 90,
+      "b_certified": true,
+      "compressed_values_decimal": {
+        "91": "4.25709433358652840e+50",
+        "92": "5.44878314378171294e+50",
+        "93": "3.43778681934530096e+50"
+      },
+      "compressed_strict_winner": 92,
+      "expected_winner": 92,
+      "DG_sign": 1,
+      "Phi_sign": 1,
+      "expected_Phi_sign": 1,
+      "gamma_plus_bplus2": {
+        "pass": true,
+        "condition_count": 1055,
+        "expected_count": 1055,
+        "failures": [],
+        "min_condition": "reduced_cost_p_522",
+        "min_decimal": "1.9916799373072e-31",
+        "adjacent_signs": [
+          1,
+          1
+        ]
+      },
+      "gamma_plus_bplus1": {
+        "pass": false,
+        "condition_count": 1055,
+        "expected_count": 1055,
+        "failures": [
+          "basic_p_91",
+          "active_dual_gamma_+1"
+        ],
+        "min_condition": "basic_p_91",
+        "min_decimal": "-1.5971236772035e+77",
+        "adjacent_signs": [
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "label": "negative_pivot_control",
+      "M": 521,
+      "s": "129/1000",
+      "b": 89,
+      "b_certified": true,
+      "compressed_values_decimal": {
+        "90": "5.22080058759942745e+50",
+        "91": "6.44655650387023560e+50",
+        "92": "3.98686891122694845e+50"
+      },
+      "compressed_strict_winner": 91,
+      "expected_winner": 91,
+      "DG_sign": 1,
+      "Phi_sign": -1,
+      "expected_Phi_sign": -1,
+      "gamma_plus_bplus2": {
+        "pass": false,
+        "condition_count": 1051,
+        "expected_count": 1051,
+        "failures": [
+          "basic_p_92"
+        ],
+        "min_condition": "basic_p_92",
+        "min_decimal": "-6.6750754022903e+77",
+        "adjacent_signs": [
+          1,
+          -1
+        ]
+      },
+      "gamma_plus_bplus1": {
+        "pass": false,
+        "condition_count": 1051,
+        "expected_count": 1051,
+        "failures": [
+          "active_dual_gamma_+1"
+        ],
+        "min_condition": "active_dual_gamma_+1",
+        "min_decimal": "-1.5260010779857e+51",
+        "adjacent_signs": [
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "gates": {
+    "all_b_exact": true,
+    "all_controls_strict_compressed_bplus2": true,
+    "all_DG_positive": true,
+    "all_Phi_signs_as_declared": true,
+    "positive_pivot_cases_full_KKT": true,
+    "both_parities_in_positive_pivot_cases": true,
+    "negative_pivot_control_rejects_gamma_plus_bplus2": true
+  },
+  "claim_limits": [
+    "These cases are adversarial replication controls, not the all-M proof.",
+    "The all-M theorem uses A112-A Cramer/barrier identities, the independent D_G>0 orientation theorem, and the A112 logical KKT composition under E_j<0.",
+    "No claim is made for Phi<=0 beyond the displayed negative control."
+  ],
+  "verdict": "PASS"
+}

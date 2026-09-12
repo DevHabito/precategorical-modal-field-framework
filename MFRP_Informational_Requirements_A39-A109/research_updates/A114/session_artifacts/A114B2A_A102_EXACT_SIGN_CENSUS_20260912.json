@@ -1,0 +1,70 @@
+{
+  "audit": "A114B2A_A102_EXACT_SIGN_CENSUS",
+  "role": "finite historical consistency check only; not part of the all-M proof",
+  "source_catalogue": "results/a102_complete_rational_witness_lift_atlas_catalogue.json",
+  "unique_b_plus_2_record_count": 444,
+  "Phi_definition": "Phi=F_(b+2)^up evaluated exactly at each rational A102 witness",
+  "Phi_sign_counts": {
+    "-1": 40,
+    "1": 404
+  },
+  "detailed_class_counts": {
+    "legacy_three_band_gamma_minus": 14,
+    "legacy_two_band_compressed": 14,
+    "legacy_three_band_gamma_plus": 404,
+    "endpoint_released_gamma_inactive": 5,
+    "q0q1_gamma_inactive": 3,
+    "q0q1_gamma_active": 4
+  },
+  "detailed_class_by_Phi_sign": {
+    "endpoint_released_gamma_inactive": {
+      "-1": 5
+    },
+    "legacy_three_band_gamma_minus": {
+      "-1": 14
+    },
+    "legacy_three_band_gamma_plus": {
+      "1": 404
+    },
+    "legacy_two_band_compressed": {
+      "-1": 14
+    },
+    "q0q1_gamma_active": {
+      "-1": 4
+    },
+    "q0q1_gamma_inactive": {
+      "-1": 3
+    }
+  },
+  "examples": {
+    "positive": {
+      "M": 46,
+      "s": "131/1000",
+      "b": 8,
+      "class": "legacy_three_band_gamma_plus",
+      "Phi_sign": 1
+    },
+    "negative": {
+      "M": 23,
+      "s": "131/1000",
+      "b": 4,
+      "class": "legacy_three_band_gamma_minus",
+      "Phi_sign": -1
+    }
+  },
+  "gates": {
+    "exact_record_count_444": true,
+    "no_zero_Phi_witnesses": true,
+    "positive_Phi_count_404": true,
+    "negative_Phi_count_40": true,
+    "class_counts_exact": true,
+    "all_positive_Phi_are_gamma_plus": true,
+    "no_negative_Phi_is_gamma_plus": true
+  },
+  "verdict": "PASS",
+  "claim_limits": [
+    "A102 is a finite rational witness atlas through M=520; this census does not establish an all-M theorem.",
+    "The all-M Phi>0 theorem is analytic and does not depend on these 444 records.",
+    "The negative-Phi side contains multiple architecture classes and remains open as a global tail classification problem."
+  ]
+}

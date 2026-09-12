@@ -126,15 +126,56 @@ Read in this order:
 
 `MANIFEST_A114B2_W1_20260912.sha256` hashes the promoted B2-W1 notes and executable artifacts.
 
-## Current frontier — A114-B2
+## A114-B2-A — positive-pivot part of the strict `b+2` phase
 
-The strict compressed `b+2` phase remains **OPEN** as an all-tail classification problem.
+**PROVED / CLOSED for `Phi>0` under the frozen analytic-tail contract.**
 
-B2-W1 proves one exact q0/q1 gamma-minus tail point, but it does not justify the all-`M` rule
+Assume the strict compressed maximizer is `b+2` and
+
+`Phi(M,s)=F_(b+2)^up(s)>0`.
+
+Then the unique strict global lifted optimum is gamma-plus at contact `b+2`:
+
+`P={0,b+2,b+3,M}`,
+
+`Q={1,h,h+1}`,
+
+with `alpha+`, `beta-`, `gamma+` active.
+
+The proof is analytic and uses no fitted threshold:
+
+- A114-B1's independent determinant repair gives `D_G>0` without assuming adjacent primal positivity;
+- A112-A gives `p_(b+3)=F_(b+2)^up/D_G>0` and `p_(b+2)=-F_(b+3)^up/D_G>0` because the uniform barrier has `F_(b+3)^up<0`;
+- strict compressed maximality at `b+2` gives `E_(b+2)<0`;
+- the already-proved A112 gamma-plus composition then closes the complete strict full-LP KKT system.
+
+Independent exact controls cover both parities and a premise-negative control. A separate exact A102 census finds 404/404 positive-pivot `b+2` witnesses in the gamma-plus class and 40/40 negative-pivot witnesses outside that class; the census is consistency evidence only and is not used for the all-M proof.
+
+Read in this order:
+
+1. `session_artifacts/A114B2A_POSITIVE_PIVOT_GAMMA_PLUS_THEOREM_20260912.md`
+2. `session_artifacts/A114B2A_LOGICAL_AUDIT_20260912.md`
+3. `A114B2A_CORRECTIONS_AND_SCOPE_20260912.md`
+4. `session_artifacts/a114b2a_independent_exact_crosscheck.py`
+5. `session_artifacts/A114B2A_INDEPENDENT_EXACT_CROSSCHECK_20260912.json`
+6. `session_artifacts/a114b2a_a102_exact_sign_census.py`
+7. `session_artifacts/A114B2A_A102_EXACT_SIGN_CENSUS_20260912.json`
+
+`MANIFEST_A114B2A_20260912.sha256` hashes the promoted B2-A notes and executable artifacts.
+
+## Current frontier — A114-B2 nonpositive pivot
+
+The positive-pivot part of the strict compressed `b+2` phase is closed by A114-B2-A. The remaining all-tail classification problem is
+
+`Phi<=0`.
+
+The equality set `Phi=0` is not classified by B2-A because the gamma-plus contact-`b+2` basis has `p_(b+3)=0` there and loses strictness.
+
+For `Phi<0`, B2-W1 proves one exact q0/q1 gamma-minus tail point, but it does not justify the all-`M` rule
 
 `Phi<0 => q0/q1 gamma-minus`.
 
-The finite atlas contains multiple architectures in the `b+2` region. The next rigorous target is to derive an analytic partition of the strict `b+2` phase without assuming gamma-plus, two-band, q0/q1, gamma-minus or endpoint-released in advance.
+The finite atlas contains multiple architectures on the negative-pivot side. The next rigorous target is to derive an analytic partition of this nonpositive region without assuming gamma-plus, two-band, q0/q1, gamma-minus or endpoint-released in advance.
 
 ## Claim boundary
 
@@ -142,12 +183,13 @@ A114 currently proves:
 
 - the strict `b+3` phase (A114-A);
 - the strict `b+1` phase (A114-B1);
-- the exact B2-W1 point `M=521, s=129/1000`.
+- the strict `b+2`, `Phi>0` subphase (A114-B2-A);
+- the exact negative-pivot B2-W1 point `M=521, s=129/1000`.
 
 It does **not** yet prove:
 
-- the lifted architecture classification of the complete strict compressed `b+2` phase;
-- that `F_(b+2)^up` is a universal classifier outside B1;
+- the lifted architecture classification for `Phi<=0` in the complete strict compressed `b+2` phase;
+- that `F_(b+2)^up` alone is a universal architecture classifier outside the regions already proved;
 - that `Phi<0` selects q0/q1 gamma-minus for every tail point;
 - any extension outside the declared source window;
 - any physical interpretation.
