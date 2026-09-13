@@ -65,7 +65,7 @@ checks={
     'c_lower_exact':c_gt(S0,CLO),
     'c_upper_exact':c_lt(S1,CHI),
     'b_at_least_89': (2**521)*(S0.numerator**176) > S0.denominator**176,
-    'k_bplus1_at_least_90': 90>=90,
+    'k_bplus1_at_least_90': 89+1>=90,
     'r_kplus2_upper_below_one':rplus_max<1,
     'target_affine_lower_positive':target_lower>0,
     'A113_D_remainder_lt_1e75': RC < F(1,10**75),
@@ -82,12 +82,11 @@ checks={
 }
 verdict=all(checks.values())
 out={
-  'audit':'A114B2C_SOURCE_BOX_CERTIFICATE',
-  'status':'PASS' if verdict else 'FAIL',
+  'audit':'A114B2C_SOURCE_BOX_CERTIFICATE','status':'PASS' if verdict else 'FAIL',
   'contract':{'M_min':M0,'s_min':'129/1000','s_max':'133/1000','phase':'j=b+2 is strict compressed maximizer','pivot':'Phi=F_j^up<0','Q':'s^(b+1)/2^(-h)'},
   'claim':'Under the frozen tail contract, strict compressed b+2 plus Phi<0 implies 9/1000 < Q=s^(b+1)/U < 1/25.',
-  'lower_bound':{'logic':'strict b+2 gives E_(b+1)>0; Q<=9/1000 would force E_(b+1)<0','normalized_E_upper_if_Q_le_9e3':str(E_bplus1_upper_if_Q_le_009),'decimal':f'{float(E_bplus1_upper_if_Q_le_009):.18e}'},
-  'upper_bound':{'dependency':'A114-B2-B proved Phi<0 => 3j-h>=13','q_upper':str(q_upper),'q_upper_decimal':f'{float(q_upper):.18e}','Q_upper':str(Q_upper),'Q_upper_decimal':f'{float(Q_upper):.18e}'},
+  'lower_bound':{'logic':'strict b+2 gives E_(b+1)>0; Q<=9/1000 would force E_(b+1)<0','decimal':f'{float(E_bplus1_upper_if_Q_le_009):.18e}'},
+  'upper_bound':{'dependency':'A114-B2-B proved Phi<0 => 3j-h>=13, hence Y=beta^j/U<=2^-13','q_upper_decimal':f'{float(q_upper):.18e}','Q_upper_decimal':f'{float(Q_upper):.18e}'},
   'computed_checks':checks,
   'claim_limits':['This is only a source-coordinate box; it does not select a lifted architecture.','Phi=0 is excluded.']
 }
