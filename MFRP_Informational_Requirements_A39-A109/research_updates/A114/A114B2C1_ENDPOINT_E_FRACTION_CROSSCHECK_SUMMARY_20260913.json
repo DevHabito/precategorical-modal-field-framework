@@ -1,0 +1,17 @@
+{
+  "audit":"A114B2C1_ENDPOINT_E_FRACTION_CROSSCHECK",
+  "status":"PASS",
+  "positive_controls":[
+    {"M":522,"s":"263/2000","kkt":"1053/1053"},
+    {"M":999,"s":"129/1000","kkt":"2007/2007"},
+    {"M":1000,"s":"261/2000","kkt":"2009/2009"}
+  ],
+  "hostile_controls":[
+    {"M":538,"s":"53/400","only_failure":"basic_p_94","reason":"p0C>0"},
+    {"M":555,"s":"13/100","only_failure":"rc_q_0","reason":"rE_q0<0"},
+    {"M":521,"s":"129/1000","only_failure":"rc_q_0","reason":"rE_q0<0"}
+  ],
+  "all_basis_equations_exact":true,
+  "all_primal_dual_equal":true,
+  "claim_limit":"finite regression and hostile controls only"
+}
