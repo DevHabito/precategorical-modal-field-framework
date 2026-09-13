@@ -4,7 +4,7 @@ A113 tells us **where the compressed maximum can live**. A114 asks the next ques
 
 > Once the compressed maximizer is known, which lifted LP architecture actually satisfies the full KKT system?
 
-This is deliberately separated from A113. A compressed maximum and a valid lifted basis are not the same statement.
+This separation is essential. A compressed maximum and a valid lifted basis are not the same statement; A82 already records compressed-maximizer primal-feasibility exceptions.
 
 ## Frozen analytic-tail contract
 
@@ -12,195 +12,198 @@ The current A114 tail results use
 
 `M>=521`, `129/1000<=s<=133/1000`,
 
-with the frozen beta, gamma, target and normalized-tolerance conventions inherited from A112/A113.
+with the frozen beta, gamma, target and normalized-tolerance conventions inherited from A112/A113. Write
 
-Write
+`b=ceil(M*c(s))`, `c(s)=log(2)/(-2 log(s))`, `h=floor(M/2)`.
 
-`b=ceil(M*c(s))`, `c(s)=log(2)/(-2 log(s))`.
+## Current status — 2026-09-13
 
-## A114-A — strict compressed `b+3` phase
+The promoted strict interior classification is now:
 
-**PROVED.**
+- strict compressed `b+3` -> endpoint-released lift (A114-A);
+- strict compressed `b+1` -> gamma-plus pivot theorem (A114-B1);
+- strict compressed `b+2`, `Phi>0` -> gamma-plus at contact `b+2` (A114-B2-A);
+- strict compressed `b+2`, `Phi<0`, `p0^C>0` -> compressed two-band basis `C` (A114-B2-C2);
+- strict compressed `b+2`, `Phi<0`, `p0^C<0`, `r_E(q0)>0` -> endpoint-released basis `E` (A114-B2-C1).
 
-If the strict compressed maximizer is `j=b+3`, then the unique strict lifted optimum is the endpoint-released architecture
+Here
 
-`P={j-1,j,M}`,
+`Phi=F_(b+2)^up`.
 
-`Q={1,h,h+1}`,
+A114-B2-B separately proves that the pure central-Q gamma-minus family cannot be strictly primal feasible on the `Phi<0` analytic tail.
 
-with `alpha+` and `beta-` active and gamma inactive.
+Therefore the only currently open **strict interior** branch of the negative-pivot `b+2` tail is
 
-Read in this order:
+`p0^C<0 and r_E(q0)<0`,
 
-1. `session_artifacts/A114A_ANALYTIC_TAIL_ENDPOINT_RELEASED_LIFT_THEOREM_20260912.md`
-2. `session_artifacts/A114A_LOGICAL_COMPOSITION_AUDIT_20260912.md`
-3. `A114A_CORRECTIONS_AND_DEAD_ENDS_20260912.md`
-4. `archives/A114A_FULL_REPRODUCIBILITY_PACKAGE_20260912.zip`
+where q0/q1 gamma-inactive (`QI`) and q0/q1 gamma-minus-active (`QA`) compete.
 
-The stronger arithmetic statement `j=b+3 => endpoint-released` is false without strict compressed maximality. The exact negative control `M=521, s=129/1000` is retained in A114-A.
+The sets `p0^C=0`, `r_E(q0)=0`, and the `b+2` `Phi=0` transition remain separate degenerate/open boundaries unless explicitly covered by a theorem.
 
-## A114-B1 — strict compressed `b+1` phase
+## A114-A — strict compressed `b+3`
 
-**PROVED / CLOSED under the same frozen tail contract.**
+**PROVED.** If `j=b+3` is the strict compressed maximizer, the unique strict lifted optimum is
 
-Define
+`P={j-1,j,M}`, `Q={1,h,h+1}`,
 
-`Phi(M,s)=F_(b+2)^up(s)`.
+with `alpha+`, `beta-` active and gamma inactive.
 
-If the strict compressed maximizer is `b+1`, then:
+The theorem requires strict compressed maximality. The stronger arithmetic statement `j=b+3 => endpoint-released` without that premise is false and has an exact negative control.
 
-- `Phi<0`: the unique strict global lift is gamma-plus at contact `b+1`,
-  `P={0,b+1,b+2,M}`, `Q={1,h,h+1}`;
-- `Phi>0`: the unique strict global lift is gamma-plus at contact `b+2`,
-  `P={0,b+2,b+3,M}`, `Q={1,h,h+1}`;
-- `Phi=0`: the two neighboring bases meet at the same non-strict degenerate global optimum. Strict complementarity and uniqueness are not claimed on this pivot set.
+Primary files:
 
-The determinant orientation needed to use the Cramer signs is proved independently of primal positivity:
+- `session_artifacts/A114A_ANALYTIC_TAIL_ENDPOINT_RELEASED_LIFT_THEOREM_20260912.md`
+- `session_artifacts/A114A_LOGICAL_COMPOSITION_AUDIT_20260912.md`
+- `A114A_CORRECTIONS_AND_DEAD_ENDS_20260912.md`
+
+## A114-B1 — strict compressed `b+1`
+
+**PROVED / CLOSED.** Define `Phi=F_(b+2)^up`.
+
+- `Phi<0`: unique strict gamma-plus lift at contact `b+1`;
+- `Phi>0`: unique strict gamma-plus lift at contact `b+2`;
+- `Phi=0`: the two neighboring bases meet at the same non-strict degenerate global optimum; strict complementarity/uniqueness are not claimed there.
+
+The determinant orientation is proved independently of adjacent primal positivity:
 
 `D_G = det(C) A(s) > 0`,
 
-using the A110 generalized-Vandermonde sign `det(C)<0` and the A112-G branch-regularity sign `A(s)<0`.
+using the A110 generalized-Vandermonde determinant sign and A112-G branch regularity. This repairs the circular route that would result from reversing the original A112-B implication.
 
-A114-B1 also preserves the exact counterexample to the false same-contact rule:
+Primary files:
 
-`M=561, s=13277/100000, b=97` has strict compressed maximizer `98=b+1`, but the strict lifted gamma-plus contact is `99=b+2`.
+- `session_artifacts/A114B1_ANALYTIC_TAIL_BPLUS1_GAMMA_PIVOT_THEOREM_20260912.md`
+- `session_artifacts/A114B1_LOGICAL_COMPOSITION_AUDIT_20260912.md`
+- `A114B1_CORRECTIONS_AND_DEAD_ENDS_20260912.md`
+- `session_artifacts/A114B1_GAMMA_PIVOT_ORIENTATION_CERTIFICATE_20260912.json`
+- `session_artifacts/A114B1_INDEPENDENT_EXACT_CROSSCHECK_20260912.json`
 
-Read in this order:
+## A114-B2-W1 — first negative-pivot tail witness
 
-1. `session_artifacts/A114B1_ANALYTIC_TAIL_BPLUS1_GAMMA_PIVOT_THEOREM_20260912.md`
-2. `session_artifacts/A114B1_LOGICAL_COMPOSITION_AUDIT_20260912.md`
-3. `A114B1_CORRECTIONS_AND_DEAD_ENDS_20260912.md`
-4. `session_artifacts/a114b1_gamma_pivot_orientation_certificate.py`
-5. `session_artifacts/A114B1_GAMMA_PIVOT_ORIENTATION_CERTIFICATE_20260912.json`
-6. `session_artifacts/a114b1_independent_exact_crosscheck.py`
-7. `session_artifacts/A114B1_INDEPENDENT_EXACT_CROSSCHECK_20260912.json`
+**PROVED POINTWISE ONLY.** At
 
-`MANIFEST_A114B1_20260912.sha256` hashes the promoted A114-B1 text and executable artifacts.
+`M=521, s=129/1000, h=260, b=89, j=91=b+2`,
 
-## A114-B2-W1 — first exact strict-`b+2` tail witness
+the unique strict global lifted optimum is
 
-**PROVED POINTWISE; A114-B2 REMAINS OPEN.**
-
-At the exact first-tail point
-
-`M=521, s=129/1000`, `h=260`, `b=89`,
-
-the compressed objective has strict maximizer
-
-`j=91=b+2`.
-
-The unique strict global lifted optimum is not gamma-plus. It is
-
-`P={90,91,521}`,
-
-`Q={0,1,260,261}`,
+`P={90,91,521}`, `Q={0,1,260,261}`,
 
 with `alpha+`, `beta-`, `gamma-` active.
 
-The exact certificate checks all
+The theorem is backed by complete exact KKT and an independent `Fraction` reconstruction. The first exploratory simplex run used the wrong odd-parity epsilon scale and is explicitly invalid provenance; the theorem does not depend on it.
 
-`1051 = 2M+9`
+## A114-B2-A — strict `b+2`, positive pivot
 
-strict KKT conditions. A standalone `fractions.Fraction` implementation independently reproduces the full pass.
+**PROVED / CLOSED for `Phi>0`.** The unique strict global lifted optimum is gamma-plus at contact `b+2`:
 
-The two natural adjacent gamma-plus lifts fail for different reasons:
+`P={0,b+2,b+3,M}`, `Q={1,h,h+1}`.
 
-- contact `b+1`: `active_dual_gamma_+1<0`;
-- contact `b+2`: `basic_p_92<0`.
+The proof uses the independent A114-B1 determinant orientation, exact A112-A adjacent-mass identities and the A112 full-KKT composition. The A102 finite census is consistency evidence only, not an all-tail premise.
 
-This proves that non-gamma-plus architecture does not disappear merely because the analytic tail begins at `M>=521`.
+Primary files:
 
-A discovery correction is recorded explicitly: the first exploratory M=521 simplex run used the wrong even-parity epsilon scale `1875` and is invalid. The corrected discovery rerun uses the required odd-parity scale `2500`, recovers the same candidate, and is retained only as provenance. The theorem itself depends only on the exact certificates.
+- `session_artifacts/A114B2A_POSITIVE_PIVOT_GAMMA_PLUS_THEOREM_20260912.md`
+- `session_artifacts/A114B2A_LOGICAL_AUDIT_20260912.md`
+- `A114B2A_CORRECTIONS_AND_SCOPE_20260912.md`
 
-Read in this order:
+## A114-B2-B — negative-pivot pure gamma-minus exclusion
 
-1. `session_artifacts/A114B2_W1_M521_Q0Q1_GAMMA_MINUS_POINTWISE_THEOREM_20260912.md`
-2. `session_artifacts/A114B2_W1_LOGICAL_AUDIT_20260912.md`
-3. `A114B2_W1_CORRECTIONS_AND_SCOPE_20260912.md`
-4. `session_artifacts/a114b2_w1_m521_exact_kkt_certificate.py`
-5. `session_artifacts/A114B2_W1_M521_EXACT_KKT_CERTIFICATE_20260912.json`
-6. `session_artifacts/a114b2_w1_m521_fraction_crosscheck.py`
-7. `session_artifacts/A114B2_W1_M521_FRACTION_CROSSCHECK_20260912.json`
-8. `session_artifacts/a114b2_w1_corrected_discovery.py`
-9. `session_artifacts/A114B2_W1_CORRECTED_DISCOVERY_20260912.json`
+**PROVED LEMMA for `Phi<0`.** The pure central-Q gamma-minus architecture
 
-`MANIFEST_A114B2_W1_20260912.sha256` hashes the promoted B2-W1 notes and executable artifacts.
+`P={0,j-1,j,M}`, `Q={1,h,h+1}`
 
-## A114-B2-A — positive-pivot part of the strict `b+2` phase
+cannot be strictly primal feasible on the analytic tail.
 
-**PROVED / CLOSED for `Phi>0` under the frozen analytic-tail contract.**
+The proof first establishes
 
-Assume the strict compressed maximizer is `b+2` and
+`Phi<0 => 3j-h>=13`,
 
-`Phi(M,s)=F_(b+2)^up(s)>0`.
+then uses exact even/odd Cramer reductions to prove that positivity of the relevant interior P mass forces the endpoint P mass negative.
 
-Then the unique strict global lifted optimum is gamma-plus at contact `b+2`:
+Primary files:
 
-`P={0,b+2,b+3,M}`,
+- `session_artifacts/A114B2B_GAMMA_MINUS_TAIL_EXCLUSION_THEOREM_20260913.md`
+- `session_artifacts/A114B2B_GAMMA_MINUS_TAIL_EXCLUSION_ANALYTIC_CERTIFICATE_20260913.json`
+- `A114B2B_CORRECTIONS_AND_SCOPE_20260913.md`
 
-`Q={1,h,h+1}`,
+## A114-B2-C1 — endpoint-released negative-pivot branch
 
-with `alpha+`, `beta-`, `gamma+` active.
+**PROVED conditional branch theorem.** Let
 
-The proof is analytic and uses no fitted threshold:
+`C: P={0,j,M}, Q={1,h,h+1}`
 
-- A114-B1's independent determinant repair gives `D_G>0` without assuming adjacent primal positivity;
-- A112-A gives `p_(b+3)=F_(b+2)^up/D_G>0` and `p_(b+2)=-F_(b+3)^up/D_G>0` because the uniform barrier has `F_(b+3)^up<0`;
-- strict compressed maximality at `b+2` gives `E_(b+2)<0`;
-- the already-proved A112 gamma-plus composition then closes the complete strict full-LP KKT system.
+and
 
-Independent exact controls cover both parities and a premise-negative control. A separate exact A102 census finds 404/404 positive-pivot `b+2` witnesses in the gamma-plus class and 40/40 negative-pivot witnesses outside that class; the census is consistency evidence only and is not used for the all-M proof.
+`E: P={j-1,j,M}, Q={1,h,h+1}`,
 
-Read in this order:
+both with `alpha+`, `beta-` active and gamma inactive. Under strict `b+2` and `Phi<0`,
 
-1. `session_artifacts/A114B2A_POSITIVE_PIVOT_GAMMA_PLUS_THEOREM_20260912.md`
-2. `session_artifacts/A114B2A_LOGICAL_AUDIT_20260912.md`
-3. `A114B2A_CORRECTIONS_AND_SCOPE_20260912.md`
-4. `session_artifacts/a114b2a_independent_exact_crosscheck.py`
-5. `session_artifacts/A114B2A_INDEPENDENT_EXACT_CROSSCHECK_20260912.json`
-6. `session_artifacts/a114b2a_a102_exact_sign_census.py`
-7. `session_artifacts/A114B2A_A102_EXACT_SIGN_CENSUS_20260912.json`
+`p0^C<0 and r_E(q0)>0 => E`.
 
-`MANIFEST_A114B2A_20260912.sha256` hashes the promoted B2-A notes and executable artifacts.
+The proof contains a B2-specific source box, an exact Cramer exchange identity, protected endpoint gates, ECT closure and independent exact controls. Finite controls are regression only.
 
-## Current frontier — A114-B2 nonpositive pivot
+Primary files:
 
-The positive-pivot part of the strict compressed `b+2` phase is closed by A114-B2-A. The remaining all-tail classification problem is
+- `A114B2C1_ENDPOINT_RELEASED_NEGATIVE_PIVOT_BRANCH_THEOREM_20260913.md`
+- `A114B2C1_ENDPOINT_PROTECTED_GATES_SUMMARY_20260913.json`
+- `A114B2C1_GITHUB_LOGICAL_AUDIT_20260913.json`
+- `A114B2C_SOURCE_BOX_CERTIFICATE_20260913.json`
 
-`Phi<=0`.
+## A114-B2-C2 — compressed negative-pivot branch
 
-The equality set `Phi=0` is not classified by B2-A because the gamma-plus contact-`b+2` basis has `p_(b+3)=0` there and loses strictness.
+**PROVED conditional branch theorem.** Under strict `b+2` and `Phi<0`,
 
-For `Phi<0`, B2-W1 proves one exact q0/q1 gamma-minus tail point, but it does not justify the all-`M` rule
+`p0^C>0 => C`,
 
-`Phi<0 => q0/q1 gamma-minus`.
+where
 
-The finite atlas contains multiple architectures on the negative-pivot side. The next rigorous target is to derive an analytic partition of this nonpositive region without assuming gamma-plus, two-band, q0/q1, gamma-minus or endpoint-released in advance.
+`C: P={0,j,M}, Q={1,h,h+1}`
+
+with `alpha+`, `beta-` active and gamma inactive.
+
+The analytic certificate passes **49/49** exact rational gates. The logical audit passes **15/15** checks. In particular, the inactive gamma-plus slack is protected through an exact bordered-basis pivot identity rather than an empirical architecture census.
+
+Primary files:
+
+- `A114B2C2_COMPRESSED_NEGATIVE_PIVOT_BRANCH_THEOREM_20260913.md`
+- `A114B2C2_COMPRESSED_BRANCH_ANALYTIC_CERTIFICATE_20260913.json`
+- `A114B2C2_GITHUB_LOGICAL_AUDIT_20260913.json`
+- `a114b2c2_compressed_branch_analytic_certificate.py`
+- `a114b2c2_github_logical_audit.py`
+
+## Longitudinal A80–A114 audit
+
+The programme from A80 through the present state has been reviewed longitudinally for scope drift, circularity, witness-to-continuum promotion, compressed/lifted conflation, provenance and downstream reuse of refuted claims.
+
+The audit records A108 as **REFUTED / SUPERSEDED**, finds no downstream A110–A114 dependency on its false one-sided rule, and identifies A110 as the independent finite-domain proof of the corrected bilateral adjacent-boundary mechanism.
+
+Read:
+
+- `A80_A114_LONGITUDINAL_AUDIT_20260913.md`
+- `A80_A114_LONGITUDINAL_AUDIT_20260913.json`
+
+The audit also records that it did not freshly rerun every expensive historical A80–A114 computation; it reviews committed theorem/result records, stored verification reports, exact certificates, dependency declarations and current promoted artifacts.
+
+## Current frontier
+
+Inside strict compressed `b+2` with `Phi<0`:
+
+- `p0^C>0` -> `C` by C2;
+- `p0^C<0` and `r_E(q0)>0` -> `E` by C1;
+- `p0^C<0` and `r_E(q0)<0` -> **QI versus QA remains open**.
+
+Current QI/QA pivot identities and reductions under investigation are not promoted here as theorems until an analytic certificate, independent exact controls and a logical-composition audit are committed.
 
 ## Claim boundary
 
-A114 currently proves:
+A114 does **not** currently prove:
 
-- the strict `b+3` phase (A114-A);
-- the strict `b+1` phase (A114-B1);
-- the strict `b+2`, `Phi>0` subphase (A114-B2-A);
-- the exact negative-pivot B2-W1 point `M=521, s=129/1000`.
-
-It does **not** yet prove:
-
-- the lifted architecture classification for `Phi<=0` in the complete strict compressed `b+2` phase;
-- that `F_(b+2)^up` alone is a universal architecture classifier outside the regions already proved;
-- that `Phi<0` selects q0/q1 gamma-minus for every tail point;
+- the QI/QA split on the remaining strict negative-pivot branch;
+- a generic strict classification on `p0^C=0` or `r_E(q0)=0`;
+- the complete `b+2` architecture classification on `Phi=0`;
 - any extension outside the declared source window;
 - any physical interpretation.
 
 ## Field-note discipline
 
-This folder keeps failed stronger claims and implementation mistakes on purpose. A future reader should be able to tell:
-
-- what was observed;
-- what was guessed;
-- what was refuted;
-- what was corrected;
-- what is actually proved;
-- what remains open.
+Failed stronger claims, implementation mistakes, historical waypoints and negative controls remain preserved intentionally. The authoritative current status is this README plus the dated theorem, certificate, logical-audit and longitudinal-audit files listed above.
