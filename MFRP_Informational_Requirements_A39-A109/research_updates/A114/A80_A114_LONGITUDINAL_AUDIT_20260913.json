@@ -1,7 +1,7 @@
 {
   "audit": "A80_A114_LONGITUDINAL_SCIENTIFIC_AUDIT",
   "date": "2026-09-13",
-  "status": "PASS_WITH_HISTORICAL_REFUTATION_SCOPE_QUALIFICATIONS_AND_DOCUMENTATION_REPAIR_REQUIRED",
+  "status": "PASS_WITH_HISTORICAL_REFUTATION_AND_SCOPE_QUALIFICATIONS",
   "fresh_full_replay": false,
   "method": [
     "review committed theorem/result records and declared contracts",
@@ -17,7 +17,9 @@
     "A110_finite_repair": true,
     "compressed_vs_lifted_distinction_preserved": true,
     "promoted_A110_A114_circular_dependency_detected": false,
-    "A114_readme_stale": true,
+    "A114_readme_stale_at_initial_review": true,
+    "A114_readme_repaired": true,
+    "A114_readme_repair_commit": "f78f923aa91b5e0772548825d360c40b064d0705",
     "current_open_strict_negative_pivot_interior": "p0^C<0 and r_E(q0)<0: QI versus QA",
     "unpromoted_QI_QA_work_counted_as_theorem": false
   },
@@ -95,7 +97,7 @@
     {"id":"F2","severity":"NONE","finding":"no downstream A110-A114 dependency on refuted A108 one-sided rule detected"},
     {"id":"F3","severity":"NONE","finding":"compressed-objective versus lifted-KKT distinction is preserved in promoted chain"},
     {"id":"F4","severity":"NONE","finding":"finite censuses/regressions are not used as all-tail premises in current promoted analytic theorems"},
-    {"id":"F5","severity":"DOCUMENTATION_REPAIR_REQUIRED","finding":"research_updates/A114/README.md predates B2-B/C1/C2 and understates current proved region"},
+    {"id":"F5","severity":"RESOLVED_DOCUMENTATION_FINDING","finding":"A114 README was stale at initial review and was refreshed through B2-B/C1/C2 in commit f78f923aa91b5e0772548825d360c40b064d0705"},
     {"id":"F6","severity":"OPEN_RESEARCH","finding":"QI versus QA branch remains unproved analytically and must not be promoted yet"}
   ],
   "claim_limits": [
