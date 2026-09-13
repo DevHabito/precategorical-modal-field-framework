@@ -1,0 +1,244 @@
+{
+  "audit": "A114B2C_EXACT_PIVOT_CENSUS",
+  "status": "PASS",
+  "scope": {
+    "M_range": [
+      521,
+      1000
+    ],
+    "M_sampling": "20 adversarial support sizes spanning 521..1000 and both parities",
+    "probe_count": 9,
+    "probes": [
+      "129/1000",
+      "259/2000",
+      "13/100",
+      "261/2000",
+      "131/1000",
+      "263/2000",
+      "33/250",
+      "53/400",
+      "133/1000"
+    ],
+    "premise": "strict compressed b+2 and Phi<0; Phi sign read via p_(j+1) of gamma+ basis using already-proved D_G>0"
+  },
+  "cases": 28,
+  "class_counts": {
+    "C": 5,
+    "E": 17,
+    "QI": 2,
+    "QA": 4
+  },
+  "relation_failures": [],
+  "relations_tested": [
+    "sign p_(j-1)^E = - sign p_0^C",
+    "sign lambda_(gamma-)^QA = - sign r_E(q0)",
+    "sign p_(j-1)^QA = - sign slack_(gamma-)^QI",
+    "if p0^C<0 then p_(j-1)^E>0",
+    "if p0^C<0 then q0^QI>0",
+    "if p0^C<0 then both gamma slacks of E are positive"
+  ],
+  "rows": [
+    {
+      "M": 521,
+      "s": "129/1000",
+      "b": 89,
+      "j": 91,
+      "class": "QA"
+    },
+    {
+      "M": 522,
+      "s": "263/2000",
+      "b": 90,
+      "j": 92,
+      "class": "E"
+    },
+    {
+      "M": 534,
+      "s": "263/2000",
+      "b": 92,
+      "j": 94,
+      "class": "E"
+    },
+    {
+      "M": 538,
+      "s": "129/1000",
+      "b": 92,
+      "j": 94,
+      "class": "E"
+    },
+    {
+      "M": 538,
+      "s": "259/2000",
+      "b": 92,
+      "j": 94,
+      "class": "QA"
+    },
+    {
+      "M": 538,
+      "s": "53/400",
+      "b": 93,
+      "j": 95,
+      "class": "C"
+    },
+    {
+      "M": 555,
+      "s": "259/2000",
+      "b": 95,
+      "j": 97,
+      "class": "E"
+    },
+    {
+      "M": 555,
+      "s": "13/100",
+      "b": 95,
+      "j": 97,
+      "class": "QI"
+    },
+    {
+      "M": 600,
+      "s": "261/2000",
+      "b": 103,
+      "j": 105,
+      "class": "E"
+    },
+    {
+      "M": 601,
+      "s": "13/100",
+      "b": 103,
+      "j": 105,
+      "class": "E"
+    },
+    {
+      "M": 601,
+      "s": "261/2000",
+      "b": 103,
+      "j": 105,
+      "class": "C"
+    },
+    {
+      "M": 700,
+      "s": "261/2000",
+      "b": 120,
+      "j": 122,
+      "class": "E"
+    },
+    {
+      "M": 701,
+      "s": "13/100",
+      "b": 120,
+      "j": 122,
+      "class": "E"
+    },
+    {
+      "M": 800,
+      "s": "261/2000",
+      "b": 137,
+      "j": 139,
+      "class": "E"
+    },
+    {
+      "M": 801,
+      "s": "13/100",
+      "b": 137,
+      "j": 139,
+      "class": "E"
+    },
+    {
+      "M": 900,
+      "s": "261/2000",
+      "b": 154,
+      "j": 156,
+      "class": "E"
+    },
+    {
+      "M": 901,
+      "s": "13/100",
+      "b": 154,
+      "j": 156,
+      "class": "E"
+    },
+    {
+      "M": 967,
+      "s": "13/100",
+      "b": 165,
+      "j": 167,
+      "class": "QI"
+    },
+    {
+      "M": 970,
+      "s": "129/1000",
+      "b": 165,
+      "j": 167,
+      "class": "QA"
+    },
+    {
+      "M": 970,
+      "s": "261/2000",
+      "b": 166,
+      "j": 168,
+      "class": "E"
+    },
+    {
+      "M": 973,
+      "s": "13/100",
+      "b": 166,
+      "j": 168,
+      "class": "C"
+    },
+    {
+      "M": 973,
+      "s": "263/2000",
+      "b": 167,
+      "j": 169,
+      "class": "E"
+    },
+    {
+      "M": 983,
+      "s": "261/2000",
+      "b": 168,
+      "j": 170,
+      "class": "C"
+    },
+    {
+      "M": 983,
+      "s": "33/250",
+      "b": 169,
+      "j": 171,
+      "class": "E"
+    },
+    {
+      "M": 989,
+      "s": "33/250",
+      "b": 170,
+      "j": 172,
+      "class": "C"
+    },
+    {
+      "M": 999,
+      "s": "129/1000",
+      "b": 170,
+      "j": 172,
+      "class": "E"
+    },
+    {
+      "M": 1000,
+      "s": "129/1000",
+      "b": 170,
+      "j": 172,
+      "class": "QA"
+    },
+    {
+      "M": 1000,
+      "s": "261/2000",
+      "b": 171,
+      "j": 173,
+      "class": "E"
+    }
+  ],
+  "claim_limits": [
+    "The reduced census is exact finite evidence, not an all-M proof.",
+    "The sign tree C/E/QI/QA is not promoted here as an all-tail theorem.",
+    "Phi=0 remains outside this audit."
+  ],
+  "full_result_regenerated_by": "a114b2c_exact_pivot_census.py"
+}
