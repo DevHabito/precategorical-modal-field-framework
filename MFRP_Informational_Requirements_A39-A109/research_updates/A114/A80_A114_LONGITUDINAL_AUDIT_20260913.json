@@ -1,0 +1,107 @@
+{
+  "audit": "A80_A114_LONGITUDINAL_SCIENTIFIC_AUDIT",
+  "date": "2026-09-13",
+  "status": "PASS_WITH_HISTORICAL_REFUTATION_SCOPE_QUALIFICATIONS_AND_DOCUMENTATION_REPAIR_REQUIRED",
+  "fresh_full_replay": false,
+  "method": [
+    "review committed theorem/result records and declared contracts",
+    "cross-check stored verification and logical-composition reports",
+    "trace promoted dependency statements for circularity and scope drift",
+    "search repository references for downstream reuse of refuted A108 one-sided rule",
+    "separate finite regression/census evidence from analytic or continuum premises",
+    "compare human-facing current-status documentation with promoted mathematical artifacts"
+  ],
+  "major_findings": {
+    "A108": "REFUTED_SUPERSEDED: universal one-sided boundary claim fails exactly at canonical rank 105 through a right basic_p_22 boundary",
+    "A108_downstream_contamination_detected": false,
+    "A110_finite_repair": true,
+    "compressed_vs_lifted_distinction_preserved": true,
+    "promoted_A110_A114_circular_dependency_detected": false,
+    "A114_readme_stale": true,
+    "current_open_strict_negative_pivot_interior": "p0^C<0 and r_E(q0)<0: QI versus QA",
+    "unpromoted_QI_QA_work_counted_as_theorem": false
+  },
+  "baseline_provenance": {
+    "A39_A106_packaging_verifier": {
+      "audit_results": 68,
+      "gate_count": 1013,
+      "failures": 0,
+      "status": "PASS",
+      "note": "stored packaging validation; not freshly replayed in this longitudinal audit"
+    },
+    "A107_A109": {
+      "update_verifier": "7/7 PASS in stored packaging report",
+      "unit_tests": "4/4 PASS in stored packaging report",
+      "historical_rank_1_414_freshly_replayed_during_packaging": false,
+      "H19_executed": false
+    }
+  },
+  "ledger": [
+    {"id":"A80","status":"CERTIFIED_FINITE_LOCAL_ATLAS","scope":"M=10..80 selected contacts; local source interval","key_boundary":"no all-M six-coefficient theorem claimed"},
+    {"id":"A81","status":"CERTIFIED_FINITE_ALGEBRAIC_REDUCTION","scope":"1438 admissible finite contact pairs","key_boundary":"raw gap identity must not be applied after independent primitive normalization"},
+    {"id":"A82","status":"CERTIFIED_FINITE_LOCATOR_WITH_FEASIBILITY_EXCEPTIONS","scope":"probe locator and exact adjacent identities","key_boundary":"8 compressed-maximizer primal-feasibility exceptions; compressed maximizer != automatic KKT basis"},
+    {"id":"A83","status":"CERTIFIED_LOCAL_CONTINUUM_FACTOR_ATLAS_WITH_NEGATIVE_RESULT","scope":"local interval finite supports","key_boundary":"global discrete concavity explicitly refuted"},
+    {"id":"A84","status":"CERTIFIED_REDUCTION_PLUS_FINITE_STRESS","scope":"ten-term k-space reduction plus finite stress","key_boundary":"coefficient-only variation route not sufficient"},
+    {"id":"A85","status":"CERTIFIED_DOMINANT_BALANCE_WITH_COUNTEREXAMPLE","scope":"parity-resolved dominant balance","key_boundary":"M=12 counterexample blocks universal small-support extrapolation"},
+    {"id":"A86","status":"CERTIFIED_FINITE_THREE_CONTACT_LOCALIZER","scope":"declared finite range through M<=300","key_boundary":"not extended beyond declared range"},
+    {"id":"A87","status":"CERTIFIED_CLASSIFIER_WITH_REJECTED_GLOBAL_MONOTONICITY","scope":"declared finite classifier regime","key_boundary":"global factor monotonicity not promoted"},
+    {"id":"A88","status":"CERTIFIED_FINITE_STRESS_AND_ASYMPTOTIC_LEADING_LIMITS","scope":"finite stress plus leading limits","key_boundary":"not an all-M theorem by itself"},
+    {"id":"A89","status":"CERTIFIED_ANALYTIC_LOCAL_SECANT_TAIL_THEOREM","scope":"M>=521 full source interval","key_boundary":"certified threshold is sufficient, not claimed minimal"},
+    {"id":"A90","status":"CERTIFIED_FINITE_GRID_ONE_VARIATION","scope":"M=10..520 at nine rational probes","key_boundary":"15 counterexamples preserved against extending A86 three-contact strip"},
+    {"id":"A91","status":"CERTIFIED_FINITE_OFFSET3_CLASSIFIER","scope":"finite offset-three cells","key_boundary":"earlier locator not promoted as exact rounding rule"},
+    {"id":"A92","status":"CERTIFIED_CONTINUUM_CELL_ATLAS","scope":"858 algebraic continuum cells","key_boundary":"local decisive-factor classification; globality completed later"},
+    {"id":"A93","status":"CERTIFIED_SELECTED_CELL_GLOBAL_COMPRESSED","scope":"25 selected continuum cells","key_boundary":"compressed objective only"},
+    {"id":"A94","status":"CERTIFIED_FINITE_SUPPORT_CONTINUUM_GLOBAL_COMPRESSED","scope":"14<=M<=520 full source interval","key_boundary":"explicitly compressed-objective, non-KKT, nonphysical"},
+    {"id":"A95","status":"CERTIFIED_RATIONAL_WITNESS_LIFT_OBSTRUCTION","scope":"1063 exact phase witnesses","key_boundary":"83 obstructions; not continuum lifted atlas and missing active set not assumed"},
+    {"id":"A96","status":"CERTIFIED_POINTWISE_FULL_LP","scope":"first A95 obstruction","key_boundary":"pointwise"},
+    {"id":"A97","status":"CERTIFIED_ENDPOINT_INTERVAL_PLUS_POINTWISE_RESOLUTION","scope":"endpoint-released interval analysis plus 76/83 witnesses","key_boundary":"7 q0-entry residuals preserved"},
+    {"id":"A98","status":"CERTIFIED_POINTWISE_FULL_LP","scope":"first q0/q1 residual","key_boundary":"pointwise"},
+    {"id":"A99","status":"CERTIFIED_Q0Q1_CONTINUUM_WITH_RESIDUALS","scope":"gamma-inactive q0/q1 components","key_boundary":"residual obstructions preserved"},
+    {"id":"A100","status":"CERTIFIED_POINTWISE_GAMMA_MINUS_FULL_LP","scope":"first A99 residual","key_boundary":"pointwise"},
+    {"id":"A101","status":"CERTIFIED_GAMMA_ACTIVE_INTERVALS_AND_POINTWISE_OBSTRUCTION_CLOSURE","scope":"gamma-active components and pointwise closure of 83 A95 obstructions","key_boundary":"continuum scope only where separately certified"},
+    {"id":"A102","status":"CERTIFIED_COMPLETE_RATIONAL_WITNESS_ATLAS","scope":"all 1063 rational witnesses; 676847 exact KKT conditions","key_boundary":"pointwise rational-witness atlas, not continuum by itself"},
+    {"id":"A103","status":"CERTIFIED_ENDPOINT_RELEASED_CONTINUUM_ATLAS","scope":"76 endpoint-released source segments","key_boundary":"interval claims only after exact promotion"},
+    {"id":"A104","status":"CERTIFIED_Q0Q1_CONTINUUM_ATLAS","scope":"7 exceptional q0/q1 source segments","key_boundary":"proper strict components, not automatic whole-segment coverage"},
+    {"id":"A105","status":"CERTIFIED_TWO_BAND_CONTINUUM_ATLAS","scope":"40 legacy two-band source segments","key_boundary":"40 proper two-sided components; zero complete segments"},
+    {"id":"A106","status":"CERTIFIED_GAMMA_MINUS_CONTINUUM_ATLAS","scope":"18 legacy gamma-minus source segments","key_boundary":"1 complete plus 17 one-sided; lower adjacent mass exit"},
+    {"id":"A107","status":"CERTIFIED_LOCAL_GAMMA_PLUS_CONTINUUM_EXPLORATION","scope":"finite/local continuum investigation","key_boundary":"emergent pattern not universal theorem"},
+    {"id":"A108","status":"REFUTED_SUPERSEDED","scope":"historical one-sided conjecture","key_boundary":"exact canonical-rank-105 right-boundary counterexample"},
+    {"id":"A109","status":"SUPPORTED_PROSPECTIVE_FINITE_EVIDENCE_LATER_SUPERSEDED_STRUCTURALLY_BY_A110","scope":"resolved prospective sequence through rank 414 in stored package","key_boundary":"no all-922 theorem; H19 unexecuted"},
+    {"id":"A110","status":"CERTIFIED_FINITE_STRUCTURAL_THEOREM","scope":"14<=M<=520 frozen gamma-plus A94/A102 envelope","key_boundary":"correct bilateral adjacent-boundary rule proved independently of A108"},
+    {"id":"A111_A111B","status":"FINITE_RECONNAISSANCE_ONLY","scope":"preregistered tail stress including selected cases through M=5000","key_boundary":"not analytic proof"},
+    {"id":"A112","status":"CERTIFIED_ANALYTIC_TAIL_STRUCTURAL_THEOREM","scope":"M>=521 frozen gamma-plus family and strict compressed phase","key_boundary":"conditional architecture theorem, not global active-set selection"},
+    {"id":"A113","status":"CERTIFIED_ANALYTIC_TAIL_GLOBAL_COMPRESSED_THEOREM","scope":"M>=521 compressed objective; A94+A113 covers M>=14","key_boundary":"does not select lifted full-LP architecture"},
+    {"id":"A114-A","status":"CERTIFIED_LIFTED_BPLUS3_BRANCH","scope":"strict compressed b+3 tail phase","key_boundary":"requires strict compressed maximality"},
+    {"id":"A114-B1","status":"CERTIFIED_LIFTED_BPLUS1_PIVOT_THEOREM","scope":"strict compressed b+1 tail phase","key_boundary":"Phi=0 treated non-strictly; determinant orientation repaired independently"},
+    {"id":"A114-B2-W1","status":"CERTIFIED_POINTWISE_NEGATIVE_PIVOT_WITNESS","scope":"M=521,s=129/1000","key_boundary":"pointwise only; erroneous exploratory epsilon run excluded from theorem"},
+    {"id":"A114-B2-A","status":"CERTIFIED_POSITIVE_PIVOT_BPLUS2_BRANCH","scope":"strict b+2 with Phi>0","key_boundary":"A102 census is regression only"},
+    {"id":"A114-B2-B","status":"CERTIFIED_NEGATIVE_PIVOT_PURE_GAMMA_MINUS_EXCLUSION","scope":"strict b+2 tail with Phi<0","key_boundary":"exclusion lemma, not full negative-pivot classification"},
+    {"id":"A114-B2-C1","status":"CERTIFIED_ENDPOINT_RELEASED_CONDITIONAL_BRANCH","scope":"strict b+2, Phi<0, p0C<0, rE(q0)>0","key_boundary":"zero discriminants and QI/QA side remain open"},
+    {"id":"A114-B2-C2","status":"CERTIFIED_COMPRESSED_CONDITIONAL_BRANCH","scope":"strict b+2, Phi<0, p0C>0","key_boundary":"49/49 analytic gates and 15/15 logical audit; finite controls not premises"},
+    {"id":"A114-B2-QI-QA","status":"OPEN_ANALYTIC_FRONTIER","scope":"p0C<0 and rE(q0)<0 under strict b+2, Phi<0","key_boundary":"current derived pivot identities are unpromoted and excluded from proved ledger"}
+  ],
+  "dependency_spine": [
+    "A80-A83 exact local/reduced identities retain feasibility exceptions",
+    "A84-A94 build compressed-objective factor and continuum structure without claiming lifted KKT",
+    "A95 exposes lifted obstructions; A96-A106 resolve/promote alternative active sets",
+    "A108 false one-sided conjecture is refuted and historically retained",
+    "A110 independently proves corrected bilateral finite gamma-plus theorem",
+    "A112 proves analytic-tail frozen gamma-plus structural theorem with repaired intermediate gaps",
+    "A113 proves analytic-tail global compressed one-variation while preserving lifted-selection gap",
+    "A114 branch theorems use full-LP KKT closure and independent determinant orientation where reversal would otherwise be circular"
+  ],
+  "formal_findings": [
+    {"id":"F1","severity":"HISTORICAL_FALSIFICATION","finding":"A108 one-sided universal rule is false and must remain marked refuted/superseded"},
+    {"id":"F2","severity":"NONE","finding":"no downstream A110-A114 dependency on refuted A108 one-sided rule detected"},
+    {"id":"F3","severity":"NONE","finding":"compressed-objective versus lifted-KKT distinction is preserved in promoted chain"},
+    {"id":"F4","severity":"NONE","finding":"finite censuses/regressions are not used as all-tail premises in current promoted analytic theorems"},
+    {"id":"F5","severity":"DOCUMENTATION_REPAIR_REQUIRED","finding":"research_updates/A114/README.md predates B2-B/C1/C2 and understates current proved region"},
+    {"id":"F6","severity":"OPEN_RESEARCH","finding":"QI versus QA branch remains unproved analytically and must not be promoted yet"}
+  ],
+  "claim_limits": [
+    "no fresh replay of every expensive A80-A114 computation in this audit session",
+    "no claim beyond each audit's declared parameter/support/architecture contract",
+    "no physical, spacetime, gravitational, quantum or experimental interpretation",
+    "unpromoted QI/QA derivations excluded from proved ledger"
+  ]
+}
