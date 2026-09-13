@@ -1,0 +1,28 @@
+{
+  "audit": "A114B2C1_GITHUB_LOGICAL_AUDIT",
+  "status": "PASS",
+  "checks": {
+    "source_box_pass": true,
+    "source_box_strict_lower": true,
+    "source_box_upper_lt_0p04": true,
+    "endpoint_protected_121_of_121": true,
+    "free_discriminants_exact": true,
+    "fraction_crosscheck_pass": true,
+    "three_positive_controls": true,
+    "three_hostile_controls": true,
+    "theorem_keeps_branch_hypotheses": true,
+    "theorem_keeps_C_open": true,
+    "scope_keeps_QI_QA_open": true
+  },
+  "failed": [],
+  "dependency_DAG": [
+    "A113 strict b+2 + B2-B dyadic gate -> source box",
+    "source box + endpoint symbolic certificate -> protected endpoint gates",
+    "p0C<0 + Cramer exchange -> endpoint lower P mass positive",
+    "strict compressed maximality + simplex identity -> r_E(p0)>0",
+    "ECT checkpoints -> all P reduced costs",
+    "r_E(q0)>0 + protected r_E(q2)>0 + ECT -> all Q reduced costs",
+    "protected primal/dual/slack gates -> complete strict KKT"
+  ],
+  "claim_limits": ["C branch open","QI/QA branch open","zero-discriminant sets open","Phi=0 open"]
+}

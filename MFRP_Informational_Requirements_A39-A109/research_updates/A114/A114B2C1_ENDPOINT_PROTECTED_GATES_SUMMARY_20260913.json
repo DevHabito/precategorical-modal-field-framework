@@ -1,0 +1,18 @@
+{
+  "audit": "A114B2C1_ENDPOINT_PROTECTED_GATES_SUMMARY",
+  "status": "PASS",
+  "gate_count": 121,
+  "pass_count": 121,
+  "failed_checks": [],
+  "free_discriminants": {
+    "Xn": "endpoint p_(j-1); its numerator is exactly the current-compressed p0 numerator, with opposite denominator orientation",
+    "Pcur": "current-compressed p0; sign supplied by branch hypothesis",
+    "rq0": "endpoint reduced cost r_E(q0); sign supplied by branch hypothesis"
+  },
+  "protected_hard_margins": {
+    "even": {"PJn":"16.1041484867274472","rpjm2":"15.4405939758825893","rpjp1":"31.0688304901423079","rpM1":"2.83381413946875000","rq2":"0.363771796790614203","Pprev":"16.1041484867274472","gp":"0.0452791758728466891","gm":"0.0335575304040966891"},
+    "odd": {"PJn":"6.51383009043186180","rpjm2":"7.72029698794129466","rpjp1":"7.76720762253557699","rpM1":"1.41690706973437500","rq2":"5.53734396128863724","Pprev":"6.51383009043186180","gp":"0.0113197939682116723","gm":"0.0671150608081933781"}
+  },
+  "full_symbolic_certificate_sha256": "b0a998b5f80f4e09ec5595d2d18f0f589c3961f90eb95503d89bfa1054176edf",
+  "claim_limit": "summary of the locally rerun full symbolic certificate; theorem composition and independent Fraction controls are separate"
+}
