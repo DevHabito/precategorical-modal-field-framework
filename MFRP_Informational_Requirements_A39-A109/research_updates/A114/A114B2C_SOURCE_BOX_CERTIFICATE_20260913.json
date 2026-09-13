@@ -1,0 +1,46 @@
+{
+  "audit": "A114B2C_SOURCE_BOX_CERTIFICATE",
+  "status": "PASS",
+  "contract": {
+    "M_min": 521,
+    "s_min": "129/1000",
+    "s_max": "133/1000",
+    "phase": "j=b+2 is strict compressed maximizer",
+    "pivot": "Phi=F_j^up<0",
+    "Q": "s^(b+1)/2^(-h)"
+  },
+  "claim": "Under the frozen tail contract, strict compressed b+2 plus Phi<0 implies 9/1000 < Q=s^(b+1)/U < 1/25.",
+  "lower_bound": {
+    "logic": "strict b+2 gives E_(b+1)>0; the exact A113 ten-term majorant shows Q<=9/1000 would force E_(b+1)<0",
+    "decimal": "-5.710660268714011517e-05"
+  },
+  "upper_bound": {
+    "dependency": "A114-B2-B proved Phi<0 => 3j-h>=13, hence Y=beta^j/U<=2^-13",
+    "logic": "the B2-B A112-A V2 core inequality gives (beta-gamma)q < (s-gamma)Y + affine/error cap, q=s^j/U; divide by s>=129/1000",
+    "q_upper_decimal": "4.136025168500000182e-03",
+    "Q_upper_decimal": "3.206221060852713217e-02"
+  },
+  "computed_checks": {
+    "c_lower_exact": true,
+    "c_upper_exact": true,
+    "b_at_least_89": true,
+    "k_bplus1_at_least_90": true,
+    "r_kplus2_upper_below_one": true,
+    "target_affine_lower_positive": true,
+    "A113_D_remainder_lt_1e75": true,
+    "A113_H_upper_lt_0p51": true,
+    "A113_eta_lt_0p27U": true,
+    "A113_Delta_over_U_gt_0p0043": true,
+    "A113_MX_over_U_lt_0p271": true,
+    "A113_affine_beta_lt_0p36": true,
+    "A113_affine_source_lt_0p36": true,
+    "Q_le_0p009_forces_E_bplus1_negative": true,
+    "beta_minus_gamma_positive": true,
+    "Q_upper_lt_0p04": true,
+    "source_box_nonempty": true
+  },
+  "claim_limits": [
+    "This is only a source-coordinate box; it does not select a lifted architecture.",
+    "Phi=0 is excluded."
+  ]
+}
