@@ -1,0 +1,106 @@
+{
+  "audit": "A114B2B_GAMMA_MINUS_TAIL_EXCLUSION_ANALYTIC_CERTIFICATE",
+  "verdict": "PASS",
+  "claim": "For M>=521, s in [129/1000,133/1000], j=b+2 and Phi=F_j^up<0, the pure central-Q gamma-minus basis P={0,j-1,j,M}, Q={1,h,h+1} cannot have all strict positive basic masses.",
+  "bridge_A": {
+    "margin_decimal": 1.0392108565676933e-06,
+    "margin_gt_1e_6": true,
+    "gates": {
+      "16923_over_100000_gt_1_over_6": true,
+      "c_LO_gt_88_over_521": true,
+      "core_bracket_positive": true,
+      "bridge_A_margin_gt_1e-6": true
+    },
+    "dependency": "uses the already-audited A112-A V2 cofactor/remainder caps; 1e-70 is a conservative aggregate cap; the exact rational margin is recomputed by this script"
+  },
+  "domain_gates": {
+    "M0_floor_half_is_260": true,
+    "j_over_h_upper_lt_3_over_8": true,
+    "j_over_h_lower_gt_1_over_3": true,
+    "d1_negative_at_h260_and_decay": true,
+    "two_to_minus_one_third_lt_4_over_5": true
+  },
+  "algebraic_implications": [
+    "If 3j-h<=12 then Y=2^(h-3j)>=2^-12 by definition.",
+    "If 3j-h>=13 then Y=2^(h-3j)<=2^-13 by definition.",
+    "If j<=h-1 then Y=2^(h-3j)>=8*U^2 for U=2^-h."
+  ],
+  "bridge_B": {
+    "even": {
+      "D2": {
+        "leading_margin": "5913/520",
+        "remainder_bound_decimal": "2.2656789815969661e-24",
+        "gate": true
+      },
+      "a0": {
+        "leading_margin": "11181483/520",
+        "remainder_bound_decimal": "8.5334785555495551e-21",
+        "gate": true
+      },
+      "c0": {
+        "leading_margin": "5913/520",
+        "remainder_bound_decimal": "4.5313579631939322e-24",
+        "gate": true
+      },
+      "aj": {
+        "leading_margin": "317625/104",
+        "remainder_bound_decimal": "1.8630217107608506e-24",
+        "gate": true
+      },
+      "cj": {
+        "leading_margin": "847/520",
+        "remainder_bound_decimal": "1.0542197943230523e-81",
+        "gate": true
+      },
+      "K": {
+        "leading_margin": "94957/66560",
+        "remainder_bound_decimal": "4.6575542769021265e-25",
+        "gate": true
+      }
+    },
+    "odd": {
+      "D2": {
+        "leading_margin": "11854/65",
+        "remainder_bound_decimal": "3.6301736618399969e-23",
+        "gate": true
+      },
+      "a0": {
+        "leading_margin": "11207957/65",
+        "remainder_bound_decimal": "6.8366125276152842e-20",
+        "gate": true
+      },
+      "c0": {
+        "leading_margin": "5927/65",
+        "remainder_bound_decimal": "3.6301736618399969e-23",
+        "gate": true
+      },
+      "aj": {
+        "leading_margin": "318375/13",
+        "remainder_bound_decimal": "1.9910447411413400e-23",
+        "gate": true
+      },
+      "cj": {
+        "leading_margin": "849/65",
+        "remainder_bound_decimal": "8.4499771206509270e-81",
+        "gate": true
+      },
+      "K": {
+        "leading_margin": "109063/33280",
+        "remainder_bound_decimal": "2.4888059264266750e-24",
+        "gate": true
+      }
+    }
+  },
+  "logic": [
+    "Phi<0 and j=b+2 imply 3j-h>=13 by Bridge A.",
+    "Hence Y=2^(h-3j)<=2^-13.",
+    "Bridge B derives p0(t)=a0*t+c0 and pj(t)=aj*t+cj from normalization, mean, beta-, gamma- only.",
+    "For both parities: a0<0<c0, cj<0<aj, and K=c0*aj-cj*a0<0.",
+    "Thus zero(pj)>zero(p0); whenever pj>0 one has p0<0. Strict primal feasibility is impossible."
+  ],
+  "claim_limits": [
+    "This excludes only the pure central-Q gamma-minus architecture.",
+    "It does not classify the remaining C/E/QI/QA architectures.",
+    "Phi=0 is not covered."
+  ]
+}
