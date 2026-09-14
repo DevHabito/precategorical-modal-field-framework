@@ -137,7 +137,7 @@ Indeed, `q_0` is a nonbasic variable with zero reduced cost. Because every basic
 More precisely, consider the formal `E -> QI` alpha+/beta- pivot edge. The gamma-minus slack is affine on this edge. It is strictly positive at `E` and equals `Gamma` at the formal `QI` endpoint.
 
 - If `Gamma>0`, the `QI` endpoint is primal feasible and the optimal segment reaches `QI`.
-- If `Gamma=0`, the optimal segment reaches `QI`, which is simultaneously the gamma-zero cut; `QA` collapses to that same endpoint.
+- If `Gamma=0`, the optimal segment reaches `QI`, which is simultaneously the gamma-zero cut; `QA` collapses to that same endpoint by the exact Schur identity `p_(j-1)^QA=0` and the common QI/QA primal equations.
 - If `Gamma<0`, the gamma-minus inequality cuts the zero-cost edge before the formal `QI` endpoint. The cut point is exactly the `QA` primal point; the optimal face is the segment from `E` to `QA`.
 
 Thus `r_E(q_0)=0` is qualitatively different from the other internal boundaries: it is a genuine **primal nonuniqueness surface**, not merely two bases representing one point.
@@ -315,7 +315,7 @@ A nonzero function in this ECT space has at most four real zeros counting multip
 
 Thus E is dual feasible with exactly one zero nonbasic reduced cost. Increasing `q0` along its simplex direction gives a nontrivial feasible zero-objective-slope interval because all E basic variables and inactive slacks start strictly positive. This proves primal nonuniqueness.
 
-The endpoint refinement follows from affine edge geometry. The gamma-minus slack is positive at E and equals `Gamma` at the formal QI endpoint. When `Gamma<0`, its unique zero on the edge is the gamma-active QA solution. The exact C3 identity gives `p_(j-1)^QA>0`, and the direct QA primal bounds protect the common masses. When `Gamma>=0`, no gamma cut occurs before QI; the QI primal positivity argument uses `p0^C<0` and `Gamma>=0` and is independent of the strict sign of `r_E(q0)` needed only for the QI pivot reduced cost. At `Gamma=0`, use the D3 coalescence argument.
+The endpoint refinement follows from affine edge geometry. The gamma-minus slack is positive at E and equals `Gamma` at the formal QI endpoint. When `Gamma<0`, its unique zero on the edge is the gamma-active QA solution. The exact C3 identity gives `p_(j-1)^QA>0`, and the direct QA primal bounds protect the common masses. When `Gamma>0`, no gamma cut occurs before QI; the QI primal positivity argument uses `p0^C<0` and `Gamma>0` and is independent of the strict sign of `r_E(q0)` needed only for the QI pivot reduced cost. At `Gamma=0`, the Schur identity gives `p_(j-1)^QA=0`; QI already saturates gamma-minus by definition, so the QA system with its zero pivot coordinate and the QI system reduce to the same primal equations. The direct QA common-mass bounds at `w=0`, together with `q0^QI>0` from `p0^C<0`, give a positive common endpoint.
 
 ## 4. D3 QI/QA coalescence and uniqueness
 
