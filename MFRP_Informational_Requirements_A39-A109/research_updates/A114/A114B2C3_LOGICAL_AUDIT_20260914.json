@@ -1,0 +1,55 @@
+{
+  "audit": "A114B2C3_LOGICAL_COMPOSITION_AUDIT",
+  "date": "2026-09-14",
+  "status": "PASS",
+  "check_count": 27,
+  "pass_count": 27,
+  "failed": [],
+  "checks": {
+    "analytic_certificate_pass": true,
+    "analytic_gate_count_at_least_90": true,
+    "fraction_crosscheck_pass": true,
+    "false_convexity_route_explicitly_rejected": true,
+    "strict_bplus2_premise_present": true,
+    "Phi_negative_premise_present": true,
+    "p0_residual_premise_present": true,
+    "rE_residual_premise_present": true,
+    "Gamma_definition_present": true,
+    "QI_classifier_present": true,
+    "QA_classifier_present": true,
+    "Gamma_zero_kept_non_strict": true,
+    "all_zero_boundaries_explicit": true,
+    "determinants_oriented": true,
+    "QA_gamma_dual_pivot_identity": true,
+    "QA_mass_pivot_identity": true,
+    "QA_common_masses_not_from_convexity": true,
+    "QA_direct_primal_section": true,
+    "QI_Q_reduced_cost_identity": true,
+    "QA_Q_reduced_cost_identity": true,
+    "QI_uses_5d_ECT": true,
+    "QA_uses_6d_ECT": true,
+    "finite_controls_regression_only": true,
+    "A108_not_dependency": true,
+    "no_physical_claim": true,
+    "forbidden_false_route_absent": true,
+    "certificate_common_QA_protected_separately": true
+  },
+  "dependency_boundary": [
+    "A114-B2-B/source box",
+    "A114-B2-C1",
+    "A114-B2-C2",
+    "generalized-Vandermonde/extended-Chebyshev structural zero-count results"
+  ],
+  "explicit_nonpremises": [
+    "finite C/E/QI/QA census",
+    "six finite QI/QA controls",
+    "refuted A108 one-sided boundary conjecture",
+    "QI primal feasibility on the QA side"
+  ],
+  "open_boundaries": [
+    "Phi=0",
+    "p0^C=0",
+    "r_E(q0)=0",
+    "Gamma=0"
+  ]
+}
