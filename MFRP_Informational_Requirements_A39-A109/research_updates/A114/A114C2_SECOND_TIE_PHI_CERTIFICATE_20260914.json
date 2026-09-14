@@ -14,8 +14,8 @@
   ],
   "exact_core_identity": "Phi0/U = [R(beta-gamma)-Y(s-gamma)-8 a e(s-gamma)-4 U e R(beta+gamma)+4 U e Y(s-gamma)]/d",
   "ratio_identity": "Y=R*(beta/s)^j <= R*(125/129)^91",
-  "gate_count": 13,
-  "pass_count": 13,
+  "gate_count": 15,
+  "pass_count": 15,
   "failed": [],
   "gates": {
     "symbolic_core_identity": true,
@@ -27,7 +27,9 @@
     "gamma_j_normalized_tail_lt_eta": true,
     "central_high_node_tail_lt_1e_100": true,
     "M_tail_lt_1e_300": true,
+    "tail_sequences_decrease_after_h260": true,
     "all_primitive_errors_below_eta": true,
+    "all_exact_and_core_primitives_below_2": true,
     "telescoping_72eta_below_error_cap": true,
     "core_lower_gt_2p25e_4": true,
     "final_lower_positive": true
@@ -37,6 +39,9 @@
     "coefficient": "5.848822411482922784e-02",
     "gamma_j_normalized_tail": "4.065567940240384106e-31",
     "central_high_node_normalized_error": "3.075572880332359273e-147",
+    "tail_ratio_after_h260": "2.670191570881226054e-01",
+    "primitive_abs_bound_minus_1": "9.547824098191601936e-81",
+    "primitive_abs_bound": "1.00000000000000000000000000000000000000000000000000955",
     "core_lower_for_Phi_over_U": "2.255940170334630685e-04",
     "tail_error_cap": "1.000000000000000000e-26",
     "final_lower_for_Phi_over_U": "2.255940170334630685e-04"
