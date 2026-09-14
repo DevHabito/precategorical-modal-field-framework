@@ -2,7 +2,9 @@
 
 ## Status
 
-**STAGING THEOREM — analytic proof assembled from promoted A112/A113/A114 identities and the new exact `Phi>0` boundary certificate; pending independent red-team before promotion.**
+**PROVED conditional boundary theorem under the frozen analytic-tail contract; independently red-teamed.**
+
+The proof is exact/compositional. The new `Phi>0` step is backed by a hardened 15-gate analytic certificate, an independent exact-Fraction core crosscheck, a 36-check logical audit, and a separate adversarial red-team note. Two failed/insufficient intermediate routes are preserved rather than erased: a false dyadic shortcut and an early max-versus-sum remainder bound that was hardened before promotion.
 
 Let
 
@@ -173,7 +175,14 @@ R(\beta-\gamma)-Y(s-\gamma)-8ae(s-\gamma)
 
 The parity coefficient in the Q-block cancels identically from this expression.
 
-The omitted normalized primitives are bounded uniformly by `1e-28`; the six triple products making up `Phi` therefore contribute aggregate normalized error below `1e-26`.
+The omitted normalized primitive contributions come from `gamma^j`, the `r^M` tails and the central-Q high-node terms. The hardened certificate bounds their **sum** uniformly by
+
+\[
+\eta_\gamma+\eta_{\rm central}+\eta_M
+<4.066\times10^{-31}<10^{-28}.
+\]
+
+It separately verifies that the relevant high-node sequences decrease for every `h>=260` and that all exact/core primitives used by the product telescoping have absolute value below `2`. The six triple products making up `Phi` therefore contribute aggregate normalized error below `10^{-26}`.
 
 Using
 
@@ -338,16 +347,20 @@ Hence
 
 ---
 
-# Independent regression
+# Independent checks
 
-A standalone `Fraction` implementation brackets the tie in two adversarial cells:
+The hardened analytic `Phi` certificate passes **15/15** exact/symbolic gates. A separate exact-Fraction full-vs-core reconstruction covers 171 rational tail controls with **171/171** below the declared remainder envelope; its worst normalized discrepancy is about `2.96e-34`, versus the analytic `1e-26` cap.
+
+A standalone `Fraction` LP regression brackets the tie in two adversarial cells:
 
 - odd `M=525`, `d=11`;
 - even `M=760`, `d=13`.
 
-On the `E_(b+2)<0` side, `G_2^+` passes the complete unused-atom KKT scan. On the `E_(b+2)>0` side, `ER_3` passes the complete scan. `Phi` is positive on all four exact rational bracket endpoints.
+On the `E_(b+2)<0` side, `G_2^+` passes the complete unused-atom KKT scan. On the `E_(b+2)>0` side, `ER_3` passes the complete scan. `Phi` is positive on all four exact rational bracket endpoints. The regression reports **12/12 PASS**.
 
-The regression reports **12/12 PASS**. It is falsification/transcription evidence only and is not a premise of the equality theorem.
+The hardened logical-composition audit reports **36/36 PASS**. The independent red-team audit reports **PASS WITH SCOPE** and records both the false dyadic shortcut and the max-versus-sum remainder correction.
+
+These finite checks are falsification/transcription evidence only; they are not premises of the equality theorem.
 
 ---
 
@@ -360,4 +373,4 @@ This theorem does not claim:
 - that the false dyadic shortcut recorded in the corrections note is valid;
 - any physical or ontological interpretation.
 
-Together with A114-C1, this theorem would close both non-strict compressed-tie surfaces in the frozen analytic tail, subject to independent red-team and promotion.
+Together with A114-C1, this closes both non-strict compressed-tie surfaces in the frozen analytic tail. It does not by itself generalize the classification outside the frozen parameter family.
