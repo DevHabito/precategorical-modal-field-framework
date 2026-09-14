@@ -1,0 +1,25 @@
+{
+  "audit": "A114B2C3_INDEPENDENT_FRACTION_CROSSCHECK",
+  "status": "PASS",
+  "gate_count": 79,
+  "pass_count": 79,
+  "false_convexity_route_rejected": true,
+  "false_convexity_witnesses": [
+    {"M":521,"s":"129/1000","q1QI":-1,"qhQI":1},
+    {"M":970,"s":"129/1000","q1QI":-1,"qhQI":1},
+    {"M":1000,"s":"129/1000","q1QI":-1,"qhQI":1}
+  ],
+  "controls": [
+    {"M":555,"s":"13/100","j":97,"expected":"QI","signs":{"p0C":-1,"rE_q0":-1,"Gamma":1,"q0QI":1,"p_jm1_QA":-1,"lambda_gamma_QA":1,"q1QI":1,"qhQI":1},"gates":{"strict_bplus2":true,"phi_negative":true,"p0C_negative":true,"rE_q0_negative":true,"Gamma_selects":true,"q0QI_positive":true,"QA_pivot_mass_sign":true,"QA_gamma_dual_positive":true,"raw_QI_QA_exact":true,"selected_basic_positive":true,"selected_active_duals_positive":true,"selected_opposite_slacks_positive":true,"selected_sentinels_positive":true},"sentinel_signs":{"p0":1,"pjm2":1,"pjm1":1,"pjp1":1,"pM1":1,"q2":1}},
+    {"M":908,"s":"13/100","j":157,"expected":"QI","signs":{"p0C":-1,"rE_q0":-1,"Gamma":1,"q0QI":1,"p_jm1_QA":-1,"lambda_gamma_QA":1,"q1QI":1,"qhQI":1},"gates":{"strict_bplus2":true,"phi_negative":true,"p0C_negative":true,"rE_q0_negative":true,"Gamma_selects":true,"q0QI_positive":true,"QA_pivot_mass_sign":true,"QA_gamma_dual_positive":true,"raw_QI_QA_exact":true,"selected_basic_positive":true,"selected_active_duals_positive":true,"selected_opposite_slacks_positive":true,"selected_sentinels_positive":true},"sentinel_signs":{"p0":1,"pjm2":1,"pjm1":1,"pjp1":1,"pM1":1,"q2":1}},
+    {"M":967,"s":"13/100","j":167,"expected":"QI","signs":{"p0C":-1,"rE_q0":-1,"Gamma":1,"q0QI":1,"p_jm1_QA":-1,"lambda_gamma_QA":1,"q1QI":1,"qhQI":1},"gates":{"strict_bplus2":true,"phi_negative":true,"p0C_negative":true,"rE_q0_negative":true,"Gamma_selects":true,"q0QI_positive":true,"QA_pivot_mass_sign":true,"QA_gamma_dual_positive":true,"raw_QI_QA_exact":true,"selected_basic_positive":true,"selected_active_duals_positive":true,"selected_opposite_slacks_positive":true,"selected_sentinels_positive":true},"sentinel_signs":{"p0":1,"pjm2":1,"pjm1":1,"pjp1":1,"pM1":1,"q2":1}},
+    {"M":521,"s":"129/1000","j":91,"expected":"QA","signs":{"p0C":-1,"rE_q0":-1,"Gamma":-1,"q0QI":1,"p_jm1_QA":1,"lambda_gamma_QA":1,"q1QI":-1,"qhQI":1},"gates":{"strict_bplus2":true,"phi_negative":true,"p0C_negative":true,"rE_q0_negative":true,"Gamma_selects":true,"q0QI_positive":true,"QA_pivot_mass_sign":true,"QA_gamma_dual_positive":true,"raw_QI_QA_exact":true,"selected_basic_positive":true,"selected_active_duals_positive":true,"selected_opposite_slacks_positive":true,"selected_sentinels_positive":true},"sentinel_signs":{"p0":1,"pjm2":1,"pjm1":1,"pjp1":1,"pM1":1,"q2":1}},
+    {"M":970,"s":"129/1000","j":167,"expected":"QA","signs":{"p0C":-1,"rE_q0":-1,"Gamma":-1,"q0QI":1,"p_jm1_QA":1,"lambda_gamma_QA":1,"q1QI":-1,"qhQI":1},"gates":{"strict_bplus2":true,"phi_negative":true,"p0C_negative":true,"rE_q0_negative":true,"Gamma_selects":true,"q0QI_positive":true,"QA_pivot_mass_sign":true,"QA_gamma_dual_positive":true,"raw_QI_QA_exact":true,"selected_basic_positive":true,"selected_active_duals_positive":true,"selected_opposite_slacks_positive":true,"selected_sentinels_positive":true},"sentinel_signs":{"p0":1,"pjm2":1,"pjm1":1,"pjp1":1,"pM1":1,"q2":1}},
+    {"M":1000,"s":"129/1000","j":172,"expected":"QA","signs":{"p0C":-1,"rE_q0":-1,"Gamma":-1,"q0QI":1,"p_jm1_QA":1,"lambda_gamma_QA":1,"q1QI":-1,"qhQI":1},"gates":{"strict_bplus2":true,"phi_negative":true,"p0C_negative":true,"rE_q0_negative":true,"Gamma_selects":true,"q0QI_positive":true,"QA_pivot_mass_sign":true,"QA_gamma_dual_positive":true,"raw_QI_QA_exact":true,"selected_basic_positive":true,"selected_active_duals_positive":true,"selected_opposite_slacks_positive":true,"selected_sentinels_positive":true},"sentinel_signs":{"p0":1,"pjm2":1,"pjm1":1,"pjp1":1,"pM1":1,"q2":1}}
+  ],
+  "archival_full_kkt_dependency": "A114B2C_12_POINT_FULL_KKT_SUMMARY_20260913.json independently records complete 2M+9 exact KKT passes for these same six QI/QA controls.",
+  "claim_limits": [
+    "This crosscheck independently reconstructs raw QI/QA matrices, pivot signs, primal/dual/slack gates and P/Q sentinels.",
+    "The complete atom-by-atom control scans are supplied independently by the pre-existing 12-point full-KKT certificate; neither finite control set is an all-tail premise."
+  ]
+}
