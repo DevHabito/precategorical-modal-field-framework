@@ -287,7 +287,7 @@ The C solution is primal feasible; all of its nonzero masses and both gamma slac
 p_{b+1}=0.
 \]
 
-The segment `conv{G_1^+,C}` is feasible because all primal coordinates and inactive slacks are affine and nonnegative at both endpoints. Beyond C on this line, `p_(b+1)` becomes negative. Hence C is the unique non-gamma endpoint of the feasible line.
+The segment `conv{G_1^+,C}` is feasible because all primal coordinates and inactive slacks are affine and nonnegative at both endpoints. Beyond C on this line, `p_(b+1)` becomes negative. Since `S_(gamma+)` is zero at `G_1^+` and strictly positive at C, the affine continuation through `G_1^+` in the direction opposite C makes `S_(gamma+)<0`. Thus the feasible line cannot extend past either endpoint.
 
 ### `p_0^C<0`
 
@@ -303,7 +303,7 @@ so `p_(b+1)^E>0`. The C1 protected endpoint certificate gives all other E masses
 p_0=0.
 \]
 
-Thus `conv{G_1^+,E}` is feasible, and extension beyond E makes `p_0<0`.
+Thus `conv{G_1^+,E}` is feasible, and extension beyond E makes `p_0<0`. Since `S_(gamma+)` is zero at `G_1^+` and strictly positive at E, continuation through `G_1^+` away from E makes the gamma-plus slack negative. Again no extension beyond either endpoint is feasible.
 
 ### `p_0^C=0`
 
@@ -313,7 +313,7 @@ The exact exchange/coalescence identities give
 C=E
 \]
 
-as primal points after their zero endpoint coordinates are removed. The same line-segment argument gives
+as primal points after their zero endpoint coordinates are removed. The common endpoint has strict positive gamma-plus slack because `Phi<0`. Therefore the same affine-slack argument blocks continuation past `G_1^+`, while endpoint nonnegativity blocks continuation past `C=E`. Hence
 
 \[
 \operatorname{Opt}=\operatorname{conv}\{G_1^+,C=E\}.
