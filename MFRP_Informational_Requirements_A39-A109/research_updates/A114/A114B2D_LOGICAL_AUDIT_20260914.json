@@ -1,0 +1,49 @@
+{
+  "audit": "A114B2D_LOGICAL_COMPOSITION_AUDIT",
+  "status": "PASS",
+  "check_count": 28,
+  "pass_count": 28,
+  "failed": [],
+  "checks": {
+    "status_is_conditional_boundary_theorem": true,
+    "strict_bplus2_contract": true,
+    "phi_negative_premise": true,
+    "D1_p0_zero_present": true,
+    "D1_unique_primal_claim": true,
+    "D1_C_E_QI_coalescence": true,
+    "D1_dual_overclaim_excluded": true,
+    "D1_direct_Ut_hardening": true,
+    "D2_residual_zero_premises": true,
+    "D2_zero_reduced_cost_edge": true,
+    "D2_ECT_four_roots": true,
+    "D2_q2_checkpoint": true,
+    "D2_nonunique_primal": true,
+    "D2_three_gamma_endpoint_cases": true,
+    "D2_gamma_zero_no_illegal_D3_dependency": true,
+    "D2_entire_optimal_face_hardened": true,
+    "D3_full_premises": true,
+    "D3_QI_QA_coalescence": true,
+    "D3_unique_primal": true,
+    "D3_positive_gamma_dual": true,
+    "outer_Phi_zero_left_open": true,
+    "no_universal_s_order_claim": true,
+    "finite_controls_regression_only": true,
+    "no_physical_claim": true,
+    "false_convexity_route_absent": true,
+    "dependencies_are_promoted": true,
+    "regression_passes": true,
+    "boundary_analytic_certificate_passes": true
+  },
+  "scope": [
+    "strict compressed b+2",
+    "Phi<0",
+    "internal boundaries p0^C=0, r_E(q0)=0, Gamma=0"
+  ],
+  "open_boundary": ["Phi=0"],
+  "forbidden_promotions": [
+    "universal monotone ordering of zero surfaces in s",
+    "strict uniqueness on equality sets",
+    "physical interpretation"
+  ],
+  "reproduction_note": "The 28 checks were rerun after GitHub read-back of the staging theorem and hardening note. The first hardened run exposed an audit-pattern bug in the convex-hull LaTeX matcher (27/28); the matcher was corrected and the complete audit then passed 28/28. The mathematical theorem was not altered to force that audit result."
+}
