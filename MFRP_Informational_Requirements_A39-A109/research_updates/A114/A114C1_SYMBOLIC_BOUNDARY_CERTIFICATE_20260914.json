@@ -1,0 +1,22 @@
+{
+  "audit": "A114C1_SYMBOLIC_BOUNDARY_CERTIFICATE",
+  "status": "PASS",
+  "gate_count": 5,
+  "pass_count": 5,
+  "failed": [],
+  "checks": {
+    "wronskian_factor_exact": true,
+    "wronskian_positive_for_0_a_lt_b_lt_1": true,
+    "gp1_column_move_even": true,
+    "schur_orientation_preserved": true,
+    "slack_is_negative_active_row_residual": true
+  },
+  "wronskian_factor": "-p**2*q**2*(p - q)*exp(p*x)*exp(q*x)",
+  "interpretation": [
+    "For 0<a<b<1, p=log(a)<q=log(b)<0, so -p^2 q^2 (p-q) exp((p+q)x)>0.",
+    "The entering p_(b+1) column moves from appended position 8 to declared P position 2 using six swaps, so the determinant orientation is unchanged.",
+    "For gamma+ the inactive slack is minus the active-row residual; with positive Schur derivative d, S_gamma+(z)=S_gamma+^C-d z."
+  ],
+  "scope": "Pure algebra/sign-orientation support for A114-C1; no parameter-domain theorem is inferred from this certificate alone.",
+  "reproduction_note": "Executed independently with SymPy exact symbolic algebra before GitHub upload; no floating-point sign decision is used."
+}
