@@ -16,7 +16,7 @@ with the frozen beta, gamma, target and normalized-tolerance conventions inherit
 
 `b=ceil(M*c(s))`, `c(s)=log(2)/(-2 log(s))`, `h=floor(M/2)`.
 
-## Current status — 2026-09-13
+## Current status — 2026-09-14
 
 The promoted strict interior classification is now:
 
@@ -24,21 +24,19 @@ The promoted strict interior classification is now:
 - strict compressed `b+1` -> gamma-plus pivot theorem (A114-B1);
 - strict compressed `b+2`, `Phi>0` -> gamma-plus at contact `b+2` (A114-B2-A);
 - strict compressed `b+2`, `Phi<0`, `p0^C>0` -> compressed two-band basis `C` (A114-B2-C2);
-- strict compressed `b+2`, `Phi<0`, `p0^C<0`, `r_E(q0)>0` -> endpoint-released basis `E` (A114-B2-C1).
+- strict compressed `b+2`, `Phi<0`, `p0^C<0`, `r_E(q0)>0` -> endpoint-released basis `E` (A114-B2-C1);
+- strict compressed `b+2`, `Phi<0`, `p0^C<0`, `r_E(q0)<0`, `Gamma>0` -> q0/q1 gamma-inactive basis `QI` (A114-B2-C3);
+- the same residual premises with `Gamma<0` -> q0/q1 gamma-minus-active basis `QA` (A114-B2-C3),
 
-Here
+where
 
-`Phi=F_(b+2)^up`.
+`Phi=F_(b+2)^up`,
+
+`Gamma=S_(gamma-)^QI`.
 
 A114-B2-B separately proves that the pure central-Q gamma-minus family cannot be strictly primal feasible on the `Phi<0` analytic tail.
 
-Therefore the only currently open **strict interior** branch of the negative-pivot `b+2` tail is
-
-`p0^C<0 and r_E(q0)<0`,
-
-where q0/q1 gamma-inactive (`QI`) and q0/q1 gamma-minus-active (`QA`) compete.
-
-The sets `p0^C=0`, `r_E(q0)=0`, and the `b+2` `Phi=0` transition remain separate degenerate/open boundaries unless explicitly covered by a theorem.
+Therefore the **strict interior** of the negative-pivot `b+2` tail is now classified into `C/E/QI/QA`. The sets `p0^C=0`, `r_E(q0)=0`, `Gamma=0`, and the `b+2` `Phi=0` transition remain separate degenerate/open boundaries unless explicitly covered by a theorem.
 
 ## A114-A — strict compressed `b+3`
 
@@ -128,19 +126,13 @@ Primary files:
 
 ## A114-B2-C1 — endpoint-released negative-pivot branch
 
-**PROVED conditional branch theorem.** Let
+**PROVED conditional branch theorem.** Under strict `b+2` and `Phi<0`,
 
-`C: P={0,j,M}, Q={1,h,h+1}`
+`p0^C<0 and r_E(q0)>0 => E`,
 
-and
+where `E: P={j-1,j,M}, Q={1,h,h+1}` with `alpha+`, `beta-` active and gamma inactive.
 
-`E: P={j-1,j,M}, Q={1,h,h+1}`,
-
-both with `alpha+`, `beta-` active and gamma inactive. Under strict `b+2` and `Phi<0`,
-
-`p0^C<0 and r_E(q0)>0 => E`.
-
-The proof contains a B2-specific source box, an exact Cramer exchange identity, protected endpoint gates, ECT closure and independent exact controls. Finite controls are regression only.
+The proof contains a B2-specific source box, exact Cramer exchange identity, protected endpoint gates, ECT closure and independent exact controls. Finite controls are regression only.
 
 Primary files:
 
@@ -155,13 +147,9 @@ Primary files:
 
 `p0^C>0 => C`,
 
-where
+where `C: P={0,j,M}, Q={1,h,h+1}` with `alpha+`, `beta-` active and gamma inactive.
 
-`C: P={0,j,M}, Q={1,h,h+1}`
-
-with `alpha+`, `beta-` active and gamma inactive.
-
-The analytic certificate passes **49/49** exact rational gates. The logical audit passes **15/15** checks. In particular, the inactive gamma-plus slack is protected through an exact bordered-basis pivot identity rather than an empirical architecture census.
+The analytic certificate passes **49/49** exact rational gates and the logical audit passes **15/15** checks. Finite controls are regression only.
 
 Primary files:
 
@@ -171,9 +159,39 @@ Primary files:
 - `a114b2c2_compressed_branch_analytic_certificate.py`
 - `a114b2c2_github_logical_audit.py`
 
+## A114-B2-C3 — QI/QA residual branch
+
+**PROVED conditional branch theorem.** Under strict `b+2`, `Phi<0`,
+
+`p0^C<0 and r_E(q0)<0`,
+
+define
+
+`Gamma=S_(gamma-)^QI`,
+
+where `QI: P={j,M}, Q={0,1,h,h+1}` with `alpha+`, `beta-` active and gamma inactive.
+
+Then
+
+- `Gamma>0 => QI`;
+- `Gamma<0 => QA`, where `QA: P={j-1,j,M}, Q={0,1,h,h+1}` with `alpha+`, `beta-`, `gamma-` active.
+
+The analytic certificate passes **97/97** exact rational gates. The independent `Fraction` crosscheck passes **79/79** gates and explicitly falsifies the tempting but invalid proof shortcut that QI remains primal-feasible on the QA side. The logical-composition audit passes **27/27** checks. The older independent 12-point package supplies complete atom-by-atom exact KKT scans for the three QI and three QA controls; those controls remain regression/falsification evidence only.
+
+Primary files:
+
+- `A114B2C3_QI_QA_RESIDUAL_BRANCH_THEOREM_20260914.md`
+- `A114B2C3_QI_QA_ANALYTIC_CERTIFICATE_20260914.json`
+- `A114B2C3_FRACTION_CROSSCHECK_20260914.json`
+- `A114B2C3_LOGICAL_AUDIT_20260914.json`
+- `A114B2C3_CORRECTIONS_AND_SCOPE_20260914.md`
+- `a114b2c3_qi_qa_analytic_certificate.py`
+- `a114b2c3_fraction_crosscheck.py`
+- `a114b2c3_logical_audit.py`
+
 ## Longitudinal A80–A114 audit
 
-The programme from A80 through the present state has been reviewed longitudinally for scope drift, circularity, witness-to-continuum promotion, compressed/lifted conflation, provenance and downstream reuse of refuted claims.
+The programme from A80 through A114-B2-C2 was reviewed longitudinally on 2026-09-13 for scope drift, circularity, witness-to-continuum promotion, compressed/lifted conflation, provenance and downstream reuse of refuted claims.
 
 The audit records A108 as **REFUTED / SUPERSEDED**, finds no downstream A110–A114 dependency on its false one-sided rule, and identifies A110 as the independent finite-domain proof of the corrected bilateral adjacent-boundary mechanism.
 
@@ -182,28 +200,30 @@ Read:
 - `A80_A114_LONGITUDINAL_AUDIT_20260913.md`
 - `A80_A114_LONGITUDINAL_AUDIT_20260913.json`
 
-The audit also records that it did not freshly rerun every expensive historical A80–A114 computation; it reviews committed theorem/result records, stored verification reports, exact certificates, dependency declarations and current promoted artifacts.
+That dated audit predates C3. C3 has its own independent analytic certificate, Fraction crosscheck, correction note and logical-composition audit listed above; the older audit is retained as a historical snapshot rather than rewritten retroactively.
 
 ## Current frontier
 
-Inside strict compressed `b+2` with `Phi<0`:
+Inside strict compressed `b+2` with `Phi<0`, the strict interior is closed:
 
 - `p0^C>0` -> `C` by C2;
 - `p0^C<0` and `r_E(q0)>0` -> `E` by C1;
-- `p0^C<0` and `r_E(q0)<0` -> **QI versus QA remains open**.
+- `p0^C<0`, `r_E(q0)<0`, `Gamma>0` -> `QI` by C3;
+- `p0^C<0`, `r_E(q0)<0`, `Gamma<0` -> `QA` by C3.
 
-Current QI/QA pivot identities and reductions under investigation are not promoted here as theorems until an analytic certificate, independent exact controls and a logical-composition audit are committed.
+The remaining A114 work is therefore on degenerate zero-discriminant sets and/or extensions of the frozen contract, not on an unclassified strict negative-pivot interior branch.
 
 ## Claim boundary
 
-A114 does **not** currently prove:
+A114 does **not** currently prove a generic strict classification on
 
-- the QI/QA split on the remaining strict negative-pivot branch;
-- a generic strict classification on `p0^C=0` or `r_E(q0)=0`;
-- the complete `b+2` architecture classification on `Phi=0`;
-- any extension outside the declared source window;
+- `p0^C=0`;
+- `r_E(q0)=0`;
+- `Gamma=0`;
+- the `b+2` transition `Phi=0`;
+- any source window outside `[129/1000,133/1000]`;
 - any physical interpretation.
 
 ## Field-note discipline
 
-Failed stronger claims, implementation mistakes, historical waypoints and negative controls remain preserved intentionally. The authoritative current status is this README plus the dated theorem, certificate, logical-audit and longitudinal-audit files listed above.
+Failed stronger claims, implementation mistakes, historical waypoints and negative controls remain preserved intentionally. The authoritative current status is this README plus the dated theorem, certificate, logical-audit and correction files listed above.
