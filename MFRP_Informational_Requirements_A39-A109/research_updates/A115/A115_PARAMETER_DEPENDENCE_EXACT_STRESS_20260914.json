@@ -1,0 +1,93 @@
+{
+  "audit": "A115_PARAMETER_DEPENDENCE_EXACT_STRESS",
+  "status": "FINITE_EVIDENCE_ONLY",
+  "date": "2026-09-14",
+  "base_contract": {
+    "s": ["129/1000", "131/1000", "133/1000"],
+    "beta": "1/8",
+    "tau_grid": ["47/100", "19/40", "12/25", "97/200", "49/100", "99/200", "1/2", "101/200", "51/100", "103/200", "13/25", "21/40", "53/100"],
+    "small_M": [20, 30, 40, 50, 60, 70, 80, 100],
+    "tail_M": [521, 538, 561, 760, 1000, 1500]
+  },
+  "definitions": {
+    "b_tau": "smallest integer b with s^(2b) <= tau^M",
+    "scaled_epsilon": "tau^floor(M/2)/(1875 if even else 2500)",
+    "frozen_epsilon": "2^-floor(M/2)/(1875 if even else 2500)",
+    "generalized_nesting": "J_tau = E_(b+1) - tau^-1 E_(b+2)"
+  },
+  "symbolic_identity": "(c+k d) tau^k - tau^-1 (c+(k+1)d) tau^(k+1) = -d tau^k",
+  "tau_stress": {
+    "scaled_epsilon": {
+      "full_cases": 312,
+      "full_variation_failures": 0,
+      "full_localization_failures": 0,
+      "full_generalized_nesting_failures": 0,
+      "tail_local_cases": 234,
+      "tail_remote_sign_failures": 0,
+      "tail_generalized_nesting_failures": 0
+    },
+    "frozen_epsilon": {
+      "full_cases": 312,
+      "full_variation_failures": 25,
+      "full_localization_failures": 7,
+      "full_generalized_nesting_failures": 17,
+      "tail_local_cases": 234,
+      "tail_remote_sign_failures": 108,
+      "tail_generalized_nesting_failures": 74
+    },
+    "exact_tail_counterexample": {
+      "M": 521,
+      "s": "129/1000",
+      "tau": "49/100",
+      "beta": "1/8",
+      "epsilon_mode": "frozen_2^-h",
+      "b_tau": 91,
+      "variation_count": 2,
+      "maximizers": [90],
+      "offsets": [-1],
+      "J_sign": 1,
+      "signs_near_b": {"88": 1, "89": 1, "90": -1, "91": 1, "92": 1, "93": 1, "94": 1, "95": 1},
+      "last_factor_sign": 1
+    }
+  },
+  "beta_stress": {
+    "tau": "1/2",
+    "epsilon_mode": "scaled (= frozen at tau=1/2)",
+    "stats_by_beta": {
+      "23/200": {"cases": 21, "variation_failures": 0, "localization_failures": 0, "nesting_failures": 0},
+      "3/25": {"cases": 21, "variation_failures": 0, "localization_failures": 0, "nesting_failures": 0},
+      "123/1000": {"cases": 21, "variation_failures": 0, "localization_failures": 0, "nesting_failures": 0},
+      "31/250": {"cases": 21, "variation_failures": 0, "localization_failures": 0, "nesting_failures": 0},
+      "1/8": {"cases": 21, "variation_failures": 0, "localization_failures": 0, "nesting_failures": 0},
+      "63/500": {"cases": 21, "variation_failures": 0, "localization_failures": 0, "nesting_failures": 0},
+      "127/1000": {"cases": 21, "variation_failures": 0, "localization_failures": 0, "nesting_failures": 0},
+      "16/125": {"cases": 21, "variation_failures": 7, "localization_failures": 0, "nesting_failures": 2}
+    },
+    "first_failure": {
+      "M": 20,
+      "s": "129/1000",
+      "beta": "16/125",
+      "b_tau": 4,
+      "variation_count": 2,
+      "maximizers": [6],
+      "generalized_nesting_sign": 1,
+      "factor_signs": {"2": 1, "3": 1, "4": 1, "5": 1, "6": -1, "7": 1, "8": 1}
+    }
+  },
+  "joint_local_box": {
+    "beta": ["31/250", "1/8", "63/500"],
+    "tau": ["49/100", "99/200", "1/2", "101/200", "51/100"],
+    "scaled_epsilon": true,
+    "complete_small_cases": 315,
+    "complete_small_failures": 0,
+    "tail_local_cases": 225,
+    "tail_local_failures": 0
+  },
+  "interpretation": [
+    "The tau^-1 cancellation is exact and not special to tau=1/2.",
+    "Within the finite stress grid tau in [0.47,0.53], preserving epsilon/tau^h keeps all tested complete small-M sequences and all tested local tail gates consistent with the frozen one-variation mechanism.",
+    "Holding the old absolute epsilon proportional to 2^-h while changing tau changes epsilon/tau^h exponentially and produces exact counterexamples.",
+    "The mechanism is not unrestricted in beta: moving beta too close to s can destroy one-variation even with tau=1/2 and normalized tolerance scaling.",
+    "The joint beta/tau local box has no failures in the finite exact stress, but no open-parameter theorem is certified by this file."
+  ]
+}
