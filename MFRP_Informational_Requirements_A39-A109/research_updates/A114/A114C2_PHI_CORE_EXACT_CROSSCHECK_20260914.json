@@ -1,0 +1,19 @@
+{
+  "audit": "A114C2_PHI_CORE_EXACT_CROSSCHECK",
+  "status": "PASS",
+  "method": "Independent exact-Fraction reconstruction of the complete A81 upper boundary and the C2 core. b is found by exact rational binary search; no logarithm or floating sign decision is used.",
+  "case_count": 171,
+  "pass_count": 171,
+  "error_cap": "1e-26",
+  "worst_case": {
+    "M": 521,
+    "s": "131/1000",
+    "b": 89,
+    "j": 91,
+    "normalized_error": "2.958228394578794300e-34",
+    "below_1e_26": true
+  },
+  "failure_count": 0,
+  "failures": [],
+  "scope_note": "Finite transcription/falsification crosscheck only. Uniform Phi positivity is established by the analytic 15-gate certificate, not by this grid."
+}
