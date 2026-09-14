@@ -20,10 +20,12 @@ checks={
  'tie_forces_left_positive':'E_{b+1}>0' in TH,
  'A113_remote_negative_present':'E_k<0' in A113 and 'k\\ge b+3' in A113,
  'exact_two_compressed_maximizers':'exactly the two compressed maximizers' in TH,
- 'A114A_R_contradiction_present':'Assuming `Q<=0.009`' in A114A or 'Assuming `Q<=0.009`' in A114A.replace('`','`'),
+ 'A114A_R_contradiction_present':'Assuming `Q<=0.009`' in A114A,
  'tie_R_lower_reproved':'R>9/1000' in TH,
  'R_upper_from_b_definition':'R=\\frac{s^{b+2}}U\\le s^2' in TH,
- 'phi_certificate_passes':CERT.get('status')=='PASS' and CERT.get('gate_count')==13 and CERT.get('pass_count')==13,
+ 'phi_certificate_passes':CERT.get('status')=='PASS' and CERT.get('gate_count')==15 and CERT.get('pass_count')==15,
+ 'phi_tail_monotonicity_explicit':CERT.get('gates',{}).get('tail_sequences_decrease_after_h260') is True,
+ 'phi_primitive_bound_explicit':CERT.get('gates',{}).get('all_exact_and_core_primitives_below_2') is True,
  'phi_margin_strict':'2.25594\\times10^{-4}>0' in TH,
  'phi_not_dyadic':'does not use the false shortcut' in TH,
  'false_dyadic_counterexamples_preserved':'M=821' in DEAD and 'M=886' in DEAD and 'M=951' in DEAD,
@@ -61,7 +63,7 @@ out={
  'guardrails':[
    'The false dyadic shortcut is explicitly rejected and counterexamples are preserved.',
    'A114-A is not imported wholesale at equality: only source-bound-dependent primal/gamma-slack pieces are reused; the endpoint p0 reduced cost loses strictness.',
-   'Phi>0 is proved analytically from R>9/1000 with a standalone tail-error certificate.',
+   'Phi>0 is proved analytically from R>9/1000 with a standalone tail-error certificate whose tail monotonicity and primitive-size assumptions are themselves checked.',
    'Finite brackets are regression only.'
  ],
 }
