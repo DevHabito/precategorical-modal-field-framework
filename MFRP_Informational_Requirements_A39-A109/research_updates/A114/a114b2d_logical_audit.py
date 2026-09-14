@@ -28,7 +28,7 @@ checks={
  'D2_nonunique_primal':'primal optimum is **not unique**' in TH,
  'D2_three_gamma_endpoint_cases':'If `Gamma>0`' in TH and 'If `Gamma=0`' in TH and 'If `Gamma<0`' in TH,
  'D2_gamma_zero_no_illegal_D3_dependency':'At `Gamma=0`, use the D3' not in TH and 'exact Schur identity `p_(j-1)^QA=0`' in TH,
- 'D2_entire_optimal_face_hardened':'complete optimal set' in HARD and 'no hidden second optimal direction' in HARD and 'conv\\{E,QI\\}' in HARD and 'conv\\{E,QA\\}' in HARD,
+ 'D2_entire_optimal_face_hardened':'complete optimal set' in HARD and 'no hidden second optimal direction' in HARD and '\\operatorname{conv}\\{E,QI\\}' in HARD and '\\operatorname{conv}\\{E,QA\\}' in HARD,
  'D3_full_premises':'r_E(q_0)<0' in TH and '\\Gamma=0' in TH,
  'D3_QI_QA_coalescence':'common `QI=QA` primal point' in TH,
  'D3_unique_primal':'D3. The `Gamma=0` boundary has a unique primal optimum' in TH,
