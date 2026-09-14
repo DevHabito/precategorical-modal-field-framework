@@ -1,0 +1,16 @@
+{
+  "audit": "A114C1_TIE_BRACKET_EXACT_REGRESSION",
+  "status": "PASS",
+  "gate_count": 24,
+  "pass_count": 24,
+  "controls": [
+    {"M":521,"b":90,"side":"lo","s":"1354427/10240000","E_bplus1_sign":-1,"Phi_sign":-1,"p0C_sign":1,"selected":"GP1","full_strict_KKT":true},
+    {"M":521,"b":90,"side":"hi","s":"8668333/65536000","E_bplus1_sign":1,"Phi_sign":-1,"p0C_sign":1,"selected":"C","full_strict_KKT":true},
+    {"M":522,"b":90,"side":"lo","s":"43086649/327680000","E_bplus1_sign":-1,"Phi_sign":-1,"p0C_sign":-1,"selected":"GP1","full_strict_KKT":true},
+    {"M":522,"b":90,"side":"hi","s":"861733/6553600","E_bplus1_sign":1,"Phi_sign":-1,"p0C_sign":-1,"selected":"E","full_strict_KKT":true},
+    {"M":555,"b":96,"side":"lo","s":"8708321/65536000","E_bplus1_sign":-1,"Phi_sign":1,"p0C_sign":1,"selected":"GP2","full_strict_KKT":true},
+    {"M":555,"b":96,"side":"hi","s":"21770803/163840000","E_bplus1_sign":1,"Phi_sign":1,"p0C_sign":1,"selected":"GP2","full_strict_KKT":true}
+  ],
+  "interpretation": "Three exact rational brackets straddle E_(b+1)=0 in three distinct lifted regimes. M=521 exhibits GP1 -> C with Phi<0,p0C>0; M=522 exhibits GP1 -> E with Phi<0,p0C<0; M=555 keeps GP2 strict on both sides with Phi>0. Every selected side is checked by complete exact P/Q KKT scanning.",
+  "claim_limit": "These controls falsify oversimplified one-architecture tie rules and regress the analytic theorem. They do not prove the equality-surface theorem, whose proof is analytic/compositional."
+}
