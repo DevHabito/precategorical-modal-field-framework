@@ -51,13 +51,14 @@ core_lower=(
 )
 
 # Uniform normalized tail bounds. Exact F_up differs from the core model
-# only through gamma^j, r^M, and central-Q high-node tails. Every primitive
-# deviation is written as U*eta_i. The following envelopes are deliberately
-# much weaker than the actual tails.
+# only through gamma^j, r^M, and central-Q high-node tails. Every exact
+# primitive can contain more than one such contribution, so the certificate
+# bounds their SUM, not merely the largest individual source.
 gamma_j_norm=RMAX*(G/S0)**JMIN
 central_tail=(2*S1)**H0
 central_primitive_error=F(4*(H0+1))*central_tail/DEN0
 m_tail=(2*S1*S1)**H0
+combined_primitive_error=gamma_j_norm+central_primitive_error+m_tail
 
 # The sequences (h+1)(2 s_max)^h and (2 s_max^2)^h decrease for h>=260.
 tail_ratio=F(H0+2,H0+1)*(2*S1)
@@ -71,9 +72,8 @@ approx_H_bound=F(1,2)+2*U0*S1/DEN0+2*EMAX*U0
 primitive_bound=max(approx_B_bound,approx_C_bound,approx_H_bound)+U0*ETA
 
 # Six triple products make up Phi. If exact and core primitives are bounded
-# in magnitude by 2 and each primitive perturbation is <=U*ETA, telescoping
-# each triple gives <=12 U ETA, hence <=72 U ETA total. TRIPLE_ERROR=1e-26
-# is a conservative envelope larger than 72*ETA.
+# in magnitude by 2 and the TOTAL perturbation of each primitive is <=U*ETA,
+# telescoping each triple gives <=12 U ETA, hence <=72 U ETA total.
 perturbation_bound=F(72)*ETA
 final_lower=core_lower-TRIPLE_ERROR
 
@@ -88,7 +88,7 @@ gates={
  'central_high_node_tail_lt_1e_100':central_primitive_error<F(1,10**100),
  'M_tail_lt_1e_300':m_tail<F(1,10**300),
  'tail_sequences_decrease_after_h260':tail_ratio<1,
- 'all_primitive_errors_below_eta':max(gamma_j_norm,central_primitive_error,m_tail)<ETA,
+ 'combined_primitive_error_below_eta':combined_primitive_error<ETA,
  'all_exact_and_core_primitives_below_2':primitive_bound<2,
  'telescoping_72eta_below_error_cap':perturbation_bound<TRIPLE_ERROR,
  'core_lower_gt_2p25e_4':core_lower>F(225,10**6),
@@ -123,6 +123,8 @@ out={
    'coefficient':dec(coef),
    'gamma_j_normalized_tail':dec(gamma_j_norm),
    'central_high_node_normalized_error':dec(central_primitive_error),
+   'M_normalized_tail':dec(m_tail),
+   'combined_primitive_normalized_error':dec(combined_primitive_error),
    'tail_ratio_after_h260':dec(tail_ratio),
    'primitive_abs_bound':dec(primitive_bound),
    'core_lower_for_Phi_over_U':dec(core_lower),
