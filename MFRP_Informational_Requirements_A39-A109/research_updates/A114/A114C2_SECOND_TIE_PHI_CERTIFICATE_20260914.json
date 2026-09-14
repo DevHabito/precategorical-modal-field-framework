@@ -1,0 +1,45 @@
+{
+  "audit": "A114C2_SECOND_TIE_PHI_POSITIVITY_CERTIFICATE",
+  "status": "PASS",
+  "scope": {
+    "M_min": 521,
+    "s_min": "129/1000",
+    "s_max": "133/1000",
+    "contact": "j=b+2",
+    "boundary": "E_(b+2)=0"
+  },
+  "dependency": [
+    "A114-A proves the strict implication R=s^(b+2)/U <= 9/1000 => E_(b+2)<0, so equality E_(b+2)=0 implies R>9/1000.",
+    "Frozen localization gives j=b+2>=91."
+  ],
+  "exact_core_identity": "Phi0/U = [R(beta-gamma)-Y(s-gamma)-8 a e(s-gamma)-4 U e R(beta+gamma)+4 U e Y(s-gamma)]/d",
+  "ratio_identity": "Y=R*(beta/s)^j <= R*(125/129)^91",
+  "gate_count": 13,
+  "pass_count": 13,
+  "failed": [],
+  "gates": {
+    "symbolic_core_identity": true,
+    "denominator_gt_0p999": true,
+    "jmin_91_consistent": true,
+    "rho_lt_0p057": true,
+    "coefficient_positive": true,
+    "Rmax_lt_0p018": true,
+    "gamma_j_normalized_tail_lt_eta": true,
+    "central_high_node_tail_lt_1e_100": true,
+    "M_tail_lt_1e_300": true,
+    "all_primitive_errors_below_eta": true,
+    "telescoping_72eta_below_error_cap": true,
+    "core_lower_gt_2p25e_4": true,
+    "final_lower_positive": true
+  },
+  "hard_margins": {
+    "rho": "5.690462248469177475e-02",
+    "coefficient": "5.848822411482922784e-02",
+    "gamma_j_normalized_tail": "4.065567940240384106e-31",
+    "central_high_node_normalized_error": "3.075572880332359273e-147",
+    "core_lower_for_Phi_over_U": "2.255940170334630685e-04",
+    "tail_error_cap": "1.000000000000000000e-26",
+    "final_lower_for_Phi_over_U": "2.255940170334630685e-04"
+  },
+  "conclusion": "E_(b+2)=0 forces Phi=F_(b+2)^up>0. The proof does not use the false route 3(b+2)-h<=12 and does not use finite root data."
+}
