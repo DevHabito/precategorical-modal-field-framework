@@ -1,0 +1,52 @@
+{
+  "audit": "A114B2D_BOUNDARY_ANALYTIC_CERTIFICATE",
+  "status": "PASS",
+  "contract": {
+    "M_min": 521,
+    "s_min": "129/1000",
+    "s_max": "133/1000",
+    "phase": "strict compressed b+2, Phi<0",
+    "boundary": "p0^C=0"
+  },
+  "gate_count": 13,
+  "pass_count": 13,
+  "failed": [],
+  "gates": {
+    "even_Kbeta_positive": true,
+    "even_Ut_gt_0p995": true,
+    "even_Ut_lt_1": true,
+    "even_q1_positive": true,
+    "even_qh_positive": true,
+    "odd_Kbeta_positive": true,
+    "odd_Ut_gt_1p327": true,
+    "odd_Ut_lt_4over3": true,
+    "odd_q1_positive": true,
+    "odd_qh_positive": true,
+    "lambda_lt_1p216": true,
+    "pM_coefficient_gt_0p39": true,
+    "denominator_1_minus_h1U_positive": true
+  },
+  "hard_margins": {
+    "even": {
+      "Kbeta_over_U_lower": "2.510666666666666602e-01",
+      "Kbeta_over_U_upper": "2.511408787909626406e-01",
+      "Ut_lower_at_p0_zero": "9.954572159002746945e-01",
+      "Ut_upper_at_p0_zero": "9.957514604354753551e-01"
+    },
+    "odd": {
+      "Kbeta_over_U_lower": "1.882999999999999952e-01",
+      "Kbeta_over_U_upper": "1.883742121242959477e-01",
+      "Ut_lower_at_p0_zero": "1.327145564038463954e+00",
+      "Ut_upper_at_p0_zero": "1.327668613913967066e+00"
+    }
+  },
+  "exact_identity": "At p0^C=0 the beta row is K_beta t=C_beta, hence Ut=C_beta/(K_beta/U).",
+  "consequences": [
+    "t>0 and p_j=(lambda/2)t>0.",
+    "p_M=(1-lambda/2)t>0.",
+    "The even/odd q1 formulas are strictly positive directly on the boundary.",
+    "The inherited central-Q estimates give q_h>0 and then q_(h+1)>0."
+  ],
+  "scope_note": "D2 and D3 are closed by exact pivot identities, ECT/duality, and already-promoted C1/C3 strict margins; this certificate adds the only new uniform numeric boundary margins needed by D1.",
+  "reproduction_note": "Recomputed from the branch script with fractions.Fraction arithmetic after GitHub read-back; no floating-point sign decision is used. Decimal hard margins are display renderings of exact rational bounds."
+}
