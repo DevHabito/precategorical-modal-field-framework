@@ -1,0 +1,36 @@
+{
+  "audit": "A114B2E_PHI_ZERO_MULTI_CELL_REDTEAM_SCAN",
+  "status": "PASS",
+  "cell_count": 13,
+  "gate_count": 79,
+  "pass_count": 79,
+  "failed_count": 0,
+  "minimum_p0C_decimal": "3.147386546402468300e-03",
+  "maximum_bracket_width_decimal": "3.814697265625000000e-10",
+  "cells": [
+    {"M":521,"b":89,"left":"339364607/2621440000","right":"1325643/10240000","p0_left":"3.2407334748063297e-03","p0_right":"3.2407505407813096e-03"},
+    {"M":521,"b":90,"left":"346993351/2621440000","right":"43374169/327680000","p0_left":"3.1581363191444500e-03","p0_right":"3.1581465773344096e-03"},
+    {"M":522,"b":90,"left":"172723971/1310720000","right":"345447943/2621440000","p0_left":"3.1640480364271170e-03","p0_right":"3.1640591724088354e-03"},
+    {"M":523,"b":90,"left":"344359151/2621440000","right":"21522447/163840000","p0_left":"3.1699586729167880e-03","p0_right":"3.1699705343127380e-03"},
+    {"M":538,"b":92,"left":"67999393/524288000","right":"169998483/1310720000","p0_left":"3.2171370099565070e-03","p0_right":"3.2171535944136563e-03"},
+    {"M":538,"b":93,"left":"8685503/65536000","right":"347420121/2621440000","p0_left":"3.1551827067945793e-03","p0_right":"3.1551930744248887e-03"},
+    {"M":555,"b":95,"left":"85253057/655360000","right":"341012229/2621440000","p0_left":"3.1935344953080277e-03","p0_right":"3.1935501881442557e-03"},
+    {"M":600,"b":103,"left":"343160339/2621440000","right":"17158017/131072000","p0_left":"3.1640139486038430e-03","p0_right":"3.1640284846599290e-03"},
+    {"M":700,"b":120,"left":"342888907/2621440000","right":"85722227/655360000","p0_left":"3.1551503800354150e-03","p0_right":"3.1551675305629317e-03"},
+    {"M":800,"b":137,"left":"342689769/2621440000","right":"34268977/262144000","p0_left":"3.1507170039561114e-03","p0_right":"3.1507367897726534e-03"},
+    {"M":900,"b":154,"left":"34253673/262144000","right":"342536731/2621440000","p0_left":"3.1485108942219094e-03","p0_right":"3.1485333298360246e-03"},
+    {"M":1000,"b":170,"left":"84587817/655360000","right":"338351269/2621440000","p0_left":"3.1551270404465970e-03","p0_right":"3.1551612311795734e-03"},
+    {"M":1000,"b":171,"left":"42801879/327680000","right":"342415033/2621440000","p0_left":"3.1473865464024683e-03","p0_right":"3.1474116415721163e-03"}
+  ],
+  "checks_per_cell": [
+    "same exact b at both bracket endpoints",
+    "strict compressed b+2 at both endpoints and every bisection midpoint",
+    "Phi(left)<0<Phi(right)",
+    "p0^C positive at both endpoints",
+    "S_(gamma+)^C(left)>0>S_(gamma+)^C(right)",
+    "final rational bracket width <=4e-10"
+  ],
+  "extra_gate": "minimum p0^C across all 26 bracket endpoints exceeds 0.003",
+  "interpretation": "Thirteen independent strict-b+2 cells from M=521 through M=1000 were adversarially bracketed around a Phi sign change using exact rational bisection. No Phi/p0 collision or pivot-sign reversal was found.",
+  "nonclaim": "Finite scanning does not prove the all-tail theorem; the analytic B0/B1 certificate is the proof layer."
+}
