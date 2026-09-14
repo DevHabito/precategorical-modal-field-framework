@@ -25,6 +25,12 @@ The newest package is [`MFRP_Informational_Requirements_A39-A109/`](MFRP_Informa
 
 For a readable overview, start with [`README_A107_A109_UPDATE.md`](MFRP_Informational_Requirements_A39-A109/README_A107_A109_UPDATE.md). The update records both the promising evidence and the result that failed: A108's original one-sided boundary rule has an exact counterexample, while the replacement two-sided local rule remains a finite computational conjecture. The stored prospective sequence currently covers ranks 106-414. The H19 holdout for ranks 415-430 is frozen but deliberately unexecuted.
 
+## Literature and novelty positioning
+
+For the more recent A110-A114 optimization results, reviewers should read [`docs/novelty/A110_A114_LITERATURE_POSITIONING_AND_NOVELTY_MAP_20260914.md`](docs/novelty/A110_A114_LITERATURE_POSITIONING_AND_NOVELTY_MAP_20260914.md).
+
+That note separates classical ingredients from project-specific theorems, rewrites the recent LP family as a coupled exponential-moment problem, compares it with parametric LP, moment-problem, Tchebycheff/ECT, total-positivity, cyclic-polytope, and Laplace-transform literature, and keeps all negative search results under the explicit qualifier **NOVELTY_NOT_CERTIFIED**.
+
 ## Central correction
 
 For loopless labeled digraphs on five vertices:
@@ -47,7 +53,7 @@ Both exact counts are independently reproduced by exhaustive enumeration and clo
 - `docs/CANONICAL_VERSIONS.md` — which version should be treated as canonical;
 - `docs/MANUSCRIPT_SPLIT.md` — formal article split and readiness decision;
 - `docs/RESULT_CLASSIFICATION.md` — claim-level classification by evidence, novelty, allowed wording, and manuscript destination;
-- `docs/novelty/` — claim-level novelty audits C1 and C2, including safe manuscript wording and exact supporting witnesses;
+- `docs/novelty/` — claim-level novelty audits plus the A110-A114 literature-positioning map, including safe manuscript wording and supporting references;
 - `docs/SCIENTIFIC_STATUS.md` — established results and explicit nonclaims;
 - `docs/REPRODUCIBILITY.md` — environment and execution instructions;
 - `docs/REPRODUCIBILITY_PROTOCOLS.md` — canonical audit protocol documentation;
