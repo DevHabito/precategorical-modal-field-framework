@@ -21,8 +21,9 @@ with the frozen beta, gamma, target and normalized-tolerance conventions inherit
 The current classification is now:
 
 - strict compressed `b+3` -> endpoint-released lift (A114-A);
-- strict compressed `b+1` -> gamma-plus pivot theorem (A114-B1);
+- strict compressed `b+1` -> gamma-plus pivot theorem, including its internal `Phi=0` degeneracy (A114-B1);
 - strict compressed `b+2`, `Phi>0` -> gamma-plus at contact `b+2` (A114-B2-A);
+- strict compressed `b+2`, `Phi=0` -> unique primal optimum with degenerate `C/G+` coalescence (A114-B2-E);
 - strict compressed `b+2`, `Phi<0`, `p0^C>0` -> compressed two-band basis `C` (A114-B2-C2);
 - strict compressed `b+2`, `Phi<0`, `p0^C<0`, `r_E(q0)>0` -> endpoint-released basis `E` (A114-B2-C1);
 - strict compressed `b+2`, `Phi<0`, `p0^C<0`, `r_E(q0)<0`, `Gamma>0` -> q0/q1 gamma-inactive basis `QI` (A114-B2-C3);
@@ -39,7 +40,7 @@ Here
 
 A114-B2-B separately proves that the pure central-Q gamma-minus family cannot be strictly primal feasible on the `Phi<0` analytic tail.
 
-Therefore the **entire internal `Phi<0` branch is classified, including its equality sets**. The remaining `b+2` boundary is the outer transition `Phi=0`; it is not silently imported from the distinct `b+1` phase.
+Therefore the **entire strict compressed `b+2` phase is classified under the frozen tail contract, including its outer `Phi=0` pivot and all internal equality sets**. This does not close the separate surfaces where the compressed maximizer itself is non-strict.
 
 ## Literature and novelty positioning
 
@@ -227,6 +228,35 @@ Primary files:
 - `a114b2d_exact_boundary_regression.py`
 - `a114b2d_logical_audit.py`
 
+## A114-B2-E — outer `Phi=0` boundary
+
+**PROVED conditional boundary theorem; independently red-teamed.** Under strict compressed `b+2` and `Phi=0`:
+
+- the C point has all primal masses positive and every nonbasic P/Q reduced cost strict;
+- `S_(gamma-)^C>0` and `S_(gamma+)^C=0`;
+- the primal optimum is unique;
+- the adjacent gamma-plus basis has `p_(j+1)=0`, `p_j>0`, and collapses to the same primal point as C.
+
+The equality-surface analytic certificate passes **22/22** exact rational gates. It re-establishes the B2 source box at `Phi=0` and proves the uniform separation
+
+`p0^C > 0.0029407...`,
+
+so the `Phi=0` and `p0^C=0` surfaces cannot collide inside the frozen tail contract. The independent near-boundary Fraction reconstruction passes **24/24** gates, the section-scoped logical audit passes **32/32**, and a 13-cell exact-rational red-team scan from `M=521` through `M=1000` passes **79/79** gates. The independent red-team audit reports **PASS WITH SCOPE**.
+
+Primary files:
+
+- `A114B2E_PHI_ZERO_BOUNDARY_THEOREM_20260914.md`
+- `A114B2E_PHI_ZERO_ANALYTIC_CERTIFICATE_20260914.json`
+- `A114B2E_PHI_ZERO_FRACTION_CROSSCHECK_20260914.json`
+- `A114B2E_PHI_ZERO_LOGICAL_AUDIT_20260914.json`
+- `A114B2E_PHI_ZERO_REDTEAM_SCAN_20260914.json`
+- `A114B2E_PHI_ZERO_RED_TEAM_AUDIT_20260914.md`
+- `A114B2E_FRONTIER_UPDATE_20260914.md`
+- `a114b2e_phi_zero_analytic_certificate.py`
+- `a114b2e_phi_zero_fraction_crosscheck.py`
+- `a114b2e_phi_zero_logical_audit.py`
+- `a114b2e_phi_zero_redteam_scan.py`
+
 ## Longitudinal A80–A114 audit
 
 The programme from A80 through A114-B2-C2 was reviewed longitudinally on 2026-09-13 for scope drift, circularity, witness-to-continuum promotion, compressed/lifted conflation, provenance and downstream reuse of refuted claims.
@@ -238,32 +268,35 @@ Read:
 - `A80_A114_LONGITUDINAL_AUDIT_20260913.md`
 - `A80_A114_LONGITUDINAL_AUDIT_20260913.json`
 
-That dated audit predates C3/D. C3 and D have their own independent certificates, exact crosschecks/regressions, correction/hardening notes and logical audits listed above; the older audit is retained as a historical snapshot rather than rewritten retroactively.
+That dated audit predates C3/D/E. C3, D and E have their own independent certificates, exact crosschecks/regressions, hardening/red-team notes and logical audits listed above; the older audit is retained as a historical snapshot rather than rewritten retroactively.
 
 ## Current frontier
 
-Inside strict compressed `b+2` with `Phi<0`, the internal branch is now classified including equality sets:
+Inside every **strict compressed `b+2` phase** under the frozen tail contract, the lifted LP is now classified including equality sets:
 
-- `p0^C>0` -> unique strict `C`;
-- `p0^C=0` -> unique primal optimum, degenerate `C/E/QI` coalescence;
-- `p0^C<0`, `r_E(q0)>0` -> unique strict `E`;
-- `p0^C<0`, `r_E(q0)=0` -> exact one-dimensional optimal face;
-- `p0^C<0`, `r_E(q0)<0`, `Gamma>0` -> unique strict `QI`;
-- `p0^C<0`, `r_E(q0)<0`, `Gamma=0` -> unique primal optimum, degenerate `QI/QA` coalescence;
-- `p0^C<0`, `r_E(q0)<0`, `Gamma<0` -> unique strict `QA`.
+- `Phi>0` -> unique strict gamma-plus `G+`;
+- `Phi=0` -> unique primal optimum, degenerate `C/G+` coalescence;
+- `Phi<0`, `p0^C>0` -> unique strict `C`;
+- `Phi<0`, `p0^C=0` -> unique primal optimum, degenerate `C/E/QI` coalescence;
+- `Phi<0`, `p0^C<0`, `r_E(q0)>0` -> unique strict `E`;
+- `Phi<0`, `p0^C<0`, `r_E(q0)=0` -> exact one-dimensional optimal face;
+- `Phi<0`, `p0^C<0`, `r_E(q0)<0`, `Gamma>0` -> unique strict `QI`;
+- the same residual branch with `Gamma=0` -> unique primal optimum, degenerate `QI/QA` coalescence;
+- the same residual branch with `Gamma<0` -> unique strict `QA`.
 
-The next unresolved A114-B2 target is therefore
+The remaining natural A114 boundary problem is no longer an internal `b+2` pivot. It is the set where the **compressed maximizer itself is non-strict**. In A113 notation the principal tie surfaces are
 
-`Phi=0`
+- `E_(b+1)=0`, the `b+1` / `b+2` compressed tie;
+- `E_(b+2)=0`, the `b+2` / `b+3` compressed tie.
 
-in the strict compressed `b+2` phase. It must be analyzed independently rather than inferred from the already-closed `b+1` zero-pivot theorem.
+These surfaces are not classified by the strict-phase A114 theorems and must be studied separately; no limit-from-neighboring-phase rule is assumed.
 
 ## Claim boundary
 
 A114 does **not** currently prove:
 
-- the `b+2` outer transition `Phi=0`;
-- a universal monotone ordering of the internal discriminant zeros as `s` varies;
+- the lifted architecture on the compressed tie surfaces `E_(b+1)=0` or `E_(b+2)=0`;
+- a universal monotone ordering of all discriminant zeros as `s` varies;
 - anything outside the frozen source window `[129/1000,133/1000]` unless explicitly covered by another theorem;
 - any physical interpretation.
 
