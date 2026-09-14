@@ -1,0 +1,46 @@
+{
+  "audit": "A114B2E_PHI_ZERO_INDEPENDENT_FRACTION_CROSSCHECK",
+  "status": "PASS",
+  "gate_count": 24,
+  "pass_count": 24,
+  "failed_count": 0,
+  "exact_brackets": [
+    {
+      "M": 538,
+      "left": "129698549/1000000000",
+      "right": "129698550/1000000000",
+      "left_phi_sign": -1,
+      "right_phi_sign": 1,
+      "left_selected": "C",
+      "right_selected": "GP",
+      "left_p0C_decimal": "3.2171252442790513e-03",
+      "right_p0C_decimal": "3.2171687194383230e-03",
+      "left_Sgamma_plus_C_decimal": "1.1315075651785864e-08",
+      "right_Sgamma_plus_C_decimal": "-1.0705882675513774e-08"
+    },
+    {
+      "M": 555,
+      "left": "130085841/1000000000",
+      "right": "130085842/1000000000",
+      "left_phi_sign": -1,
+      "right_phi_sign": 1,
+      "left_selected": "C",
+      "right_selected": "GP",
+      "left_p0C_decimal": "3.1935192895775864e-03",
+      "right_p0C_decimal": "3.1935604274061224e-03",
+      "left_Sgamma_plus_C_decimal": "1.3008568424570871e-08",
+      "right_Sgamma_plus_C_decimal": "-7.826496713725581e-09"
+    }
+  ],
+  "checks_per_control": [
+    "strict compressed b+2",
+    "expected exact Phi sign",
+    "p0^C positive",
+    "S_(gamma+)^C has exact sign opposite to Phi",
+    "selected architecture passes complete strict atom-by-atom KKT",
+    "pivot/slack are nonzero at the bracket endpoints"
+  ],
+  "reproduction_note": "The raw LP matrices, primal and dual systems, every nonbasic P/Q reduced cost, all inactive slacks, and primal-dual equality were recomputed with fractions.Fraction arithmetic. Decimal values are display renderings only.",
+  "interpretation": "These exact rational brackets independently stress the proposed C/G+ transition from both sides in one even and one odd tail cell. They are regression/falsification evidence only and are not premises of the all-tail theorem.",
+  "nonclaim": "No rational bracket endpoint is asserted to be the exact Phi=0 root."
+}
