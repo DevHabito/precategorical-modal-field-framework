@@ -38,6 +38,18 @@ A114-B2-B separately proves that the pure central-Q gamma-minus family cannot be
 
 Therefore the **strict interior** of the negative-pivot `b+2` tail is now classified into `C/E/QI/QA`. The sets `p0^C=0`, `r_E(q0)=0`, `Gamma=0`, and the `b+2` `Phi=0` transition remain separate degenerate/open boundaries unless explicitly covered by a theorem.
 
+## Literature and novelty positioning
+
+For reviewer-facing context, read [`../../../docs/novelty/A110_A114_LITERATURE_POSITIONING_AND_NOVELTY_MAP_20260914.md`](../../../docs/novelty/A110_A114_LITERATURE_POSITIONING_AND_NOVELTY_MAP_20260914.md).
+
+That note rewrites the current LP family as a **coupled exponential-moment extremal problem** and distinguishes:
+
+- classical tools and close prior art (linear-fractional programming, parametric LP, discrete/generalized moment problems, extremal measures with prescribed Laplace information, Tchebycheff/ECT systems, total positivity, principal representations, cyclic-polytope connections, and Laplace-transform ratio orders);
+- project theorems such as A113 and the A114 strict active-set classification;
+- the broader `Coupled Exponential-Moment Active-Set Staircase` as an extracted research conjecture, **not** a promoted general theorem.
+
+The literature note deliberately uses `APPARENTLY_UNREPORTED` / `PROJECT_SPECIFIC_NO_MATCH_FOUND` together with `NOVELTY_NOT_CERTIFIED`; it does not make a priority claim from a negative search result.
+
 ## A114-A — strict compressed `b+3`
 
 **PROVED.** If `j=b+3` is the strict compressed maximizer, the unique strict lifted optimum is
