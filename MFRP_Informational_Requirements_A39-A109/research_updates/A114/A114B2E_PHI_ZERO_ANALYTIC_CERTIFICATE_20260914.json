@@ -1,0 +1,43 @@
+{
+  "audit": "A114B2E_PHI_ZERO_ANALYTIC_CERTIFICATE",
+  "status": "PASS",
+  "contract": {
+    "M_min": 521,
+    "s_min": "129/1000",
+    "s_max": "133/1000",
+    "phase": "j=b+2 strict compressed maximizer",
+    "boundary": "Phi=F_j^up=0"
+  },
+  "gate_count": 22,
+  "pass_count": 22,
+  "failed": [],
+  "hard_margins": {
+    "dyadic_margin_if_3j_minus_h_le_12": "1.039210856567693300e-06",
+    "E_bplus1_upper_if_Q_le_0p009": "-5.710660268714011500e-05",
+    "Q_upper": "3.206221060852713000e-02",
+    "even": {
+      "Kbeta_lower": "2.510666666666666600e-01",
+      "Kgamma_plus_lower": "1.239333333333333400e-01",
+      "B0_lower": "3.814469689260096000e-04",
+      "B1_lower": "1.266840469969130700e-01",
+      "p0_lower_on_Sgamma_plus_zero": "2.989803547798137000e-03"
+    },
+    "odd": {
+      "Kbeta_lower": "1.883000000000000000e-01",
+      "Kgamma_plus_lower": "9.295000000000000000e-02",
+      "B0_lower": "2.814469689260096000e-04",
+      "B1_lower": "9.499446366357975000e-02",
+      "p0_lower_on_Sgamma_plus_zero": "2.940759539100001000e-03"
+    }
+  },
+  "exact_logic": [
+    "The B2-B proof establishes the stronger implication 3j-h<=12 => Phi>1.0392108565e-6; therefore Phi=0 implies 3j-h>=13 without continuity.",
+    "Strict b+2 plus Q<=9/1000 contradicts E_(b+1)>0; the dyadic gate supplies the same upper source-box bridge, hence 9/1000<Q=s^(j-1)/U<1/25 also at Phi=0.",
+    "The exact C/GP bordered pivot and nonzero determinant orientations give Phi=0 => S_(gamma+)^C=0.",
+    "For the C reduction, S_(gamma+)^C=(B0-B1*p0)/K_beta after exact elimination with the beta-minus equality.",
+    "Uniform rational envelopes prove K_beta>0, B0>0 and B1>0 in both parities, hence p0^C=B0/B1>0 on Phi=0.",
+    "The explicit p0 lower bound shows Phi=0 cannot intersect p0^C=0 anywhere in the frozen tail contract."
+  ],
+  "reproduction_note": "All sign gates were recomputed with fractions.Fraction arithmetic. Decimal margins are display renderings only; no floating-point sign decision is used.",
+  "scope_note": "The certificate establishes the new equality-surface source box and p0 separation. Full KKT closure is a logical composition with the already-promoted C2 gates after replacing the strict gamma-plus slack by its exact zero value."
+}
