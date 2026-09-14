@@ -1,8 +1,8 @@
 {
   "audit": "A114C2_LOGICAL_COMPOSITION_AUDIT",
   "status": "PASS",
-  "check_count": 33,
-  "pass_count": 33,
+  "check_count": 35,
+  "pass_count": 35,
   "failed": [],
   "checks": {
     "second_tie_premise": true,
@@ -14,6 +14,8 @@
     "tie_R_lower_reproved": true,
     "R_upper_from_b_definition": true,
     "phi_certificate_passes": true,
+    "phi_tail_monotonicity_explicit": true,
+    "phi_primitive_bound_explicit": true,
     "phi_margin_strict": true,
     "phi_not_dyadic": true,
     "false_dyadic_counterexamples_preserved": true,
@@ -41,9 +43,9 @@
   },
   "scope": ["M>=521", "129/1000<=s<=133/1000", "E_(b+2)=0"],
   "guardrails": [
-    "The false dyadic shortcut is explicitly rejected and exact counterexamples are preserved.",
+    "The false dyadic shortcut is explicitly rejected and counterexamples are preserved.",
     "A114-A is not imported wholesale at equality: only source-bound-dependent primal/gamma-slack pieces are reused; the endpoint p0 reduced cost loses strictness.",
-    "Phi>0 is proved analytically from R>9/1000 with a standalone tail-error certificate.",
+    "Phi>0 is proved analytically from R>9/1000 with a standalone tail-error certificate whose tail monotonicity and primitive-size assumptions are themselves checked.",
     "Finite brackets are regression only."
   ]
 }
