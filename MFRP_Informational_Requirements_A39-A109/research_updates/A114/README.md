@@ -18,7 +18,7 @@ with the frozen beta, gamma, target and normalized-tolerance conventions inherit
 
 ## Current status — 2026-09-14
 
-The promoted/staged classification is now:
+The current classification is now:
 
 - strict compressed `b+3` -> endpoint-released lift (A114-A);
 - strict compressed `b+1` -> gamma-plus pivot theorem (A114-B1);
@@ -39,7 +39,7 @@ Here
 
 A114-B2-B separately proves that the pure central-Q gamma-minus family cannot be strictly primal feasible on the `Phi<0` analytic tail.
 
-Therefore, conditional on promotion of the staged D package, the **entire internal `Phi<0` branch is classified, including its equality sets**. The remaining `b+2` boundary is the outer transition `Phi=0`; it is not silently imported from the distinct `b+1` phase.
+Therefore the **entire internal `Phi<0` branch is classified, including its equality sets**. The remaining `b+2` boundary is the outer transition `Phi=0`; it is not silently imported from the distinct `b+1` phase.
 
 ## Literature and novelty positioning
 
@@ -206,7 +206,7 @@ Primary files:
 
 ## A114-B2-D — internal zero-discriminant boundaries
 
-**PROVED conditional boundary theorem in staging; independently red-teamed.** Under strict compressed `b+2` and `Phi<0`:
+**PROVED conditional boundary theorem; independently red-teamed.** Under strict compressed `b+2` and `Phi<0`:
 
 1. `p0^C=0` gives a unique primal optimum. `C`, `E`, and `QI` are degenerate basis representations of the same primal point after their zero pivot coordinates are deleted.
 2. `p0^C<0` and `r_E(q0)=0` gives a genuine one-dimensional primal optimal face. The entire face is `conv{E,QI}` when `Gamma>=0`, with `QI=QA` at `Gamma=0`, and `conv{E,QA}` when `Gamma<0`.
