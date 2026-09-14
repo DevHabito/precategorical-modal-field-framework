@@ -18,7 +18,7 @@ with the frozen beta, gamma, target and normalized-tolerance conventions inherit
 
 ## Current status — 2026-09-14
 
-The promoted strict interior classification is now:
+The promoted/staged classification is now:
 
 - strict compressed `b+3` -> endpoint-released lift (A114-A);
 - strict compressed `b+1` -> gamma-plus pivot theorem (A114-B1);
@@ -26,9 +26,12 @@ The promoted strict interior classification is now:
 - strict compressed `b+2`, `Phi<0`, `p0^C>0` -> compressed two-band basis `C` (A114-B2-C2);
 - strict compressed `b+2`, `Phi<0`, `p0^C<0`, `r_E(q0)>0` -> endpoint-released basis `E` (A114-B2-C1);
 - strict compressed `b+2`, `Phi<0`, `p0^C<0`, `r_E(q0)<0`, `Gamma>0` -> q0/q1 gamma-inactive basis `QI` (A114-B2-C3);
-- the same residual premises with `Gamma<0` -> q0/q1 gamma-minus-active basis `QA` (A114-B2-C3),
+- the same residual premises with `Gamma<0` -> q0/q1 gamma-minus-active basis `QA` (A114-B2-C3);
+- `p0^C=0` -> unique primal optimum with degenerate `C/E/QI` coalescence (A114-B2-D);
+- `p0^C<0`, `r_E(q0)=0` -> exact one-dimensional optimal face, ending at `QI` for `Gamma>=0` and at `QA` for `Gamma<0` (A114-B2-D);
+- `p0^C<0`, `r_E(q0)<0`, `Gamma=0` -> unique primal optimum with degenerate `QI/QA` coalescence (A114-B2-D).
 
-where
+Here
 
 `Phi=F_(b+2)^up`,
 
@@ -36,7 +39,7 @@ where
 
 A114-B2-B separately proves that the pure central-Q gamma-minus family cannot be strictly primal feasible on the `Phi<0` analytic tail.
 
-Therefore the **strict interior** of the negative-pivot `b+2` tail is now classified into `C/E/QI/QA`. The sets `p0^C=0`, `r_E(q0)=0`, `Gamma=0`, and the `b+2` `Phi=0` transition remain separate degenerate/open boundaries unless explicitly covered by a theorem.
+Therefore, conditional on promotion of the staged D package, the **entire internal `Phi<0` branch is classified, including its equality sets**. The remaining `b+2` boundary is the outer transition `Phi=0`; it is not silently imported from the distinct `b+1` phase.
 
 ## Literature and novelty positioning
 
@@ -45,7 +48,7 @@ For reviewer-facing context, read [`../../../docs/novelty/A110_A114_LITERATURE_P
 That note rewrites the current LP family as a **coupled exponential-moment extremal problem** and distinguishes:
 
 - classical tools and close prior art (linear-fractional programming, parametric LP, discrete/generalized moment problems, extremal measures with prescribed Laplace information, Tchebycheff/ECT systems, total positivity, principal representations, cyclic-polytope connections, and Laplace-transform ratio orders);
-- project theorems such as A113 and the A114 strict active-set classification;
+- project theorems such as A113 and the A114 active-set classification;
 - the broader `Coupled Exponential-Moment Active-Set Staircase` as an extracted research conjecture, **not** a promoted general theorem.
 
 The literature note deliberately uses `APPARENTLY_UNREPORTED` / `PROJECT_SPECIFIC_NO_MATCH_FOUND` together with `NOVELTY_NOT_CERTIFIED`; it does not make a priority claim from a negative search result.
@@ -201,6 +204,29 @@ Primary files:
 - `a114b2c3_fraction_crosscheck.py`
 - `a114b2c3_logical_audit.py`
 
+## A114-B2-D — internal zero-discriminant boundaries
+
+**PROVED conditional boundary theorem in staging; independently red-teamed.** Under strict compressed `b+2` and `Phi<0`:
+
+1. `p0^C=0` gives a unique primal optimum. `C`, `E`, and `QI` are degenerate basis representations of the same primal point after their zero pivot coordinates are deleted.
+2. `p0^C<0` and `r_E(q0)=0` gives a genuine one-dimensional primal optimal face. The entire face is `conv{E,QI}` when `Gamma>=0`, with `QI=QA` at `Gamma=0`, and `conv{E,QA}` when `Gamma<0`.
+3. `p0^C<0`, `r_E(q0)<0`, and `Gamma=0` gives a unique primal optimum with `QI` and `QA` collapsing to the same primal point.
+
+The D1 boundary certificate uses exact rational arithmetic and passes **13/13** gates. The independent exact boundary regression scans complete P/Q reduced costs on ten adversarial controls and passes **30/30** gates. The hardened logical-composition audit passes **28/28** checks. The independent red-team audit reports **PASS WITH SCOPE** and explicitly tests continuity shortcuts, circularity, hidden optimal directions, rounding sensitivity, ad-hoc phase ordering, and higher-codimension overlap.
+
+Primary files:
+
+- `A114B2D_INTERNAL_ZERO_BOUNDARY_THEOREM_20260914.md`
+- `A114B2D_BOUNDARY_HARDENING_NOTE_20260914.md`
+- `A114B2D_BOUNDARY_ANALYTIC_CERTIFICATE_20260914.json`
+- `A114B2D_EXACT_BOUNDARY_REGRESSION_20260914.json`
+- `A114B2D_LOGICAL_AUDIT_20260914.json`
+- `A114B2D_RED_TEAM_AUDIT_20260914.md`
+- `A114B2D_FRONTIER_UPDATE_20260914.md`
+- `a114b2d_boundary_analytic_certificate.py`
+- `a114b2d_exact_boundary_regression.py`
+- `a114b2d_logical_audit.py`
+
 ## Longitudinal A80–A114 audit
 
 The programme from A80 through A114-B2-C2 was reviewed longitudinally on 2026-09-13 for scope drift, circularity, witness-to-continuum promotion, compressed/lifted conflation, provenance and downstream reuse of refuted claims.
@@ -212,30 +238,35 @@ Read:
 - `A80_A114_LONGITUDINAL_AUDIT_20260913.md`
 - `A80_A114_LONGITUDINAL_AUDIT_20260913.json`
 
-That dated audit predates C3. C3 has its own independent analytic certificate, Fraction crosscheck, correction note and logical-composition audit listed above; the older audit is retained as a historical snapshot rather than rewritten retroactively.
+That dated audit predates C3/D. C3 and D have their own independent certificates, exact crosschecks/regressions, correction/hardening notes and logical audits listed above; the older audit is retained as a historical snapshot rather than rewritten retroactively.
 
 ## Current frontier
 
-Inside strict compressed `b+2` with `Phi<0`, the strict interior is closed:
+Inside strict compressed `b+2` with `Phi<0`, the internal branch is now classified including equality sets:
 
-- `p0^C>0` -> `C` by C2;
-- `p0^C<0` and `r_E(q0)>0` -> `E` by C1;
-- `p0^C<0`, `r_E(q0)<0`, `Gamma>0` -> `QI` by C3;
-- `p0^C<0`, `r_E(q0)<0`, `Gamma<0` -> `QA` by C3.
+- `p0^C>0` -> unique strict `C`;
+- `p0^C=0` -> unique primal optimum, degenerate `C/E/QI` coalescence;
+- `p0^C<0`, `r_E(q0)>0` -> unique strict `E`;
+- `p0^C<0`, `r_E(q0)=0` -> exact one-dimensional optimal face;
+- `p0^C<0`, `r_E(q0)<0`, `Gamma>0` -> unique strict `QI`;
+- `p0^C<0`, `r_E(q0)<0`, `Gamma=0` -> unique primal optimum, degenerate `QI/QA` coalescence;
+- `p0^C<0`, `r_E(q0)<0`, `Gamma<0` -> unique strict `QA`.
 
-The remaining A114 work is therefore on degenerate zero-discriminant sets and/or extensions of the frozen contract, not on an unclassified strict negative-pivot interior branch.
+The next unresolved A114-B2 target is therefore
+
+`Phi=0`
+
+in the strict compressed `b+2` phase. It must be analyzed independently rather than inferred from the already-closed `b+1` zero-pivot theorem.
 
 ## Claim boundary
 
-A114 does **not** currently prove a generic strict classification on
+A114 does **not** currently prove:
 
-- `p0^C=0`;
-- `r_E(q0)=0`;
-- `Gamma=0`;
-- the `b+2` transition `Phi=0`;
-- any source window outside `[129/1000,133/1000]`;
+- the `b+2` outer transition `Phi=0`;
+- a universal monotone ordering of the internal discriminant zeros as `s` varies;
+- anything outside the frozen source window `[129/1000,133/1000]` unless explicitly covered by another theorem;
 - any physical interpretation.
 
 ## Field-note discipline
 
-Failed stronger claims, implementation mistakes, historical waypoints and negative controls remain preserved intentionally. The authoritative current status is this README plus the dated theorem, certificate, logical-audit and correction files listed above.
+Failed stronger claims, implementation mistakes, historical waypoints and negative controls remain preserved intentionally. The authoritative current status is this README plus the dated theorem, certificate, logical-audit, hardening, red-team and correction files listed above.
