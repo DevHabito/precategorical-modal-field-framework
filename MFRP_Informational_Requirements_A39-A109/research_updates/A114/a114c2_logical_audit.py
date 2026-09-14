@@ -25,6 +25,7 @@ checks={
  'R_upper_from_b_definition':'R=\\frac{s^{b+2}}U\\le s^2' in TH,
  'phi_certificate_passes':CERT.get('status')=='PASS' and CERT.get('gate_count')==15 and CERT.get('pass_count')==15,
  'phi_tail_monotonicity_explicit':CERT.get('gates',{}).get('tail_sequences_decrease_after_h260') is True,
+ 'phi_combined_tail_error_explicit':CERT.get('gates',{}).get('combined_primitive_error_below_eta') is True,
  'phi_primitive_bound_explicit':CERT.get('gates',{}).get('all_exact_and_core_primitives_below_2') is True,
  'phi_margin_strict':'2.25594\\times10^{-4}>0' in TH,
  'phi_not_dyadic':'does not use the false shortcut' in TH,
@@ -63,7 +64,7 @@ out={
  'guardrails':[
    'The false dyadic shortcut is explicitly rejected and counterexamples are preserved.',
    'A114-A is not imported wholesale at equality: only source-bound-dependent primal/gamma-slack pieces are reused; the endpoint p0 reduced cost loses strictness.',
-   'Phi>0 is proved analytically from R>9/1000 with a standalone tail-error certificate whose tail monotonicity and primitive-size assumptions are themselves checked.',
+   'Phi>0 is proved analytically from R>9/1000 with a standalone tail-error certificate whose tail monotonicity, summed primitive error and primitive-size assumptions are themselves checked.',
    'Finite brackets are regression only.'
  ],
 }
