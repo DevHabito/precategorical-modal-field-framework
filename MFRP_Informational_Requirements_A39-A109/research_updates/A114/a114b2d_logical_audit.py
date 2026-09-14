@@ -4,10 +4,12 @@ import json
 
 HERE=Path(__file__).resolve().parent
 TH=(HERE/'A114B2D_INTERNAL_ZERO_BOUNDARY_THEOREM_20260914.md').read_text(encoding='utf-8')
+HARD=(HERE/'A114B2D_BOUNDARY_HARDENING_NOTE_20260914.md').read_text(encoding='utf-8')
 C1=(HERE/'A114B2C1_ENDPOINT_RELEASED_NEGATIVE_PIVOT_BRANCH_THEOREM_20260913.md').read_text(encoding='utf-8')
 C2=(HERE/'A114B2C2_COMPRESSED_NEGATIVE_PIVOT_BRANCH_THEOREM_20260913.md').read_text(encoding='utf-8')
 C3=(HERE/'A114B2C3_QI_QA_RESIDUAL_BRANCH_THEOREM_20260914.md').read_text(encoding='utf-8')
 REG=json.loads((HERE/'A114B2D_EXACT_BOUNDARY_REGRESSION_20260914.json').read_text(encoding='utf-8'))
+ANA=json.loads((HERE/'A114B2D_BOUNDARY_ANALYTIC_CERTIFICATE_20260914.json').read_text(encoding='utf-8'))
 OUT=HERE/'A114B2D_LOGICAL_AUDIT_20260914.json'
 
 checks={
@@ -18,6 +20,7 @@ checks={
  'D1_unique_primal_claim':'D1. The `p_0^C=0` boundary has a unique primal optimum' in TH,
  'D1_C_E_QI_coalescence':'`C`, `E`, and `QI`' in TH and 'same primal point' in TH,
  'D1_dual_overclaim_excluded':'does not assert that the `E` or `QI` dual basis is feasible' in TH,
+ 'D1_direct_Ut_hardening':'0.9954<Ut<0.9958<1' in HARD and '1.3271<Ut<1.3277<4/3' in HARD,
  'D2_residual_zero_premises':'p_0^C<0' in TH and 'r_E(q_0)=0' in TH,
  'D2_zero_reduced_cost_edge':'nonbasic variable with zero reduced cost' in TH,
  'D2_ECT_four_roots':'0,\\quad1,\\quad h,\\quad h+1' in TH,
@@ -25,6 +28,7 @@ checks={
  'D2_nonunique_primal':'primal optimum is **not unique**' in TH,
  'D2_three_gamma_endpoint_cases':'If `Gamma>0`' in TH and 'If `Gamma=0`' in TH and 'If `Gamma<0`' in TH,
  'D2_gamma_zero_no_illegal_D3_dependency':'At `Gamma=0`, use the D3' not in TH and 'exact Schur identity `p_(j-1)^QA=0`' in TH,
+ 'D2_entire_optimal_face_hardened':'complete optimal set' in HARD and 'no hidden second optimal direction' in HARD and 'conv\\{E,QI\\}' in HARD and 'conv\\{E,QA\\}' in HARD,
  'D3_full_premises':'r_E(q_0)<0' in TH and '\\Gamma=0' in TH,
  'D3_QI_QA_coalescence':'common `QI=QA` primal point' in TH,
  'D3_unique_primal':'D3. The `Gamma=0` boundary has a unique primal optimum' in TH,
@@ -36,6 +40,7 @@ checks={
  'false_convexity_route_absent':'positive because QA lies between two primal-feasible E/QI endpoints' not in TH,
  'dependencies_are_promoted':('PROVED conditional branch theorem' in C1 and 'PROVED conditional branch theorem' in C2 and 'PROVED conditional branch theorem' in C3),
  'regression_passes':REG.get('status')=='PASS' and REG.get('gate_count')==30 and REG.get('pass_count')==30,
+ 'boundary_analytic_certificate_passes':ANA.get('status')=='PASS' and ANA.get('gate_count')==13 and ANA.get('pass_count')==13 and not ANA.get('failed'),
 }
 
 out={
