@@ -1,0 +1,33 @@
+{
+  "audit": "A115A_UNIFORM_H_GAP_CERTIFICATE",
+  "status": "PASS",
+  "scope": {
+    "M_min": 521,
+    "beta": ["31/250", "63/500"],
+    "s": ["129/1000", "133/1000"],
+    "tau": ["49/100", "51/100"],
+    "epsilon": "tau^h/(1875 even; 2500 odd)"
+  },
+  "gate_count": 8,
+  "pass_count": 8,
+  "failed": [],
+  "gates": {
+    "parameter_ordering": true,
+    "source_beta_gap_at_least_0p003": true,
+    "hU_sequence_decreases_after_h260": true,
+    "relative_denominator_correction_lt_half": true,
+    "source_target_ratio_lt_0p272": true,
+    "normalized_high_node_tail_lt_1e_100": true,
+    "even_normalized_gap_gt_0p0037": true,
+    "odd_normalized_gap_gt_0p0028": true
+  },
+  "hard_margins": {
+    "minimum_s_minus_beta": "3.000000000000000062e-03",
+    "hU_decay_ratio_at_h260": "5.119615384615384679e-01",
+    "relative_denominator_correction": "2.524614838682128147e-74",
+    "normalized_high_node_tail_bound": "1.688756753226359651e-147",
+    "even_lower_bound": "3.749019607843137071e-03",
+    "odd_lower_bound": "2.841176470588235425e-03"
+  },
+  "conclusion": "Uniformly on the local A115 box, (H_s-H_beta)/tau^h > 0.0028. This is a supporting analytic lemma only, not a generalized A113 theorem."
+}
