@@ -1,0 +1,15 @@
+{
+  "audit": "A114C2_SECOND_TIE_EXACT_REGRESSION",
+  "status": "PASS",
+  "gate_count": 12,
+  "pass_count": 12,
+  "failed_indices": [],
+  "controls": [
+    {"M":525,"b":89,"d":11,"side":"lo","s":"16180839119/125000000000","E_bplus2_sign":-1,"Phi_sign":1,"selected":"GP2","full_strict_KKT":true},
+    {"M":525,"b":89,"d":11,"side":"hi","s":"129446712953/1000000000000","E_bplus2_sign":1,"Phi_sign":1,"selected":"ER3","full_strict_KKT":true},
+    {"M":760,"b":129,"d":13,"side":"lo","s":"259562519/2000000000","E_bplus2_sign":-1,"Phi_sign":1,"selected":"GP2","full_strict_KKT":true},
+    {"M":760,"b":129,"d":13,"side":"hi","s":"129781259501/1000000000000","E_bplus2_sign":1,"Phi_sign":1,"selected":"ER3","full_strict_KKT":true}
+  ],
+  "interpretation": "Exact Fraction brackets straddle E_(b+2)=0. On the negative side GP2 passes complete KKT; on the positive side ER3 passes complete KKT. Phi is positive on all four bracket endpoints.",
+  "claim_limit": "Regression/falsification evidence only; equality-surface closure is analytic/compositional."
+}
