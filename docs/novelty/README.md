@@ -18,6 +18,23 @@ as requiring novelty review in `docs/RESULT_CLASSIFICATION.md`.
 See `README_C2.md` for the foundational novelty audit covering MF-R036,
 MF-R047, MF-R048, and MF-R049.
 
+## A110–A114 structural / literature positioning
+
+See [`A110_A114_LITERATURE_POSITIONING_AND_NOVELTY_MAP_20260914.md`](A110_A114_LITERATURE_POSITIONING_AND_NOVELTY_MAP_20260914.md).
+
+That note rewrites the recent optimization results as a coupled exponential-moment problem and compares the project, conservatively, with:
+
+- linear-fractional programming and the Charnes–Cooper tradition;
+- multiparametric linear programming;
+- generalized and discrete moment problems;
+- extremal probability measures with prescribed moments/Laplace transforms;
+- Tchebycheff/ECT systems and principal representations;
+- total positivity and variation diminution;
+- cyclic-polytopal/oriented-sign geometry;
+- stochastic orders based on Laplace-transform ratios.
+
+It distinguishes classical ingredients from project theorems, and marks the A113/A114 classification claims as **novelty not certified** even where no exact match was found.
+
 ## Status vocabulary
 
 - `CLASSICAL`: an explicit matching prior result was located.
