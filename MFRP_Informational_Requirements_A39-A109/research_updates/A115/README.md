@@ -45,4 +45,4 @@ No asymptotic theorem or physical interpretation is claimed.
 - `A115_TARGET_DEFORMATION_EXACT_RESULTS_20260914.json` — machine-readable output.
 - `A115_CORRECTIONS_AND_DEAD_ENDS_20260914.md` — preserved failed routes and
   scope corrections.
-- `MANIFEST_A115_20260914.sha256` — hashes of the A115 package.
+- `MANIFEST_A115_GIT_BLOBS_20260914.txt` — Git blob SHAs for the published A115 package.
