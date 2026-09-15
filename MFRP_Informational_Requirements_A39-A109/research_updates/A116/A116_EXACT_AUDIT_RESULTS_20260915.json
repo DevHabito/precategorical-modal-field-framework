@@ -1,0 +1,84 @@
+{
+  "audit": "A116_COMPACT_UNIFORM_NESTING_BOUNDARY_LAYER_AUDIT",
+  "boundary_layer_certificate": {
+    "C": "14468/249375",
+    "C_minus_Q_over_10000": "63560739131/11027985937500",
+    "Q": "768333854492/1470398125",
+    "alpha": "1250/133",
+    "alpha_over_log_bracket": {
+      "conclusion": "4 < alpha/(-log s) < 5",
+      "lower": "12500/2793",
+      "upper": "625/133"
+    },
+    "d": 4,
+    "exact_regression": [
+      {"M": 2000, "b": 996, "h_minus_b": 4, "s": "133/1000", "sign_J": -1, "tau": "537/4000"},
+      {"M": 5000, "b": 2496, "h_minus_b": 4, "s": "133/1000", "sign_J": -1, "tau": "267/2000"},
+      {"M": 10000, "b": 4996, "h_minus_b": 4, "s": "133/1000", "sign_J": -1, "tau": "533/4000"},
+      {"M": 20000, "b": 9996, "h_minus_b": 4, "s": "133/1000", "sign_J": -1, "tau": "213/1600"}
+    ],
+    "exp_alpha_partial_sum": "5845605497707992742978280601074671/573213869923759036628486809671",
+    "exp_alpha_taylor_partial_N": 12,
+    "exp_minus_alpha_upper": "1/10000",
+    "lambda": "5/2",
+    "limit_sign": "negative",
+    "log_window_certificate": {
+      "conclusion": "2 < -log(133/1000) < 21/10",
+      "exp21_lower": "522458586607/64000000000",
+      "exp2_upper": "20948/2835",
+      "target": "1000/133"
+    },
+    "s": "133/1000"
+  },
+  "compact_regression": {
+    "all_positive": true,
+    "count": 30,
+    "records": [
+      {"M":2000,"b":927,"s":"129/1000","sign_J":1,"tau":"3/20"},
+      {"M":2000,"b":786,"s":"129/1000","sign_J":1,"tau":"1/5"},
+      {"M":2000,"b":588,"s":"129/1000","sign_J":1,"tau":"3/10"},
+      {"M":2000,"b":339,"s":"129/1000","sign_J":1,"tau":"1/2"},
+      {"M":2000,"b":52,"s":"129/1000","sign_J":1,"tau":"9/10"},
+      {"M":2000,"b":934,"s":"131/1000","sign_J":1,"tau":"3/20"},
+      {"M":2000,"b":792,"s":"131/1000","sign_J":1,"tau":"1/5"},
+      {"M":2000,"b":593,"s":"131/1000","sign_J":1,"tau":"3/10"},
+      {"M":2000,"b":342,"s":"131/1000","sign_J":1,"tau":"1/2"},
+      {"M":2000,"b":52,"s":"131/1000","sign_J":1,"tau":"9/10"},
+      {"M":2000,"b":941,"s":"133/1000","sign_J":1,"tau":"3/20"},
+      {"M":2000,"b":798,"s":"133/1000","sign_J":1,"tau":"1/5"},
+      {"M":2000,"b":597,"s":"133/1000","sign_J":1,"tau":"3/10"},
+      {"M":2000,"b":344,"s":"133/1000","sign_J":1,"tau":"1/2"},
+      {"M":2000,"b":53,"s":"133/1000","sign_J":1,"tau":"9/10"},
+      {"M":5000,"b":2316,"s":"129/1000","sign_J":1,"tau":"3/20"},
+      {"M":5000,"b":1965,"s":"129/1000","sign_J":1,"tau":"1/5"},
+      {"M":5000,"b":1470,"s":"129/1000","sign_J":1,"tau":"3/10"},
+      {"M":5000,"b":847,"s":"129/1000","sign_J":1,"tau":"1/2"},
+      {"M":5000,"b":129,"s":"129/1000","sign_J":1,"tau":"9/10"},
+      {"M":5000,"b":2334,"s":"131/1000","sign_J":1,"tau":"3/20"},
+      {"M":5000,"b":1980,"s":"131/1000","sign_J":1,"tau":"1/5"},
+      {"M":5000,"b":1481,"s":"131/1000","sign_J":1,"tau":"3/10"},
+      {"M":5000,"b":853,"s":"131/1000","sign_J":1,"tau":"1/2"},
+      {"M":5000,"b":130,"s":"131/1000","sign_J":1,"tau":"9/10"},
+      {"M":5000,"b":2351,"s":"133/1000","sign_J":1,"tau":"3/20"},
+      {"M":5000,"b":1995,"s":"133/1000","sign_J":1,"tau":"1/5"},
+      {"M":5000,"b":1492,"s":"133/1000","sign_J":1,"tau":"3/10"},
+      {"M":5000,"b":859,"s":"133/1000","sign_J":1,"tau":"1/2"},
+      {"M":5000,"b":131,"s":"133/1000","sign_J":1,"tau":"9/10"}
+    ]
+  },
+  "date": "2026-09-15",
+  "nonclaims": [
+    "finite regressions are not premises of the asymptotic theorem",
+    "no explicit minimal M0(K) is claimed",
+    "no global uniform threshold up to tau=s exists",
+    "no A114 lifted active-set generalization is claimed",
+    "no physical or ontological interpretation is claimed"
+  ],
+  "status": "PASS",
+  "symbolic_gates": {
+    "beta_affine_group": true,
+    "constant_group": true,
+    "exact_J_transform": true,
+    "source_affine_group": true
+  }
+}

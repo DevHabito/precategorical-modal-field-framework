@@ -1,0 +1,8 @@
+# Git blob manifest — A116 — 2026-09-15
+# These are Git blob SHAs of the published branch contents prior to this manifest.
+
+f0f5164479c7ea9a04b08d77093546a26f7c0024  A116_COMPACT_UNIFORM_NESTING_BOUNDARY_LAYER_THEOREM_20260915.md
+e8eb28d220f26f150b15e02f456a2f9bddea9d89  A116_EXACT_AUDIT_RESULTS_20260915.json
+d977d711c0a9638effe48840962e1541f26d65cf  A116_RED_TEAM_AUDIT_20260915.md
+da453cce8fa49cfd41d2c3709a37fdeade604551  README.md
+a900fa8f3fc007ccbe53ec1821806a1fc18aa589  a116_compact_uniform_boundary_layer_audit.py
