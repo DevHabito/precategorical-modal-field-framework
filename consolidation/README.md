@@ -48,6 +48,7 @@ The work now is:
 - [`CORE_RESULTS_MAP.md`](CORE_RESULTS_MAP.md) — the reduced set of mathematical claims worth carrying forward.
 - [`CLAIM_LEDGER.md`](CLAIM_LEDGER.md) — status, evidence, open obligations, and forbidden overclaims.
 - [`FORMALIZATION_PLAN.md`](FORMALIZATION_PLAN.md) — Lean 4 roadmap.
+- [`INDEPENDENT_VERIFICATION_PROTOCOL.md`](INDEPENDENT_VERIFICATION_PROTOCOL.md) — blind rederivation, independent implementations, proof-kernel and external-check ladder.
 - [`ARCHIVE_PLAN.md`](ARCHIVE_PLAN.md) — non-destructive migration from cumulative A39-* directories to tagged historical releases.
 
 ## Epistemic rule
