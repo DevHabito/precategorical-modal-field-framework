@@ -44,9 +44,11 @@ All promoted finite phase signs use exact `Fraction` arithmetic. Limit signs in 
 
 ## 4. Finite-M sign need not match the limiting phase quickly
 
-Several controls near a critical curve have the opposite finite sign at `M` around one thousand and only settle later.
+Near a critical curve the approach to the asymptotic phase can be extremely slow.
 
-Therefore A117 does not infer a finite realization threshold from the asymptotic phase function.
+In adversarial exact scans, some controls with a small but nonzero negative limiting phase still had positive finite `J` at `M=10,000`; one odd control remained positive at `M=20,001` while its certified leading limit was negative. This is not a contradiction: A117 is an eventual theorem and does not supply an explicit realization threshold.
+
+Therefore no finite `M_0` is inferred from the phase formula or from moderate-depth scans.
 
 The theorem says only:
 
