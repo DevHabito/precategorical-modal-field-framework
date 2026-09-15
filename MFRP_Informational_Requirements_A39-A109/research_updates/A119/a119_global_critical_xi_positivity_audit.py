@@ -52,7 +52,12 @@ def asiv(x):
     return x if isinstance(x,Iv) else Iv(F(x),F(x))
 
 def xi_hat_interval(s:Iv, alpha:Iv, parity:str, r:int)->Iv:
-    """Exact interval extension of A118 Xi after the critical substitution."""
+    """Natural exact interval extension of A118 Xi after the critical substitution.
+
+    On Lambda_p=0, q=e^{-alpha}=a*C/(A+alpha*D).  This routine uses the
+    rational right-hand side, so no transcendental sign decision enters the
+    global certificate.
+    """
     sigma=F(0) if parity=='even' else F(1,2)
     a=asiv(1) if parity=='even' else (1+s)/2
     B=BETA/s+2*DELTA
@@ -78,10 +83,12 @@ def xi_hat_interval(s:Iv, alpha:Iv, parity:str, r:int)->Iv:
 def deep_cell_cutoff_certificate():
     Cmax=1-BETA/S1-4*DELTA
     Bmax=BETA/S0+2*DELTA
+    # even: r=13 -> n=r+1=14
     n=F(14)
     even_lb=-Cmax+n*LMIN*S0**3-n*LMAX*Bmax*S1**14
     even_ratio=F(15,14)*S1
     assert even_lb>0 and even_ratio<1
+    # odd: r=20 -> n=r+3/2=43/2
     n=F(43,2)
     odd_lb=(-AMAX_ODD*Cmax
             +n*LMIN*S0**3*SQRT_S0_LO
@@ -102,6 +109,8 @@ def interval_certificate(parity:str,r_values:range,ns=16,na=16):
     worst=None
     boxes=0
     for r in r_values:
+        # True cell is ((r+sigma)L,(r+1+sigma)L], with 2<L<21/10.
+        # The rectangle below is a rigorous superset.
         amin=LMIN*(r+sigma)
         amax=LMAX*(r+1+sigma)
         for i in range(ns):
