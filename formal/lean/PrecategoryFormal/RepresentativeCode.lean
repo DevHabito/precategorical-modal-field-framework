@@ -90,6 +90,7 @@ theorem witnesses_distinct : witnessA ≠ witnessB := by
   intro h
   have h4 := congrArg (fun q : CondensationStructure => q.blockMin (4 : Vertex)) h
   norm_num [witnessA, witnessB, blockMinA, blockMinB] at h4
+  omega
 
 /--
 MF-R009 pilot theorem: the historical minimum-representative encoding is not
