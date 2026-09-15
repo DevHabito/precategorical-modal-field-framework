@@ -34,7 +34,7 @@ def MutualReach (g : BoolDigraph) (u v : Vertex) : Prop :=
   Reach g u v ∧ Reach g v u
 
 /--
-A finite bounded-path predicate used only as a decidable certificate producer.
+A finite bounded-path predicate used only as a certificate producer.
 `ReachWithin n g u v` means there is a path from `u` to `v` using at most `n` edges.
 For five fixed vertices the recursion explicitly considers every possible final predecessor.
 -/
@@ -171,13 +171,92 @@ theorem graphB_no_cross_reach {u v : Vertex}
   intro hreach
   exact hblocks (graphB_reach_preserves_block hreach)
 
+/-- A candidate block-minimum map exactly describes SCCs and their minimum labels. -/
+def ExactSCCMinimumMap (g : BoolDigraph) (blockMin : Vertex → Vertex) : Prop :=
+  (∀ u v, MutualReach g u v ↔ blockMin u = blockMin v) ∧
+  (∀ v, MutualReach g (blockMin v) v) ∧
+  (∀ v u, MutualReach g u v → (blockMin v).val ≤ u.val)
+
+/-- The quotient is an antichain when distinct SCC representatives never reach one another. -/
+def QuotientAntichain (g : BoolDigraph) (blockMin : Vertex → Vertex) : Prop :=
+  ∀ u v, blockMin u = u → blockMin v = v → u ≠ v → ¬ Reach g u v
+
+/--
+The graph semantically realizes a condensation structure whose strict quotient-order
+matrix is empty, hence whose lower 25 historical code bits are zero.
+-/
+def GraphRealizesAntichainCondensation
+    (g : BoolDigraph) (q : CondensationStructure) : Prop :=
+  ExactSCCMinimumMap g q.blockMin ∧
+  QuotientAntichain g q.blockMin ∧
+  q.quotientOrderCode = 0
+
+theorem graphA_exactSCCMinimumMap : ExactSCCMinimumMap graphA blockMinA := by
+  refine ⟨graphA_mutualReach_iff_same_block, graphA_rep_in_scc, ?_⟩
+  intro v u h
+  exact graphA_rep_is_minimum v u h
+
+theorem graphB_exactSCCMinimumMap : ExactSCCMinimumMap graphB blockMinB := by
+  refine ⟨graphB_mutualReach_iff_same_block, graphB_rep_in_scc, ?_⟩
+  intro v u h
+  exact graphB_rep_is_minimum v u h
+
+theorem graphA_quotient_antichain : QuotientAntichain graphA blockMinA := by
+  intro u v hu hv huv hreach
+  apply huv
+  calc
+    u = blockMinA u := hu.symm
+    _ = blockMinA v := graphA_reach_preserves_block hreach
+    _ = v := hv
+
+theorem graphB_quotient_antichain : QuotientAntichain graphB blockMinB := by
+  intro u v hu hv huv hreach
+  apply huv
+  calc
+    u = blockMinB u := hu.symm
+    _ = blockMinB v := graphB_reach_preserves_block hreach
+    _ = v := hv
+
+theorem graphA_realizes_witnessA :
+    GraphRealizesAntichainCondensation graphA witnessA := by
+  refine ⟨?_, ?_, rfl⟩
+  · simpa [witnessA] using graphA_exactSCCMinimumMap
+  · simpa [witnessA] using graphA_quotient_antichain
+
+theorem graphB_realizes_witnessB :
+    GraphRealizesAntichainCondensation graphB witnessB := by
+  refine ⟨?_, ?_, rfl⟩
+  · simpa [witnessB] using graphB_exactSCCMinimumMap
+  · simpa [witnessB] using graphB_quotient_antichain
+
 /--
 Graph-level MF-R009 bridge: the two explicit A8.1 directed graphs induce the
-minimum-block maps used by the kernel-checked representative-code collision.
+minimum-block maps used by the representative-code collision.
 -/
 theorem mf_r009_graph_to_scc_bridge :
     (∀ u v, MutualReach graphA u v ↔ blockMinA u = blockMinA v) ∧
     (∀ u v, MutualReach graphB u v ↔ blockMinB u = blockMinB v) := by
   exact ⟨graphA_mutualReach_iff_same_block, graphB_mutualReach_iff_same_block⟩
+
+/--
+End-to-end explicit witness theorem for MF-R009.
+
+The original directed graphs realize two distinct condensation structures;
+each strict quotient is an antichain, and both structures receive exactly the
+same historical representative code `100663296`.
+-/
+theorem mf_r009_graph_level_code_collision :
+    GraphRealizesAntichainCondensation graphA witnessA ∧
+    GraphRealizesAntichainCondensation graphB witnessB ∧
+    witnessA ≠ witnessB ∧
+    historicalRepresentativeCode witnessA = 100663296 ∧
+    historicalRepresentativeCode witnessB = 100663296 := by
+  exact ⟨
+    graphA_realizes_witnessA,
+    graphB_realizes_witnessB,
+    witnesses_distinct,
+    witnessA_code,
+    witnessB_code
+  ⟩
 
 end PrecategoryFormal
