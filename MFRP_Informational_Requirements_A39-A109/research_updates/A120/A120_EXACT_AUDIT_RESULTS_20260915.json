@@ -1,0 +1,50 @@
+{
+  "audit": "A120_REMOTE_SIGN_ROUNDING_PHASE_AUDIT",
+  "date": "2026-09-15",
+  "exact_counterexamples": {
+    "E_b_negative": {
+      "M": 1200,
+      "b": 476,
+      "s": "131/1000",
+      "sign": -1,
+      "tau": "1/5"
+    },
+    "E_bplus3_positive": {
+      "M": 536,
+      "b": 14,
+      "s": "129/1000",
+      "sign": 1,
+      "tau": "9/10"
+    }
+  },
+  "frozen_tau_half_regression_count": 21,
+  "irrational_phase_pairs": {
+    "pair_A": {
+      "c_bounds": [
+        "395/1000",
+        "397/1000"
+      ],
+      "even_j0_phase_at_rho0_lower": "78797/3750000",
+      "even_j0_phase_at_rho1_upper": "-446169/50000000",
+      "s": "131/1000",
+      "tau": "1/5"
+    },
+    "pair_B": {
+      "c_bounds": [
+        "25/1000",
+        "27/1000"
+      ],
+      "even_j3_phase_at_rho0_lower": "3613291657/6000000000000",
+      "even_j3_phase_at_rho1_upper": "-2126112128741/18000000000000000",
+      "s": "129/1000",
+      "tau": "9/10"
+    }
+  },
+  "nonclaims": [
+    "finite counterexamples alone do not prove infinite sign alternation",
+    "infinite alternation uses the analytic rounding-phase theorem plus irrationality/density",
+    "no target-deformed A114 theorem",
+    "no physical or ontological interpretation"
+  ],
+  "status": "PASS_WITH_REFUTATION_OF_NAIVE_STABILIZATION"
+}
