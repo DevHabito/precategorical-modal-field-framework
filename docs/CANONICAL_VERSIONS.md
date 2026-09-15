@@ -1,4 +1,14 @@
-# Canonical and historical versions
+# Canonical and historical versions — legacy A1-A38 index
+
+**Scope notice (Consolidation 1.0):** this file is a legacy version index for the A1-A38 development only. It is not the canonical navigation source for the later A39-A122 programme.
+
+For the selected current mathematical core and its verification obligations, use:
+
+- `consolidation/README.md`
+- `consolidation/CORE_RESULTS_MAP.md`
+- `consolidation/CLAIM_LEDGER.md`
+
+The chronological A-number archives remain provenance, not the public-facing theorem taxonomy.
 
 - **A3:** legacy verified baseline
 - **A4:** legacy exact rate-distortion stage
@@ -16,7 +26,7 @@
 - **A16:** canonical failed local/global complementarity protocol
 - **A17:** canonical failed multiscale protocol
 - **A18.2:** canonical robust order-measure identifiability version
-- **A19:** canonical ensemble/coupla identifiability result
+- **A19:** canonical ensemble/copula identifiability result
 - **A20:** canonical symmetry-breaking information audit
 - **A21:** canonical endogenous equivariance result
 - **A22:** canonical primitive admissibility audit
