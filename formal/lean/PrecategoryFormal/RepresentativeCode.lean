@@ -88,9 +88,10 @@ theorem witnesses_same_representative_code :
 /-- The full block assignments differ at vertex 4. -/
 theorem witnesses_distinct : witnessA ≠ witnessB := by
   intro h
-  have h4 := congrArg (fun q : CondensationStructure => q.blockMin (4 : Vertex)) h
-  norm_num [witnessA, witnessB, blockMinA, blockMinB] at h4
-  omega
+  have h4 : witnessA.blockMin (4 : Vertex) = witnessB.blockMin (4 : Vertex) :=
+    congrArg (fun q : CondensationStructure => q.blockMin (4 : Vertex)) h
+  have hval := congrArg Fin.val h4
+  norm_num [witnessA, witnessB, blockMinA, blockMinB] at hval
 
 /--
 MF-R009 pilot theorem: the historical minimum-representative encoding is not
