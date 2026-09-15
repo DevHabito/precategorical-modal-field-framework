@@ -23,7 +23,10 @@
     "arithmetic": "fractions.Fraction inclusive natural interval extension",
     "even": {
       "boxes": 2304,
-      "subdivision": [16,16],
+      "subdivision": [
+        16,
+        16
+      ],
       "worst_cell": {
         "ahi": "261/32",
         "alo": "8",
@@ -39,7 +42,10 @@
     "even_r_range": "4..12",
     "odd": {
       "boxes": 4096,
-      "subdivision": [16,16],
+      "subdivision": [
+        16,
+        16
+      ],
       "worst_cell": {
         "ahi": "2931/320",
         "alo": "9",
