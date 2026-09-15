@@ -99,14 +99,14 @@ theorem graphB_reach_preserves_block {u v : Vertex} (h : Reach graphB u v) :
       exact ih.trans (graphB_edge_preserves_block _ _ hedge)
 
 /--
-Independent finite certificate: equal graph-A block minima always admit a path
+Independent finite certificate: equal graph-A block minima always have a path
 of at most four edges in the original graph.
 -/
 theorem graphA_same_block_reachWithin4 (u v : Vertex) :
     blockMinA u = blockMinA v → ReachWithin 4 graphA u v := by
   fin_cases u <;> fin_cases v <;> native_decide
 
-/-- Equal graph-B block minima always admit a path of at most four edges. -/
+/-- Equal graph-B block minima always have a path of at most four edges. -/
 theorem graphB_same_block_reachWithin4 (u v : Vertex) :
     blockMinB u = blockMinB v → ReachWithin 4 graphB u v := by
   fin_cases u <;> fin_cases v <;> native_decide
