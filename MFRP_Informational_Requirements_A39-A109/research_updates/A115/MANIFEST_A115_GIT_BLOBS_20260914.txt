@@ -1,0 +1,8 @@
+# Git blob SHA-1 values returned by GitHub for the published A115 package.
+# These identify the exact repository bytes on branch research/a115-target-node-deformation-20260914.
+
+e7a4afbab84f7284962ed53a3f6483dc6fdce579  A115_CORRECTIONS_AND_DEAD_ENDS_20260914.md
+f64cce5bf6765df2480a987c828679f3a0ffd158  A115_TARGET_DEFORMATION_EXACT_RESULTS_20260914.json
+f95477d945e811e13dd6734a9a0d011a5464e9fc  A115_TARGET_NODE_DEFORMATION_EXACT_AUDIT_20260914.md
+f18c6cf91e0772dea85c31cc2d80a6c841e2c55c  README.md
+c37fec2992428d977e4d44846e150895407d30f3  a115_target_deformation_exact_audit.py
