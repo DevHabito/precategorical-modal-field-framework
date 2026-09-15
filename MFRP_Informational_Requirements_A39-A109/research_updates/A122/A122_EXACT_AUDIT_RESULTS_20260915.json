@@ -1,0 +1,119 @@
+{
+  "analytic_formulas_checked": {
+    "Omega": "a_p*G*(1+(1-tau)*x)",
+    "core": "N_M = Phi_p(x_M) + Omega_p(x_M)/M + R_M",
+    "near_resonant_limit": "M*N_M -> Q_p*log(s)*eta + Omega_p(xi_p) when M*(x_M-xi_p)->eta",
+    "next_scaled_layer": "if x_M=xi+eta/M+zeta/M^2+o(M^-2), coefficient at M^-2 is Q log(s) zeta + 0.5 Q log(s)^2 eta^2 + aG(1-tau)eta"
+  },
+  "audit": "A122_NEAR_RESONANT_ROUNDING_LAYER_AUDIT",
+  "date": "2026-09-15",
+  "double_critical_even_certificate": {
+    "exact_assertions": [
+      "upper(omega_left) < 0",
+      "lower(omega_right) > 0",
+      "continuity therefore gives at least one tau_* in (131/1000,132/1000) with Omega_even(xi_even)=0"
+    ],
+    "log_series_terms": 26,
+    "omega_left_interval_float": [
+      -0.0019726395767722554,
+      -0.0019723158416232733
+    ],
+    "omega_right_interval_float": [
+      0.002986615243577039,
+      0.002986620286028597
+    ],
+    "s": "129/1000",
+    "tau_left": "131/1000",
+    "tau_right": "132/1000"
+  },
+  "exact_polynomial_core_controls": [
+    {
+      "M": 4568,
+      "Theta_float": 0.011178187498508161,
+      "b": 1809,
+      "eta_float": 0.9866174101652825,
+      "eta_star_float": 1.3949884694732422,
+      "exact_remainder_lt_M_minus_5": true,
+      "parity": "even",
+      "rho_float": 0.46303723130813523,
+      "sign_exact_normalized_factor": 1,
+      "sign_exact_polynomial_core": 1,
+      "xi_float": 0.4628212467612514
+    },
+    {
+      "M": 5596,
+      "Theta_float": 0.005024339843775899,
+      "b": 2216,
+      "eta_float": 1.2114350101490194,
+      "eta_star_float": 1.3949884694732422,
+      "exact_remainder_lt_M_minus_5": true,
+      "parity": "even",
+      "rho_float": 0.46303772907185703,
+      "sign_exact_normalized_factor": 1,
+      "sign_exact_polynomial_core": 1,
+      "xi_float": 0.4628212467612514
+    },
+    {
+      "M": 6624,
+      "Theta_float": -0.001157521015005776,
+      "b": 2623,
+      "eta_float": 1.4372760123447694,
+      "eta_star_float": 1.3949884694732422,
+      "exact_remainder_lt_M_minus_5": true,
+      "parity": "even",
+      "rho_float": 0.4630382268355788,
+      "sign_exact_normalized_factor": -1,
+      "sign_exact_polynomial_core": -1,
+      "xi_float": 0.4628212467612514
+    },
+    {
+      "M": 7652,
+      "Theta_float": -0.007367395077836868,
+      "b": 3030,
+      "eta_float": 1.6641404167525324,
+      "eta_star_float": 1.3949884694732422,
+      "exact_remainder_lt_M_minus_5": true,
+      "parity": "even",
+      "rho_float": 0.4630387245993006,
+      "sign_exact_normalized_factor": -1,
+      "sign_exact_polynomial_core": -1,
+      "xi_float": 0.4628212467612514
+    },
+    {
+      "M": 959,
+      "Theta_float": 0.023095886925335832,
+      "b": 380,
+      "eta_float": -0.12903791411870913,
+      "eta_star_float": 1.277226415498682,
+      "exact_remainder_lt_M_minus_3": true,
+      "parity": "odd",
+      "rho_float": 0.3180938495675605,
+      "sign_exact_normalized_factor": 1,
+      "sign_exact_polynomial_core": 1,
+      "xi_float": 0.31822840422253307
+    },
+    {
+      "M": 1449,
+      "Theta_float": -0.02212606661981272,
+      "b": 574,
+      "eta_float": 2.624440243777686,
+      "eta_star_float": 1.277226415498682,
+      "exact_remainder_lt_M_minus_3": true,
+      "parity": "odd",
+      "rho_float": 0.32003961212024024,
+      "sign_exact_normalized_factor": -1,
+      "sign_exact_polynomial_core": -1,
+      "xi_float": 0.31822840422253307
+    }
+  ],
+  "nonclaims": [
+    "finite exact controls do not prove the asymptotic theorem; the proof is analytic",
+    "existence of an intrinsic double-critical tau_* does not prove an actual arithmetic subsequence realizes exact phase resonance",
+    "no uniform finite M0 over the full target region",
+    "no collision-scaling theorem here",
+    "no target-deformed A114 theorem",
+    "no novelty/priority claim",
+    "no physical or ontological interpretation"
+  ],
+  "status": "PASS_WITH_INTRINSIC_DOUBLE_CRITICAL_EXISTENCE"
+}

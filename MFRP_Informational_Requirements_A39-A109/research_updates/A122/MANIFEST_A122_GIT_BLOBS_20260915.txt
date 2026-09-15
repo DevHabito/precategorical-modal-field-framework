@@ -1,0 +1,9 @@
+# A122 Git blob manifest — 2026-09-15
+# Git object SHA-1 values as returned by GitHub contents API.
+
+A122_CORRECTIONS_AND_DEAD_ENDS_20260915.md           979ba0eae7de0f4905b86f90de4d7ca69a280335
+A122_EXACT_AUDIT_RESULTS_20260915.json               88e5f4632c558851c1d52dac08e9e1211bd26caa
+A122_NEAR_RESONANT_ROUNDING_LAYER_THEOREM_20260915.md 4bb3492e30855627c6c7af0bbff16d435fc72472
+A122_RED_TEAM_AUDIT_20260915.md                      774d540a115a11a3d0f7e3ad9ea19b8fa1bb7a26
+README.md                                             05bb8330a3a54c795087da2fbd720a27ef5b8f5c
+a122_near_resonant_rounding_layer_audit.py            84eb3efbaad73d657e4c89acf68537b945803d72
