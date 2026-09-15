@@ -1,0 +1,33 @@
+{
+  "all_controls_pass": true,
+  "audit": "A117_BOUNDARY_LAYER_PHASE_CLASSIFICATION_AUDIT",
+  "control_count": 8,
+  "date": "2026-09-15",
+  "even_left_endpoint_margin": "176249084859/2500000000000",
+  "exact_fraction_controls": [
+    {"M": 2000, "b": 996, "finite_J_sign": -1, "lambda": "5/2", "parity": "even", "r": 4, "rationally_certified_limit_sign": -1, "s": "133/1000"},
+    {"M": 2001, "b": 996, "finite_J_sign": 1, "lambda": "5/2", "parity": "odd", "r": 4, "rationally_certified_limit_sign": 1, "s": "133/1000"},
+    {"M": 2000, "b": 995, "finite_J_sign": -1, "lambda": "16/5", "parity": "even", "r": 5, "rationally_certified_limit_sign": -1, "s": "133/1000"},
+    {"M": 2001, "b": 996, "finite_J_sign": -1, "lambda": "59/20", "parity": "odd", "r": 4, "rationally_certified_limit_sign": -1, "s": "133/1000"},
+    {"M": 2000, "b": 992, "finite_J_sign": 1, "lambda": "22/5", "parity": "even", "r": 8, "rationally_certified_limit_sign": 1, "s": "131/1000"},
+    {"M": 2001, "b": 994, "finite_J_sign": -1, "lambda": "4", "parity": "odd", "r": 6, "rationally_certified_limit_sign": -1, "s": "133/1000"},
+    {"M": 2000, "b": 996, "finite_J_sign": -1, "lambda": "13/5", "parity": "even", "r": 4, "rationally_certified_limit_sign": -1, "s": "129/1000"},
+    {"M": 2001, "b": 996, "finite_J_sign": 1, "lambda": "13/5", "parity": "odd", "r": 4, "rationally_certified_limit_sign": 1, "s": "129/1000"}
+  ],
+  "nonclaims": [
+    "finite controls are regression/falsification evidence only",
+    "the next-order sign on Lambda=0 critical surfaces is not classified",
+    "no minimal finite M realization threshold is claimed",
+    "no target-deformed A114 lifted staircase is claimed",
+    "no physical or ontological interpretation is claimed"
+  ],
+  "odd_left_endpoint_margin": "76540493262589821/4000000000000000000",
+  "source_log_window": "2 < -log(s) < 21/10 for 129/1000 <= s <= 133/1000",
+  "status": "PASS",
+  "symbolic_gates": {
+    "contact_leading_term": true,
+    "contact_positive_second_order": true,
+    "phase_derivative_identity": true,
+    "unified_lambda_identity": true
+  }
+}
