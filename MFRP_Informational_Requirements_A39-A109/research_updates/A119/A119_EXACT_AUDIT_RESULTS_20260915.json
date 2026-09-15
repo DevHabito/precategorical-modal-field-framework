@@ -1,0 +1,65 @@
+{
+  "audit": "A119_GLOBAL_CRITICAL_XI_POSITIVITY_AUDIT",
+  "conclusion": "Every A117 critical surface has Xi_p>0; Lambda_p=Xi_p=0 is impossible under the frozen contract.",
+  "contract": {
+    "beta": "1/8",
+    "delta": "1/1875",
+    "s_window": [
+      "129/1000",
+      "133/1000"
+    ]
+  },
+  "critical_substitution": "q = a*C/(A + alpha*D) on Lambda_p=0",
+  "date": "2026-09-15",
+  "deep_cell_cutoff": {
+    "even_decay_ratio_upper": "57/400",
+    "even_no_critical_for_r_ge": 13,
+    "even_right_edge_lower_at_r13": "112070026808871649563637353403352532242819592731/53615625000000000000000000000000000000000000000000",
+    "odd_decay_ratio_upper": "1197/8600",
+    "odd_no_critical_for_r_ge": 20,
+    "odd_right_edge_lower_at_r20": "11531809417499828244814003200343395403216479227213725023919447158702411/47500000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "finite_interval_certificate": {
+    "arithmetic": "fractions.Fraction inclusive natural interval extension",
+    "even": {
+      "boxes": 2304,
+      "subdivision": [16,16],
+      "worst_cell": {
+        "ahi": "261/32",
+        "alo": "8",
+        "i": 0,
+        "j": 0,
+        "r": 4,
+        "shi": "517/4000",
+        "slo": "129/1000"
+      },
+      "worst_lower": "7962094616280060340361057850523941099377/4460543890481278214239707910840320000000",
+      "worst_upper": "580496131670922323025729795714436429499/221994661216082133347578055747840000000"
+    },
+    "even_r_range": "4..12",
+    "odd": {
+      "boxes": 4096,
+      "subdivision": [16,16],
+      "worst_cell": {
+        "ahi": "2931/320",
+        "alo": "9",
+        "i": 0,
+        "j": 0,
+        "r": 4,
+        "shi": "517/4000",
+        "slo": "129/1000"
+      },
+      "worst_lower": "3296636265099577642233577213168576496429665038806348563/2438741833785351580293579578096010608476160000000000000",
+      "worst_upper": "125649817433224979818357646501101407773596879352917931/65541186782981323720389951161330285102796800000000000"
+    },
+    "odd_r_range": "4..19",
+    "total_boxes": 6400
+  },
+  "log_enclosure_used": "2 < -log(s) < 21/10 (inherited exact A117 certificate)",
+  "nonclaims": [
+    "no finite minimal M realization threshold",
+    "no target-deformed A114 lifted staircase",
+    "no physical or ontological interpretation"
+  ],
+  "status": "PASS"
+}
