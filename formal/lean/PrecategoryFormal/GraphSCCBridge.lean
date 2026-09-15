@@ -68,7 +68,7 @@ theorem reachWithinBool_eq_true_iff (g : BoolDigraph) (n : Nat) (u v : Vertex) :
   | zero =>
       simp [ReachWithinBool, ReachWithin]
   | succ n ih =>
-      simp [ReachWithinBool, ReachWithin, ih]
+      simp [ReachWithinBool, ReachWithin, ih, or_assoc]
 
 /-- Every bounded certificate denotes genuine reflexive-transitive reachability. -/
 theorem reachWithin_sound (g : BoolDigraph) {n : Nat} {u v : Vertex}
