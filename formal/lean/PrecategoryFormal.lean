@@ -1,1 +1,2 @@
 import PrecategoryFormal.RepresentativeCode
+import PrecategoryFormal.GraphSCCBridge
