@@ -1,0 +1,50 @@
+{
+  "audit": "A118_SECOND_ORDER_CRITICAL_LAYER_AUDIT",
+  "date": "2026-09-15",
+  "exact_rational_control": {
+    "Xi_gt_2": true,
+    "alpha_bracket": [
+      "10.560492",
+      "10.560493"
+    ],
+    "certified_Xi_lower": "2.061361852",
+    "certified_Xi_upper": "2.061366276",
+    "parity": "odd",
+    "phase_lower_positive": true,
+    "phase_upper_negative": true,
+    "r": 4,
+    "s": "129/1000"
+  },
+  "finite_numerical_stress": {
+    "random_source_all_Xi_positive": true,
+    "random_source_min_Xi": "2.063304905024418761857178",
+    "random_source_min_location": {
+      "alpha": "10.55909642149922457483674",
+      "parity": "odd",
+      "r": 4,
+      "s": "0.129004571277258"
+    },
+    "random_source_root_count": 3770,
+    "regular_grid_all_Xi_positive": true,
+    "regular_grid_min_Xi": "2.061364296811317017795507",
+    "regular_grid_min_location": {
+      "alpha": "10.56049230907492614019591",
+      "parity": "odd",
+      "r": 4,
+      "s": "0.129"
+    },
+    "regular_grid_root_count": 1500
+  },
+  "nonclaims": [
+    "dense critical-root stress is finite evidence only",
+    "global Xi positivity on all critical surfaces is not proved",
+    "no minimal finite realization M is claimed",
+    "no target-deformed A114 lifted classification is claimed",
+    "no physical or ontological interpretation is claimed"
+  ],
+  "status": "PASS_WITH_OPEN_GLOBAL_SIGN",
+  "symbolic_gates": {
+    "leading_coefficient_is_Lambda": true,
+    "second_coefficient_is_Xi": true
+  }
+}
