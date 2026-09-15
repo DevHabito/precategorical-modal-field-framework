@@ -5,7 +5,7 @@ This ledger is the public-facing status table for claims selected for consolidat
 | Core ID | Claim family | Current status | Evidence class | Formalization target | Literature status | Main unresolved obligation |
 |---|---|---|---|---|---|---|
 | C1.1 | Minimum-representative quotient-poset count | PROVED | combinatorial proof + exact enumeration | Lean candidate 1 | novelty not certified | reconstruct minimal definitions and bijection in Lean |
-| C1.2 | Non-injectivity of representative code | PROVED | constructive counterexample | Lean companion | novelty not material | encode explicit witness |
+| C1.2 | Non-injectivity of representative code | PROVED; ENCODING-LEVEL LEAN PILOT PASS | constructive counterexample + Lean kernel/leanchecker | graph-to-SCC bridge remains | novelty not material | formalize directed reachability/SCCs for the two explicit graph witnesses and derive the checked block maps |
 | C1.3 | `P5=75/256` edge-toggle sensitivity | EXACT FINITE RESULT | exhaustive enumeration | Lean/native_decide candidate | apparently unreported; not certified | independent formal finite computation and OEIS/literature check |
 | C2 | Fixed-score dynamic non-closure | PROVED | exact identity + four-point counterexample | Lean candidate 2 | novelty not certified | self-contained theorem independent of framework terminology |
 | C3.1 | Frozen tail structural theorem | PROVED | analytic proof | later Lean/Isabelle candidate | novelty not certified | extract assumptions and remove historical dependencies |
@@ -43,6 +43,10 @@ A result cannot enter a short public manuscript as a central theorem until all o
 - executable evidence is reproducible from a clean environment where applicable;
 - novelty wording matches the dedicated literature audit;
 - physical interpretation is absent from the proof unless supplied as an explicit additional assumption.
+
+## Formal-pilot scope rule
+
+A Lean proof of an extracted substatement must be labeled by its actual formal boundary. C1.2 currently has a kernel-checked encoding-level theorem: two explicit valid minimum-block maps are distinct but share the historical representative code. It is **not yet** an end-to-end formal proof from the original directed graph definitions, because reachability and SCC extraction remain to be formalized.
 
 ## Freeze rule
 
