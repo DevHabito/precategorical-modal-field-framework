@@ -1,0 +1,91 @@
+{
+  "analytic_identity_checked_in_theorem": "Psi_j-Psi_(j+1)=P*s^(j+rho)*(1-s)>0; Xi threshold gives one +->- limiting staircase.",
+  "audit": "A121_FIXED_INTERIOR_SIGN_STAIRCASE_AUDIT",
+  "date": "2026-09-15",
+  "finite_M_scope_warning": {
+    "M": 1200,
+    "b": 556,
+    "j": 3,
+    "s": "129/1000",
+    "sign_E_j": -1,
+    "sign_E_jplus1": -1,
+    "sign_J": -1,
+    "tau": "3/20"
+  },
+  "frozen_tau_half_one_variation_regressions": 21,
+  "nonclaims": [
+    "no global compressed-maximizer theorem under target deformation",
+    "no uniform finite M0 over all offsets or the full target region",
+    "resonant leading-zero factor requires higher-order analysis",
+    "collision scaling tau-s=O(1/M) is not covered",
+    "no target-deformed A114 theorem",
+    "no physical or ontological interpretation"
+  ],
+  "status": "PASS",
+  "two_site_exact_sentinels": [
+    {
+      "M": 500,
+      "adjacent_J_signs": {"-1": 1, "0": 1},
+      "b": 198,
+      "factor_signs": {"-1": 1, "0": 1, "1": -1},
+      "s": "131/1000",
+      "tau": "1/5"
+    },
+    {
+      "M": 508,
+      "adjacent_J_signs": {"-1": 1, "0": 1},
+      "b": 202,
+      "factor_signs": {"-1": 1, "0": -1, "1": -1},
+      "s": "131/1000",
+      "tau": "1/5"
+    },
+    {
+      "M": 505,
+      "adjacent_J_signs": {"-1": 1, "0": 1},
+      "b": 200,
+      "factor_signs": {"-1": 1, "0": 1, "1": -1},
+      "s": "131/1000",
+      "tau": "1/5"
+    },
+    {
+      "M": 503,
+      "adjacent_J_signs": {"-1": 1, "0": 1},
+      "b": 200,
+      "factor_signs": {"-1": 1, "0": -1, "1": -1},
+      "s": "131/1000",
+      "tau": "1/5"
+    },
+    {
+      "M": 500,
+      "adjacent_J_signs": {"2": 1, "3": 1},
+      "b": 13,
+      "factor_signs": {"2": 1, "3": 1, "4": -1},
+      "s": "129/1000",
+      "tau": "9/10"
+    },
+    {
+      "M": 506,
+      "adjacent_J_signs": {"2": 1, "3": 1},
+      "b": 14,
+      "factor_signs": {"2": 1, "3": -1, "4": -1},
+      "s": "129/1000",
+      "tau": "9/10"
+    },
+    {
+      "M": 501,
+      "adjacent_J_signs": {"2": 1, "3": 1},
+      "b": 13,
+      "factor_signs": {"2": 1, "3": 1, "4": -1},
+      "s": "129/1000",
+      "tau": "9/10"
+    },
+    {
+      "M": 507,
+      "adjacent_J_signs": {"2": 1, "3": 1},
+      "b": 14,
+      "factor_signs": {"2": 1, "3": -1, "4": -1},
+      "s": "129/1000",
+      "tau": "9/10"
+    }
+  ]
+}
