@@ -104,12 +104,12 @@ of at most four edges in the original graph.
 -/
 theorem graphA_same_block_reachWithin4 (u v : Vertex) :
     blockMinA u = blockMinA v → ReachWithin 4 graphA u v := by
-  fin_cases u <;> fin_cases v <;> native_decide
+  fin_cases u <;> fin_cases v <;> simp [ReachWithin, graphA, blockMinA]
 
 /-- Equal graph-B block minima always have a path of at most four edges. -/
 theorem graphB_same_block_reachWithin4 (u v : Vertex) :
     blockMinB u = blockMinB v → ReachWithin 4 graphB u v := by
-  fin_cases u <;> fin_cases v <;> native_decide
+  fin_cases u <;> fin_cases v <;> simp [ReachWithin, graphB, blockMinB]
 
 /-- In graph A, the declared block map agrees exactly with SCC equivalence. -/
 theorem graphA_mutualReach_iff_same_block (u v : Vertex) :
