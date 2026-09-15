@@ -1,0 +1,9 @@
+# A120 Git blob manifest — 2026-09-15
+# Git object SHA-1 values as returned by GitHub contents API.
+
+A120_CORRECTIONS_AND_DEAD_ENDS_20260915.md  c7310e9fdf0ea08329bf782bf8fa9d345c19991d
+A120_EXACT_AUDIT_RESULTS_20260915.json       4878bc910d012aa1ace5d0ca0aef2bd087aa91b4
+A120_RED_TEAM_AUDIT_20260915.md             768f74bbf08b61d9c20ee9b0262f7ebf18186d22
+A120_REMOTE_SIGN_ROUNDING_PHASE_THEOREM_20260915.md  2606d96a26b313f2f39a49c56aeb44830a63f18f
+README.md                                    ad078f835aaf936a5b4802773e844a7d985cc933
+a120_remote_sign_rounding_phase_audit.py     ea1cf97fe48b47f5305232c3cca6b40033e5f9b4
