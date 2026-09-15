@@ -35,6 +35,18 @@ jobs:
             exit 1
           fi
 
+      - name: Bootstrap Lean and resolve Lake manifest
+        shell: bash
+        working-directory: formal/lean
+        run: |
+          set -euo pipefail
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf \
+            | sh -s -- -y --default-toolchain "$(cat lean-toolchain)"
+          export PATH="$HOME/.elan/bin:$PATH"
+          lake update
+          echo "--- resolved lake-manifest.json ---"
+          cat lake-manifest.json
+
       - name: Build and kernel-check Lean project
         uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
         with:
