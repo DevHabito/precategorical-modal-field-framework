@@ -1,90 +1,80 @@
-# Modal Field / RZS Research Archive
+# Pre-Categorical Research Archive
 
 **Author:** Felipe Gianini Romero (Felipe G. Romero)  
-**Status:** formal research programme; not a confirmed fundamental physical theory.
+**Repository status:** mathematical/computational research archive under active consolidation.  
+**Physical status:** no confirmed fundamental physical theory is claimed.
 
-This repository preserves the computational and formal development of a pre-categorical relational research programme. Its central question is not “how to fit a final theory to known physics,” but which mathematical structures are actually required before order, measure, refinement, transition, and coarse-grained flow can be defined without hidden assumptions.
+## Start here
 
-## What is here
+The canonical reader entry point is now:
 
-- exact graph and poset enumeration;
-- order/measure identifiability results;
-- `q`-gauge and operationalization audits;
-- kernel-selection and lambda-status audits;
-- refinement, multiplicity, and projective-measure results;
-- effective-score and dynamic-closure results;
-- noise-law selection and universality tests;
-- observable-relative coarse-graining and occupancy obstruction;
-- original failed protocols and their corrective versions;
-- the A8.1 formal resolution of **5,234 versus 6,942**;
-- manuscript PDFs and an explicit supersession notice.
+**[`consolidation/README.md`](consolidation/README.md)**
 
-## Latest research package
+That page separates the repository into three logically distinct layers:
 
-The newest package is [`MFRP_Informational_Requirements_A39-A109/`](MFRP_Informational_Requirements_A39-A109/). It keeps the verified A39-A106 baseline intact and adds the A107-A109 gamma-plus continuum investigation.
+1. mathematical claims;
+2. verification/reproducibility;
+3. historical and speculative interpretation.
 
-For a readable overview, start with [`README_A107_A109_UPDATE.md`](MFRP_Informational_Requirements_A39-A109/README_A107_A109_UPDATE.md). The update records both the promising evidence and the result that failed: A108's original one-sided boundary rule has an exact counterexample, while the replacement two-sided local rule remains a finite computational conjecture. The stored prospective sequence currently covers ranks 106-414. The H19 holdout for ranks 415-430 is frozen but deliberately unexecuted.
+The chronological A-number sequence remains preserved for provenance, but it is no longer the preferred way to understand or review the work.
 
-## Literature and novelty positioning
+## Current mathematical core under consolidation
 
-For the more recent A110-A114 optimization results, reviewers should read [`docs/novelty/A110_A114_LITERATURE_POSITIONING_AND_NOVELTY_MAP_20260914.md`](docs/novelty/A110_A114_LITERATURE_POSITIONING_AND_NOVELTY_MAP_20260914.md).
+The strongest material is being compressed into a small number of self-contained result groups:
 
-That note separates classical ingredients from project-specific theorems, rewrites the recent LP family as a coupled exponential-moment problem, compares it with parametric LP, moment-problem, Tchebycheff/ECT, total-positivity, cyclic-polytope, and Laplace-transform literature, and keeps all negative search results under the explicit qualifier **NOVELTY_NOT_CERTIFIED**.
+- finite combinatorics and encoding correction, including MF-R008/MF-R009/MF-R011;
+- exact dynamic non-closure, MF-R049;
+- frozen exponential-moment optimization, A112/A113, with A114 kept as a separate lifted layer pending governance normalization;
+- target-deformed central nesting and boundary-layer results, A115-A119;
+- fixed-interior rounding-phase staircase and resonance, A120-A122.
 
-## Central correction
+See [`consolidation/CORE_RESULTS_MAP.md`](consolidation/CORE_RESULTS_MAP.md) for scope and status. Novelty/priority is not inferred from mathematical correctness and remains conservative unless separately reviewed.
 
-For loopless labeled digraphs on five vertices:
+## Verification policy
 
-- **6,942** = full labeled reflexive reachability preorders / complete labeled condensation structures;
-- **5,234** = minimum-representative quotient-poset codes used in the original A8 implementation;
-- **139** = fully unlabeled condensation preorders.
+The project distinguishes:
 
-Both exact counts are independently reproduced by exhaustive enumeration and closed combinatorial formulas in A8.1. The original wording was ambiguous and the v1 preprint is marked superseded pending correction.
+- deductive proof;
+- exact finite enumeration;
+- constructive counterexample;
+- rigorous computer-assisted certificate;
+- finite numerical/regression evidence;
+- open conjecture.
 
-## Repository map
+A passed script is not automatically a theorem. A theorem verified from assumptions is not automatically a statement about nature.
 
-- `audits/` — scripts and exact/seeded outputs, including failed and corrective versions;
-- `article/` — preserved manuscripts and erratum notice;
-- `manuscripts/` — frozen blueprints and claim maps for the combinatorics and foundational manuscripts;
-- `manuscripts/foundational/draft/` — F4 reference-reviewed pre-submission manuscript, reference closure report, appendices, and claim traceability;
-- `manuscripts/foundational/review/` — F4 anonymous review copy, mathematical audit targets, claim checklist, reviewer forms, independence policy, and internal adversarial review;
-- `protocols/` — frozen reproducibility contracts for canonical audits;
-- `docs/AUDIT_INDEX.md` — audit-by-audit index;
-- `docs/CANONICAL_VERSIONS.md` — which version should be treated as canonical;
-- `docs/MANUSCRIPT_SPLIT.md` — formal article split and readiness decision;
-- `docs/RESULT_CLASSIFICATION.md` — claim-level classification by evidence, novelty, allowed wording, and manuscript destination;
-- `docs/novelty/` — claim-level novelty audits plus the A110-A114 literature-positioning map, including safe manuscript wording and supporting references;
-- `docs/SCIENTIFIC_STATUS.md` — established results and explicit nonclaims;
-- `docs/REPRODUCIBILITY.md` — environment and execution instructions;
-- `docs/REPRODUCIBILITY_PROTOCOLS.md` — canonical audit protocol documentation;
-- `docs/CORRECTIONS.md` — correction history;
-- `MFRP_Informational_Requirements_A39-A71/` — English computational audit archive for informational requirements A39-A71;
-- `MFRP_Informational_Requirements_A39-A77/` — expanded English computational audit archive for informational requirements A39-A77;
-- `MFRP_Informational_Requirements_A39-A106/` — expanded English computational audit archive for informational requirements A39-A106;
-- `MFRP_Informational_Requirements_A39-A109/` — latest complete English package, preserving the A39-A106 baseline and adding the organized A107-A109 research update;
-- `tools/validate_protocols.py` — validates protocol structure, hashes, seeds, verdicts, gates, metrics, outputs, and claim IDs;
-- `MANIFEST.csv` and `SHA256SUMS.txt` — integrity and completeness records.
+Selected claims are now being prepared for independent Lean 4 formalization; see [`consolidation/FORMALIZATION_PLAN.md`](consolidation/FORMALIZATION_PLAN.md).
 
-## Quick start
+## Historical archive
 
-```bash
-git clone https://github.com/DevHabito/precategorical-modal-field-framework.git
-cd precategorical-modal-field-framework
-python -m venv .venv
-source .venv/bin/activate       # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-cd audits
-python a8_1_condensation_code_resolution.py
-```
+The cumulative directories
 
-## Evidence discipline
+- `MFRP_Informational_Requirements_A39-A71/`
+- `MFRP_Informational_Requirements_A39-A77/`
+- `MFRP_Informational_Requirements_A39-A106/`
+- `MFRP_Informational_Requirements_A39-A109/`
 
-The repository deliberately distinguishes proofs, exact enumeration, synthetic witnesses, Monte Carlo audits, regression tests, failed protocols, and corrective protocols. A numerical pass does not turn a classical identity into a new theorem, and a mathematically consistent construction is not by itself evidence that nature uses that construction.
+are historical/provenance snapshots, not four competing canonical versions. They remain untouched during the first cleanup phase. The migration plan is documented in [`consolidation/ARCHIVE_PLAN.md`](consolidation/ARCHIVE_PLAN.md); redundant snapshots will only leave the default branch after equivalent Git tags/releases and migration links exist.
 
-## Current scientific boundary
+## Existing documentation
 
-The project has not derived physical spacetime, calibrated time, physical distance, curvature, gravity, matter, a physical lambda, or an experimental mapping for `q`, `mu`, or `pi`. See `docs/SCIENTIFIC_STATUS.md`.
+The repository still preserves detailed claim matrices, literature audits, manuscripts, protocols, exact scripts, failed routes, corrections, integrity manifests, and chronological research updates. In particular:
+
+- `docs/RESULT_CLASSIFICATION.md` — claim-level evidence/wording matrix;
+- `docs/SCIENTIFIC_STATUS.md` — scientific boundary and nonclaims;
+- `docs/novelty/` — literature and novelty positioning;
+- `manuscripts/` — manuscript work and claim maps;
+- `protocols/` and `audits/` — reproducibility material;
+- `MFRP_Informational_Requirements_A39-A109/research_updates/` — chronological A107-A122 development.
+
+## Scientific boundary
+
+The repository does **not** currently derive or empirically confirm physical spacetime, calibrated physical duration or distance, curvature, gravity, matter, quantum amplitudes, or a physical interpretation of the project variables. RZS/Modal Field language is historical or conjectural unless an explicit mathematical/empirical bridge is separately supplied.
+
+## Consolidation freeze
+
+During Consolidation 1.0, new chronological A-number packages are paused except when required to repair a contradiction or close an independent verification gap. The priority is compression, assumption minimization, formal verification, and short externally reviewable theorem units.
 
 ## Citation and license
 
-Please cite the repository release and the specific audit or manuscript used. Software in this repository is licensed under Apache-2.0. Scientific content, documentation, figures, tables, CSV files, JSON result files, reports, and other research outputs are licensed under CC BY 4.0. See `LICENSE.md`, `NOTICE`, and the `LICENSES/` directory.
+Please cite the repository release and the specific theorem/audit/manuscript used. Software is licensed under Apache-2.0. Scientific content, documentation, figures, tables, CSV/JSON results, and reports are licensed under CC BY 4.0. See `LICENSE.md`, `NOTICE`, and `LICENSES/`.
