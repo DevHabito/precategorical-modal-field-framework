@@ -5,6 +5,8 @@ set_option warningAsError true
 
 namespace PrecategoryFormal
 
+open scoped BigOperators
+
 /-- A finite directed graph on the five labeled witness vertices. -/
 abbrev BoolDigraph := Vertex → Vertex → Bool
 
@@ -47,6 +49,26 @@ def ReachWithin : Nat → BoolDigraph → Vertex → Vertex → Prop
       (ReachWithin n g u 2 ∧ g 2 v = true) ∨
       (ReachWithin n g u 3 ∧ g 3 v = true) ∨
       (ReachWithin n g u 4 ∧ g 4 v = true)
+
+/-- Boolean evaluator for the same bounded-path predicate. -/
+def ReachWithinBool : Nat → BoolDigraph → Vertex → Vertex → Bool
+  | 0, _, u, v => decide (u = v)
+  | n + 1, g, u, v =>
+      ReachWithinBool n g u v ||
+      (ReachWithinBool n g u 0 && g 0 v) ||
+      (ReachWithinBool n g u 1 && g 1 v) ||
+      (ReachWithinBool n g u 2 && g 2 v) ||
+      (ReachWithinBool n g u 3 && g 3 v) ||
+      (ReachWithinBool n g u 4 && g 4 v)
+
+/-- The Boolean evaluator is propositionally equivalent to `ReachWithin`. -/
+theorem reachWithinBool_eq_true_iff (g : BoolDigraph) (n : Nat) (u v : Vertex) :
+    ReachWithinBool n g u v = true ↔ ReachWithin n g u v := by
+  induction n generalizing u v with
+  | zero =>
+      simp [ReachWithinBool, ReachWithin]
+  | succ n ih =>
+      simp [ReachWithinBool, ReachWithin, ih]
 
 /-- Every bounded certificate denotes genuine reflexive-transitive reachability. -/
 theorem reachWithin_sound (g : BoolDigraph) {n : Nat} {u v : Vertex}
@@ -229,6 +251,56 @@ theorem graphB_realizes_witnessB :
   · simpa [witnessB] using graphB_exactSCCMinimumMap
   · simpa [witnessB] using graphB_quotient_antichain
 
+/-- Minimum-representative flag used by the graph-level witness encoder. -/
+def graphRepresentativeFlag (blockMin : Vertex → Vertex) (v : Vertex) : Bool :=
+  decide (blockMin v = v)
+
+/--
+Strict representative reachability bit for the explicit five-vertex witness encoder.
+The bounded path evaluator is used only to make the concrete code executable.
+-/
+def graphStrictRepresentativeReachBit4
+    (g : BoolDigraph) (blockMin : Vertex → Vertex) (u v : Vertex) : Bool :=
+  graphRepresentativeFlag blockMin u &&
+  graphRepresentativeFlag blockMin v &&
+  decide (u ≠ v) &&
+  ReachWithinBool 4 g u v
+
+/--
+Executable reconstruction of the historical A8 representative code for the
+five-vertex explicit witnesses. Bits `5*u+v` record strict reachability between
+minimum SCC representatives; bits `25+u` record representative flags.
+-/
+def witnessGraphRepresentativeCode4
+    (g : BoolDigraph) (blockMin : Vertex → Vertex) : Nat :=
+  (∑ u : Vertex, ∑ v : Vertex,
+    weightedBit (graphStrictRepresentativeReachBit4 g blockMin u v)
+      (2 ^ (5 * u.val + v.val))) +
+  ∑ u : Vertex,
+    weightedBit (graphRepresentativeFlag blockMin u) (2 ^ (25 + u.val))
+
+/-- Direct graph-level reproduction of the historical code for graph A. -/
+theorem graphA_direct_representative_code :
+    witnessGraphRepresentativeCode4 graphA blockMinA = 100663296 := by
+  native_decide
+
+/-- Direct graph-level reproduction of the historical code for graph B. -/
+theorem graphB_direct_representative_code :
+    witnessGraphRepresentativeCode4 graphB blockMinB = 100663296 := by
+  native_decide
+
+/-- The direct graph encoder and the abstract condensation encoder agree on graph A. -/
+theorem graphA_direct_code_matches_witness :
+    witnessGraphRepresentativeCode4 graphA blockMinA =
+      historicalRepresentativeCode witnessA := by
+  rw [graphA_direct_representative_code, witnessA_code]
+
+/-- The direct graph encoder and the abstract condensation encoder agree on graph B. -/
+theorem graphB_direct_code_matches_witness :
+    witnessGraphRepresentativeCode4 graphB blockMinB =
+      historicalRepresentativeCode witnessB := by
+  rw [graphB_direct_representative_code, witnessB_code]
+
 /--
 Graph-level MF-R009 bridge: the two explicit A8.1 directed graphs induce the
 minimum-block maps used by the representative-code collision.
@@ -242,19 +314,23 @@ theorem mf_r009_graph_to_scc_bridge :
 End-to-end explicit witness theorem for MF-R009.
 
 The original directed graphs realize two distinct condensation structures;
-each strict quotient is an antichain, and both structures receive exactly the
-same historical representative code `100663296`.
+each strict quotient is an antichain, and both the direct graph encoder and the
+abstract condensation encoder produce the same historical code `100663296`.
 -/
 theorem mf_r009_graph_level_code_collision :
     GraphRealizesAntichainCondensation graphA witnessA ∧
     GraphRealizesAntichainCondensation graphB witnessB ∧
     witnessA ≠ witnessB ∧
+    witnessGraphRepresentativeCode4 graphA blockMinA = 100663296 ∧
+    witnessGraphRepresentativeCode4 graphB blockMinB = 100663296 ∧
     historicalRepresentativeCode witnessA = 100663296 ∧
     historicalRepresentativeCode witnessB = 100663296 := by
   exact ⟨
     graphA_realizes_witnessA,
     graphB_realizes_witnessB,
     witnesses_distinct,
+    graphA_direct_representative_code,
+    graphB_direct_representative_code,
     witnessA_code,
     witnessB_code
   ⟩
