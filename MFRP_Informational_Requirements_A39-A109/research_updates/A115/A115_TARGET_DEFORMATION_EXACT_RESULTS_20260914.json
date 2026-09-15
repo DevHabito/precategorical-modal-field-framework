@@ -1,0 +1,117 @@
+{
+  "audit": "A115_TARGET_NODE_DEFORMATION_EXACT_AUDIT",
+  "correction": {
+    "M": 521,
+    "b": 257,
+    "bplus2": 259,
+    "central_J_admissible": false,
+    "disposition": "REJECTED_AS_COUNTEREXAMPLE_OUTSIDE_A84_ADJACENT_FACTOR_DOMAIN",
+    "h": 260,
+    "max_admissible_factor_contact": 258,
+    "s": "129/1000",
+    "tau": "667/5000"
+  },
+  "date": "2026-09-14",
+  "exact_reproduction": {
+    "A113_sentinel_controls": {
+      "count": 21,
+      "pass": true,
+      "records": [
+        {"M": 521, "b": 89, "s": "129/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 521, "b": 89, "s": "131/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 521, "b": 90, "s": "133/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 522, "b": 89, "s": "129/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 522, "b": 90, "s": "131/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 522, "b": 90, "s": "133/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 561, "b": 95, "s": "129/1000", "sign_E_b": 1, "sign_E_bplus2": 1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 561, "b": 96, "s": "131/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 561, "b": 97, "s": "133/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 600, "b": 102, "s": "129/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 600, "b": 103, "s": "131/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 600, "b": 104, "s": "133/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 760, "b": 129, "s": "129/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 760, "b": 130, "s": "131/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 760, "b": 131, "s": "133/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 1000, "b": 170, "s": "129/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 1000, "b": 171, "s": "131/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 1000, "b": 172, "s": "133/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 2049, "b": 347, "s": "129/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 2049, "b": 350, "s": "131/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1},
+        {"M": 2049, "b": 353, "s": "133/1000", "sign_E_b": 1, "sign_E_bplus2": -1, "sign_E_bplus3": -1, "sign_J": 1}
+      ]
+    },
+    "deformed_D_equals_frozen_D_at_tau_half": {"count": 36, "pass": true},
+    "deformed_E_equals_frozen_A84_E_at_tau_half": {"count": 90, "pass": true},
+    "deformed_cofactor_equals_deformed_kspace": {"count": 204, "pass": true}
+  },
+  "finite_exact_evidence": {
+    "coarse_grid": {
+      "J_positive_count": 192,
+      "by_tau": {
+        "1/2": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "1/4": {"J_positive": 12, "strong_package": 8, "total": 12},
+        "1/5": {"J_positive": 12, "strong_package": 6, "total": 12},
+        "11/20": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "13/20": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "17/20": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "2/5": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "3/10": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "3/20": {"J_positive": 12, "strong_package": 0, "total": 12},
+        "3/4": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "3/5": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "4/5": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "7/10": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "7/20": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "9/10": {"J_positive": 12, "strong_package": 12, "total": 12},
+        "9/20": {"J_positive": 12, "strong_package": 12, "total": 12}
+      },
+      "control_count": 192,
+      "strong_package_count": 170
+    },
+    "near_wall_grid": {
+      "J_negative_count": 2,
+      "J_positive_count": 58,
+      "admissible_control_count": 60,
+      "negative_records": [
+        {"M": 521, "b": 252, "h": 260, "offset": "1/100", "s": "131/1000", "sign_J": -1, "tau": "141/1000"},
+        {"M": 521, "b": 252, "h": 260, "offset": "1/100", "s": "133/1000", "sign_J": -1, "tau": "143/1000"}
+      ]
+    }
+  },
+  "nonclaims": [
+    "The 192/192 coarse-grid result is finite evidence, not a theorem.",
+    "The strong A113 remote-sign package is not generalized here.",
+    "No A114 lifted active-set staircase theorem is generalized in tau.",
+    "No physical or ontological interpretation is inferred."
+  ],
+  "open_claims": [
+    "For each fixed beta<s<tau<1, J_(tau,b_tau+1) may be eventually positive in M.",
+    "Uniform eventual positivity may hold on compact subsets strictly inside beta<s<tau<1.",
+    "No such asymptotic statement is proved by this audit."
+  ],
+  "refutation": {
+    "claim": "M>=521 and beta<s<tau<1 universally imply J_(tau,b_tau+1)>0",
+    "counterexamples": [
+      {"J_denominator_decimal_digits": 3889, "J_fraction_sha256": "dc0efb5b23581db2a5c4983e87097884582dddee1fd68d5ec28d9b459bef8bac", "J_numerator_decimal_digits": 3447, "M": 521, "b": 252, "b_tau_ceil_certificate": true, "bplus2": 254, "direct_matrix_crosscheck": true, "h": 260, "max_admissible_factor_contact": 258, "s": "131/1000", "sign_J": -1, "tau": "141/1000"},
+      {"J_denominator_decimal_digits": 3889, "J_fraction_sha256": "e60c0f4b4bf1ef74867c3d80cebb5fb805364b7d542114fe2f858b6aeea7e34f", "J_numerator_decimal_digits": 3451, "M": 521, "b": 252, "b_tau_ceil_certificate": true, "bplus2": 254, "direct_matrix_crosscheck": true, "h": 260, "max_admissible_factor_contact": 258, "s": "133/1000", "sign_J": -1, "tau": "143/1000"}
+    ],
+    "status": "REFUTED"
+  },
+  "scope": {
+    "beta": "1/8",
+    "delta": "1/1875",
+    "factor_contact_domain": "2 <= k <= floor(M/2)-2",
+    "source_probes": ["129/1000", "131/1000", "133/1000"]
+  },
+  "status": "PASS_WITH_REFUTATION",
+  "symbolic_gates": {
+    "J_cancel": true,
+    "even_mean": true,
+    "even_norm": true,
+    "even_target": true,
+    "generic_A84_identity": true,
+    "odd_mean": true,
+    "odd_norm": true,
+    "odd_target": true
+  }
+}
