@@ -1,0 +1,9 @@
+# A121 Git blob manifest — 2026-09-15
+# Git object SHA-1 values as returned by GitHub contents API.
+
+A121_CORRECTIONS_AND_DEAD_ENDS_20260915.md  1731dc7e0cccf9aeffcc1bbe95ac0fa7e0ef4cbe
+A121_EXACT_AUDIT_RESULTS_20260915.json       7f7e122cb95f0d78e4b2d3a42b6a7c688c1fd728
+A121_FIXED_INTERIOR_SIGN_STAIRCASE_THEOREM_20260915.md  fec397130375cc96f9ff4e43d4a4f1bde3eae658
+A121_RED_TEAM_AUDIT_20260915.md             f04707baf5c5b921a15c95a7aa2db0f55ac11e03
+README.md                                    b22e8d397a7f5eef9a31b24944c1d82f3120a6df
+a121_fixed_interior_sign_staircase_audit.py  dfcd165623180c60c0507a9d47bbb038a8ef6053
