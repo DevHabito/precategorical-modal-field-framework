@@ -64,19 +64,43 @@ jobs:
   leanchecker:
     needs: lean
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        module:
+          - PrecategoryFormal.GraphSCCBridge
+          - PrecategoryFormal.PosetBijection
+          - PrecategoryFormal.PosetCountBridge
+          - PrecategoryFormal.PosetEnumeration
+          - PrecategoryFormal.PosetSemantics
+          - PrecategoryFormal.RepresentativeCode
+          - PrecategoryFormal.RepresentativeCodeType
+          - PrecategoryFormal.RepresentativeCount
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Independent kernel check
-        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+      - name: Restore exact Lean build cache
+        uses: actions/cache/restore@v5
         with:
-          lake-package-directory: formal/lean
-          auto-config: false
-          build: false
-          test: false
-          lint: false
-          leanchecker: true
-          nanoda: false
-          use-mathlib-cache: false
-          use-github-cache: true
+          path: formal/lean/.lake
+          key: lake-${{ runner.os }}-${{ runner.arch }}---${{ github.sha }}
+          fail-on-cache-miss: true
+
+      - name: Install pinned Lean toolchain
+        shell: bash
+        working-directory: formal/lean
+        run: |
+          set -euo pipefail
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf \
+            | sh -s -- -y --default-toolchain "$(cat lean-toolchain)"
+
+      - name: Kernel replay ${{ matrix.module }}
+        shell: bash
+        working-directory: formal/lean
+        env:
+          MODULE: ${{ matrix.module }}
+        run: |
+          set -euo pipefail
+          export PATH="$HOME/.elan/bin:$PATH"
+          lake env leanchecker "$MODULE"
