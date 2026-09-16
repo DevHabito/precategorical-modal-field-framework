@@ -7,3 +7,4 @@ import PrecategoryFormal.PosetBijection
 import PrecategoryFormal.PosetCountBridge
 import PrecategoryFormal.RepresentativeCodeType
 import PrecategoryFormal.LiteralRepresentativeCode
+import PrecategoryFormal.RepresentativeRealization
