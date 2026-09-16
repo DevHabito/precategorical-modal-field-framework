@@ -51,7 +51,34 @@ def OrientationTransitive {n : Nat} (o : OrientationAssignment n) : Prop :=
 /-- The executable finite checker is exactly the mathematical transitivity predicate. -/
 theorem orientationTransitiveBool_eq_true_iff {n : Nat} (o : OrientationAssignment n) :
     orientationTransitiveBool o = true ↔ OrientationTransitive o := by
-  simp [orientationTransitiveBool, OrientationTransitive] <;> aesop
+  constructor
+  · intro h
+    have h' :
+        ∀ i j k : Fin n,
+          (orientationLE o i j = false ∨ orientationLE o j k = false) ∨
+            orientationLE o i k = true := by
+      simpa [orientationTransitiveBool] using h
+    intro i j k hij hjk
+    rcases h' i j k with hfalse | hik
+    · rcases hfalse with hfalse | hfalse
+      · rw [hij] at hfalse
+        simp at hfalse
+      · rw [hjk] at hfalse
+        simp at hfalse
+    · exact hik
+  · intro h
+    have h' :
+        ∀ i j k : Fin n,
+          (orientationLE o i j = false ∨ orientationLE o j k = false) ∨
+            orientationLE o i k = true := by
+      intro i j k
+      cases hij : orientationLE o i j with
+      | false => exact Or.inl (Or.inl rfl)
+      | true =>
+          cases hjk : orientationLE o j k with
+          | false => exact Or.inl (Or.inr rfl)
+          | true => exact Or.inr (h i j k hij hjk)
+    simpa [orientationTransitiveBool] using h'
 
 /-- Boolean relation-matrix formulation of a labeled partial order. -/
 def IsPartialOrderMatrix {n : Nat} (r : Fin n → Fin n → Bool) : Prop :=
