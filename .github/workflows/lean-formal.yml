@@ -77,6 +77,7 @@ jobs:
           - PrecategoryFormal.RepresentativeCode
           - PrecategoryFormal.RepresentativeCodeType
           - PrecategoryFormal.RepresentativeCount
+          - PrecategoryFormal.RepresentativeRealization
     steps:
       - name: Checkout
         uses: actions/checkout@v6
