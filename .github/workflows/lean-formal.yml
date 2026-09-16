@@ -49,7 +49,7 @@ jobs:
           echo "--- pinned lake-manifest.json ---"
           cat lake-manifest.json
 
-      - name: Build and kernel-check Lean project
+      - name: Build Lean project
         uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
         with:
           lake-package-directory: formal/lean
@@ -57,6 +57,26 @@ jobs:
           build: true
           test: false
           lint: false
-          leanchecker: true
+          leanchecker: false
           nanoda: false
           use-mathlib-cache: true
+
+  leanchecker:
+    needs: lean
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Independent kernel check
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          lake-package-directory: formal/lean
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          leanchecker: true
+          nanoda: false
+          use-mathlib-cache: false
+          use-github-cache: true
