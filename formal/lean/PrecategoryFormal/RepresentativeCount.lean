@@ -46,7 +46,7 @@ fiber sum: number of possible representative sets times the size of each
 `k`-fiber.
 -/
 def representativeCodeCountFromFibers (m : Nat) (p : Nat → Nat) : Nat :=
-  ∑ j in Finset.range (m + 1),
+  ∑ j ∈ Finset.range (m + 1),
     (representativeSets m (j + 1)).card * p (j + 1)
 
 /--
@@ -60,7 +60,7 @@ Equivalently, with `n = m+1` and `k=j+1`, this is
 theorem representativeCodeCountFromFibers_eq_binomial
     (m : Nat) (p : Nat → Nat) :
     representativeCodeCountFromFibers m p =
-      ∑ j in Finset.range (m + 1), Nat.choose m j * p (j + 1) := by
+      ∑ j ∈ Finset.range (m + 1), Nat.choose m j * p (j + 1) := by
   unfold representativeCodeCountFromFibers
   apply Finset.sum_congr rfl
   intro j hj
