@@ -24,9 +24,18 @@ It then derives the shifted-binomial fiber identity rather than defining the fin
 
 `PrecategoryFormal/RepresentativeCodeType.lean` defines an explicit canonical code type, so the fiber-sum formula is a theorem about a finite type rather than a stipulated definition.
 
-`PrecategoryFormal/LiteralRepresentativeCode.lean` closes the final carrier-level gap. It transports partial orders across the canonical increasing bijection `Fin k ≃ S`, proves the canonical coordinate code equivalent to the literal published code `(S,P)` where `P` lives on the actual representative set `S`, and proves
+`PrecategoryFormal/LiteralRepresentativeCode.lean` closes the carrier-level gap. It transports partial orders across the canonical increasing bijection `Fin k ≃ S`, proves the canonical coordinate code equivalent to the literal published code `(S,P)` where `P` lives on the actual representative set `S`, and proves
 
 `Nat.card (LiteralRepresentativeCode 4) = 5234`.
+
+`PrecategoryFormal/RepresentativeRealization.lean` closes the realizability gap. For every literal code `(S,P)` it constructs an explicit loopless directed graph and proves:
+
+- graph reachability is exactly the order `P` lifted through the representative map;
+- mutual reachability is equivalent to equality of representatives, so the SCCs are exactly the representative fibers;
+- every selected representative is fixed by the representative map and is the minimum label in its SCC;
+- reachability between the selected representatives is exactly `P`.
+
+Thus the counted literal code space is not merely an abstract candidate superset: every counted `(S,P)` pair has a directed-graph realization with the declared SCC-minimum and quotient-order semantics.
 
 No historical Python count is imported into Lean as an axiom.
 
@@ -57,7 +66,7 @@ The final theorem `mf_r009_graph_level_code_collision` therefore establishes the
 
 ## Verification status
 
-**MF-R008 declared counting theorem: END-TO-END LEAN/KERNEL PASS.**
+**MF-R008 declared counting theorem, including literal-code realizability: END-TO-END LEAN/KERNEL PASS.**
 
 **MF-R009 explicit witness: END-TO-END LEAN/KERNEL PASS.**
 
@@ -67,7 +76,7 @@ The MF-R008 small-poset values are exact finite computations discharged with Lea
 
 ## Deliberate nonclaims
 
-The MF-R008 formalization proves the declared representative-code counting theorem. It does **not** count full SCC memberships, make the representative code injective, establish novelty/priority, or imply anything physical.
+The MF-R008 formalization proves the declared representative-code counting theorem and the realizability of every counted literal code. It does **not** retain or count discarded SCC membership assignments as part of the code, make the representative code injective, establish novelty/priority, or imply anything physical.
 
 For MF-R009, `ReachWithinBool 4` is used as an executable bounded-path evaluator for the two concrete five-vertex witnesses. We have proved its equivalence with the corresponding bounded proposition and proved bounded certificates sound for mathematical reachability.
 
