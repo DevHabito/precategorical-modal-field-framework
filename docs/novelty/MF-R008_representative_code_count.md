@@ -25,6 +25,27 @@ For \(n=5\),
 N_{\mathrm{rep}}(5)=5234.
 \]
 
+## Formal verification status
+
+The declared counting claim is now formalized end to end in Lean 4 under the
+project's pinned Lean/mathlib environment. The formal chain:
+
+- proves the cardinality \(\binom{n-1}{k-1}\) of representative sets containing the distinguished label `0`;
+- independently enumerates the small labeled-poset counts through a three-state antisymmetric encoding and Lean `native_decide`;
+- proves the executable transitivity checker equivalent to mathematical transitivity;
+- constructs a bijection between accepted encodings and Boolean partial-order matrices;
+- derives the fiber sum from an explicit canonical code type rather than taking the formula as a definition;
+- proves that the canonical `Fin k` presentation is equivalent to the literal code `(S,P)` in which `P` is a partial order on the actual representative set `S`;
+- proves `Nat.card (LiteralRepresentativeCode 4) = 5234`.
+
+The full Lean library build passes with no `sorry`/`admit`, and every project
+module passes a bundled `leanchecker` kernel replay in the module-sharded CI.
+The `native_decide` values are exact finite formal computations; this does not
+turn the classical poset-count sequence into a new analytic theorem.
+
+This formal verification changes the verification status of the claim, not its
+novelty classification. The literature assessment below remains separate.
+
 ## Why the formula holds
 
 The representative set must contain vertex \(0\). Conversely, every
