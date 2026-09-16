@@ -9,11 +9,8 @@ namespace PrecategoryFormal
 @[simp]
 theorem pairSlot_pairLower_pairUpper {n : Nat} (p : PairSlot n) :
     pairSlot (pairLower p) (pairUpper p) p.2.isLt = p := by
-  rcases p with ⟨j, i⟩
-  apply Sigma.ext
-  · rfl
-  · apply Fin.ext
-    rfl
+  rcases p with ⟨j, ⟨i, hi⟩⟩
+  rfl
 
 /--
 Encode a Boolean relation back into one three-state value per unordered pair.
@@ -36,7 +33,7 @@ theorem orientationOfRelation_orientationLE {n : Nat} (o : OrientationAssignment
   have hstate : (o p).val = 0 ∨ (o p).val = 1 ∨ (o p).val = 2 := by omega
   rcases hstate with h0 | h1 | h2
   · simp [orientationOfRelation, orientationLE, hlt, hnlt, h0]
-  · simp [orientationOfRelation, orientationLE, hlt, hnlt, h1]
+  · simp [orientationOfRelation, orientationLE, hlt, h1]
   · simp [orientationOfRelation, orientationLE, hlt, hnlt, h2]
 
 /--
@@ -57,7 +54,7 @@ theorem orientationLE_orientationOfRelation {n : Nat}
       rintro ⟨hijr, hjir⟩
       exact hne (hr.2.1 i j hijr hjir)
     cases hir : r i j <;> cases hri : r j i <;>
-      simp_all [orientationLE, orientationOfRelation, hij, hji]
+      simp_all [orientationLE, orientationOfRelation]
   · by_cases hji : j.val < i.val
     · have hne : i ≠ j := by
         intro h
@@ -67,7 +64,7 @@ theorem orientationLE_orientationOfRelation {n : Nat}
         rintro ⟨hijr, hjir⟩
         exact hne (hr.2.1 i j hijr hjir)
       cases hir : r i j <;> cases hri : r j i <;>
-        simp_all [orientationLE, orientationOfRelation, hij, hji]
+        simp_all [orientationLE, orientationOfRelation]
     · have heq : i = j := by
         apply Fin.ext
         omega
