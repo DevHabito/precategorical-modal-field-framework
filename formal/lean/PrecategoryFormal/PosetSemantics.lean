@@ -36,8 +36,10 @@ theorem orientationLE_antisymm {n : Nat} (o : OrientationAssignment n) {i j : Fi
   by_cases hlt : i.val < j.val
   · have hnrev : ¬ j.val < i.val := by omega
     simp [orientationLE, hlt, hnrev] at hij hji
+    omega
   · have hgt : j.val < i.val := by omega
     simp [orientationLE, hlt, hgt] at hij hji
+    omega
 
 /-- Mathematical transitivity of the decoded Boolean relation. -/
 def OrientationTransitive {n : Nat} (o : OrientationAssignment n) : Prop :=
@@ -49,7 +51,7 @@ def OrientationTransitive {n : Nat} (o : OrientationAssignment n) : Prop :=
 /-- The executable finite checker is exactly the mathematical transitivity predicate. -/
 theorem orientationTransitiveBool_eq_true_iff {n : Nat} (o : OrientationAssignment n) :
     orientationTransitiveBool o = true ↔ OrientationTransitive o := by
-  simp [orientationTransitiveBool, OrientationTransitive]
+  simp [orientationTransitiveBool, OrientationTransitive] <;> aesop
 
 /-- Boolean relation-matrix formulation of a labeled partial order. -/
 def IsPartialOrderMatrix {n : Nat} (r : Fin n → Fin n → Bool) : Prop :=
