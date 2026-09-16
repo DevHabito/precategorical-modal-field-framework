@@ -13,40 +13,42 @@ Preferred stack:
 - `lake` project with pinned dependency versions;
 - CI that runs `lake build` on every change to formal files;
 - no `sorry` in files marked verified;
+- bundled `leanchecker` replay for each project module, sharded across CI runners so the independent replay is not hidden by build/runtime limits;
 - generated finite certificates allowed only when their generator and checker are both documented.
 
 ## Formalization order
 
-### F0 — definition sanity pilot
+### F0 — definition sanity pilot — COMPLETE
 
 Formalize MF-R009, the non-injectivity of the minimum-representative quotient-poset code, using one explicit finite witness.
 
 Purpose: validate the graph/SCC/quotient/code definitions before attempting a counting theorem.
 
-Success criterion: a theorem with no `sorry` showing two distinct full structures map to the same representative code.
+Completion status: the explicit two-graph witness is connected to `Relation.ReflTransGen` reachability, SCC minima, quotient orders, and the direct representative-code computation with no `sorry`.
 
-### F1 — first substantive target: MF-R008
+### F1 — first substantive target: MF-R008 — COMPLETE
 
-Formalize the shifted-binomial count
+Formalized the shifted-binomial count
 
 \[
 N_{\mathrm{rep}}(n)=\sum_{k=1}^{n}\binom{n-1}{k-1}p(k).
 \]
 
-The proof should isolate the combinatorial bijection rather than trust the Python enumerator.
+The completed proof does not trust the historical Python enumerator. It contains the following independent layers:
 
-Required components:
+- a finite labeled ground carrier and the family of representative sets containing the distinguished label `0`;
+- a proof that the `k`-representative fiber has cardinality `binom(n-1,k-1)`;
+- an executable three-state encoding of antisymmetric relations on unordered pairs;
+- exact Lean `native_decide` enumeration of the small labeled-poset counts `1,3,19,219,4231`;
+- a semantic proof that the executable transitivity checker is equivalent to mathematical transitivity;
+- an exact bijection between accepted three-state encodings and Boolean partial-order matrices;
+- an explicit canonical MF-R008 code type whose cardinality is the fiber sum;
+- a carrier-transport equivalence showing that the canonical `Fin k` presentation is exactly equivalent to the literal code `(S,P)` with `P` a partial order on the actual representative set `S`;
+- the verified five-vertex conclusion `Nat.card (LiteralRepresentativeCode 4) = 5234`.
 
-- finite labeled carrier;
-- partition/SCC-block representation;
-- distinguished minimum representative in each block;
-- quotient partial order;
-- precise code equivalence relation;
-- proof that choosing the `k-1` non-distinguished minima contributes `binom(n-1,k-1)`;
-- multiplication by the count `p(k)` of labeled quotient partial orders under the chosen convention;
-- summation over `k`.
+Verification status: the complete Lean library builds with the pinned Lean/mathlib environment, rejects `sorry`/`admit`, and every project module passes a bundled `leanchecker` kernel replay in the module-sharded CI.
 
-The formal theorem may treat `p(k)` abstractly first; a later module can connect it to an explicit finite enumeration definition.
+Scope boundary: F1 proves the declared MF-R008 code/count theorem. It does not establish novelty, count full SCC memberships, or imply injectivity of the representative code.
 
 ### F2 — independent finite computation: MF-R011
 
@@ -89,15 +91,8 @@ Agreement is useful precisely because the implementations do not share the same 
 
 ## Directory target
 
-When implementation begins, use
+The implementation lives under
 
 `formal/lean/`
 
-with modules named by mathematical content rather than audit numbers, for example:
-
-- `RepresentativeCode.lean`
-- `RepresentativeCodeCount.lean`
-- `EdgeToggleSensitivity.lean`
-- `DynamicNonclosure.lean`
-
-A-number provenance may appear in comments, not in theorem names.
+with modules named by mathematical content rather than audit numbers. Current modules include the representative-code witness, representative counting, poset enumeration/semantics/bijection, count bridge, and literal-code carrier equivalence. A-number provenance may appear in comments, not in theorem names.
