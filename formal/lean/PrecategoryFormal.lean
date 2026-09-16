@@ -4,3 +4,4 @@ import PrecategoryFormal.RepresentativeCount
 import PrecategoryFormal.PosetEnumeration
 import PrecategoryFormal.PosetSemantics
 import PrecategoryFormal.PosetBijection
+import PrecategoryFormal.PosetCountBridge
