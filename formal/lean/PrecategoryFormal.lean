@@ -1,3 +1,4 @@
 import PrecategoryFormal.RepresentativeCode
 import PrecategoryFormal.GraphSCCBridge
 import PrecategoryFormal.RepresentativeCount
+import PrecategoryFormal.PosetEnumeration
