@@ -6,3 +6,4 @@ import PrecategoryFormal.PosetSemantics
 import PrecategoryFormal.PosetBijection
 import PrecategoryFormal.PosetCountBridge
 import PrecategoryFormal.RepresentativeCodeType
+import PrecategoryFormal.LiteralRepresentativeCode
