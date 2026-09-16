@@ -17,7 +17,9 @@ N_{\mathrm{rep}}(n)
 
 where `p(k)` denotes the number of labeled partial orders on `k` elements under the declared convention.
 
-Status: **proved combinatorially + exact enumeration**.
+Status: **proved and end-to-end formalized in Lean for the declared code/count statement**. The formalization derives the binomial representative-set factor, independently obtains `p(1),…,p(5)=1,3,19,219,4231` by exact `native_decide` enumeration, proves the executable encoding has exactly the semantics of labeled partial orders, derives the fiber count from an explicit code type, and proves that the canonical-coordinate presentation is equivalent to the literal `(S,P)` presentation with `P` living on the actual representative set. Thus the literal five-vertex code type has cardinality `5234`. The complete library build and module-sharded bundled `leanchecker` replay pass.
+
+Important nonclaims: this does not count full SCC partitions, does not make the representative code injective, and does not establish novelty or priority.
 
 Novelty status: **not certified**.
 
