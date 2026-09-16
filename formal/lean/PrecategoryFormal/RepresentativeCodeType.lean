@@ -22,35 +22,33 @@ abbrev CanonicalRepresentativeCode (m : Nat) :=
   Σ j : Fin (m + 1), RepresentativeChoice m (j.val + 1) × PartialOrderMatrix (j.val + 1)
 
 /-- The subtype of representative choices has the expected finite cardinality. -/
-theorem card_representativeChoice (m k : Nat) :
-    Fintype.card (RepresentativeChoice m k) = (representativeSets m k).card := by
+theorem natCard_representativeChoice (m k : Nat) :
+    Nat.card (RepresentativeChoice m k) = (representativeSets m k).card := by
   classical
-  simpa [RepresentativeChoice] using
-    Fintype.subtype_card (representativeSets m k) (fun s => Iff.rfl)
+  exact Nat.subtype_card (representativeSets m k) (fun s => Iff.rfl)
 
 /--
 The explicit canonical code type has exactly the fiber-sum cardinality; the
 count is therefore derived from a finite type rather than stipulated by the
 formula.
 -/
-theorem card_canonicalRepresentativeCode (m : Nat) :
-    Fintype.card (CanonicalRepresentativeCode m) =
+theorem natCard_canonicalRepresentativeCode (m : Nat) :
+    Nat.card (CanonicalRepresentativeCode m) =
       representativeCodeCountFromFibers m labeledPosetCount := by
   classical
-  rw [Fintype.card_sigma]
+  rw [Nat.card_sigma]
   unfold representativeCodeCountFromFibers
   rw [Fin.sum_univ_eq_sum_range]
   apply Finset.sum_congr rfl
   intro j hj
-  simp only [Fintype.card_prod]
-  rw [card_representativeChoice]
-  rw [labeledPosetCount_eq_natCard_partialOrderMatrix]
-  rw [Fintype.card_eq_nat_card]
+  rw [Nat.card_prod]
+  rw [natCard_representativeChoice]
+  rw [← labeledPosetCount_eq_natCard_partialOrderMatrix]
 
 /-- The explicit five-vertex canonical code type has cardinality `5234`. -/
-theorem card_canonicalRepresentativeCode_five :
-    Fintype.card (CanonicalRepresentativeCode 4) = 5234 := by
-  rw [card_canonicalRepresentativeCode]
+theorem natCard_canonicalRepresentativeCode_five :
+    Nat.card (CanonicalRepresentativeCode 4) = 5234 := by
+  rw [natCard_canonicalRepresentativeCode]
   exact representativeCodeCount_five_verified
 
 end PrecategoryFormal
