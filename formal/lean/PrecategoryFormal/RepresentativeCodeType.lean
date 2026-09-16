@@ -38,7 +38,7 @@ theorem natCard_canonicalRepresentativeCode (m : Nat) :
   classical
   rw [Nat.card_sigma]
   unfold representativeCodeCountFromFibers
-  rw [Fin.sum_univ_eq_sum_range]
+  rw [← Fin.sum_univ_eq_sum_range]
   apply Finset.sum_congr rfl
   intro j hj
   rw [Nat.card_prod]
