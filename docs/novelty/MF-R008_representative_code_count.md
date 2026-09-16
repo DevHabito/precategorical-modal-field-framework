@@ -25,6 +25,33 @@ For \(n=5\),
 N_{\mathrm{rep}}(5)=5234.
 \]
 
+## Formal verification status
+
+The declared counting claim is now formalized end to end in Lean 4 under the
+project's pinned Lean/mathlib environment. The formal chain:
+
+- proves the cardinality \(\binom{n-1}{k-1}\) of representative sets containing the distinguished label `0`;
+- independently enumerates the small labeled-poset counts through a three-state antisymmetric encoding and Lean `native_decide`;
+- proves the executable transitivity checker equivalent to mathematical transitivity;
+- constructs a bijection between accepted encodings and Boolean partial-order matrices;
+- derives the fiber sum from an explicit canonical code type rather than taking the formula as a definition;
+- proves that the canonical `Fin k` presentation is equivalent to the literal code `(S,P)` in which `P` is a partial order on the actual representative set `S`;
+- proves an explicit realizability theorem: every literal `(S,P)` code has a loopless directed-graph realization whose SCCs are exactly the fibers of the representative map, whose chosen representatives are minimum labels of those SCCs, and whose quotient reachability order is exactly `P`;
+- proves `Nat.card (LiteralRepresentativeCode 4) = 5234`.
+
+The realizability theorem closes an important counting subtlety: the formula is
+not merely the size of an abstract superset of candidate pairs. Every counted
+literal pair is realized by an actual directed graph with the required SCC-minimum
+and quotient-order semantics.
+
+The full Lean library build passes with no `sorry`/`admit`, and every project
+module passes a bundled `leanchecker` kernel replay in the module-sharded CI.
+The `native_decide` values are exact finite formal computations; this does not
+turn the classical poset-count sequence into a new analytic theorem.
+
+This formal verification changes the verification status of the claim, not its
+novelty classification. The literature assessment below remains separate.
+
 ## Why the formula holds
 
 The representative set must contain vertex \(0\). Conversely, every
@@ -36,10 +63,12 @@ There are
 \]
 
 such subsets. Once a representative set is chosen, any partial order on its
-\(k\) labeled representatives is a valid quotient-poset code.
+\(k\) labeled representatives is a valid quotient-poset code. The formal
+realization theorem supplies an explicit digraph witnessing this feasibility
+for every such pair `(S,P)`.
 
 The formula is therefore immediate from the definition of the project-specific
-encoding.
+encoding together with that realizability result.
 
 ## Literature search
 
@@ -99,9 +128,11 @@ as a direct consequence of the shifted binomial transform.
 > We define a minimum-representative quotient-poset encoding and derive its
 > exact count
 > \(N_{\mathrm{rep}}(n)=\sum_k\binom{n-1}{k-1}p(k)\).
-> We found no matching formulation in the sources searched, but the counting
-> argument is elementary and the principal significance is corrective: it
-> identifies exactly what the earlier value \(5234\) counted.
+> Every counted pair is realizable by an explicit directed graph with the
+> declared SCC-minimum and quotient-order semantics. We found no matching
+> formulation in the sources searched, but the counting argument is elementary
+> and the principal significance is corrective: it identifies exactly what the
+> earlier value \(5234\) counted.
 
 ## Wording to avoid
 

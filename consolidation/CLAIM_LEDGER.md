@@ -4,7 +4,7 @@ This ledger is the public-facing status table for claims selected for consolidat
 
 | Core ID | Claim family | Current status | Evidence class | Formalization target | Literature status | Main unresolved obligation |
 |---|---|---|---|---|---|---|
-| C1.1 | Minimum-representative quotient-poset count | PROVED | combinatorial proof + exact enumeration | Lean candidate 1 | novelty not certified | reconstruct minimal definitions and bijection in Lean |
+| C1.1 | Minimum-representative quotient-poset count | PROVED; END-TO-END LEAN/KERNEL PASS | combinatorial proof + exact `native_decide` enumeration + literal-code equivalence + explicit digraph realization + module-sharded `leanchecker` replay | formalization complete for the declared MF-R008 code/count claim | novelty not certified | none for the declared counting theorem; novelty remains separate |
 | C1.2 | Non-injectivity of representative code | PROVED; EXPLICIT WITNESS END-TO-END LEAN/KERNEL PASS | constructive counterexample + `ReflTransGen` SCC proof + direct graph-code computation + `leanchecker` | explicit witness complete; generic encoder library optional | novelty not material | none for the explicit witness; prove generic five-vertex bounded-reach completeness only before promoting the bounded evaluator as a reusable arbitrary-graph encoder |
 | C1.3 | `P5=75/256` edge-toggle sensitivity | EXACT FINITE RESULT | exhaustive enumeration | Lean/native_decide candidate | apparently unreported; not certified | independent formal finite computation and OEIS/literature check |
 | C2 | Fixed-score dynamic non-closure | PROVED | exact identity + four-point counterexample | Lean candidate 2 | novelty not certified | self-contained theorem independent of framework terminology |
@@ -46,7 +46,13 @@ A result cannot enter a short public manuscript as a central theorem until all o
 
 ## Formal-pilot scope rule
 
-A Lean proof of an extracted substatement must be labeled by its actual formal boundary. C1.2 now has an end-to-end kernel-checked theorem for the **explicit two-graph witness**: the original directed graphs are connected to mathematical reachability via `Relation.ReflTransGen`, their SCC minimum maps and antichain quotients are proved, and the direct graph encoder reproduces the historical collision code `100663296` for both distinct condensation structures.
+A Lean proof of an extracted substatement must be labeled by its actual formal boundary.
+
+C1.1 now has an end-to-end formalization of the **declared MF-R008 counting claim**. The formal chain proves the representative-set binomial factor, independently enumerates the labeled poset counts through the three-state antisymmetric encoding, proves the executable transitivity checker equivalent to mathematical transitivity, constructs the bijection to Boolean partial-order matrices, derives the fiber-sum cardinality from an explicit canonical code type, and proves that this coordinate model is equivalent to the literal published code `(S,P)` where `P` is a partial order on the actual representative set `S`. It also proves realizability: every such literal code has an explicit loopless directed-graph realization whose strongly connected components are exactly the fibers of the representative map, whose chosen representatives are the minimum labels of those SCCs, and whose quotient reachability order is exactly `P`. For five vertices the literal type has cardinality `5234`. The exact small-poset values use `native_decide`; they are therefore recorded as exact finite formal computation, not as a new analytic enumeration formula. The full Lean library build and a module-sharded bundled `leanchecker` replay pass.
+
+C1.1 does **not** establish a novelty or priority claim, does not retain or count the discarded SCC memberships as part of the code, and does not make the representative code injective. Those are separate questions; the non-injectivity is C1.2.
+
+C1.2 has an end-to-end kernel-checked theorem for the **explicit two-graph witness**: the original directed graphs are connected to mathematical reachability via `Relation.ReflTransGen`, their SCC minimum maps and antichain quotients are proved, and the direct graph encoder reproduces the historical collision code `100663296` for both distinct condensation structures.
 
 This does not yet certify `ReachWithinBool 4` as a generic encoder component for every five-vertex directed graph. A reusable generic encoder would additionally require a completeness theorem reducing arbitrary five-vertex reachability to bounded paths. That stronger library statement is not needed for the explicit C1.2 counterexample and is not claimed.
 

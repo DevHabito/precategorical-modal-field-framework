@@ -1,2 +1,10 @@
 import PrecategoryFormal.RepresentativeCode
 import PrecategoryFormal.GraphSCCBridge
+import PrecategoryFormal.RepresentativeCount
+import PrecategoryFormal.PosetEnumeration
+import PrecategoryFormal.PosetSemantics
+import PrecategoryFormal.PosetBijection
+import PrecategoryFormal.PosetCountBridge
+import PrecategoryFormal.RepresentativeCodeType
+import PrecategoryFormal.LiteralRepresentativeCode
+import PrecategoryFormal.RepresentativeRealization
