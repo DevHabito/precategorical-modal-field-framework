@@ -44,11 +44,12 @@ The completed proof does not trust the historical Python enumerator. It contains
 - an exact bijection between accepted three-state encodings and Boolean partial-order matrices;
 - an explicit canonical MF-R008 code type whose cardinality is the fiber sum;
 - a carrier-transport equivalence showing that the canonical `Fin k` presentation is exactly equivalent to the literal code `(S,P)` with `P` a partial order on the actual representative set `S`;
+- an explicit generic realization theorem: every literal `(S,P)` code is realized by a loopless directed graph whose SCC equivalence is exactly equality of the representative map, whose chosen representatives are minimum labels in those SCCs, and whose quotient reachability order is exactly `P`;
 - the verified five-vertex conclusion `Nat.card (LiteralRepresentativeCode 4) = 5234`.
 
 Verification status: the complete Lean library builds with the pinned Lean/mathlib environment, rejects `sorry`/`admit`, and every project module passes a bundled `leanchecker` kernel replay in the module-sharded CI.
 
-Scope boundary: F1 proves the declared MF-R008 code/count theorem. It does not establish novelty, count full SCC memberships, or imply injectivity of the representative code.
+Scope boundary: F1 proves the declared MF-R008 code/count theorem and closes the realizability of the counted literal codes. It does not establish novelty, retain or count discarded SCC memberships as part of the code, or imply injectivity of the representative code.
 
 ### F2 — independent finite computation: MF-R011
 
@@ -95,4 +96,4 @@ The implementation lives under
 
 `formal/lean/`
 
-with modules named by mathematical content rather than audit numbers. Current modules include the representative-code witness, representative counting, poset enumeration/semantics/bijection, count bridge, and literal-code carrier equivalence. A-number provenance may appear in comments, not in theorem names.
+with modules named by mathematical content rather than audit numbers. Current modules include the representative-code witness, representative counting, poset enumeration/semantics/bijection, count bridge, literal-code carrier equivalence, and generic representative-code graph realization. A-number provenance may appear in comments, not in theorem names.
