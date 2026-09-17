@@ -31,10 +31,12 @@ theorem forwardClosedSeparator_not_reach {α : Type*}
     (hsep : ForwardClosedSeparator r u v S) :
     ¬ RelationReach r u v := by
   intro hreach
+  have hu : S u := hsep.1
+  have hclosed : ∀ ⦃x y⦄, S x → r x y → S y := hsep.2.2
   have hv : S v := by
     induction hreach with
-    | refl => exact hsep.1
-    | tail hxy hyz ih => exact hsep.2.2 ih hyz
+    | refl => exact hu
+    | tail hxy hyz ih => exact hclosed ih hyz
   exact hsep.2.1 hv
 
 /--
