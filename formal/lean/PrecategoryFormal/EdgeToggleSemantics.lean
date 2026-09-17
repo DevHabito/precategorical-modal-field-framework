@@ -25,19 +25,22 @@ def ForwardClosedSeparator {α : Type*}
     (r : α → α → Prop) (u v : α) (S : α → Prop) : Prop :=
   S u ∧ ¬ S v ∧ ∀ ⦃x y⦄, S x → r x y → S y
 
+/-- Edgewise forward closure propagates along reflexive-transitive reachability. -/
+theorem relationReach_preserves_forwardClosed {α : Type*}
+    {r : α → α → Prop} {S : α → Prop}
+    (hclosed : ∀ ⦃x y⦄, S x → r x y → S y)
+    {x y : α} (hreach : RelationReach r x y) (hx : S x) : S y := by
+  induction hreach with
+  | refl => exact hx
+  | tail hxy hyz ih => exact hclosed ih hyz
+
 /-- Every forward-closed separator blocks a directed path from source to target. -/
 theorem forwardClosedSeparator_not_reach {α : Type*}
     {r : α → α → Prop} {u v : α} {S : α → Prop}
     (hsep : ForwardClosedSeparator r u v S) :
     ¬ RelationReach r u v := by
   intro hreach
-  have hu : S u := hsep.1
-  have hclosed : ∀ ⦃x y⦄, S x → r x y → S y := hsep.2.2
-  have hv : S v := by
-    induction hreach with
-    | refl => exact hu
-    | tail hxy hyz ih => exact hclosed ih hyz
-  exact hsep.2.1 hv
+  exact hsep.2.1 (relationReach_preserves_forwardClosed hsep.2.2 hreach hsep.1)
 
 /--
 Cut characterization of non-reachability. The converse separator is the set
