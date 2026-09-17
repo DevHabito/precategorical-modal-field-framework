@@ -68,6 +68,7 @@ jobs:
       fail-fast: false
       matrix:
         module:
+          - PrecategoryFormal.EdgeToggleEnumeration
           - PrecategoryFormal.GraphSCCBridge
           - PrecategoryFormal.LiteralRepresentativeCode
           - PrecategoryFormal.PosetBijection
