@@ -18,6 +18,43 @@ def SameReachability {α : Type*} (r s : α → α → Prop) : Prop :=
   ∀ x y, RelationReach r x y ↔ RelationReach s x y
 
 /--
+A forward-closed source/target separator: `u` lies in `S`, `v` does not, and
+no relation edge can leave `S`.
+-/
+def ForwardClosedSeparator {α : Type*}
+    (r : α → α → Prop) (u v : α) (S : α → Prop) : Prop :=
+  S u ∧ ¬ S v ∧ ∀ ⦃x y⦄, S x → r x y → S y
+
+/-- Every forward-closed separator blocks a directed path from source to target. -/
+theorem forwardClosedSeparator_not_reach {α : Type*}
+    {r : α → α → Prop} {u v : α} {S : α → Prop}
+    (hsep : ForwardClosedSeparator r u v S) :
+    ¬ RelationReach r u v := by
+  intro hreach
+  have hv : S v := by
+    induction hreach with
+    | refl => exact hsep.1
+    | tail hxy hyz ih => exact hsep.2.2 ih hyz
+  exact hsep.2.1 hv
+
+/--
+Cut characterization of non-reachability. The converse separator is the set
+of all vertices reachable from `u`, so this theorem does not use any bounded
+path approximation.
+-/
+theorem not_relationReach_iff_exists_forwardClosedSeparator {α : Type*}
+    (r : α → α → Prop) (u v : α) :
+    ¬ RelationReach r u v ↔
+      ∃ S : α → Prop, ForwardClosedSeparator r u v S := by
+  constructor
+  · intro huv
+    refine ⟨fun x => RelationReach r u x, Relation.ReflTransGen.refl, huv, ?_⟩
+    intro x y hx hxy
+    exact hx.tail hxy
+  · rintro ⟨S, hsep⟩
+    exact forwardClosedSeparator_not_reach hsep
+
+/--
 If every edge of `r` is already realizable as an `s`-path, every `r`-path can
 be simulated by an `s`-path.
 -/
