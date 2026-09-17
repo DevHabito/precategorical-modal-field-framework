@@ -9,9 +9,9 @@ namespace PrecategoryFormal
 def directedNonloopEdgeCount (n : Nat) : Nat := n * (n - 1)
 
 /--
-Row-major edge-bit index with the diagonal removed.  For a fixed source `u`,
+Row-major edge-bit index with the diagonal removed. For a fixed source `u`,
 target labels below `u` keep their index and labels above `u` are shifted down
-by one.  The distinguished edge `0 → 1` therefore occupies bit zero.
+by one. The distinguished edge `0 → 1` therefore occupies bit zero.
 -/
 def nonloopEdgeBitIndex (n u v : Nat) : Nat :=
   u * (n - 1) + if v < u then v else v - 1
@@ -23,29 +23,38 @@ def maskHasDirectedEdge (n graph u v : Nat) : Bool :=
   else
     false
 
-/-- Bit mask of all direct out-neighbours of `u`. -/
-def outgoingVertexMask (n graph u : Nat) : Nat :=
-  (List.range n).foldl
-    (fun acc v =>
-      if maskHasDirectedEdge n graph u v then acc ||| (1 <<< v) else acc)
-    0
-
-/-- One monotone reachability expansion step. -/
-def expandReachMask (n graph reached : Nat) : Nat :=
+/--
+Mask of graph-edge positions that leave a vertex cut. Bit `e` is set exactly
+when the source of edge slot `e` lies in `cut` and its target lies outside.
+-/
+def cutOutgoingEdgeMask (n cut : Nat) : Nat :=
   (List.range n).foldl
     (fun acc u =>
-      if reached.testBit u then acc ||| outgoingVertexMask n graph u else acc)
-    reached
+      (List.range n).foldl
+        (fun acc v =>
+          if cut.testBit u && !(cut.testBit v) then
+            if u = v then acc
+            else acc ||| (1 <<< nonloopEdgeBitIndex n u v)
+          else
+            acc)
+        acc)
+    0
 
-/-- Iterate the reachability expansion a prescribed number of times. -/
-def closeReachMask : Nat → Nat → Nat → Nat → Nat
-  | 0, _, _, reached => reached
-  | fuel + 1, n, graph, reached =>
-      closeReachMask fuel n graph (expandReachMask n graph reached)
+/-- All cuts that contain `source` and exclude `target`, encoded by their outgoing-edge masks. -/
+def separatingCutEdgeMasks (n source target : Nat) : List Nat :=
+  (List.range (2 ^ n)).filterMap fun cut =>
+    if cut.testBit source && !(cut.testBit target) then
+      some (cutOutgoingEdgeMask n cut)
+    else
+      none
 
-/-- Executable bounded reachability used by the independent finite enumeration. -/
-def maskReachableBool (n graph source target : Nat) : Bool :=
-  (closeReachMask n n graph (1 <<< source)).testBit target
+/--
+Executable cut certificate for non-reachability: some source/target-separating
+cut has no graph edge leaving it.
+-/
+def noReachCutBool (n graph source target : Nat) : Bool :=
+  let cuts := separatingCutEdgeMasks n source target
+  cuts.any fun outgoing => (graph &&& outgoing) == 0
 
 /-- Tail-recursive exact counter over natural numbers `[0,bound)`. -/
 def countNatWhereAux (f : Nat → Bool) : Nat → Nat → Nat
@@ -58,18 +67,29 @@ def countNatWhere (bound : Nat) (f : Nat → Bool) : Nat :=
 
 /--
 Number of graph masks with the distinguished bit `0 → 1` fixed to zero and
-with no bounded reachability from `0` to `1`.
+with a cut certificate separating `0` from `1`.
 
 A compressed `(m-1)`-bit mask is shifted left once, so the missing distinguished
-edge remains exactly bit zero.
+edge remains exactly bit zero. The list of only `2^(n-2)` relevant separating
+cuts is computed once and reused for every graph mask.
 -/
 def fixed01NoReachCount (n : Nat) : Nat :=
   let m := directedNonloopEdgeCount n
   if 2 ≤ n then
+    let cuts := separatingCutEdgeMasks n 0 1
     countNatWhere (2 ^ (m - 1)) fun compressed =>
-      !(maskReachableBool n (compressed <<< 1) 0 1)
+      let graph := compressed <<< 1
+      cuts.any fun outgoing => (graph &&& outgoing) == 0
   else
     0
+
+/-- There are exactly `2^(n-2)` relevant cuts in the small cases used by MF-R011. -/
+theorem separatingCut_count_small :
+    (separatingCutEdgeMasks 2 0 1).length = 1 ∧
+    (separatingCutEdgeMasks 3 0 1).length = 2 ∧
+    (separatingCutEdgeMasks 4 0 1).length = 4 ∧
+    (separatingCutEdgeMasks 5 0 1).length = 8 := by
+  native_decide
 
 /-- Independent finite checkpoints underlying MF-R011. -/
 theorem fixed01NoReachCount_small :
