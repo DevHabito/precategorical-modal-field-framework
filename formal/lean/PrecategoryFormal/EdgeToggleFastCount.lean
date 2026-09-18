@@ -19,9 +19,9 @@ def fixed01NoReachFastCount (n : Nat) : Nat :=
   if h : 2 ≤ n then
     let source : MaskVertex n := ⟨0, by omega⟩
     let target : MaskVertex n := ⟨1, by omega⟩
-    let families := separatorBitFamilies n source target
+    let families := separatorBitLists n source target
     countNatWhere (2 ^ (m - 1)) fun compressed =>
-      noReachWithBitFamilies (compressed <<< 1) families
+      noReachWithBitLists (compressed <<< 1) families
   else
     0
 
