@@ -1,4 +1,5 @@
 import PrecategoryFormal.EdgeToggleBridge
+import PrecategoryFormal.EdgeTogglePairing
 
 set_option autoImplicit false
 set_option warningAsError true
@@ -22,6 +23,26 @@ theorem toggleEdgeMaskFive_involutive
     (graph : Nat) (u v : Fin 5) :
     toggleEdgeMaskFive (toggleEdgeMaskFive graph u v) u v = graph := by
   simp [toggleEdgeMaskFive, edgeBitMaskFive, Nat.xor_assoc]
+
+/--
+The mask-level toggle flips exactly the distinguished non-loop edge state.
+Together with involutivity, this gives an explicit absent/present pairing of
+five-vertex graph masks for every fixed directed non-loop edge.
+-/
+theorem maskHasDirectedEdge_toggleEdgeMaskFive
+    (graph : Nat) (u v : Fin 5) (huv : u ≠ v) :
+    maskHasDirectedEdge 5 (toggleEdgeMaskFive graph u v) u.val v.val =
+      !(maskHasDirectedEdge 5 graph u.val v.val) := by
+  fin_cases u <;> fin_cases v <;>
+    try { exact (huv rfl).elim } <;>
+    simp [
+      toggleEdgeMaskFive,
+      edgeBitMaskFive,
+      maskHasDirectedEdge,
+      nonloopEdgeBitIndex,
+      Nat.testBit_xor,
+      Nat.testBit_shiftLeft
+    ]
 
 /--
 Adding one concrete non-loop edge bit to a five-vertex mask has exactly the
@@ -91,5 +112,39 @@ theorem maskRelation_toggleEdgeMaskFive_of_absent
       addRelationEdge (maskRelation 5 graph) u v := by
   rw [toggleEdgeMaskFive_eq_addEdgeMaskFive_of_absent graph u v huv habsent]
   exact maskRelation_addEdgeMaskFive graph u v huv
+
+/--
+Exact mask-level pivotality criterion for an absent edge: toggling the graph
+mask changes the full reflexive reachability preorder iff the target was not
+reachable from the source in the absent graph.
+-/
+theorem maskToggle_changesReachability_iff_of_absent
+    (graph : Nat) (u v : Fin 5) (huv : u ≠ v)
+    (habsent : maskHasDirectedEdge 5 graph u.val v.val = false) :
+    (¬ SameReachability
+      (maskRelation 5 graph)
+      (maskRelation 5 (toggleEdgeMaskFive graph u v)))
+      ↔ ¬ RelationReach (maskRelation 5 graph) u v := by
+  rw [maskRelation_toggleEdgeMaskFive_of_absent graph u v huv habsent]
+  exact addEdge_changesReachability_iff (maskRelation 5 graph) u v
+
+/--
+The two ordered directions within one concrete graph-mask toggle pair have the
+same changed/unchanged reachability status.
+-/
+theorem maskToggle_both_directions_same_status
+    (graph : Nat) (u v : Fin 5) :
+    (¬ SameReachability
+      (maskRelation 5 graph)
+      (maskRelation 5 (toggleEdgeMaskFive graph u v)))
+    ↔
+    (¬ SameReachability
+      (maskRelation 5 (toggleEdgeMaskFive graph u v))
+      (maskRelation 5 graph)) := by
+  exact pairedEdge_both_directions_same_status
+    (maskRelation 5 graph) u v |>.trans (by
+      constructor <;> intro h
+      · exact h
+      · exact h)
 
 end PrecategoryFormal
