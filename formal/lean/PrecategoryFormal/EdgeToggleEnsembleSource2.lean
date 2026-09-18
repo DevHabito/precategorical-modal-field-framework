@@ -21,4 +21,17 @@ theorem fixedEdgeNoReachDirectCountFive_source2 :
     fixedEdgeNoReachDirectCountFive 2 4 = 153600 := by
   native_decide
 
+/-- Direct full-mask subtotal for the four non-loop edges sourced at vertex 2. -/
+def fixedEdgeNoReachDirectTotalFive_source2 : Nat :=
+  fixedEdgeNoReachDirectCountFive 2 0 +
+  fixedEdgeNoReachDirectCountFive 2 1 +
+  fixedEdgeNoReachDirectCountFive 2 3 +
+  fixedEdgeNoReachDirectCountFive 2 4
+
+/-- Exact source-2 subtotal, derived only from the four direct certificates above. -/
+theorem fixedEdgeNoReachDirectTotalFive_source2_exact :
+    fixedEdgeNoReachDirectTotalFive_source2 = 614400 := by
+  rcases fixedEdgeNoReachDirectCountFive_source2 with ⟨h20, h21, h23, h24⟩
+  norm_num [fixedEdgeNoReachDirectTotalFive_source2, h20, h21, h23, h24]
+
 end PrecategoryFormal
