@@ -19,6 +19,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: lean-formal-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   lean:
     runs-on: ubuntu-latest
@@ -68,6 +72,24 @@ jobs:
       fail-fast: false
       matrix:
         module:
+          - PrecategoryFormal.EdgeToggleBridge
+          - PrecategoryFormal.EdgeToggleMaskBridge
+          - PrecategoryFormal.EdgeToggleEnumeration
+          - PrecategoryFormal.EdgeToggleFastSemantic
+          - PrecategoryFormal.EdgeTogglePrecomputed
+          - PrecategoryFormal.EdgeToggleFastCount
+          - PrecategoryFormal.EdgeToggleEnsembleCore
+          - PrecategoryFormal.EdgeToggleEnsembleSource0
+          - PrecategoryFormal.EdgeToggleEnsembleSource1
+          - PrecategoryFormal.EdgeToggleEnsembleSource2
+          - PrecategoryFormal.EdgeToggleEnsembleSource3
+          - PrecategoryFormal.EdgeToggleEnsembleSource4
+          - PrecategoryFormal.EdgeToggleEnsembleCount
+          - PrecategoryFormal.EdgeToggleSemanticEnsemble
+          - PrecategoryFormal.EdgeToggleReferenceCount
+          - PrecategoryFormal.EdgeToggleSemantics
+          - PrecategoryFormal.EdgeTogglePairing
+          - PrecategoryFormal.EdgeToggleRelabel
           - PrecategoryFormal.GraphSCCBridge
           - PrecategoryFormal.LiteralRepresentativeCode
           - PrecategoryFormal.PosetBijection
