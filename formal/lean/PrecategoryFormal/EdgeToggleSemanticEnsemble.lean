@@ -1,4 +1,4 @@
-import PrecategoryFormal.EdgeToggleEnsembleCount
+import PrecategoryFormal.EdgeToggleEnsembleCore
 import PrecategoryFormal.EdgeToggleMaskBridge
 
 set_option autoImplicit false
