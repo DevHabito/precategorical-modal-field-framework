@@ -77,7 +77,9 @@ def forwardClosureViolations
     Finset (MaskVertex n × MaskVertex n) :=
   ((Finset.univ : Finset (MaskVertex n)).product
       (Finset.univ : Finset (MaskVertex n))).filter fun xy =>
-    xy.1 ∈ S ∧ maskRelation n graph xy.1 xy.2 ∧ xy.2 ∉ S
+    xy.1 ∈ S ∧
+      maskHasDirectedEdge n graph xy.1.val xy.2.val = true ∧
+      xy.2 ∉ S
 
 /-- No violation pair exists exactly when `S` is forward closed. -/
 theorem forwardClosureViolations_card_eq_zero_iff
@@ -88,15 +90,27 @@ theorem forwardClosureViolations_card_eq_zero_iff
   constructor
   · intro hempty x y hx hxy
     by_contra hy
+    have hedge :
+        maskHasDirectedEdge n graph x.val y.val = true := by
+      simpa [maskRelation] using hxy
     have hmem : (x, y) ∈ forwardClosureViolations n graph S := by
-      simp [forwardClosureViolations, hx, hxy, hy]
-    simpa [hempty] using hmem
+      apply Finset.mem_filter.mpr
+      constructor
+      · simp
+      · exact ⟨hx, hedge, hy⟩
+    rw [hempty] at hmem
+    simp at hmem
   · intro hclosed
-    apply Finset.eq_empty_iff_forall_not_mem.mpr
+    apply Finset.eq_empty_iff_forall_notMem.mpr
     rintro ⟨x, y⟩ hmem
-    have hdata : x ∈ S ∧ maskRelation n graph x y ∧ y ∉ S := by
-      simpa [forwardClosureViolations] using hmem
-    exact hdata.2.2 (hclosed hdata.1 hdata.2.1)
+    have hdata :
+        x ∈ S ∧
+          maskHasDirectedEdge n graph x.val y.val = true ∧
+          y ∉ S :=
+      (Finset.mem_filter.mp hmem).2
+    apply hdata.2.2
+    apply hclosed hdata.1
+    simpa [maskRelation] using hdata.2.1
 
 /-- Constructive Boolean checker for one concrete finite separator. -/
 def finsetForwardClosedSeparatorBool
@@ -113,12 +127,12 @@ theorem finsetForwardClosedSeparatorBool_eq_true_iff
   simp only [
     finsetForwardClosedSeparatorBool,
     Bool.and_eq_true,
-    Bool.not_eq_true,
     decide_eq_true_eq,
+    not_decide_eq_true,
     FinsetForwardClosedSeparator
   ]
   rw [forwardClosureViolations_card_eq_zero_iff]
-  simp
+  exact and_assoc
 
 /-- All concrete separator subsets accepted by the constructive checker. -/
 def acceptedSeparatorFinsets
