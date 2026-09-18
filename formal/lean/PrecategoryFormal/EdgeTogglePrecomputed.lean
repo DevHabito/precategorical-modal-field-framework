@@ -5,15 +5,36 @@ set_option warningAsError true
 
 namespace PrecategoryFormal
 
+/--
+Constructive powerset of a list. The order of generated subsets is irrelevant;
+we use this only as a finite executable enumeration.
+-/
+def listPowerset {α : Type*} : List α → List (List α)
+  | [] => [[]]
+  | a :: l =>
+      let ps := listPowerset l
+      ps ++ ps.map (fun s => a :: s)
+
+/-- Filtering any list selects one member of its constructive powerset. -/
+theorem filter_mem_listPowerset {α : Type*}
+    (p : α → Bool) (l : List α) :
+    l.filter p ∈ listPowerset l := by
+  induction l with
+  | nil =>
+      simp [listPowerset]
+  | cons a l ih =>
+      cases hp : p a <;>
+        simp [listPowerset, hp, ih]
+
 /-- All vertex-subset lists, generated constructively from the finite carrier. -/
 def vertexSubsetLists (n : Nat) : List (List (MaskVertex n)) :=
-  (List.finRange n).powerset
+  listPowerset (List.finRange n)
 
 /-- Source/target-separating vertex lists. -/
 def separatingVertexLists
     (n : Nat) (u v : MaskVertex n) : List (List (MaskVertex n)) :=
   (vertexSubsetLists n).filter fun S =>
-    decide (u ∈ S) && !(decide (v ∈ S))
+    decide (u ∈ S ∧ v ∉ S)
 
 /--
 Directed non-loop edge-bit indices that leave a concrete vertex list.
@@ -23,7 +44,7 @@ def crossingEdgeBitList
     (n : Nat) (S : List (MaskVertex n)) : List Nat :=
   (List.finRange n).flatMap fun x =>
     (List.finRange n).filterMap fun y =>
-      if h : x ∈ S ∧ y ∉ S ∧ x ≠ y then
+      if x ∈ S ∧ y ∉ S ∧ x ≠ y then
         some (nonloopEdgeBitIndex n x.val y.val)
       else
         none
@@ -35,12 +56,7 @@ theorem mem_crossingEdgeBitList_iff
       ∃ x y : MaskVertex n,
         x ∈ S ∧ y ∉ S ∧ x ≠ y ∧
         bit = nonloopEdgeBitIndex n x.val y.val := by
-  simp [crossingEdgeBitList]
-  constructor
-  · rintro x y hx hy hxy rfl
-    exact ⟨x, y, hx, hy, hxy, rfl⟩
-  · rintro ⟨x, y, hx, hy, hxy, rfl⟩
-    exact ⟨x, y, hx, hy, hxy, rfl⟩
+  simp [crossingEdgeBitList, eq_comm, and_assoc]
 
 /-- Allocation-free checker that all listed edge bits are absent. -/
 def noPresentEdgeBitListBool (graph : Nat) (bits : List Nat) : Bool :=
@@ -68,25 +84,19 @@ theorem noPresentCrossingEdgeBitListBool_eq_true_iff
         nonloopEdgeBitIndex n x.val y.val ∈ crossingEdgeBitList n S :=
       (mem_crossingEdgeBitList_iff n _ S).2
         ⟨x, y, hx, hy, hxy, rfl⟩
-    have habsent :
-        !(graph.testBit (nonloopEdgeBitIndex n x.val y.val)) = true := by
-      have hforall := (List.all_eq_true.mp hall)
-      exact hforall _ hmem
+    have habsent := (List.all_eq_true.mp hall) _ hmem
     simp [hbit] at habsent
   · intro hclosed
     apply List.all_eq_true.mpr
     intro bit hmem
     rcases (mem_crossingEdgeBitList_iff n bit S).1 hmem with
       ⟨x, y, hx, hy, hxy, rfl⟩
-    have hnot :
-        graph.testBit (nonloopEdgeBitIndex n x.val y.val) ≠ true := by
-      intro hbit
-      have hedge : maskRelation n graph x y :=
-        (maskRelation_iff_testBit_of_ne n graph hxy).2 hbit
-      exact hy (hclosed hx hedge)
     cases hb : graph.testBit (nonloopEdgeBitIndex n x.val y.val)
     · rfl
-    · exact (hnot hb).elim
+    · exfalso
+      have hedge : maskRelation n graph x y :=
+        (maskRelation_iff_testBit_of_ne n graph hxy).2 hb
+      exact hy (hclosed hx hedge)
 
 /-- Precomputed outgoing-edge-bit lists for every source/target-separating subset. -/
 def separatorBitLists
@@ -97,7 +107,7 @@ def separatorBitLists
 def noReachWithBitLists (graph : Nat) (families : List (List Nat)) : Bool :=
   families.any (noPresentEdgeBitListBool graph)
 
-/-- A list separator carries exactly the same semantic conditions as a finite-set separator. -/
+/-- A list separator carries the same semantic closure conditions as a set separator. -/
 def ListForwardClosedSeparator
     (n graph : Nat) (u v : MaskVertex n) (S : List (MaskVertex n)) : Prop :=
   u ∈ S ∧
@@ -114,32 +124,22 @@ theorem noReachWithBitLists_eq_true_iff_exists_listSeparator
   simp only [
     noReachWithBitLists,
     separatorBitLists,
-    separatingVertexLists,
     List.any_eq_true
   ]
   constructor
   · rintro ⟨bits, hbits, hnone⟩
     rcases List.mem_map.mp hbits with ⟨S, hSfiltered, rfl⟩
     have hSdata := List.mem_filter.mp hSfiltered
-    have hsepbool := hSdata.2
-    have hu : u ∈ S := by
-      have := Bool.and_eq_true.mp hsepbool
-      exact of_decide_eq_true this.1
-    have hv : v ∉ S := by
-      have := Bool.and_eq_true.mp hsepbool
-      exact of_decide_eq_false (Bool.not_eq_true.mp this.2)
-    refine ⟨S, hSdata.1, hu, hv, ?_⟩
+    have hsep : u ∈ S ∧ v ∉ S :=
+      of_decide_eq_true hSdata.2
+    refine ⟨S, hSdata.1, hsep.1, hsep.2, ?_⟩
     exact (noPresentCrossingEdgeBitListBool_eq_true_iff n graph S).1 hnone
   · rintro ⟨S, hSpow, hu, hv, hclosed⟩
     refine ⟨crossingEdgeBitList n S, ?_, ?_⟩
     · apply List.mem_map.mpr
       refine ⟨S, ?_, rfl⟩
       apply List.mem_filter.mpr
-      refine ⟨hSpow, ?_⟩
-      apply Bool.and_eq_true.mpr
-      constructor
-      · exact decide_eq_true hu
-      · exact Bool.not_eq_true.mpr (decide_eq_false hv)
+      exact ⟨hSpow, decide_eq_true ⟨hu, hv⟩⟩
     · exact (noPresentCrossingEdgeBitListBool_eq_true_iff n graph S).2 hclosed
 
 /-- Every semantic list separator yields a semantic finite-set separator. -/
@@ -157,8 +157,8 @@ theorem listSeparator_to_finsetSeparator
     simpa using hyList
 
 /--
-Every finite-set separator has a canonical list presentation obtained by
-filtering the ordered finite carrier.
+Every finite-set separator has a canonical executable list presentation,
+obtained by filtering the ordered finite carrier.
 -/
 theorem finsetSeparator_to_exists_listSeparator
     (n graph : Nat) (u v : MaskVertex n) (T : Finset (MaskVertex n))
@@ -171,9 +171,8 @@ theorem finsetSeparator_to_exists_listSeparator
   have hmem_iff (x : MaskVertex n) : x ∈ S ↔ x ∈ T := by
     simp [S]
   refine ⟨S, ?_, ?_, ?_, ?_⟩
-  · have hsub : S <+ List.finRange n := by
-      exact List.filter_sublist
-    simpa [vertexSubsetLists] using hsub
+  · exact filter_mem_listPowerset
+      (fun x : MaskVertex n => decide (x ∈ T)) (List.finRange n)
   · exact (hmem_iff u).2 hT.1
   · intro hv
     exact hT.2.1 ((hmem_iff v).1 hv)
