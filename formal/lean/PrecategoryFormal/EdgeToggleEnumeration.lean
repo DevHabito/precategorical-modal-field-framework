@@ -66,6 +66,37 @@ def countNatWhere (bound : Nat) (f : Nat → Bool) : Nat :=
   countNatWhereAux f bound 0
 
 /--
+Bridge from the tail-recursive executable counter to an ordinary finite-set
+cardinality. This lemma lets later pairing arguments reason by explicit
+bijections rather than by re-running large `native_decide` enumerations.
+-/
+theorem countNatWhereAux_eq_filter_card
+    (f : Nat → Bool) (bound acc : Nat) :
+    countNatWhereAux f bound acc =
+      acc + ((Finset.range bound).filter fun k => f k = true).card := by
+  induction bound generalizing acc with
+  | zero =>
+      simp [countNatWhereAux]
+  | succ n ih =>
+      cases h : f n <;>
+        simp [
+          countNatWhereAux,
+          ih,
+          Finset.range_succ,
+          h,
+          Nat.add_assoc,
+          Nat.add_comm,
+          Nat.add_left_comm
+        ]
+
+/-- `countNatWhere` is exactly the cardinality of its filtered finite range. -/
+theorem countNatWhere_eq_filter_card
+    (bound : Nat) (f : Nat → Bool) :
+    countNatWhere bound f =
+      ((Finset.range bound).filter fun k => f k = true).card := by
+  simpa [countNatWhere] using countNatWhereAux_eq_filter_card f bound 0
+
+/--
 Number of graph masks with the distinguished bit `0 → 1` fixed to zero and
 with a cut certificate separating `0` from `1`.
 
