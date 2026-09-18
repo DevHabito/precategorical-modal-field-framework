@@ -69,7 +69,8 @@ twenty directed non-loop edge positions.
 def allDirectedEdgeNoReachCountFive : Nat :=
   Fintype.card DirectedNonloopEdgeFive * 153600
 
-theorem allDirectedEdgeNoReachCountFive_exact :
+set_option maxRecDepth 2048 in
+ theorem allDirectedEdgeNoReachCountFive_exact :
     allDirectedEdgeNoReachCountFive = 3072000 := by
   rw [allDirectedEdgeNoReachCountFive, directedNonloopEdgeFive_card]
 
@@ -105,6 +106,5 @@ theorem mf_r011_p5_exact :
     mfR011ChangedGraphEdgePairsFive * 256 =
       75 * mfR011GraphEdgePairsFive := by
   rw [mfR011ChangedGraphEdgePairsFive_exact, mfR011GraphEdgePairsFive_exact]
-  norm_num
 
 end PrecategoryFormal
