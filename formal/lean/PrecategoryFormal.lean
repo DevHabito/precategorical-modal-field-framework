@@ -11,3 +11,4 @@ import PrecategoryFormal.RepresentativeRealization
 import PrecategoryFormal.EdgeToggleEnumeration
 import PrecategoryFormal.EdgeToggleSemantics
 import PrecategoryFormal.EdgeToggleBridge
+import PrecategoryFormal.EdgeToggleReferenceCount
