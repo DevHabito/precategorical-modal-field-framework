@@ -79,6 +79,7 @@ jobs:
           - PrecategoryFormal.EdgeToggleFastCount
           - PrecategoryFormal.EdgeToggleReferenceCount
           - PrecategoryFormal.EdgeToggleSemantics
+          - PrecategoryFormal.EdgeTogglePairing
           - PrecategoryFormal.GraphSCCBridge
           - PrecategoryFormal.LiteralRepresentativeCode
           - PrecategoryFormal.PosetBijection
