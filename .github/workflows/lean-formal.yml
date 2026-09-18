@@ -80,6 +80,7 @@ jobs:
           - PrecategoryFormal.EdgeToggleReferenceCount
           - PrecategoryFormal.EdgeToggleSemantics
           - PrecategoryFormal.EdgeTogglePairing
+          - PrecategoryFormal.EdgeToggleRelabel
           - PrecategoryFormal.GraphSCCBridge
           - PrecategoryFormal.LiteralRepresentativeCode
           - PrecategoryFormal.PosetBijection
