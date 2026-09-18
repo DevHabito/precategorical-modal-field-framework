@@ -1,4 +1,8 @@
-import PrecategoryFormal.EdgeToggleFastCount
+import PrecategoryFormal.EdgeToggleEnsembleSource0
+import PrecategoryFormal.EdgeToggleEnsembleSource1
+import PrecategoryFormal.EdgeToggleEnsembleSource2
+import PrecategoryFormal.EdgeToggleEnsembleSource3
+import PrecategoryFormal.EdgeToggleEnsembleSource4
 import PrecategoryFormal.EdgeTogglePairing
 import PrecategoryFormal.EdgeToggleRelabel
 
@@ -8,52 +12,53 @@ set_option warningAsError true
 namespace PrecategoryFormal
 
 /--
-Insert an absent bit at position `pos` into a compressed natural-number mask.
-Bits below `pos` are unchanged; compressed bits at and above `pos` are
-shifted upward by one position.
+Sum of the exact fixed-absent-edge non-reachability counts over all twenty
+directed non-loop edge positions on five labeled vertices.
 -/
-def insertZeroBit (pos compressed : Nat) : Nat :=
-  let base := 2 ^ pos
-  (compressed % base) + (2 * base) * (compressed / base)
-
-/--
-Exact semantic non-reachability count for one directed edge position on five
-labeled vertices, with that distinguished edge fixed absent.
-
-The `2^19` compressed masks parametrize the remaining nineteen edge bits.
-The graph predicate is the precomputed checker already proved equivalent to
-mathematical `Relation.ReflTransGen` non-reachability.
--/
-def fixedEdgeNoReachFastCountFive (u v : Fin 5) : Nat :=
-  if h : u = v then
-    0
-  else
-    let pos := nonloopEdgeBitIndex 5 u.val v.val
-    let families := separatorBitLists 5 u v
-    countNatWhere (2 ^ 19) fun compressed =>
-      noReachWithBitLists (insertZeroBit pos compressed) families
-
-/-- Sum of the fixed-absent-edge non-reachability counts over all 20 directed non-loop edges. -/
 def allDirectedEdgeNoReachCountFive : Nat :=
-  (List.finRange 5).foldl
-    (fun total u =>
-      (List.finRange 5).foldl
-        (fun subtotal v =>
-          if u = v then subtotal
-          else subtotal + fixedEdgeNoReachFastCountFive u v)
-        total)
-    0
+  fixedEdgeNoReachFastCountFive 0 1 +
+  fixedEdgeNoReachFastCountFive 0 2 +
+  fixedEdgeNoReachFastCountFive 0 3 +
+  fixedEdgeNoReachFastCountFive 0 4 +
+  fixedEdgeNoReachFastCountFive 1 0 +
+  fixedEdgeNoReachFastCountFive 1 2 +
+  fixedEdgeNoReachFastCountFive 1 3 +
+  fixedEdgeNoReachFastCountFive 1 4 +
+  fixedEdgeNoReachFastCountFive 2 0 +
+  fixedEdgeNoReachFastCountFive 2 1 +
+  fixedEdgeNoReachFastCountFive 2 3 +
+  fixedEdgeNoReachFastCountFive 2 4 +
+  fixedEdgeNoReachFastCountFive 3 0 +
+  fixedEdgeNoReachFastCountFive 3 1 +
+  fixedEdgeNoReachFastCountFive 3 2 +
+  fixedEdgeNoReachFastCountFive 3 4 +
+  fixedEdgeNoReachFastCountFive 4 0 +
+  fixedEdgeNoReachFastCountFive 4 1 +
+  fixedEdgeNoReachFastCountFive 4 2 +
+  fixedEdgeNoReachFastCountFive 4 3
 
 /--
 Full five-vertex fixed-edge checksum.
 
-This is deliberately stronger than multiplying the distinguished `0 → 1`
-count by 20: all twenty directed non-loop edge positions are independently
-evaluated by the semantically verified checker.
+The twenty expensive finite computations are proved in five independent source
+shards.  This theorem only composes those kernel-checked results.
 -/
 theorem allDirectedEdgeNoReachCountFive_exact :
     allDirectedEdgeNoReachCountFive = 3072000 := by
-  native_decide
+  rcases fixedEdgeNoReachFastCountFive_source0 with ⟨h01, h02, h03, h04⟩
+  rcases fixedEdgeNoReachFastCountFive_source1 with ⟨h10, h12, h13, h14⟩
+  rcases fixedEdgeNoReachFastCountFive_source2 with ⟨h20, h21, h23, h24⟩
+  rcases fixedEdgeNoReachFastCountFive_source3 with ⟨h30, h31, h32, h34⟩
+  rcases fixedEdgeNoReachFastCountFive_source4 with ⟨h40, h41, h42, h43⟩
+  rw [
+    allDirectedEdgeNoReachCountFive,
+    h01, h02, h03, h04,
+    h10, h12, h13, h14,
+    h20, h21, h23, h24,
+    h30, h31, h32, h34,
+    h40, h41, h42, h43
+  ]
+  norm_num
 
 /--
 Each absent-base pivotal graph contributes both orientations of the toggle
@@ -77,7 +82,7 @@ theorem mfR011GraphEdgePairsFive_exact :
   norm_num [mfR011GraphEdgePairsFive, directedNonloopEdgeCount]
 
 /--
-Exact cross-multiplied probability identity.  This avoids introducing any
+Exact cross-multiplied probability identity. This avoids introducing any
 floating-point or rational-normalization layer into the kernel statement.
 -/
 theorem mf_r011_p5_exact :
