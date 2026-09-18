@@ -20,3 +20,4 @@ import PrecategoryFormal.EdgeToggleFastCount
 import PrecategoryFormal.EdgeToggleReferenceCount
 import PrecategoryFormal.EdgeToggleEnsembleCount
 import PrecategoryFormal.EdgeToggleSemanticEnsemble
+import PrecategoryFormal.EdgeToggleSemanticPairing
