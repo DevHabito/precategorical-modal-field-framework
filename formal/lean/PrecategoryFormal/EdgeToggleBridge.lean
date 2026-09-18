@@ -66,14 +66,35 @@ theorem not_maskRelationReach_iff_exists_finsetSeparator
       (maskRelation n graph) u v).2
     exact ⟨fun x => x ∈ S, (finsetForwardClosedSeparator_iff n graph u v S).1 hS⟩
 
+/-- Decidable reference checker for one concrete finite separator. -/
+def finsetForwardClosedSeparatorBool
+    (n graph : Nat) (u v : MaskVertex n) (S : Finset (MaskVertex n)) : Bool :=
+  decide (FinsetForwardClosedSeparator n graph u v S)
+
+/-- The Boolean separator checker has exactly the intended proposition. -/
+theorem finsetForwardClosedSeparatorBool_eq_true_iff
+    (n graph : Nat) (u v : MaskVertex n) (S : Finset (MaskVertex n)) :
+    finsetForwardClosedSeparatorBool n graph u v S = true ↔
+      FinsetForwardClosedSeparator n graph u v S := by
+  exact Bool.decide_iff _
+
 /--
-Reference executable checker for non-reachability.  It searches finite subsets
-rather than using the optimized integer cut-mask implementation.
+Reference executable checker for non-reachability.  Instead of asking Lean to
+enumerate the type `Finset (Fin n)` through typeclass synthesis, it searches
+the explicit powerset of the finite carrier.
 -/
 def noReachFinsetBool
     (n graph : Nat) (u v : MaskVertex n) : Bool :=
-  decide (∃ S : Finset (MaskVertex n),
-    FinsetForwardClosedSeparator n graph u v S)
+  (Finset.univ.powerset).any
+    (finsetForwardClosedSeparatorBool n graph u v)
+
+/-- The reference Boolean search is true exactly when some separator exists. -/
+theorem noReachFinsetBool_eq_true_iff_exists
+    (n graph : Nat) (u v : MaskVertex n) :
+    noReachFinsetBool n graph u v = true ↔
+      ∃ S : Finset (MaskVertex n),
+        FinsetForwardClosedSeparator n graph u v S := by
+  simp [noReachFinsetBool, finsetForwardClosedSeparatorBool]
 
 /--
 Semantic correctness of the reference executable checker: it returns true
@@ -83,11 +104,7 @@ theorem noReachFinsetBool_eq_true_iff
     (n graph : Nat) (u v : MaskVertex n) :
     noReachFinsetBool n graph u v = true ↔
       ¬ RelationReach (maskRelation n graph) u v := by
-  change
-    decide (∃ S : Finset (MaskVertex n),
-      FinsetForwardClosedSeparator n graph u v S) = true ↔
-      ¬ RelationReach (maskRelation n graph) u v
-  rw [Bool.decide_iff]
+  rw [noReachFinsetBool_eq_true_iff_exists]
   exact (not_maskRelationReach_iff_exists_finsetSeparator n graph u v).symm
 
 end PrecategoryFormal
