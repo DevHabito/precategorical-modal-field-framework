@@ -89,7 +89,8 @@ theorem countNatWhereAux_eq_filter_card
           have hn :
               n ∉ (Finset.range n).filter (fun k => f k = true) := by
             simp
-          simp [hn] <;> omega
+          simp [hn]
+          omega
 
 /-- `countNatWhere` is exactly the cardinality of its filtered finite range. -/
 theorem countNatWhere_eq_filter_card
