@@ -103,7 +103,6 @@ theorem maskRelation_addEdgeMaskFive
       maskRelation,
       maskHasDirectedEdge,
       addRelationEdge,
-      addEdgeMaskFive,
       hnot
     ]
   · have hxyval : x.val ≠ y.val := by
@@ -155,6 +154,7 @@ theorem toggleEdgeMaskFive_eq_addEdgeMaskFive_of_absent
     simpa [maskHasDirectedEdge, u.isLt, v.isLt, huvval] using habsent
   apply Nat.eq_of_testBit_eq
   intro bit
+  simp only [toggleEdgeMaskFive, addEdgeMaskFive]
   rw [Nat.testBit_xor, Nat.testBit_or]
   rw [edgeBitMaskFive_testBit]
   by_cases hbit : bit = nonloopEdgeBitIndex 5 u.val v.val
