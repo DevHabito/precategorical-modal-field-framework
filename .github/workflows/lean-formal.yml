@@ -85,6 +85,7 @@ jobs:
           - PrecategoryFormal.EdgeToggleEnsembleSource3
           - PrecategoryFormal.EdgeToggleEnsembleSource4
           - PrecategoryFormal.EdgeToggleEnsembleCount
+          - PrecategoryFormal.EdgeToggleSemanticEnsemble
           - PrecategoryFormal.EdgeToggleReferenceCount
           - PrecategoryFormal.EdgeToggleSemantics
           - PrecategoryFormal.EdgeTogglePairing
