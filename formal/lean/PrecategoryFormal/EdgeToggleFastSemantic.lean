@@ -24,7 +24,11 @@ theorem maskRelation_iff_testBit_of_ne
     (n graph : Nat) {x y : MaskVertex n} (hxy : x ≠ y) :
     maskRelation n graph x y ↔
       graph.testBit (nonloopEdgeBitIndex n x.val y.val) = true := by
-  simp [maskRelation, maskHasDirectedEdge, x.isLt, y.isLt, hxy]
+  have hval : x.val ≠ y.val := by
+    intro h
+    apply hxy
+    exact Fin.ext h
+  simp [maskRelation, maskHasDirectedEdge, x.isLt, y.isLt, hval]
 
 /-- A concrete crossing pair contributes its row-major edge bit. -/
 theorem edgeBit_mem_crossingEdgeBits
