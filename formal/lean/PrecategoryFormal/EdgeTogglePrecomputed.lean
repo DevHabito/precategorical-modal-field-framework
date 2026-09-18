@@ -68,4 +68,53 @@ theorem noReachWithBitFamilies_eq_true_iff
   rw [noReachWithBitFamilies_eq_true_iff_exists]
   exact (not_maskRelationReach_iff_exists_finsetSeparator n graph u v).symm
 
+/-- Allocation-free checker for a precomputed list of edge-bit indices. -/
+def noPresentEdgeBitListBool (graph : Nat) (bits : List Nat) : Bool :=
+  bits.all fun bit => !(graph.testBit bit)
+
+/-- List and Finset presentations of the same edge-bit family agree exactly. -/
+theorem noPresentEdgeBitListBool_toList_iff
+    (graph : Nat) (bits : Finset Nat) :
+    noPresentEdgeBitListBool graph bits.toList = true ↔
+      noPresentEdgeBitsBool graph bits = true := by
+  simp [noPresentEdgeBitListBool, noPresentEdgeBitsBool, Finset.card_eq_zero]
+
+/-- Fully precomputed separator data: only lists of edge-bit indices remain. -/
+def separatorBitLists
+    (n : Nat) (u v : MaskVertex n) : List (List Nat) :=
+  (separatorBitFamilies n u v).map Finset.toList
+
+/-- Allocation-free graph test against precomputed separator bit lists. -/
+def noReachWithBitLists (graph : Nat) (families : List (List Nat)) : Bool :=
+  families.any (noPresentEdgeBitListBool graph)
+
+/-- The list-level checker and Finset-level checker accept the same graphs. -/
+theorem noReachWithBitLists_eq_true_iff_families
+    (n graph : Nat) (u v : MaskVertex n) :
+    noReachWithBitLists graph (separatorBitLists n u v) = true ↔
+      noReachWithBitFamilies graph (separatorBitFamilies n u v) = true := by
+  simp only [
+    noReachWithBitLists,
+    noReachWithBitFamilies,
+    separatorBitLists,
+    List.any_eq_true
+  ]
+  constructor
+  · rintro ⟨bitsList, hListMem, hnone⟩
+    rcases List.mem_map.mp hListMem with ⟨bits, hBitsMem, rfl⟩
+    refine ⟨bits, hBitsMem, ?_⟩
+    exact (noPresentEdgeBitListBool_toList_iff graph bits).1 hnone
+  · rintro ⟨bits, hBitsMem, hnone⟩
+    refine ⟨bits.toList, ?_, ?_⟩
+    · exact List.mem_map.mpr ⟨bits, hBitsMem, rfl⟩
+    · exact (noPresentEdgeBitListBool_toList_iff graph bits).2 hnone
+
+/-- End-to-end semantic correctness of the allocation-free precomputed checker. -/
+theorem noReachWithBitLists_eq_true_iff
+    (n graph : Nat) (u v : MaskVertex n) :
+    noReachWithBitLists graph (separatorBitLists n u v) = true ↔
+      ¬ RelationReach (maskRelation n graph) u v := by
+  rw [noReachWithBitLists_eq_true_iff_families]
+  exact noReachWithBitFamilies_eq_true_iff n graph u v
+
 end PrecategoryFormal
