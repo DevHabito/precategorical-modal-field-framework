@@ -5,116 +5,203 @@ set_option warningAsError true
 
 namespace PrecategoryFormal
 
-/-- Generic checker that no bit in a finite edge-bit set is present in a graph mask. -/
-def noPresentEdgeBitsBool (graph : Nat) (bits : Finset Nat) : Bool :=
-  decide ((bits.filter fun bit => graph.testBit bit = true).card = 0)
+/-- All vertex-subset lists, generated constructively from the finite carrier. -/
+def vertexSubsetLists (n : Nat) : List (List (MaskVertex n)) :=
+  (List.finRange n).powerset
 
-/-- On an actual cut, the generic bit-set checker is definitionally the proved cut checker. -/
-theorem noPresentEdgeBitsBool_crossing
-    (n graph : Nat) (S : Finset (MaskVertex n)) :
-    noPresentEdgeBitsBool graph (crossingEdgeBits n S) =
-      noPresentCrossingEdgeBool n graph S := by
-  rfl
-
-/--
-Precomputed outgoing-edge-bit families for all source/target-separating cuts.
-The vertex subsets are discarded after their outgoing bit sets are built.
--/
-def separatorBitFamilies
-    (n : Nat) (u v : MaskVertex n) : List (Finset Nat) :=
-  (separatingFinsets n u v).toList.map (crossingEdgeBits n)
-
-/-- Test a graph against a precomputed family of separating cut edge sets. -/
-def noReachWithBitFamilies (graph : Nat) (families : List (Finset Nat)) : Bool :=
-  families.any (noPresentEdgeBitsBool graph)
+/-- Source/target-separating vertex lists. -/
+def separatingVertexLists
+    (n : Nat) (u v : MaskVertex n) : List (List (MaskVertex n)) :=
+  (vertexSubsetLists n).filter fun S =>
+    decide (u ∈ S) && !(decide (v ∈ S))
 
 /--
-The precomputed family checker accepts exactly when a finite forward-closed
-source/target separator exists.
+Directed non-loop edge-bit indices that leave a concrete vertex list.
+This is fully computable and uses only `List` operations.
 -/
-theorem noReachWithBitFamilies_eq_true_iff_exists
-    (n graph : Nat) (u v : MaskVertex n) :
-    noReachWithBitFamilies graph (separatorBitFamilies n u v) = true ↔
-      ∃ S : Finset (MaskVertex n),
-        FinsetForwardClosedSeparator n graph u v S := by
-  simp only [noReachWithBitFamilies, List.any_eq_true]
+def crossingEdgeBitList
+    (n : Nat) (S : List (MaskVertex n)) : List Nat :=
+  (List.finRange n).flatMap fun x =>
+    (List.finRange n).filterMap fun y =>
+      if h : x ∈ S ∧ y ∉ S ∧ x ≠ y then
+        some (nonloopEdgeBitIndex n x.val y.val)
+      else
+        none
+
+/-- Membership characterization of the constructively generated crossing-bit list. -/
+theorem mem_crossingEdgeBitList_iff
+    (n bit : Nat) (S : List (MaskVertex n)) :
+    bit ∈ crossingEdgeBitList n S ↔
+      ∃ x y : MaskVertex n,
+        x ∈ S ∧ y ∉ S ∧ x ≠ y ∧
+        bit = nonloopEdgeBitIndex n x.val y.val := by
+  simp [crossingEdgeBitList]
   constructor
-  · rintro ⟨bits, hbits, hnone⟩
-    rcases List.mem_map.mp hbits with ⟨S, hSlist, rfl⟩
-    have hSfin : S ∈ separatingFinsets n u v := by
-      simpa using hSlist
-    have hsep := (Finset.mem_filter.mp hSfin).2
-    refine ⟨S, hsep.1, hsep.2, ?_⟩
-    have hcross : noPresentCrossingEdgeBool n graph S = true := by
-      rw [← noPresentEdgeBitsBool_crossing n graph S]
-      exact hnone
-    exact (noPresentCrossingEdgeBool_eq_true_iff n graph S).1 hcross
-  · rintro ⟨S, hu, hv, hclosed⟩
-    refine ⟨crossingEdgeBits n S, ?_, ?_⟩
-    · apply List.mem_map.mpr
-      refine ⟨S, ?_, rfl⟩
-      have hSfin : S ∈ separatingFinsets n u v := by
-        apply Finset.mem_filter.mpr
-        exact ⟨by simp, hu, hv⟩
-      simpa using hSfin
-    · rw [noPresentEdgeBitsBool_crossing n graph S]
-      exact (noPresentCrossingEdgeBool_eq_true_iff n graph S).2 hclosed
+  · rintro x y hx hy hxy rfl
+    exact ⟨x, y, hx, hy, hxy, rfl⟩
+  · rintro ⟨x, y, hx, hy, hxy, rfl⟩
+    exact ⟨x, y, hx, hy, hxy, rfl⟩
 
-/-- End-to-end semantic correctness of the precomputed checker. -/
-theorem noReachWithBitFamilies_eq_true_iff
-    (n graph : Nat) (u v : MaskVertex n) :
-    noReachWithBitFamilies graph (separatorBitFamilies n u v) = true ↔
-      ¬ RelationReach (maskRelation n graph) u v := by
-  rw [noReachWithBitFamilies_eq_true_iff_exists]
-  exact (not_maskRelationReach_iff_exists_finsetSeparator n graph u v).symm
-
-/-- Allocation-free checker for a precomputed list of edge-bit indices. -/
+/-- Allocation-free checker that all listed edge bits are absent. -/
 def noPresentEdgeBitListBool (graph : Nat) (bits : List Nat) : Bool :=
   bits.all fun bit => !(graph.testBit bit)
 
-/-- List and Finset presentations of the same edge-bit family agree exactly. -/
-theorem noPresentEdgeBitListBool_toList_iff
-    (graph : Nat) (bits : Finset Nat) :
-    noPresentEdgeBitListBool graph bits.toList = true ↔
-      noPresentEdgeBitsBool graph bits = true := by
-  simp [noPresentEdgeBitListBool, noPresentEdgeBitsBool, Finset.card_eq_zero]
+/--
+For a concrete vertex list, absence of all crossing edge bits is exactly
+forward closure under the mathematical mask relation.
+-/
+theorem noPresentCrossingEdgeBitListBool_eq_true_iff
+    (n graph : Nat) (S : List (MaskVertex n)) :
+    noPresentEdgeBitListBool graph (crossingEdgeBitList n S) = true ↔
+      ∀ ⦃x y : MaskVertex n⦄, x ∈ S → maskRelation n graph x y → y ∈ S := by
+  constructor
+  · intro hall x y hx hedge
+    by_contra hy
+    have hxy : x ≠ y := by
+      intro h
+      subst y
+      exact hy hx
+    have hbit :
+        graph.testBit (nonloopEdgeBitIndex n x.val y.val) = true :=
+      (maskRelation_iff_testBit_of_ne n graph hxy).1 hedge
+    have hmem :
+        nonloopEdgeBitIndex n x.val y.val ∈ crossingEdgeBitList n S :=
+      (mem_crossingEdgeBitList_iff n _ S).2
+        ⟨x, y, hx, hy, hxy, rfl⟩
+    have habsent :
+        !(graph.testBit (nonloopEdgeBitIndex n x.val y.val)) = true := by
+      have hforall := (List.all_eq_true.mp hall)
+      exact hforall _ hmem
+    simp [hbit] at habsent
+  · intro hclosed
+    apply List.all_eq_true.mpr
+    intro bit hmem
+    rcases (mem_crossingEdgeBitList_iff n bit S).1 hmem with
+      ⟨x, y, hx, hy, hxy, rfl⟩
+    have hnot :
+        graph.testBit (nonloopEdgeBitIndex n x.val y.val) ≠ true := by
+      intro hbit
+      have hedge : maskRelation n graph x y :=
+        (maskRelation_iff_testBit_of_ne n graph hxy).2 hbit
+      exact hy (hclosed hx hedge)
+    cases hb : graph.testBit (nonloopEdgeBitIndex n x.val y.val)
+    · rfl
+    · exact (hnot hb).elim
 
-/-- Fully precomputed separator data: only lists of edge-bit indices remain. -/
+/-- Precomputed outgoing-edge-bit lists for every source/target-separating subset. -/
 def separatorBitLists
     (n : Nat) (u v : MaskVertex n) : List (List Nat) :=
-  (separatorBitFamilies n u v).map Finset.toList
+  (separatingVertexLists n u v).map (crossingEdgeBitList n)
 
-/-- Allocation-free graph test against precomputed separator bit lists. -/
+/-- Graph test against the precomputed separator bit lists. -/
 def noReachWithBitLists (graph : Nat) (families : List (List Nat)) : Bool :=
   families.any (noPresentEdgeBitListBool graph)
 
-/-- The list-level checker and Finset-level checker accept the same graphs. -/
-theorem noReachWithBitLists_eq_true_iff_families
+/-- A list separator carries exactly the same semantic conditions as a finite-set separator. -/
+def ListForwardClosedSeparator
+    (n graph : Nat) (u v : MaskVertex n) (S : List (MaskVertex n)) : Prop :=
+  u ∈ S ∧
+  v ∉ S ∧
+  ∀ ⦃x y : MaskVertex n⦄, x ∈ S → maskRelation n graph x y → y ∈ S
+
+/-- Accepted precomputed bit lists correspond to semantic list separators. -/
+theorem noReachWithBitLists_eq_true_iff_exists_listSeparator
     (n graph : Nat) (u v : MaskVertex n) :
     noReachWithBitLists graph (separatorBitLists n u v) = true ↔
-      noReachWithBitFamilies graph (separatorBitFamilies n u v) = true := by
+      ∃ S : List (MaskVertex n),
+        S ∈ vertexSubsetLists n ∧
+        ListForwardClosedSeparator n graph u v S := by
   simp only [
     noReachWithBitLists,
-    noReachWithBitFamilies,
     separatorBitLists,
+    separatingVertexLists,
     List.any_eq_true
   ]
   constructor
-  · rintro ⟨bitsList, hListMem, hnone⟩
-    rcases List.mem_map.mp hListMem with ⟨bits, hBitsMem, rfl⟩
-    refine ⟨bits, hBitsMem, ?_⟩
-    exact (noPresentEdgeBitListBool_toList_iff graph bits).1 hnone
-  · rintro ⟨bits, hBitsMem, hnone⟩
-    refine ⟨bits.toList, ?_, ?_⟩
-    · exact List.mem_map.mpr ⟨bits, hBitsMem, rfl⟩
-    · exact (noPresentEdgeBitListBool_toList_iff graph bits).2 hnone
+  · rintro ⟨bits, hbits, hnone⟩
+    rcases List.mem_map.mp hbits with ⟨S, hSfiltered, rfl⟩
+    have hSdata := List.mem_filter.mp hSfiltered
+    have hsepbool := hSdata.2
+    have hu : u ∈ S := by
+      have := Bool.and_eq_true.mp hsepbool
+      exact of_decide_eq_true this.1
+    have hv : v ∉ S := by
+      have := Bool.and_eq_true.mp hsepbool
+      exact of_decide_eq_false (Bool.not_eq_true.mp this.2)
+    refine ⟨S, hSdata.1, hu, hv, ?_⟩
+    exact (noPresentCrossingEdgeBitListBool_eq_true_iff n graph S).1 hnone
+  · rintro ⟨S, hSpow, hu, hv, hclosed⟩
+    refine ⟨crossingEdgeBitList n S, ?_, ?_⟩
+    · apply List.mem_map.mpr
+      refine ⟨S, ?_, rfl⟩
+      apply List.mem_filter.mpr
+      refine ⟨hSpow, ?_⟩
+      apply Bool.and_eq_true.mpr
+      constructor
+      · exact decide_eq_true hu
+      · exact Bool.not_eq_true.mpr (decide_eq_false hv)
+    · exact (noPresentCrossingEdgeBitListBool_eq_true_iff n graph S).2 hclosed
 
-/-- End-to-end semantic correctness of the allocation-free precomputed checker. -/
+/-- Every semantic list separator yields a semantic finite-set separator. -/
+theorem listSeparator_to_finsetSeparator
+    (n graph : Nat) (u v : MaskVertex n) (S : List (MaskVertex n))
+    (hS : ListForwardClosedSeparator n graph u v S) :
+    FinsetForwardClosedSeparator n graph u v S.toFinset := by
+  rcases hS with ⟨hu, hv, hclosed⟩
+  refine ⟨?_, ?_, ?_⟩
+  · simpa using hu
+  · simpa using hv
+  · intro x y hx hedge
+    have hxList : x ∈ S := by simpa using hx
+    have hyList : y ∈ S := hclosed hxList hedge
+    simpa using hyList
+
+/--
+Every finite-set separator has a canonical list presentation obtained by
+filtering the ordered finite carrier.
+-/
+theorem finsetSeparator_to_exists_listSeparator
+    (n graph : Nat) (u v : MaskVertex n) (T : Finset (MaskVertex n))
+    (hT : FinsetForwardClosedSeparator n graph u v T) :
+    ∃ S : List (MaskVertex n),
+      S ∈ vertexSubsetLists n ∧
+      ListForwardClosedSeparator n graph u v S := by
+  let S : List (MaskVertex n) :=
+    (List.finRange n).filter fun x => decide (x ∈ T)
+  have hmem_iff (x : MaskVertex n) : x ∈ S ↔ x ∈ T := by
+    simp [S]
+  refine ⟨S, ?_, ?_, ?_, ?_⟩
+  · have hsub : S <+ List.finRange n := by
+      exact List.filter_sublist
+    simpa [vertexSubsetLists] using hsub
+  · exact (hmem_iff u).2 hT.1
+  · intro hv
+    exact hT.2.1 ((hmem_iff v).1 hv)
+  · intro x y hx hedge
+    apply (hmem_iff y).2
+    exact hT.2.2 ((hmem_iff x).1 hx) hedge
+
+/-- List-separator existence is exactly finite-set-separator existence. -/
+theorem exists_listSeparator_iff_exists_finsetSeparator
+    (n graph : Nat) (u v : MaskVertex n) :
+    (∃ S : List (MaskVertex n),
+      S ∈ vertexSubsetLists n ∧
+      ListForwardClosedSeparator n graph u v S) ↔
+    (∃ T : Finset (MaskVertex n),
+      FinsetForwardClosedSeparator n graph u v T) := by
+  constructor
+  · rintro ⟨S, _, hS⟩
+    exact ⟨S.toFinset, listSeparator_to_finsetSeparator n graph u v S hS⟩
+  · rintro ⟨T, hT⟩
+    exact finsetSeparator_to_exists_listSeparator n graph u v T hT
+
+/-- End-to-end semantic correctness of the fully computable precomputed checker. -/
 theorem noReachWithBitLists_eq_true_iff
     (n graph : Nat) (u v : MaskVertex n) :
     noReachWithBitLists graph (separatorBitLists n u v) = true ↔
       ¬ RelationReach (maskRelation n graph) u v := by
-  rw [noReachWithBitLists_eq_true_iff_families]
-  exact noReachWithBitFamilies_eq_true_iff n graph u v
+  rw [noReachWithBitLists_eq_true_iff_exists_listSeparator]
+  rw [exists_listSeparator_iff_exists_finsetSeparator]
+  exact (not_maskRelationReach_iff_exists_finsetSeparator n graph u v).symm
 
 end PrecategoryFormal
