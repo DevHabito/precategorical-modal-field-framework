@@ -73,6 +73,7 @@ jobs:
       matrix:
         module:
           - PrecategoryFormal.EdgeToggleBridge
+          - PrecategoryFormal.EdgeToggleMaskBridge
           - PrecategoryFormal.EdgeToggleEnumeration
           - PrecategoryFormal.EdgeToggleFastSemantic
           - PrecategoryFormal.EdgeTogglePrecomputed
