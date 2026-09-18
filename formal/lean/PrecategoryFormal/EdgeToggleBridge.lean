@@ -66,27 +66,75 @@ theorem not_maskRelationReach_iff_exists_finsetSeparator
       (maskRelation n graph) u v).2
     exact ⟨fun x => x ∈ S, (finsetForwardClosedSeparator_iff n graph u v S).1 hS⟩
 
-/-- Decidable reference checker for one concrete finite separator. -/
+/--
+All ordered vertex pairs that violate forward closure of `S`: the source is
+inside `S`, the graph contains the directed edge, and the target is outside.
+This finite object makes the executable checker constructive without asking
+Lean for a global `Decidable` instance for a quantified proposition.
+-/
+def forwardClosureViolations
+    (n graph : Nat) (S : Finset (MaskVertex n)) :
+    Finset (MaskVertex n × MaskVertex n) :=
+  ((Finset.univ : Finset (MaskVertex n)).product
+      (Finset.univ : Finset (MaskVertex n))).filter fun xy =>
+    xy.1 ∈ S ∧ maskRelation n graph xy.1 xy.2 ∧ xy.2 ∉ S
+
+/-- No violation pair exists exactly when `S` is forward closed. -/
+theorem forwardClosureViolations_card_eq_zero_iff
+    (n graph : Nat) (S : Finset (MaskVertex n)) :
+    (forwardClosureViolations n graph S).card = 0 ↔
+      ∀ ⦃x y : MaskVertex n⦄, x ∈ S → maskRelation n graph x y → y ∈ S := by
+  rw [Finset.card_eq_zero]
+  constructor
+  · intro hempty x y hx hxy
+    by_contra hy
+    have hmem : (x, y) ∈ forwardClosureViolations n graph S := by
+      simp [forwardClosureViolations, hx, hxy, hy]
+    simpa [hempty] using hmem
+  · intro hclosed
+    apply Finset.eq_empty_iff_forall_not_mem.mpr
+    rintro ⟨x, y⟩ hmem
+    have hdata : x ∈ S ∧ maskRelation n graph x y ∧ y ∉ S := by
+      simpa [forwardClosureViolations] using hmem
+    exact hdata.2.2 (hclosed hdata.1 hdata.2.1)
+
+/-- Constructive Boolean checker for one concrete finite separator. -/
 def finsetForwardClosedSeparatorBool
     (n graph : Nat) (u v : MaskVertex n) (S : Finset (MaskVertex n)) : Bool :=
-  decide (FinsetForwardClosedSeparator n graph u v S)
+  decide (u ∈ S) &&
+  !(decide (v ∈ S)) &&
+  decide ((forwardClosureViolations n graph S).card = 0)
 
 /-- The Boolean separator checker has exactly the intended proposition. -/
 theorem finsetForwardClosedSeparatorBool_eq_true_iff
     (n graph : Nat) (u v : MaskVertex n) (S : Finset (MaskVertex n)) :
     finsetForwardClosedSeparatorBool n graph u v S = true ↔
       FinsetForwardClosedSeparator n graph u v S := by
-  exact Bool.decide_iff _
+  simp only [
+    finsetForwardClosedSeparatorBool,
+    Bool.and_eq_true,
+    Bool.not_eq_true,
+    decide_eq_true_eq,
+    FinsetForwardClosedSeparator
+  ]
+  rw [forwardClosureViolations_card_eq_zero_iff]
+  simp
+
+/-- All concrete separator subsets accepted by the constructive checker. -/
+def acceptedSeparatorFinsets
+    (n graph : Nat) (u v : MaskVertex n) :
+    Finset (Finset (MaskVertex n)) :=
+  ((Finset.univ : Finset (MaskVertex n)).powerset).filter fun S =>
+    finsetForwardClosedSeparatorBool n graph u v S = true
 
 /--
-Reference executable checker for non-reachability.  Instead of asking Lean to
-enumerate the type `Finset (Fin n)` through typeclass synthesis, it searches
-the explicit powerset of the finite carrier.
+Reference executable checker for non-reachability.  It searches the explicit
+powerset of the finite carrier, independently of the optimized integer
+cut-mask implementation.
 -/
 def noReachFinsetBool
     (n graph : Nat) (u v : MaskVertex n) : Bool :=
-  (Finset.univ.powerset).any
-    (finsetForwardClosedSeparatorBool n graph u v)
+  decide (0 < (acceptedSeparatorFinsets n graph u v).card)
 
 /-- The reference Boolean search is true exactly when some separator exists. -/
 theorem noReachFinsetBool_eq_true_iff_exists
@@ -94,7 +142,23 @@ theorem noReachFinsetBool_eq_true_iff_exists
     noReachFinsetBool n graph u v = true ↔
       ∃ S : Finset (MaskVertex n),
         FinsetForwardClosedSeparator n graph u v S := by
-  simp [noReachFinsetBool, finsetForwardClosedSeparatorBool]
+  rw [show noReachFinsetBool n graph u v = true ↔
+      0 < (acceptedSeparatorFinsets n graph u v).card by
+        simp [noReachFinsetBool]]
+  rw [Finset.card_pos]
+  constructor
+  · rintro ⟨S, hS⟩
+    refine ⟨S, ?_⟩
+    have hfiltered :
+        finsetForwardClosedSeparatorBool n graph u v S = true := by
+      exact (Finset.mem_filter.mp hS).2
+    exact (finsetForwardClosedSeparatorBool_eq_true_iff n graph u v S).1 hfiltered
+  · rintro ⟨S, hS⟩
+    refine ⟨S, ?_⟩
+    apply Finset.mem_filter.mpr
+    constructor
+    · simp
+    · exact (finsetForwardClosedSeparatorBool_eq_true_iff n graph u v S).2 hS
 
 /--
 Semantic correctness of the reference executable checker: it returns true
