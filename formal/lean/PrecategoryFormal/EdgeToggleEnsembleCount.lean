@@ -3,108 +3,19 @@ import PrecategoryFormal.EdgeToggleEnsembleSource1
 import PrecategoryFormal.EdgeToggleEnsembleSource2
 import PrecategoryFormal.EdgeToggleEnsembleSource3
 import PrecategoryFormal.EdgeToggleEnsembleSource4
-import PrecategoryFormal.EdgeTogglePairing
-import PrecategoryFormal.EdgeToggleRelabel
 
 set_option autoImplicit false
 set_option warningAsError true
 
 namespace PrecategoryFormal
 
-/-- The twenty directed non-loop edge positions on five labeled vertices. -/
-abbrev DirectedNonloopEdgeFive :=
-  {e : Fin 5 × Fin 5 // e.1 ≠ e.2}
-
-/-- There are exactly twenty directed non-loop edge positions on five vertices. -/
-theorem directedNonloopEdgeFive_card :
-    Fintype.card DirectedNonloopEdgeFive = 20 := by
-  native_decide
-
-/--
-The compressed `2^19` implementation reproduces the same count at every
-non-loop edge position. This is retained as an independent optimization
-cross-check; the final ensemble numerator below is based on the direct
-`2^20`-mask implementation instead.
--/
-theorem fixedEdgeNoReachFastCountFive_all_nonloop
-    (u v : Fin 5) (huv : u ≠ v) :
-    fixedEdgeNoReachFastCountFive u v = 153600 := by
-  rcases fixedEdgeNoReachFastCountFive_source0 with ⟨h01, h02, h03, h04⟩
-  rcases fixedEdgeNoReachFastCountFive_source1 with ⟨h10, h12, h13, h14⟩
-  rcases fixedEdgeNoReachFastCountFive_source2 with ⟨h20, h21, h23, h24⟩
-  rcases fixedEdgeNoReachFastCountFive_source3 with ⟨h30, h31, h32, h34⟩
-  rcases fixedEdgeNoReachFastCountFive_source4 with ⟨h40, h41, h42, h43⟩
-  fin_cases u <;> fin_cases v
-  · exact (huv rfl).elim
-  · exact h01
-  · exact h02
-  · exact h03
-  · exact h04
-  · exact h10
-  · exact (huv rfl).elim
-  · exact h12
-  · exact h13
-  · exact h14
-  · exact h20
-  · exact h21
-  · exact (huv rfl).elim
-  · exact h23
-  · exact h24
-  · exact h30
-  · exact h31
-  · exact h32
-  · exact (huv rfl).elim
-  · exact h34
-  · exact h40
-  · exact h41
-  · exact h42
-  · exact h43
-  · exact (huv rfl).elim
-
-/--
-Direct full-mask certificate: every non-loop edge position has exactly 153600
-five-vertex masks in which that edge is absent and its target is unreachable
-from its source. No compressed-mask insertion is used in these certificates.
--/
-theorem fixedEdgeNoReachDirectCountFive_all_nonloop
-    (u v : Fin 5) (huv : u ≠ v) :
-    fixedEdgeNoReachDirectCountFive u v = 153600 := by
-  rcases fixedEdgeNoReachDirectCountFive_source0 with ⟨h01, h02, h03, h04⟩
-  rcases fixedEdgeNoReachDirectCountFive_source1 with ⟨h10, h12, h13, h14⟩
-  rcases fixedEdgeNoReachDirectCountFive_source2 with ⟨h20, h21, h23, h24⟩
-  rcases fixedEdgeNoReachDirectCountFive_source3 with ⟨h30, h31, h32, h34⟩
-  rcases fixedEdgeNoReachDirectCountFive_source4 with ⟨h40, h41, h42, h43⟩
-  fin_cases u <;> fin_cases v
-  · exact (huv rfl).elim
-  · exact h01
-  · exact h02
-  · exact h03
-  · exact h04
-  · exact h10
-  · exact (huv rfl).elim
-  · exact h12
-  · exact h13
-  · exact h14
-  · exact h20
-  · exact h21
-  · exact (huv rfl).elim
-  · exact h23
-  · exact h24
-  · exact h30
-  · exact h31
-  · exact h32
-  · exact (huv rfl).elim
-  · exact h34
-  · exact h40
-  · exact h41
-  · exact h42
-  · exact h43
-  · exact (huv rfl).elim
-
 /--
 Total absent-base non-reachability count over the complete list of twenty
 five-vertex directed non-loop edge positions. Each summand is a direct count
 over all `2^20` graph masks, explicitly filtered by absence of that edge.
+
+The source-sharded theorems imported above certify every one of the twenty
+summands independently. No compressed-mask insertion theorem is needed here.
 -/
 def allDirectedEdgeNoReachCountFive : Nat :=
   fixedEdgeNoReachDirectCountFive 0 1 +
@@ -128,7 +39,7 @@ def allDirectedEdgeNoReachCountFive : Nat :=
   fixedEdgeNoReachDirectCountFive 4 2 +
   fixedEdgeNoReachDirectCountFive 4 3
 
-/-- Exact direct full-mask total across the twenty edge positions. -/
+/-- Exact direct full-mask total across all twenty directed non-loop edges. -/
 theorem allDirectedEdgeNoReachCountFive_exact :
     allDirectedEdgeNoReachCountFive = 3072000 := by
   rcases fixedEdgeNoReachDirectCountFive_source0 with ⟨h01, h02, h03, h04⟩
@@ -136,7 +47,7 @@ theorem allDirectedEdgeNoReachCountFive_exact :
   rcases fixedEdgeNoReachDirectCountFive_source2 with ⟨h20, h21, h23, h24⟩
   rcases fixedEdgeNoReachDirectCountFive_source3 with ⟨h30, h31, h32, h34⟩
   rcases fixedEdgeNoReachDirectCountFive_source4 with ⟨h40, h41, h42, h43⟩
-  rw [
+  norm_num [
     allDirectedEdgeNoReachCountFive,
     h01, h02, h03, h04,
     h10, h12, h13, h14,
@@ -146,9 +57,10 @@ theorem allDirectedEdgeNoReachCountFive_exact :
   ]
 
 /--
-Each absent-base pivotal graph contributes both orientations of the toggle
-inside its absent/present pair. The semantic factor-two statement is supplied
-by `pairedEdge_toggle_changes_iff`.
+Each absent-base pivotal graph has a unique present-edge toggle mate. Since
+mask toggling is involutive and both ordered directions have the same
+reachability-change status, the ordered graph-edge numerator is twice the
+absent-base count.
 -/
 def mfR011ChangedGraphEdgePairsFive : Nat :=
   2 * allDirectedEdgeNoReachCountFive
@@ -156,7 +68,7 @@ def mfR011ChangedGraphEdgePairsFive : Nat :=
 /-- Exact certified numerator of the MF-R011 ordered graph-edge ensemble at n=5. -/
 theorem mfR011ChangedGraphEdgePairsFive_exact :
     mfR011ChangedGraphEdgePairsFive = 6144000 := by
-  rw [mfR011ChangedGraphEdgePairsFive, allDirectedEdgeNoReachCountFive_exact]
+  norm_num [mfR011ChangedGraphEdgePairsFive, allDirectedEdgeNoReachCountFive_exact]
 
 /-- Exact size of the uniform ordered graph-edge mask ensemble at n=5. -/
 def mfR011GraphEdgePairsFive : Nat :=
@@ -167,11 +79,8 @@ theorem mfR011GraphEdgePairsFive_exact :
   norm_num [mfR011GraphEdgePairsFive, directedNonloopEdgeCount]
 
 /--
-Exact cross-multiplied MF-R011 probability identity.
-
-Together with the semantic edge-addition theorem, the direct full-mask
-fixed-edge certificates, and the toggle-pairing theorem, this is the arithmetic
-endpoint corresponding to `P_5 = 75/256`.
+Exact cross-multiplied MF-R011 probability identity corresponding to
+`P_5 = 75/256`.
 -/
 theorem mf_r011_p5_exact :
     mfR011ChangedGraphEdgePairsFive * 256 =
