@@ -141,10 +141,10 @@ theorem maskToggle_both_directions_same_status
     (¬ SameReachability
       (maskRelation 5 (toggleEdgeMaskFive graph u v))
       (maskRelation 5 graph)) := by
-  exact pairedEdge_both_directions_same_status
-    (maskRelation 5 graph) u v |>.trans (by
-      constructor <;> intro h
-      · exact h
-      · exact h)
+  constructor
+  · intro hforward hreverse
+    exact hforward (sameReachability_symm hreverse)
+  · intro hreverse hforward
+    exact hreverse (sameReachability_symm hforward)
 
 end PrecategoryFormal
