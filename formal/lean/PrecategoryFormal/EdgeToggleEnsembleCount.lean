@@ -35,7 +35,29 @@ theorem fixedEdgeNoReachFastCountFive_all_nonloop
   rcases fixedEdgeNoReachFastCountFive_source2 with ⟨h20, h21, h23, h24⟩
   rcases fixedEdgeNoReachFastCountFive_source3 with ⟨h30, h31, h32, h34⟩
   rcases fixedEdgeNoReachFastCountFive_source4 with ⟨h40, h41, h42, h43⟩
-  fin_cases u <;> fin_cases v <;> simp_all
+  fin_cases u <;> fin_cases v
+  all_goals first
+    | exact (huv rfl).elim
+    | exact h01
+    | exact h02
+    | exact h03
+    | exact h04
+    | exact h10
+    | exact h12
+    | exact h13
+    | exact h14
+    | exact h20
+    | exact h21
+    | exact h23
+    | exact h24
+    | exact h30
+    | exact h31
+    | exact h32
+    | exact h34
+    | exact h40
+    | exact h41
+    | exact h42
+    | exact h43
 
 /--
 Certified total number of absent-base non-reachability cases across all
@@ -47,7 +69,6 @@ def allDirectedEdgeNoReachCountFive : Nat :=
 theorem allDirectedEdgeNoReachCountFive_exact :
     allDirectedEdgeNoReachCountFive = 3072000 := by
   rw [allDirectedEdgeNoReachCountFive, directedNonloopEdgeFive_card]
-  norm_num
 
 /--
 Each absent-base pivotal graph contributes both orientations of the toggle
@@ -61,7 +82,6 @@ def mfR011ChangedGraphEdgePairsFive : Nat :=
 theorem mfR011ChangedGraphEdgePairsFive_exact :
     mfR011ChangedGraphEdgePairsFive = 6144000 := by
   rw [mfR011ChangedGraphEdgePairsFive, allDirectedEdgeNoReachCountFive_exact]
-  norm_num
 
 /-- Exact size of the uniform ordered graph-edge mask ensemble at n=5. -/
 def mfR011GraphEdgePairsFive : Nat :=
