@@ -11,6 +11,7 @@ import PrecategoryFormal.RepresentativeRealization
 import PrecategoryFormal.EdgeToggleEnumeration
 import PrecategoryFormal.EdgeToggleSemantics
 import PrecategoryFormal.EdgeTogglePairing
+import PrecategoryFormal.EdgeToggleRelabel
 import PrecategoryFormal.EdgeToggleBridge
 import PrecategoryFormal.EdgeToggleFastSemantic
 import PrecategoryFormal.EdgeTogglePrecomputed
