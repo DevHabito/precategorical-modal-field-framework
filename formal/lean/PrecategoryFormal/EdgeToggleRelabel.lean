@@ -67,7 +67,25 @@ theorem relabelRelation_addEdge {α : Type*}
     relabelRelation σ (addRelationEdge r u v) =
       addRelationEdge (relabelRelation σ r) (σ u) (σ v) := by
   funext x y
-  simp [relabelRelation, addRelationEdge]
+  apply propext
+  change
+    (r (σ.symm x) (σ.symm y) ∨
+      (σ.symm x = u ∧ σ.symm y = v)) ↔
+    (r (σ.symm x) (σ.symm y) ∨
+      (x = σ u ∧ y = σ v))
+  constructor
+  · rintro (h | ⟨hx, hy⟩)
+    · exact Or.inl h
+    · right
+      constructor
+      · simpa using congrArg σ hx
+      · simpa using congrArg σ hy
+  · rintro (h | ⟨hx, hy⟩)
+    · exact Or.inl h
+    · right
+      subst x
+      subst y
+      simp
 
 /-- Pivotality of a distinguished edge is invariant under relabeling. -/
 theorem addEdge_changes_relabel_iff {α : Type*}
@@ -112,8 +130,7 @@ theorem orderedPairPerm_apply_source {α : Type*} [DecidableEq α]
 
 /-- The ordered-pair permutation sends the target to the requested target. -/
 theorem orderedPairPerm_apply_target {α : Type*} [DecidableEq α]
-    {u v u' v' : α}
-    (huv : u ≠ v) :
+    {u v u' v' : α} :
     orderedPairPerm u v u' v' v = v' := by
   let s₁ : Equiv.Perm α := Equiv.swap u u'
   let w : α := s₁ v
@@ -130,6 +147,6 @@ theorem exists_perm_maps_ordered_pair {α : Type*} [DecidableEq α]
     ∃ σ : Equiv.Perm α, σ u = u' ∧ σ v = v' := by
   refine ⟨orderedPairPerm u v u' v', ?_, ?_⟩
   · exact orderedPairPerm_apply_source huv huv'
-  · exact orderedPairPerm_apply_target huv
+  · exact orderedPairPerm_apply_target
 
 end PrecategoryFormal
