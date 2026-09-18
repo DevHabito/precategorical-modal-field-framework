@@ -64,7 +64,11 @@ theorem pairedEdge_both_directions_same_status {α : Type*}
     (¬ SameReachability
         (pairedEdgeState r u v true)
         (pairedEdgeState r u v false)) := by
-  rw [pairedEdge_toggle_changes_iff, pairedEdge_toggle_changes_iff]
+  constructor
+  · intro hforward hreverse
+    exact hforward (sameReachability_symm hreverse)
+  · intro hreverse hforward
+    exact hreverse (sameReachability_symm hforward)
 
 /-- Arithmetic form of the fixed-edge pairing factor used at n=5. -/
 theorem mf_r011_fixed_edge_pairing_arithmetic :
