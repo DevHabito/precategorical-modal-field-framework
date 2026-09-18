@@ -10,6 +10,7 @@ import PrecategoryFormal.LiteralRepresentativeCode
 import PrecategoryFormal.RepresentativeRealization
 import PrecategoryFormal.EdgeToggleEnumeration
 import PrecategoryFormal.EdgeToggleSemantics
+import PrecategoryFormal.EdgeTogglePairing
 import PrecategoryFormal.EdgeToggleBridge
 import PrecategoryFormal.EdgeToggleFastSemantic
 import PrecategoryFormal.EdgeTogglePrecomputed
