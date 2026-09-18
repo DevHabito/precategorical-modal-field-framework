@@ -23,7 +23,7 @@ The graph predicate is the precomputed checker already proved equivalent to
 mathematical `Relation.ReflTransGen` non-reachability.
 -/
 def fixedEdgeNoReachFastCountFive (u v : Fin 5) : Nat :=
-  if h : u = v then
+  if _h : u = v then
     0
   else
     let pos := nonloopEdgeBitIndex 5 u.val v.val
