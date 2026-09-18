@@ -12,4 +12,5 @@ import PrecategoryFormal.EdgeToggleEnumeration
 import PrecategoryFormal.EdgeToggleSemantics
 import PrecategoryFormal.EdgeToggleBridge
 import PrecategoryFormal.EdgeToggleFastSemantic
+import PrecategoryFormal.EdgeToggleFastCount
 import PrecategoryFormal.EdgeToggleReferenceCount
