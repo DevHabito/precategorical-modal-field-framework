@@ -41,6 +41,8 @@ theorem fixed01NoReach_reference_agrees_optimized_small :
     fixed01NoReachReferenceCount 2 = fixed01NoReachCount 2 ∧
     fixed01NoReachReferenceCount 3 = fixed01NoReachCount 3 ∧
     fixed01NoReachReferenceCount 4 = fixed01NoReachCount 4 := by
-  rw [fixed01NoReachReferenceCount_small, fixed01NoReachCount_small]
+  rcases fixed01NoReachReferenceCount_small with ⟨hr2, hr3, hr4⟩
+  rcases fixed01NoReachCount_small with ⟨ho2, ho3, ho4⟩
+  exact ⟨hr2.trans ho2.symm, hr3.trans ho3.symm, hr4.trans ho4.symm⟩
 
 end PrecategoryFormal
