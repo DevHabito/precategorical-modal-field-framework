@@ -75,6 +75,7 @@ jobs:
           - PrecategoryFormal.EdgeToggleBridge
           - PrecategoryFormal.EdgeToggleEnumeration
           - PrecategoryFormal.EdgeToggleFastSemantic
+          - PrecategoryFormal.EdgeTogglePrecomputed
           - PrecategoryFormal.EdgeToggleFastCount
           - PrecategoryFormal.EdgeToggleReferenceCount
           - PrecategoryFormal.EdgeToggleSemantics
