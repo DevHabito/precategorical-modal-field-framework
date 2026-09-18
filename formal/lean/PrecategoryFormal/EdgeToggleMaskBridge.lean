@@ -10,6 +10,43 @@ namespace PrecategoryFormal
 def edgeBitMaskFive (u v : Fin 5) : Nat :=
   1 <<< nonloopEdgeBitIndex 5 u.val v.val
 
+/-- A shifted one-bit natural has exactly one set bit. -/
+theorem testBit_one_shiftLeft_eq (pos bit : Nat) :
+    Nat.testBit (1 <<< pos) bit = decide (bit = pos) := by
+  rw [Nat.testBit_shiftLeft]
+  by_cases hle : pos ≤ bit
+  · by_cases heq : bit = pos
+    · subst bit
+      simp
+    · have hsub : bit - pos ≠ 0 := by omega
+      have hfalse : Nat.testBit 1 (bit - pos) = false := by
+        cases hbit : Nat.testBit 1 (bit - pos) with
+        | false => rfl
+        | true =>
+            exfalso
+            exact hsub ((Nat.testBit_one_eq_true_iff_self_eq_zero).1 hbit)
+      simp [hle, heq, hfalse]
+  · have hne : bit ≠ pos := by omega
+    simp [hle, hne]
+
+/-- The edge one-hot mask tests true exactly at its encoded edge index. -/
+theorem edgeBitMaskFive_testBit
+    (u v : Fin 5) (bit : Nat) :
+    Nat.testBit (edgeBitMaskFive u v) bit =
+      decide (bit = nonloopEdgeBitIndex 5 u.val v.val) := by
+  exact testBit_one_shiftLeft_eq _ _
+
+/--
+On five vertices, the row-major diagonal-removed index is injective on
+non-loop directed edges.
+-/
+theorem nonloopEdgeBitIndex_five_eq_iff
+    (u v x y : Fin 5) (huv : u ≠ v) (hxy : x ≠ y) :
+    nonloopEdgeBitIndex 5 u.val v.val = nonloopEdgeBitIndex 5 x.val y.val ↔
+      u = x ∧ v = y := by
+  fin_cases u <;> fin_cases v <;> fin_cases x <;> fin_cases y <;>
+    simp_all [nonloopEdgeBitIndex]
+
 /-- Add the distinguished edge at the mask level. -/
 def addEdgeMaskFive (graph : Nat) (u v : Fin 5) : Nat :=
   graph ||| edgeBitMaskFive u v
@@ -22,7 +59,7 @@ def toggleEdgeMaskFive (graph : Nat) (u v : Fin 5) : Nat :=
 theorem toggleEdgeMaskFive_involutive
     (graph : Nat) (u v : Fin 5) :
     toggleEdgeMaskFive (toggleEdgeMaskFive graph u v) u v = graph := by
-  simp [toggleEdgeMaskFive, edgeBitMaskFive, Nat.xor_assoc]
+  simp [toggleEdgeMaskFive, edgeBitMaskFive]
 
 /--
 The mask-level toggle flips exactly the distinguished non-loop edge state.
@@ -33,23 +70,22 @@ theorem maskHasDirectedEdge_toggleEdgeMaskFive
     (graph : Nat) (u v : Fin 5) (huv : u ≠ v) :
     maskHasDirectedEdge 5 (toggleEdgeMaskFive graph u v) u.val v.val =
       !(maskHasDirectedEdge 5 graph u.val v.val) := by
-  fin_cases u <;> fin_cases v <;>
-    try { exact (huv rfl).elim } <;>
-    simp [
-      toggleEdgeMaskFive,
-      edgeBitMaskFive,
-      maskHasDirectedEdge,
-      nonloopEdgeBitIndex,
-      Nat.testBit_xor,
-      Nat.testBit_shiftLeft
-    ]
+  have huvval : u.val ≠ v.val := by
+    intro h
+    apply huv
+    exact Fin.ext h
+  simp [
+    toggleEdgeMaskFive,
+    maskHasDirectedEdge,
+    u.isLt,
+    v.isLt,
+    huvval,
+    edgeBitMaskFive_testBit
+  ]
 
 /--
 Adding one concrete non-loop edge bit to a five-vertex mask has exactly the
 same mathematical edge relation as `addRelationEdge`.
-
-This theorem is intentionally about the original graph-mask representation,
-not the compressed enumeration used by an optimization path.
 -/
 theorem maskRelation_addEdgeMaskFive
     (graph : Nat) (u v : Fin 5) (huv : u ≠ v) :
@@ -57,18 +93,38 @@ theorem maskRelation_addEdgeMaskFive
       addRelationEdge (maskRelation 5 graph) u v := by
   funext x y
   apply propext
-  fin_cases u <;> fin_cases v <;>
-    try { exact (huv rfl).elim } <;>
-    fin_cases x <;> fin_cases y <;>
+  by_cases hxy : x = y
+  · subst y
+    have hnot : ¬ (x = u ∧ x = v) := by
+      rintro ⟨hxu, hxv⟩
+      apply huv
+      exact hxu.symm.trans hxv
     simp [
-      addEdgeMaskFive,
-      edgeBitMaskFive,
       maskRelation,
       maskHasDirectedEdge,
-      nonloopEdgeBitIndex,
       addRelationEdge,
-      Nat.testBit_lor,
-      Nat.testBit_shiftLeft
+      addEdgeMaskFive,
+      hnot
+    ]
+  · have hxyval : x.val ≠ y.val := by
+      intro h
+      exact hxy (Fin.ext h)
+    have hindex :
+        nonloopEdgeBitIndex 5 x.val y.val = nonloopEdgeBitIndex 5 u.val v.val ↔
+          x = u ∧ y = v := by
+      rw [eq_comm]
+      simpa [eq_comm] using
+        (nonloopEdgeBitIndex_five_eq_iff u v x y huv hxy)
+    simp [
+      maskRelation,
+      maskHasDirectedEdge,
+      x.isLt,
+      y.isLt,
+      hxyval,
+      addRelationEdge,
+      addEdgeMaskFive,
+      edgeBitMaskFive_testBit,
+      hindex
     ]
 
 /-- The added mask has the distinguished edge present. -/
@@ -90,16 +146,21 @@ theorem toggleEdgeMaskFive_eq_addEdgeMaskFive_of_absent
     (graph : Nat) (u v : Fin 5) (huv : u ≠ v)
     (habsent : maskHasDirectedEdge 5 graph u.val v.val = false) :
     toggleEdgeMaskFive graph u v = addEdgeMaskFive graph u v := by
+  have huvval : u.val ≠ v.val := by
+    intro h
+    apply huv
+    exact Fin.ext h
+  have hgraph :
+      graph.testBit (nonloopEdgeBitIndex 5 u.val v.val) = false := by
+    simpa [maskHasDirectedEdge, u.isLt, v.isLt, huvval] using habsent
   apply Nat.eq_of_testBit_eq
   intro bit
-  simp only [toggleEdgeMaskFive, addEdgeMaskFive, edgeBitMaskFive,
-    Nat.testBit_xor, Nat.testBit_lor]
+  rw [Nat.testBit_xor, Nat.testBit_or]
+  rw [edgeBitMaskFive_testBit]
   by_cases hbit : bit = nonloopEdgeBitIndex 5 u.val v.val
   · subst bit
-    have hgraph : graph.testBit (nonloopEdgeBitIndex 5 u.val v.val) = false := by
-      simpa [maskHasDirectedEdge, u.isLt, v.isLt, huv] using habsent
-    simp [hgraph, Nat.testBit_shiftLeft]
-  · simp [Nat.testBit_shiftLeft, hbit]
+    simp [hgraph]
+  · simp [hbit]
 
 /--
 For an absent distinguished edge, the relation of the toggled graph mask is
