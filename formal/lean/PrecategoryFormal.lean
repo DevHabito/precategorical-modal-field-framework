@@ -13,6 +13,7 @@ import PrecategoryFormal.EdgeToggleSemantics
 import PrecategoryFormal.EdgeTogglePairing
 import PrecategoryFormal.EdgeToggleRelabel
 import PrecategoryFormal.EdgeToggleBridge
+import PrecategoryFormal.EdgeToggleMaskBridge
 import PrecategoryFormal.EdgeToggleFastSemantic
 import PrecategoryFormal.EdgeTogglePrecomputed
 import PrecategoryFormal.EdgeToggleFastCount
