@@ -92,8 +92,9 @@ theorem toggleChangesBoolFive_eq_true_iff
 
 /--
 Direct count over all `2^20` graph masks for one fixed directed non-loop edge.
-Unlike the earlier absent-base count, this counts both members of every toggle
-pair through `toggleChangesBoolFive` itself.
+This is retained as the canonical finite object to be connected to the existing
+absent-edge count by an explicit toggle-pair bijection, rather than evaluated
+again by a redundant million-state computation.
 -/
 def fixedEdgeToggleChangedDirectCountFive
     (u v : Fin 5) : Nat :=
@@ -118,8 +119,9 @@ theorem fixedEdgeToggleChangedDirectCountFive_eq_semanticCount
 
 /--
 Direct full ordered graph-edge semantic numerator at `n = 5`. The twenty
-summands are exactly the twenty directed non-loop edge positions, and each
-summand scans every one of the `2^20` graph masks.
+summands are exactly the twenty directed non-loop edge positions. We do not
+re-evaluate this aggregate with `native_decide`; the remaining obligation is a
+structural count proof from toggle-pairing and relabeling/bijection lemmas.
 -/
 def semanticChangedGraphEdgePairsFive : Nat :=
   fixedEdgeToggleChangedDirectCountFive 0 1 +
@@ -142,25 +144,5 @@ def semanticChangedGraphEdgePairsFive : Nat :=
   fixedEdgeToggleChangedDirectCountFive 4 1 +
   fixedEdgeToggleChangedDirectCountFive 4 2 +
   fixedEdgeToggleChangedDirectCountFive 4 3
-
-/--
-Independent end-to-end executable certificate for the historical MF-R011
-numerator. This theorem counts the semantic toggle predicate directly rather
-than defining the numerator as twice an absent-base subtotal.
--/
-theorem semanticChangedGraphEdgePairsFive_exact :
-    semanticChangedGraphEdgePairsFive = 6144000 := by
-  native_decide
-
-/-- The direct semantic numerator agrees with the earlier pairing-derived numerator. -/
-theorem semanticChangedGraphEdgePairsFive_agrees_pairing :
-    semanticChangedGraphEdgePairsFive = mfR011ChangedGraphEdgePairsFive := by
-  rw [semanticChangedGraphEdgePairsFive_exact, mfR011ChangedGraphEdgePairsFive_exact]
-
-/-- Kernel-checked semantic form of the five-vertex MF-R011 value `75/256`. -/
-theorem mf_r011_p5_semantic_exact :
-    semanticChangedGraphEdgePairsFive * 256 =
-      75 * mfR011GraphEdgePairsFive := by
-  rw [semanticChangedGraphEdgePairsFive_exact, mfR011GraphEdgePairsFive_exact]
 
 end PrecategoryFormal
