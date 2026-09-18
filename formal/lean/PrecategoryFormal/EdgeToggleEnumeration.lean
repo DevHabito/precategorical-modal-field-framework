@@ -79,15 +79,8 @@ theorem countNatWhereAux_eq_filter_card
       simp [countNatWhereAux]
   | succ n ih =>
       cases h : f n <;>
-        simp [
-          countNatWhereAux,
-          ih,
-          Finset.range_succ,
-          h,
-          Nat.add_assoc,
-          Nat.add_comm,
-          Nat.add_left_comm
-        ]
+        simp [countNatWhereAux, ih, Finset.range_add_one, h] <;>
+        omega
 
 /-- `countNatWhere` is exactly the cardinality of its filtered finite range. -/
 theorem countNatWhere_eq_filter_card
