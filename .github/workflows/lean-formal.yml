@@ -74,6 +74,7 @@ jobs:
         module:
           - PrecategoryFormal.EdgeToggleBridge
           - PrecategoryFormal.EdgeToggleEnumeration
+          - PrecategoryFormal.EdgeToggleFastSemantic
           - PrecategoryFormal.EdgeToggleReferenceCount
           - PrecategoryFormal.EdgeToggleSemantics
           - PrecategoryFormal.GraphSCCBridge
