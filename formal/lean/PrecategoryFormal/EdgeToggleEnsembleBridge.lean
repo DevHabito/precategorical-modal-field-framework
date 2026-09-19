@@ -34,23 +34,19 @@ private instance directedEdgeCoord5BijectiveDecidable :
 theorem directedEdgeCoord5_bijective : Function.Bijective directedEdgeCoord5 := by
   native_decide
 
-/-- Canonical equivalence between actual directed non-loop edges and mask coordinates. -/
-def directedEdgeCoordEquiv5 : DirectedNonloopEdge5 ≃ Fin (edgeCount 5) :=
-  Equiv.ofBijective directedEdgeCoord5 directedEdgeCoord5_bijective
-
 /-- A shifted singleton bit is true at exactly its selected coordinate. -/
 theorem singletonBit_testBit (e i : Nat) :
     (1 <<< e).testBit i = decide (i = e) := by
-  rw [Bool.eq_iff_iff]
-  simp [Nat.testBit_shiftLeft, Nat.testBit_one_eq_true_iff_self_eq_zero]
-  omega
+  simpa [Nat.one_shiftLeft, eq_comm] using (Nat.testBit_two_pow e i)
 
 /-- `toggleMask` is literal xor with one selected coordinate bit. -/
 theorem toggleMask_testBit
     {n : Nat} (g : GraphMask n) (e : Fin (edgeCount n)) (i : Nat) :
     (toggleMask g e).val.testBit i =
       (g.val.testBit i ^^ decide (i = e.val)) := by
-  simp [toggleMask, Nat.testBit_xor, singletonBit_testBit]
+  change (g.val ^^^ (1 <<< e.val)).testBit i =
+    (g.val.testBit i ^^ decide (i = e.val))
+  rw [Nat.testBit_xor, singletonBit_testBit]
 
 /-- The selected bit is complemented. -/
 theorem toggleMask_selected
@@ -101,21 +97,25 @@ theorem toggleMask_preserves_other_edge5
   exact Fin.ext hval
 
 /--
-Every declared mask coordinate therefore names one unique directed non-loop edge,
-and toggling that coordinate has exactly the published graph-edge semantics.
+Every declared mask coordinate names one unique directed non-loop edge, and
+that coordinate toggle complements exactly that edge while preserving all others.
 -/
 theorem coordinate_toggle_has_unique_edge_semantics5
     (g : GraphMask 5) (c : Fin (edgeCount 5)) :
-    let e := directedEdgeCoordEquiv5.symm c
-    maskGraph5 (toggleMask g c) e.1.1 e.1.2 = !(maskGraph5 g e.1.1 e.1.2) ∧
+    ∃! e : DirectedNonloopEdge5,
+      directedEdgeCoord5 e = c ∧
+      maskGraph5 (toggleMask g c) e.1.1 e.1.2 = !(maskGraph5 g e.1.1 e.1.2) ∧
       ∀ f : DirectedNonloopEdge5, f ≠ e →
         maskGraph5 (toggleMask g c) f.1.1 f.1.2 = maskGraph5 g f.1.1 f.1.2 := by
-  let e := directedEdgeCoordEquiv5.symm c
-  have hcoord : directedEdgeCoord5 e = c := directedEdgeCoordEquiv5.apply_symm_apply c
-  subst c
-  constructor
-  · exact toggleMask_flips_edge5 g e
-  · intro f hfe
-    exact toggleMask_preserves_other_edge5 g e f hfe
+  obtain ⟨e, he⟩ := directedEdgeCoord5_bijective.2 c
+  refine ⟨e, ?_, ?_⟩
+  · refine ⟨he, ?_, ?_⟩
+    · rw [← he]
+      exact toggleMask_flips_edge5 g e
+    · intro f hfe
+      rw [← he]
+      exact toggleMask_preserves_other_edge5 g e f hfe
+  · intro f hf
+    exact directedEdgeCoord5_bijective.1 (hf.1.trans he.symm)
 
 end PrecategoryFormal
