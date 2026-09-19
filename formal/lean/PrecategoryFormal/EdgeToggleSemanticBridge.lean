@@ -19,7 +19,7 @@ def referenceStep5 (r : BoolDigraph) (k : Vertex) : BoolDigraph :=
   fun u v => r u v || (r u k && r k v)
 
 /--
-A definitionally independent five-step reference closure.  Unlike `reachRows`,
+A definitionally independent five-step reference closure. Unlike `reachRows`,
 this presentation is a direct relation transformer and is convenient for proofs.
 -/
 def referenceClosure5 (g : GraphMask 5) : BoolDigraph :=
@@ -69,7 +69,7 @@ theorem referenceClosure5_sound (g : GraphMask 5) :
 For the fixed five-vertex ensemble, the reference closure is reflexive,
 contains every original edge, and is transitive.
 
-This is an exact finite recognition theorem over all `2^20` masks.  It is not
+This is an exact finite recognition theorem over all `2^20` masks. It is not
 presented as a generic Floyd-Warshall theorem for arbitrary finite types.
 -/
 def ReferenceClosureLaws5 (g : GraphMask 5) : Prop :=
@@ -77,6 +77,34 @@ def ReferenceClosureLaws5 (g : GraphMask 5) : Prop :=
   (∀ u, r u u = true) ∧
   (∀ u v, maskGraph5 g u v = true → r u v = true) ∧
   (∀ u v w, r u v = true → r v w = true → r u w = true)
+
+/--
+Explicit finite decidability instance. Mathlib's finite-`∀` instance deliberately
+does not recursively synthesize through arbitrarily nested binders, so the two-
+and three-vertex predicates are exposed one layer at a time.
+-/
+private instance referenceClosureLaws5Decidable (g : GraphMask 5) :
+    Decidable (ReferenceClosureLaws5 g) := by
+  unfold ReferenceClosureLaws5
+  letI : DecidablePred (fun u : Vertex => referenceClosure5 g u u = true) :=
+    fun _ => inferInstance
+  letI : DecidablePred (fun u : Vertex =>
+      ∀ v : Vertex,
+        maskGraph5 g u v = true → referenceClosure5 g u v = true) :=
+    fun _ => inferInstance
+  letI : DecidablePred (fun u : Vertex =>
+      ∀ v : Vertex, ∀ w : Vertex,
+        referenceClosure5 g u v = true →
+        referenceClosure5 g v w = true →
+        referenceClosure5 g u w = true) := fun u => by
+    letI : DecidablePred (fun v : Vertex =>
+        ∀ w : Vertex,
+          referenceClosure5 g u v = true →
+          referenceClosure5 g v w = true →
+          referenceClosure5 g u w = true) :=
+      fun _ => inferInstance
+    exact Fintype.decidableForallFintype
+  infer_instance
 
 theorem referenceClosureLaws5_all :
     ∀ g : GraphMask 5, ReferenceClosureLaws5 g := by
@@ -110,6 +138,15 @@ def ReachCodeSemanticAudit5 (g : GraphMask 5) : Prop :=
   let r := referenceClosure5 g
   code < 2 ^ 25 ∧
     ∀ u v : Vertex, code.testBit (u.val * 5 + v.val) = r u v
+
+private instance reachCodeSemanticAudit5Decidable (g : GraphMask 5) :
+    Decidable (ReachCodeSemanticAudit5 g) := by
+  unfold ReachCodeSemanticAudit5
+  letI : DecidablePred (fun u : Vertex =>
+      ∀ v : Vertex,
+        (reachCode g).testBit (u.val * 5 + v.val) = referenceClosure5 g u v) :=
+    fun _ => inferInstance
+  infer_instance
 
 /-- Exact all-graph bridge between the executable compact code and the reference closure. -/
 theorem reachCodeSemanticAudit5_all :
@@ -153,7 +190,10 @@ theorem sameReachability5_implies_reachCode_eq
   · let u : Vertex := ⟨i / 5, by omega⟩
     let v : Vertex := ⟨i % 5, by omega⟩
     have hidx : u.val * 5 + v.val = i := by
-      simpa [u, v] using Nat.div_add_mod i 5
+      calc
+        u.val * 5 + v.val = 5 * (i / 5) + i % 5 := by
+          simp [u, v, Nat.mul_comm]
+        _ = i := Nat.div_add_mod i 5
     rw [← hidx, Bool.eq_iff_iff,
       reachCode_testBit_iff_reach,
       reachCode_testBit_iff_reach]
