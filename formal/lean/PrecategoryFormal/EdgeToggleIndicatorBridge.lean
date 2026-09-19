@@ -17,11 +17,13 @@ theorem reachCodeTable_get5 (g : GraphMask 5) :
   unfold reachCodeTable
   let table := Array.ofFn (fun h : GraphMask 5 => reachCode h)
   have hg : g.val < table.size := by
-    simp [table]
-    exact g.isLt
+    simpa [table] using g.isLt
   change table[g.val]! = reachCode g
   rw [getElem!_pos table g.val hg]
-  simp [table]
+  change (Array.ofFn (fun h : GraphMask 5 => reachCode h))[g.val] = reachCode g
+  rw [Array.getElem_ofFn]
+  apply congrArg reachCode
+  exact Fin.ext rfl
 
 /-- A zero indicator is equivalent to preservation of the full mathematical reachability relation. -/
 theorem edgeToggleChanges5_eq_zero_iff_sameReachability
