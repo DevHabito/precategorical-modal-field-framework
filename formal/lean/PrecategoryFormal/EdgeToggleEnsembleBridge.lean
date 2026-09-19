@@ -37,7 +37,8 @@ theorem directedEdgeCoord5_bijective : Function.Bijective directedEdgeCoord5 := 
 /-- A shifted singleton bit is true at exactly its selected coordinate. -/
 theorem singletonBit_testBit (e i : Nat) :
     (1 <<< e).testBit i = decide (i = e) := by
-  simpa [Nat.one_shiftLeft, eq_comm] using (Nat.testBit_two_pow e i)
+  simpa [Nat.one_shiftLeft, eq_comm] using
+    (Nat.testBit_two_pow (n := e) (m := i))
 
 /-- `toggleMask` is literal xor with one selected coordinate bit. -/
 theorem toggleMask_testBit
