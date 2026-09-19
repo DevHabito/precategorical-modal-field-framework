@@ -68,6 +68,7 @@ jobs:
       fail-fast: false
       matrix:
         module:
+          - PrecategoryFormal.EdgeToggleSemanticBridge
           - PrecategoryFormal.EdgeToggleSensitivity
           - PrecategoryFormal.GraphSCCBridge
           - PrecategoryFormal.LiteralRepresentativeCode
