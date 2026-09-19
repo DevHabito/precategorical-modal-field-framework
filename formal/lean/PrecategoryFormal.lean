@@ -11,3 +11,4 @@ import PrecategoryFormal.RepresentativeRealization
 import PrecategoryFormal.EdgeToggleSensitivity
 import PrecategoryFormal.EdgeToggleSemanticBridge
 import PrecategoryFormal.EdgeToggleEnsembleBridge
+import PrecategoryFormal.EdgeToggleIndicatorBridge
