@@ -8,3 +8,4 @@ import PrecategoryFormal.PosetCountBridge
 import PrecategoryFormal.RepresentativeCodeType
 import PrecategoryFormal.LiteralRepresentativeCode
 import PrecategoryFormal.RepresentativeRealization
+import PrecategoryFormal.EdgeToggleSensitivity
