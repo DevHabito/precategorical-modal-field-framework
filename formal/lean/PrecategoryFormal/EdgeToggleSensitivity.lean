@@ -100,10 +100,43 @@ The historical Python result is not imported into this definition or proof.
 theorem changedPairCount_five : changedPairCount 5 = 6144000 := by
   native_decide
 
+/-- The declared ordered-pair ensemble has size `8` for `n = 2`. -/
+theorem orderedPairCount_two : edgeCount 2 * graphCount 2 = 8 := by
+  native_decide
+
+/-- The declared ordered-pair ensemble has size `384` for `n = 3`. -/
+theorem orderedPairCount_three : edgeCount 3 * graphCount 3 = 384 := by
+  native_decide
+
+/-- The declared ordered-pair ensemble has size `49152` for `n = 4`. -/
+theorem orderedPairCount_four : edgeCount 4 * graphCount 4 = 49152 := by
+  native_decide
+
+/-- The declared ordered-pair ensemble has size `20,971,520` for `n = 5`. -/
+theorem orderedPairCount_five : edgeCount 5 * graphCount 5 = 20971520 := by
+  native_decide
+
+/-- The exact `n = 2` ratio is `1`. -/
+theorem edgeToggleProbability_two_crossmul :
+    changedPairCount 2 = edgeCount 2 * graphCount 2 := by
+  rw [changedPairCount_two, orderedPairCount_two]
+
+/-- The exact `n = 3` ratio is `3/4`. -/
+theorem edgeToggleProbability_three_crossmul :
+    changedPairCount 3 * 4 = edgeCount 3 * graphCount 3 * 3 := by
+  rw [changedPairCount_three, orderedPairCount_three]
+  native_decide
+
+/-- The exact `n = 4` ratio is `1/2`. -/
+theorem edgeToggleProbability_four_crossmul :
+    changedPairCount 4 * 2 = edgeCount 4 * graphCount 4 := by
+  rw [changedPairCount_four, orderedPairCount_four]
+  native_decide
+
 /-- The `n = 5` exact ratio reduces to `75/256`. -/
 theorem edgeToggleProbability_five_crossmul :
     changedPairCount 5 * 256 = edgeCount 5 * graphCount 5 * 75 := by
-  rw [changedPairCount_five]
+  rw [changedPairCount_five, orderedPairCount_five]
   native_decide
 
 end PrecategoryFormal
