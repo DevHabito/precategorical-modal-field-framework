@@ -125,18 +125,15 @@ theorem edgeToggleProbability_two_crossmul :
 theorem edgeToggleProbability_three_crossmul :
     changedPairCount 3 * 4 = edgeCount 3 * graphCount 3 * 3 := by
   rw [changedPairCount_three, orderedPairCount_three]
-  native_decide
 
 /-- The exact `n = 4` ratio is `1/2`. -/
 theorem edgeToggleProbability_four_crossmul :
     changedPairCount 4 * 2 = edgeCount 4 * graphCount 4 := by
   rw [changedPairCount_four, orderedPairCount_four]
-  native_decide
 
 /-- The `n = 5` exact ratio reduces to `75/256`. -/
 theorem edgeToggleProbability_five_crossmul :
     changedPairCount 5 * 256 = edgeCount 5 * graphCount 5 * 75 := by
   rw [changedPairCount_five, orderedPairCount_five]
-  native_decide
 
 end PrecategoryFormal
