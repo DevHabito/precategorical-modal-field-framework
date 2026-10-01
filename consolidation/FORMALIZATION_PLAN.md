@@ -51,21 +51,61 @@ Verification status: the complete Lean library builds with the pinned Lean/mathl
 
 Scope boundary: F1 proves the declared MF-R008 code/count theorem and closes the realizability of the counted literal codes. It does not establish novelty, retain or count discarded SCC memberships as part of the code, or imply injectivity of the representative code.
 
-### F2 — independent finite computation: MF-R011
+### F2 — independent finite computation: MF-R011 — COMPLETE AT DECLARED `n=5` SCOPE
 
-Formalize the declared finite graph ensemble and edge-toggle operation. Use a decidable computation (`native_decide` or equivalent) to certify the exact small-n values, especially
+Formalized the declared five-vertex loopless labeled-digraph ensemble, directed-edge coordinate system, edge-toggle operation, compact reachability computation, semantic reference closure, and the exact event counted by the edge-toggle indicator.
+
+The formal chain independently certifies
 
 \[
-P_5=75/256.
+P_5=\frac{6144000}{20971520}=\frac{75}{256}.
 \]
 
-This should be independent of the existing Python enumeration implementation.
+It includes:
 
-### F3 — exact dynamic non-closure: MF-R049
+- an independent bit-mask graph ensemble;
+- exact `native_decide` counts through `n=5`;
+- a symbolic five-step Floyd–Warshall reference relation proved equivalent to `Relation.ReflTransGen` reachability;
+- an exhaustive semantic audit over all `2^20` five-vertex graph masks connecting the optimized reachability code to that reference;
+- a bijection between the 20 mask coordinates and the 20 directed non-loop edges;
+- proofs that `toggleMask` flips exactly the selected edge and preserves every other edge;
+- an indicator bridge proving each summand is exactly the event that the full labeled reachability preorder changes;
+- a generic edge-addition theorem stating that insertion preserves reflexive-transitive closure exactly when the target was already reachable from the source.
 
-Formalize the explicit finite witness proving that mean plus one fixed-lambda entropic score does not determine the next score under the declared update.
+Verification status: at commit `83b45fed020e24f7f9ceba7ecd86220e9c2b8b08`, workflow `Lean formal verification` run `301` completed successfully. The pinned `lake build`, proof-placeholder rejection, and every declared module-sharded bundled `leanchecker` replay passed.
 
-Prefer a theorem over a minimal finite real/rational construction. Any use of `exp`/`log` should be isolated so that the counterexample does not inherit unnecessary analytic machinery.
+Independent non-Lean checks also include an exact reachable-set derivation for `n=5` and a pre-registered directed-cut inclusion-exclusion cross-check through `n=6`, giving
+
+\[
+P_6=\frac{313}{2048}.
+\]
+
+Scope boundary: F2 formalizes the exact `n=5` statistic and its semantic bridge. The human-readable general identity
+
+\[
+P_n=2\Pr(s\not\leadsto t)=2\bigl(1-\gamma_{n,1/2}\bigr)
+\]
+
+is not being represented as a general probabilistic Lean theorem for arbitrary `n`, and the `n=6` checkpoint is not part of the end-to-end Lean promotion claim.
+
+### F3 — exact dynamic non-closure: MF-R049 — NEXT
+
+Formalize an explicit finite witness proving that mean plus one fixed-lambda entropic score does not determine the next score under the declared centered contraction.
+
+The first formalization task is **not** to translate the historical floating-point audit. It is to extract a minimal exact theorem.
+
+Preferred proof architecture:
+
+1. define a finite-support exponential moment using exact rational weights;
+2. prove two positive four-point distributions have the same normalization, the same mean, and the same moment at the initial scale;
+3. prove their required rescaled moments differ exactly;
+4. isolate one small analytic lemma connecting positive exponential moments to the entropic score `Q_lambda`, using injectivity of `log` only where needed;
+5. derive different next fixed-`lambda` scores through the exact centered-contraction transport identity;
+6. keep the unrestricted-distribution scope and the nonclaims explicit.
+
+A rationalized witness is preferable if it preserves the exact MF-R049 existence claim while eliminating unnecessary square-root algebra. Any replacement of the historical witness must be derived and documented exactly, not selected by numerical fitting.
+
+Do not claim that no finite-dimensional closure can exist, that the whole `lambda ↦ Q_lambda` curve is always minimal, or that the mathematical counterexample is a physical evolution law.
 
 ### F4 — only after compression: optimization theorems
 
@@ -96,4 +136,4 @@ The implementation lives under
 
 `formal/lean/`
 
-with modules named by mathematical content rather than audit numbers. Current modules include the representative-code witness, representative counting, poset enumeration/semantics/bijection, count bridge, literal-code carrier equivalence, and generic representative-code graph realization. A-number provenance may appear in comments, not in theorem names.
+with modules named by mathematical content rather than audit numbers. Current modules include the representative-code witness, representative counting, poset enumeration/semantics/bijection, count bridge, literal-code carrier equivalence, generic representative-code graph realization, generic edge-addition reachability, edge-toggle finite enumeration, and the `n=5` semantic/ensemble/indicator bridges. A-number provenance may appear in comments, not in theorem names.
