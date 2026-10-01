@@ -6,7 +6,7 @@ This ledger is the public-facing status table for claims selected for consolidat
 |---|---|---|---|---|---|---|
 | C1.1 | Minimum-representative quotient-poset count | PROVED; END-TO-END LEAN/KERNEL PASS | combinatorial proof + exact `native_decide` enumeration + literal-code equivalence + explicit digraph realization + module-sharded `leanchecker` replay | formalization complete for the declared MF-R008 code/count claim | novelty not certified | none for the declared counting theorem; novelty remains separate |
 | C1.2 | Non-injectivity of representative code | PROVED; EXPLICIT WITNESS END-TO-END LEAN/KERNEL PASS | constructive counterexample + `ReflTransGen` SCC proof + direct graph-code computation + `leanchecker` | explicit witness complete; generic encoder library optional | novelty not material | none for the explicit witness; prove generic five-vertex bounded-reach completeness only before promoting the bounded evaluator as a reusable arbitrary-graph encoder |
-| C1.3 | `P5=75/256` edge-toggle sensitivity | EXACT FINITE RESULT; FORMALIZATION ACTIVE, NOT YET PROMOTED | historical exhaustive enumeration + independent exact counting derivation + independent directed-cut inclusion-exclusion cross-check through `n=6` + Lean finite enumeration/semantic bridge under active CI gate | end-to-end Lean target active in PR #14; promotion requires full build and module-sharded `leanchecker` pass | fixed-pair random-digraph reachability and reachability-based edge influence have prior art; priority of the specific value `75/256` is not certified | close the full Lean/kernel gate; preserve corrected literature wording; do not claim the general sensitivity/reachability framework as novel |
+| C1.3 | `P5=75/256` edge-toggle sensitivity of the full labeled reachability preorder | EXACT FINITE RESULT; END-TO-END LEAN/KERNEL PASS AT DECLARED `n=5` SCOPE | historical exhaustive enumeration + independent exact counting derivation + independent directed-cut inclusion-exclusion cross-check through `n=6` + independent Lean finite enumeration + semantic/ensemble/indicator bridges + module-sharded `leanchecker` replay | formalization complete for the declared exact `n=5` statistic and its semantic bridge; the general probability identity for arbitrary `n` is not claimed as Lean-formalized | fixed-pair random-digraph reachability and reachability-based edge influence have prior art; priority of the specific value `75/256` is not certified | no unresolved obligation for F2 at the declared `n=5` boundary; preserve corrected literature wording and explicit formal-scope boundary |
 | C2 | Fixed-score dynamic non-closure | PROVED | exact identity + four-point counterexample | Lean candidate 2 | novelty not certified | self-contained theorem independent of framework terminology |
 | C3.1 | Frozen tail structural theorem | PROVED | analytic proof | later Lean/Isabelle candidate | novelty not certified | extract assumptions and remove historical dependencies |
 | C3.2 | Frozen compressed one-variation | PROVED | analytic proof + exact regression | later formalization | novelty not certified | rewrite as standalone exponential-moment theorem |
@@ -56,17 +56,27 @@ C1.2 has an end-to-end kernel-checked theorem for the **explicit two-graph witne
 
 This does not yet certify `ReachWithinBool 4` as a generic encoder component for every five-vertex directed graph. A reusable generic encoder would additionally require a completeness theorem reducing arbitrary five-vertex reachability to bounded paths. That stronger library statement is not needed for the explicit C1.2 counterexample and is not claimed.
 
-### C1.3 active formal boundary
+### C1.3 formal boundary — closed for F2
 
-C1.3 is deliberately **not** marked complete yet. The active branch contains an independent Lean graph-mask enumeration for the exact `n=5` numerator, an independent relation-based Floyd–Warshall reference closure proved equivalent to `Relation.ReflTransGen`, an exhaustive bridge from the compact reachability code to that semantic reference over all `2^20` graph masks, a proof that the 20 mask coordinates are exactly the 20 directed non-loop edges, and an indicator bridge connecting each enumerator summand to change in the full mathematical reachability relation.
+C1.3 now has an end-to-end Lean/kernel pass for the **declared exact `n=5` reachability-preorder sensitivity claim**. The observable is the full labeled reflexive-transitive reachability relation on the original vertices; this is a preorder. It should not be described loosely as only the condensation preorder/poset, because the formal observable retains the labeled vertex-level reachability relation before SCC quotienting.
 
-A separate generic theorem proves that inserting one directed edge preserves the whole reflexive-transitive closure exactly when its target was already reachable from its source. This theorem has no finiteness, encoding, or probability assumptions. It formalizes the logical insertion criterion only; the probabilistic pairing factor `2` and label-symmetry step in `P_n = 2 Pr(s not→ t)` are not being silently promoted as already kernel-checked by that lemma.
+The formal chain contains an independent Lean graph-mask enumeration for the exact `n=5` numerator, an independent relation-based Floyd–Warshall reference closure proved equivalent to `Relation.ReflTransGen`, an exhaustive bridge from the compact reachability code to that semantic reference over all `2^20` graph masks, a proof that the 20 mask coordinates are exactly the 20 directed non-loop edges, a proof that a coordinate toggle flips exactly that edge and preserves all others, and an indicator bridge proving each enumerator summand is exactly the event that the full mathematical reachability preorder changes.
+
+At commit `83b45fed020e24f7f9ceba7ecd86220e9c2b8b08`, workflow `Lean formal verification` run `301` completed successfully: the pinned-toolchain `lake build`, proof-placeholder rejection, and every declared module-sharded bundled `leanchecker` replay passed.
+
+A separate generic theorem proves that inserting one directed edge preserves the whole reflexive-transitive closure exactly when its target was already reachable from its source. This theorem has no finiteness, encoding, or probability assumptions. It formalizes the logical insertion criterion only; the probabilistic pairing factor `2` and label-symmetry step in
+
+`P_n = 2 Pr(s not→ t) = 2(1 - gamma_{n,1/2})`
+
+are established in the human-readable mathematical derivation but are **not** being promoted as an already kernel-checked general probability theorem for arbitrary `n`.
 
 Outside the Lean path, the `n=5` value has an exact reachable-set counting derivation, and a pre-registered `n=6` target was independently reproduced by directed-cut inclusion-exclusion:
 
 `B6 = 82051072`, `Pr(s not→ t) = 313/4096`, `P6 = 313/2048`, and `4923064320` sensitive ordered graph-edge pairs out of `32212254720`.
 
-Those independent checks strengthen reproducibility but do not replace the formal promotion gate. C1.3 remains at its current status until a clean pinned-toolchain build and every declared `leanchecker` module replay pass.
+Those `n=6` checks strengthen reproducibility but do not enlarge the end-to-end formal claim beyond `n=5`.
+
+F2/C1.3 is therefore closed at its declared finite scope. Any future generalization in `n`, asymptotic analysis, or general probability formalization is new work and must receive its own hypotheses, verification gate, and literature review.
 
 ## Freeze rule
 
