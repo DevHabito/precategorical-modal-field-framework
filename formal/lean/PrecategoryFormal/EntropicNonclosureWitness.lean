@@ -5,12 +5,14 @@ set_option warningAsError true
 
 namespace PrecategoryFormal
 
+noncomputable section
+
 /-- Total mass of a four-point weight vector on support `{0,1,2,3}`. -/
 def fourPointMass (p0 p1 p2 p3 : ℝ) : ℝ :=
   p0 + p1 + p2 + p3
 
 /-- Mean of a four-point weight vector on support `{0,1,2,3}`. -/
-def fourPointMean (p0 p1 p2 p3 : ℝ) : ℝ :=
+def fourPointMean (_p0 p1 p2 p3 : ℝ) : ℝ :=
   p1 + 2 * p2 + 3 * p3
 
 /-- Polynomial/exponential moment at base `r` on support `{0,1,2,3}`. -/
@@ -156,5 +158,7 @@ theorem rationalFourPointNonclosureWitness :
   · rw [nonclosurePPlus_quarterMoment, nonclosurePMinus_quarterMoment]
   · rw [nonclosurePPlus_halfMoment, nonclosurePMinus_halfMoment]
     norm_num
+
+end
 
 end PrecategoryFormal
