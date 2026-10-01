@@ -198,7 +198,7 @@ Every entry is strictly positive, and
 \sum_i p_i^+=\sum_i p_i^-=1.
 \]
 
-The two distributions therefore lie strictly inside the four-simplex face determined by this support; no zero or signed weights are being used.
+The two distributions therefore lie strictly inside the three-dimensional probability simplex on four support points; no zero or signed weights are being used.
 
 ## 5. Equal means
 
