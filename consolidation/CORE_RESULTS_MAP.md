@@ -35,17 +35,45 @@ Status: **proved by constructive counterexample**.
 
 Source claim: **MF-R011 / A8.1**.
 
-For the explicitly declared uniform graph-edge ensemble, exhaustive finite enumeration gives
+For the explicitly declared uniform graph-edge ensemble,
 
 \[
 P_2=1,\qquad P_3=\frac34,\qquad P_4=\frac12,\qquad P_5=\frac{75}{256},
 \]
 
-where `P_n` is the probability that the declared single-edge toggle changes the induced reachability preorder.
+where `P_n` is the probability that the declared single-edge toggle changes the **full labeled reflexive-transitive reachability preorder** on the original vertices. This is the pre-quotient labeled reachability relation; it should not be conflated with only the SCC condensation poset.
 
-Status: **exact finite computation**; not an asymptotic theorem.
+For `n=5`, exactly
 
-Novelty status: **apparently unreported in the searched literature; not certified**.
+\[
+6144000
+\]
+
+of
+
+\[
+20971520
+\]
+
+ordered graph-edge pairs are sensitive.
+
+Status: **exact finite result; end-to-end Lean/kernel pass for the declared `n=5` statistic and its semantic bridge**. The formal path independently encodes the graph-mask ensemble, proves the edge-coordinate/toggle semantics, proves the compact reachability code equivalent to `Relation.ReflTransGen` reachability over all `2^20` five-vertex graph masks, connects each enumerator summand to change in the mathematical reachability preorder, and certifies the exact `n=5` numerator and ratio. The pinned build and every declared module-sharded `leanchecker` replay passed at commit `83b45fed020e24f7f9ceba7ecd86220e9c2b8b08` (workflow run `301`).
+
+A human-readable structural argument also gives
+
+\[
+P_n=2\Pr(s\not\leadsto t)=2\bigl(1-\gamma_{n,1/2}\bigr),
+\]
+
+and an independently pre-registered `n=6` cross-check gives
+
+\[
+P_6=\frac{313}{2048}.
+\]
+
+Formal-scope boundary: the general probability identity for arbitrary `n` and the `n=6` cross-check are **not** being represented as part of the end-to-end Lean `n=5` theorem.
+
+Novelty status: **the general fixed-pair reachability problem and reachability-based edge influence have prior art; priority of the specific value `75/256` is not certified**.
 
 ---
 
