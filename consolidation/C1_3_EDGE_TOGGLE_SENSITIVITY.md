@@ -1,8 +1,8 @@
-# C1.3 — exact edge-toggle sensitivity of finite reachability
+# C1.3 — exact edge-toggle sensitivity of the full labeled reachability preorder
 
 **Consolidation 1.0 canonical note**  
 **Source claim:** MF-R011  
-**Current status:** exact mathematical result; Lean end-to-end promotion gate still open  
+**Current status:** exact finite result; END-TO-END LEAN/KERNEL PASS for the declared `n=5` claim  
 **Novelty status:** priority of the specific finite value is not certified
 
 This note is the short self-contained mathematical unit for C1.3. Historical
@@ -20,9 +20,13 @@ Let `D_n` be the set of all loopless directed graphs on the labeled vertex set
 
 such graphs.
 
-For a graph `G`, let `C(G)` denote its full reflexive-transitive reachability
-relation. For a directed non-loop edge coordinate `e`, let `G triangle e` be the
-graph obtained by toggling exactly that edge.
+For a graph `G`, let `C(G)` denote its full labeled reflexive-transitive
+reachability relation. This relation is a preorder on the original labeled
+vertices; quotienting mutual reachability gives the SCC condensation poset, but
+that quotient is not the observable used in the definition below.
+
+For a directed non-loop edge coordinate `e`, let `G triangle e` be the graph
+obtained by toggling exactly that edge.
 
 Define
 
@@ -35,7 +39,7 @@ P_n
 \]
 
 Thus `P_n` is the exact uniform probability that one directed-edge toggle
-changes at least one reachability fact.
+changes at least one fact in the full labeled reachability preorder.
 
 ---
 
@@ -48,8 +52,9 @@ The theorem uses only the following assumptions.
 3. Every one of the `n(n-1)` directed non-loop edges is independently present
    or absent with probability `1/2`; equivalently, graphs are uniform over
    `D_n`.
-4. The observable is the **full reflexive-transitive reachability relation**,
-   not only the SCC partition and not the lossy minimum-representative code.
+4. The observable is the **full labeled reflexive-transitive reachability
+   preorder**, not only the SCC partition, not only the condensation poset, and
+   not the lossy minimum-representative code.
 5. A toggle complements exactly one directed non-loop edge.
 
 No physical interpretation, RZS assumption, continuum limit, asymptotic
@@ -77,7 +82,7 @@ edge can replace that occurrence of `s -> t` by the pre-existing path from `s`
 to `t`. Therefore insertion creates no new reachable pair.
 
 Conversely, if `s` does not reach `t` in `H`, insertion makes `t` reachable
-from `s` immediately. Hence the full reachability relation changes. `square`
+from `s` immediately. Hence the full reachability preorder changes. `square`
 
 The logical content of this lemma is isolated in Lean as a theorem for an
 arbitrary binary relation on an arbitrary type. The Lean statement does not use
@@ -86,9 +91,9 @@ finiteness, graph masks, probabilities, or `n=5`.
 ### Toggle pairing
 
 Pair every graph with `e` absent with the graph obtained by inserting `e`.
-Every sensitive undirected pair in this pairing contributes two ordered toggle
-states: insertion from the edge-absent side and deletion from the edge-present
-side.
+Every sensitive unordered graph pair in this pairing contributes two ordered
+toggle states: insertion from the edge-absent side and deletion from the
+edge-present side.
 
 Moreover,
 
@@ -126,6 +131,11 @@ then
 
 This identity explains the statistic structurally. It is not treated as a new
 general random-digraph theory; fixed-pair reachability has prior literature.
+
+The identity above is proved mathematically in this consolidation package. The
+current Lean development formalizes the generic insertion criterion, but does
+**not** yet package the probability-pairing factor `2` and label-symmetry step as
+a general probabilistic theorem for arbitrary `n`. That boundary is deliberate.
 
 ---
 
@@ -221,7 +231,8 @@ P_5
 }.
 \]
 
-More generally, for any fixed distinct labels `s,t`,
+More generally, for any fixed distinct labels `s,t`, the human-readable
+structural argument gives
 
 \[
 \boxed{
@@ -232,7 +243,9 @@ P_n=2\Pr(s\not\leadsto t)
 
 The second displayed identity is a structural reduction of the declared
 statistic to ordinary fixed-pair reachability in the same random-digraph
-ensemble.
+ensemble. The end-to-end Lean promotion described below applies specifically to
+the declared exact `n=5` statistic and its semantic bridge, not to a general
+probability theorem for arbitrary `n`.
 
 ---
 
@@ -286,6 +299,9 @@ The pre-registration is preserved in
 `MF_R011_CUT_IE_CHECK.md` and its executable checker in
 `tools/mf_r011_cut_inclusion_exclusion.py`.
 
+This `n=6` checkpoint is an exact computational/combinatorial cross-check. It is
+not part of the current end-to-end Lean `n=5` promotion claim.
+
 ---
 
 ## Box 3 — Verification status
@@ -294,8 +310,8 @@ The pre-registration is preserved in
 
 **PASS for the displayed finite identities.**
 
-The insertion criterion, toggle pairing, exact reachable-set count, and n=5
-arithmetic are explicit in this note. The n=6 result was frozen and reproduced
+The insertion criterion, toggle pairing, exact reachable-set count, and `n=5`
+arithmetic are explicit in this note. The `n=6` result was frozen and reproduced
 by a different exact decomposition.
 
 ### Historical exhaustive computation
@@ -314,7 +330,7 @@ in the present consolidation session.
 
 ### Independent Lean path
 
-The active formalization branch contains:
+The formalization branch contains:
 
 1. an independent bit-mask graph ensemble;
 2. exact Lean `native_decide` counts through `n=5`;
@@ -327,29 +343,39 @@ The active formalization branch contains:
    non-loop edges;
 7. a proof that toggling a coordinate flips exactly its edge and preserves all
    others;
-8. an indicator bridge intended to prove that every enumerator summand is
-   exactly the mathematical event that full reachability changes;
+8. an indicator bridge proving that every enumerator summand is exactly the
+   mathematical event that the full labeled reachability preorder changes;
 9. a generic edge-addition reachability theorem with no finite-graph or
    probability assumptions.
 
-**Promotion status: NOT YET COMPLETE.**
+**Promotion status: PASS at the declared `n=5` formal boundary.**
 
-The most recent clean formal gate must include both a full pinned-toolchain
-`lake build` and successful module-sharded bundled `leanchecker` replay for all
-declared modules. A theorem being present in source, or an earlier dependency
-module building successfully, is not enough to mark C1.3 as end-to-end
-kernel-passed.
+At commit `83b45fed020e24f7f9ceba7ecd86220e9c2b8b08`, GitHub Actions workflow
+`Lean formal verification` run `301` completed successfully. The pinned-toolchain
+`lake build` passed, the proof-placeholder rejection step passed, and every
+declared module-sharded bundled `leanchecker` replay passed, including:
+
+- `PrecategoryFormal.EdgeAdditionReachability`;
+- `PrecategoryFormal.EdgeToggleSensitivity`;
+- `PrecategoryFormal.EdgeToggleSemanticBridge`;
+- `PrecategoryFormal.EdgeToggleEnsembleBridge`;
+- `PrecategoryFormal.EdgeToggleIndicatorBridge`.
+
+Therefore the exact `n=5` numerator, denominator/fraction relation, graph-mask
+semantics, reachability semantics, edge-coordinate semantics, toggle semantics,
+and per-summand reachability-change interpretation have an end-to-end
+Lean/kernel pass at that commit.
 
 The generic edge-addition theorem formalizes the insertion criterion. It does
 not, by itself, kernel-check the finite probability pairing or label-symmetry
-argument. Those boundaries must remain explicit.
+argument for arbitrary `n`; no such stronger general formal claim is being made.
 
 ### Independent cut computation
 
-**PASS as an exact computational cross-check through n=6.**
+**PASS as an exact computational cross-check through `n=6`.**
 
 This checker uses integer bit masks and exact rational reduction only. It does
-not replace the Lean semantic gate.
+not enlarge the formal Lean boundary beyond `n=5`.
 
 ---
 
@@ -383,6 +409,7 @@ C1.3 does **not** establish any of the following:
 - that the specific fraction was definitely known before;
 - a new general theory of random-digraph reachability;
 - a new general theory of edge influence;
+- a Lean-formalized general probability identity for arbitrary `n`;
 - an asymptotic theorem for `P_n`;
 - monotonicity of `P_n`;
 - a statement about an arbitrary non-uniform graph distribution;
@@ -395,9 +422,10 @@ Any such statement requires separate hypotheses and separate evidence.
 
 ---
 
-## Promotion rule for this note
+## Closure rule for this note
 
-Only the text inside **Box 3 — Verification status** should change when the
-formal gate changes. The exact integers and fractions must not be edited to
-match a failing checker. If an independent route disagrees, both results are to
-be preserved until the discrepancy is resolved.
+C1.3 is closed at the declared exact `n=5` formal boundary once the current
+post-closure documentation commit also receives a clean CI pass. The exact
+integers and fractions must never be edited to match a failing checker. If a
+future independent route disagrees, both results are to be preserved until the
+discrepancy is resolved.
