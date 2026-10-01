@@ -15,6 +15,9 @@ def ReachabilityChanged5 (g : GraphMask 5) (e : Fin (edgeCount 5)) : Prop :=
 theorem reachCodeTable_get5 (g : GraphMask 5) :
     (reachCodeTable 5).get g = reachCode g := by
   simp [reachCodeTable, Vector.get]
+  congr 1
+  apply Fin.ext
+  simp
 
 /-- A zero indicator is equivalent to preservation of the full mathematical reachability relation. -/
 theorem edgeToggleChanges5_eq_zero_iff_sameReachability
