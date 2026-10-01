@@ -73,6 +73,7 @@ jobs:
           - PrecategoryFormal.EdgeToggleEnsembleBridge
           - PrecategoryFormal.EdgeToggleSemanticBridge
           - PrecategoryFormal.EdgeToggleSensitivity
+          - PrecategoryFormal.EntropicNonclosureDirectWitness
           - PrecategoryFormal.EntropicNonclosureWitness
           - PrecategoryFormal.GraphSCCBridge
           - PrecategoryFormal.LiteralRepresentativeCode
