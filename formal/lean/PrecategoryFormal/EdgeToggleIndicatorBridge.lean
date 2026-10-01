@@ -14,16 +14,8 @@ def ReachabilityChanged5 (g : GraphMask 5) (e : Fin (edgeCount 5)) : Prop :=
 /-- The cached table really returns the direct compact reachability code. -/
 theorem reachCodeTable_get5 (g : GraphMask 5) :
     (reachCodeTable 5)[g.val]! = reachCode g := by
-  unfold reachCodeTable
-  let table := Array.ofFn (fun h : GraphMask 5 => reachCode h)
-  have hg : g.val < table.size := by
-    simpa [table] using g.isLt
-  change table[g.val]! = reachCode g
-  rw [getElem!_pos table g.val hg]
-  change (Array.ofFn (fun h : GraphMask 5 => reachCode h))[g.val] = reachCode g
-  rw [Array.getElem_ofFn]
-  apply congrArg reachCode
-  exact Fin.ext rfl
+  rw [getElem!_def]
+  simp [reachCodeTable]
 
 /-- A zero indicator is equivalent to preservation of the full mathematical reachability relation. -/
 theorem edgeToggleChanges5_eq_zero_iff_sameReachability
