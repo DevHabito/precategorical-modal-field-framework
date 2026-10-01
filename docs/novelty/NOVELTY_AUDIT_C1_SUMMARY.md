@@ -2,16 +2,17 @@
 
 **Project:** Pre-Categorical Modal Field Framework  
 **Author:** Felipe Gianini Romero  
-**Search date:** 2026-07-15  
+**Original search date:** 2026-07-15  
+**Consolidation correction:** 2026-10-01  
 **Scope:** MF-R007, MF-R008, MF-R011
 
 ## Executive verdict
 
-| Claim | Final classification | Manuscript treatment |
+| Claim | Current classification | Manuscript treatment |
 |---|---|---|
 | MF-R007 | Classical enumeration formula | Attribute; retain independent reproduction and corrective use |
 | MF-R008 | Project-specific elementary proposition; no exact match found | Retain as a corrective named proposition, without claiming certified priority |
-| MF-R011 | Apparently unreported exact finite statistic; novelty not certified | Retain as exact enumeration and open problem |
+| MF-R011 | Exact finite reachability-sensitivity result; priority of the specific value not certified | Retain as exact combinatorics; explicitly connect it to prior random-digraph reachability and edge-influence literature |
 
 ## MF-R007
 
@@ -54,7 +55,7 @@ P_n
 \mathbf 1[C(G)\neq C(G\triangle e)].
 \]
 
-Exact exhaustive values are
+Exact finite values are
 
 \[
 P_2=1,\qquad
@@ -63,30 +64,81 @@ P_4=\frac12,\qquad
 P_5=\frac{75}{256}.
 \]
 
-Related work studies dynamic SCC algorithms, network susceptibility, and
-average sensitivity of graph algorithms. No inspected source reports this
-exact statistic or \(75/256\). The correct wording is “apparently unreported
-in the searched literature,” not a categorical priority claim.
+During Consolidation 1.0 we recovered a structural reduction that should replace
+the old novelty-centered presentation. For any fixed distinct labels \(s,t\),
+pair the graphs with edge \(s\to t\) absent and present. Inserting the edge
+changes the full reachability relation exactly when \(t\) was not already
+reachable from \(s\). Hence, in the uniform loopless labeled-digraph ensemble,
+
+\[
+P_n=2\Pr(s\not\leadsto t).
+\]
+
+Writing \(\gamma_{n,p}=\Pr(s\leadsto t)\) in the independent-edge random-digraph
+model gives
+
+\[
+P_n=2\bigl(1-\gamma_{n,1/2}\bigr).
+\]
+
+This changes the literature positioning materially.
+
+Uno and Ibaraki (1998), *Reachability Problems of Random Digraphs*, study
+\(\gamma_{n,p}\) directly and present an exact computation method. Qin, Sheng,
+Parkinson, and Falkner (DASFAA 2017), *Edge Influence Computation in Dynamic
+Graphs*, explicitly study edge influence through reachability changes after edge
+deletion.
+
+Therefore the July wording “apparently unreported exact finite statistic” is no
+longer an acceptable current classification. The general fixed-pair
+reachability problem, exact computation of its probability, and the broad
+edge-influence idea have clear prior art.
+
+What remains safe to say is narrower:
+
+- the project defines the displayed normalized statistic and verifies its exact
+  small-\(n\) values under the declared ensemble;
+- \(P_5=75/256\) is reproduced by independent computational and combinatorial
+  routes;
+- the inspected sources do not settle priority of the particular reduced value
+  \(75/256\) or the exact displayed sequence;
+- absence from the inspected sources is not evidence strong enough to claim
+  novelty.
+
+The detailed correction is recorded in
+`docs/novelty/MF-R011_edge_flip_probability.md`.
 
 ## Consequences for the combinatorics paper
 
-The paper should not be organized around \(6942\) as a new theorem. Its viable
+The paper should not be organized around \(6942\) as a new theorem, nor around
+MF-R011 as a newly discovered general theory of graph sensitivity. A defensible
 core is instead:
 
 1. precise comparison of complete and representative encodings;
-2. exact fiber structure of the lossy code;
-3. edge-toggle sensitivity \(P_n\);
-4. a structural theorem, recurrence, bound, or asymptotic result for \(P_n\);
-5. complete code and reproducibility contracts.
+2. exact information loss and non-injectivity of the representative code;
+3. exact edge-toggle statistic with its structural reduction to ordinary
+   fixed-pair reachability;
+4. independently checkable finite values and formal semantics;
+5. careful connection to the established random-digraph literature.
+
+Any future recurrence, bound, or asymptotic analysis for \(P_n\) should begin by
+checking what is already known for \(\gamma_{n,p}\), rather than treating the
+reduced quantity as a separate literature by default.
 
 ## Matrix updates
 
-Apply `RESULT_CLASSIFICATION_PATCH.csv` to MF-R007, MF-R008, and MF-R011.
-The patch changes novelty and literature-review wording only; it does not alter
-the mathematical claims or archived computations.
+The classification matrices should replace the old MF-R011 label
+`APPARENTLY UNREPORTED EXACT FINITE SENSITIVITY STATISTIC` with a conservative
+status equivalent to:
+
+`EXACT FINITE REACHABILITY-SENSITIVITY RESULT; PRIORITY OF SPECIFIC VALUE NOT CERTIFIED`.
+
+This correction changes novelty/literature wording only. It does not alter the
+archived exact integers, fractions, or ensemble definition.
 
 ## Limits of this audit
 
-A literature search cannot prove novelty. This audit records the sources and
-queries examined and supplies safe publication language. A journal submission
-should still invite specialist review and avoid absolute “first-ever” claims.
+A literature search cannot prove novelty or non-novelty of a specific finite
+value without locating a source that states it. This audit records the sources
+examined and supplies safe publication language. Specialist review remains
+appropriate, and absolute priority claims remain prohibited.

@@ -1,8 +1,9 @@
 # MF-R011 — Edge-Toggle Sensitivity of the Reachability-Preorder Map
 
 **Novelty audit:** C1  
-**Search date:** 2026-07-15  
-**Final classification:** `APPARENTLY_UNREPORTED_EXACT_FINITE_STATISTIC_NOVELTY_NOT_CERTIFIED`
+**Original search date:** 2026-07-15  
+**Consolidation correction:** 2026-10-01  
+**Current classification:** `EXACT_FINITE_REACHABILITY_SENSITIVITY_RESULT_PRIORITY_NOT_CERTIFIED`
 
 ## Exact definition
 
@@ -13,32 +14,57 @@ m=n(n-1)
 \]
 
 and let \(\mathcal D_n\) be the \(2^m\) loopless labeled digraphs on
-\([n]\). Let \(C(G)\) be the full reflexive reachability preorder of \(G\).
-Define
+\([n]\). Let \(C(G)\) be the full reflexive-transitive reachability relation of
+\(G\). Define
 
 \[
 P_n
 =
 \frac{1}{m2^m}
 \sum_{G\in\mathcal D_n}
-\sum_{e}
+\sum_e
 \mathbf 1\!\left[C(G)\neq C(G\triangle e)\right],
 \]
 
 where \(G\triangle e\) toggles one directed non-loop edge.
 
-This is the normalized edge-boundary density, or average Boolean influence,
-of the vector-valued map
+This is an exact finite statistic on the declared uniform graph-edge ensemble.
+It may also be viewed as the normalized edge-boundary density of the map from
+edge masks to full reachability relations, using the discrete metric on the
+codomain.
+
+## Structural reduction
+
+Fix distinct labels \(s,t\) and the directed edge \(e=(s,t)\). Pair each graph
+with \(e\) absent with the graph obtained by inserting \(e\).
+
+If \(t\) is already reachable from \(s\), inserting \(e\) does not change the
+full reachability relation: every path using the new edge can replace that edge
+by the pre-existing path from \(s\) to \(t\). If \(t\) is not reachable from
+\(s\), insertion changes at least the reachability fact \(s\leadsto t\).
+
+Hence a fixed-edge pair is sensitive exactly when, on its edge-absent side,
+\(s\not\leadsto t\). Counting both orientations of the toggle pair gives
 
 \[
-C:\{0,1\}^{m}\longrightarrow\{\text{preorders on }[n]\}
+P_n=2\Pr(s\not\leadsto t)
 \]
 
-under the discrete metric on its codomain.
+in the uniform loopless labeled-digraph ensemble. If
+\(\gamma_{n,1/2}=\Pr(s\leadsto t)\), then equivalently
 
-## Exact finite results
+\[
+P_n=2\bigl(1-\gamma_{n,1/2}\bigr).
+\]
 
-The auxiliary C1 enumeration gives
+The generic reachability statement behind the insertion step is now isolated
+in `formal/lean/PrecategoryFormal/EdgeAdditionReachability.lean`; its CI/kernel
+status must be read from the active formalization PR rather than assumed from
+this document.
+
+## Exact finite values
+
+Independent finite enumeration gives
 
 \[
 P_2=1,\qquad
@@ -50,109 +76,142 @@ P_5=\frac{75}{256}.
 For \(n=5\),
 
 \[
-m2^m=20\cdot 2^{20}=20\,971\,520
+20\cdot2^{20}=20971520
 \]
 
-ordered graph-edge pairs, of which
+ordered graph-edge pairs are tested, and exactly
 
 \[
-6\,144\,000
+6144000
 \]
 
-change the full reachability preorder. Therefore
+of them change the full reachability relation. Therefore
 
 \[
 P_5
 =
-\frac{6\,144\,000}{20\,971\,520}
+\frac{6144000}{20971520}
 =
 \frac{75}{256}.
 \]
 
-## Closest literature found
+A separate exact counting derivation is recorded in
+`consolidation/MF_R011_INDEPENDENT_DERIVATION.md`. It obtains
 
-### Dynamic SCC and reachability algorithms
+\[
+\Pr(s\not\leadsto t)=\frac{153600}{1048576}=\frac{75}{512}
+\]
 
-Georgiadis et al. study sensitivity queries and data structures for SCCs under
-edge deletions. Bernstein, Probst, and Wulff-Nilsen study decremental SCC and
-single-source reachability algorithms. These works address algorithmic update
-complexity and query support, not the uniform exact probability \(P_n\).
+and therefore the same \(P_5=75/256\) without enumerating graph-edge pairs one
+by one.
 
-### Directed-network susceptibility
+## Literature correction
 
-Goltsev, Timár, and Mendes define susceptibilities for changes in large
-directed-network components under edge or vertex addition/pruning, especially
-near directed-percolation transitions. Their observable and asymptotic regime
-differ from the complete finite reachability-preorder map.
+The July 2026 audit was incomplete. Its wording that the statistic was
+"apparently unreported" should not be retained as the current classification.
 
-### Average sensitivity
+### Random-digraph reachability
 
-Varma and Yoshida define average sensitivity for graph algorithms through
-distances between algorithmic output distributions after edge deletion. This
-is the closest abstract language, but their paper studies optimization
-algorithms such as cuts, matching, coloring, and spanning forests—not the
-exact edge-boundary density of the reachability-preorder map.
+Yushi Uno and Toshihide Ibaraki, *Reachability Problems of Random Digraphs*,
+IEICE Transactions on Fundamentals, E81-A(12), 2694–2702 (1998), study the
+independent-edge random-digraph model and define the fixed-pair reachability
+probability \(\gamma_{n,p}\). They explicitly present a method for computing
+its exact value for given \(n\) and \(p\).
 
-Primary sources:
+This is directly relevant because the structural identity above reduces the
+present statistic at \(p=1/2\) to
 
-- Georgiadis et al. (2017), DOI: 10.4230/LIPIcs.ICALP.2017.42
-- Bernstein, Probst, and Wulff-Nilsen (2019), arXiv:1901.03615
-- Goltsev, Timár, and Mendes (2017), DOI: 10.1103/PhysRevE.96.022317
-- Varma and Yoshida (2020), arXiv:1904.03248
+\[
+P_n=2(1-\gamma_{n,1/2}).
+\]
 
-## Search result
+Therefore fixed-pair random-digraph reachability and its exact computation are
+prior art and must not be claimed as project discoveries.
 
-No inspected source states:
+### Edge influence and dynamic reachability
 
-- the definition of \(P_n\) above;
-- the exact value \(P_5=75/256\);
-- the sequence \(1,3/4,1/2,75/256\);
-- a general formula for the probability that one edge toggle changes the
-  entire reflexive reachability preorder of a uniform labeled digraph.
+Yongrui Qin, Quan Z. Sheng, Simon Parkinson, and Nickolas J. G. Falkner,
+*Edge Influence Computation in Dynamic Graphs*, DASFAA 2017, pp. 649–660,
+DOI `10.1007/978-3-319-55699-4_41`, explicitly study the influence of an edge
+through changes in graph reachability caused by edge deletion.
 
-This supports the cautious description “apparently unreported in the searched
-literature.” It does not certify worldwide novelty.
+This is substantially closer prior work to the reachability-change observable
+than the sources emphasized in the original C1 audit.
 
-## Mathematical significance
+### Other related literature
 
-The statistic is more than SCC sensitivity: \(C(G)\) changes whenever either
+Dynamic SCC/reachability algorithms, directed-network susceptibility, Boolean
+influence, and reliability/importance theory remain relevant context. They are
+not needed to establish the exact finite value, but they further weaken any
+claim that edge sensitivity itself is a new general concept.
 
-1. the SCC partition changes, or
-2. the quotient reachability order changes while the SCC partition remains
-   fixed.
+## What the literature check does and does not establish
 
-Thus a general analysis must distinguish internal SCC-critical edges from
-edges that alter intercomponent reachability.
+The updated search establishes that we must **not** claim novelty for:
 
-The exact \(n=5\) fraction is publishable as a finite enumeration only if it is
-embedded in a broader development, such as:
+- fixed-pair reachability probability in random digraphs;
+- exact computation of that probability in general;
+- the general idea of edge influence through reachability changes;
+- the structural pivotality interpretation by itself.
 
-- a structural decomposition of pivotal edge toggles;
-- exact values for further \(n\);
-- bounds or asymptotics for \(P_n\);
-- conditioning on edge density or SCC type;
-- a theorem relating \(P_n\) to transitive reductions, dominators, or strong
-  bridges.
+The sources checked so far do **not** certify whether the particular reduced
+fraction
+
+\[
+\frac{75}{256}
+\]
+
+or the exact sequence
+
+\[
+1,\frac34,\frac12,\frac{75}{256}
+\]
+
+has appeared explicitly before. Absence from the inspected sources is not a
+proof of novelty. The correct status is therefore:
+
+> the exact finite value is established for the declared ensemble; priority of
+> the specific value and phrasing is not certified.
+
+## Mathematical role after correction
+
+The useful content of MF-R011 is now clearer than in the original audit:
+
+1. a precisely declared finite sensitivity statistic;
+2. an exact structural reduction to fixed-pair non-reachability;
+3. exact small-\(n\) values, including \(P_5=75/256\);
+4. independent computational and combinatorial verification routes;
+5. a clean connection to established random-digraph reachability literature.
+
+The structural reduction is more informative than simply pushing enumeration
+to a larger \(n\). Future work, if pursued after consolidation, should start
+from the known theory of \(\gamma_{n,p}\) rather than rediscovering it under a
+new name.
 
 ## Safe manuscript wording
 
-> We define the edge-toggle sensitivity \(P_n\) of the full reachability-preorder
-> map. Exhaustive enumeration gives
-> \(P_2=1\), \(P_3=3/4\), \(P_4=1/2\), and \(P_5=75/256\).
-> We found related literatures on dynamic SCC maintenance, directed-network
-> susceptibility, and average sensitivity of graph algorithms, but no source
-> reporting this exact statistic or its \(n=5\) value.
+> For the uniform loopless labeled-digraph ensemble we consider the probability
+> that toggling one directed edge changes the full reachability relation. A
+> pairing argument gives \(P_n=2(1-\gamma_{n,1/2})\), where
+> \(\gamma_{n,p}\) is the classical fixed-pair reachability probability for a
+> random digraph. Exact computation gives \(P_5=75/256\). We make no priority
+> claim for the general reachability probability, edge-influence framework, or
+> the specific finite value.
 
 ## Wording to avoid
 
-- “We have proved the general law \(P_n\).”
+- “We discovered the general law of edge sensitivity in random digraphs.”
+- “Fixed-pair reachability probability is new to this framework.”
 - “\(75/256\) is a universal constant.”
-- “No one has ever studied graph sensitivity under edge changes.”
-- “The result has physical significance without a model linking this ensemble
-  to a physical system.”
+- “The value \(75/256\) is definitely new.”
+- “The value \(75/256\) was definitely known before” unless a source stating it
+  explicitly is located.
+- “The result has physical significance” without a separate operational model
+  connecting this finite ensemble to a physical system.
 
 ## Editorial decision
 
-Keep \(75/256\) as an exact finite result and open-problem generator. The next
-mathematical target is a decomposition or recurrence for \(P_n\), not another
-isolated decimal at a larger \(n\).
+Keep MF-R011 as an exact finite/combinatorial result and as a useful bridge to
+classical random-digraph reachability. Remove the old "apparently unreported"
+classification. Do not build a novelty claim around the general sensitivity
+framework. Preserve the exact integers and fractions exactly as computed.
