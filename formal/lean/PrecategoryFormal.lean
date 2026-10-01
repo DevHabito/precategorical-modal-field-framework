@@ -14,3 +14,4 @@ import PrecategoryFormal.EdgeToggleSemanticBridge
 import PrecategoryFormal.EdgeToggleEnsembleBridge
 import PrecategoryFormal.EdgeToggleIndicatorBridge
 import PrecategoryFormal.EntropicNonclosureWitness
+import PrecategoryFormal.EntropicNonclosureDirectWitness
