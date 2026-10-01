@@ -67,14 +67,20 @@ def toggleMask {n : Nat} (g : GraphMask n) (e : Fin (edgeCount n)) : GraphMask n
     rw [Nat.one_shiftLeft]
     exact Nat.pow_lt_pow_of_lt (by decide) e.isLt⟩
 
-/-- Cache all reachability codes once before the edge-toggle scan. -/
-def reachCodeTable (n : Nat) : Array Nat :=
-  Array.ofFn (fun g : GraphMask n => reachCode g)
+/--
+Cache all reachability codes once before the edge-toggle scan.
+
+The length is carried in the type. This matches the graph-mask carrier exactly
+and avoids a partial array lookup whose in-bounds proof is otherwise artificial.
+-/
+def reachCodeTable (n : Nat) : Vector Nat (graphCount n) :=
+  Vector.ofFn (fun g : GraphMask n => reachCode g)
 
 /-- Indicator that one ordered graph-edge pair changes the full reachability code. -/
 def edgeToggleChanges
-    {n : Nat} (table : Array Nat) (g : GraphMask n) (e : Fin (edgeCount n)) : Nat :=
-  if table[g.val]! = table[(toggleMask g e).val]! then 0 else 1
+    {n : Nat} (table : Vector Nat (graphCount n))
+    (g : GraphMask n) (e : Fin (edgeCount n)) : Nat :=
+  if table.get g = table.get (toggleMask g e) then 0 else 1
 
 /-- Exact number of ordered `(graph, directed-edge)` pairs that change reachability. -/
 def changedPairCount (n : Nat) : Nat :=
