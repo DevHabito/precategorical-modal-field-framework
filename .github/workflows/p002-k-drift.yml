@@ -1,0 +1,94 @@
+name: P-002 transition-law drift
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "experiments/p002/**"
+      - ".github/workflows/p002-k-drift.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  p002:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install -r experiments/p002/requirements.txt
+
+      - name: Compile P-002
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile experiments/p002/p002_k_drift.py
+
+      - name: Run deterministic logic checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python experiments/p002/p002_k_drift.py --self-test
+
+      - name: Run untouched 2024 evaluation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python experiments/p002/p002_k_drift.py
+
+      - name: Enforce frozen contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path("experiments/p002/results/summary.json")
+          r = json.loads(p.read_text())
+
+          assert r["status"] == "P002_EVALUATION"
+          assert r["protocol_version"] == "1.0"
+          assert r["target_start"].startswith("2024-01-01")
+          assert r["target_end_exclusive"].startswith("2024-12-30")
+          assert r["recent_window_days"] == 56
+          assert r["stale_window_days"] == 56
+          assert r["n_target_weeks"] == 52
+          assert r["bootstrap"]["block_length_weeks"] == 8
+          assert r["bootstrap"]["n_replicates"] == 10000
+          assert r["verdict"] in {"PASS", "FAIL", "INCONCLUSIVE", "PARTIAL"}
+
+          print("P-002 frozen contract: PASS")
+          print("P-002 verdict:", r["verdict"])
+          PY
+
+      - name: Display audit summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat experiments/p002/results/summary.json
+          echo
+          cat experiments/p002/results/data_manifest.json
+
+      - name: Upload P-002 artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: p002-k-drift
+          path: experiments/p002/results/
+          if-no-files-found: error
+          retention-days: 30
