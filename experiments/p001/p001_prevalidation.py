@@ -380,12 +380,26 @@ def permutation_null(
         np.sum(scored["N"] * scored["gain"]) / totalN
     )
 
-    groups = list(
-        scored.groupby(
+    y_matrix = np.vstack(
+        scored["y"].map(
+            lambda x: np.asarray(x, dtype=float)
+        ).to_numpy()
+    )
+    log_micro = np.log(
+        np.vstack(
+            scored["p_micro"].map(
+                lambda x: np.asarray(x, dtype=float)
+            ).to_numpy()
+        )
+    )
+
+    groups = [
+        np.asarray(list(idxs), dtype=int)
+        for idxs in scored.groupby(
             ["source_borough", "how"],
             observed=True,
         ).groups.values()
-    )
+    ]
 
     null = np.empty(N_PERM, dtype=float)
 
@@ -393,18 +407,14 @@ def permutation_null(
         ll_micro_num = 0.0
 
         for idxs in groups:
-            idxs = np.asarray(list(idxs), dtype=int)
             perm = idxs.copy()
             rng.shuffle(perm)
-
-            for target_idx, pred_idx in zip(idxs, perm):
-                row_t = scored.loc[target_idx]
-                p = np.asarray(
-                    scored.loc[pred_idx, "p_micro"],
-                    dtype=float,
+            ll_micro_num += float(
+                -np.sum(
+                    y_matrix[idxs]
+                    * log_micro[perm]
                 )
-                y = np.asarray(row_t["y"], dtype=float)
-                ll_micro_num += float(-np.sum(y * np.log(p)))
+            )
 
         null[r] = (
             base_macro_num - ll_micro_num
@@ -421,7 +431,6 @@ def permutation_null(
         "one_sided_permutation_p": float(p),
         "observed_gain": observed,
     }
-
 
 def self_test() -> None:
     # Non-lumpable: rows differ; shifted composition changes the macro row.
