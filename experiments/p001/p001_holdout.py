@@ -603,7 +603,8 @@ def main() -> None:
     summary["seed"] = SEED
     summary["train_months"] = list(TRAIN_MONTHS)
     summary["holdout_months"] = list(HOLDOUT_MONTHS)
-    summary["validation_loaded"] = False\n    summary["holdout_loaded"] = True
+    summary["validation_loaded"] = False
+    summary["holdout_loaded"] = True
     summary["destination_classes"] = dest_classes
     summary["permutation_null"] = null
 
