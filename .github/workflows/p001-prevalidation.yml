@@ -1,0 +1,79 @@
+name: P-001 prevalidation
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "experiments/p001/**"
+      - ".github/workflows/p001-prevalidation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prevalidation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install -r experiments/p001/requirements-prevalidation.txt
+
+      - name: Run deterministic logic self-test
+        shell: bash
+        run: |
+          set -euo pipefail
+          python experiments/p001/p001_prevalidation.py --self-test
+
+      - name: Run TRAIN + VALIDATION only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python experiments/p001/p001_prevalidation.py
+
+      - name: Enforce holdout boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path("experiments/p001/results/prevalidation/summary.json")
+          result = json.loads(p.read_text())
+          assert result["holdout_loaded"] is False
+          assert result["train_months"] == [1, 2, 3, 4, 5, 6]
+          assert result["validation_months"] == [7, 8]
+          assert result["status"] == "PREVALIDATION_ONLY"
+          print("Holdout boundary: PASS")
+          PY
+
+      - name: Display compact audit summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat experiments/p001/results/prevalidation/summary.json
+          echo
+          cat experiments/p001/results/prevalidation/data_manifest.json
+
+      - name: Upload compact prevalidation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: p001-prevalidation
+          path: experiments/p001/results/prevalidation/
+          if-no-files-found: error
+          retention-days: 30
