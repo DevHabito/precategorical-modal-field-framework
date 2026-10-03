@@ -169,28 +169,28 @@ These diagnostics were computed only **after** the frozen holdout result and can
 
 ### By calendar month
 
-| Month | Trips | Gain | Predicted KL | Structural slope |
-|---|---:|---:|---:|---:|
-| 2023-09 | 2817305 | -1.829347626122e-06 | 0.000329747... | -0.757855... |
-| 2023-10 | 3489925 | -7.115016613e-05 | 0.0002138... | -1.177157... |
-| 2023-11 | 3311889 | 4.64e-05 approximately | 0.000261... | -0.898357... |
-| 2023-12 | 3360288 | 3.6e-05 approximately | 0.000374... | -0.953330... |
+| Month | Trips | MICRO log-loss | MACRO log-loss | Gain | Predicted KL | Structural slope | Unseen fraction | Blocks |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 2023-09 | 2817305 | 0.42134317501969354 | 0.42134073248323667 | -2.4425364568551166e-06 | 0.0003295805414103232 | -0.7578562298379141 | 0.00033010270453500773 | 2888 |
+| 2023-10 | 3489925 | 0.4062009991184889 | 0.4061303645234312 | -7.063459505777445e-05 | 0.00021359540406289565 | -1.1771581130666164 | 0.0003045910728740589 | 2987 |
+| 2023-11 | 3311889 | 0.3948013422747727 | 0.3948476572549733 | 4.631498020056415e-05 | 0.000261462512645233 | -0.8983574452858856 | 0.0002949978094072597 | 2885 |
+| 2023-12 | 3360288 | 0.3948754137131902 | 0.3949109171722591 | 3.550345906896916e-05 | 0.00037427621487103247 | -0.9533300020064454 | 0.00041930929729832683 | 2995 |
 
 The primary gain changes sign across months. The structural slope remains negative in every month.
 
-The approximate month-level display above is diagnostic only; the canonical exact aggregate values are those in Sections 2 and 5.
+These month-level diagnostics are post-hoc and do not change the preregistered aggregate verdict.
 
 ### By source borough
 
-The post-hoc decomposition shows substantial heterogeneity:
+| Source borough | Trips | MICRO log-loss | MACRO log-loss | Gain | Predicted KL | Structural slope | Unseen fraction | Blocks |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Bronx | 24800 | 1.3421384048570266 | 1.2916836321477492 | -0.050454772709277465 | 0.027018176251353002 | -1.875788658724281 | 0.0542741935483871 | 2730 |
+| Brooklyn | 103027 | 1.1454371582696758 | 1.1353903958968423 | -0.010046762372833591 | 0.009364958762253957 | -1.0658421126149582 | 0.010715637648383434 | 2925 |
+| Manhattan | 11597993 | 0.3176649646969758 | 0.3177808638548004 | 0.00011589915782461507 | 6.193430044457016e-05 | 3.106050818178343 | 1.87963555418597e-05 | 2928 |
+| Queens | 1253289 | 1.1194774100859592 | 1.1202597746156964 | 0.0007823645297373479 | 0.001111388540819122 | 0.01678486938878643 | 0.001240735377075838 | 2926 |
+| Staten Island | 298 | 1.6639099076337205 | 1.5999527986070985 | -0.06395710902662242 | 0.17272666918758606 | -0.03703644830681032 | 0.5234899328859061 | 246 |
 
-- Bronx: MICRO worse overall; high unseen-row fraction relative to the aggregate.
-- Brooklyn: MICRO worse overall.
-- Manhattan: small positive MICRO gain.
-- Queens: positive MICRO gain.
-- Staten Island: very sparse and dominated by unseen zone/hour-of-week rows; not a stable standalone diagnostic.
-
-No borough is removed or promoted after seeing these results.
+The decomposition is heterogeneous. Bronx and Brooklyn favor MACRO; Manhattan and Queens favor MICRO; Staten Island is extremely sparse and has a large unseen fraction. No borough is removed, promoted, or used to redefine P-001 after observing these values.
 
 ### Seen versus unseen rows
 
