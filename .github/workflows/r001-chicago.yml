@@ -1,0 +1,99 @@
+name: R-001 Chicago replication
+
+on:
+  pull_request:
+    branches:
+      - "experiment/p002-k-drift"
+    paths:
+      - "experiments/r001/**"
+      - ".github/workflows/r001-chicago.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  r001:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install -r experiments/r001/requirements.txt
+
+      - name: Compile R-001
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile experiments/r001/r001_chicago.py
+
+      - name: Run synthetic logic checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python experiments/r001/r001_chicago.py --self-test
+
+      - name: Run frozen Chicago replication
+        shell: bash
+        run: |
+          set -euo pipefail
+          python experiments/r001/r001_chicago.py
+
+      - name: Enforce frozen replication contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path("experiments/r001/results/summary.json")
+          r = json.loads(p.read_text())
+
+          assert r["status"] == "R001_EXTERNAL_REPLICATION"
+          assert r["protocol_version"] == "1.0"
+          assert r["dataset_id"] == "sa9s-wkhk"
+          assert r["target_start"].startswith("2024-04-22")
+          assert r["target_end_exclusive"].startswith("2024-12-30")
+          assert r["recent_window_days"] == 56
+          assert r["stale_window_days"] == 56
+          assert r["n_target_weeks"] == 36
+          assert r["bootstrap"]["block_length_weeks"] == 8
+          assert r["bootstrap"]["n_replicates"] == 10000
+          assert r["verdict"] in {
+              "REPLICATED",
+              "FAILED_REPLICATION",
+              "INCONCLUSIVE",
+          }
+
+          print("R-001 frozen contract: PASS")
+          print("R-001 verdict:", r["verdict"])
+          PY
+
+      - name: Display audit summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat experiments/r001/results/summary.json
+          echo
+          cat experiments/r001/results/source_audit.json
+
+      - name: Upload R-001 artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: r001-chicago
+          path: experiments/r001/results/
+          if-no-files-found: error
+          retention-days: 30
