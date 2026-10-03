@@ -492,9 +492,9 @@ def main() -> None:
         self_test()
         return
 
-    # Hard safety boundary: prevalidation must never load Sep-Dec 2023.
-    assert ALLOWED_MONTHS == tuple(range(1, 9))
-    assert max(ALLOWED_MONTHS) == 8
+    # Hard safety boundary: holdout evaluation uses TRAIN + untouched Sep-Dec only.
+    assert ALLOWED_MONTHS == (1, 2, 3, 4, 5, 6, 9, 10, 11, 12)
+    assert set(ALLOWED_MONTHS).isdisjoint({7, 8})
 
     data_dir = Path(args.data_dir)
     out_dir = Path(args.output_dir)
