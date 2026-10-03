@@ -16,7 +16,7 @@ TRAIN_MONTHS = tuple(range(1, 7))
 VALID_MONTHS = (7, 8)
 ALLOWED_MONTHS = TRAIN_MONTHS + VALID_MONTHS
 SOURCE_BOROUGHS = ("Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island")
-ZONE_URL = "https://s3.amazonaws.com/nyc-tlc/misc/taxi+zone_lookup.csv"
+ZONE_URL = "https://data.cityofnewyork.us/resource/8meu-9t5y.json"
 TRIP_URL = "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-{month:02d}.parquet"
 N_PERM = 999
 N_BOOT = 10000
@@ -52,7 +52,7 @@ def download(url: str, path: Path) -> None:
 
 
 def load_zone_lookup(path: Path) -> tuple[dict[int, str], list[str]]:
-    z = pd.read_csv(path)
+    z = pd.read_json(path)
     cols = {c.lower(): c for c in z.columns}
     loc_col = cols.get("locationid") or cols.get("location id")
     bor_col = cols.get("borough")
@@ -500,7 +500,7 @@ def main() -> None:
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    zone_path = data_dir / "taxi_zone_lookup.csv"
+    zone_path = data_dir / "nyc_taxi_zones.json"
     download(ZONE_URL, zone_path)
     zone_to_borough, dest_classes = load_zone_lookup(zone_path)
 
@@ -508,7 +508,7 @@ def main() -> None:
     outcomes = []
     monthly_meta = []
     hashes = {
-        "taxi_zone_lookup.csv": sha256_file(zone_path)
+        "nyc_taxi_zones.json": sha256_file(zone_path)
     }
 
     for month in ALLOWED_MONTHS:
