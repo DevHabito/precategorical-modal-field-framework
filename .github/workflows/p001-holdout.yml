@@ -1,0 +1,94 @@
+name: P-001 holdout
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "experiments/p001/p001_holdout.py"
+      - "experiments/p001/HOLDOUT_LOCK.md"
+      - ".github/workflows/p001-holdout.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  holdout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install -r experiments/p001/requirements-prevalidation.txt
+
+      - name: Compile holdout script
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile experiments/p001/p001_holdout.py
+
+      - name: Run deterministic logic self-test
+        shell: bash
+        run: |
+          set -euo pipefail
+          python experiments/p001/p001_holdout.py --self-test
+
+      - name: Run frozen HOLDOUT evaluation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python experiments/p001/p001_holdout.py
+
+      - name: Enforce split and verdict contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path("experiments/p001/results/holdout/summary.json")
+          result = json.loads(p.read_text())
+          assert result["train_months"] == [1, 2, 3, 4, 5, 6]
+          assert result["holdout_months"] == [9, 10, 11, 12]
+          assert result["validation_loaded"] is False
+          assert result["holdout_loaded"] is True
+          assert result["status"] == "HOLDOUT_EVALUATION"
+          assert result["verdict"] in {
+              "PASS",
+              "FAIL",
+              "INCONCLUSIVE",
+              "ARTIFACT_SUSPECTED",
+          }
+          print("Frozen split/verdict boundary: PASS")
+          print("P-001 verdict:", result["verdict"])
+          PY
+
+      - name: Display compact holdout audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat experiments/p001/results/holdout/summary.json
+          echo
+          cat experiments/p001/results/holdout/data_manifest.json
+
+      - name: Upload compact holdout artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: p001-holdout
+          path: experiments/p001/results/holdout/
+          if-no-files-found: error
+          retention-days: 30
