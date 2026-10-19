@@ -136,11 +136,21 @@ Analytic reduction: the conditional Q checkpoint implication (3)
 is derived above using the Wronskian identity and multiplicity-aware
 zero counts.
 
-Remaining independent verification: repeat exact direct dual solves
-and check all Q costs at additional strict gamma-plus witnesses, and
-formalize the real-zero argument in Lean if a corresponding mathlib
-infrastructure is justified. Neither an exhaustive source-window
-certificate nor such a Lean formalization is claimed here.
+Independent finite check **completed** in
+[CI run 39341636770](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39341636770):
+the direct `Fraction` dual solve reconstructed three strict gamma-plus
+witnesses, at `(M,s,j)=(522,131/1000,91)`,
+`(561,53/400,98)`, and `(561,13277/100000,99)`.
+All have positive basic masses and active multipliers, exact zero
+Q basic costs, five positive Q checkpoints and **strictly positive
+costs for every other integer Q atom**. This checked both sides
+of the historical A114-B1 pivot selection.
+
+The analytic zero-budget implication is proved above independently of
+these samples, but its hypotheses must still be established uniformly
+over the frozen source window. A Lean formalization of the real-zero
+argument has not been completed. Neither the finite controls nor the
+conditional lemma proves the all-tail five-checkpoint inequalities.
 
 Classical references:
 
