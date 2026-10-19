@@ -4,6 +4,8 @@
 
 **Literature scope check:** [Verified classical precedents and unresolved priority questions](../docs/novelty/CONSOLIDATION_CLASSICAL_LITERATURE_2026-10-19.md).
 
+**F3/MF-R049 formal proof:** [exact rational counterexample, centered exponential transport, and proof scope](F3_RATIONAL_NONCLOSURE_2026-10-19.md).
+
 **Lean axiom trace:** [actual theorem-level dependencies from CI](LEAN_AXIOM_DEPENDENCIES_2026-10-19.md).
 
 **Assurance checkpoint (2026-10-19):** [trust boundaries, independently reproduced finite claims, and stale SHA-256 indexes](ASSURANCE_CHECKPOINT_2026-10-19.md). This is a partial audit, not a completed independent peer review or a release certificate.
