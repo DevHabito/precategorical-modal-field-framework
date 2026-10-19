@@ -191,6 +191,28 @@ nonbasic integer Q atom. The multiplicity-aware proof does **not**
 establish the quantitative A112-C implication from `r_Q(2)>0`
 to the other four checkpoints. That is still open to independent review.
 
+## 4B. Critical historical certificate archive integrity failure
+
+Read [HISTORICAL_ZIP_INTEGRITY_FINDING_2026-10-19.md](HISTORICAL_ZIP_INTEGRITY_FINDING_2026-10-19.md)
+before assigning proof assurance to the A112/A113 all-tail certificates.
+
+An independent `zipfile` scan on the real GitHub Actions checkout
+found **19 valid of 22 tracked ZIP packages and 3 invalid**:
+A112, A113, and A114-A. All three invalid ZIPs also mismatch their
+**dated local SHA-256 manifests**. Their Git blob IDs are unchanged
+since the original September 2026 introducing commits, so this
+defect was not introduced by the current review.
+
+The root manifest can consistently hash a malformed archive; the
+structural ZIP and dated-hash gates are separate. The archive-integrity
+CI intentionally fails until the affected reproducibility provenance
+is reconciled.
+
+This is not a mathematical counterexample, but it blocks
+a claim that these archived all-tail scripts have been independently
+re-executed. The standalone exact A112 determinant and Q-reduced-cost
+controls remain valid within their tested scopes.
+
 ## 5. Upstream theorem-level proof obligations still open
 
 1. Reconstruct A112's Cramer signs and determinant-resultant
