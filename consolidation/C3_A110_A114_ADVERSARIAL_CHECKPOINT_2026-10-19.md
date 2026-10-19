@@ -157,6 +157,8 @@ elementary implication
 to nonnegative. It also provides an exact rational counterexample to
 the stronger, invalid inference that the second secant must be positive.
 
+GitHub Actions [Lean run 39339986488](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39339986488) successfully compiled the new module and executed the selected `#print axioms` declarations. Both reported only the standard Lean axioms `propext`, `Classical.choice`, and `Quot.sound`, with no native-computation axiom. The separate `leanchecker` matrix remains a distinct status gate; this note does not assume it has completed.
+
 **These Lean lemmas do not prove the analytic input inequality**
 `E_(b+1)-2*E_(b+2)>0` throughout the frozen tail. A successful
 Lean build cannot be promoted to "A113 universally formalized."
