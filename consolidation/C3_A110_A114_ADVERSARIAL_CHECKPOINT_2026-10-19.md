@@ -163,6 +163,34 @@ GitHub Actions [Lean run 39339986488](https://github.com/DevHabito/precategorica
 `E_(b+1)-2*E_(b+2)>0` throughout the frozen tail. A successful
 Lean build cannot be promoted to "A113 universally formalized."
 
+## 4A. Follow-up independent A112 sign analysis
+
+The [independent determinant rederivation](C3_A112_DETERMINANT_REDERIVATION_2026-10-19.md)
+proves in the declared full-basis ordering
+
+```text
+det(B8) = M * det(C) * det(Q) * A(s)
+det(Q) = [1-(h+1)*2^(-h)]/2 > 0,
+det(C) < 0.
+```
+
+The C orientation is established by an elementary Wronskian/Rolle
+argument, not by assuming adjacent masses are positive. All six
+frozen odd/even exact factorization controls passed the independent
+[CI run 39341225813](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39341225813).
+
+The source coefficient `A(s)<0` was observed at the exact tested
+controls. Its **uniform analytic-tail inequality remains an independent
+audit obligation**, not a conclusion of determinant algebra.
+
+The [Q reduced-cost zero-budget derivation](C3_A112_Q_REDUCED_COST_ZERO_BUDGET_2026-10-19.md)
+isolates a classical six-function extended-Chebyshev argument:
+if `r_Q` vanishes at the three Q basis nodes and is positive at the
+five checkpoints `0,2,h-1,h+2,M`, then it is positive at every
+nonbasic integer Q atom. The multiplicity-aware proof does **not**
+establish the quantitative A112-C implication from `r_Q(2)>0`
+to the other four checkpoints. That is still open to independent review.
+
 ## 5. Upstream theorem-level proof obligations still open
 
 1. Reconstruct A112's Cramer signs and determinant-resultant
