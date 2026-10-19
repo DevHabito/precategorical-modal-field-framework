@@ -41,6 +41,16 @@ def main() -> int:
     if digest != EXPECTED_SOURCE_SHA256:
         raise AssertionError("The recovered A113 script differs from audited bytes.")
 
+    recovered_copy = Path(
+        "consolidation/recovered_provenance/"
+        "a113_tail_global_compressed_one_variation_certificate.py"
+    )
+    if recovered_copy.read_bytes() != source:
+        raise AssertionError(
+            "The recovered readable source is not byte-identical to "
+            "the CRC-verified original ZIP member."
+        )
+
     # The historical script writes its result to /mnt/data. The GitHub
     # workflow creates that location on its disposable runner. No bytes
     # are copied back into historical archives or committed to main.
