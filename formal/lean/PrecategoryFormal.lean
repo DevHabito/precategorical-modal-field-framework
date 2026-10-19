@@ -15,3 +15,4 @@ import PrecategoryFormal.EdgeToggleEnsembleBridge
 import PrecategoryFormal.EdgeToggleIndicatorBridge
 import PrecategoryFormal.DynamicNonclosure
 import PrecategoryFormal.DynamicNonclosureTransport
+import PrecategoryFormal.CompressedCentralNesting
