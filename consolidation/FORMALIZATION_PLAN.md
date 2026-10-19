@@ -4,6 +4,8 @@ The goal of formalization is not to make the project look more rigorous. The goa
 
 Lean verification certifies only that a formal conclusion follows from formal hypotheses. It does not certify novelty, empirical relevance, or that nature satisfies the hypotheses.
 
+**Native-evaluation boundary:** the existing v4.33.1 formalization uses `native_decide`, which introduces compiler-trust axioms for finite computations. A `leanchecker` pass does not establish kernel-only computation of these finite facts. Before using a kernel-only assurance label, run and preserve `#print axioms` for the exact promoted theorem and check its full dependencies. The current known results remain valuable but must disclose this trust assumption. See [the 2026-10-19 checkpoint](ASSURANCE_CHECKPOINT_2026-10-19.md).
+
 ## Toolchain
 
 Preferred stack:
