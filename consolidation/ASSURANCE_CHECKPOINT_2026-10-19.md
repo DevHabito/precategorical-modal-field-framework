@@ -114,6 +114,16 @@ because their data is old; historical snapshots have separate provenance.
 After regeneration, review the diff before committing the two indexes.
 No new root index hashes are invented in this checkpoint.
 
+### Remediation subsequently executed on the audit branch
+
+GitHub Actions [index-repair run 39336107630](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39336107630) regenerated root indexes from the checked-out bytes and committed them as `03822fb4c402e18873782e3b89a9ab032673709f`. The job logged `3560` indexed tracked files, a successful index readback, and `Repository validation passed.` These results belong to that exact commit state; editing any tracked file afterwards requires regenerating the root indexes again. The historical baseline mismatch recorded above remains a factual finding, not the status of that repaired commit.
+
+### Lean axiom-dependency results from real CI
+
+GitHub Actions [Lean run 39334714446](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39334714446) completed the Lean build and the selected axiom-printing step successfully. The printed declarations have been recorded in [LEAN_AXIOM_DEPENDENCIES_2026-10-19.md](LEAN_AXIOM_DEPENDENCIES_2026-10-19.md).
+
+Among nine declarations, eight include native evaluation axioms. The general `addDirectedEdge_preserves_reachability_iff` theorem reported no axioms. The historical five-vertex count and edge-toggle proofs still depend on native evaluation. No `sorryAx` appeared in the selected traces; this is not a full-corpus axiom audit.
+
 ## Finding F3 — finite independent cross-checks
 
 `tools/independent_finite_crosscheck.py` was written without importing the
