@@ -1,0 +1,30 @@
+name: Historical ZIP archive integrity
+
+on:
+  push:
+    branches:
+      - audit/2026-10-19-trust-and-integrity
+    paths:
+      - "tools/audit_zip_packages.py"
+      - ".github/workflows/archive-integrity-audit.yml"
+      - "**/*.zip"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "tools/audit_zip_packages.py"
+      - ".github/workflows/archive-integrity-audit.yml"
+      - "**/*.zip"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  archive-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full tracked archive corpus
+        uses: actions/checkout@v4
+      - name: Validate all ZIP central directories, entry paths, and CRCs
+        run: python3 tools/audit_zip_packages.py
