@@ -47,6 +47,12 @@ class IntegrityIndexTests(unittest.TestCase):
         self.assertEqual(0, self.run_tool("--write"))
         self.assertEqual(0, self.run_tool("--check"))
 
+    def test_line_ending_changes_invalidate_exact_index_bytes(self) -> None:
+        self.assertEqual(0, self.run_tool("--write"))
+        checksum_path = self.root / "SHA256SUMS.txt"
+        checksum_path.write_bytes(checksum_path.read_bytes().replace(b"\n", b"\r\n"))
+        self.assertEqual(1, self.run_tool("--check"))
+
     def test_new_tracked_files_invalidate_indexes(self) -> None:
         self.assertEqual(0, self.run_tool("--write"))
         (self.root / "new.txt").write_text("tracked", encoding="utf-8")
