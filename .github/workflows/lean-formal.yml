@@ -76,6 +76,7 @@ jobs:
       fail-fast: false
       matrix:
         module:
+          - PrecategoryFormal.DynamicNonclosure
           - PrecategoryFormal.EdgeAdditionReachability
           - PrecategoryFormal.EdgeToggleIndicatorBridge
           - PrecategoryFormal.EdgeToggleEnsembleBridge
