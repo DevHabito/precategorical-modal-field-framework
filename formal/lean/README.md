@@ -4,7 +4,7 @@
 
 The pinned Lean 4.33.1 development uses `native_decide` in finite enumerations and some witness/semantic checks. In this toolchain, native evaluation carries a compiler-trust axiom. Passing `lake build` and `leanchecker` does **not** imply that those finite computations were reduced by the kernel alone. The project must distinguish kernel-checked deductive lemmas from finite calculations accepted through native evaluation. The descriptions below report the historical CI outcomes, not an axiom-free certification of every theorem.
 
-Run `#print axioms` against each promoted theorem in the pinned environment and record its transitive dependencies. See [the assurance checkpoint](../../consolidation/ASSURANCE_CHECKPOINT_2026-10-19.md) and the [official Lean reference](https://lean-lang.org/doc/reference/latest/ValidatingProofs/). The complete Lean toolchain was not rerun during this checkpoint.
+Run `#print axioms` against each promoted theorem in the pinned environment and record its transitive dependencies. See [the assurance checkpoint](../../consolidation/ASSURANCE_CHECKPOINT_2026-10-19.md) and the [official Lean reference](https://lean-lang.org/doc/reference/latest/ValidatingProofs/). The Lean build and selected axiom-printing commands subsequently passed in GitHub Actions; see [the captured nine-theorem trace](../../consolidation/LEAN_AXIOM_DEPENDENCIES_2026-10-19.md). This does not mean all theorems were proved without native axioms.
 
 This directory is the proof-kernel track for the first Consolidation 1.0 claims. It currently contains end-to-end formal work for **MF-R008 / C1.1** and the explicit witness form of **MF-R009 / C1.2**.
 
