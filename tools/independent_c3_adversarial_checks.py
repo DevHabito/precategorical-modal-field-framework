@@ -273,9 +273,92 @@ def verify_finite_contact_sequences() -> None:
         print(f"C3 finite-sequence PASS: M={size}; {len(values)} admissible factors")
 
 
+def verify_a114_pointwise_full_kkt() -> None:
+    """Rebuild the A114-B2-W1 gamma-minus witness from raw LP equalities."""
+    size, source = 521, S_LOWER
+    half = size // 2
+    b = exact_contact_threshold(size, source)
+    assert b == 89
+
+    p_support = (90, 91, size)
+    q_support = (0, 1, half, half + 1)
+    active_bands = ((source, 1), (BETA, -1), (GAMMA, -1))
+    primal_count = len(p_support)
+    epsilon = tolerance(size)
+    mean = F(size, 2)
+
+    matrix = [
+        [1] * primal_count + [0] * len(q_support) + [-1],
+        [0] * primal_count + [1] * len(q_support) + [-1],
+        [*p_support, *([0] * len(q_support)), -mean],
+        [*([0] * primal_count), *q_support, -mean],
+        [*([0] * primal_count),
+         *(TARGET ** index for index in q_support), 0],
+    ]
+    for base, orientation in active_bands:
+        matrix.append([
+            *(orientation * base ** index for index in p_support),
+            *(-orientation * base ** index for index in q_support),
+            -2 * epsilon,
+        ])
+
+    rhs = [0, 0, 0, 0, 1, 0, 0, 0]
+    objective = [*(TARGET ** index for index in p_support),
+                 *([0] * (len(q_support) + 1))]
+    primal = rational_solve(matrix, rhs)
+    dual = rational_solve([list(column) for column in zip(*matrix)], objective)
+
+    def dot(left: list[F], right: list[F]) -> F:
+        return sum((F(x) * y for x, y in zip(left, right)), F(0))
+
+    assert all(value > 0 for value in primal)
+    assert all(value > 0 for value in dual[5:])
+    assert dot(objective, primal) == dot(rhs, dual)
+
+    p_set, q_set = set(p_support), set(q_support)
+    for atom in range(size + 1):
+        if atom not in p_set:
+            column = [1, 0, atom, 0, 0] + [
+                orientation * base ** atom for base, orientation in active_bands
+            ]
+            assert dot(column, dual) - TARGET ** atom > 0, ("P", atom)
+        if atom not in q_set:
+            column = [0, 1, 0, atom, TARGET ** atom] + [
+                -orientation * base ** atom for base, orientation in active_bands
+            ]
+            assert dot(column, dual) > 0, ("Q", atom)
+
+    for base in (source, BETA, GAMMA):
+        for orientation in (-1, 1):
+            if (base, orientation) in active_bands:
+                continue
+            difference = (
+                sum(
+                    primal[index] * base ** atom
+                    for index, atom in enumerate(p_support)
+                )
+                - sum(
+                    primal[primal_count + index] * base ** atom
+                    for index, atom in enumerate(q_support)
+                )
+            )
+            assert 2 * epsilon * primal[-1] - orientation * difference > 0
+
+    # The compressed contact is b+2 but a naive gamma-plus lift is infeasible.
+    oracle = ExactAdjacentFactor(size, source)
+    assert oracle.value(b + 1) > 0 and oracle.value(b + 2) < 0
+    assert gamma_plus_adjacent_signs(size, source, b + 2)[1] == -1
+
+    print(
+        "A114-B2-W1 full KKT PASS: exact primal/dual, all unused atoms, "
+        "inactive slacks, and infeasible naive gamma-plus lift"
+    )
+
+
 def main() -> None:
     verify_published_negative_controls()
     verify_finite_contact_sequences()
+    verify_a114_pointwise_full_kkt()
 
 
 if __name__ == "__main__":
