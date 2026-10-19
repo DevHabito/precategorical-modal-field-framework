@@ -1,4 +1,4 @@
-# Lean formalization — Consolidation 1.0 finite combinatorics
+# Lean formalization — Consolidation 1.0
 
 ## Assurance qualification: native finite computation
 
@@ -79,6 +79,36 @@ The final theorem `mf_r009_graph_level_code_collision` therefore establishes the
 The repository CI uses pinned Lean `v4.33.1` / mathlib `v4.33.1`, rejects `sorry`/`admit` proof placeholders, and runs a complete `lake build`. The bundled `leanchecker` is then run separately for every project module. The checker stage is intentionally sharded across CI runners: this changes only scheduling, not the replay obligation, and prevents runner lifetime limits from masking the independent kernel replay.
 
 The MF-R008 small-poset values are exact finite computations discharged with Lean `native_decide`; they are not presented as a new analytic formula for the poset-count sequence.
+
+## MF-R049 / C2 — exact dynamic nonclosure
+
+The historical irrational four-point witness is preserved outside this
+formalization. A second witness was constructed **analytically**, not fitted
+from numerical data, from the signed moment polynomial
+`(t - 1)^2 * (t - 1/4) / 8`.
+
+- `PrecategoryFormal/DynamicNonclosure.lean` proves positivity,
+  normalization, equal weighted means, equal initial exponential moments,
+  and an exact nonzero rescaled-moment difference for two rational vectors.
+- `PrecategoryFormal/DynamicNonclosureTransport.lean` starts from the
+  **actual four-term exponential sum** after an affine update; proves its
+  factorization; applies the centered contraction; and uses strict
+  positivity and logarithm injectivity to prove the next scores differ.
+- The final theorem `rationalScalarNonclosure` combines equal initial
+  mass, mean, and fixed-parameter score with unequal next scores.
+
+The pinned Lean 4.33.1 build and the five selected C2 `#print axioms`
+commands passed in
+[CI run 39337980598](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39337980598).
+The two new modules also passed their independent `leanchecker` replays.
+None of the five selected theorems depends on a `native_decide` axiom:
+their printed dependencies are the standard Lean logical axioms
+`propext`, `Classical.choice`, and `Quot.sound`.
+
+This proves only a scoped four-point existence counterexample; it does
+not rule out closure on restricted families, certify novelty, or establish
+physical dynamics. Full derivation:
+[Consolidation F3](../../consolidation/F3_RATIONAL_NONCLOSURE_2026-10-19.md).
 
 ## Deliberate nonclaims
 
