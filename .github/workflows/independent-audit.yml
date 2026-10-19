@@ -12,6 +12,8 @@ on:
       - "tools/independent_c3_adversarial_checks.py"
       - "tools/independent_c3_determinant_orientation.py"
       - "tools/independent_a119_interval_replay.py"
+      - "tools/inspect_truncated_zip_members.py"
+      - "tools/replay_salvaged_a113_certificate.py"
       - "tools/refresh_integrity_indexes.py"
       - "tools/tests/**"
       - ".github/workflows/independent-audit.yml"
@@ -25,6 +27,8 @@ on:
       - "tools/independent_c3_adversarial_checks.py"
       - "tools/independent_c3_determinant_orientation.py"
       - "tools/independent_a119_interval_replay.py"
+      - "tools/inspect_truncated_zip_members.py"
+      - "tools/replay_salvaged_a113_certificate.py"
       - "tools/refresh_integrity_indexes.py"
       - "tools/tests/**"
       - ".github/workflows/independent-audit.yml"
@@ -65,6 +69,15 @@ jobs:
 
       - name: Replay A119 rational interval certificate
         run: python tools/independent_a119_interval_replay.py
+
+      - name: Prepare pinned A113 replay venv
+        run: |
+          python -m venv "$RUNNER_TEMP/a113-venv"
+          "$RUNNER_TEMP/a113-venv/bin/python" -m pip install --disable-pip-version-check sympy==1.13.3
+          sudo install -d -m 0777 /mnt/data
+
+      - name: Replay original CRC-recovered A113 certificate
+        run: "$RUNNER_TEMP/a113-venv/bin/python" tools/replay_salvaged_a113_certificate.py
 
       - name: Run integrity-tool tests
         run: python -m unittest discover -s tools/tests -v
