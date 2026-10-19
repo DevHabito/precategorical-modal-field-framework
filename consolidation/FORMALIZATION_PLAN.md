@@ -90,7 +90,30 @@ P_n=2\Pr(s\not\leadsto t)=2\bigl(1-\gamma_{n,1/2}\bigr)
 
 is not being represented as a general probabilistic Lean theorem for arbitrary `n`, and the `n=6` checkpoint is not part of the end-to-end Lean promotion claim.
 
-### F3 — exact dynamic non-closure: MF-R049 — NEXT
+### F3 — exact dynamic non-closure: MF-R049 — COMPLETE AT EXPLICIT WITNESS SCOPE
+
+The four-point existence claim has now been formalized. The historical
+square-root witness remains unmodified; the alternative rational witness
+was **derived from the cubic constraint polynomial**, not fitted to random
+samples. The formal proof establishes positive normalized weights,
+equal means, equal initial entropic scores, unequal centered-contraction
+future scores, and the generic four-term exponential-moment factorization.
+
+The pinned Lean 4.33.1 build and `#print axioms` trace passed in
+[CI run 39337980598](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39337980598).
+`PrecategoryFormal.DynamicNonclosure` and
+`PrecategoryFormal.DynamicNonclosureTransport` passed their separate
+`leanchecker` module jobs. The five selected C2 declarations depend
+only on `propext`, `Classical.choice`, and `Quot.sound`, not
+`native_decide`. Other existing modules affected by remote toolchain
+download failures must be retried, but that does not alter the scoped
+result for the two F3 modules.
+
+For a detailed derivation and exact proof boundary see
+[F3_RATIONAL_NONCLOSURE_2026-10-19.md](F3_RATIONAL_NONCLOSURE_2026-10-19.md).
+
+The tasks below are preserved as the completed proof plan, not remaining
+promises of work.
 
 Formalize an explicit finite witness proving that mean plus one fixed-lambda entropic score does not determine the next score under the declared centered contraction.
 
