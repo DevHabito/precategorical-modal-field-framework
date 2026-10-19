@@ -10,6 +10,7 @@ on:
       - "tools/independent_graph_toggle_oracle.py"
       - "tools/independent_c2_rational_witness.py"
       - "tools/independent_c3_adversarial_checks.py"
+      - "tools/independent_c3_determinant_orientation.py"
       - "tools/independent_a119_interval_replay.py"
       - "tools/refresh_integrity_indexes.py"
       - "tools/tests/**"
@@ -22,6 +23,7 @@ on:
       - "tools/independent_graph_toggle_oracle.py"
       - "tools/independent_c2_rational_witness.py"
       - "tools/independent_c3_adversarial_checks.py"
+      - "tools/independent_c3_determinant_orientation.py"
       - "tools/independent_a119_interval_replay.py"
       - "tools/refresh_integrity_indexes.py"
       - "tools/tests/**"
@@ -44,7 +46,7 @@ jobs:
           python-version: "3.12"
 
       - name: Compile audit tools
-        run: python -m compileall -q tools/independent_finite_crosscheck.py tools/independent_graph_toggle_oracle.py tools/independent_c2_rational_witness.py tools/independent_c3_adversarial_checks.py tools/independent_a119_interval_replay.py tools/refresh_integrity_indexes.py tools/tests
+        run: python -m compileall -q tools/independent_finite_crosscheck.py tools/independent_graph_toggle_oracle.py tools/independent_c2_rational_witness.py tools/independent_c3_adversarial_checks.py tools/independent_c3_determinant_orientation.py tools/independent_a119_interval_replay.py tools/refresh_integrity_indexes.py tools/tests
 
       - name: Run independent exact finite checks
         run: python tools/independent_finite_crosscheck.py
@@ -57,6 +59,9 @@ jobs:
 
       - name: Run exact C3 adversarial and LP cross-checks
         run: python tools/independent_c3_adversarial_checks.py
+
+      - name: Check C3 Schur determinant orientation exactly
+        run: python tools/independent_c3_determinant_orientation.py
 
       - name: Replay A119 rational interval certificate
         run: python tools/independent_a119_interval_replay.py
