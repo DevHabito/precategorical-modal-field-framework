@@ -28,7 +28,7 @@ ARCHIVES = (
     "MFRP_Informational_Requirements_A39-A109/research_updates/"
     "A114/archives/A114A_FULL_REPRODUCIBILITY_PACKAGE_20260912.zip",
 )
-LOCAL_SIGNATURE = b"PK\\x03\\x04"
+LOCAL_SIGNATURE = bytes((80, 75, 3, 4))
 HEADER = struct.Struct("<IHHHHHIIIHH")
 MEMBER_CAP = 5 * 1024 * 1024
 
