@@ -141,7 +141,9 @@ covering calculation with `Fraction` arithmetic. The local execution found:
   `7962094616280060340361057850523941099377/4460543890481278214239707910840320000000`;
 - `4,096` positive odd-parity boxes, with worst exact lower bound
   `3296636265099577642233577213168576496429665038806348563/2438741833785351580293579578096010608476160000000000000`;
-- positive exact cutoff bounds for the excluded deep even/odd cells.
+- positive exact cutoff bounds for the excluded deep even/odd cells;
+- independent rational Taylor enclosures establishing
+  `2 < -log(s) < 21/10` on the full source interval.
 
 Those exact lower endpoints agree with the preserved A119 artifact. The
 replay supplies independent implementation-level evidence for the interval
