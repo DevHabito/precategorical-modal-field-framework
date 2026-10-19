@@ -1,9 +1,10 @@
 # C3 / A110–A114 — adversarial assurance checkpoint
 
 **Date:** 2026-10-19  
-**Status:** scoped review in progress; NOT a clean-room proof or a general
-certificate for the A110–A114 theorem chain. No result is promoted solely
-because a finite test returned PASS.
+**Status:** independent finite regression PASSED in GitHub Actions run
+[39339986503](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39339986503);
+full analytic and theorem-level originality review remain OPEN.
+This is NOT a clean-room proof or a general certificate for A110–A114.
 
 ## 1. Frozen problem contract
 
@@ -117,8 +118,29 @@ at that size only requires `E_(b+3)<0`, and exact computation gives
 all-cases sign assertion with case-specific exact expected signs.
 No historical result was altered to recover a PASS.
 
-The corrected run must pass before changing the status of this
-checkpoint to `FINITE_REGRESSION_PASS`.
+The corrected independent-audit job **passed** in GitHub Actions
+run `39339986503`. The exact log reports six archived negative-control
+replications, the source-contact counterexample at M=600, and complete
+one-variation over **2140 admissible adjacent factors** across five
+frozen finite support/source cases. These remain finite checks.
+
+### Additional pointwise lifted KKT reconstruction
+
+The checker also reconstructs A114-B2-W1 directly at
+`M=521, s=129/1000` using:
+`P={90,91,521}`, `Q={0,1,260,261}`,
+and the active signs `alpha+`, `beta-`, `gamma-`.
+It solves the eight exact LP equations and the transposed dual system
+independently of historical theorem scripts, then checks all nonbasic
+P/Q atom reduced costs, active multipliers, opposite inactive slacks,
+primal positivity, and primal-dual equality.
+
+The same control's compressed maximizer is `j=b+2=91`, while the
+naive gamma-plus lift has `p_(j+1)<0`. This demonstrates *at one point*
+why a compressed optimum cannot be equated with a lifted feasible
+basis. It does not prove A114's universal tail active-set map.
+This added regression is a **separate CI gate** and must not be
+described as passed until its run finishes successfully.
 
 ## 4. Independent Lean boundary (conditional logic only)
 
