@@ -83,6 +83,29 @@ This proves that the declared macrostate does **not generally** determine
 the next score on the unrestricted finite-distribution class. It neither
 excludes special invariant families nor establishes physical dynamics.
 
+## Established prior literature: no priority inference
+
+The construction belongs to the existing setting of finite exponential
+moments and moment non-identifiability. The following sources support
+background concepts, not novelty of our particular rational coefficients:
+
+- Kuehn (2016), *Moment Closure—A Brief Review*, Springer, pp. 253–271:
+  surveys the general closure problem and unresolved higher moments.
+  https://arxiv.org/abs/1505.02190
+- Lin and Dou (2021), *Statistics* 55(2), 367–385:
+  studies uniqueness of distributions from sufficiently rich families of
+  Laplace–Stieltjes transform values.
+  https://doi.org/10.1080/02331888.2021.1893728
+- Föllmer and Schied (2002), *Finance and Stochastics* 6(4), 429–447:
+  precedes this project on convex risk measures. Its exact relationship
+  to the score and affine update requires theorem-level comparison rather
+  than inference from the article abstract.
+  https://doi.org/10.1007/s007800200072
+
+The project-specific four-point construction is not asserted to be a
+new general closure theorem, a unique minimal representation, or a
+priority claim. No full-text theorem comparison has been completed.
+
 ## Verification layers
 
 1. The exact polynomial, positivity, mass, mean, and two point evaluations
@@ -90,13 +113,23 @@ excludes special invariant families nor establishes physical dynamics.
    `formal/lean/PrecategoryFormal/DynamicNonclosure.lean`.
 2. `tools/independent_c2_rational_witness.py` rechecks the rational
    equalities without historical audit imports or floating tolerances.
-3. The generic exponential-moment transport identity and logarithmic
-   injectivity bridge must be expressed and independently checked in Lean
-   before F3 can receive an end-to-end formal assurance label.
+3. The generic exponential-moment transport identity, centered-contraction
+   moment transformation, and logarithmic injectivity bridge are now
+   **submitted for Lean verification** in
+   `formal/lean/PrecategoryFormal/DynamicNonclosureTransport.lean`.
+   Successful compiler and axiom-report evidence must be inspected before
+   F3 can receive an end-to-end formal assurance label.
 4. The new Lean claims require successful pinned build and `#print axioms`
    evidence, not merely the absence of `sorry` in their source.
 5. Classical exponential-utility and moment-closure antecedents remain
    relevant; this exact example is not a general novelty or priority claim.
+
+**Failed build recorded:** the first CI runs for the finite module failed
+because two real-valued rational constant definitions were not declared
+`noncomputable`. The corrected revision marks these constants and the real
+exponential/logarithmic constructions appropriately. The failure was a Lean
+definition/elaboration problem, not evidence of a false rational equality.
+The corrected build is a separate verification gate, not an assumed PASS.
 
 **Failure policy:** preserve the original witness, the alternate exact
 construction, the tested source revision, and any Lean CI failure logs.
