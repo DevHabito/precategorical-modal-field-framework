@@ -6,6 +6,11 @@ on:
       - audit/2026-10-19-trust-and-integrity
     paths:
       - ".github/workflows/repair-root-integrity-indexes.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/repair-root-integrity-indexes.yml"
 
 permissions:
   contents: write
@@ -16,12 +21,13 @@ concurrency:
 
 jobs:
   repair:
-    if: github.ref == 'refs/heads/audit/2026-10-19-trust-and-integrity'
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/audit/2026-10-19-trust-and-integrity') || (github.event_name == 'pull_request' && github.event.pull_request.head.ref == 'audit/2026-10-19-trust-and-integrity' && github.event.pull_request.head.repo.full_name == 'DevHabito/precategorical-modal-field-framework')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout exact audit branch
         uses: actions/checkout@v4
         with:
+          ref: audit/2026-10-19-trust-and-integrity
           persist-credentials: true
           fetch-depth: 1
 
