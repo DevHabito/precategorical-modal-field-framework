@@ -7,6 +7,7 @@ on:
       - "audit/**"
     paths:
       - "tools/independent_finite_crosscheck.py"
+      - "tools/independent_graph_toggle_oracle.py"
       - "tools/independent_a119_interval_replay.py"
       - "tools/refresh_integrity_indexes.py"
       - "tools/tests/**"
@@ -16,6 +17,7 @@ on:
       - main
     paths:
       - "tools/independent_finite_crosscheck.py"
+      - "tools/independent_graph_toggle_oracle.py"
       - "tools/independent_a119_interval_replay.py"
       - "tools/refresh_integrity_indexes.py"
       - "tools/tests/**"
@@ -38,10 +40,13 @@ jobs:
           python-version: "3.12"
 
       - name: Compile audit tools
-        run: python -m compileall -q tools/independent_finite_crosscheck.py tools/independent_a119_interval_replay.py tools/refresh_integrity_indexes.py tools/tests
+        run: python -m compileall -q tools/independent_finite_crosscheck.py tools/independent_graph_toggle_oracle.py tools/independent_a119_interval_replay.py tools/refresh_integrity_indexes.py tools/tests
 
       - name: Run independent exact finite checks
         run: python tools/independent_finite_crosscheck.py
+
+      - name: Exhaustively verify small graph toggles against DFS
+        run: python tools/independent_graph_toggle_oracle.py
 
       - name: Replay A119 rational interval certificate
         run: python tools/independent_a119_interval_replay.py
