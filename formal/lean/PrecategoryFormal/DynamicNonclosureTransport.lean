@@ -12,7 +12,7 @@ as an actual sum of four exponential terms, not defined by the desired
 factorization. No floating-point approximation or native_decide is used.
 -/
 
-def affineFourExponentialMoment
+noncomputable def affineFourExponentialMoment
     (p : FourWeights) (lam scale shift : ℝ) : ℝ :=
   p.w0 * Real.exp (-lam * shift) +
   p.w1 * Real.exp (-lam * (scale + shift)) +
@@ -56,7 +56,7 @@ theorem affineFourExponentialMoment_factorization
   rw [h1, h2, h3]
   ring
 
-def centeredFourExponentialMoment
+noncomputable def centeredFourExponentialMoment
     (p : FourWeights) (lam scale : ℝ) : ℝ :=
   affineFourExponentialMoment p lam scale
     ((1 - scale) * fourMean p)
@@ -69,7 +69,7 @@ theorem centeredFourExponentialMoment_transport
   exact affineFourExponentialMoment_factorization p lam scale
     ((1 - scale) * fourMean p)
 
-def rationalInitialLambda : ℝ := 2 * Real.log 2
+noncomputable def rationalInitialLambda : ℝ := 2 * Real.log 2
 
 theorem exp_neg_log_two :
     Real.exp (-Real.log (2 : ℝ)) = 1 / 2 := by
@@ -101,7 +101,7 @@ theorem halfExpFactor :
     ring
   rw [h, exp_neg_log_two]
 
-def rationalScore (p : FourWeights) (lam : ℝ) : ℝ :=
+noncomputable def rationalScore (p : FourWeights) (lam : ℝ) : ℝ :=
   -(Real.log (fourMoment p (Real.exp (-lam)))) / lam
 
 theorem rationalScoresInitiallyEqual :
@@ -136,7 +136,7 @@ theorem rationalFutureMomentsDiffer :
     Real.exp_pos _
   nlinarith
 
-def rationalFutureScore (p : FourWeights) : ℝ :=
+noncomputable def rationalFutureScore (p : FourWeights) : ℝ :=
   -(Real.log (centeredFourExponentialMoment p rationalInitialLambda (1 / 2))) /
     rationalInitialLambda
 
