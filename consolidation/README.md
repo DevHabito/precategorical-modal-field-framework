@@ -4,6 +4,8 @@
 
 **Literature scope check:** [Verified classical precedents and unresolved priority questions](../docs/novelty/CONSOLIDATION_CLASSICAL_LITERATURE_2026-10-19.md).
 
+**A112 determinant and Q-ECT reviews:** [independent Schur orientation](C3_A112_DETERMINANT_REDERIVATION_2026-10-19.md) and [multiplicity-aware Q reduced-cost zero budget](C3_A112_Q_REDUCED_COST_ZERO_BUDGET_2026-10-19.md).
+
 **C3 analytic-tail review:** [Frozen A110–A114 theorem scopes, exact counterexamples, independent LP oracle, open proof gates](C3_A110_A114_ADVERSARIAL_CHECKPOINT_2026-10-19.md).
 
 **F3/MF-R049 formal proof:** [exact rational counterexample, centered exponential transport, and proof scope](F3_RATIONAL_NONCLOSURE_2026-10-19.md).
