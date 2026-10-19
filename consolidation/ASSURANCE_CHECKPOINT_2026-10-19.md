@@ -1,7 +1,7 @@
 # Scientific assurance checkpoint — 2026-10-19
 
-**Repository:** \`DevHabito/precategorical-modal-field-framework\`  
-**Baseline main commit:** \`89e2668c3aef3fbff5a7f399f86de7d27e467da1\`  
+**Repository:** `DevHabito/precategorical-modal-field-framework`  
+**Baseline main commit:** `89e2668c3aef3fbff5a7f399f86de7d27e467da1`  
 **Status:** partial independent audit, **not** repository-wide mathematical or software certification.
 
 ## Method and scope
@@ -24,29 +24,29 @@ checkpoint. Automated adversarial inspection is not a substitute for one.
 
 **Severity:** high for assurance wording; **not evidence of a false result**.
 
-The pinned toolchain is Lean \`v4.33.1\`. At this version, \`native_decide\`
+The pinned toolchain is Lean `v4.33.1`. At this version, `native_decide`
 depends on native evaluation and introduces a computation-specific axiom.
-A successful Lean elaboration, build, or \`leanchecker\` replay does not turn
+A successful Lean elaboration, build, or `leanchecker` replay does not turn
 such a native computation into kernel-only evaluation.
 
 In particular:
 
-- \`PrecategoryFormal.PosetEnumeration\` uses \`native_decide\` for its finite
+- `PrecategoryFormal.PosetEnumeration` uses `native_decide` for its finite
   poset counts;
-- \`PrecategoryFormal.EdgeToggleSensitivity\` uses \`native_decide\` for the
+- `PrecategoryFormal.EdgeToggleSensitivity` uses `native_decide` for the
   five-vertex numerator and other finite counts;
 - semantic equivalence and graph-realization lemmas may have a different
   trust boundary. Their transitive axiom dependencies must be inspected
   individually; do not infer them from a file-level "PASS".
 
-For each published theorem, run \`#print axioms\` in the pinned Lean
+For each published theorem, run `#print axioms` in the pinned Lean
 environment and record the output. At minimum inspect:
 
-- \`PrecategoryFormal.encodedPosetCount_five\`
-- \`PrecategoryFormal.natCard_literalRepresentativeCode_five\`
-- \`PrecategoryFormal.changedPairCount_five\`
-- \`PrecategoryFormal.edgeToggleProbability_five_crossmul\`
-- \`PrecategoryFormal.mf_r009_graph_level_code_collision\`
+- `PrecategoryFormal.encodedPosetCount_five`
+- `PrecategoryFormal.natCard_literalRepresentativeCode_five`
+- `PrecategoryFormal.changedPairCount_five`
+- `PrecategoryFormal.edgeToggleProbability_five_crossmul`
+- `PrecategoryFormal.mf_r009_graph_level_code_collision`
 
 These are **commands to run**, not outputs claimed in this checkpoint.
 
@@ -59,7 +59,7 @@ Official references:
 
 - Lean reference, *Validating a Lean Proof*:
   https://lean-lang.org/doc/reference/latest/ValidatingProofs/
-- Lean API, *Init.Tactics* (\`native_decide\`):
+- Lean API, *Init.Tactics* (`native_decide`):
   https://lean-lang.org/doc/api/Init/Tactics.html
 
 ## Finding F2 — stale root SHA-256 inventories
@@ -69,42 +69,42 @@ Official references:
 The baseline recursive Git tree contains:
 
 - 3,552 tracked blobs in 208 directories;
-- 3,319 entries in \`MANIFEST.csv\`;
+- 3,319 entries in `MANIFEST.csv`;
 - 233 tracked blobs absent from the manifest;
 - six manifest entries whose recorded size differs from the current Git blob
   size; the remaining 3,313 paths and sizes agree.
 
 The six size-drift paths are:
 
-1. \`README.md\`
-2. \`docs/CANONICAL_VERSIONS.md\`
-3. \`docs/novelty/MF-R008_representative_code_count.md\`
-4. \`docs/novelty/MF-R011_edge_flip_probability.md\`
-5. \`docs/novelty/NOVELTY_AUDIT_C1_SUMMARY.md\`
-6. \`docs/novelty/README.md\`
+1. `README.md`
+2. `docs/CANONICAL_VERSIONS.md`
+3. `docs/novelty/MF-R008_representative_code_count.md`
+4. `docs/novelty/MF-R011_edge_flip_probability.md`
+5. `docs/novelty/NOVELTY_AUDIT_C1_SUMMARY.md`
+6. `docs/novelty/README.md`
 
 This comparison uses Git blob metadata and manifest declarations. It does
 **not** independently hash the 3,552 checkout files, and no such check is
 claimed here.
 
-The existing \`tools/validate_repository.py\` checks only paths that already
+The existing `tools/validate_repository.py` checks only paths that already
 appear in the manifest and therefore does not detect all omissions. The
 six size mismatches are sufficient to make its current full-checkout gate fail.
 
-\`SHA256SUMS.txt\` also needs regeneration and byte-for-byte validation,
+`SHA256SUMS.txt` also needs regeneration and byte-for-byte validation,
 rather than being silently assumed current.
 
 ### Non-destructive remediation
 
 Run from a clean checkout of the review branch:
 
-\`\`\`bash
+```bash
 python tools/refresh_integrity_indexes.py --check
 python tools/refresh_integrity_indexes.py --write
 python tools/refresh_integrity_indexes.py --check
 python tools/validate_repository.py
 git diff -- MANIFEST.csv SHA256SUMS.txt
-\`\`\`
+```
 
 The first check is **expected to fail until the indexes are regenerated**.
 The write command hashes every Git-tracked regular file except the two root
@@ -116,15 +116,15 @@ No new root index hashes are invented in this checkpoint.
 
 ## Finding F3 — finite independent cross-checks
 
-\`tools/independent_finite_crosscheck.py\` was written without importing the
+`tools/independent_finite_crosscheck.py` was written without importing the
 historical Python audit implementations. A local Python 3.13 execution of the
 same mathematical checks reproduced:
 
 | Claim | Independently reproduced exact output | Boundary |
 |---|---|---|
-| MF-R008 | \`p(1..5) = 1,3,19,219,4231\` and five-vertex code count \`5234\` | finite enumeration only |
-| MF-R011 | \`P2=1\`, \`P3=3/4\`, \`P4=1/2\`, \`P5=75/256\`, \`P6=313/2048\` | uniform loopless digraph ensemble |
-| MF-R049 | mean \`3/2\`, initial moment \`15/32\`, differing half-scale moments | fixed four-point witness |
+| MF-R008 | `p(1..5) = 1,3,19,219,4231` and five-vertex code count `5234` | finite enumeration only |
+| MF-R011 | `P2=1`, `P3=3/4`, `P4=1/2`, `P5=75/256`, `P6=313/2048` | uniform loopless digraph ensemble |
+| MF-R049 | mean `3/2`, initial moment `15/32`, differing half-scale moments | fixed four-point witness |
 
 MF-R011 was checked by both reachable-set decomposition and directed-cut
 inclusion-exclusion. These are distinct counting decompositions, though
@@ -167,7 +167,7 @@ current Consolidation 1.0 claim ledger.
 These works predate the repository and prohibit an original-discovery claim
 about fixed-pair random-digraph reachability or reachability-based edge
 influence as general subjects. Neither this checkpoint nor a negative search
-certifies priority of the particular finite fraction \`75/256\`.
+certifies priority of the particular finite fraction `75/256`.
 
 ## Release gate: still open
 
@@ -175,7 +175,7 @@ Before merging a broad scientific-integrity claim:
 
 1. Rebuild the project from a clean checkout with the pinned toolchains.
 2. Run the exact finite cross-check and both integrity-index checks.
-3. Inspect \`#print axioms\` for every promoted Lean theorem.
+3. Inspect `#print axioms` for every promoted Lean theorem.
 4. Rerun independent interval certificates and compare exact outputs/hashes.
 5. Check source hypotheses against every theorem header and imported lemma.
 6. Test known failed variants as negative controls; retain counterexamples.
