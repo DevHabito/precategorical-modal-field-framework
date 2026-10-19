@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-19  
 **Assurance:** generic algebraic derivation with an elementary exponential
-zero-count argument for the P-block orientation; six exact rational
+zero-count argument for the P-block orientation; seven exact rational
 finite controls passed independently. The **uniform sign of the final
 source coefficient A(s) remains an inherited A112-G analytic premise**,
 not an independently re-proved all-tail inequality.
@@ -167,7 +167,7 @@ The current derivation removes the potential circularity in the
 determinant orientation once `A(s)<0` is independently established:
 it does **not** invoke `p_j,p_(j+1)>0` in (1)–(4).
 
-## 6. Exact six-control independent regression
+## 6. Exact seven-control independent regression
 
 `tools/independent_c3_determinant_orientation.py` constructs all
 eight rows directly, computes `det(B8)`, `det(C)`, `det(Q)`
@@ -185,9 +185,10 @@ for the predeclared controls:
 | 561 | 53/400 | 98 | odd |
 | 600 | 133/1000 | 106 | even |
 | 821 | 129/1000 | 141 | odd |
+| 561 | 13277/100000 | 99 | odd |
 | 1000 | 129/1000 | 171 | even |
 
-All decisions use `Fraction`; decimals and determinant-condition-number
+The updated [independent audit run 39341636770](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39341636770) passed all seven determinant controls and a separate three-witness full Q reduced-cost check.\n\nAll decisions use `Fraction`; decimals and determinant-condition-number
 estimates are never used as sign gates.
 
 CI: [independent-audit run 39341225813](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39341225813)
@@ -202,7 +203,7 @@ evaluation determinant, and the universal Schur factorization for
 the specified matrix convention.
 
 **Finite independent checks:** the full eight-by-eight determinant
-identity and final sign at six odd/even localized controls.
+identity and final sign at seven odd/even localized controls.
 
 **Still open in this audit:** the quantitative uniform A112-G
 `A(s)<0` certificate and its hypotheses; the A112-B interlacing
