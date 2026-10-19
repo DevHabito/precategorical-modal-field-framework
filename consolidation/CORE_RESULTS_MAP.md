@@ -85,7 +85,17 @@ Source claim: **MF-R049**.
 
 On the unrestricted finite-distribution class used in the source result, mean plus one fixed-lambda entropic/log-sum-exp score does not determine the next score under the declared update. An explicit four-point witness establishes non-closure.
 
-Status: **proved by exact identity + constructive counterexample**.
+Status: **proved; finite four-point nonclosure formally derived in Lean 4.33.1
+with no `native_decide` dependency**. The original exact witness is preserved.
+The independently derived rational witness and the analytic
+centered-contraction factorization are in
+[`DynamicNonclosure.lean`](../formal/lean/PrecategoryFormal/DynamicNonclosure.lean)
+and [`DynamicNonclosureTransport.lean`](../formal/lean/PrecategoryFormal/DynamicNonclosureTransport.lean).
+Both modules passed `lake build` and their individual `leanchecker`
+replays in [CI run 39337980598](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39337980598).
+The final statement has standard Lean logical axiom dependencies only.
+Unrelated modules in the same matrix experienced toolchain-download TLS
+failures and were rerun; those failures were not mathematical counterexamples.
 
 Novelty status: **not certified**.
 
