@@ -87,9 +87,37 @@ The standard-library ZIP parser's direct failure on the actual
 GitHub Actions checkout is the dispositive reproducibility gate.
 The header observations are supplementary diagnosis only.
 
-The archives may be partially salvageable, but salvaging intact
-members is **not equivalent** to recovering the complete published
-certificate bundle, nor to rerunning the original verification.
+The archives were **partially salvaged** by a read-only,
+local-header, DEFLATE and CRC validator in
+[recovery run 39343471074](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39343471074):
+
+- A112: four local-header members passed CRC (two are empty directory
+  entries; two are JSON certificates for A112-D and the logical audit);
+  the A112-G branch-regularity JSON member failed decompression/CRC.
+- A113: its first member, the complete **9,145-byte original Python
+  certificate script**, passed raw DEFLATE and CRC. Its second JSON
+  member is truncated.
+- A114-A: the first certificate Python member is truncated; **no
+  complete original member was recovered**.
+
+The intact A113 Python source has SHA-256
+`46e1fec5197c7253e29156e592e2320905cd993caa66f3f5b9cd109471b11587`.
+It is preserved separately, byte-for-byte, at
+`consolidation/recovered_provenance/a113_tail_global_compressed_one_variation_certificate.py`.
+
+In [run 39343954194](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39343954194)
+the unchanged recovered A113 Python script was executed with pinned
+SymPy in an isolated CI environment: its **23/23 declared exact
+symbolic/rational gates passed**. Another independent exact proof of
+the A113 parity contact envelopes is recorded in
+[A113_RECOVERED_CERTIFICATE_AND_CONTACT_ENVELOPES_2026-10-19.md](A113_RECOVERED_CERTIFICATE_AND_CONTACT_ENVELOPES_2026-10-19.md).
+
+**This is recovery of one intact A113 source member, not recovery of
+the complete historical ZIP or the missing original result JSON**.
+The historical archive SHA-256 mismatches and failing ZIP integrity
+gate remain unchanged. The 23 passing original gates alone do not
+certify the validity of every analytic majorant used in the all-tail
+proof claim.
 
 ## 4. Mathematical assurance impact
 
@@ -97,16 +125,18 @@ The mathematical claims of the historical A112, A113 and A114-A
 documents are **not refuted** by this finding. Their recorded proof maps
 and human-readable theorem claims remain accessible.
 
-However, the exact full certificate scripts and reported generated
-artifacts bundled **only** in these invalid ZIPs cannot currently be
-treated as independently re-executed from their advertised canonical
-package. In particular:
+However, the **complete** historical reproducibility packages
+remain unusable. Partial source recovery can establish executable
+claims of an intact individual member, but it cannot validate
+missing files, hidden script dependencies, or unproven analytic
+majorant-to-factor implications. In particular:
 
 - the all-tail A112-G `A(s)<0` bound is an **open independent audit gate**;
 - the A112-B interlacing and A112-C quantitative checkpoint implications
   are likewise not closed by archive metadata;
-- A113's full continuous-source tail majorants have not been independently
-  re-executed from the archived script;
+- the recovered original A113 script's 23 exact gates have been
+  re-executed successfully, but the full continuous-source tail
+  **majorant derivations** have not yet been independently rebuilt;
 - A114-A's isolated full reproducibility package is not currently usable.
 
 Separate exact checks already completed **remain valid at their own
