@@ -1,0 +1,28 @@
+name: Read-only partial ZIP member recovery
+
+on:
+  push:
+    branches:
+      - audit/2026-10-19-trust-and-integrity
+    paths:
+      - "tools/inspect_truncated_zip_members.py"
+      - ".github/workflows/partial-zip-salvage.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "tools/inspect_truncated_zip_members.py"
+      - ".github/workflows/partial-zip-salvage.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  partial-member-inspection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout historical packages without modification
+        uses: actions/checkout@v4
+      - name: Report separately CRC-verified local-header members
+        run: python3 tools/inspect_truncated_zip_members.py
