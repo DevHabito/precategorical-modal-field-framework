@@ -131,6 +131,25 @@ inclusion-exclusion. These are distinct counting decompositions, though
 they share the same mathematical definitions and were implemented in the same
 review workflow. They are not blind independent peer reviews.
 
+### A119 rational interval replay
+
+A separate script, `tools/independent_a119_interval_replay.py`, reconstructed
+A119's exact critical substitution and the positive natural-interval
+covering calculation with `Fraction` arithmetic. The local execution found:
+
+- `2,304` positive even-parity boxes, with worst exact lower bound
+  `7962094616280060340361057850523941099377/4460543890481278214239707910840320000000`;
+- `4,096` positive odd-parity boxes, with worst exact lower bound
+  `3296636265099577642233577213168576496429665038806348563/2438741833785351580293579578096010608476160000000000000`;
+- positive exact cutoff bounds for the excluded deep even/odd cells.
+
+Those exact lower endpoints agree with the preserved A119 artifact. The
+replay supplies independent implementation-level evidence for the interval
+arithmetic and finite covering **conditional on the displayed A118/A119
+formula**. It is not a blind derivation of that formula, a Lean theorem, or a
+new certificate for the entire A115–A122 dependency chain.
+
+
 No conclusion about all graph sizes, global optimization, physical geometry,
 or bibliographic priority follows from these checks.
 
@@ -142,8 +161,11 @@ or bibliographic priority follows from these checks.
   contracts. Compressed maxima are not automatically full lifted KKT optima.
 - A115 preserves exact counterexamples to a universal target-deformation
   threshold.
-- A119's 6,400 rational interval boxes are described in committed artifacts,
-  but their complete certificate has **not** been independently rerun here.
+- A119's published 6,400 interval-box sign certificates and deep-cell cutoff
+  bounds were reproduced with a separately written exact `Fraction` interval
+  evaluator. Its two worst certified lower endpoints match the archived values
+  exactly. This independently replays the **published critical-substitution
+  formula**, not the upstream A115–A118 derivations or the full theorem chain.
 - A120–A122 study fixed-interior rounding phases; their local-maximizer
   statements do not establish global target-deformed maximizers.
 - The foundational pre-submission manuscript has open independent-review
