@@ -6,12 +6,14 @@ on:
       - audit/2026-10-19-trust-and-integrity
     paths:
       - "tools/inspect_truncated_zip_members.py"
+      - "tools/replay_salvaged_a113_certificate.py"
       - ".github/workflows/partial-zip-salvage.yml"
   pull_request:
     branches:
       - main
     paths:
       - "tools/inspect_truncated_zip_members.py"
+      - "tools/replay_salvaged_a113_certificate.py"
       - ".github/workflows/partial-zip-salvage.yml"
   workflow_dispatch:
 
@@ -26,3 +28,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Report separately CRC-verified local-header members
         run: python3 tools/inspect_truncated_zip_members.py
+      - name: Prepare ephemeral output directory for unchanged A113 source
+        run: sudo install -d -m 0777 /mnt/data
+      - name: Install pinned symbolic algebra dependency
+        run: python3 -m pip install --disable-pip-version-check sympy==1.13.3
+      - name: Replay CRC-recovered original A113 exact certificate
+        run: python3 tools/replay_salvaged_a113_certificate.py
