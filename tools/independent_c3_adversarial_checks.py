@@ -220,7 +220,10 @@ def verify_published_negative_controls() -> None:
         b = exact_contact_threshold(size, source)
         assert b == expected_b, (size, b, expected_b)
         oracle = ExactAdjacentFactor(size, source)
-        assert oracle.value(b + 2) > 0 if size != 2049 else oracle.value(b + 2) < 0
+        expected_central_sign = {
+            561: 1, 661: -1, 821: 1, 886: 1, 951: 1, 2049: -1,
+        }
+        assert sign(oracle.value(b + 2)) == expected_central_sign[size]
         assert oracle.value(b + 3) < 0
         assert oracle.value(b + 1) - 2 * oracle.value(b + 2) > 0
 
