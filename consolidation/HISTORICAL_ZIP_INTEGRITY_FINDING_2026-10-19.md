@@ -52,10 +52,29 @@ archive paths:
 - `A113/MANIFEST_A113_20260912.sha256`;
 - `A114/MANIFEST_A114A_20260912.sha256`.
 
-A follow-up run of `tools/audit_zip_packages.py` now compares these
-historical records to the **current exact archive bytes**. This
-secondary match must be interpreted separately from ZIP structural
-validity; a match cannot transform an invalid package into a valid one.
+A follow-up run of `tools/audit_zip_packages.py` independently
+recomputed SHA-256 for all three stored archive byte sequences and
+compared them to their **dated local manifests**. All three comparisons
+**FAILED** in
+[archive audit run 39342441591](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39342441591):
+
+| Package | Present SHA-256 | Historical manifest SHA-256 |
+|---|---|---|
+| A112 | `d4e38e7593df21dc183cdfa36a1d9caf00746bc67d019917d5922b03bbf2a271` | `4e1a6f8899fb1498ac95c1527c10fb0c3f2b863f04cd76dab09826b3337fee21` |
+| A113 | `87f3596e733d67e95202e19c9c07e00c873c1d4900bde7f6b13803fe00dac210` | `7a16d3a97626afb4fd57eb41a3152c75cabe679ea36698cae2f01761df890f15` |
+| A114-A | `631b7fa62fe2c2ab772394ade39371c2bb111bc036c07bebadf011186179df80` | `9328538264bacb2bcddcaa8876b66d3914e4a76ae650f138bd1f302e70ab8c04` |
+
+Thus we have **two independently observable failures**: each archive is
+structurally unreadable and the bytes stored in Git do not correspond to
+the dated reproducibility checksum. Do **not** overwrite the historical
+manifest with the currently observed digest, because that would erase
+a useful recovery fingerprint.
+
+The Git blob SHA of each archive is identical in its single introducing
+GitHub commit and in the current repository. The mismatch therefore
+**predates the 2026-10-19 audit**; the available history does not
+determine whether the intended full archive was lost before upload,
+during the original transfer, or in a separate untracked workflow.
 
 ## 3. Direct ZIP structure observation
 
