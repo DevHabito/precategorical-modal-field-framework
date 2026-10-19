@@ -130,6 +130,28 @@ def critical_second_order_bound(
     return main_term + source_term + target_term
 
 
+def validate_log_enclosure() -> None:
+    """Certify 2 < -log(s) < 21/10 on the source interval."""
+    def exponential_partial(value: Fraction, degree: int) -> tuple[Fraction, Fraction]:
+        term = Fraction(1)
+        total = term
+        for index in range(1, degree + 1):
+            term = term * value / index
+            total += term
+        return total, term
+
+    lower_exp, _ = exponential_partial(Fraction(21, 10), 12)
+    upper_partial, final_term = exponential_partial(Fraction(2), 15)
+    first_omitted = final_term * 2 / 16
+    upper_exp = upper_partial + first_omitted / (1 - Fraction(2, 17))
+
+    # Term ratios beyond degree 15 are at most 2/17, giving a
+    # rigorous geometric-series upper bound on the exponential tail.
+    assert upper_exp < Fraction(1000, 133)
+    assert lower_exp > Fraction(1000, 129)
+    print("A119 logarithm enclosure PASS: 2 < -log(s) < 21/10")
+
+
 def validate_cutoff_bounds() -> None:
     lower_source = Fraction(129, 1000)
     upper_source = Fraction(133, 1000)
@@ -200,6 +222,7 @@ def validate_interval_cover(odd_parity: bool) -> None:
 
 
 def main() -> None:
+    validate_log_enclosure()
     validate_cutoff_bounds()
     validate_interval_cover(False)
     validate_interval_cover(True)
