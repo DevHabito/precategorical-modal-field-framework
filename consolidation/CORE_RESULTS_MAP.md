@@ -2,6 +2,8 @@
 
 This file is an editorial compression of the repository. It does not replace source proofs or audit artifacts. The goal is to identify a small number of claims that can be rewritten, formalized, and reviewed independently.
 
+**Formal assurance note:** C1 uses `native_decide` for computational subclaims. Lean's native computation on the pinned v4.33.1 toolchain depends on a compiler-trust axiom; neither `lake build` nor `leanchecker` converts it into kernel-only reduction. See [the 2026-10-19 assurance checkpoint](ASSURANCE_CHECKPOINT_2026-10-19.md).
+
 ## C1 — Finite combinatorics and encoding correction
 
 ### C1.1 Minimum-representative quotient-poset code count
@@ -17,7 +19,7 @@ N_{\mathrm{rep}}(n)
 
 where `p(k)` denotes the number of labeled partial orders on `k` elements under the declared convention.
 
-Status: **proved and end-to-end formalized in Lean for the declared code/count statement**. The formalization derives the binomial representative-set factor, independently obtains `p(1),…,p(5)=1,3,19,219,4231` by exact `native_decide` enumeration, proves the executable encoding has exactly the semantics of labeled partial orders, derives the fiber count from an explicit code type, and proves that the canonical-coordinate presentation is equivalent to the literal `(S,P)` presentation with `P` living on the actual representative set. It further proves that every literal `(S,P)` code is realizable by an explicit loopless digraph whose SCCs are the representative fibers, whose representatives are minimum labels of those SCCs, and whose quotient reachability order is exactly `P`. Thus the literal five-vertex code type has cardinality `5234` and the abstract code-space count is not inflated by unrealizable pairs. The complete library build and module-sharded bundled `leanchecker` replay pass.
+Status: **mathematical proof and end-to-end Lean formalization with disclosed native-evaluation dependencies for finite counts**. The formalization derives the binomial representative-set factor, independently obtains `p(1),…,p(5)=1,3,19,219,4231` by exact `native_decide` enumeration, proves the executable encoding has exactly the semantics of labeled partial orders, derives the fiber count from an explicit code type, and proves that the canonical-coordinate presentation is equivalent to the literal `(S,P)` presentation with `P` living on the actual representative set. It further proves that every literal `(S,P)` code is realizable by an explicit loopless digraph whose SCCs are the representative fibers, whose representatives are minimum labels of those SCCs, and whose quotient reachability order is exactly `P`. Thus the literal five-vertex code type has cardinality `5234` and the abstract code-space count is not inflated by unrealizable pairs. The complete library build and module-sharded bundled `leanchecker` replay pass.
 
 Important nonclaims: this does not retain or count full SCC memberships as part of the code, does not make the representative code injective, and does not establish novelty or priority.
 
@@ -57,7 +59,7 @@ of
 
 ordered graph-edge pairs are sensitive.
 
-Status: **exact finite result; end-to-end Lean/kernel pass for the declared `n=5` statistic and its semantic bridge**. The formal path independently encodes the graph-mask ensemble, proves the edge-coordinate/toggle semantics, proves the compact reachability code equivalent to `Relation.ReflTransGen` reachability over all `2^20` five-vertex graph masks, connects each enumerator summand to change in the mathematical reachability preorder, and certifies the exact `n=5` numerator and ratio. The pinned build and every declared module-sharded `leanchecker` replay passed at commit `83b45fed020e24f7f9ceba7ecd86220e9c2b8b08` (workflow run `301`).
+Status: **exact finite result; Lean/leanchecker pass at the declared `n=5` scope, with `native_decide` compiler-trust assumptions**. The formal path independently encodes the graph-mask ensemble, proves the edge-coordinate/toggle semantics, proves the compact reachability code equivalent to `Relation.ReflTransGen` reachability over all `2^20` five-vertex graph masks, connects each enumerator summand to change in the mathematical reachability preorder, and certifies the exact `n=5` numerator and ratio. The pinned build and every declared module-sharded `leanchecker` replay passed at commit `83b45fed020e24f7f9ceba7ecd86220e9c2b8b08` (workflow run `301`).
 
 A human-readable structural argument also gives
 
