@@ -1,8 +1,10 @@
 # MF-R049 — rational witness and F3 proof checkpoint
 
-**Status:** exact mathematical derivation; Lean finite-algebra module submitted
-for verification. The complete analytic score/transport bridge is **not yet**
-claimed as a proved Lean theorem.
+**Status:** exact mathematical derivation; pinned Lean 4.33.1 build and
+theorem-level axiom inspection **passed** for both the rational algebra and
+the analytic centered-contraction bridge. The 17-module `leanchecker`
+replay is a separate gate and must be assessed before declaring F3
+fully replay-certified.
 
 **Provenance:** This is an independently derived alternative to the historical
 four-point witness at `lambda = log 2`. It does not replace that witness or
@@ -113,12 +115,20 @@ priority claim. No full-text theorem comparison has been completed.
    `formal/lean/PrecategoryFormal/DynamicNonclosure.lean`.
 2. `tools/independent_c2_rational_witness.py` rechecks the rational
    equalities without historical audit imports or floating tolerances.
-3. The generic exponential-moment transport identity, centered-contraction
-   moment transformation, and logarithmic injectivity bridge are now
-   **submitted for Lean verification** in
+3. The actual affine exponential-moment sum is defined independently of
+   its factorization in
    `formal/lean/PrecategoryFormal/DynamicNonclosureTransport.lean`.
-   Successful compiler and axiom-report evidence must be inspected before
-   F3 can receive an end-to-end formal assurance label.
+   The module proves affine factorization, centered transport of moments,
+   original-score equality, future-score inequality, and their combined
+   `rationalScalarNonclosure` theorem.
+4. GitHub Actions [Lean run 39337980598](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39337980598)
+   compiled both modules with Lean 4.33.1 and successfully executed
+   `#print axioms`. The five inspected C2 declarations report
+   `propext`, `Classical.choice`, and `Quot.sound` only: no
+   `native_decide` axiom and no `sorryAx`.
+5. The separately sharded `leanchecker` replay must pass before F3
+   is fully certified. A successful CI build does not establish novelty,
+   empirical relevance, or correctness of unrelated archived results.
 4. The new Lean claims require successful pinned build and `#print axioms`
    evidence, not merely the absence of `sorry` in their source.
 5. Classical exponential-utility and moment-closure antecedents remain
