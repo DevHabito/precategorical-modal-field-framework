@@ -139,8 +139,12 @@ The same control's compressed maximizer is `j=b+2=91`, while the
 naive gamma-plus lift has `p_(j+1)<0`. This demonstrates *at one point*
 why a compressed optimum cannot be equated with a lifted feasible
 basis. It does not prove A114's universal tail active-set map.
-This added regression is a **separate CI gate** and must not be
-described as passed until its run finishes successfully.
+This separate exact-KKT gate passed in GitHub Actions
+[independent audit run 39340245073](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39340245073).
+The log confirms every unused P/Q atom scan, positive active duals,
+opposite inactive slacks, exact primal-dual agreement, and the negative
+control rejecting the infeasible gamma-plus lift. It is still a
+**single-point witness**, not a uniform-tail proof.
 
 ## 4. Independent Lean boundary (conditional logic only)
 
