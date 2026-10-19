@@ -16,3 +16,6 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.edgeToggleProbability_five_crossmul
 #print axioms PrecategoryFormal.reachCode_eq_iff_sameReachability5
 #print axioms PrecategoryFormal.addDirectedEdge_preserves_reachability_iff
+#print axioms PrecategoryFormal.rationalMoment_difference
+#print axioms PrecategoryFormal.rationalInitialDataAgree
+#print axioms PrecategoryFormal.rationalRescaledMomentsDiffer
