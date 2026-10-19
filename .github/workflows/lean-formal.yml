@@ -76,6 +76,7 @@ jobs:
       fail-fast: false
       matrix:
         module:
+          - PrecategoryFormal.CompressedCentralNesting
           - PrecategoryFormal.DynamicNonclosure
           - PrecategoryFormal.DynamicNonclosureTransport
           - PrecategoryFormal.EdgeAdditionReachability
