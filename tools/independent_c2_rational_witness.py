@@ -32,6 +32,16 @@ def main() -> None:
         assert mean(weights) == Fraction(3, 2)
         assert moment(weights, Fraction(1, 4)) == Fraction(85, 256)
 
+    signed_coefficients = tuple(
+        positive - negative for positive, negative in zip(PLUS, MINUS)
+    )
+    # Coefficient equality proves the cubic identity for every rational t,
+    # not only at the independently selected control points below.
+    assert signed_coefficients == (
+        Fraction(-1, 32), Fraction(3, 16),
+        Fraction(-9, 32), Fraction(1, 8),
+    )
+
     for t in (
         Fraction(-3, 2), Fraction(0), Fraction(1, 8),
         Fraction(1, 4), Fraction(1, 2), Fraction(1),
