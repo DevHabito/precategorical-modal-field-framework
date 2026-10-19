@@ -21,3 +21,5 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.rationalRescaledMomentsDiffer
 #print axioms PrecategoryFormal.affineFourExponentialMoment_factorization
 #print axioms PrecategoryFormal.rationalScalarNonclosure
+#print axioms PrecategoryFormal.centralNestingForbidsNegativeToPositive
+#print axioms PrecategoryFormal.positiveNestingAllowsNegativeSecondSecant
