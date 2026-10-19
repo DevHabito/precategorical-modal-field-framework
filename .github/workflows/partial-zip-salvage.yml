@@ -35,4 +35,5 @@ jobs:
           python3 -m venv "$RUNNER_TEMP/a113-venv"
           "$RUNNER_TEMP/a113-venv/bin/python" -m pip install --disable-pip-version-check sympy==1.13.3
       - name: Replay CRC-recovered original A113 exact certificate
-        run: "$RUNNER_TEMP/a113-venv/bin/python" tools/replay_salvaged_a113_certificate.py
+        run: |
+          "$RUNNER_TEMP/a113-venv/bin/python" tools/replay_salvaged_a113_certificate.py
