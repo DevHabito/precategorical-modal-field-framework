@@ -141,6 +141,19 @@ inclusion-exclusion. These are distinct counting decompositions, though
 they share the same mathematical definitions and were implemented in the same
 review workflow. They are not blind independent peer reviews.
 
+An additional depth-first-search oracle, `tools/independent_graph_toggle_oracle.py`,
+independently computes full vertex-level reachability for every loopless
+digraph on `n=2,3,4` vertices and toggles every directed edge. It reproduced
+the exact sensitive ordered graph-edge pair counts `8`, `288`, and
+`24576`, respectively. Negative controls require a redundant edge to
+preserve reachability and a first edge to change it. The script also verifies
+the exact finite insertion criterion for every absent edge. The GitHub Actions
+[independent-audit run 39336360343](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39336360343)
+completed this DFS step, the A119 interval replay, and the other finite
+checks successfully. This does not prove the all-`n` probability identity
+or eliminate the native-computation dependencies in Lean.
+
+
 ### A119 rational interval replay
 
 A separate script, `tools/independent_a119_interval_replay.py`, reconstructed
