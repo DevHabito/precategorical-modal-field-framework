@@ -61,6 +61,14 @@ jobs:
           nanoda: false
           use-mathlib-cache: true
 
+      - name: Print selected theorem axiom dependencies
+        shell: bash
+        working-directory: formal/lean
+        run: |
+          set -euo pipefail
+          export PATH="$HOME/.elan/bin:$PATH"
+          lake env lean AssuranceAxioms.lean
+
   leanchecker:
     needs: lean
     runs-on: ubuntu-latest
