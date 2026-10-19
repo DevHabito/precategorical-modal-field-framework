@@ -22,10 +22,10 @@ structure FourWeights where
   w2 : ℝ
   w3 : ℝ
 
-def rationalPlus : FourWeights :=
+noncomputable def rationalPlus : FourWeights :=
   ⟨15 / 64, 22 / 64, 7 / 64, 20 / 64⟩
 
-def rationalMinus : FourWeights :=
+noncomputable def rationalMinus : FourWeights :=
   ⟨17 / 64, 10 / 64, 25 / 64, 12 / 64⟩
 
 def fourMass (p : FourWeights) : ℝ :=
