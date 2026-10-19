@@ -24,6 +24,37 @@ The trace exposed 77 theorem-by-theorem appearances of native axiom names across
 
 For the theorems with non-native axioms, the only other printed names were Lean's standard `propext`, `Classical.choice`, and `Quot.sound`. No `sorryAx` was observed in any of these nine outputs. This does not prove that every declaration in the entire project has been audited.
 
+## Follow-up F3: exact dynamic nonclosure
+
+At code revision `fb34f319aa4cb664b202e37068590e218e5c0376`,
+the pinned Lean 4.33.1
+[workflow run 39337980598](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39337980598)
+compiled both new F3 modules and printed the axiom dependencies
+for five representative statements.
+
+| New declaration | Native axioms | Other axiom dependencies |
+|---|---:|---|
+| `PrecategoryFormal.rationalMoment_difference` | 0 | `propext`, `Classical.choice`, `Quot.sound` |
+| `PrecategoryFormal.rationalInitialDataAgree` | 0 | `propext`, `Classical.choice`, `Quot.sound` |
+| `PrecategoryFormal.rationalRescaledMomentsDiffer` | 0 | `propext`, `Classical.choice`, `Quot.sound` |
+| `PrecategoryFormal.affineFourExponentialMoment_factorization` | 0 | `propext`, `Classical.choice`, `Quot.sound` |
+| `PrecategoryFormal.rationalScalarNonclosure` | 0 | `propext`, `Classical.choice`, `Quot.sound` |
+
+The final workflow attempt completed **18/18 jobs successfully** after
+rerunning two unrelated module jobs that originally failed while fetching
+Lean from the distribution server (TLS connection failures). Neither
+failure was in a proof term and no mathematics was changed to resolve them.
+
+The `rationalScalarNonclosure` theorem asserts **equal initial mass,
+mean and entropic score, but unequal next score** for an explicit pair of
+strictly positive normalized four-point distributions. Its analytic bridge
+defines the actual exponential sum of the affine-shifted support and proves
+the factorization from `Real.exp_add`.
+
+Unlike the earlier finite C1 enumerations, the F3 formalization depends
+on no `native_decide` axioms. This stronger proof-assurance label applies
+to the **declared F3 existence theorem only**, not all research claims.
+
 ## Interpretation
 
 A Lean theorem can be accepted while relying on explicitly tracked native computation axioms. In Lean 4.33.1, `native_decide` places the evaluated finite calculation within the trusted native compiler rather than the small Lean kernel alone. A successful checker replay therefore does not erase those native axioms.
