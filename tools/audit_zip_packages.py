@@ -8,6 +8,7 @@ is extracted, repaired, replaced, or used to execute code.
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import subprocess
@@ -17,6 +18,49 @@ import zipfile
 
 MAX_ENTRY_BYTES = 20 * 1024 * 1024
 MAX_ARCHIVE_BYTES = 100 * 1024 * 1024
+
+# Verify that historical local manifests bind to the same stored bytes
+# even when the corresponding compressed archive cannot be opened.
+HISTORICAL_MANIFESTS: dict[str, str] = {
+    "A112_TAIL_CLOSURE_WORKING_SET_20260911.zip":
+        "MFRP_Informational_Requirements_A39-A109/research_updates/"
+        "A110_A112/MANIFEST_A112_TAIL_CLOSURE_20260911.sha256",
+    "A113_FULL_REPRODUCIBILITY_PACKAGE_20260912.zip":
+        "MFRP_Informational_Requirements_A39-A109/research_updates/"
+        "A113/MANIFEST_A113_20260912.sha256",
+    "A114A_FULL_REPRODUCIBILITY_PACKAGE_20260912.zip":
+        "MFRP_Informational_Requirements_A39-A109/research_updates/"
+        "A114/MANIFEST_A114A_20260912.sha256",
+}
+
+
+def historic_digest_record(path: Path) -> dict[str, object]:
+    relative_manifest = HISTORICAL_MANIFESTS.get(path.name)
+    if relative_manifest is None:
+        return {}
+
+    manifest = Path(relative_manifest)
+    local_archive = path.relative_to(manifest.parent).as_posix()
+    expected: str | None = None
+    for line in manifest.read_text(encoding="utf-8").splitlines():
+        fields = line.split(maxsplit=1)
+        if len(fields) != 2:
+            continue
+        archived_path = fields[1].lstrip("*")
+        if archived_path.removeprefix("./") == local_archive:
+            expected = fields[0]
+            break
+
+    with path.open("rb") as reader:
+        actual = hashlib.file_digest(reader, "sha256").hexdigest()
+
+    return {
+        "historical_manifest": relative_manifest,
+        "historical_sha256": expected,
+        "actual_sha256": actual,
+        "historical_manifest_match": expected is not None and expected == actual,
+    }
+
 
 
 def tracked_zip_paths() -> list[Path]:
@@ -39,6 +83,8 @@ def audit_archive(path: Path) -> dict[str, object]:
         "bytes": path.stat().st_size if path.is_file() else None,
         "status": "FAIL",
     }
+    if path.is_file():
+        result.update(historic_digest_record(path))
     try:
         with zipfile.ZipFile(path, "r", allowZip64=True) as archive:
             entries = archive.infolist()
