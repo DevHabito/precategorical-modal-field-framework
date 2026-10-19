@@ -1,0 +1,48 @@
+name: Independent finite and integrity-tool checks
+
+on:
+  push:
+    branches:
+      - main
+      - "audit/**"
+    paths:
+      - "tools/independent_finite_crosscheck.py"
+      - "tools/refresh_integrity_indexes.py"
+      - "tools/tests/**"
+      - ".github/workflows/independent-audit.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "tools/independent_finite_crosscheck.py"
+      - "tools/refresh_integrity_indexes.py"
+      - "tools/tests/**"
+      - ".github/workflows/independent-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out revision
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile audit tools
+        run: python -m compileall -q tools/independent_finite_crosscheck.py tools/refresh_integrity_indexes.py tools/tests
+
+      - name: Run independent exact finite checks
+        run: python tools/independent_finite_crosscheck.py
+
+      - name: Run integrity-tool tests
+        run: python -m unittest discover -s tools/tests -v
+
+      # The root SHA-256 indexes are known to be stale at the baseline.
+      # Add a strict full-checkout index gate only after reviewed regeneration.
