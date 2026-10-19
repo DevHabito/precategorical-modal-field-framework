@@ -85,7 +85,7 @@ def main(argv: list[str] | None = None) -> int:
         mismatched = [
             name for name, content in desired.items()
             if not (root / name).is_file()
-            or (root / name).read_text(encoding="utf-8") != content
+            or (root / name).read_bytes() != content.encode("utf-8")
         ]
         if mismatched:
             print(
