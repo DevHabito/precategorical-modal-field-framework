@@ -1,10 +1,10 @@
 # MF-R049 — rational witness and F3 proof checkpoint
 
-**Status:** exact mathematical derivation; pinned Lean 4.33.1 build and
-theorem-level axiom inspection **passed** for both the rational algebra and
-the analytic centered-contraction bridge. The 17-module `leanchecker`
-replay is a separate gate and must be assessed before declaring F3
-fully replay-certified.
+**Status:** exact mathematical derivation and Lean 4.33.1 formal proof
+**completed at the explicit four-point witness scope**. The pinned build,
+selected axiom audit, and full 17-module `leanchecker` matrix passed
+(GitHub Actions run `39337980598`, 18/18 jobs after two infrastructure retries).
+The F3 theorems have no native-computation axiom dependencies.
 
 **Provenance:** This is an independently derived alternative to the historical
 four-point witness at `lambda = log 2`. It does not replace that witness or
@@ -126,9 +126,11 @@ priority claim. No full-text theorem comparison has been completed.
    `#print axioms`. The five inspected C2 declarations report
    `propext`, `Classical.choice`, and `Quot.sound` only: no
    `native_decide` axiom and no `sorryAx`.
-5. The separately sharded `leanchecker` replay must pass before F3
-   is fully certified. A successful CI build does not establish novelty,
-   empirical relevance, or correctness of unrelated archived results.
+5. Both F3 modules and every other module passed the separately sharded
+   `leanchecker` matrix in the final attempt: 18/18 successful jobs. Two
+   earlier jobs failed on TLS toolchain downloads and were rerun without
+   changes to mathematical statements. This success does **not** establish
+   novelty, physical relevance, or correctness of unrelated research claims.
 4. The new Lean claims require successful pinned build and `#print axioms`
    evidence, not merely the absence of `sorry` in their source.
 5. Classical exponential-utility and moment-closure antecedents remain
