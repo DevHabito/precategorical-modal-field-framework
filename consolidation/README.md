@@ -2,6 +2,8 @@
 
 **Status:** active repository reorganization; no mathematical claim is strengthened by this editorial layer.
 
+**Literature scope check:** [Verified classical precedents and unresolved priority questions](../docs/novelty/CONSOLIDATION_CLASSICAL_LITERATURE_2026-10-19.md).
+
 **Assurance checkpoint (2026-10-19):** [trust boundaries, independently reproduced finite claims, and stale SHA-256 indexes](ASSURANCE_CHECKPOINT_2026-10-19.md). This is a partial audit, not a completed independent peer review or a release certificate.
 
 The purpose of Consolidation 1.0 is to make the project readable, independently checkable, and resistant to common-mode errors. The historical A-number sequence remains preserved as provenance, but it is no longer the preferred way to navigate the mathematics.
