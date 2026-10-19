@@ -20,6 +20,7 @@ CONTROLS = (
     (561, F(53, 400), 98),
     (600, F(133, 1000), 106),
     (821, F(129, 1000), 141),
+    (561, F(13277, 100000), 99),
     (1000, F(129, 1000), 171),
 )
 
@@ -168,9 +169,73 @@ def orientation_control(size: int, source: F, contact: int) -> None:
     )
 
 
+STRICT_GAMMA_PLUS_CONTROLS = (
+    (522, F(131, 1000), 91),
+    (561, F(53, 400), 98),
+    (561, F(13277, 100000), 99),
+)
+
+
+def verify_q_reduced_cost_checkpoints() -> None:
+    """Check Q checkpoint orientation against every unused integer atom.
+
+    The analytic six-function Chebyshev zero-budget argument is separate.
+    This is an exact finite falsification control of the full LP dual signs.
+    """
+    for size, source, contact in STRICT_GAMMA_PLUS_CONTROLS:
+        h = size // 2
+        p_nodes = (0, contact, contact + 1, size)
+        q_nodes = (1, h, h + 1)
+        mean = F(size, 2)
+        epsilon = F(1, (1875 if size % 2 == 0 else 2500) * 2**h)
+        active = ((source, 1), (BETA, -1), (GAMMA, 1))
+        rows = [
+            [1, 1, 1, 1, 0, 0, 0, -1],
+            [0, 0, 0, 0, 1, 1, 1, -1],
+            [*p_nodes, 0, 0, 0, -mean],
+            [0, 0, 0, 0, *q_nodes, -mean],
+            [0, 0, 0, 0, *(TARGET**node for node in q_nodes), 0],
+        ]
+        for base, orientation in active:
+            rows.append([
+                *(orientation * base**node for node in p_nodes),
+                *(-orientation * base**node for node in q_nodes),
+                -2 * epsilon,
+            ])
+        rhs = [0, 0, 0, 0, 1, 0, 0, 0]
+        objective = [
+            *(TARGET**node for node in p_nodes),
+            0, 0, 0, 0,
+        ]
+        primal = exact_solve(rows, rhs)
+        dual = exact_solve([list(row) for row in zip(*rows)], objective)
+        assert all(value > 0 for value in primal)
+        assert all(value > 0 for value in dual[5:])
+
+        def q_reduced_cost(node: int) -> F:
+            column = [0, 1, 0, node, TARGET**node] + [
+                -orientation * base**node for base, orientation in active
+            ]
+            return sum(F(x) * y for x, y in zip(column, dual))
+
+        assert all(q_reduced_cost(node) == 0 for node in q_nodes)
+        checkpoints = (0, 2, h - 1, h + 2, size)
+        assert all(q_reduced_cost(node) > 0 for node in checkpoints)
+        assert all(
+            q_reduced_cost(node) > 0
+            for node in range(size + 1)
+            if node not in set(q_nodes)
+        )
+        print(
+            f"A112 Q ECT controls PASS: M={size}, j={contact}; "
+            "all five checkpoints and every nonbasic integer Q cost >0"
+        )
+
+
 def main() -> None:
     for size, source, contact in CONTROLS:
         orientation_control(size, source, contact)
+    verify_q_reduced_cost_checkpoints()
 
 
 if __name__ == "__main__":
