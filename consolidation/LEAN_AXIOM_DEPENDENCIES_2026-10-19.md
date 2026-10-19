@@ -18,6 +18,8 @@ This table is transcribed programmatically from the emitted `#print axioms` trac
 | `PrecategoryFormal.reachCode_eq_iff_sameReachability5` | 1 | Native trust dependency |
 | `PrecategoryFormal.addDirectedEdge_preserves_reachability_iff` | 0 | No axioms reported |
 
+**Final verification update:** the same workflow run completed with **16/16 successful jobs**: one pinned Lean compilation/axiom-trace job and all 15 separately sharded `leanchecker` module jobs. This verifies replay of the submitted proof terms under their disclosed axioms; it does not remove the native-computation trust boundary.
+
 The trace exposed 77 theorem-by-theorem appearances of native axiom names across these nine declarations; some are reused between theorems, so this total must **not** be read as a unique axiom count.
 
 For the theorems with non-native axioms, the only other printed names were Lean's standard `propext`, `Classical.choice`, and `Quot.sound`. No `sorryAx` was observed in any of these nine outputs. This does not prove that every declaration in the entire project has been audited.
