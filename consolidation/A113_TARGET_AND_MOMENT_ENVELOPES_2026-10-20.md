@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-20  
 **Review branch:** `audit/2026-10-19-trust-and-integrity`  
-**Status:** proof source submitted to the pinned Lean 4.33.1 workflow. Do not treat the statements as certified until the exact-code build, selected axiom trace and dedicated `leanchecker` have passed.
+**Status:** the pinned Lean 4.33.1 `lake build` and seven selected theorem-axiom traces **passed** for formal commit `3dd0525f9bc9644f71be51e775aab3829cfb8562` in [Actions run 39466591437](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39466591437). All seven printed only `propext`, `Classical.choice`, and `Quot.sound`, with no native evaluation axioms. The dedicated module-level `leanchecker` and the complete workflow matrix were still **queued** at this checkpoint; do not claim isolated kernel replay before checking that job.
 
 ## Frozen quantities
 
@@ -60,10 +60,11 @@ residual is algebraic, not a floating-point limit.
 ## Assurance and open obligations
 
 These inequalities were previously used as *analytic estimates* in the
-independent small-left reconstruction. Their new formalization is a
-distinct verification step. There are no A113 sign assumptions in the
-new module. The dedicated GitHub Actions checks must be read before
-updating this document to `verified`.
+independent small-left reconstruction. Their formalization passed the
+complete Lean build and selected axiom trace, but the isolated checker
+has not yet reported its result. There are no A113 sign assumptions in
+the new module. The independently written standard-library rational
+regression passed 30 exact size/node pairs in [audit run 39466979975](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39466979975), including the endpoint 0 and target 1/2. This sample is not the universal proof.
 
 If certified, these target/slope envelopes join the already kernel-
 checked ideal core, dyadic unit and denominator, actual even/odd defect,
