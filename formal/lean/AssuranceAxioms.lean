@@ -27,3 +27,8 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.contactIdealCore_from_cofactors
 #print axioms PrecategoryFormal.contactSmallLeftRationalMargin
 #print axioms PrecategoryFormal.contactA113SmallLeftPositive_of_analyticEnvelopes
+#print axioms PrecategoryFormal.contactIdealCore_step_identity
+#print axioms PrecategoryFormal.contactIdealCore_step_lower
+#print axioms PrecategoryFormal.contactIdealCore_lower_power
+#print axioms PrecategoryFormal.contactA113IdealCore_uniform_lower
+#print axioms PrecategoryFormal.contactA113SmallLeftPositive_of_error_and_unit
