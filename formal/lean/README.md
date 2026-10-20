@@ -169,6 +169,33 @@ is **still unproved in Lean**.
 Proof derivation and exact scope:
 [ideal-core recurrence checkpoint](../../consolidation/A113_IDEAL_CORE_RECURRENCE_2026-10-20.md).
 
+## A113 / C3 — finite parity channels and dyadic denominator proof (2026-10-20)
+
+`PrecategoryFormal/A113FiniteChannels.lean` now defines the actual finite-`M`
+historical normalization. It keeps the even and odd `D_M(r)` expressions
+separate, chooses `epsilon_M=U_M/1875` or `U_M/2500` by parity,
+and encodes the critical `+2 epsilon_M` beta and `-2 epsilon_M`
+source adjustments. The real A83 cofactor is constructed from these
+parameters without replacing it by the ideal core.
+
+The theorem `a113Unit_le_boundary` proves
+`M>=521 -> U_M<=1/2^260`. A geometric induction proves
+`a113Denominator_ge_three_quarters` and therefore positivity of
+`d_M=1-(floor(M/2)+1)*U_M`. Theorems also check the opposite-channel
+difference and exact A83/A84 ten-term algebra. These claims compiled
+in the pinned Lean run
+[39425842288](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39425842288).
+The selected axiom traces report only `propext`, `Classical.choice`
+and `Quot.sound`, without native-computation axioms.
+Check the dedicated independent `leanchecker` result separately.
+
+The actual-factor sign theorem is still **conditional on the
+unproved uniform real-finite remainder bound**
+`|a113ActualFactor M k s - contactIdealCore k 1/8 1/2 s|<20*U_M`.
+This checkpoint does not prove that bound or close all of A113.
+Derivation and scope:
+[finite channel checkpoint](../../consolidation/A113_FINITE_CHANNELS_LEAN_CHECKPOINT_2026-10-20.md).
+
 ## Deliberate nonclaims
 
 The MF-R008 formalization proves the declared representative-code counting theorem and the realizability of every counted literal code. It does **not** retain or count discarded SCC membership assignments as part of the code, make the representative code injective, establish novelty/priority, or imply anything physical.
