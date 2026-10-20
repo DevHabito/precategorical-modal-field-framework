@@ -85,6 +85,7 @@ jobs:
           - PrecategoryFormal.A113HEnvelopes
           - PrecategoryFormal.A113MomentEnvelopes
           - PrecategoryFormal.A113BilinearEnvelopes
+          - PrecategoryFormal.A113CoefficientEnvelopes
           - PrecategoryFormal.DynamicNonclosure
           - PrecategoryFormal.DynamicNonclosureTransport
           - PrecategoryFormal.EdgeAdditionReachability
