@@ -46,9 +46,11 @@ theorem a113FullPower_le_unit_div_128 (size : ℕ) (node : ℝ)
   have hnode1 : node ≤ 1 := by linarith
   have hpow := a113NodePower_le_unit_div_128
     size node hsize hnode0 hnode
-  rw [hindex, pow_add]
   calc
-    node ^ a113HalfIndex size * node ^ offset ≤
+    node ^ size = node ^ (a113HalfIndex size + offset) := by
+      rw [hindex]
+    _ = node ^ a113HalfIndex size * node ^ offset := pow_add _ _ _
+    _ ≤
         node ^ a113HalfIndex size * 1 :=
       mul_le_mul_of_nonneg_left
         (a113NodePow_le_one node hnode0 hnode1 offset)
