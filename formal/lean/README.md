@@ -110,6 +110,35 @@ not rule out closure on restricted families, certify novelty, or establish
 physical dynamics. Full derivation:
 [Consolidation F3](../../consolidation/F3_RATIONAL_NONCLOSURE_2026-10-19.md).
 
+## A113 / C3 — algebraic small-left bridge (in progress)
+
+`PrecategoryFormal/A113SmallLeftBridge.lean` is a **scoped formalization** of
+part of the clean-room A113 review. It defines the A83 cofactor factor
+using independent moment slopes and derives the A84 ten-term expression
+by a universally quantified polynomial identity. It also checks the
+zero-unit comparison core, the exact positive first/second-contact
+identities, and the frozen rational core-versus-error threshold.
+
+The theorem `contactA113SmallLeftPositive_of_analyticEnvelopes` is
+**conditional**: its premises explicitly include the positive core
+lower bound, the uniform absolute remainder bound and the unit bound.
+It does not establish those three inequalities for the actual
+`M>=521`, `2<=k<=29` exponential-moment parameters. Passing an axiom
+trace or Lean compilation of this implication does **not** close the
+unconditional uniform small-left A113 theorem.
+
+The separate mathematical proof is recorded in
+[`A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md`](../../consolidation/A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md),
+with a 60-case rational regression script. The next formal task is to
+prove the actual core lower bound for all contacts and then derive the
+A84 H/slope/error estimates in Lean, not to convert those obligations
+into assumptions hidden under reassuring theorem names.
+
+As with all new modules, the final proof status must be grounded in the
+actual pinned GitHub Actions `lake build`, `#print axioms`, and
+`leanchecker` results for the **exact head commit**, not inferred from a
+previous passing run.
+
 ## Deliberate nonclaims
 
 The MF-R008 formalization proves the declared representative-code counting theorem and the realizability of every counted literal code. It does **not** retain or count discarded SCC membership assignments as part of the code, make the representative code injective, establish novelty/priority, or imply anything physical.
