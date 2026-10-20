@@ -178,7 +178,20 @@ contact-envelope implication.
 
 The CI gate is separate from the unchanged A113 script replay.
 
-## 5. Exact unclosed proof obligations
+## 5. Independent small-left sector closure (later checkpoint)
+
+The new [small-left proof](A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md)
+reconstructs the A83/A84 factor separately and proves the uniform
+positive sign for every `M>=521`, every real `s` in the frozen source
+interval and each `2<=k<=29`. It uses a positive homogeneous-polynomial
+core and a conservative `20*2^(-floor(M/2))` remainder envelope.
+Its arithmetic is checked by `tools/independent_a113_small_left.py` in
+60 independent exact pointwise controls and rational universal threshold
+gates. This removes the small-left *sector* from the open bridge list;
+it does not certify the middle-left, right-remote or central sectors,
+repair the invalid historical ZIP or supply a human review.
+
+## 6. Exact unclosed proof obligations
 
 The original source's 23 passed gates do not automatically establish
 the full A113 theorem. The next independent review must verify:
