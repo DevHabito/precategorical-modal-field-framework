@@ -64,3 +64,5 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.a113LinearCoefficientsBound
 #print axioms PrecategoryFormal.a113AffineCoefficientsBound
 #print axioms PrecategoryFormal.a113ConstantCoefficientBound
+#print axioms PrecategoryFormal.a113ActualFactor_eq_namedCoefficients
+#print axioms PrecategoryFormal.a113ActualFactor_sub_ideal_eq_namedErrors
