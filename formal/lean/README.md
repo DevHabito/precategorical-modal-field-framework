@@ -294,6 +294,33 @@ This is a component of, **not** a substitute for, the open uniform
 `|E_(M,k)(s)-F_k(s)|<20*U_M` bound. See the
 [bilinear checkpoint](../../consolidation/A113_BILINEAR_COEFFICIENT_CHECKPOINT_2026-10-20.md).
 
+## A113 / C3 — historical affine, linear and constant bounds (2026-10-20)
+
+`PrecategoryFormal/A113CoefficientEnvelopes.lean` proves that, on the
+frozen finite-M/source domain, the actual A84 coefficient magnitudes
+satisfy `|c_beta|,|c_s|,|c_tau|<5U_M`,
+`|d_beta|,|d_s|,|d_tau|<=3U_M/M`, and `|c_1|<=6U_M/M`.
+This derives from previously certified moment/channel/bilinear bounds
+without a remainder or sign premise. Pinned
+[Lean run 39490728858](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39490728858)
+finished **28/28 passing jobs**, including build, four selected
+axiom traces and the module's independent `leanchecker`. All four
+traces contain only `propext`, `Classical.choice`, `Quot.sound`.
+
+`PrecategoryFormal/A113CoefficientIdentity.lean` makes the connection
+explicit: the named coefficients reconstruct the actual A83/A84 factor
+and yield an exact symbolic `actual-ideal` decomposition, with no
+discarded finite-size terms. Its Lean build and two selected axiom
+traces passed in
+[run 39491049530](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491049530).
+The module-specific checker is pending in
+[run 39491064741](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491064741).
+
+**Still open:** combine the seven term bounds into the unconditional
+`|E-F|<20U_M` small-left estimate; the rest of A113's contacts and
+the global lifted KKT classification are outside this proof.
+See the [checkpoint](../../consolidation/A113_A84_COEFFICIENT_ENVELOPES_2026-10-20.md).
+
 ## Deliberate nonclaims
 
 The MF-R008 formalization proves the declared representative-code counting theorem and the realizability of every counted literal code. It does **not** retain or count discarded SCC membership assignments as part of the code, make the representative code injective, establish novelty/priority, or imply anything physical.
