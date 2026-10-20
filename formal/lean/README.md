@@ -278,11 +278,14 @@ The first root-import builds **failed** on proof-assembly errors
 orientation). These were fixed in source commit
 `2a5a99bcfca63d4cf0cb23153fbddc72772b3f9e`
 without adjusting the assumptions or statements. The pinned corrected
-[formal run 39487978993](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39487978993),
-selected axiom trace and independent
-`leanchecker (PrecategoryFormal.A113BilinearEnvelopes)` must complete
-successfully before certifying the new module. Earlier passing builds
-before the root import did not validate these new declarations.
+[formal run 39487978993](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39487978993)
+**passed** the Lean 4.33.1 root build, four selected axiom traces and
+independent `leanchecker (PrecategoryFormal.A113BilinearEnvelopes)`
+at source SHA `2a5a99bcfca63d4cf0cb23153fbddc72772b3f9e`.
+The four traces contain only `propext`, `Classical.choice` and
+`Quot.sound`, with no `native_decide`. Earlier passing builds before
+the root import did not validate these new declarations. Separate
+matrix-wide status should be checked before claiming all jobs passed.
 An independent exact-rational script was added to the audit workflow
 to regress the affine, linear, constant and E/F envelopes at sampled
 size/source/contact values; these checks are not universal proofs.
