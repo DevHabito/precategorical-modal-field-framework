@@ -209,7 +209,7 @@ theorem a113AffineCoefficientsBound (size : ℕ) (source : ℝ)
 /-- The product of a channel difference and a slope has size 2U/M. -/
 private theorem a113ConstantTermAbstract (size : ℕ)
     (difference slope unit : ℝ)
-    (hsize : 521 ≤ size)
+    (_hsize : 521 ≤ size)
     (hdiff : |difference| ≤ 2 * unit)
     (hzero : 0 ≤ slope)
     (hcap : slope ≤ 1 / (size : ℝ)) :
@@ -289,7 +289,10 @@ theorem a113ConstantCoefficientBound (size : ℕ) (source : ℝ)
             ((a113TargetMass size - a113H size source false) *
               a113MomentSlope size (1 / 8))
           linarith
-    _ ≤ 6 * a113Unit size / (size : ℝ) := by
-          linarith [h1, h2, h3]
+    _ ≤ 2 * a113Unit size / (size : ℝ) +
+          2 * a113Unit size / (size : ℝ) +
+          2 * a113Unit size / (size : ℝ) :=
+          add_le_add (add_le_add h1 h2) h3
+    _ = 6 * a113Unit size / (size : ℝ) := by ring
 
 end PrecategoryFormal
