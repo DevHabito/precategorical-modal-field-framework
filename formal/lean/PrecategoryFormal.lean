@@ -25,3 +25,4 @@ import PrecategoryFormal.A113HEnvelopes
 import PrecategoryFormal.A113MomentEnvelopes
 import PrecategoryFormal.A113BilinearEnvelopes
 import PrecategoryFormal.A113CoefficientEnvelopes
+import PrecategoryFormal.A113CoefficientIdentity
