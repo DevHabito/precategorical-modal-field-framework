@@ -217,9 +217,25 @@ and `Quot.sound`, without `native_decide`. The exact `11/24`
 and `175/512` estimates are intermediate algebraic calculations,
 not separately exported theorem statements.
 
-The corresponding H-channel deviations and the complete actual-to-ideal
-A113 remainder bound are **still unproved in Lean**. See the
-[formal defect checkpoint](../../consolidation/A113_DEFECT_SIGNS_FORMAL_CHECKPOINT_2026-10-20.md).
+The corresponding H-channel deviations have since been formally proved
+in `PrecategoryFormal/A113HEnvelopes.lean`. The theorem proves, for all
+`M>=521`, both the general Boolean-corrected deviation bound
+`|H_M(r,channel)-1/2|<U_M` for real `0<=r<=1/6`, and the
+specific historical positive beta and negative source bounds for
+`beta=1/8` and `s in [129/1000,133/1000]`.
+
+Pinned [Lean Actions run 39463059505](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39463059505)
+at source revision `68391595cd64a082496f488b59744bd63b95dd7c`
+passed the build, five selected axiom traces and isolated
+`leanchecker (PrecategoryFormal.A113HEnvelopes)`.
+The traces list only `propext`, `Classical.choice`, `Quot.sound`;
+no `native_decide` dependency was found for these theorems.
+
+The **complete actual-to-ideal A113 remainder**
+`|E_(M,k)-F_k|<20U_M` remains unproved in Lean. Formalized H bounds
+do not by themselves prove the A113 sign. See the
+[H-envelope checkpoint](../../consolidation/A113_H_ENVELOPES_FORMAL_CHECKPOINT_2026-10-20.md)
+and [formal defect checkpoint](../../consolidation/A113_DEFECT_SIGNS_FORMAL_CHECKPOINT_2026-10-20.md).
 
 ## Deliberate nonclaims
 
