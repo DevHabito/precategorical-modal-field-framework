@@ -196,6 +196,24 @@ This checkpoint does not prove that bound or close all of A113.
 Derivation and scope:
 [finite channel checkpoint](../../consolidation/A113_FINITE_CHANNELS_LEAN_CHECKPOINT_2026-10-20.md).
 
+## A113 / C3 — exact geometric defect envelopes (2026-10-20)
+
+`PrecategoryFormal/A113DefectEnvelopes.lean` proves, for every
+`M>=521` and real `0<=r<=1/6`, that
+`r^floor(M/2)<=U_M/128` and
+`r^(floor(M/2)+1)<=U_M/768`. It also proves
+`floor(M/2)*U_M<=1/4` and the normalized coefficient
+`floor(M/2)*U_M/d_M<=1/3`, with exact rational induction
+and no floating-point extrapolation.
+
+The two true A84 parity formulas then admit the exact analytic
+bounds `|D_even(r)|<=11*U_M/24` and
+`|D_odd(r)|<=175*U_M/512`. These **last
+triangle-inequality steps remain a paper derivation**, not
+yet formalized in Lean. Do not promote this to an end-to-end
+formal sign theorem. See
+[defect-envelope derivation](../../consolidation/A113_DEFECT_ENVELOPE_DERIVATION_2026-10-20.md).
+
 ## Deliberate nonclaims
 
 The MF-R008 formalization proves the declared representative-code counting theorem and the realizability of every counted literal code. It does **not** retain or count discarded SCC membership assignments as part of the code, make the representative code injective, establish novelty/priority, or imply anything physical.
