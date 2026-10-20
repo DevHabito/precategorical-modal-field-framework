@@ -78,6 +78,7 @@ jobs:
         module:
           - PrecategoryFormal.CompressedCentralNesting
           - PrecategoryFormal.A113SmallLeftBridge
+          - PrecategoryFormal.A113IdealCoreUniform
           - PrecategoryFormal.DynamicNonclosure
           - PrecategoryFormal.DynamicNonclosureTransport
           - PrecategoryFormal.EdgeAdditionReachability
