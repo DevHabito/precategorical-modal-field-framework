@@ -251,9 +251,11 @@ The pinned Lean 4.33.1 `lake build` and seven selected axiom traces
 passed at code commit `3dd0525f9bc9644f71be51e775aab3829cfb8562`
 in [formal run 39466591437](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39466591437).
 The printed axiom dependencies are only `propext`,
-`Classical.choice` and `Quot.sound`. The separate
-`leanchecker (PrecategoryFormal.A113MomentEnvelopes)` remains
-pending until its dedicated job completes.
+`Classical.choice` and `Quot.sound`. The dedicated
+`leanchecker (PrecategoryFormal.A113MomentEnvelopes)` subsequently
+passed, and the complete 26-job matrix finished green, in
+[run 39467407162](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39467407162),
+at commit `b77745052bbb716ae67cd69784cb702ebe168dea`. 
 
 An independently written standard-library Fraction replay also passed
 30 size/node controls in [audit run 39466979975](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39466979975).
