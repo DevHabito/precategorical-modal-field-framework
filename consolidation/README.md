@@ -8,6 +8,8 @@
 
 **A113 independent small-left theorem:** [uniform rational proof for every M>=521, every source in the frozen interval and 2<=k<=29; middle/right/central sectors remain open](A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md).
 
+**A113 Lean 4 checkpoint:** [formal A83/A84 algebraic identity and explicit conditional positivity transport; all-k analytic envelopes remain to be formalized](A113_LEAN_FORMALIZATION_CHECKPOINT_2026-10-19.md).
+
 **Critical reproducibility blocker:** [Three invalid historical ZIPs, three dated checksum mismatches, and the guarded recovery protocol](HISTORICAL_ZIP_INTEGRITY_FINDING_2026-10-19.md).
 
 **A112 determinant and Q-ECT reviews:** [independent Schur orientation](C3_A112_DETERMINANT_REDERIVATION_2026-10-19.md) and [multiplicity-aware Q reduced-cost zero budget](C3_A112_Q_REDUCED_COST_ZERO_BUDGET_2026-10-19.md).
