@@ -22,3 +22,4 @@ import PrecategoryFormal.A113FiniteChannels
 import PrecategoryFormal.A113DefectEnvelopes
 import PrecategoryFormal.A113DefectSigns
 import PrecategoryFormal.A113HEnvelopes
+import PrecategoryFormal.A113MomentEnvelopes
