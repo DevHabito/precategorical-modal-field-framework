@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-20  
 **Scope:** the ideal A83/A84 comparison factor, **not** the full finite-`M` adjacent factor.  
-**Status:** independent mathematical derivation; Lean source under pinned CI review. Do not infer a passed Lean certificate from this note alone.
+**Status:** the universal ideal-core lower bound compiled in Lean 4.33.1, passed the selected axiom trace, and passed its dedicated `leanchecker` job in [formal run 39403579662](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39403579662). Other independent checker jobs in the same matrix encountered unrelated Lean-download TLS errors; the full matrix should not be labeled green until their retries complete.
 
 ## Definitions
 
