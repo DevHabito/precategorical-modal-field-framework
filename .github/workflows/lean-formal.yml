@@ -83,6 +83,7 @@ jobs:
           - PrecategoryFormal.A113DefectEnvelopes
           - PrecategoryFormal.A113DefectSigns
           - PrecategoryFormal.A113HEnvelopes
+          - PrecategoryFormal.A113MomentEnvelopes
           - PrecategoryFormal.DynamicNonclosure
           - PrecategoryFormal.DynamicNonclosureTransport
           - PrecategoryFormal.EdgeAdditionReachability
