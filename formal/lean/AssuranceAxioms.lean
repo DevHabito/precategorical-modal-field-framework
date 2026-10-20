@@ -37,3 +37,7 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.a113H_channel_difference
 #print axioms PrecategoryFormal.a113ActualFactor_eq_tenTerm
 #print axioms PrecategoryFormal.a113ActualFactor_pos_of_uniform_error
+#print axioms PrecategoryFormal.a113GeometricPowerBound
+#print axioms PrecategoryFormal.a113NodePower_le_unit_div_128
+#print axioms PrecategoryFormal.a113NodeNextPower_le_unit_div_768
+#print axioms PrecategoryFormal.a113HalfCoefficient_div_denominator_le_third
