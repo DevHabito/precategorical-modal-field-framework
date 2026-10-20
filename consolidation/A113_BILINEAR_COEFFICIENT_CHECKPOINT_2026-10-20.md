@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-20  
 **Branch:** `audit/2026-10-19-trust-and-integrity`  
-**Status:** proof source submitted; the pinned Lean primary build succeeded for the initial module commit `ee45908c9ec43975c20f59be3a89289583308457` in [run 39487083634](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39487083634). The later root axiom trace and independent module `leanchecker` must be checked on their corresponding exact revision before promoting the four new declarations to full formal-assurance status.
+**Status:** formal proof source and CI hooks submitted; verification is **pending** for corrected source commit `2a5a99bcfca63d4cf0cb23153fbddc72772b3f9e` ([formal run 39487978993](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39487978993)). **Correction to preliminary report:** earlier green runs before the umbrella import did not compile this new module; the first full-root compilations (runs 39487127606 and 39487138182) failed on two Lean proof-assembly issues (division normalization and triangle-inequality orientation). Both have now been corrected without changing theorem statements, quantitative constants or frozen source definitions. The corrected root build, selected axiom trace and module `leanchecker` still require verification.
 
 ## Goal and contract
 
