@@ -39,7 +39,7 @@ noncomputable def a113EvenDefect (size : ℕ) (node : ℝ) : ℝ :=
   let h := a113HalfIndex size
   let unit := a113Unit size
   let denominator := a113Denominator size
-  -2 * unit * node / denominator +
+  (-2 : ℝ) * unit * node / denominator +
     (1 + 2 * (h : ℝ) * unit / denominator) * node ^ h -
     2 * ((h : ℝ) - 1) * unit * node ^ (h + 1) / denominator
 
@@ -48,7 +48,7 @@ noncomputable def a113OddDefect (size : ℕ) (node : ℝ) : ℝ :=
   let h := a113HalfIndex size
   let unit := a113Unit size
   let denominator := a113Denominator size
-  -(3 / 2 : ℝ) * unit * node / denominator +
+  (-(3 / 2 : ℝ)) * unit * node / denominator +
     (1 / 2 + (3 / 2 : ℝ) * (h : ℝ) * unit / denominator) * node ^ h +
     (1 / 2 - (3 / 2 : ℝ) * ((h : ℝ) - 1) * unit / denominator) *
       node ^ (h + 1)
@@ -216,7 +216,7 @@ theorem a113Epsilon_pos (size : ℕ) :
 theorem a113H_channel_difference (size : ℕ) (node : ℝ) :
     a113H size node true - a113H size node false =
       4 * a113Epsilon size := by
-  unfold a113H
+  simp only [a113H, Bool.false_eq_true, ite_true, ite_false]
   ring
 
 theorem a113H_beta_expansion (size : ℕ) (node : ℝ) :
@@ -229,7 +229,7 @@ theorem a113H_source_expansion (size : ℕ) (node : ℝ) :
     a113H size node false =
       (1 + node ^ size) / 2 - a113Defect size node -
         2 * a113Epsilon size := by
-  unfold a113H
+  simp only [a113H, Bool.false_eq_true, ite_false]
   ring
 
 /-- The true finite-M factor satisfies the already checked A83/A84 algebra. -/
@@ -277,6 +277,7 @@ theorem a113ActualFactor_pos_of_uniform_error
     (a113MomentSlope size (1 / 8))
     (a113MomentSlope size (1 / 2))
     (a113MomentSlope size source)
-    (a113Unit size) herror (a113Unit_le_boundary size hsize)
+    (a113Unit size) herror (by
+      simpa only [div_pow, one_pow] using a113Unit_le_boundary size hsize)
 
 end PrecategoryFormal
