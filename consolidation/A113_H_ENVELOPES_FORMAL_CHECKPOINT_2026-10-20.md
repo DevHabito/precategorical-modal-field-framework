@@ -64,11 +64,19 @@ defines and proves the full-size power comparison, the exact epsilon
 cap, an elementary real-algebra bound for either Boolean channel, and
 the two specialized H theorems.
 
-**The mathematical statements may be called kernel-certified only
-after the pinned Lean 4.33.1 `lake build`, selected axiom trace,
-and module-specific `leanchecker` succeed for the exact source
-revision.** A passing rational regression is not a substitute for
-the universally quantified theorem.
+**Verified formal result:** pinned Lean 4.33.1 `lake build`, selected
+`#print axioms`, and module-specific
+`leanchecker (PrecategoryFormal.A113HEnvelopes)` all passed for exact
+source commit `68391595cd64a082496f488b59744bd63b95dd7c` in
+[GitHub Actions run 39463059505](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39463059505).
+Each of the five selected declarations depends only on `propext`,
+`Classical.choice`, and `Quot.sound`; none uses `native_decide`.
+The two earlier failed builds identified an exponent-rewrite problem,
+corrected without modifying theorem statements or numerical constants.
+The full multi-module workflow must be checked separately before
+claiming that every job is green. Exact rational finite controls are
+secondary evidence, not a substitute for the universally quantified
+kernel-checked theorem.
 
 The ten-term actual-versus-ideal remainder `|E_(M,k)(s)-F_k(s)|<20U`
 is still open in Lean. Its remaining component estimates include
