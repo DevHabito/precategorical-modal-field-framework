@@ -273,11 +273,16 @@ For every integer `M>=521` and source `129/1000<=s<=133/1000`,
 the source proves a `3*U_M/M` absolute cap on each expression using
 the earlier formally checked H, target-mass and slope deviations.
 
-An initial module build passed in
-[run 39487083634](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39487083634).
-The later complete root import, selected axiom trace and independent
-`leanchecker (PrecategoryFormal.A113BilinearEnvelopes)` must all pass
-on the exact committed source before certifying this new module.
+The first root-import builds **failed** on proof-assembly errors
+(an unclosed rational equality and incorrect triangle-inequality
+orientation). These were fixed in source commit
+`2a5a99bcfca63d4cf0cb23153fbddc72772b3f9e`
+without adjusting the assumptions or statements. The pinned corrected
+[formal run 39487978993](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39487978993),
+selected axiom trace and independent
+`leanchecker (PrecategoryFormal.A113BilinearEnvelopes)` must complete
+successfully before certifying the new module. Earlier passing builds
+before the root import did not validate these new declarations.
 An independent exact-rational script was added to the audit workflow
 to regress the affine, linear, constant and E/F envelopes at sampled
 size/source/contact values; these checks are not universal proofs.
