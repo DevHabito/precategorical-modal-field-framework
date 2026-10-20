@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-20  
 **Review branch:** `audit/2026-10-19-trust-and-integrity`  
-**Status:** the theorem source has been committed for pinned Lean compilation and separate module-level `leanchecker` replay. Use the exact GitHub Actions run to determine whether it passed; the existence of this document is not certification.
+**Status:** verified in pinned Lean 4.33.1: `lake build`, the selected `#print axioms` audit, and dedicated `leanchecker (PrecategoryFormal.A113DefectSigns)` succeeded for code revision `109c0ab0cb560f0612c1409765f31feb2ceb8bec` in [Actions run 39456447948](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39456447948). Other matrix jobs must be checked separately before calling the entire run green.
 
 ## Claim and exact historical parameters
 
@@ -54,6 +54,6 @@ The proof is decomposed into real-algebra helper lemmas and corresponding univer
 
 ## Assurance and remaining work
 
-The complete final theorem is conditional only on `M>=521` and `0<=r<=1/6`, once the pinned build and `leanchecker` finish successfully. Prior algebraic, dyadic and high-power dependencies were checked independently.
+**The exact theorem `a113Defect_abs_lt_half` is now kernel-replayed for the full domain** `M>=521`, `0<=r<=1/6`. The even/odd strict half-unit theorems are separate and also replayed. Each of these three selected declarations has only `propext`, `Classical.choice`, and `Quot.sound` in its printed axiom dependencies; none depends on `native_decide`. The exact rational `11/24` and `175/512` sums appear as intermediate estimates; they are not separately exported as stronger Lean theorem statements. Prior algebraic, dyadic and high-power dependencies were checked independently.
 
 A successful kernel replay of this statement would still **not** prove the final A113 small-left positivity result. The next obligations are the finite-size H-channel deviations, the target and moment-slope envelopes, and the ten-term actual-minus-ideal factor bound `|E_(M,k)(s)-F_k(s)|<20U`. The middle/right/central sectors and damaged historical ZIP archives remain unresolved.
