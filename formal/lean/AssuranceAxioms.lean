@@ -60,3 +60,7 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.a113BetaBilinearBound
 #print axioms PrecategoryFormal.a113SourceBilinearBound
 #print axioms PrecategoryFormal.a113TargetBilinearBound
+#print axioms PrecategoryFormal.a113ChannelDifferencesBound
+#print axioms PrecategoryFormal.a113LinearCoefficientsBound
+#print axioms PrecategoryFormal.a113AffineCoefficientsBound
+#print axioms PrecategoryFormal.a113ConstantCoefficientBound
