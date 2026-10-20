@@ -2,6 +2,7 @@ import Mathlib
 
 set_option autoImplicit false
 set_option warningAsError true
+set_option exponentiation.threshold 512
 
 namespace PrecategoryFormal
 
