@@ -92,7 +92,7 @@ theorem contactAdjacentFactor_eq_tenTermFactor (k : ℕ)
   ring
 
 /-- The leading comparison factor obtained from equal half-moments. -/
-def contactIdealCore (k : ℕ) (beta target source : ℝ) : ℝ :=
+noncomputable def contactIdealCore (k : ℕ) (beta target source : ℝ) : ℝ :=
   (1 / 2 : ℝ) *
     ((source - beta) * (beta * source) ^ k +
      (beta - target) * (beta * target) ^ k +
@@ -169,6 +169,7 @@ theorem contactSmallLeftRationalMargin :
         (1 / 2 - 1 / 8) *
         (1 / 2 - 133 / 1000) *
         (129 / 2000 : ℝ) ^ 28 := by
+  rw [div_lt_iff₀ (show (0 : ℝ) < (2 : ℝ) ^ 260 by positivity)]
   norm_num
 
 /--
@@ -184,6 +185,11 @@ theorem contactSmallLeftPositive_of_uniformBounds
     (hlower : 20 / (2 : ℝ) ^ 260 < lower) :
     0 < actual := by
   have herrorLower := (abs_lt.mp herror).1
+  have hcap : 20 * unit ≤ 20 / (2 : ℝ) ^ 260 := by
+    calc
+      20 * unit ≤ 20 * (1 / (2 : ℝ) ^ 260) :=
+        mul_le_mul_of_nonneg_left hunit (by norm_num)
+      _ = 20 / (2 : ℝ) ^ 260 := by ring
   linarith
 
 /--
@@ -193,11 +199,11 @@ moment slopes and power remainder.
 -/
 theorem contactA113SmallLeftPositive_of_analyticEnvelopes
     (M k : ℕ) (source : ℝ)
-    (hM : 521 ≤ M)
-    (hkLower : 2 ≤ k)
-    (hkUpper : k ≤ 29)
-    (hsLower : (129 / 1000 : ℝ) ≤ source)
-    (hsUpper : source ≤ (133 / 1000 : ℝ))
+    (_hM : 521 ≤ M)
+    (_hkLower : 2 ≤ k)
+    (_hkUpper : k ≤ 29)
+    (_hsLower : (129 / 1000 : ℝ) ≤ source)
+    (_hsUpper : source ≤ (133 / 1000 : ℝ))
     (targetMass betaH sourceH betaSlope targetSlope sourceSlope unit : ℝ)
     (hcore :
       (1 / 2 : ℝ) *
