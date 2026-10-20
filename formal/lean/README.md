@@ -139,6 +139,36 @@ actual pinned GitHub Actions `lake build`, `#print axioms`, and
 `leanchecker` results for the **exact head commit**, not inferred from a
 previous passing run.
 
+## A113 / C3 — unconditional ideal-core bound (2026-10-20)
+
+`PrecategoryFormal/A113IdealCoreUniform.lean` proves the exact ideal-core
+recurrence for all natural contacts, proves its correction term is
+nonnegative for ordered nonnegative nodes, and derives a lower bound
+by induction. In the frozen window `s in [129/1000,133/1000]`, the
+result gives the required rational bound `L <= contactIdealCore k`
+for every `2<=k<=29`, without assuming any A113 numerical result.
+
+The pinned Lean 4.33.1 build, selected `#print axioms` commands and
+the dedicated `leanchecker` for this new module passed in
+[formal run 39403579662](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39403579662).
+The five selected theorem traces contain only `propext`,
+`Classical.choice`, and `Quot.sound`, with no native computation axiom.
+Two other checker jobs initially failed because their separate runners
+could not download the Lean toolchain (TLS connection errors); this is
+not a proof failure for the ideal-core module, but the full matrix
+needs those jobs rerun before it can be called green.
+
+`contactA113SmallLeftPositive_of_error_and_unit` now needs the
+**actual-to-ideal remainder bound and unit bound** as assumptions;
+the universal ideal-core lower bound is a proved lemma. No theorem
+has yet established that the frozen `D_M`/`H_r` channels satisfy
+the remainder assumptions for all `M>=521` and all real sources.
+Therefore the original complete A113 small-left positivity theorem
+is **still unproved in Lean**.
+
+Proof derivation and exact scope:
+[ideal-core recurrence checkpoint](../../consolidation/A113_IDEAL_CORE_RECURRENCE_2026-10-20.md).
+
 ## Deliberate nonclaims
 
 The MF-R008 formalization proves the declared representative-code counting theorem and the realizability of every counted literal code. It does **not** retain or count discarded SCC membership assignments as part of the code, make the representative code injective, establish novelty/priority, or imply anything physical.
