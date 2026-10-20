@@ -47,8 +47,8 @@ theorem a113FullPower_le_unit_div_128 (size : ℕ) (node : ℝ)
   have hpow := a113NodePower_le_unit_div_128
     size node hsize hnode0 hnode
   calc
-    node ^ size = node ^ (a113HalfIndex size + offset) := by
-      rw [hindex]
+    node ^ size = node ^ (a113HalfIndex size + offset) :=
+      congrArg (fun exponent : ℕ => node ^ exponent) hindex
     _ = node ^ a113HalfIndex size * node ^ offset := pow_add _ _ _
     _ ≤
         node ^ a113HalfIndex size * 1 :=
