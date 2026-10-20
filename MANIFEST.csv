@@ -1,6 +1,6 @@
 path,bytes,sha256
 .github/workflows/archive-integrity-audit.yml,728,b5512fc4d57497b702a9c2c6c6ecb839e23dd0b7f891018e03a6a21916f531ab
-.github/workflows/independent-audit.yml,3938,657b8f00938b50f8dc3c174a2a5f23e800bccf9d4323d9da3c9bbc531a1c6260
+.github/workflows/independent-audit.yml,4201,c9115895a2ccfd0760c426a42dd5a150fa890dd5d67f6a80e8f521723fa2f9bd
 .github/workflows/lean-formal.yml,3942,921af06445abba644fd99b4ea7d019e12551d45a19c3bff9c40cb9da4f28d921
 .github/workflows/partial-zip-salvage.yml,1361,4f5530bfb85bb852b83b19a2433e91a3ec1eb13bdf26137764adcdb1466b009f
 .github/workflows/repair-root-integrity-indexes.yml,2288,1c151ff3cd1a4e74b0713404bab23287ffe9fbf0b1129c8d95200d8e74e9b497
