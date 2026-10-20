@@ -81,6 +81,7 @@ jobs:
           - PrecategoryFormal.A113IdealCoreUniform
           - PrecategoryFormal.A113FiniteChannels
           - PrecategoryFormal.A113DefectEnvelopes
+          - PrecategoryFormal.A113DefectSigns
           - PrecategoryFormal.DynamicNonclosure
           - PrecategoryFormal.DynamicNonclosureTransport
           - PrecategoryFormal.EdgeAdditionReachability
