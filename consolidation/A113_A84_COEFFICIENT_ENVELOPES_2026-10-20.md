@@ -4,7 +4,7 @@
 `M>=521`, `129/1000<=s<=133/1000`, `beta=1/8`,
 `tau=1/2` and `U_M=2^(-floor(M/2))`.
 
-**Status:** The finite A84 coefficient inequalities are formally **VERIFIED**. Pinned Lean 4.33.1 [workflow 39490728858](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39490728858) completed **28/28 jobs successfully**, including the full `lake build`, four selected `#print axioms` traces and independent `leanchecker (PrecategoryFormal.A113CoefficientEnvelopes)`, for corrected code commit `dc0b2a6b0d5eec79097c2b7785a3033f887167d1`. The four traces contain only `[propext, Classical.choice, Quot.sound]`, without `native_decide`. The first build failed due to an unused-argument linter warning and an additive inequality tactic; both were corrected without altering statements or constants. A separate exact A83/A84 factor identity was added in `formal/lean/PrecategoryFormal/A113CoefficientIdentity.lean`. Its build and two selected axiom traces passed in [run 39491049530](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491049530); the dedicated isolated checker remains pending at this checkpoint.
+**Status:** The finite A84 coefficient inequalities are formally **VERIFIED**. Pinned Lean 4.33.1 [workflow 39490728858](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39490728858) completed **28/28 jobs successfully**, including the full `lake build`, four selected `#print axioms` traces and independent `leanchecker (PrecategoryFormal.A113CoefficientEnvelopes)`, for corrected code commit `dc0b2a6b0d5eec79097c2b7785a3033f887167d1`. The four traces contain only `[propext, Classical.choice, Quot.sound]`, without `native_decide`. The first build failed due to an unused-argument linter warning and an additive inequality tactic; both were corrected without altering statements or constants. A separate exact A83/A84 factor identity was added in `formal/lean/PrecategoryFormal/A113CoefficientIdentity.lean`. The full root build, both selected axiom traces and `leanchecker (PrecategoryFormal.A113CoefficientIdentity)` **PASSED** in [run 39491064741](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491064741), at code SHA `9f38572c9114dc9b6412a6faa0d1928107e11f5a`. The two traces contain only `[propext, Classical.choice, Quot.sound]`, with no native-evaluation dependency. The matrix has a separate TLS download failure in an unrelated checker, which is not a proof failure of these declarations.
 
 ## Historical coefficients
 
@@ -60,7 +60,7 @@ Each linear channel obeys `|d_r|<=3U/M`. Each of the three
 constant-channel summands has magnitude at most `2U/M`,
 so `|c_1|<=6U/M`.
 
-The new Lean module isolates the pairwise channel bounds and these
+The new Lean module proves the pairwise channel bounds and these
 three families. None of its new theorems imports the desired
 `|E_(M,k)(s)-F_k(s)|<20U` as a hypothesis.
 
@@ -84,3 +84,7 @@ for all admissible `M,s,k` in the small-left sector. The
 previously certified ideal-core lower bound can then turn this
 remainder into unconditional positivity. The historical three invalid
 ZIP packages and external novelty review remain independent gates.
+
+## Exact independent cofactor audit
+
+The independently authored `tools/independent_a113_bilinear_coefficients.py` now reconstructs the original A83 cofactor directly, independently of its named A84 coefficient expansion. [Audit run 39491980573](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491980573) passed 90 exact cofactor-to-A84 identity controls and 90 actual-versus-ideal comparisons, along with 54 bilinear, 54 affine, 54 linear and 18 constant coefficient controls. All calculations use Python `fractions.Fraction`; they remain finite regressions, not universal proofs.
