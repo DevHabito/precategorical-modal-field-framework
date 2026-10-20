@@ -56,3 +56,7 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.a113MomentSlope_bounds
 #print axioms PrecategoryFormal.a113MomentSlope_abs_error_le_unit_div_size
 #print axioms PrecategoryFormal.a113SmallNodeMomentSlope_abs_error_le_unit_div_size
+#print axioms PrecategoryFormal.a113BilinearMomentChannelBound
+#print axioms PrecategoryFormal.a113BetaBilinearBound
+#print axioms PrecategoryFormal.a113SourceBilinearBound
+#print axioms PrecategoryFormal.a113TargetBilinearBound
