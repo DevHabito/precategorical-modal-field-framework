@@ -8,7 +8,7 @@
 
 **A113 independent small-left theorem:** [uniform rational proof for every M>=521, every source in the frozen interval and 2<=k<=29; middle/right/central sectors remain open](A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md).
 
-**A113 target and moment slopes (2026-10-20):** [finite-M mass correction, nonnegative moment slopes, exact unit-over-M error, pinned Lean build and independent Fraction replay; checker matrix pending](A113_TARGET_AND_MOMENT_ENVELOPES_2026-10-20.md).
+**A113 target and moment slopes (2026-10-20):** [finite-M mass correction, nonnegative moment slopes, exact unit-over-M error, pinned Lean 26/26 including isolated leanchecker, plus independent Fraction replay](A113_TARGET_AND_MOMENT_ENVELOPES_2026-10-20.md).
 
 **A113 kernel-checked H envelopes (2026-10-20):** [both plus/minus tolerance bounds, uniform beta/source theorems, pinned Lean axiom audit and isolated leanchecker pass](A113_H_ENVELOPES_FORMAL_CHECKPOINT_2026-10-20.md). The full finite-M E error remains open.
 
