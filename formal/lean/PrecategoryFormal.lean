@@ -16,3 +16,4 @@ import PrecategoryFormal.EdgeToggleIndicatorBridge
 import PrecategoryFormal.DynamicNonclosure
 import PrecategoryFormal.DynamicNonclosureTransport
 import PrecategoryFormal.CompressedCentralNesting
+import PrecategoryFormal.A113SmallLeftBridge
