@@ -18,3 +18,4 @@ import PrecategoryFormal.DynamicNonclosureTransport
 import PrecategoryFormal.CompressedCentralNesting
 import PrecategoryFormal.A113SmallLeftBridge
 import PrecategoryFormal.A113IdealCoreUniform
+import PrecategoryFormal.A113FiniteChannels
