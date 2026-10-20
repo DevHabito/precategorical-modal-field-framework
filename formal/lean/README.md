@@ -206,13 +206,20 @@ Derivation and scope:
 `floor(M/2)*U_M/d_M<=1/3`, with exact rational induction
 and no floating-point extrapolation.
 
-The two true A84 parity formulas then admit the exact analytic
-bounds `|D_even(r)|<=11*U_M/24` and
-`|D_odd(r)|<=175*U_M/512`. These **last
-triangle-inequality steps remain a paper derivation**, not
-yet formalized in Lean. Do not promote this to an end-to-end
-formal sign theorem. See
-[defect-envelope derivation](../../consolidation/A113_DEFECT_ENVELOPE_DERIVATION_2026-10-20.md).
+The even/odd triangle-inequality steps are now formally proved in
+`PrecategoryFormal/A113DefectSigns.lean`. The Lean theorems establish
+`|D_even(r)|<U_M/2`, `|D_odd(r)|<U_M/2`, and the combined parity claim
+`|D_M(r)|<U_M/2` for every integer `M>=521` and real `0<=r<=1/6`.
+The pinned build, selected axiom trace and dedicated `leanchecker`
+succeeded in [run 39456447948](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39456447948).
+The selected axiom dependencies are `propext`, `Classical.choice`,
+and `Quot.sound`, without `native_decide`. The exact `11/24`
+and `175/512` estimates are intermediate algebraic calculations,
+not separately exported theorem statements.
+
+The corresponding H-channel deviations and the complete actual-to-ideal
+A113 remainder bound are **still unproved in Lean**. See the
+[formal defect checkpoint](../../consolidation/A113_DEFECT_SIGNS_FORMAL_CHECKPOINT_2026-10-20.md).
 
 ## Deliberate nonclaims
 
