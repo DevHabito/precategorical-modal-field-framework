@@ -16,6 +16,7 @@ on:
       - "tools/replay_salvaged_a113_certificate.py"
       - "tools/independent_a113_contact_envelopes.py"
       - "tools/independent_a113_small_left.py"
+      - "tools/independent_a113_ideal_core.py"
       - "tools/refresh_integrity_indexes.py"
       - "tools/tests/**"
       - ".github/workflows/independent-audit.yml"
@@ -33,6 +34,7 @@ on:
       - "tools/replay_salvaged_a113_certificate.py"
       - "tools/independent_a113_contact_envelopes.py"
       - "tools/independent_a113_small_left.py"
+      - "tools/independent_a113_ideal_core.py"
       - "tools/refresh_integrity_indexes.py"
       - "tools/tests/**"
       - ".github/workflows/independent-audit.yml"
@@ -54,7 +56,7 @@ jobs:
           python-version: "3.12"
 
       - name: Compile audit tools
-        run: python -m compileall -q tools/independent_finite_crosscheck.py tools/independent_graph_toggle_oracle.py tools/independent_c2_rational_witness.py tools/independent_c3_adversarial_checks.py tools/independent_c3_determinant_orientation.py tools/independent_a119_interval_replay.py tools/independent_a113_contact_envelopes.py tools/independent_a113_small_left.py tools/replay_salvaged_a113_certificate.py tools/inspect_truncated_zip_members.py tools/refresh_integrity_indexes.py tools/tests
+        run: python -m compileall -q tools/independent_finite_crosscheck.py tools/independent_graph_toggle_oracle.py tools/independent_c2_rational_witness.py tools/independent_c3_adversarial_checks.py tools/independent_c3_determinant_orientation.py tools/independent_a119_interval_replay.py tools/independent_a113_contact_envelopes.py tools/independent_a113_small_left.py tools/independent_a113_ideal_core.py tools/replay_salvaged_a113_certificate.py tools/inspect_truncated_zip_members.py tools/refresh_integrity_indexes.py tools/tests
 
       - name: Run independent exact finite checks
         run: python tools/independent_finite_crosscheck.py
@@ -76,6 +78,9 @@ jobs:
 
       - name: Independently verify A113 uniform small-left positivity
         run: python tools/independent_a113_small_left.py
+
+      - name: Audit independent A113 ideal-core recurrence and boundaries
+        run: python tools/independent_a113_ideal_core.py
 
       - name: Replay A119 rational interval certificate
         run: python tools/independent_a119_interval_replay.py
