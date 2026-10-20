@@ -6,6 +6,8 @@
 
 **A113 recovered primary source:** [23 exact checks replayed from CRC-verified original code, independent parity contact-envelope proof, and open universal majorant audit](A113_RECOVERED_CERTIFICATE_AND_CONTACT_ENVELOPES_2026-10-19.md).
 
+**A113 independent small-left theorem:** [uniform rational proof for every M>=521, every source in the frozen interval and 2<=k<=29; middle/right/central sectors remain open](A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md).
+
 **Critical reproducibility blocker:** [Three invalid historical ZIPs, three dated checksum mismatches, and the guarded recovery protocol](HISTORICAL_ZIP_INTEGRITY_FINDING_2026-10-19.md).
 
 **A112 determinant and Q-ECT reviews:** [independent Schur orientation](C3_A112_DETERMINANT_REDERIVATION_2026-10-19.md) and [multiplicity-aware Q reduced-cost zero budget](C3_A112_Q_REDUCED_COST_ZERO_BUDGET_2026-10-19.md).
