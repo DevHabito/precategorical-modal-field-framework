@@ -79,6 +79,7 @@ jobs:
           - PrecategoryFormal.CompressedCentralNesting
           - PrecategoryFormal.A113SmallLeftBridge
           - PrecategoryFormal.A113IdealCoreUniform
+          - PrecategoryFormal.A113FiniteChannels
           - PrecategoryFormal.DynamicNonclosure
           - PrecategoryFormal.DynamicNonclosureTransport
           - PrecategoryFormal.EdgeAdditionReachability
