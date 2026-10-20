@@ -68,7 +68,7 @@ private theorem a113BilinearCancellation
       |(1 / 2 : ℝ) * (leftSlope - rightSlope)| =
           |leftSlope - rightSlope| / 2 := by
             rw [abs_mul]
-            norm_num
+            ring
       _ ≤ unit * scale := by linarith
   have hexact :
       left * leftSlope - right * rightSlope =
@@ -88,7 +88,11 @@ private theorem a113BilinearCancellation
         (|(left - 1 / 2) * leftSlope| +
           |(1 / 2 : ℝ) * (leftSlope - rightSlope)|) +
         |(1 / 2 - right) * rightSlope| :=
-          add_le_add_right (abs_add_le _ _) _
+          by
+            have htriangle := abs_add_le
+              ((left - 1 / 2) * leftSlope)
+              ((1 / 2 : ℝ) * (leftSlope - rightSlope))
+            linarith
     _ ≤ 3 * unit * scale := by
           linarith [hleftProduct, hmiddle, hrightProduct]
 
