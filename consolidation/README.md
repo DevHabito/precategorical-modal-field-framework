@@ -8,7 +8,7 @@
 
 **A113 independent small-left theorem:** [uniform rational proof for every M>=521, every source in the frozen interval and 2<=k<=29; middle/right/central sectors remain open](A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md).
 
-**A113 finite A84 coefficient bounds (2026-10-20):** [formally certified beta/source/target affine and linear coefficients, constant channel and exact-coefficient identity pending isolated replay](A113_A84_COEFFICIENT_ENVELOPES_2026-10-20.md). The full A113 E-F remainder remains open.
+**A113 finite A84 coefficient bounds (2026-10-20):** [formally certified beta/source/target affine and linear coefficients, constant channel, and exact A83/A84 identity with independent leanchecker replay](A113_A84_COEFFICIENT_ENVELOPES_2026-10-20.md). The full A113 E-F remainder remains open.
 
 **A113 bilinear coefficient checkpoint (2026-10-20):** [three actual A84 channel products with 3U/M caps, pinned Lean build/axiom trace and isolated checker PASS, independent exact regressions](A113_BILINEAR_COEFFICIENT_CHECKPOINT_2026-10-20.md). The global finite-M E-F error remains open.
 
