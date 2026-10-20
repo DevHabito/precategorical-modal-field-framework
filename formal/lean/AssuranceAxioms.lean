@@ -23,3 +23,7 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.rationalScalarNonclosure
 #print axioms PrecategoryFormal.centralNestingForbidsNegativeToPositive
 #print axioms PrecategoryFormal.positiveNestingAllowsNegativeSecondSecant
+#print axioms PrecategoryFormal.contactAdjacentFactor_eq_tenTermFactor
+#print axioms PrecategoryFormal.contactIdealCore_from_cofactors
+#print axioms PrecategoryFormal.contactSmallLeftRationalMargin
+#print axioms PrecategoryFormal.contactA113SmallLeftPositive_of_analyticEnvelopes
