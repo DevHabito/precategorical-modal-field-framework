@@ -198,18 +198,18 @@ the full A113 theorem. The next independent review must verify:
 
 1. the ten-term A84 factor identity connecting the actual adjacent
    compressed LP objective differences to the majorant decomposition;
-2. all uniform remainder inequalities for `H_r`, `eta_r`,
-   `Delta`, and each affine coefficient across both parities;
-3. the claim that the small-left, middle-left, remote-right and
-   central `J` error budgets bound the original `E_k`
-   **for every admissible integer `k`, every `M>=521`,
-   every real `s` in the closed interval**;
+2. the still-needed uniform `eta_r`, `Delta`, and affine remainder bounds
+   for the middle, remote and central sectors across both parities;
+3. the original-factor error budgets for the middle-left, remote-right
+   and central `J` sectors **for every admissible index,
+   every `M>=521`, and every real `s` in the closed interval**;
 4. any overlap, omitted contact, equality or endpoint case in the
    partition `k<=29`, `30<=k<=b`, `k>=b+3`;
 5. whether the Wronskian/Chebyshev and LP hypotheses required to
    infer the global compressed maximizer are stated completely;
 6. a theorem-by-theorem classical literature comparison.
 
-The original result is therefore **replay-confirmed, not yet
-independently derivation-confirmed**. No physical result, novelty
+The complete original A113 result remains **replay-confirmed but not fully
+independently derivation-confirmed**; only the declared small-left sector
+has been closed by the present clean-room argument. No physical result, novelty
 claim or unrestricted LP classification follows from this step.
