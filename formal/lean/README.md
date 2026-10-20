@@ -264,6 +264,28 @@ quantifiers. The A84 affine/linear/constant perturbation bounds and
 `|E-F|<20U_M` remain formally open. See the
 [target and slope checkpoint](../../consolidation/A113_TARGET_AND_MOMENT_ENVELOPES_2026-10-20.md).
 
+## A113 / C3 — first bilinear channel coefficient bounds (2026-10-20)
+
+`PrecategoryFormal/A113BilinearEnvelopes.lean` encodes the actual three
+A84 bilinear channel products `A*a_s-H_s*a_tau`,
+`A*a_beta-H_beta*a_tau` and `H_beta*a_s-H_s*a_beta`.
+For every integer `M>=521` and source `129/1000<=s<=133/1000`,
+the source proves a `3*U_M/M` absolute cap on each expression using
+the earlier formally checked H, target-mass and slope deviations.
+
+An initial module build passed in
+[run 39487083634](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39487083634).
+The later complete root import, selected axiom trace and independent
+`leanchecker (PrecategoryFormal.A113BilinearEnvelopes)` must all pass
+on the exact committed source before certifying this new module.
+An independent exact-rational script was added to the audit workflow
+to regress the affine, linear, constant and E/F envelopes at sampled
+size/source/contact values; these checks are not universal proofs.
+
+This is a component of, **not** a substitute for, the open uniform
+`|E_(M,k)(s)-F_k(s)|<20*U_M` bound. See the
+[bilinear checkpoint](../../consolidation/A113_BILINEAR_COEFFICIENT_CHECKPOINT_2026-10-20.md).
+
 ## Deliberate nonclaims
 
 The MF-R008 formalization proves the declared representative-code counting theorem and the realizability of every counted literal code. It does **not** retain or count discarded SCC membership assignments as part of the code, make the representative code injective, establish novelty/priority, or imply anything physical.
