@@ -41,3 +41,6 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.a113NodePower_le_unit_div_128
 #print axioms PrecategoryFormal.a113NodeNextPower_le_unit_div_768
 #print axioms PrecategoryFormal.a113HalfCoefficient_div_denominator_le_third
+#print axioms PrecategoryFormal.a113EvenDefect_abs_lt_half
+#print axioms PrecategoryFormal.a113OddDefect_abs_lt_half
+#print axioms PrecategoryFormal.a113Defect_abs_lt_half
