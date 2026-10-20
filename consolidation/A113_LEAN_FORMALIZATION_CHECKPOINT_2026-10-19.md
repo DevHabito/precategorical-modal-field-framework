@@ -45,10 +45,16 @@ and every integer contact 2<=k<=29, E_(M,k)(s)>0
 module has now proved the ideal-core uniform lower bound for all
 `2<=k<=29` under the real source interval. See
 [A113 ideal-core recurrence](A113_IDEAL_CORE_RECURRENCE_2026-10-20.md).
-The finite-`M` frozen `D_M` and `H_r` channels with even/odd cases,
-the `|E-E0|<20U` remainder bound, and the dyadic `U` inequality
-remain open formal obligations. The earlier conditional theorem is
-**not** an unconditional theorem about the actual factor.
+**Second update (2026-10-20):** the finite-`M` parity-sensitive
+`D_M` and opposite-sign `H_r` channels are now defined in
+[`A113FiniteChannels.lean`](../formal/lean/PrecategoryFormal/A113FiniteChannels.lean),
+and the size bound `U<=2^-260` and common-denominator positivity are
+proved in Lean. See the
+[finite-channel checkpoint](A113_FINITE_CHANNELS_LEAN_CHECKPOINT_2026-10-20.md).
+Their **uniform analytic upper bounds**, the complete actual-to-ideal
+`|E-E0|<20U` remainder, and consequently the unconditional small-left
+sign theorem remain **open**. Conditional transport is not a proof of
+its unverified premise.
 
 ## Independent cross-check, not a substitute for Lean
 
@@ -82,10 +88,11 @@ historical ZIP integrity gate. Its red result must not be suppressed.
 
 The all-contact ideal-core lower bound is now proved separately by an
 exact recurrence, rather than by a homogeneous-symmetric-polynomial
-identity. **Next:** formalize the even/odd `D_M(r)` and opposite-sign
-tolerance adjustments in `H_beta` and `H_s`. Prove the monotone dyadic and
+identity. **Next:** derive the even/odd `|D_M(r)|` bounds and the
+`|H_r-1/2|` bounds from the now-formalized parity channels. Prove the
 high-power envelopes analytically, then the affine coefficient and
-constant-channel bounds. Only then may the current conditional
+constant-channel bounds. The dyadic size bound and denominator positivity
+are already verified and must not be treated as assumptions. Only then may the current conditional
 transport theorem be instantiated with proved premises to certify the
 unconditional small-left sign law in Lean.
 
