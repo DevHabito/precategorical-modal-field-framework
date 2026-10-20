@@ -40,10 +40,15 @@ For every integer M>=521, every real s in [129/1000,133/1000],
 and every integer contact 2<=k<=29, E_(M,k)(s)>0
 ```
 
-**is not yet an output of Lean**. In particular, the current Lean file
-does not prove the uniform ideal-core lower bound for all `2<=k<=29`,
-does not define the actual frozen `D_M` and `H_r` channels with their
-even/odd cases, and does not derive the `|E-E0|<20U` remainder bound.
+**is not yet an output of Lean**. **Subsequent update (2026-10-20):** the separate
+[`A113IdealCoreUniform.lean`](../formal/lean/PrecategoryFormal/A113IdealCoreUniform.lean)
+module has now proved the ideal-core uniform lower bound for all
+`2<=k<=29` under the real source interval. See
+[A113 ideal-core recurrence](A113_IDEAL_CORE_RECURRENCE_2026-10-20.md).
+The finite-`M` frozen `D_M` and `H_r` channels with even/odd cases,
+the `|E-E0|<20U` remainder bound, and the dyadic `U` inequality
+remain open formal obligations. The earlier conditional theorem is
+**not** an unconditional theorem about the actual factor.
 
 ## Independent cross-check, not a substitute for Lean
 
@@ -75,10 +80,10 @@ historical ZIP integrity gate. Its red result must not be suppressed.
 
 ## Next unclosed mathematical tasks
 
-First formalize the homogeneous-symmetric-polynomial core identity for
-arbitrary `k>=1` and derive its uniform lower bound for `2<=k<=29`.
-Next formalize the even/odd `D_M(r)` and opposite-sign tolerance
-adjustments in `H_beta` and `H_s`. Prove the monotone dyadic and
+The all-contact ideal-core lower bound is now proved separately by an
+exact recurrence, rather than by a homogeneous-symmetric-polynomial
+identity. **Next:** formalize the even/odd `D_M(r)` and opposite-sign
+tolerance adjustments in `H_beta` and `H_s`. Prove the monotone dyadic and
 high-power envelopes analytically, then the affine coefficient and
 constant-channel bounds. Only then may the current conditional
 transport theorem be instantiated with proved premises to certify the
