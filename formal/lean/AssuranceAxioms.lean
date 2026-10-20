@@ -32,3 +32,8 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.contactIdealCore_lower_power
 #print axioms PrecategoryFormal.contactA113IdealCore_uniform_lower
 #print axioms PrecategoryFormal.contactA113SmallLeftPositive_of_error_and_unit
+#print axioms PrecategoryFormal.a113Unit_le_boundary
+#print axioms PrecategoryFormal.a113Denominator_ge_three_quarters
+#print axioms PrecategoryFormal.a113H_channel_difference
+#print axioms PrecategoryFormal.a113ActualFactor_eq_tenTerm
+#print axioms PrecategoryFormal.a113ActualFactor_pos_of_uniform_error
