@@ -119,7 +119,9 @@ private theorem contactPow_antitone
     (z : ℝ) (hz : 0 ≤ z) (hone : z ≤ 1)
     (n m : ℕ) (hnm : n ≤ m) :
     z ^ m ≤ z ^ n := by
-  obtain ⟨d, hd⟩ : ∃ d : ℕ, m = n + d := by omega
+  obtain ⟨d, hd⟩ : ∃ d : ℕ, m = n + d := by
+    refine ⟨m - n, ?_⟩
+    omega
   subst m
   have hpow : ∀ j : ℕ, z ^ j ≤ 1 := by
     intro j
@@ -154,7 +156,9 @@ theorem contactA113IdealCore_uniform_lower (k : ℕ) (source : ℝ)
         (1 / 2 - 133 / 1000) *
         (129 / 2000 : ℝ) ^ 28 ≤
       contactIdealCore k (1 / 8) (1 / 2) source := by
-  obtain ⟨n, hk⟩ : ∃ n : ℕ, k = n + 1 := by omega
+  obtain ⟨n, hk⟩ : ∃ n : ℕ, k = n + 1 := by
+    refine ⟨k - 1, ?_⟩
+    omega
   subst k
   have hn : n ≤ 28 := by omega
   have hsBeta : (1 / 8 : ℝ) ≤ source := by linarith
