@@ -117,6 +117,29 @@ def check_case(size: int, source: Fraction) -> int:
             + (target_affine + contact * target_linear) * TARGET**contact
             + constant
         )
+        # Independent A83 cofactor route: do not reuse named A84 coefficients.
+        def mass(node: Fraction) -> Fraction:
+            return node**contact - 1 + contact * model.slope(node)
+
+        def mass_difference(node: Fraction) -> Fraction:
+            return (node - 1) * node**contact + model.slope(node)
+
+        beta_mass = mass(BETA)
+        target_mass_at_contact = mass(TARGET)
+        source_mass = mass(source)
+        beta_diff = mass_difference(BETA)
+        target_diff = mass_difference(TARGET)
+        source_diff = mass_difference(source)
+
+        cofactor_x = target_mass * beta_mass - beta_h * target_mass_at_contact
+        cofactor_y = -target_mass * beta_diff + beta_h * target_diff
+        cofactor_w = -beta_mass * target_diff + target_mass_at_contact * beta_diff
+        actual_from_cofactors = (
+            cofactor_x * source_diff
+            + cofactor_y * source_mass
+            + cofactor_w * source_h
+        )
+        assert actual_from_cofactors == actual
         assert abs(actual - ideal_core(contact, source)) < 20 * unit
 
     return len(CONTACTS)
@@ -128,6 +151,7 @@ def main() -> None:
     print("A113 independent A84 coefficient/factor rational regression: PASS")
     print(f"Size/source pairs: {len(SIZES) * len(SOURCES)}")
     print(f"Contact factor comparisons: {checked}")
+    print(f"Independent A83 cofactor-to-A84 identity controls: {checked}")
     print("Bilinear/affine/linear/constant cases: 54/54/54/18")
     print("Finite controls are not a universal real/integer theorem.")
 
