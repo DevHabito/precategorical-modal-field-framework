@@ -8,7 +8,7 @@
 
 **A113 independent small-left theorem:** [uniform rational proof for every M>=521, every source in the frozen interval and 2<=k<=29; middle/right/central sectors remain open](A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md).
 
-**A113 H-channel candidate (2026-10-20):** [both plus/minus tolerance bounds, separate source/beta statements, exact rational cross-checks; final pinned Lean/leanchecker verification pending](A113_H_ENVELOPES_FORMAL_CHECKPOINT_2026-10-20.md).
+**A113 kernel-checked H envelopes (2026-10-20):** [both plus/minus tolerance bounds, uniform beta/source theorems, pinned Lean axiom audit and isolated leanchecker pass](A113_H_ENVELOPES_FORMAL_CHECKPOINT_2026-10-20.md). The full finite-M E error remains open.
 
 **A113 formal defect bound (2026-10-20):** [Lean proof of `|D_M(r)|<U_M/2` for all M>=521 and 0<=r<=1/6, with even/odd checker replay; H and full E error remain open](A113_DEFECT_SIGNS_FORMAL_CHECKPOINT_2026-10-20.md). [Earlier analytic derivation](A113_DEFECT_ENVELOPE_DERIVATION_2026-10-20.md).
 
