@@ -8,7 +8,7 @@
 
 **A113 independent small-left theorem:** [uniform rational proof for every M>=521, every source in the frozen interval and 2<=k<=29; middle/right/central sectors remain open](A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md).
 
-**A113 defect-envelope checkpoint (2026-10-20):** [Lean geometric/dyadic coefficient lemmas plus exact even/odd D derivation; final D triangle steps not yet formalized](A113_DEFECT_ENVELOPE_DERIVATION_2026-10-20.md).
+**A113 formal defect bound (2026-10-20):** [Lean proof of `|D_M(r)|<U_M/2` for all M>=521 and 0<=r<=1/6, with even/odd checker replay; H and full E error remain open](A113_DEFECT_SIGNS_FORMAL_CHECKPOINT_2026-10-20.md). [Earlier analytic derivation](A113_DEFECT_ENVELOPE_DERIVATION_2026-10-20.md).
 
 **A113 finite parity channels (2026-10-20):** [exact even/odd D and opposite-sign H definitions, formal dyadic and denominator bounds, finite-error obligation still open](A113_FINITE_CHANNELS_LEAN_CHECKPOINT_2026-10-20.md).
 
