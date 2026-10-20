@@ -8,6 +8,8 @@
 
 **A113 independent small-left theorem:** [uniform rational proof for every M>=521, every source in the frozen interval and 2<=k<=29; middle/right/central sectors remain open](A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md).
 
+**A113 finite parity channels (2026-10-20):** [exact even/odd D and opposite-sign H definitions, formal dyadic and denominator bounds, finite-error obligation still open](A113_FINITE_CHANNELS_LEAN_CHECKPOINT_2026-10-20.md).
+
 **A113 new all-contact ideal-core bound (2026-10-20):** [exact recurrence, universally quantified Lean lower bound, independent rational regression, and explicitly open finite-M error analysis](A113_IDEAL_CORE_RECURRENCE_2026-10-20.md).
 
 **A113 Lean 4 checkpoint:** [formal A83/A84 algebraic identity and explicit conditional positivity transport; all-k analytic envelopes remain to be formalized](A113_LEAN_FORMALIZATION_CHECKPOINT_2026-10-19.md).
