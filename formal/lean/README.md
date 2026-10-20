@@ -313,8 +313,13 @@ and yield an exact symbolic `actual-ideal` decomposition, with no
 discarded finite-size terms. Its Lean build and two selected axiom
 traces passed in
 [run 39491049530](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491049530).
-The module-specific checker is pending in
-[run 39491064741](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491064741).
+The exact identity module's isolated `leanchecker` **passed** in
+[run 39491064741](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491064741),
+together with the root build and the two selected axiom traces. These
+traces contain only `propext`, `Classical.choice` and `Quot.sound`.
+Another checker failed before executing its proof because of a TLS
+Lean-toolchain download error; module-specific assurance is unaffected
+but the entire run is not yet certified green.
 
 **Still open:** combine the seven term bounds into the unconditional
 `|E-F|<20U_M` small-left estimate; the rest of A113's contacts and
