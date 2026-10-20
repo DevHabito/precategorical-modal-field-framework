@@ -55,7 +55,9 @@ private theorem evenAlgebraBound
   have hb : b ≤ (5 / 384 : ℝ) * u := by
     dsimp [b]
     have hcoef : 1 + 2 * h * u / d ≤ 5 / 3 := by
-      nlinarith [hratio]
+      calc
+        1 + 2 * h * u / d = 1 + 2 * (h * u / d) := by ring
+        _ ≤ 5 / 3 := by linarith
     calc
       (1 + 2 * h * u / d) * p ≤ (5 / 3 : ℝ) * p :=
         mul_le_mul_of_nonneg_right hcoef hp0
@@ -65,7 +67,9 @@ private theorem evenAlgebraBound
   have hc : c ≤ (1 / 1152 : ℝ) * u := by
     dsimp [c]
     have hcoef : 2 * (h - 1) * u / d ≤ 2 / 3 := by
-      nlinarith [hrest]
+      calc
+        2 * (h - 1) * u / d = 2 * ((h - 1) * u / d) := by ring
+        _ ≤ 2 / 3 := by linarith
     calc
       2 * (h - 1) * u * q / d = (2 * (h - 1) * u / d) * q := by ring
       _ ≤ (2 / 3 : ℝ) * q :=
@@ -76,7 +80,13 @@ private theorem evenAlgebraBound
   have hbound : |-a + b - c| < u / 2 := by
     apply abs_lt.mpr
     constructor <;> nlinarith [ha0, hb0, hc0, ha, hb, hc]
-  simpa only [a, b, c] using hbound
+  have hform : (-2 : ℝ) * u * r / d +
+      (1 + 2 * h * u / d) * p -
+      2 * (h - 1) * u * q / d = -a + b - c := by
+    dsimp [a, b, c]
+    ring
+  rw [hform]
+  exact hbound
 
 private theorem oddAlgebraBound
     (h u d r p q : ℝ)
@@ -111,7 +121,10 @@ private theorem oddAlgebraBound
   have hc0 : 0 ≤ c := by
     dsimp [c]
     have hcoef : 0 ≤ (1 / 2 : ℝ) - (3 / 2) * (h - 1) * u / d := by
-      nlinarith [hrest]
+      have heq : (3 / 2 : ℝ) * (h - 1) * u / d =
+          (3 / 2) * ((h - 1) * u / d) := by ring
+      rw [heq]
+      linarith
     positivity
   have ha : a ≤ u / 3 := by
     dsimp [a]
@@ -123,7 +136,10 @@ private theorem oddAlgebraBound
   have hb : b ≤ u / 128 := by
     dsimp [b]
     have hcoef : (1 / 2 : ℝ) + (3 / 2) * h * u / d ≤ 1 := by
-      nlinarith [hratio]
+      have heq : (3 / 2 : ℝ) * h * u / d =
+          (3 / 2) * (h * u / d) := by ring
+      rw [heq]
+      linarith
     have hcoef0 : 0 ≤ (1 / 2 : ℝ) + (3 / 2) * h * u / d := by
       have hc0 : 0 ≤ h * u / d := by positivity
       positivity
@@ -135,7 +151,10 @@ private theorem oddAlgebraBound
   have hc : c ≤ u / 1536 := by
     dsimp [c]
     have hcoef : (1 / 2 : ℝ) - (3 / 2) * (h - 1) * u / d ≤ 1 / 2 := by
-      nlinarith [hrest0]
+      have heq : (3 / 2 : ℝ) * (h - 1) * u / d =
+          (3 / 2) * ((h - 1) * u / d) := by ring
+      rw [heq]
+      linarith
     calc
       ((1 / 2 : ℝ) - (3 / 2) * (h - 1) * u / d) * q
           ≤ (1 / 2 : ℝ) * q :=
@@ -146,7 +165,13 @@ private theorem oddAlgebraBound
   have hbound : |-a + b + c| < u / 2 := by
     apply abs_lt.mpr
     constructor <;> nlinarith [ha0, hb0, hc0, ha, hb, hc]
-  simpa only [a, b, c] using hbound
+  have hform : (-(3 / 2 : ℝ)) * u * r / d +
+      (1 / 2 + (3 / 2 : ℝ) * h * u / d) * p +
+      (1 / 2 - (3 / 2 : ℝ) * (h - 1) * u / d) * q = -a + b + c := by
+    dsimp [a, b, c]
+    ring
+  rw [hform]
+  exact hbound
 
 /-- Exact even-parity A84 defect bound for every admissible real node. -/
 theorem a113EvenDefect_abs_lt_half (size : ℕ) (node : ℝ)
@@ -171,7 +196,7 @@ theorem a113EvenDefect_abs_lt_half (size : ℕ) (node : ℝ)
     (a113NodePower_le_unit_div_128 size node hsize hnode0 hnode)
     (pow_nonneg hnode0 _)
     (a113NodeNextPower_le_unit_div_768 size node hsize hnode0 hnode)
-  convert h using 1 <;> unfold a113EvenDefect <;> ring
+  simpa only [a113EvenDefect] using h
 
 /-- Exact odd-parity A84 defect bound for every admissible real node. -/
 theorem a113OddDefect_abs_lt_half (size : ℕ) (node : ℝ)
@@ -196,7 +221,7 @@ theorem a113OddDefect_abs_lt_half (size : ℕ) (node : ℝ)
     (a113NodePower_le_unit_div_128 size node hsize hnode0 hnode)
     (pow_nonneg hnode0 _)
     (a113NodeNextPower_le_unit_div_768 size node hsize hnode0 hnode)
-  convert h using 1 <;> unfold a113OddDefect <;> ring
+  simpa only [a113OddDefect] using h
 
 /-- Uniform A113 defect estimate, including both size parities. -/
 theorem a113Defect_abs_lt_half (size : ℕ) (node : ℝ)
