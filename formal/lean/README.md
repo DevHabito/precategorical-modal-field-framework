@@ -237,6 +237,31 @@ do not by themselves prove the A113 sign. See the
 [H-envelope checkpoint](../../consolidation/A113_H_ENVELOPES_FORMAL_CHECKPOINT_2026-10-20.md)
 and [formal defect checkpoint](../../consolidation/A113_DEFECT_SIGNS_FORMAL_CHECKPOINT_2026-10-20.md).
 
+## A113 / C3 — target normalization and moment slopes (2026-10-20)
+
+The new `PrecategoryFormal/A113MomentEnvelopes.lean` proves the exact
+finite-M target and slope bounds for every integer `M>=521` and
+every real `0<=r<=1/2`. It establishes
+`|A_M-1/2|<=U_M/2`, `1/2<=A_M<=1`,
+`0<=a_M(r)<=1/M` and `|a_M(r)-1/M|<=U_M/M`.
+For the beta/source nodes `r<=1/6` it sharpens the slope error to
+`U_M/(128*M)`, without redefining the original moment slope.
+
+The pinned Lean 4.33.1 `lake build` and seven selected axiom traces
+passed at code commit `3dd0525f9bc9644f71be51e775aab3829cfb8562`
+in [formal run 39466591437](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39466591437).
+The printed axiom dependencies are only `propext`,
+`Classical.choice` and `Quot.sound`. The separate
+`leanchecker (PrecategoryFormal.A113MomentEnvelopes)` remains
+pending until its dedicated job completes.
+
+An independently written standard-library Fraction replay also passed
+30 size/node controls in [audit run 39466979975](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39466979975).
+Sampling is only a regression check, not a proof of the universal
+quantifiers. The A84 affine/linear/constant perturbation bounds and
+`|E-F|<20U_M` remain formally open. See the
+[target and slope checkpoint](../../consolidation/A113_TARGET_AND_MOMENT_ENVELOPES_2026-10-20.md).
+
 ## Deliberate nonclaims
 
 The MF-R008 formalization proves the declared representative-code counting theorem and the realizability of every counted literal code. It does **not** retain or count discarded SCC membership assignments as part of the code, make the representative code injective, establish novelty/priority, or imply anything physical.
