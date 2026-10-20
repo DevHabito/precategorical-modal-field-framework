@@ -49,3 +49,10 @@ The output must be reviewed before using a "kernel-only" assurance label.
 #print axioms PrecategoryFormal.a113H_abs_sub_half_lt_unit
 #print axioms PrecategoryFormal.a113HBeta_abs_sub_half_lt_unit
 #print axioms PrecategoryFormal.a113HSource_abs_sub_half_lt_unit
+#print axioms PrecategoryFormal.a113TargetPower_le_unit
+#print axioms PrecategoryFormal.a113TargetMass_abs_error_le_half_unit
+#print axioms PrecategoryFormal.a113TargetMass_bounds
+#print axioms PrecategoryFormal.a113NodeFullPower_le_unit
+#print axioms PrecategoryFormal.a113MomentSlope_bounds
+#print axioms PrecategoryFormal.a113MomentSlope_abs_error_le_unit_div_size
+#print axioms PrecategoryFormal.a113SmallNodeMomentSlope_abs_error_le_unit_div_size
