@@ -138,8 +138,9 @@ theorem a113Unit_le_boundary (size : ℕ)
     omega
   unfold a113Unit
   rw [hindex, pow_add]
-  exact (mul_le_mul_of_nonneg_left
-    (a113HalfPower_le_one offset) (by positivity)).trans_eq (by ring)
+  simpa only [mul_one] using
+    (mul_le_mul_of_nonneg_left (a113HalfPower_le_one offset)
+      (pow_nonneg (by norm_num : (0 : ℝ) ≤ 1 / 2) 260))
 
 /--
 A geometric induction bounds the denominator correction:
