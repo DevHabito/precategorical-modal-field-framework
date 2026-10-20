@@ -1,0 +1,64 @@
+name: Repair root integrity indexes on audit branch
+
+on:
+  push:
+    branches:
+      - audit/2026-10-19-trust-and-integrity
+    paths:
+      - ".github/workflows/repair-root-integrity-indexes.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/repair-root-integrity-indexes.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-integrity-audit-2026-10-19
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/audit/2026-10-19-trust-and-integrity') || (github.event_name == 'pull_request' && github.event.pull_request.head.ref == 'audit/2026-10-19-trust-and-integrity' && github.event.pull_request.head.repo.full_name == 'DevHabito/precategorical-modal-field-framework')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact audit branch
+        uses: actions/checkout@v4
+        with:
+          ref: audit/2026-10-19-trust-and-integrity
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Verify branch guard
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "audit/2026-10-19-trust-and-integrity"
+
+      - name: Regenerate root indexes from tracked bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/refresh_integrity_indexes.py --write
+          python tools/refresh_integrity_indexes.py --check
+          python tools/validate_repository.py
+          git diff --check
+          git diff --stat -- MANIFEST.csv SHA256SUMS.txt
+
+      - name: Commit only generated root indexes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- MANIFEST.csv SHA256SUMS.txt; then
+            echo "Indexes are already up-to-date."
+            exit 0
+          fi
+          git add -- MANIFEST.csv SHA256SUMS.txt
+          test "$(git diff --cached --name-only | wc -l)" -eq 2
+          git diff --cached --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(integrity): refresh tracked-file SHA-256 inventories"
+          git push origin HEAD:refs/heads/audit/2026-10-19-trust-and-integrity

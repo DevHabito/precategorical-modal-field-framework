@@ -1,0 +1,39 @@
+name: Read-only partial ZIP member recovery
+
+on:
+  push:
+    branches:
+      - audit/2026-10-19-trust-and-integrity
+    paths:
+      - "tools/inspect_truncated_zip_members.py"
+      - "tools/replay_salvaged_a113_certificate.py"
+      - ".github/workflows/partial-zip-salvage.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "tools/inspect_truncated_zip_members.py"
+      - "tools/replay_salvaged_a113_certificate.py"
+      - ".github/workflows/partial-zip-salvage.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  partial-member-inspection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout historical packages without modification
+        uses: actions/checkout@v4
+      - name: Report separately CRC-verified local-header members
+        run: python3 tools/inspect_truncated_zip_members.py
+      - name: Prepare ephemeral output directory for unchanged A113 source
+        run: sudo install -d -m 0777 /mnt/data
+      - name: Install pinned symbolic algebra in isolated venv
+        run: |
+          python3 -m venv "$RUNNER_TEMP/a113-venv"
+          "$RUNNER_TEMP/a113-venv/bin/python" -m pip install --disable-pip-version-check sympy==1.13.3
+      - name: Replay CRC-recovered original A113 exact certificate
+        run: |
+          "$RUNNER_TEMP/a113-venv/bin/python" tools/replay_salvaged_a113_certificate.py

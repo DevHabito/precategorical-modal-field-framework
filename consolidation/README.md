@@ -2,6 +2,40 @@
 
 **Status:** active repository reorganization; no mathematical claim is strengthened by this editorial layer.
 
+**Literature scope check:** [Verified classical precedents and unresolved priority questions](../docs/novelty/CONSOLIDATION_CLASSICAL_LITERATURE_2026-10-19.md).
+
+**A113 recovered primary source:** [23 exact checks replayed from CRC-verified original code, independent parity contact-envelope proof, and open universal majorant audit](A113_RECOVERED_CERTIFICATE_AND_CONTACT_ENVELOPES_2026-10-19.md).
+
+**A113 independent small-left theorem:** [uniform rational proof for every M>=521, every source in the frozen interval and 2<=k<=29; middle/right/central sectors remain open](A113_SMALL_LEFT_UNIFORM_PROOF_2026-10-19.md).
+
+**A113 finite A84 coefficient bounds (2026-10-20):** [formally certified beta/source/target affine and linear coefficients, constant channel, and exact A83/A84 identity with independent leanchecker replay](A113_A84_COEFFICIENT_ENVELOPES_2026-10-20.md). The full A113 E-F remainder remains open.
+
+**A113 bilinear coefficient checkpoint (2026-10-20):** [three actual A84 channel products with 3U/M caps, pinned Lean build/axiom trace and isolated checker PASS, independent exact regressions](A113_BILINEAR_COEFFICIENT_CHECKPOINT_2026-10-20.md). The global finite-M E-F error remains open.
+
+**A113 target and moment slopes (2026-10-20):** [finite-M mass correction, nonnegative moment slopes, exact unit-over-M error, pinned Lean 26/26 including isolated leanchecker, plus independent Fraction replay](A113_TARGET_AND_MOMENT_ENVELOPES_2026-10-20.md).
+
+**A113 kernel-checked H envelopes (2026-10-20):** [both plus/minus tolerance bounds, uniform beta/source theorems, pinned Lean axiom audit and isolated leanchecker pass](A113_H_ENVELOPES_FORMAL_CHECKPOINT_2026-10-20.md). The full finite-M E error remains open.
+
+**A113 formal defect bound (2026-10-20):** [Lean proof of `|D_M(r)|<U_M/2` for all M>=521 and 0<=r<=1/6, with even/odd checker replay; H and full E error remain open](A113_DEFECT_SIGNS_FORMAL_CHECKPOINT_2026-10-20.md). [Earlier analytic derivation](A113_DEFECT_ENVELOPE_DERIVATION_2026-10-20.md).
+
+**A113 finite parity channels (2026-10-20):** [exact even/odd D and opposite-sign H definitions, formal dyadic and denominator bounds, finite-error obligation still open](A113_FINITE_CHANNELS_LEAN_CHECKPOINT_2026-10-20.md).
+
+**A113 new all-contact ideal-core bound (2026-10-20):** [exact recurrence, universally quantified Lean lower bound, independent rational regression, and explicitly open finite-M error analysis](A113_IDEAL_CORE_RECURRENCE_2026-10-20.md).
+
+**A113 Lean 4 checkpoint:** [formal A83/A84 algebraic identity and explicit conditional positivity transport; all-k analytic envelopes remain to be formalized](A113_LEAN_FORMALIZATION_CHECKPOINT_2026-10-19.md).
+
+**Critical reproducibility blocker:** [Three invalid historical ZIPs, three dated checksum mismatches, and the guarded recovery protocol](HISTORICAL_ZIP_INTEGRITY_FINDING_2026-10-19.md).
+
+**A112 determinant and Q-ECT reviews:** [independent Schur orientation](C3_A112_DETERMINANT_REDERIVATION_2026-10-19.md) and [multiplicity-aware Q reduced-cost zero budget](C3_A112_Q_REDUCED_COST_ZERO_BUDGET_2026-10-19.md).
+
+**C3 analytic-tail review:** [Frozen A110–A114 theorem scopes, exact counterexamples, independent LP oracle, open proof gates](C3_A110_A114_ADVERSARIAL_CHECKPOINT_2026-10-19.md).
+
+**F3/MF-R049 formal proof:** [exact rational counterexample, centered exponential transport, and proof scope](F3_RATIONAL_NONCLOSURE_2026-10-19.md).
+
+**Lean axiom trace:** [actual theorem-level dependencies from CI](LEAN_AXIOM_DEPENDENCIES_2026-10-19.md).
+
+**Assurance checkpoint (2026-10-19):** [trust boundaries, independently reproduced finite claims, and stale SHA-256 indexes](ASSURANCE_CHECKPOINT_2026-10-19.md). This is a partial audit, not a completed independent peer review or a release certificate.
+
 The purpose of Consolidation 1.0 is to make the project readable, independently checkable, and resistant to common-mode errors. The historical A-number sequence remains preserved as provenance, but it is no longer the preferred way to navigate the mathematics.
 
 ## Three strictly separated layers

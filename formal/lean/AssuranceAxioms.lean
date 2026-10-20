@@ -1,0 +1,68 @@
+import PrecategoryFormal
+
+/-!
+Assurance trace for selected Consolidation 1.0 theorems.
+
+This file prints axiom dependencies but does not prove any new theorem.
+The output must be reviewed before using a "kernel-only" assurance label.
+-/
+
+#print axioms PrecategoryFormal.encodedPosetCount_five
+#print axioms PrecategoryFormal.representativeCodeCount_five_verified
+#print axioms PrecategoryFormal.natCard_literalRepresentativeCode_five
+#print axioms PrecategoryFormal.historicalRepresentativeCode_not_injective
+#print axioms PrecategoryFormal.mf_r009_graph_level_code_collision
+#print axioms PrecategoryFormal.changedPairCount_five
+#print axioms PrecategoryFormal.edgeToggleProbability_five_crossmul
+#print axioms PrecategoryFormal.reachCode_eq_iff_sameReachability5
+#print axioms PrecategoryFormal.addDirectedEdge_preserves_reachability_iff
+#print axioms PrecategoryFormal.rationalMoment_difference
+#print axioms PrecategoryFormal.rationalInitialDataAgree
+#print axioms PrecategoryFormal.rationalRescaledMomentsDiffer
+#print axioms PrecategoryFormal.affineFourExponentialMoment_factorization
+#print axioms PrecategoryFormal.rationalScalarNonclosure
+#print axioms PrecategoryFormal.centralNestingForbidsNegativeToPositive
+#print axioms PrecategoryFormal.positiveNestingAllowsNegativeSecondSecant
+#print axioms PrecategoryFormal.contactAdjacentFactor_eq_tenTermFactor
+#print axioms PrecategoryFormal.contactIdealCore_from_cofactors
+#print axioms PrecategoryFormal.contactSmallLeftRationalMargin
+#print axioms PrecategoryFormal.contactA113SmallLeftPositive_of_analyticEnvelopes
+#print axioms PrecategoryFormal.contactIdealCore_step_identity
+#print axioms PrecategoryFormal.contactIdealCore_step_lower
+#print axioms PrecategoryFormal.contactIdealCore_lower_power
+#print axioms PrecategoryFormal.contactA113IdealCore_uniform_lower
+#print axioms PrecategoryFormal.contactA113SmallLeftPositive_of_error_and_unit
+#print axioms PrecategoryFormal.a113Unit_le_boundary
+#print axioms PrecategoryFormal.a113Denominator_ge_three_quarters
+#print axioms PrecategoryFormal.a113H_channel_difference
+#print axioms PrecategoryFormal.a113ActualFactor_eq_tenTerm
+#print axioms PrecategoryFormal.a113ActualFactor_pos_of_uniform_error
+#print axioms PrecategoryFormal.a113GeometricPowerBound
+#print axioms PrecategoryFormal.a113NodePower_le_unit_div_128
+#print axioms PrecategoryFormal.a113NodeNextPower_le_unit_div_768
+#print axioms PrecategoryFormal.a113HalfCoefficient_div_denominator_le_third
+#print axioms PrecategoryFormal.a113EvenDefect_abs_lt_half
+#print axioms PrecategoryFormal.a113OddDefect_abs_lt_half
+#print axioms PrecategoryFormal.a113Defect_abs_lt_half
+#print axioms PrecategoryFormal.a113FullPower_le_unit_div_128
+#print axioms PrecategoryFormal.a113Epsilon_le_unit_div_1875
+#print axioms PrecategoryFormal.a113H_abs_sub_half_lt_unit
+#print axioms PrecategoryFormal.a113HBeta_abs_sub_half_lt_unit
+#print axioms PrecategoryFormal.a113HSource_abs_sub_half_lt_unit
+#print axioms PrecategoryFormal.a113TargetPower_le_unit
+#print axioms PrecategoryFormal.a113TargetMass_abs_error_le_half_unit
+#print axioms PrecategoryFormal.a113TargetMass_bounds
+#print axioms PrecategoryFormal.a113NodeFullPower_le_unit
+#print axioms PrecategoryFormal.a113MomentSlope_bounds
+#print axioms PrecategoryFormal.a113MomentSlope_abs_error_le_unit_div_size
+#print axioms PrecategoryFormal.a113SmallNodeMomentSlope_abs_error_le_unit_div_size
+#print axioms PrecategoryFormal.a113BilinearMomentChannelBound
+#print axioms PrecategoryFormal.a113BetaBilinearBound
+#print axioms PrecategoryFormal.a113SourceBilinearBound
+#print axioms PrecategoryFormal.a113TargetBilinearBound
+#print axioms PrecategoryFormal.a113ChannelDifferencesBound
+#print axioms PrecategoryFormal.a113LinearCoefficientsBound
+#print axioms PrecategoryFormal.a113AffineCoefficientsBound
+#print axioms PrecategoryFormal.a113ConstantCoefficientBound
+#print axioms PrecategoryFormal.a113ActualFactor_eq_namedCoefficients
+#print axioms PrecategoryFormal.a113ActualFactor_sub_ideal_eq_namedErrors

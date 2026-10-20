@@ -61,6 +61,14 @@ jobs:
           nanoda: false
           use-mathlib-cache: true
 
+      - name: Print selected theorem axiom dependencies
+        shell: bash
+        working-directory: formal/lean
+        run: |
+          set -euo pipefail
+          export PATH="$HOME/.elan/bin:$PATH"
+          lake env lean AssuranceAxioms.lean
+
   leanchecker:
     needs: lean
     runs-on: ubuntu-latest
@@ -68,6 +76,19 @@ jobs:
       fail-fast: false
       matrix:
         module:
+          - PrecategoryFormal.CompressedCentralNesting
+          - PrecategoryFormal.A113SmallLeftBridge
+          - PrecategoryFormal.A113IdealCoreUniform
+          - PrecategoryFormal.A113FiniteChannels
+          - PrecategoryFormal.A113DefectEnvelopes
+          - PrecategoryFormal.A113DefectSigns
+          - PrecategoryFormal.A113HEnvelopes
+          - PrecategoryFormal.A113MomentEnvelopes
+          - PrecategoryFormal.A113BilinearEnvelopes
+          - PrecategoryFormal.A113CoefficientEnvelopes
+          - PrecategoryFormal.A113CoefficientIdentity
+          - PrecategoryFormal.DynamicNonclosure
+          - PrecategoryFormal.DynamicNonclosureTransport
           - PrecategoryFormal.EdgeAdditionReachability
           - PrecategoryFormal.EdgeToggleIndicatorBridge
           - PrecategoryFormal.EdgeToggleEnsembleBridge

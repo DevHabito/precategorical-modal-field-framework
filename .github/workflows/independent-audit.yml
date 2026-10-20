@@ -1,0 +1,112 @@
+name: Independent finite and integrity-tool checks
+
+on:
+  push:
+    branches:
+      - main
+      - "audit/**"
+    paths:
+      - "tools/independent_finite_crosscheck.py"
+      - "tools/independent_graph_toggle_oracle.py"
+      - "tools/independent_c2_rational_witness.py"
+      - "tools/independent_c3_adversarial_checks.py"
+      - "tools/independent_c3_determinant_orientation.py"
+      - "tools/independent_a119_interval_replay.py"
+      - "tools/inspect_truncated_zip_members.py"
+      - "tools/replay_salvaged_a113_certificate.py"
+      - "tools/independent_a113_contact_envelopes.py"
+      - "tools/independent_a113_small_left.py"
+      - "tools/independent_a113_ideal_core.py"
+      - "tools/independent_a113_target_and_slopes.py"
+      - "tools/independent_a113_bilinear_coefficients.py"
+      - "tools/refresh_integrity_indexes.py"
+      - "tools/tests/**"
+      - ".github/workflows/independent-audit.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "tools/independent_finite_crosscheck.py"
+      - "tools/independent_graph_toggle_oracle.py"
+      - "tools/independent_c2_rational_witness.py"
+      - "tools/independent_c3_adversarial_checks.py"
+      - "tools/independent_c3_determinant_orientation.py"
+      - "tools/independent_a119_interval_replay.py"
+      - "tools/inspect_truncated_zip_members.py"
+      - "tools/replay_salvaged_a113_certificate.py"
+      - "tools/independent_a113_contact_envelopes.py"
+      - "tools/independent_a113_small_left.py"
+      - "tools/independent_a113_ideal_core.py"
+      - "tools/independent_a113_target_and_slopes.py"
+      - "tools/independent_a113_bilinear_coefficients.py"
+      - "tools/refresh_integrity_indexes.py"
+      - "tools/tests/**"
+      - ".github/workflows/independent-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out revision
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile audit tools
+        run: python -m compileall -q tools/independent_finite_crosscheck.py tools/independent_graph_toggle_oracle.py tools/independent_c2_rational_witness.py tools/independent_c3_adversarial_checks.py tools/independent_c3_determinant_orientation.py tools/independent_a119_interval_replay.py tools/independent_a113_contact_envelopes.py tools/independent_a113_small_left.py tools/independent_a113_ideal_core.py tools/independent_a113_target_and_slopes.py tools/independent_a113_bilinear_coefficients.py tools/replay_salvaged_a113_certificate.py tools/inspect_truncated_zip_members.py tools/refresh_integrity_indexes.py tools/tests
+
+      - name: Run independent exact finite checks
+        run: python tools/independent_finite_crosscheck.py
+
+      - name: Exhaustively verify small graph toggles against DFS
+        run: python tools/independent_graph_toggle_oracle.py
+
+      - name: Verify independent MF-R049 rational witness
+        run: python tools/independent_c2_rational_witness.py
+
+      - name: Run exact C3 adversarial and LP cross-checks
+        run: python tools/independent_c3_adversarial_checks.py
+
+      - name: Check C3 Schur determinant orientation exactly
+        run: python tools/independent_c3_determinant_orientation.py
+
+      - name: Independently verify A113 contact envelopes
+        run: python tools/independent_a113_contact_envelopes.py
+
+      - name: Independently verify A113 uniform small-left positivity
+        run: python tools/independent_a113_small_left.py
+
+      - name: Audit independent A113 ideal-core recurrence and boundaries
+        run: python tools/independent_a113_ideal_core.py
+
+      - name: Independently replay A113 target and moment slopes
+        run: python tools/independent_a113_target_and_slopes.py
+
+      - name: Independently audit exact A113 bilinear and affine channels
+        run: python tools/independent_a113_bilinear_coefficients.py
+
+      - name: Replay A119 rational interval certificate
+        run: python tools/independent_a119_interval_replay.py
+
+      - name: Prepare pinned A113 replay venv
+        run: |
+          python -m venv "$RUNNER_TEMP/a113-venv"
+          "$RUNNER_TEMP/a113-venv/bin/python" -m pip install --disable-pip-version-check sympy==1.13.3
+          sudo install -d -m 0777 /mnt/data
+
+      - name: Replay original CRC-recovered A113 certificate
+        run: |
+          "$RUNNER_TEMP/a113-venv/bin/python" tools/replay_salvaged_a113_certificate.py
+
+      - name: Run integrity-tool tests
+        run: python -m unittest discover -s tools/tests -v
+
+      # The root SHA-256 indexes are known to be stale at the baseline.
+      # Add a strict full-checkout index gate only after reviewed regeneration.
