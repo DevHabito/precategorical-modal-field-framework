@@ -317,9 +317,10 @@ The exact identity module's isolated `leanchecker` **passed** in
 [run 39491064741](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491064741),
 together with the root build and the two selected axiom traces. These
 traces contain only `propext`, `Classical.choice` and `Quot.sound`.
-Another checker failed before executing its proof because of a TLS
-Lean-toolchain download error; module-specific assurance is unaffected
-but the entire run is not yet certified green.
+An unrelated checker initially failed to download the Lean toolchain
+because of TLS. It passed on a retry with **no mathematical source
+changes**. The final pinned [run 39491064741](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/39491064741)
+completed **29/29 jobs successfully**, including both new modules.
 
 **Still open:** combine the seven term bounds into the unconditional
 `|E-F|<20U_M` small-left estimate; the rest of A113's contacts and
