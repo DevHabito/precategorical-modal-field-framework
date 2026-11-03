@@ -32,3 +32,4 @@ import PrecategoryFormal.A113DeltaPreliminaries
 import PrecategoryFormal.A113DeltaPowerGaps
 import PrecategoryFormal.A113DeltaScalarBudgets
 import PrecategoryFormal.A113DeltaParityIdentities
+import PrecategoryFormal.A113DeltaUniform
