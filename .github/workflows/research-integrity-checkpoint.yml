@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - research/2026-11-03-a113-evidence-ledger
-    paths:
-      - ".github/workflows/research-integrity-checkpoint.yml"
   workflow_dispatch:
 
 permissions:
