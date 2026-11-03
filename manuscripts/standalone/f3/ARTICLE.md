@@ -144,9 +144,9 @@ An earlier **different** witness already exists in this repository at \(\lambda=
 
 ## 5. Verification and availability
 
-This document contains a complete human-readable proof. The exact rational witness and transport identity are also formalized in the existing repository modules \`DynamicNonclosure.lean\` and \`DynamicNonclosureTransport.lean\`. Their earlier Lean assurance results are described in \`consolidation/F3_RATIONAL_NONCLOSURE_2026-10-19.md\`. The new standalone checker \`tools/f3_standalone_exact.py\` uses Python's standard-library \`Fraction\` and performs no project imports.
+This document contains a complete human-readable proof. The exact rational witness and transport identity are also formalized in the existing repository modules `DynamicNonclosure.lean` and `DynamicNonclosureTransport.lean`. Their earlier Lean assurance results are described in `consolidation/F3_RATIONAL_NONCLOSURE_2026-10-19.md`. The new standalone checker `tools/f3_standalone_exact.py` uses Python's standard-library `Fraction` and performs no project imports.
 
-Automated checks are not independent external review. The reviewer should first receive \`REVIEWER_PROBLEM.md\` **without this proof**, submit a derivation or counterexample, and then review the manuscript. The external review gate remains open until a qualified, uninvolved reviewer provides an actual written assessment.
+Automated checks are not independent external review. The reviewer should first receive `REVIEWER_PROBLEM.md` **without this proof**, submit a derivation or counterexample, and then review the manuscript. The external review gate remains open until a qualified, uninvolved reviewer provides an actual written assessment.
 
 ## References
 

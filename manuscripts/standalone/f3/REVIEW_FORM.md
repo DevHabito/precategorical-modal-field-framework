@@ -32,6 +32,6 @@ For each issue, supply a theorem/equation reference, severity (blocking/major/mi
 
 ## Mandatory preservation
 
-The repository must retain the date, source commit, original criticism, reproducible counterexample if one is found, change made, and follow-up verdict. Do not mark \`EXTERNALLY_CHECKED\` or \`PEER_REVIEWED\` merely because this form exists, because CI passes, or because an AI agrees with the manuscript.
+The repository must retain the date, source commit, original criticism, reproducible counterexample if one is found, change made, and follow-up verdict. Do not mark `EXTERNALLY_CHECKED` or `PEER_REVIEWED` merely because this form exists, because CI passes, or because an AI agrees with the manuscript.
 
-An initial blind attempt must be submitted **before** the solution is revealed if it is to count as V2 under \`consolidation/INDEPENDENT_VERIFICATION_PROTOCOL.md\`. A later, informed specialist critique is still useful V4 evidence but should be labeled separately.
+An initial blind attempt must be submitted **before** the solution is revealed if it is to count as V2 under `consolidation/INDEPENDENT_VERIFICATION_PROTOCOL.md`. A later, informed specialist critique is still useful V4 evidence but should be labeled separately.

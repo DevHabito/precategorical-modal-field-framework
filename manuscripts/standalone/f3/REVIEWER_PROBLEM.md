@@ -1,6 +1,6 @@
 # Blind rederivation challenge: one-score nonclosure
 
-**Instructions to an independent reviewer:** Work from the definitions below **without reading** \`ARTICLE.md\`, the existing Lean files, the repository's earlier MF-R049 examples, or the test code. Record the method and any failed attempt before seeing those materials. The challenge is not itself evidence of a completed blind review.
+**Instructions to an independent reviewer:** Work from the definitions below **without reading** `ARTICLE.md`, the existing Lean files, the repository's earlier MF-R049 examples, or the test code. Record the method and any failed attempt before seeing those materials. The challenge is not itself evidence of a completed blind review.
 
 Let \(p=(p_0,p_1,p_2,p_3)\) have strictly positive entries summing to one, supported at positions \(0,1,2,3\). Put \(m(p)=\sum jp_j\) and \(P_p(t)=\sum p_jt^j\). Define
 
@@ -19,6 +19,6 @@ Please also examine:
 - Whether an argument at \(\lambda=0\), \(a=1\), or at a transform parameter unchanged by the update is relevant.
 - Which classical moment/transform uniqueness results might apply, and whether they actually imply the statement.
 
-**Before opening the proof:** submit your derivation, failed approaches, prior-art matches, confidence level and conflict/independence disclosure. Only then compare with \`ARTICLE.md\` and the formal code.
+**Before opening the proof:** submit your derivation, failed approaches, prior-art matches, confidence level and conflict/independence disclosure. Only then compare with `ARTICLE.md` and the formal code.
 
 Review status on creation: **NO EXTERNAL RESPONSE RECEIVED**.

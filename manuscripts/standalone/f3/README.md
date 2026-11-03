@@ -11,10 +11,10 @@ This directory isolates **one** mathematical result: failure of a mean-plus-sing
 
 Reproduce the exact rational checks from the repository root:
 
-\`\`\`sh
+```sh
 python tools/f3_standalone_exact.py
-\`\`\`
+```
 
-The checker uses only Python's standard library and does **not** claim to numerically verify the real logarithm or Lean's proof kernel. The historical Lean sources and their assurance evidence remain under \`formal/lean/\` and \`consolidation/\`.
+The checker uses only Python's standard library and does **not** claim to numerically verify the real logarithm or Lean's proof kernel. The historical Lean sources and their assurance evidence remain under `formal/lean/` and `consolidation/`.
 
 This package is a **review invitation**, not an assertion of originality, peer review, independent external verification or physical discovery.
