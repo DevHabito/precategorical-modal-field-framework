@@ -1,0 +1,65 @@
+name: Research branch root integrity checkpoint
+
+on:
+  push:
+    branches:
+      - research/2026-11-03-a113-evidence-ledger
+    paths:
+      - ".github/workflows/research-integrity-checkpoint.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-2026-11-03-root-indexes
+  cancel-in-progress: false
+
+jobs:
+  root-indexes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact event commit
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Verify branch and head to avoid overwriting concurrent work
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = "refs/heads/research/2026-11-03-a113-evidence-ledger"
+          git fetch --no-tags origin research/2026-11-03-a113-evidence-ledger
+          test "$(git rev-parse FETCH_HEAD)" = "$(git rev-parse HEAD)"
+
+      - name: Regenerate only repository-level tracked-file inventories
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/refresh_integrity_indexes.py --write
+          python tools/refresh_integrity_indexes.py --check
+          python tools/validate_repository.py
+          git diff --check
+          git diff --stat -- MANIFEST.csv SHA256SUMS.txt
+
+      - name: Commit only the two refreshed root indexes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- MANIFEST.csv SHA256SUMS.txt; then
+            echo "Root indexes already current."
+            exit 0
+          fi
+          git add -- MANIFEST.csv SHA256SUMS.txt
+          test "$(git diff --cached --name-only | wc -l)" -eq 2
+          git diff --cached --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(integrity): refresh research-branch tracked-file SHA-256 indexes"
+          git push origin HEAD:refs/heads/research/2026-11-03-a113-evidence-ledger
+
+# This workflow intentionally does not rewrite dated historical manifests or
+# repair any damaged ZIP container. Those remain distinct, failing evidence.
