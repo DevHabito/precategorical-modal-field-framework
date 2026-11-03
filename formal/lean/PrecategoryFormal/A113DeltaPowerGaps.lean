@@ -41,9 +41,11 @@ theorem a113NodeFullPower_le_unit_div_million
   have hnode1 : node ≤ 1 := by linarith
   calc
     node ^ size =
-        node ^ a113HalfIndex size *
+        node ^ (a113HalfIndex size + (size - a113HalfIndex size)) := by
+          exact congrArg (fun exponent : ℕ => node ^ exponent) hsplit
+    _ = node ^ a113HalfIndex size *
           node ^ (size - a113HalfIndex size) := by
-        rw [hsplit, pow_add]
+        rw [pow_add]
     _ ≤ node ^ a113HalfIndex size * 1 :=
       mul_le_mul_of_nonneg_left
         (a113NodePow_le_one node _ hnode0 hnode1)
