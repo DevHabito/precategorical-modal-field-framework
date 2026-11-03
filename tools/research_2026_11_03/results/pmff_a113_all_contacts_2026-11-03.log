@@ -1,0 +1,5 @@
+A113 ALL-K RATIONAL REGRESSION PASS
+exact checks: 336; 4 M values, 3 rational sources, all k=2,...,29
+Checked: A83=A84, coefficient envelopes, analytical proposed remainder cap, strict positivity
+maximum sampled |E-F| / U < 1  (integer ceiling)
+Scope: 336 finite tests, not a universal proof nor a Lean result

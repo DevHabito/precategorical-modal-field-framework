@@ -1,0 +1,10 @@
+Symbolic A83-to-A84 identity: PASS (arbitrary formal variables)
+One-term sign mutation negative control: PASS
+Exact rational frozen contract controls: PASS
+Exact rational controls run: 60
+M values: (521, 522, 561, 661)
+s values: ['129/1000', '131/1000', '133/1000']
+k values: (2, 3, 7, 15, 29)
+Maximum observed error / U: < 1 (integer ceiling, no float)
+Exact uniform-margin arithmetic gate: PASS
+Scope: symbolic algebra + 60 finite exact samples; no general Lean proof or all-M proof

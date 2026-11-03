@@ -88,3 +88,11 @@ The work now is:
 ## Epistemic rule
 
 A theorem proved from assumptions `H` establishes only `H -> conclusion`. It does not establish that nature satisfies `H`. Physical interpretation requires a separate operational and empirical bridge.
+
+## 2026-11-03 exact audit and outstanding Lean closure
+
+- [A113 small-left remainder assembly and explicit Lean gate](A113_SMALL_LEFT_CLOSURE_CHECKPOINT_2026-11-03.md) — exact rational regressions, historical source dependencies, uncompiled Lean candidate and unresolved global proof sectors.
+- [Dated evidence and open-obligations log](../docs/research-log/2026-11-03-evidence-and-open-obligations.md).
+- [Verified bibliography and proof-assurance background](../docs/novelty/VERIFIED_CONTEXT_2026-11-03.md).
+
+These new notes are an audit checkpoint, not a promotion of A113 to a kernel-replayed theorem. The candidate is intentionally outside the verified Lean module tree.
