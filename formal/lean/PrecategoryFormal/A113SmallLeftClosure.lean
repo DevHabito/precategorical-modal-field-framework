@@ -195,7 +195,6 @@ theorem a113ActualFactor_abs_error_lt_twenty_units
         contactIdealCore k (1 / 8) (1 / 2) source| =
         |e1 + e2 + e3 + a1 + a2 + a3 + c0| := by
           rw [a113ActualFactor_sub_ideal_eq_namedErrors]
-          rfl
     _ ≤ (18 + (9 * (k : ℝ) + 6) / (size : ℝ)) * unit := hsum
     _ < 20 * a113Unit size := hfinal
 
