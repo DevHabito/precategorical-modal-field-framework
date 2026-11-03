@@ -60,5 +60,11 @@ jobs:
           set -euo pipefail
           python tools/research_2026_11_03/pmff_a113_central_pair_algebra.py
 
+      - name: Audit exact A113 beta-source channel gap (finite diagnostics)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/research_2026_11_03/pmff_a113_delta_channels.py
+
 # These finite regressions are not an all-M or all-real-source theorem and
 # cannot substitute for Lean compilation and its explicit axiom audit.

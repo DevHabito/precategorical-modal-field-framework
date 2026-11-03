@@ -22,3 +22,7 @@ The first and second scripts import \`sympy\`; the third requires only standard-
 | pmff_a113_all_contacts_2026-11-03.py | 336 exact rational cases, all contacts 2..29 over four M and three s values | PASS |
 
 The 60 configurations are a subset of the 336 configurations. None of these scripts runs Lean. Refer to \`../../consolidation/A113_SMALL_LEFT_CLOSURE_CHECKPOINT_2026-11-03.md\` for the mathematical derivation and unresolved assurance gates.
+
+## A113 beta/source gap (next analytic obligation)
+
+`pmff_a113_delta_channels.py` independently checks the original finite-M parity-sensitive H definitions and the exact source-minus-beta normalized gap in 21 rational test cases, with a deliberate sign-orientation negative control. The continuous uniform gap bound is **not** proven by these samples. See `../../consolidation/A113_DELTA_CHANNEL_AUDIT_2026-11-03.md`.
