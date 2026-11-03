@@ -60,8 +60,9 @@ jobs:
           lake env lean AssuranceA113CentralPair.lean
           lake env lean AssuranceA113DeltaPreliminaries.lean
           lake env lean AssuranceA113DeltaPowerGaps.lean
+          lake env lean AssuranceA113DeltaScalarBudgets.lean
 
-      - name: Replay all 32 project modules in leanchecker
+      - name: Replay all 33 project modules in leanchecker
         shell: bash
         working-directory: formal/lean
         run: |
@@ -82,6 +83,7 @@ jobs:
             "PrecategoryFormal.A113CentralPairIdentity"
             "PrecategoryFormal.A113DeltaPreliminaries"
             "PrecategoryFormal.A113DeltaPowerGaps"
+            "PrecategoryFormal.A113DeltaScalarBudgets"
             "PrecategoryFormal.DynamicNonclosure"
             "PrecategoryFormal.DynamicNonclosureTransport"
             "PrecategoryFormal.EdgeAdditionReachability"
@@ -100,13 +102,13 @@ jobs:
             "PrecategoryFormal.RepresentativeCount"
             "PrecategoryFormal.RepresentativeRealization"
           )
-          test "${#modules[@]}" -eq 32
+          test "${#modules[@]}" -eq 33
           for module in "${modules[@]}"; do
             printf '\n=== LEANCHECKER %s ===\n' "$module"
             lake env leanchecker "$module"
             printf 'PASS %s\n' "$module"
           done
-          echo "Full declared 32-module leanchecker matrix PASS"
+          echo "Full declared 33-module leanchecker matrix PASS"
 
 # These are scope-specific proof replays under disclosed axioms, not
 # external mathematical peer review or a certification of physical reality.
