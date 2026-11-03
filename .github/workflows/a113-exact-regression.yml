@@ -54,5 +54,11 @@ jobs:
           set -euo pipefail
           python tools/research_2026_11_03/pmff_a113_all_contacts_2026-11-03.py
 
+      - name: Reproduce exact A113 central pair algebra and negative control
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/research_2026_11_03/pmff_a113_central_pair_algebra.py
+
 # These finite regressions are not an all-M or all-real-source theorem and
 # cannot substitute for Lean compilation and its explicit axiom audit.

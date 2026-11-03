@@ -27,3 +27,4 @@ import PrecategoryFormal.A113BilinearEnvelopes
 import PrecategoryFormal.A113CoefficientEnvelopes
 import PrecategoryFormal.A113CoefficientIdentity
 import PrecategoryFormal.A113SmallLeftClosure
+import PrecategoryFormal.A113CentralPairIdentity

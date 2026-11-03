@@ -57,8 +57,9 @@ jobs:
           set -euo pipefail
           lake env lean AssuranceAxioms.lean
           lake env lean AssuranceA113SmallLeftClosure.lean
+          lake env lean AssuranceA113CentralPair.lean
 
-      - name: Replay all 29 project modules in leanchecker
+      - name: Replay all 30 project modules in leanchecker
         shell: bash
         working-directory: formal/lean
         run: |
@@ -76,6 +77,7 @@ jobs:
             "PrecategoryFormal.A113CoefficientEnvelopes"
             "PrecategoryFormal.A113CoefficientIdentity"
             "PrecategoryFormal.A113SmallLeftClosure"
+            "PrecategoryFormal.A113CentralPairIdentity"
             "PrecategoryFormal.DynamicNonclosure"
             "PrecategoryFormal.DynamicNonclosureTransport"
             "PrecategoryFormal.EdgeAdditionReachability"
@@ -94,13 +96,13 @@ jobs:
             "PrecategoryFormal.RepresentativeCount"
             "PrecategoryFormal.RepresentativeRealization"
           )
-          test "${#modules[@]}" -eq 29
+          test "${#modules[@]}" -eq 30
           for module in "${modules[@]}"; do
             printf '\n=== LEANCHECKER %s ===\n' "$module"
             lake env leanchecker "$module"
             printf 'PASS %s\n' "$module"
           done
-          echo "Full declared 29-module leanchecker matrix PASS"
+          echo "Full declared 30-module leanchecker matrix PASS"
 
 # These are scope-specific proof replays under disclosed axioms, not
 # external mathematical peer review or a certification of physical reality.
