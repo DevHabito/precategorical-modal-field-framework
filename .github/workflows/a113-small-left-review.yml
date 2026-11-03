@@ -1,0 +1,65 @@
+name: A113 experimental Lean closure review
+
+on:
+  push:
+    branches:
+      - research/2026-11-03-a113-evidence-ledger
+    paths:
+      - "formal/lean/**"
+      - ".github/workflows/a113-small-left-review.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lean-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact branch commit
+        uses: actions/checkout@v6
+
+      - name: Reject proof placeholders
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE '\b(sorry|admit)\b' formal/lean --include='*.lean'; then
+            echo "Forbidden proof placeholder found."
+            exit 1
+          fi
+
+      - name: Bootstrap pinned Lean
+        working-directory: formal/lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf \
+            | sh -s -- -y --default-toolchain "$(cat lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          test -f lake-manifest.json
+
+      - name: Compile pinned Lean project
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          lake-package-directory: formal/lean
+          auto-config: false
+          build: true
+          test: false
+          lint: false
+          leanchecker: false
+          nanoda: false
+          use-mathlib-cache: true
+
+      - name: Print both new theorem axiom traces
+        working-directory: formal/lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake env lean AssuranceA113SmallLeftClosure.lean
+
+      - name: Run candidate module proof checker
+        working-directory: formal/lean
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake env leanchecker PrecategoryFormal.A113SmallLeftClosure

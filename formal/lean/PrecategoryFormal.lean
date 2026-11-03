@@ -26,3 +26,10 @@ import PrecategoryFormal.A113MomentEnvelopes
 import PrecategoryFormal.A113BilinearEnvelopes
 import PrecategoryFormal.A113CoefficientEnvelopes
 import PrecategoryFormal.A113CoefficientIdentity
+import PrecategoryFormal.A113SmallLeftClosure
+import PrecategoryFormal.A113CentralPairIdentity
+import PrecategoryFormal.A113DeltaPreliminaries
+import PrecategoryFormal.A113DeltaPowerGaps
+import PrecategoryFormal.A113DeltaScalarBudgets
+import PrecategoryFormal.A113DeltaParityIdentities
+import PrecategoryFormal.A113DeltaUniform

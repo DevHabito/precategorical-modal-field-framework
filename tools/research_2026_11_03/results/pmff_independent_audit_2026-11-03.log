@@ -1,0 +1,12 @@
+AUDIT-ID: F3-2026-11-03 (standalone Python, sympy + fractions)
+cubic coefficient identity: PASS
+constraint nullspace dimension = 1
+positivity, total mass, mean: PASS
+initial exact moment: 85/256
+contracted exact moments: 121/256 119/256
+strict rational difference: 1/128
+negative perturbation control: PASS
+scope: exact rational witness and algebra; no Lean compilation
+A113 symbolic generating-function identity: PASS
+A113 exact small-left margin and worst-case arithmetic cap: PASS
+SCOPE: mathematical subclaims only; cannot certify Lean modules or full A113

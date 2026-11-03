@@ -1,0 +1,119 @@
+name: A113 complete Lean checker regression (research)
+
+on:
+  push:
+    branches:
+      - research/2026-11-03-a113-evidence-ledger
+    paths:
+      - ".github/workflows/a113-complete-lean-regression.yml"
+      - "formal/lean/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  complete-lean-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - name: Checkout exact tested commit
+        uses: actions/checkout@v6
+
+      - name: Reject proof placeholders
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE '\b(sorry|admit)\b' formal/lean --include='*.lean'; then
+            echo "Forbidden proof placeholder."
+            exit 1
+          fi
+
+      - name: Install pinned Lean toolchain
+        shell: bash
+        working-directory: formal/lean
+        run: |
+          set -euo pipefail
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf \
+            | sh -s -- -y --default-toolchain "$(cat lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          test -f lake-manifest.json
+
+      - name: Build entire project with pinned mathlib
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          lake-package-directory: formal/lean
+          auto-config: false
+          build: true
+          test: false
+          lint: false
+          leanchecker: false
+          nanoda: false
+          use-mathlib-cache: true
+
+      - name: Print existing and new axiom dependencies
+        shell: bash
+        working-directory: formal/lean
+        run: |
+          set -euo pipefail
+          lake env lean AssuranceAxioms.lean
+          lake env lean AssuranceA113SmallLeftClosure.lean
+          lake env lean AssuranceA113CentralPair.lean
+          lake env lean AssuranceA113DeltaPreliminaries.lean
+          lake env lean AssuranceA113DeltaPowerGaps.lean
+          lake env lean AssuranceA113DeltaScalarBudgets.lean
+          lake env lean AssuranceA113DeltaParityIdentities.lean
+          lake env lean AssuranceA113DeltaUniform.lean
+
+      - name: Replay all 35 project modules in leanchecker
+        shell: bash
+        working-directory: formal/lean
+        run: |
+          set -euo pipefail
+          modules=(
+            "PrecategoryFormal.CompressedCentralNesting"
+            "PrecategoryFormal.A113SmallLeftBridge"
+            "PrecategoryFormal.A113IdealCoreUniform"
+            "PrecategoryFormal.A113FiniteChannels"
+            "PrecategoryFormal.A113DefectEnvelopes"
+            "PrecategoryFormal.A113DefectSigns"
+            "PrecategoryFormal.A113HEnvelopes"
+            "PrecategoryFormal.A113MomentEnvelopes"
+            "PrecategoryFormal.A113BilinearEnvelopes"
+            "PrecategoryFormal.A113CoefficientEnvelopes"
+            "PrecategoryFormal.A113CoefficientIdentity"
+            "PrecategoryFormal.A113SmallLeftClosure"
+            "PrecategoryFormal.A113CentralPairIdentity"
+            "PrecategoryFormal.A113DeltaPreliminaries"
+            "PrecategoryFormal.A113DeltaPowerGaps"
+            "PrecategoryFormal.A113DeltaScalarBudgets"
+            "PrecategoryFormal.A113DeltaParityIdentities"
+            "PrecategoryFormal.A113DeltaUniform"
+            "PrecategoryFormal.DynamicNonclosure"
+            "PrecategoryFormal.DynamicNonclosureTransport"
+            "PrecategoryFormal.EdgeAdditionReachability"
+            "PrecategoryFormal.EdgeToggleIndicatorBridge"
+            "PrecategoryFormal.EdgeToggleEnsembleBridge"
+            "PrecategoryFormal.EdgeToggleSemanticBridge"
+            "PrecategoryFormal.EdgeToggleSensitivity"
+            "PrecategoryFormal.GraphSCCBridge"
+            "PrecategoryFormal.LiteralRepresentativeCode"
+            "PrecategoryFormal.PosetBijection"
+            "PrecategoryFormal.PosetCountBridge"
+            "PrecategoryFormal.PosetEnumeration"
+            "PrecategoryFormal.PosetSemantics"
+            "PrecategoryFormal.RepresentativeCode"
+            "PrecategoryFormal.RepresentativeCodeType"
+            "PrecategoryFormal.RepresentativeCount"
+            "PrecategoryFormal.RepresentativeRealization"
+          )
+          test "${#modules[@]}" -eq 35
+          for module in "${modules[@]}"; do
+            printf '\n=== LEANCHECKER %s ===\n' "$module"
+            lake env leanchecker "$module"
+            printf 'PASS %s\n' "$module"
+          done
+          echo "Full declared 35-module leanchecker matrix PASS"
+
+# These are scope-specific proof replays under disclosed axioms, not
+# external mathematical peer review or a certification of physical reality.

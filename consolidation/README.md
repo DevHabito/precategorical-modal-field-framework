@@ -88,3 +88,17 @@ The work now is:
 ## Epistemic rule
 
 A theorem proved from assumptions `H` establishes only `H -> conclusion`. It does not establish that nature satisfies `H`. Physical interpretation requires a separate operational and empirical bridge.
+
+## 2026-11-03 exact audit and outstanding Lean closure
+
+- [A113 small-left remainder assembly and explicit Lean gate](A113_SMALL_LEFT_CLOSURE_CHECKPOINT_2026-11-03.md) — exact rational regressions, historical source dependencies, uncompiled Lean candidate and unresolved global proof sectors.
+- [Dated evidence and open-obligations log](../docs/research-log/2026-11-03-evidence-and-open-obligations.md).
+- [Verified bibliography and proof-assurance background](../docs/novelty/VERIFIED_CONTEXT_2026-11-03.md).
+
+These new notes are an audit checkpoint, not a promotion of A113 to a kernel-replayed theorem. The candidate is intentionally outside the verified Lean module tree.
+
+**Subsequent formal outcome (2026-11-03):** [A113 small-left closure passed pinned Lean compilation, two exact axiom traces and a dedicated module checker](A113_SMALL_LEFT_LEAN_VERIFICATION_2026-11-03.md). The previous uncompiled-candidate checkpoint and initial failed build remain preserved. A complete-module regression and all other A113 sectors remain separate obligations.
+
+**Further A113 scope (2026-11-03):** [the exact central-pair algebra now passes Lean 4.33.1, standard-axiom inspection and full 30-module leanchecker replay](A113_CENTRAL_PAIR_LEAN_VERIFICATION_2026-11-03.md). [The parity-sensitive Delta bound has 21 finite exact tests but remains a uniform analytic proof obligation](A113_DELTA_CHANNEL_AUDIT_2026-11-03.md). Neither result proves global A113 one-variation or physical consequences.
+
+**Verified Delta milestone (2026-11-03):** [the original parity-sensitive source-minus-beta H-channel interval now has an unconditional-with-respect-to-Delta Lean proof for the frozen M/s domain](A113_DELTA_UNIFORM_LEAN_VERIFICATION_2026-11-03.md). The pinned build, standard-axiom trace and 35-module `leanchecker` all passed. This supersedes the earlier Delta-open status only; central J positivity and global A113 remain open.
