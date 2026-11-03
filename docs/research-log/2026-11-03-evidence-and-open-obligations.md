@@ -65,3 +65,7 @@ What I **did not** do was compile, kernel-check or run \`leanchecker\` against t
 This log is not a substitute for the source proofs. The exact scripts and captured outputs are preserved in \`tools/research_2026_11_03/\`. Source and bibliography checkpoints are linked in the A113 note and \`docs/novelty/VERIFIED_CONTEXT_2026-11-03.md\`. The uncompiled Lean candidate lives in \`consolidation/candidates/\`.
 
 I did not change the mathematics in the historical archives, hide a failing check, report a CI pass without a run, or declare the physical hypothesis confirmed. This is a research checkpoint, not a release claim.
+
+## Later verification on 3 November: exact Delta interval
+
+I closed the previously open parity-sensitive normalized H-channel interval in pinned Lean 4.33.1, including source-to-scalar and both parity identities. [Run 41727101617](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/41727101617) passed the full 35-module checker matrix and reported only `propext`, `Classical.choice`, `Quot.sound` for the two new final statements. I retained the earlier power-gap rewrite failure rather than hiding it. See `../../consolidation/A113_DELTA_UNIFORM_LEAN_VERIFICATION_2026-11-03.md` for the exact proof domain, tests, dates, source files and remaining obligations. This closes one mathematical gap, not all A113 sectors and not any physical claim.
