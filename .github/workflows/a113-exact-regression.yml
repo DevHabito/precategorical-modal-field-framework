@@ -66,5 +66,11 @@ jobs:
           set -euo pipefail
           python tools/research_2026_11_03/pmff_a113_delta_channels.py
 
+      - name: Check exact rational Delta error-budget margins and negative controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/research_2026_11_03/pmff_a113_delta_error_budget.py
+
 # These finite regressions are not an all-M or all-real-source theorem and
 # cannot substitute for Lean compilation and its explicit axiom audit.
