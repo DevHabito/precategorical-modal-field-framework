@@ -1,0 +1,61 @@
+name: MF-R049 review branch integrity indexes
+
+on:
+  push:
+    branches:
+      - review/f3-self-contained-2026-11-03
+    paths:
+      - "manuscripts/standalone/f3/**"
+      - "tools/f3_standalone_exact.py"
+      - "formal/lean/AssuranceF3Standalone.lean"
+      - ".github/workflows/f3-standalone-review.yml"
+      - ".github/workflows/f3-review-integrity.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: f3-review-root-indexes
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: \${{ github.sha }}
+          persist-credentials: true
+          fetch-depth: 1
+      - name: Require exact branch head
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = "refs/heads/review/f3-self-contained-2026-11-03"
+          git fetch --no-tags origin review/f3-self-contained-2026-11-03
+          test "$(git rev-parse FETCH_HEAD)" = "$(git rev-parse HEAD)"
+      - name: Rebuild and validate only root tracked-file indexes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/refresh_integrity_indexes.py --write
+          python tools/refresh_integrity_indexes.py --check
+          python tools/validate_repository.py
+          git diff --check
+      - name: Commit changed root indexes, if any
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- MANIFEST.csv SHA256SUMS.txt; then
+            echo "Indexes already current."
+            exit 0
+          fi
+          git add -- MANIFEST.csv SHA256SUMS.txt
+          git diff --cached --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(integrity): index standalone F3 review files"
+          git push origin HEAD:refs/heads/review/f3-self-contained-2026-11-03
+
+# The three historical malformed ZIPs are neither rewritten nor repaired.
