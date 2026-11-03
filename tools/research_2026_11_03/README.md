@@ -26,3 +26,5 @@ The 60 configurations are a subset of the 336 configurations. None of these scri
 ## A113 beta/source gap (next analytic obligation)
 
 `pmff_a113_delta_channels.py` independently checks the original finite-M parity-sensitive H definitions and the exact source-minus-beta normalized gap in 21 rational test cases, with a deliberate sign-orientation negative control. The continuous uniform gap bound is **not** proven by these samples. See `../../consolidation/A113_DELTA_CHANNEL_AUDIT_2026-11-03.md`.
+
+The exact central-pair symbolic checks also completed successfully in GitHub Actions [41721969226](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/41721969226). The extended finite Delta regression completed successfully in [41722823626](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/41722823626). Neither finite result proves the entire A113 sign theorem. The central-pair **algebraic** result is separately Lean-certified in [41721969228](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/41721969228).
