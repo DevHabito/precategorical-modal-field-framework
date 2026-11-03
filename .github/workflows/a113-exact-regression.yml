@@ -1,0 +1,58 @@
+name: A113 exact rational regression
+
+on:
+  push:
+    branches:
+      - research/2026-11-03-a113-evidence-ledger
+    paths:
+      - ".github/workflows/a113-exact-regression.yml"
+      - "tools/research_2026_11_03/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-exact-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout exact review branch
+        uses: actions/checkout@v6
+
+      - name: Configure Python 3.13
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install pinned symbolic dependency
+        shell: bash
+        run: |
+          set -euo pipefail
+          python --version
+          python -m pip install --disable-pip-version-check "sympy==1.14.0"
+          python -c "import sympy; print('SymPy', sympy.__version__)"
+
+      - name: Syntax-check research scripts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/research_2026_11_03/pmff_independent_audit_2026-11-03.py
+          python -m py_compile tools/research_2026_11_03/pmff_a113_independent_remainder_2026-11-03.py
+          python -m py_compile tools/research_2026_11_03/pmff_a113_all_contacts_2026-11-03.py
+
+      - name: Reproduce exact F3, A113 symbolic and negative controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/research_2026_11_03/pmff_independent_audit_2026-11-03.py
+          python tools/research_2026_11_03/pmff_a113_independent_remainder_2026-11-03.py
+
+      - name: Reproduce all 336 frozen-contract rational controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/research_2026_11_03/pmff_a113_all_contacts_2026-11-03.py
+
+# These finite regressions are not an all-M or all-real-source theorem and
+# cannot substitute for Lean compilation and its explicit axiom audit.
