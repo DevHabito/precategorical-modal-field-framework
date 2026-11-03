@@ -96,3 +96,5 @@ A theorem proved from assumptions `H` establishes only `H -> conclusion`. It doe
 - [Verified bibliography and proof-assurance background](../docs/novelty/VERIFIED_CONTEXT_2026-11-03.md).
 
 These new notes are an audit checkpoint, not a promotion of A113 to a kernel-replayed theorem. The candidate is intentionally outside the verified Lean module tree.
+
+**Subsequent formal outcome (2026-11-03):** [A113 small-left closure passed pinned Lean compilation, two exact axiom traces and a dedicated module checker](A113_SMALL_LEFT_LEAN_VERIFICATION_2026-11-03.md). The previous uncompiled-candidate checkpoint and initial failed build remain preserved. A complete-module regression and all other A113 sectors remain separate obligations.

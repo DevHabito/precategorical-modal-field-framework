@@ -83,3 +83,7 @@ F2/C1.3 is therefore closed at its declared finite scope. Any future generalizat
 ## Freeze rule
 
 During Consolidation 1.0, no new chronological research package is created merely to extend the sequence. New work is allowed only to repair a contradiction, close a formalization gap, or produce an independent verification of a selected core claim.
+
+## 2026-11-03 scoped C3/A113 assurance update (research branch)
+
+The **small-left A113 sector only** (M >= 521, 2 <= k <= 29, 129/1000 <= real s <= 133/1000, frozen beta=1/8 and tau=1/2) now has two separately scoped Lean theorems: `a113ActualFactor_abs_error_lt_twenty_units` and `a113ActualFactor_smallLeft_pos`. Pinned [GitHub Actions run 41718046660](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/41718046660) compiled the entire Lean project, printed only `propext`, `Classical.choice`, `Quot.sound` as the two new theorems' axioms, and passed the dedicated module `leanchecker`. The earlier [failed run 41714981951](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/41714981951) remains recorded. This update **does not** promote the whole A113 optimization theorem, A112, A114, or C3 generally to independent Lean certification. A complete multi-module checker regression, historical package recovery, independent analytic review and literature priority review remain open. See [the exact dated verification record](A113_SMALL_LEFT_LEAN_VERIFICATION_2026-11-03.md).
