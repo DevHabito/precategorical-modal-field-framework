@@ -313,4 +313,39 @@ theorem odd_central_weights_bounds_necessary
   · linarith
   · nlinarith [hprod₂]
 
+/--
+Exact necessary-and-sufficient nonnegativity criterion for the even
+three-site Q block. This is a theorem about the central weights only.
+-/
+theorem even_central_weights_iff
+    (h u D t : ℝ) (hh : 1 ≤ h) (hD : 0 < D) :
+    (0 ≤ (1 - u * t) / D ∧
+      0 ≤ t - h * ((1 - u * t) / D) ∧
+      0 ≤ (h - 1) * ((1 - u * t) / D)) ↔
+      (u * t ≤ 1 ∧ h ≤ t * (D + h * u)) := by
+  constructor
+  · rintro ⟨hq₁, hqh, _⟩
+    exact even_central_weights_bounds_necessary h u D t hD hq₁ hqh
+  · rintro ⟨hupper, hlower⟩
+    simpa only [] using
+      (even_central_weights_nonnegative h u D t hh hD hupper hlower)
+
+/--
+Exact necessary-and-sufficient nonnegativity criterion for the odd
+three-site Q block. No global-LP feasibility is inferred.
+-/
+theorem odd_central_weights_iff
+    (h a u D t : ℝ) (hh : 1 ≤ h) (hD : 0 < D) :
+    (0 ≤ (1 - a * u * t) / D ∧
+      0 ≤ t / 2 - h * ((1 - a * u * t) / D) ∧
+      0 ≤ t / 2 + (h - 1) * ((1 - a * u * t) / D)) ↔
+      (0 ≤ t ∧ a * u * t ≤ 1 ∧
+        2 * h ≤ t * (D + 2 * h * a * u)) := by
+  constructor
+  · rintro ⟨hq₁, hqh, hqh₁⟩
+    exact odd_central_weights_bounds_necessary h a u D t hD hq₁ hqh hqh₁
+  · rintro ⟨ht, hupper, hlower⟩
+    simpa only [] using
+      (odd_central_weights_nonnegative h a u D t hh hD ht hupper hlower)
+
 end PrecategoryFormal.TargetDeformation
