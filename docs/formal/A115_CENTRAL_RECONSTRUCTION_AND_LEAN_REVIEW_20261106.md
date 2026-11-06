@@ -18,7 +18,7 @@ The subsequent changes additionally introduce:
 - a version of the exponential basis difference with `M : Nat` and `r ^ M`, maintaining the original discrete exponent type;
 - a dedicated Leanchecker matrix entry for `PrecategoryFormal.TargetDeformationAudit`.
 
-The last set was submitted as GitHub Actions run [42304567864](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42304567864). **Its final status must be read from the run; it was IN PROGRESS at report preparation. Do not report these latest two lemmas as formally verified until the run passes.**
+The last set was submitted as GitHub Actions run [42304567864](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42304567864). **The Lean build stage completed SUCCESSFULLY** for this commit. Individual Leanchecker replay of the new module was still queued at the latest observation; do not claim its completion until the corresponding job reports success.
 
 ## 2. New independent exact finite reconstruction
 
