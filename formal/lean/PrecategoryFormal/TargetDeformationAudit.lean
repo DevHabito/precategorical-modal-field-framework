@@ -133,4 +133,53 @@ theorem exponential_basis_difference
   field_simp
   ring
 
+/--
+The geometric-polynomial factorization behind positivity of A115's
+central denominator. This is a finite exact identity, with natural
+exponents and an explicit finite sum.
+-/
+theorem central_denominator_geometric_identity (h : ℕ) (τ : ℝ) :
+    1 - ((h + 1 : ℕ) : ℝ) * τ ^ h +
+      (h : ℝ) * τ ^ (h + 1) =
+    (1 - τ) ^ 2 *
+      ∑ j ∈ Finset.range h, ((j + 1 : ℕ) : ℝ) * τ ^ j := by
+  induction h with
+  | zero =>
+      simp
+  | succ h ih =>
+      calc
+        1 - (((h + 1 + 1 : ℕ) : ℝ)) * τ ^ (h + 1) +
+            ((h + 1 : ℕ) : ℝ) * τ ^ (h + 1 + 1) =
+          (1 - ((h + 1 : ℕ) : ℝ) * τ ^ h +
+              (h : ℝ) * τ ^ (h + 1)) +
+            ((h + 1 : ℕ) : ℝ) * τ ^ h * (1 - τ) ^ 2 := by
+              push_cast
+              simp only [pow_succ]
+              ring
+        _ = (1 - τ) ^ 2 *
+              (∑ j ∈ Finset.range h, ((j + 1 : ℕ) : ℝ) * τ ^ j) +
+              ((h + 1 : ℕ) : ℝ) * τ ^ h * (1 - τ) ^ 2 := by rw [ih]
+        _ = (1 - τ) ^ 2 *
+              (∑ j ∈ Finset.range (h + 1),
+                ((j + 1 : ℕ) : ℝ) * τ ^ j) := by
+              rw [Finset.sum_range_succ]
+              ring
+
+/--
+A version of the A115 exponential basis difference that keeps the
+finite-support index and both exponents in Nat, unlike the convenient
+more general real-exponent algebra lemma above.
+-/
+theorem exponential_basis_difference_nat
+    (M k : ℕ) (r : ℝ) (hM : M ≠ 0) :
+    (r ^ (k + 1) - ((M : ℝ) - ((k + 1 : ℕ) : ℝ)) / M -
+      (((k + 1 : ℕ) : ℝ) / M) * r ^ M) -
+    (r ^ k - ((M : ℝ) - (k : ℝ)) / M -
+      ((k : ℝ) / M) * r ^ M) =
+    r ^ (k + 1) - r ^ k + (1 - r ^ M) / M := by
+  have hm : (M : ℝ) ≠ 0 := by exact_mod_cast hM
+  push_cast
+  field_simp
+  ring
+
 end PrecategoryFormal.TargetDeformation
