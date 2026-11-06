@@ -7,6 +7,7 @@ on:
     paths:
       - "audits/a115_independent_central_reconstruction_20261106.py"
       - "audits/a115_independent_feasibility_bounds_20261106.py"
+      - "audits/a115_near_wall_exact_counterexamples_20261106.py"
       - "audits/a119_independent_fraction_certificate_20261106.py"
       - "audits/a122_independent_rational_log_brackets_20261106.py"
       - ".github/workflows/a115-a122-exact-audits.yml"
@@ -32,12 +33,15 @@ jobs:
           python -m py_compile \
             audits/a115_independent_central_reconstruction_20261106.py \
             audits/a115_independent_feasibility_bounds_20261106.py \
+            audits/a115_near_wall_exact_counterexamples_20261106.py \
             audits/a119_independent_fraction_certificate_20261106.py \
             audits/a122_independent_rational_log_brackets_20261106.py
       - name: A115 central reconstruction (exact fractions)
         run: python audits/a115_independent_central_reconstruction_20261106.py
       - name: A115 central feasibility boundaries (exact fractions)
         run: python audits/a115_independent_feasibility_bounds_20261106.py
+      - name: A115 near-wall refutations and rejected out-of-domain control
+        run: python audits/a115_near_wall_exact_counterexamples_20261106.py
       - name: A119 independent interval covering (exact fractions)
         run: python audits/a119_independent_fraction_certificate_20261106.py
       - name: A122 rational logarithm sign brackets
