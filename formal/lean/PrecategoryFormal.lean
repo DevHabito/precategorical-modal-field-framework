@@ -15,3 +15,4 @@ import PrecategoryFormal.EdgeToggleEnsembleBridge
 import PrecategoryFormal.EdgeToggleIndicatorBridge
 import PrecategoryFormal.TargetDeformationAudit
 import PrecategoryFormal.TargetFactorTenChannel
+import PrecategoryFormal.TargetFactorBasisBridge
