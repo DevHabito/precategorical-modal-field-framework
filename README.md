@@ -30,6 +30,8 @@ The strongest material is being compressed into a small number of self-contained
 
 See [`consolidation/CORE_RESULTS_MAP.md`](consolidation/CORE_RESULTS_MAP.md) for scope and status. Novelty/priority is not inferred from mathematical correctness and remains conservative unless separately reviewed.
 
+The current A115–A122 verification work has a [separate research record](docs/research/A115_A122_RESEARCH_RECORD_20261106.md) with a notation dictionary, checked literature references, Lean 4 results, executable rational audits, failed attempts, valid counterexamples, and unresolved proof obligations. That record is on the formal research branch; its successful algebraic checks must not be read as full formalization of A116–A122.
+
 ## Verification policy
 
 The project distinguishes:
