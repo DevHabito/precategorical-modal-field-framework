@@ -182,4 +182,63 @@ theorem exponential_basis_difference_nat
   field_simp
   ring
 
+/--
+Sufficient nonnegativity criterion for the even central Q block.
+These are the exact cross-multiplied bounds implied by the central
+weights, conditional on positive D. This proves feasibility of the
+three weights, not feasibility of the full coupled LP.
+-/
+theorem even_central_weights_nonnegative
+    (h u D t : ℝ)
+    (hh : 1 ≤ h) (hD : 0 < D)
+    (hupper : u * t ≤ 1)
+    (hlower : h ≤ t * (D + h * u)) :
+    let v := 1 - u * t
+    let q₁ := v / D
+    let qh := t - h * q₁
+    let qh₁ := (h - 1) * q₁
+    0 ≤ q₁ ∧ 0 ≤ qh ∧ 0 ≤ qh₁ := by
+  dsimp
+  have hv : 0 ≤ 1 - u * t := by linarith
+  have hq : 0 ≤ (1 - u * t) / D := div_nonneg hv (le_of_lt hD)
+  have hle : h * (1 - u * t) ≤ t * D := by nlinarith [hlower]
+  have hdiv : (h * (1 - u * t)) / D ≤ t :=
+    (div_le_iff₀ hD).2 hle
+  constructor
+  · exact hq
+  constructor
+  · nlinarith [hdiv]
+  · exact mul_nonneg (by linarith) hq
+
+/--
+Sufficient nonnegativity criterion for odd M = 2h+1.
+The parameter a is (1+τ)/2 in the original block, while u=τ^h.
+The explicit t>=0 condition is inherited from probability mass.
+-/
+theorem odd_central_weights_nonnegative
+    (h a u D t : ℝ)
+    (hh : 1 ≤ h) (hD : 0 < D)
+    (ht : 0 ≤ t)
+    (hupper : a * u * t ≤ 1)
+    (hlower : 2 * h ≤ t * (D + 2 * h * a * u)) :
+    let v := 1 - a * u * t
+    let q₁ := v / D
+    let qh := t / 2 - h * q₁
+    let qh₁ := t / 2 + (h - 1) * q₁
+    0 ≤ q₁ ∧ 0 ≤ qh ∧ 0 ≤ qh₁ := by
+  dsimp
+  have hv : 0 ≤ 1 - a * u * t := by linarith
+  have hq : 0 ≤ (1 - a * u * t) / D := div_nonneg hv (le_of_lt hD)
+  have hle : h * (1 - a * u * t) ≤ (t / 2) * D := by
+    nlinarith [hlower]
+  have hdiv : (h * (1 - a * u * t)) / D ≤ t / 2 :=
+    (div_le_iff₀ hD).2 hle
+  constructor
+  · exact hq
+  constructor
+  · nlinarith [hdiv]
+  · have hx : 0 ≤ (h - 1) * ((1 - a * u * t) / D) :=
+      mul_nonneg (by linarith) hq
+    linarith
+
 end PrecategoryFormal.TargetDeformation
