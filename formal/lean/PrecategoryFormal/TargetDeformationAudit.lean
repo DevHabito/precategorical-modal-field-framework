@@ -268,7 +268,6 @@ theorem even_central_weights_bounds_necessary
       (t - h * ((1 - u * t) / D)) * D =
         t * D - h * (1 - u * t) := by
     field_simp [ne_of_gt hD]
-    ring
   rw [hcancel₂] at hprod₂
   constructor
   · linarith
@@ -305,7 +304,6 @@ theorem odd_central_weights_bounds_necessary
       (t / 2 - h * ((1 - a * u * t) / D)) * D =
         t * D / 2 - h * (1 - a * u * t) := by
     field_simp [ne_of_gt hD]
-    ring
   rw [hcancel₂] at hprod₂
   constructor
   · exact ht
