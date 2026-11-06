@@ -83,6 +83,7 @@ jobs:
           - PrecategoryFormal.RepresentativeCodeType
           - PrecategoryFormal.RepresentativeCount
           - PrecategoryFormal.RepresentativeRealization
+          - PrecategoryFormal.TargetDeformationAudit
     steps:
       - name: Checkout
         uses: actions/checkout@v6
