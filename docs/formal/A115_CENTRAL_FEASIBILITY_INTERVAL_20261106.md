@@ -120,3 +120,11 @@ A subsequent commit `86b6eb36aafef1a10abcfd9aa625d45ea02751d3` replaced both opa
 Commit `500c00f1d47dfb469996de52469ca15a4a348f02` adds two more lemmas: `even_central_weights_bounds_necessary` and `odd_central_weights_bounds_necessary`. These derive the interval inequalities from the nonnegativity of the central coordinates, and in the odd case prove `t>=0` from the exact identity that the three weights sum to `t`. Both use explicit multiplication by the proven-positive denominator `D`; no sign-changing division is permitted.
 
 GitHub Actions run: [42306216903](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306216903). **Pending at the time of writing.** If the build fails, retain logs and repair only justified proof steps before claiming a Lean iff result.
+
+## 7. Full iff formulation and exact Lean compiler audit
+
+A follow-up commit `a3f97c403686d8d361ca1c496dfea47d86db6615` combined the sufficient and necessary lemmas into `even_central_weights_iff` and `odd_central_weights_iff`.
+
+Two CI attempts (runs [42306216903](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306216903) and [42306337134](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306337134)) failed. The decisive compiler diagnostics were `No goals to be solved` at lines 271 and 308, where the tactic `field_simp` had already closed an exact quotient identity and a following `ring` had no remaining goal. This is a proof-script error, **not a counterexample to the interval formulas**. Those redundant tactics were removed at commit `0227750ae48ba265de19201cb376e2297683fba5`.
+
+The latest Lean build and dedicated kernel replay are tracked by [run 42306617445](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306617445). Their status must be read from the run before any final PASS claim. Neither passing finite rational tests nor earlier successful builds establishes that this final revision has passed Lean.
