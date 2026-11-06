@@ -85,3 +85,7 @@ confirmed; full-workflow status must be checked independently.
 **Critical scope boundary:** the Lean proof starts from the cofactor definition.
 It does not derive that cofactor from the primal LP's dual multipliers or KKT
 conditions. The sign/optimizer bridge remains an independent obligation.
+
+## Final CI status
+
+GitHub Actions [run 42307816396](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42307816396) was read again after completion: **19/19 jobs SUCCESS** (one Lean build plus eighteen individual Leanchecker jobs), including both new target-factor modules. The formal algebraic claims stated above are thus kernel-replayed. No Lean verification of A116–A122's asymptotic claims is implied.
