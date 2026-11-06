@@ -54,3 +54,19 @@ Do not call the ten channels ten independent theorems. The coefficient identity 
 4. Keep the global LP-feasibility and novelty gates separate from the algebra.
 
 **Epistemic classification:** formal algebra submitted to Lean verification, no new mathematical discovery claimed from the expansion alone.
+
+## Execution and corrections
+
+The first CI attempt failed to parse the variable name `at`, a Lean reserved keyword. It was renamed to `aτ` without changing any formula.
+
+Next, run [42307614789](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42307614789) **successfully built** `TargetFactorTenChannel.lean`, but the overall build failed in `TargetFactorBasisBridge.lean`: the real-valued division definition required `noncomputable`, and strict warning-as-error rejected a tactic composition. The follow-up commit `2908039bdcb9b893022e4348cac2cd80206cef12` marked the definition `noncomputable` and replaced the tactic with a direct `calc` proof.
+
+GitHub Actions [run 42307816396](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42307816396), on the corrected code, reported the overall **Lean build SUCCESS**. The individual `leanchecker` jobs for both new modules were QUEUED at the time of this entry. Their completion must be checked independently.
+
+The new bridge states two separate facts with `M,k : Nat` and `M≠0`:
+```
+finiteBasis M k r = r^k - 1 + k(1-r^M)/M
+finiteBasis M (k+1) r - finiteBasis M k r
+  = (r-1)r^k + (1-r^M)/M
+```
+This is a direct connection to the exact finite basis, not just a generic polynomial identity. Neither statement proves global primal or dual feasibility.
