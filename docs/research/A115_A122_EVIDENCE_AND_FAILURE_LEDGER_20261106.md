@@ -144,3 +144,9 @@ Reproduction file: [A115 near-wall counterexamples](../../audits/a115_near_wall_
 The initial local replay of these three points was interrupted on the *third* point by Python's `ValueError: Exceeds the limit (4300 digits) for integer string conversion`. The first two hashes had already matched. This was an output/serialization limit, not a failed rational sign comparison. I corrected the replay with `sys.set_int_max_str_digits(0)`, ran all three points again, and confirmed both valid hashes and the rejected-domain disposition. The checked-in script includes this explicit setting and explains why.
 
 This is precisely why the evidence log keeps **three different categories**: a refuted mathematical conjecture, an invalid would-be counterexample, and a transient execution failure. Combining them under a generic `FAILED` heading would obscure what actually happened.
+
+## 8. Five-script CI including true refutations — confirmed
+
+The subsequent workflow run [42314767131](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42314767131), from source commit `33921fb02786932d63b1cdc3b2dbacbf037e9bb6`, finished **completed / success**. Its syntax check and **all five** independent exact-rational script steps passed, including the new A115 near-wall refutations. This independently confirms that the version of the code now checked into the repository runs successfully on a clean Python 3.13 GitHub runner.
+
+The previously observed local large-integer serialization failure remains recorded in Section 7 as a **failed earlier attempt**. Successful reruns do not erase the history, and the two `J<0` controls remain true **mathematical refutations**, not test-system errors.
