@@ -110,3 +110,37 @@ The new GitHub Actions workflow `A115-A122 exact arithmetic audits` ran on the c
 **Individual steps:** Python 3.13 setup, syntax checking, A115 central reconstruction, A115 feasibility, A119 interval covering, and A122 rational logarithm sign brackets all reported `success`.
 
 This is the first reported successful execution of all four scripts **from their published repository paths** in a clean GitHub runner. It is distinct from the prior local Python re-execution. The scope limitations in Sections 2 and 4 remain unchanged: the workflow does not run Lean, derive the A119 reduced formula from A118, or establish literature novelty.
+
+## 7. Genuine mathematical refutations, not merely failed build jobs
+
+The original [A115 source audit](../../MFRP_Informational_Requirements_A39-A109/research_updates/A115/A115_TARGET_NODE_DEFORMATION_EXACT_AUDIT_20260914.md) tested whether the frozen threshold `M>=521` implies a positive central combination `J_{tau,b+1}` for every deformed target. **It does not.**
+
+The source reports a coarse rational grid with `J>0` in **192/192** cases, while the stronger three-sign package held in only **170/192**. Crucially, a separate near-wall stress test returned **58 positive and 2 negative among 60 admissible controls**. The apparently reassuring coarse grid was not a theorem.
+
+The two legitimate negative points, copied from A115 and **recomputed here with independent exact fractions**, are:
+
+| M | s | tau | b | Factor-domain check | Exact sign | Recomputed fraction SHA-256 |
+|---|---|---|---:|---|---|---|
+| 521 | 131/1000 | 141/1000 | 252 | `b+2=254 <= h-2=258` | `J<0` | `dc0efb5b23581db2a5c4983e87097884582dddee1fd68d5ec28d9b459bef8bac` |
+| 521 | 133/1000 | 143/1000 | 252 | `b+2=254 <= h-2=258` | `J<0` | `e60c0f4b4bf1ef74867c3d80cebb5fb805364b7d542114fe2f858b6aeea7e34f` |
+
+The SHA-256 hashes were recomputed from the canonical `numerator/denominator` representation and **matched the original A115 document exactly**. This independently supports the **failure of universal positivity** in the claimed domain. It does not invalidate the restricted compact-interior assertions of A116.
+
+One earlier candidate must remain visible but **rejected**:
+
+```text
+M = 521, s = 129/1000, tau = 667/5000
+b = 257, h = 260; b+2 = 259 > h-2 = 258
+algebraic J < 0, but the A84 adjacent factor is out of domain
+DISPOSITION: REJECTED_AS_COUNTEREXAMPLE_OUTSIDE_A84_ADJACENT_FACTOR_DOMAIN
+```
+
+The source note explicitly withdraws this purported counterexample. I recomputed its negative algebraic value and the failed domain check, which are **both** needed to report the result correctly.
+
+Reproduction file: [A115 near-wall counterexamples](../../audits/a115_near_wall_exact_counterexamples_20261106.py). The updated [exact arithmetic CI workflow](../../.github/workflows/a115-a122-exact-audits.yml) now contains a dedicated step for this test. Inspect the run before claiming that the five-script CI has passed.
+
+### A real failed computational attempt and its correction
+
+The initial local replay of these three points was interrupted on the *third* point by Python's `ValueError: Exceeds the limit (4300 digits) for integer string conversion`. The first two hashes had already matched. This was an output/serialization limit, not a failed rational sign comparison. I corrected the replay with `sys.set_int_max_str_digits(0)`, ran all three points again, and confirmed both valid hashes and the rejected-domain disposition. The checked-in script includes this explicit setting and explains why.
+
+This is precisely why the evidence log keeps **three different categories**: a refuted mathematical conjecture, an invalid would-be counterexample, and a transient execution failure. Combining them under a generic `FAILED` heading would obscure what actually happened.
