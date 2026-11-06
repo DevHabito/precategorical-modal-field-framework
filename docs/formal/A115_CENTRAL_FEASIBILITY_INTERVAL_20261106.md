@@ -56,6 +56,20 @@ All three weights are nonnegative **if and only if**
 
 Here `q1>=0` gives the upper bound, `qh>=0` gives the lower bound, and `qh1>=0` follows from `t>=0`, `h>=2`, and `q1>=0`. Conversely, if all three weights are nonnegative, their sum `t` is nonnegative, and the first two conditions imply the bounds.
 
+The denominators simplify without approximation:
+
+```
+D+h*u       = tau*(1+(h-1)*u),
+D+2*h*a*u   = tau*(1+(2*h-1)*u), where a=(1+tau)/2.
+```
+
+Consequently, the exact feasible intervals can also be displayed in the publication-friendly form
+
+```
+even: h/[tau*(1+(h-1)*tau^h)] <= t <= tau^(-h)
+odd:  2h/[tau*(1+(2h-1)*tau^h)] <= t <= 2/[(1+tau)*tau^h].
+```
+
 The intervals are nonempty, with strict separation of endpoints, since `D>0`.
 
 **Important:** this is the exact condition for the **three Q weights only**. It is not by itself sufficient for feasibility of all transform-band constraints, the other measure, KKT inequalities, or global optimality.
