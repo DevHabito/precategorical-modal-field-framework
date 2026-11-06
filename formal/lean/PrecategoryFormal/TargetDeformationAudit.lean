@@ -247,4 +247,70 @@ theorem odd_central_weights_nonnegative
       mul_nonneg (by linarith) hq
     linarith
 
+/--
+The necessity direction for the even Q-block feasibility interval.
+The hypotheses say that the three *actual* central coordinates are
+nonnegative; the conclusion recovers both exact parameter bounds.
+-/
+theorem even_central_weights_bounds_necessary
+    (h u D t : ℝ) (hD : 0 < D)
+    (hq₁ : 0 ≤ (1 - u * t) / D)
+    (hqh : 0 ≤ t - h * ((1 - u * t) / D)) :
+    u * t ≤ 1 ∧ h ≤ t * (D + h * u) := by
+  have hprod : 0 ≤ ((1 - u * t) / D) * D :=
+    mul_nonneg hq₁ (le_of_lt hD)
+  have hcancel : ((1 - u * t) / D) * D = 1 - u * t := by
+    field_simp [ne_of_gt hD]
+  rw [hcancel] at hprod
+  have hprod₂ : 0 ≤ (t - h * ((1 - u * t) / D)) * D :=
+    mul_nonneg hqh (le_of_lt hD)
+  have hcancel₂ :
+      (t - h * ((1 - u * t) / D)) * D =
+        t * D - h * (1 - u * t) := by
+    field_simp [ne_of_gt hD]
+    ring
+  rw [hcancel₂] at hprod₂
+  constructor
+  · linarith
+  · nlinarith [hprod₂]
+
+/--
+The necessity direction for the odd Q-block. Nonnegativity of all
+three weights implies t>=0 because they sum to t.
+-/
+theorem odd_central_weights_bounds_necessary
+    (h a u D t : ℝ) (hD : 0 < D)
+    (hq₁ : 0 ≤ (1 - a * u * t) / D)
+    (hqh : 0 ≤ t / 2 - h * ((1 - a * u * t) / D))
+    (hqh₁ : 0 ≤ t / 2 + (h - 1) * ((1 - a * u * t) / D)) :
+    0 ≤ t ∧ a * u * t ≤ 1 ∧
+      2 * h ≤ t * (D + 2 * h * a * u) := by
+  have hsum :
+      (1 - a * u * t) / D +
+        (t / 2 - h * ((1 - a * u * t) / D)) +
+        (t / 2 + (h - 1) * ((1 - a * u * t) / D)) = t := by
+    ring
+  have ht : 0 ≤ t := by
+    have htotal := add_nonneg (add_nonneg hq₁ hqh) hqh₁
+    rw [hsum] at htotal
+    exact htotal
+  have hprod : 0 ≤ ((1 - a * u * t) / D) * D :=
+    mul_nonneg hq₁ (le_of_lt hD)
+  have hcancel : ((1 - a * u * t) / D) * D = 1 - a * u * t := by
+    field_simp [ne_of_gt hD]
+  rw [hcancel] at hprod
+  have hprod₂ : 0 ≤ (t / 2 - h * ((1 - a * u * t) / D)) * D :=
+    mul_nonneg hqh (le_of_lt hD)
+  have hcancel₂ :
+      (t / 2 - h * ((1 - a * u * t) / D)) * D =
+        t * D / 2 - h * (1 - a * u * t) := by
+    field_simp [ne_of_gt hD]
+    ring
+  rw [hcancel₂] at hprod₂
+  constructor
+  · exact ht
+  constructor
+  · linarith
+  · nlinarith [hprod₂]
+
 end PrecategoryFormal.TargetDeformation
