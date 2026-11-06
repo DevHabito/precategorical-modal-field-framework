@@ -94,3 +94,9 @@ Both specify the bound hypotheses explicitly and prove nonnegativity of all thre
 4. Revisit novelty only after a complete self-contained formulation. Do not claim general moment-space discoveries from this straightforward normalization algebra.
 
 **Verdict:** explicit feasibility interval identified, subjected to exact finite falsification tests and partially encoded in Lean; global LP feasibility and originality are still open.
+
+## 5. Formal compilation failure and corrective step
+
+The first Lean compilation of the sufficiency lemmas at commit `5b85174b934dd9e8b41aa67d122eb2396411b23f` **FAILED** in GitHub Actions run [42305718215](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42305718215). The two logged failures were `linarith failed to find a contradiction` at lines 210 and 239 of the then-current module. The missing step was explicitly associating `h * (v/D)` with `(h*v)/D` before applying the established divided inequality. No mathematical assertion was refuted by these logs.
+
+A subsequent commit `86b6eb36aafef1a10abcfd9aa625d45ea02751d3` replaced both opaque `nlinarith` conclusions with the explicit ring identity followed by the proven bound. It triggered GitHub Actions run [42305941974](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42305941974). The repaired version must **not** be labeled PASS until that run completes successfully.
