@@ -84,6 +84,7 @@ jobs:
           - PrecategoryFormal.RepresentativeCount
           - PrecategoryFormal.RepresentativeRealization
           - PrecategoryFormal.TargetDeformationAudit
+          - PrecategoryFormal.TargetFactorTenChannel
     steps:
       - name: Checkout
         uses: actions/checkout@v6
