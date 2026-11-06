@@ -138,3 +138,7 @@ The Lean project build stage of [run 42306617445](https://github.com/DevHabito/p
 The dedicated job **`leanchecker (PrecategoryFormal.TargetDeformationAudit)`** in [run 42306617445](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306617445) completed with conclusion **SUCCESS**. The build job also completed **SUCCESS**. Therefore the sufficiency, necessity, and equivalence statements for the even/odd three-site central weights are Lean-compiled and individually kernel-replayed at source commit `0227750ae48ba265de19201cb376e2297683fba5`.
 
 This is **not** a Lean formalization of the full constrained LP, A119's global interval-cover certificate, or any of A116–A122's asymptotic theorems. Other unrelated matrix jobs were still completing when this note was amended; do not infer total workflow success until all jobs finish.
+
+## 10. Final workflow status
+
+At final verification, run [42306617445](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306617445) reported **17/17 jobs SUCCESS**: one Lean project build and 16 module-specific Leanchecker replays, including `PrecategoryFormal.TargetDeformationAudit`. This is a complete CI pass for the stated commit, not a proof of the remaining unencoded A115–A122 mathematical claims.
