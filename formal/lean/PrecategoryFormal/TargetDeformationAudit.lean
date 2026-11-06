@@ -61,4 +61,76 @@ theorem even_cutoff_rational_positive :
           (133 / 1000 : ℚ) ^ 14 := by
   norm_num
 
+/--
+Cross-multiplied central target equation for M = 2h.
+Here `u` stands for τ^h and `D=τ-hu+(h-1)τu`.
+The remaining central coordinates have numerators
+`tD-h(1-ut)` and `(h-1)(1-ut)`.
+This is a polynomial identity; division by D requires a separate
+nonzero-denominator hypothesis.
+-/
+theorem even_central_target_numerator
+    (h τ u t : ℝ) :
+    let D := τ - h * u + (h - 1) * τ * u
+    let v := 1 - u * t
+    τ * v + u * (t * D - h * v) +
+      τ * u * ((h - 1) * v) = D := by
+  dsimp
+  ring
+
+/--
+Cross-multiplied central mean equation for M = 2h.
+-/
+theorem even_central_mean_numerator
+    (h τ u t : ℝ) :
+    let D := τ - h * u + (h - 1) * τ * u
+    let v := 1 - u * t
+    v + h * (t * D - h * v) +
+      (h + 1) * ((h - 1) * v) = h * t * D := by
+  dsimp
+  ring
+
+/--
+Cross-multiplied central target equation for M = 2h+1.
+The odd coordinate numerators are `tD/2-hv` and
+`tD/2+(h-1)v`.
+-/
+theorem odd_central_target_numerator
+    (h τ u t : ℝ) :
+    let D := τ - h * u + (h - 1) * τ * u
+    let v := 1 - ((1 + τ) / 2) * u * t
+    τ * v + u * ((t * D) / 2 - h * v) +
+      τ * u * ((t * D) / 2 + (h - 1) * v) = D := by
+  dsimp
+  ring
+
+/--
+Cross-multiplied central mean equation for M = 2h+1.
+-/
+theorem odd_central_mean_numerator
+    (h τ u t : ℝ) :
+    let D := τ - h * u + (h - 1) * τ * u
+    let v := 1 - ((1 + τ) / 2) * u * t
+    v + h * ((t * D) / 2 - h * v) +
+      (h + 1) * ((t * D) / 2 + (h - 1) * v) =
+        (h + 1 / 2) * t * D := by
+  dsimp
+  ring
+
+/--
+The exact A115 finite-difference identity for the discrete
+exponential/moment basis, with a common nonzero real M.
+This identity is independent of parity and of the LP.
+-/
+theorem exponential_basis_difference
+    (M r : ℝ) (k : ℕ) (hM : M ≠ 0) :
+    (r ^ (k + 1) - ((M - ((k + 1 : ℕ) : ℝ)) / M) -
+      (((k + 1 : ℕ) : ℝ) / M) * r ^ M) -
+    (r ^ k - ((M - (k : ℝ)) / M) -
+      ((k : ℝ) / M) * r ^ M) =
+    r ^ (k + 1) - r ^ k + (1 - r ^ M) / M := by
+  push_cast
+  field_simp
+  ring
+
 end PrecategoryFormal.TargetDeformation
