@@ -128,3 +128,7 @@ A follow-up commit `a3f97c403686d8d361ca1c496dfea47d86db6615` combined the suffi
 Two CI attempts (runs [42306216903](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306216903) and [42306337134](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306337134)) failed. The decisive compiler diagnostics were `No goals to be solved` at lines 271 and 308, where the tactic `field_simp` had already closed an exact quotient identity and a following `ring` had no remaining goal. This is a proof-script error, **not a counterexample to the interval formulas**. Those redundant tactics were removed at commit `0227750ae48ba265de19201cb376e2297683fba5`.
 
 The latest Lean build and dedicated kernel replay are tracked by [run 42306617445](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306617445). Their status must be read from the run before any final PASS claim. Neither passing finite rational tests nor earlier successful builds establishes that this final revision has passed Lean.
+
+## 8. Compiled iff theorem checkpoint
+
+The Lean project build stage of [run 42306617445](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306617445) completed **SUCCESSFULLY**, including the sufficiency, necessity, and combined iff lemmas. The dedicated `leanchecker (PrecategoryFormal.TargetDeformationAudit)` job was IN PROGRESS at this observation; its final verdict is a separate verification gate.
