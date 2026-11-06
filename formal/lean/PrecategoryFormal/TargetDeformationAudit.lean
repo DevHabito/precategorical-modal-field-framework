@@ -207,7 +207,10 @@ theorem even_central_weights_nonnegative
   constructor
   · exact hq
   constructor
-  · nlinarith [hdiv]
+  · apply sub_nonneg.mpr
+    calc
+      h * ((1 - u * t) / D) = (h * (1 - u * t)) / D := by ring
+      _ ≤ t := hdiv
   · exact mul_nonneg (by linarith) hq
 
 /--
@@ -236,7 +239,10 @@ theorem odd_central_weights_nonnegative
   constructor
   · exact hq
   constructor
-  · nlinarith [hdiv]
+  · apply sub_nonneg.mpr
+    calc
+      h * ((1 - a * u * t) / D) = (h * (1 - a * u * t)) / D := by ring
+      _ ≤ t / 2 := hdiv
   · have hx : 0 ≤ (h - 1) * ((1 - a * u * t) / D) :=
       mul_nonneg (by linarith) hq
     linarith
