@@ -100,3 +100,13 @@ The original manuscripts use words such as `PROVED` for their own derivations. I
 6. Which claimed boundary classifications are direct consequences of classical variation-diminishing theory, and which are genuinely family-specific? This remains a literature task.
 
 **Current verdict:** the recorded algebraic Lean statements have passed kernel replay, and the specified rational checks have passed. The whole A115–A122 program has **not** been independently formalized, and originality has **not** been certified.
+
+## 6. Published-code CI verification (confirmed)
+
+The new GitHub Actions workflow `A115-A122 exact arithmetic audits` ran on the checked-in audit scripts at source commit `80a7797b33d54781789405736c4470ec41d000e1`.
+
+**Run:** [42314533047](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42314533047)  
+**Observed status:** `completed / success`.  
+**Individual steps:** Python 3.13 setup, syntax checking, A115 central reconstruction, A115 feasibility, A119 interval covering, and A122 rational logarithm sign brackets all reported `success`.
+
+This is the first reported successful execution of all four scripts **from their published repository paths** in a clean GitHub runner. It is distinct from the prior local Python re-execution. The scope limitations in Sections 2 and 4 remain unchanged: the workflow does not run Lean, derive the A119 reduced formula from A118, or establish literature novelty.
