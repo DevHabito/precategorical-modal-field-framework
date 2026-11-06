@@ -114,3 +114,9 @@ Both specify the bound hypotheses explicitly and prove nonnegativity of all thre
 The first Lean compilation of the sufficiency lemmas at commit `5b85174b934dd9e8b41aa67d122eb2396411b23f` **FAILED** in GitHub Actions run [42305718215](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42305718215). The two logged failures were `linarith failed to find a contradiction` at lines 210 and 239 of the then-current module. The missing step was explicitly associating `h * (v/D)` with `(h*v)/D` before applying the established divided inequality. No mathematical assertion was refuted by these logs.
 
 A subsequent commit `86b6eb36aafef1a10abcfd9aa625d45ea02751d3` replaced both opaque `nlinarith` conclusions with the explicit ring identity followed by the proven bound. It triggered GitHub Actions run [42305941974](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42305941974). The repaired version must **not** be labeled PASS until that run completes successfully.
+
+## 6. Necessity lemmas submitted for Lean 4 verification
+
+Commit `500c00f1d47dfb469996de52469ca15a4a348f02` adds two more lemmas: `even_central_weights_bounds_necessary` and `odd_central_weights_bounds_necessary`. These derive the interval inequalities from the nonnegativity of the central coordinates, and in the odd case prove `t>=0` from the exact identity that the three weights sum to `t`. Both use explicit multiplication by the proven-positive denominator `D`; no sign-changing division is permitted.
+
+GitHub Actions run: [42306216903](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42306216903). **Pending at the time of writing.** If the build fails, retain logs and repair only justified proof steps before claiming a Lean iff result.
