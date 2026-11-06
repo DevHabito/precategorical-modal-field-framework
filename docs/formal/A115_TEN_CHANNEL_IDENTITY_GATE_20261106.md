@@ -70,3 +70,18 @@ finiteBasis M (k+1) r - finiteBasis M k r
   = (r-1)r^k + (1-r^M)/M
 ```
 This is a direct connection to the exact finite basis, not just a generic polynomial identity. Neither statement proves global primal or dual feasibility.
+
+## Kernel verification result
+
+The dedicated `leanchecker (PrecategoryFormal.TargetFactorTenChannel)` and
+`leanchecker (PrecategoryFormal.TargetFactorBasisBridge)` jobs in
+[run 42307816396](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42307816396)
+both completed with **SUCCESS**, as did the project Lean build. This verifies the
+stated **universal polynomial expansion** and the **finite-basis channel bridge**
+under Lean 4.33.1/Mathlib, using no `sorry` or `admit`. The remainder of the
+full workflow matrix was being completed when these two module results were
+confirmed; full-workflow status must be checked independently.
+
+**Critical scope boundary:** the Lean proof starts from the cofactor definition.
+It does not derive that cofactor from the primal LP's dual multipliers or KKT
+conditions. The sign/optimizer bridge remains an independent obligation.
