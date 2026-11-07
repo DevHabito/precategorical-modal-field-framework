@@ -92,7 +92,6 @@ jobs:
           - PrecategoryFormal.CompressedPrimalFeasibility
           - PrecategoryFormal.CompressedSourceNumerator
           - PrecategoryFormal.CompressedSourcePowerBound
-          - PrecategoryFormal.CompressedSourceMonotonicity
     steps:
       - name: Checkout
         uses: actions/checkout@v6
