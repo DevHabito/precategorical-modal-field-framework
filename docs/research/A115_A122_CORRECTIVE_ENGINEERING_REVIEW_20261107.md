@@ -82,3 +82,18 @@ The full monotonicity derivative bridge was not kernel-certified in Lean and its
 These are mathematical obligations, not a reason to disregard separately proved algebraic identities. The next step is to derive **one actual full F3 dual certificate with all atom reduced costs** for an explicitly fixed finite example before attempting universal support and asymptotic claims.
 
 **Decision:** retain proven algebra; correct false literal equalities; keep F2, F3 and C2 distinct; require full exact primal and dual gates; withhold global optimum and originality claims until the missing proofs exist.
+
+## 8. Final, source-matched verification: two complete finite optimality examples
+
+Two exact primal-dual certificates now close the **entire F3 optimization problem at individual finite parameters**, rather than merely supplying loose feasible witnesses or bounds.
+
+- [Even M=4 exact full-F3 certificate](../formal/A115_FIXED_F3_M4_EXACT_PRIMAL_DUAL_CERTIFICATE_20261107.md). Exact unique optimal objective: 550870246006266889/533058861574687500. Active bands s+ and gamma-. [Published-code CI 42386200355](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42386200355): **SUCCESS**.
+- [Odd M=5 exact full-F3 certificate](../formal/A115_FIXED_F3_M5_EXACT_PRIMAL_DUAL_CERTIFICATE_20261107.md). Exact unique optimal objective: 123288732982051199633/110644995632951812500. Active bands s+ and gamma-. [Published-code CI 42386517555](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42386517555): **SUCCESS**.
+
+Both certificates use a candidate support suggested during discovery, but the published proof uses only rational Gaussian elimination, full primal constraints, all dual reduced costs, strictly positive complementary slacks and a nonzero active determinant. All of those conditions are checked by the published code, cross-validated against the separate full F3 acceptance tool. The certificates establish **global unique optima only for their respective fixed finite contracts**. Neither proves a universal support pattern.
+
+The generic [Lean weak-duality theorem](../../formal/lean/PrecategoryFormal/FiniteLPWeakDuality.lean) passed the project build and individual Leanchecker on [run 42385255807](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42385255807): **26/26 SUCCESS**. Its scope is general finite LP weak duality. It is not a Lean proof of the two specific rational coordinate certificates.
+
+The strengthened primal/dual acceptance gate, with deliberately wrong constraints and the false bound created by omitting the common-mass t row, reported **12 deliberately invalid controls rejected** together with 80 centered and 80 nontrivial F2/F3 primal instances. [Exact-audit run 42385813659](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42385813659): **SUCCESS**.
+
+**Corrective verdict:** the two finite F3 examples are individually closed by exact rational primal/dual certificates; the target-deformed A115–A122 family is still not proved globally optimal, and the source A113 sign classification is not certified anew by these finite checks.
