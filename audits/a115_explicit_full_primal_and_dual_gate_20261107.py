@@ -205,6 +205,23 @@ def controls():
     mutation+=1
     assert 'dual:t-row' in audit_dual(c,Dual(d.ap,F(0),d.bp,d.bq,d.v,d.u,d.w))
     mutation+=1
+    # Mutation of exactly the band inequalities: mass, mean, target,
+    # positivity remain valid. The validator must reject the large gap.
+    csmall=LP(4,F(129,1000),F(1,2),True)
+    psmall,qsmall,tsmall=centered_equal(4,F(1,2))
+    shifted={1:tsmall/8, 2:3*tsmall/4, 3:tsmall/8}
+    faults=audit_primal(csmall,shifted,qsmall,tsmall)
+    assert any(x.startswith('band+') for x in faults),faults
+    assert not any(x.startswith('p:') or x.startswith('q:')
+                   for x in faults),faults
+    mutation+=1
+    bad_u=d.u.copy();bad_u[c.s]=-F(1)
+    assert 'dual:band-multiplier' in audit_dual(
+        c,Dual(d.ap,d.aq,d.bp,d.bq,d.v,bad_u,d.w))
+    mutation+=1
+    missing=d.u.copy();del missing[c.s]
+    assert audit_dual(c,Dual(d.ap,d.aq,d.bp,d.bq,d.v,missing,d.w))==['dual:node-keys']
+    mutation+=1
 
     # Crucial adversarial test: one real compressed candidate solves F2,
     # but not F3 when the inherited gamma band is imposed.
