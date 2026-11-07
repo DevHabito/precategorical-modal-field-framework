@@ -23,8 +23,8 @@
 > additionally require both candidate families to be admissible; a
 > compressed sign factor alone never proves a full lifted LP optimum.
 >
-> See the [source-level exact bridge](../../../../../docs/formal/A115_COMPRESSED_ADJACENT_OBJECTIVE_IDENTITY_20261107.md)
-> and the [adversarial audit](../../../../../docs/research/A115_A122_ADVERSARIAL_SCIENTIFIC_AUDIT_20261107.md).
+> See the [source-level exact bridge](../../../../docs/formal/A115_COMPRESSED_ADJACENT_OBJECTIVE_IDENTITY_20261107.md)
+> and the [adversarial audit](../../../../docs/research/A115_A122_ADVERSARIAL_SCIENTIFIC_AUDIT_20261107.md).
 > The original 2026-09-11 assertion remains quoted in the original
 > section below, explicitly superseded **as a literal identity**.
 
