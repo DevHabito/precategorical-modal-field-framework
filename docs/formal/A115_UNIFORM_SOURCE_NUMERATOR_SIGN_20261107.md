@@ -207,3 +207,9 @@ GitHub Actions [run 42359321885](https://github.com/DevHabito/precategorical-mod
 Therefore the inequality `(n+2)^2*r^(n+1)<=4*r` for **all natural n** on `0<=r<=1/4`, strict positivity of the formal derivative polynomial for `0<r<1/4`, and both parity factorization identities are kernel-certified. This is not just a finite enumeration.
 
 A separate source `CompressedSourceMonotonicity.lean` attempts the remaining connection to the actual derivative and the Mathlib strict-monotonicity theorem. Its CI run [42359621482](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359621482) was in progress at the last observation. Do not call this final monotonicity theorem Lean-certified until the new module passes.
+
+## Boundary test: why the strict source separation matters
+
+There is a simple exact equality case outside the theorem's strict `beta<s` hypothesis. If `beta=s` and `delta=0`, both source transforms and both `R` factors coincide, while `epsilon=0). The cancelled expression is therefore exactly `D_tau*Z=0`. As `D_tau>0` for `0<tau<1`, `Z=0`, not `Z<0`.
+
+This is not a counterexample to the stated strict-source theorem. It falsifies the tempting stronger version with only `beta<=s` and `delta>=0`. The open endpoints in the analytic statement are deliberate.
