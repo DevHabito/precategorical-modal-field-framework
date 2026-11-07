@@ -189,3 +189,30 @@ New statements actually verified:
 Separate [Python CI run 42320122791](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320122791) completed **SUCCESS** after adding the primal bridge regression test; its log reports `PASS: 30195 exact three-site moment, mass and basis checks; 2013 exact ratio-homogenization checks`.
 
 These observations **do not** prove the complete dual/KKT-to-sign-factor link, nor the full A116–A122 asymptotic results. The missing link remains open.
+
+## 11. Exact active-band objective comparison and counterexample (7 November)
+
+New Lean module `CompressedAdjacentObjective.lean` is kernel-checked as of [run 42357203452](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357203452), **21/21 SUCCESS**, including the independent kernel replay. It proves universal Cramer elimination from the actual two active band equalities and the exact relation
+
+```
+(V_(k+1)-V_k)*Delta_k*Delta_(k+1) = -Z*E_(M,k).
+```
+
+Here `Delta_k=B_beta(k)*H_s-B_s(k)*H_beta` and `Z=C_beta*H_s-C_s*H_beta`; both are *negatives* of A81/A83's positive-orientation quantities. Thus this does **not** contradict the A83 statement that its positive interior-mass numerator times E is the cross numerator.
+
+A new module `CompressedActualBandComparison.lean` derives the adjacent comparison **directly from the actual equations for both contacts**, with explicit nonzero determinants and sign assumptions. Its [run 42357382631](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357382631) has passed the build; dedicated kernel replay needs its own final confirmation.
+
+The independent exact rational test in [run 42357508468](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357508468) succeeded:
+
+```text
+213 adjacent objective cross-product checks: PASS
+213 of 213 meeting the stated sign-orientation hypotheses
+159 of 213 pairs with P and Q weights nonnegative at both contacts
+M=24, k=5->6: positive objective difference, but P_0(k=6)<0
+```
+
+The full exact negative `p_0` fraction and the sign assumptions are preserved in [the focused derivation](../formal/A115_COMPRESSED_ADJACENT_OBJECTIVE_IDENTITY_20261107.md). The 159-count concerns only the two sparse measures' nonnegative weights, **not** all remaining transform bands or dual feasibility.
+
+The first Cramer-addition build [42357055959](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357055959) failed on a redundant `ring` after a goal-closing `rw`. The later successful run and the exact corrective commit are recorded above. No mathematical hypothesis was changed to repair the script.
+
+**Remaining blocker:** none of these finite comparisons is a global LP optimality certificate, and no theorem has yet proved the required determinant-sign conditions for the entire A115–A122 parameter domain.
