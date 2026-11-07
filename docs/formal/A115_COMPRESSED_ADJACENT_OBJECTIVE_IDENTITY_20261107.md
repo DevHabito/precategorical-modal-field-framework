@@ -219,3 +219,11 @@ The new [`CompressedActualBandComparison.lean`](../../formal/lean/PrecategoryFor
 This is a genuine upgrade over merely assigning Cramer numerators to variables. The `leanchecker (PrecategoryFormal.CompressedActualBandComparison)` job and the Lean build on [run 42357382631](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357382631) both completed with **SUCCESS**. The remaining, unrelated matrix jobs were still finishing when this was recorded; full-workflow success must be checked separately.
 
 The theorem concerns the **two active-band equalities**, not the full finite LP, and it does not establish sign orientation uniformly in the A115 parameter range. The source should be cited accordingly.
+
+## Final verification checkpoint
+
+A final read of [GitHub Actions run 42357382631](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357382631) shows **22/22 jobs SUCCESS**: the Lean 4 project build and all 21 individual Leanchecker replays, including `CompressedAdjacentObjective` and `CompressedActualBandComparison`. The code checked by that run is the source revision `9946df5005413679e7ab4ca44d7e45580868f151`.
+
+The [standalone exact-rational workflow 42357508468](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357508468) also finished **SUCCESS** after the improving-but-infeasible `M=24` regression was added.
+
+**Status:** the *conditional* compressed adjacent sign formula and its derivation from two active equations are kernel-verified. **Not yet verified:** uniform determinant and Z signs over all parameter ranges, all remaining primal constraints, a dual-feasible KKT certificate, and A116–A122 as a complete asymptotic chain.
