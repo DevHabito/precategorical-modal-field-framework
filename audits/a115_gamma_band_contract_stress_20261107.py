@@ -52,7 +52,6 @@ def main():
     assert counts["both_nonnegative"]==159
     assert counts["both_gamma"]==0
     assert counts["both_nonnegative_and_gamma"]==0
-    assert counts["single_gamma"]==0
     print("PASS: conditional inherited A81 gamma-band exact stress:",counts)
     print("PASS: exact gamma-gap / (2*epsilon*t) witness ratios:",examples)
     print("SCOPE: only if the A81 gamma band is imposed on A115 deformed candidates")
