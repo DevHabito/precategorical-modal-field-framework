@@ -138,5 +138,27 @@ def main():
     print("PASS: exact primal active-band Cramer/adjacent identity checks:",counts)
     print("PASS: synthetic sign orientation control:",synthetic_orientation_counterexample())
 
+def infeasible_improving_contact_regression():
+    # Real A115 parameters, inside the adjacent-contact index domain.
+    # The algebraic target objective increases from k=5 to k=6, but
+    # the k=6 solution has a strictly negative P endpoint mass.
+    M=24
+    s=F(129,1000)
+    tau=F(1,2)
+    left=solve(M,5,s,tau)
+    right=solve(M,6,s,tau)
+    p0=right["t"]/2-F(M-6,M)*right["z"]
+    expected=F(
+       -3584502932965903373596977777684072721755589435382466075590968697323579413854720000,
+       345047398895750303288444261617038319958450237568253037270226500133498976787761804121)
+    assert p0==expected and p0<0
+    assert left["feasible_P"] and left["feasible_Q"]
+    assert not right["feasible_P"]
+    assert right["value"]>left["value"]
+    assert 6+1<=M//2-2  # admissible contact indices, but not feasible weights
+    print("PASS: exact improving-but-infeasible contact M=24 k=5->6, p0=",p0)
+
+
 if __name__=="__main__":
     main()
+    infeasible_improving_contact_regression()
