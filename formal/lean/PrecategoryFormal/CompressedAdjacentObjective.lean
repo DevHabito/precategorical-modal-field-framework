@@ -42,7 +42,6 @@ theorem two_ratios_adjacent_cross_difference
     (nnext / dnext - n / d) * (d * dnext) =
       nnext * d - n * dnext := by
   field_simp [hd, hdnext]
-  ring
 
 /--
 If the two candidate objective values have Cramer numerators
