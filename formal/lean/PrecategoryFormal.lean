@@ -19,3 +19,4 @@ import PrecategoryFormal.TargetFactorBasisBridge
 import PrecategoryFormal.TargetPrimalBridge
 import PrecategoryFormal.CompressedAdjacentObjective
 import PrecategoryFormal.CompressedActualBandComparison
+import PrecategoryFormal.CompressedPrimalFeasibility
