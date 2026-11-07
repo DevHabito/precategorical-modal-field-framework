@@ -89,6 +89,7 @@ jobs:
           - PrecategoryFormal.TargetPrimalBridge
           - PrecategoryFormal.CompressedAdjacentObjective
           - PrecategoryFormal.CompressedActualBandComparison
+          - PrecategoryFormal.CompressedPrimalFeasibility
     steps:
       - name: Checkout
         uses: actions/checkout@v6
