@@ -256,3 +256,11 @@ A subsequent module `CompressedSourceMonotonicity.lean` attempts to link that ex
 A minimal proof-script correction at commit `f4ebfe0a9ad437eb690231fd68120428f3d61dda` makes the pointwise equality explicit with `funext` and `Pi.add_apply`/`Pi.sub_apply`, leaving `ring` only for scalar coefficients. The new [CI run 42359869530](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359869530) must be checked before declaring a Lean-certified strict-monotonicity theorem.
 
 This failed attempt and correction are retained for reproducibility. The self-contained calculus proof in [the mathematical note](../formal/A115_UNIFORM_SOURCE_NUMERATOR_SIGN_20261107.md) remains separate from its mechanization.
+
+## 15. Failed monotonicity bridge archived, not promoted
+
+The attempted full derivative-to-strict-monotonicity Lean proof was **not verified**. Its three unsuccessful builds were [42359621482](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359621482), [42359869530](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359869530) and [42360042902](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42360042902). The compiler's last diagnostic is a type-class discrepancy in `HasDerivAt` involving `Real.instAddCommGroup` and `Real.normedAddCommGroup.toAddCommGroup`. It is not a counterexample to the mathematical derivative inequality.
+
+The source and detailed errors are saved at [A115 FAILED SOURCE MONOTONICITY LEAN](../formal/experiments/A115_FAILED_SOURCE_MONOTONICITY_LEAN_20261107.md). The invalid module was then **removed** from the imported Lean project and individual-check matrix; its file was deleted from the formal source directory after the archive was written. The clean workflow is tracked by [42360306701](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42360306701), and must be read before claiming final success.
+
+**What still stands unchanged:** the 24-job conditional source-sign Lean verification, the 25-job power/parity Lean verification, the published exact-rational Python audit, and the self-contained mathematical calculus proof. The entire final monotonicity argument is **not yet one Lean theorem**.
