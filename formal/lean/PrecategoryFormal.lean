@@ -21,3 +21,4 @@ import PrecategoryFormal.CompressedAdjacentObjective
 import PrecategoryFormal.CompressedActualBandComparison
 import PrecategoryFormal.CompressedPrimalFeasibility
 import PrecategoryFormal.CompressedSourceNumerator
+import PrecategoryFormal.CompressedSourcePowerBound
