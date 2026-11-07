@@ -96,3 +96,12 @@ Before extending asymptotic claims to global optima:
 4. Keep the algebraic A119/A122 certificates independent of either interpretation until the full contract is specified.
 
 The initial workflow [run 42370993450](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42370993450) failed on the overly strong assertion `single_gamma==0`. That failure is substantive: the pairwise observation did **not** justify the individual-contact claim. The assertion was removed in commit `096108765efc71478480a030d258b93b77c77af0` and the narrower claim retained.
+
+## Individual contacts: correction after a failed overclaim
+
+An additional independent exact-Fraction recount over the same grid found **2 gamma-feasible occurrences among 426 individual contact occurrences**, representing **2 distinct gamma-feasible contacts among 291 distinct parameter/contact tuples**:
+
+- `M=40, s=131/1000, tau=1/2, k=9`: both sparse measures nonnegative, gamma band satisfied.
+- `M=522, s=129/1000, tau=1/5, k=208`: both sparse measures nonnegative, gamma band satisfied.
+
+Neither has its adjacent partner gamma-feasible in the tested comparison set. This is why the **0/213 pair** result is true while the first `0/426 individual` inference was false. The independent recount is exploratory until the corrected GitHub CI run is inspected; the repository script reports the occurrence count explicitly.
