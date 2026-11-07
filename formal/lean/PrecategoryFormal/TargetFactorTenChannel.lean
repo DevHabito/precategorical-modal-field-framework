@@ -43,4 +43,22 @@ theorem cofactor_ten_channel_identity
   dsimp
   ring
 
+/--
+The actual 3x3 determinant behind the A115 cofactor combination.
+Row order is (B_beta,B_tau,B_s), (H_beta,A,H_s),
+(DeltaB_beta,DeltaB_tau,DeltaB_s). Its orientation is fixed
+by this statement; swapping rows would reverse the sign.
+This is determinant algebra, not yet a primal/dual sign theorem.
+-/
+theorem cofactor_factor_is_matrix_det
+    (Bb Bt Bs Hb A Hs Db Dt Ds : ℝ) :
+    Matrix.det
+      (!![Bb, Bt, Bs; Hb, A, Hs; Db, Dt, Ds] :
+        Matrix (Fin 3) (Fin 3) ℝ) =
+      (A * Bb - Hb * Bt) * Ds +
+      (-A * Db + Hb * Dt) * Bs +
+      (-Bb * Dt + Bt * Db) * Hs := by
+  simp [Matrix.det_fin_three]
+  ring
+
 end PrecategoryFormal.TargetFactor
