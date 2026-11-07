@@ -246,3 +246,13 @@ For `0<beta<s<1/4`, `M>=4`, `0<tau<1`, `delta>=0`, an independent calculus argum
 **Independent source-sign checks:** [run 42358910281](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358910281) **SUCCESS**, adding **2,370** exact parity/Q-reconstruction/target-cancellation/sign controls. The independent code is `audits/a115_source_numerator_sign_20261107.py`. The grid is evidence against coding mistakes, not the proof of all h.
 
 **Still open:** full LP dual/KKT feasibility, all inactive bands, and the separate formalization of the uniform h-dependent monotonicity theorem in Lean 4. Prior-art novelty remains unverified.
+
+## 14. Uniform derivative bound and strict-monotonicity formalization
+
+The universal finite-exponent inequality and the even/odd centered-baseline factorizations have now passed both the Lean build and individual kernel replay: [run 42359321885](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359321885), **25/25 jobs SUCCESS**. The source module is `CompressedSourcePowerBound.lean`. This result is quantified over every `n:Nat`, not over a finite numerical grid.
+
+A subsequent module `CompressedSourceMonotonicity.lean` attempts to link that expression to the *actual* real derivative and to Mathlib's strict monotonicity theorem, `strictMonoOn_of_hasDerivWithinAt_pos`. Its first full build attempt [42359621482](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359621482) **FAILED**: Lean left a pointwise function equality and a scalar coefficient equality unsolved after `convert`. The logged error `ring_nf made no progress` arose while trying to solve the function-equality goal with a scalar-ring tactic. No mathematical assertion was refuted by this compiler output.
+
+A minimal proof-script correction at commit `f4ebfe0a9ad437eb690231fd68120428f3d61dda` makes the pointwise equality explicit with `funext` and `Pi.add_apply`/`Pi.sub_apply`, leaving `ring` only for scalar coefficients. The new [CI run 42359869530](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359869530) must be checked before declaring a Lean-certified strict-monotonicity theorem.
+
+This failed attempt and correction are retained for reproducibility. The self-contained calculus proof in [the mathematical note](../formal/A115_UNIFORM_SOURCE_NUMERATOR_SIGN_20261107.md) remains separate from its mechanization.
