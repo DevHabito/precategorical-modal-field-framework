@@ -11,6 +11,8 @@ from dataclasses import dataclass
 @dataclass
 class I:
     l:F; u:F
+    def __post_init__(self):
+        assert self.l<=self.u, (self.l,self.u)
     def __add__(x,y):
         y=iv(y);return I(x.l+y.l,x.u+y.u)
     __radd__=__add__
@@ -36,7 +38,10 @@ def calc(s,alpha,par,r):
     a=iv(1) if par=='even' else (1+s)/2
     B=b/s+2*delta;C=1-b/s-4*delta
     A=a*(1-B);D=s**(2-r)-a*B
-    q=a*C/(A+alpha*D)
+    den=A+alpha*D
+    assert den.l>0, (par,r,'critical denominator',den)
+    q=a*C/den
+    assert q.l>0, (par,r,'critical q',q)
     T=1-2*delta;S=1-q-2*delta
     eh=alpha**2+2*sig*alpha;ek=alpha**2+2*alpha*(sig+r-1)
     B1=2*sig*alpha*s*B-2*a*alpha*b/s
@@ -61,8 +66,15 @@ if __name__=="__main__":
                     assert v.l>0,(par,r,i,j,v.l)
                     if worst is None or v.l<worst[0]:worst=(v.l,r,i,j)
                     count+=1
+        expected=2304 if par=='even' else 4096
+        assert count==expected, (par,count,expected)
         print(par,'boxes',count,'worst bound',worst[0],'approx',float(worst[0]),'location',worst[1:])
     Cmax=1-b/s1-4*delta;Bmax=b/s0+2*delta
     E=-Cmax+14*2*s0**3-14*F(21,10)*Bmax*s1**14
     O=-F(567,1000)*Cmax+F(43,2)*2*s0**3*F(359,1000)-F(567,1000)*F(43,2)*F(21,10)*Bmax*s1**21*F(365,1000)
-    print('cutoffs',E>0,float(E),O>0,float(O))
+    even_ratio=F(15,14)*s1
+    odd_ratio=F(45,43)*s1
+    assert E>0, ('even tail cutoff',E)
+    assert O>0, ('odd tail cutoff',O)
+    assert 0<even_ratio<1 and 0<odd_ratio<1, ('tail ratios',even_ratio,odd_ratio)
+    print('PASS: strict rational tail cutoffs and decay ratios', E, O, even_ratio,odd_ratio)
