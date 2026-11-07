@@ -150,3 +150,29 @@ This is precisely why the evidence log keeps **three different categories**: a r
 The subsequent workflow run [42314767131](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42314767131), from source commit `33921fb02786932d63b1cdc3b2dbacbf037e9bb6`, finished **completed / success**. Its syntax check and **all five** independent exact-rational script steps passed, including the new A115 near-wall refutations. This independently confirms that the version of the code now checked into the repository runs successfully on a clean Python 3.13 GitHub runner.
 
 The previously observed local large-integer serialization failure remains recorded in Section 7 as a **failed earlier attempt**. Successful reruns do not erase the history, and the two `J<0` controls remain true **mathematical refutations**, not test-system errors.
+
+## 9. Primal-to-basis bridge (new test and formalization gate)
+
+The research now traces the moment-adjusted function `B_{M,k}(r)` back to a concrete P measure with scaled support `{0,k,M}`, common mass `t`, and first moment `M*t/2`. Eliminating the two endpoint masses gives:
+
+```text
+p_M = t/2 - (k/M) z
+p_0 = t/2 - ((M-k)/M) z
+sum_x p_x*r^x = t*(1+r^M)/2 + z*B_(M,k)(r)
+```
+
+Here `z=p_k`. This is a straightforward consequence of the **original** primal normalization and mean equations, not an inferred identity from the final cofactor.
+
+- Formal source: [`TargetPrimalBridge.lean`](../../formal/lean/PrecategoryFormal/TargetPrimalBridge.lean), also stating exact linear-fractional target normalization for the two scaled measures.
+- Companion derivation: [`A115_PRIMAL_TO_BASIS_BRIDGE_20261106.md`](../formal/A115_PRIMAL_TO_BASIS_BRIDGE_20261106.md).
+- Independent finite controls: [`a115_independent_three_site_primal_bridge_20261106.py`](../../audits/a115_independent_three_site_primal_bridge_20261106.py).
+- Lean run for initial module revision: [42320051698](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320051698). Its final build/kernel state must be obtained from CI and **is not inferred from the source file**.
+- Python clean-run: [42320122791](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320122791), completed **SUCCESS**. The logged line for this added check is:
+
+```text
+PASS: 30195 exact three-site moment, mass and basis checks; 2013 exact ratio-homogenization checks
+```
+
+The Python job also completed the earlier A115, A119, and A122 audit steps successfully. The test probes are finite, and some trial masses deliberately violate nonnegativity to ensure the checker rejects them. The ratio test uses only feasible nonnegative three-site measures. Neither test verifies the missing full KKT/cofactor derivation.
+
+**Remaining gap:** the full primal-to-cofactor map `(LP + active bands + dual orientation) => E_{M,k}` is not established by the single-P three-site calculation. The latter explains the B basis but not the coefficients X, Y, W or their optimality interpretation.
