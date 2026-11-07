@@ -35,11 +35,14 @@ theorem sourceShape_hasDerivAt (n : ℕ) (r : ℝ) :
   have hsum :=
     ((hasDerivAt_id r).sub (hp2.const_mul ((n : ℝ)+2))).add
       (hp3.const_mul ((n : ℝ)+1))
-  unfold sourceShape
-  convert hsum using 1
-  · funext x
-    simp only [Pi.sub_apply, Pi.add_apply, id_eq]
-  · ring
+  have hcoeff :
+      1 - ((n : ℝ)+2)^2*r^(n+1) +
+          (((n : ℝ)+2)^2-1)*r^(n+2) =
+        1 - ((n : ℝ)+2)*(((n : ℝ)+2)*r^(n+1)) +
+          ((n : ℝ)+1)*(((n : ℝ)+3)*r^(n+2)) := by
+    ring
+  rw [hcoeff]
+  simpa only [sourceShape, Pi.sub_apply, Pi.add_apply, id_eq] using hsum
 
 /--
 Uniform strict increase of L_(n+2) on the original small-node
