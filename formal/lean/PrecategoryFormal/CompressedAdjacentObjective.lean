@@ -147,7 +147,6 @@ theorem active_band_cramer_solution
             ring
       _ = Bb * Cs - Bs * Cb := by
         rw [hbeta, hs]
-        ring
   exact ⟨(eq_div_iff hdet).2 hz, (eq_div_iff hdet).2 ht⟩
 
 /--
