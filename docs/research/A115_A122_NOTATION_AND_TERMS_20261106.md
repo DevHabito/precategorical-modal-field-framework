@@ -93,3 +93,15 @@ Here `s` and `τ` are fixed, with `s<τ<β/s<1`. Do not use a collision-layer pa
 - [Lean central and feasibility lemmas](../../formal/lean/PrecategoryFormal/TargetDeformationAudit.lean)
 - [Lean ten-channel identity](../../formal/lean/PrecategoryFormal/TargetFactorTenChannel.lean)
 - [Lean finite-basis bridge](../../formal/lean/PrecategoryFormal/TargetFactorBasisBridge.lean)
+
+## Primal-to-factor formalization additions (November 6)
+
+| Symbol | Meaning | Scope |
+|---|---|---|
+| `z` | Scaled mass `p_k` at the movable P support point `k` | In the three-site P support `{0,k,M}`, with `0<k<M` |
+| `p_0,p_M` | Endpoint masses forced by total mass `t` and mean `M/2` | `p_M=t/2-(k/M)z`; `p_0=t/2-((M-k)/M)z` |
+| `transform M w r` | Finite, unnormalized transform `sum_{x=0}^M w_x r^x` | Definition in `TargetPrimalBridge.lean` |
+| `leftEndpoint,rightEndpoint` | Lean definitions of the two solved endpoint masses | Algebraic real weights; their nonnegativity is not implicit |
+| `Matrix.det` for the factor | Oriented determinant with rows `(B_beta,B_tau,B_s)`, `(H_beta,A,H_s)`, `(DeltaB_beta,DeltaB_tau,DeltaB_s)` | Its identification with E is algebraic; KKT sign is a distinct obligation |
+
+The source of these additions is [A115 Primal-to-Basis Bridge](../formal/A115_PRIMAL_TO_BASIS_BRIDGE_20261106.md). Keep the P support `{0,k,M}` distinct from the Q support `{1,h,h+1}`.
