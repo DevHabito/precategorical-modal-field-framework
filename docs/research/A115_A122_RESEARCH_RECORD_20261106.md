@@ -6,6 +6,8 @@ I am keeping the definitions, proofs, failed attempts and references in separate
 
 **Adversarial audit (7 November 2026):** [A115–A122 Scientific Audit](A115_A122_ADVERSARIAL_SCIENTIFIC_AUDIT_20261107.md). Read this before citing a global optimization or originality claim: it documents the A113 value/factor discrepancy, strengthened test assertions, and the distinct full-LP feasibility witness.
 
+**Corrective repair (7 November 2026):** [F2/F3 model contracts and proof obligations](A115_A122_CANONICAL_LP_CONTRACT_AND_GATES_20261107.md) and the [full corrective engineering review](A115_A122_CORRECTIVE_ENGINEERING_REVIEW_20261107.md). The project now also has exact full-F3 primal/dual uniqueness certificates at [even M=4](../formal/A115_FIXED_F3_M4_EXACT_PRIMAL_DUAL_CERTIFICATE_20261107.md) and [odd M=5](../formal/A115_FIXED_F3_M5_EXACT_PRIMAL_DUAL_CERTIFICATE_20261107.md). These are two fixed finite results, **not** the universal A115–A122 theorem.
+
 ## Start here
 
 1. **[Notation and terminology](A115_A122_NOTATION_AND_TERMS_20261106.md)** — support, measure weights, target deformation, parity, two different uses of `q` and `r`, collision and rounding regimes. Read this before interpreting an A119 or A122 formula.
