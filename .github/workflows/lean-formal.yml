@@ -90,6 +90,7 @@ jobs:
           - PrecategoryFormal.CompressedAdjacentObjective
           - PrecategoryFormal.CompressedActualBandComparison
           - PrecategoryFormal.CompressedPrimalFeasibility
+          - PrecategoryFormal.CompressedSourceNumerator
     steps:
       - name: Checkout
         uses: actions/checkout@v6
