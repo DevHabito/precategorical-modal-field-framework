@@ -17,3 +17,4 @@ import PrecategoryFormal.TargetDeformationAudit
 import PrecategoryFormal.TargetFactorTenChannel
 import PrecategoryFormal.TargetFactorBasisBridge
 import PrecategoryFormal.TargetPrimalBridge
+import PrecategoryFormal.CompressedAdjacentObjective
