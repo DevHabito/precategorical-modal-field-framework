@@ -120,3 +120,19 @@ The source of these additions is [A115 Primal-to-Basis Bridge](../formal/A115_PR
 | `V_k` | `N_k/Delta_k=A_tau*t_k+B_tau(k)*z_k` | Exact rational objective, not merely its sign factor |
 
 The factor identity is `(V_(k+1)-V_k)*Delta_k*Delta_(k+1)=-Z*E_(M,k)`. The signs are the same when `Z<0` and `Delta_k*Delta_(k+1)>0`. See [the source-level and Lean analysis](../formal/A115_COMPRESSED_ADJACENT_OBJECTIVE_IDENTITY_20261107.md).
+
+## Uniform common-source sign lemma (7 November)
+
+| Symbol | Definition | Sign and assumptions |
+|---|---|---|
+| `L_h(r)` | `r-h*r^h+(h-1)*r^(h+1)` | Positive for `0<r<1`, `h>=2`; strictly increasing on `(0,1/4)` |
+| `R_(M,h)(r)` | `(1-r^h)*(1-r^(M-h))/2` | Positive and strictly decreasing for `0<r<1`, `M=2h` or `2h+1` |
+| `a_r` | `1` for even M; `(1+r)/2` for odd M | Parity amplitude, now evaluated at the transform node `r` |
+| `K` | `a_tau*tau^h` | Common target-dependent Q-slope multiplier |
+| `C_r` | `L_h(r)/L_h(tau)` | Constant part of the Q transform; **not** a free parameter |
+| `D_r` | `a_r*r^h-K*C_r` | Coefficient of t in the Q transform |
+| `epsilon` | `delta*K` | Nonnegative for `delta>=0` and `0<tau<1` |
+| `Z` | `C_beta*H_s-C_s*H_beta` | Negative for `0<beta<s<1/4`, `M>=4`, `0<tau<1`, `delta>=0` |
+| `Z_source` | `-Z` | Positive on the same domain; matches A81/A83 orientation |
+
+The [uniform source numerator proof](../formal/A115_UNIFORM_SOURCE_NUMERATOR_SIGN_20261107.md) records the complete analytic argument. The Lean conditional algebra is in `CompressedSourceNumerator.lean`; the all-natural-index monotonicity derivation is still a **separate formalization obligation**.
