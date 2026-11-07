@@ -196,7 +196,7 @@ To formalize the analytical step rather than simply citing the handwritten deriv
 
 It encodes the induction `((n:Real)+2)^2 * r^(n+1) <= 4*r` for all `n:Nat`, `0<=r<=1/4`, derives the strict positivity of the derivative's explicit polynomial expression for `0<r<1/4`, and proves the even/odd factorizations of the centered baseline. The module's source commit `2cb8754dae581f4685a39cfec3a1f29dae776bc8` has passed a Lean project build. The individual Leanchecker replay of the imported module is tracked by [run 42359321885](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359321885); do not label that specific job PASS until it completes.
 
-[`CompressedSourceMonotonicity.lean`](../../formal/lean/PrecategoryFormal/CompressedSourceMonotonicity.lean) is a separate attempt to connect the already-positive polynomial expression to the actual derivative and to Mathlib's strict monotonicity theorem on `(0,1/4)`. It is tracked by [run 42359621482](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359621482), which was **queued** at the latest observation. Its kernel verification is **not yet claimed**. The monotonicity of the other factor `R` still needs a formal statement if we want an end-to-end Lean-certified sign theorem.
+[`Archived experimental monotonicity proof`](experiments/A115_FAILED_SOURCE_MONOTONICITY_LEAN_20261107.md) is a separate attempt to connect the already-positive polynomial expression to the actual derivative and to Mathlib's strict monotonicity theorem on `(0,1/4)`. It is tracked by [run 42359621482](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359621482), which was **queued** at the latest observation. Its kernel verification is **not yet claimed**. The monotonicity of the other factor `R` still needs a formal statement if we want an end-to-end Lean-certified sign theorem.
 
 These gates are intentionally separated. A paper proof can be mathematically complete while its mechanization remains incomplete; the evidence ledger must not collapse those two statuses.
 
@@ -213,3 +213,11 @@ A separate source `CompressedSourceMonotonicity.lean` attempts the remaining con
 There is a simple exact equality case outside the theorem's strict `beta<s` hypothesis. If `beta=s` and `delta=0`, both source transforms and both `R` factors coincide, while `epsilon=0). The cancelled expression is therefore exactly `D_tau*Z=0`. As `D_tau>0` for `0<tau<1`, `Z=0`, not `Z<0`.
 
 This is not a counterexample to the stated strict-source theorem. It falsifies the tempting stronger version with only `beta<=s` and `delta>=0`. The open endpoints in the analytic statement are deliberate.
+
+## Disposition of the failed derivative-instance experiment
+
+Three build attempts at the `HasDerivAt` / `StrictMonoOn` bridge failed: [42359621482](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359621482), [42359869530](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359869530) and [42360042902](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42360042902). The final error was an elaboration/type-class discrepancy between two instances of the additive group on `Real`, not a mathematical counterexample.
+
+Rather than leave an uncompiled theorem inside the published formal build, its complete last attempted source, logs, and possible repair paths are preserved in [the failed-proof archive](experiments/A115_FAILED_SOURCE_MONOTONICITY_LEAN_20261107.md). The experimental module was withdrawn from the import graph and Leanchecker matrix at commit `de666c070d41a4955a3457e3cfe832ea9a48fe15`. The last clean CI for that withdrawal is [run 42360306701](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42360306701); check its conclusion separately.
+
+**Do not say the strict monotonicity lemma is kernel-verified.** Its general calculus proof is documented in this note; the exact power bound, parity factorization and conditional Z-sign statement are the verified Lean pieces.
