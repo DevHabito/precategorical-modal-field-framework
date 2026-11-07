@@ -176,3 +176,16 @@ PASS: 30195 exact three-site moment, mass and basis checks; 2013 exact ratio-hom
 The Python job also completed the earlier A115, A119, and A122 audit steps successfully. The test probes are finite, and some trial masses deliberately violate nonnegativity to ensure the checker rejects them. The ratio test uses only feasible nonnegative three-site measures. Neither test verifies the missing full KKT/cofactor derivation.
 
 **Remaining gap:** the full primal-to-cofactor map `(LP + active bands + dual orientation) => E_{M,k}` is not established by the single-P three-site calculation. The latter explains the B basis but not the coefficients X, Y, W or their optimality interpretation.
+
+## 10. Final Lean kernel status for the primal / determinant bridge
+
+The strengthened Lean source commit `1a6d5a4151b13bb4f23ddab6b3c23696f5d813e9` passed in [GitHub Actions run 42320523915](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320523915): **20/20 SUCCESS**, including `TargetPrimalBridge` and `TargetFactorTenChannel` in individual Leanchecker replay.
+
+New statements actually verified:
+- Finite scaled-transform identity and exact target objective ratio.
+- The original two primal mass/mean equalities *force* the endpoint weights on the P support `{0,k,M}`, and thus the exact basis `B_(M,k)(r)`.
+- The cofactor factor is the oriented determinant of an explicit real 3×3 matrix.
+
+Separate [Python CI run 42320122791](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320122791) completed **SUCCESS** after adding the primal bridge regression test; its log reports `PASS: 30195 exact three-site moment, mass and basis checks; 2013 exact ratio-homogenization checks`.
+
+These observations **do not** prove the complete dual/KKT-to-sign-factor link, nor the full A116–A122 asymptotic results. The missing link remains open.
