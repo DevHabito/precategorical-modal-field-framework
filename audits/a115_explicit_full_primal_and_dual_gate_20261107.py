@@ -133,8 +133,39 @@ def centered_equal(M:int,tau:F):
     return w,w.copy(),sum(w.values(),F(0))
 
 
+def nontrivial_perturbation(contract: LP):
+    """Exact constructive P!=Q feasible witness with objective strictly >1.
+
+    Shift a tiny mass from central atoms symmetrically outward. The
+    transform gaps at any r in (0,1) are positive and at most a.
+    """
+    M=contract.M;h=M//2;tau=contract.tau
+    q,_,t=centered_equal(M,tau)
+    eps=contract.eps()
+    a=eps*t/8
+    assert 0<a<t/8
+    p=q.copy()
+    if M%2==0:
+        p[h]=t-2*a
+        p[h-1]=a
+        p[h+1]=a
+    else:
+        p[h]=t/2-a
+        p[h+1]=t/2-a
+        p[h-1]=a
+        p[h+2]=a
+    for r in contract.nodes()+(tau,):
+        gap=weighted_sum(p,r)-weighted_sum(q,r)
+        shape=(r**(h-1)*(1-r)**2 if M%2==0
+               else r**(h-1)*(1-r)*(1-r*r))
+        assert gap==a*shape and 0<gap<=a
+    assert not audit_primal(contract,p,q,t)
+    assert weighted_sum(p,tau)>1
+    return p,q,t
+
+
 def controls():
-    feasible=dual_ok=mutation=0
+    feasible=dual_ok=mutation=nontrivial=0
     for M in (4,5,24,25,40,41,100,101,521,522):
         for tau in (F(14,100),F(1,5),F(1,2),F(4,5)):
             s=F(129,1000)
@@ -149,6 +180,10 @@ def controls():
                 assert weighted_sum(p,tau)<=d.v
                 feasible+=1
                 dual_ok+=1
+                pp,qq,tt=nontrivial_perturbation(c)
+                assert not audit_primal(c,pp,qq,tt)
+                assert 1<weighted_sum(pp,c.tau)<d.v
+                nontrivial+=1
     # Positive / negative mutants from an independent feasible even-support point.
     c=LP(24,F(129,1000),F(1,2),True)
     p,q,t=centered_equal(c.M,c.tau)
@@ -190,6 +225,7 @@ def controls():
 
     print(f'PASS: F2/F3 complete primal gate on {feasible} centered exact cases')
     print(f'PASS: dual weak upper-bound row checks on {dual_ok} exact cases')
+    print(f'PASS: {nontrivial} nontrivial P!=Q F2/F3 exact feasible witnesses with objective > 1')
     print(f'PASS: {mutation} negative-control mutations rejected')
     print('PASS: C2(5) feasible for F2 but violates F3 gamma; C2(6) violates P nonnegativity')
     print('NONCLAIM: loose dual bound is not an optimum/KKT certificate')
