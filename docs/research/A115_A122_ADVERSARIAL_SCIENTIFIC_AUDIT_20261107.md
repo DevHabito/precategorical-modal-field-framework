@@ -137,3 +137,19 @@ The available publisher abstracts cover linear-fractional transformations, param
 6. **Obtain an external mathematical referee**, especially on possible reductions to classical Chebyshev/variation-diminishing moment theory, before claiming originality.
 
 **Bottom line:** the algebraic foundation is substantial and reproducible, and the current project keeps many of its limitations visible. There were still meaningful audit defects: test checks that did not enforce their own printed claims, an A113 equality missing its rational prefactor when interpreted as the literal objective, and a risk of treating reduced-basis failures as full-model infeasibility. These are corrected or explicitly blocked here. No global A115–A122 or novelty claim is authorized by this audit.
+
+## 10. Audit corrections tested: final GitHub evidence
+
+The strengthened [exact-arithmetic CI run 42377130346](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42377130346) completed **SUCCESS** on source commit `f03fe1dd899ae34c42f7ff700cbfb63997e8fc13`. Its logs include all the new mandatory assertions:
+
+- the A113 literal factor/value *nonidentity* at **both** exact controls, including `M=521,k=90,s=131/1000,tau=1/2`;
+- the 213 adjacent active-band comparisons and exact finite gamma count (`0/213` pairs, `2/426` individual occurrences);
+- the 40 equal-measure full-band witnesses, each with objective exactly 1;
+- A119 **strictly positive** rational even/odd tail cutoffs, with exact decay ratio bounds `57/400` and `1197/8600` (both below 1), as well as the 6,400 positive interval cells;
+- A122 the **specific** negative and positive signs at the two rational target points, with checked logarithm domains and interval ordering.
+
+The job no longer treats either tail sign or A122 sign as a nonfatal `print` expression. The new sources and workflow on the research branch were compared by blob SHA with the successful CI commit: **six of six files matched**. Later report-only commits cannot retroactively validate other source changes.
+
+This changes the strength of the *finite executable* evidence, not the scope of the mathematical theorem: critical-surface derivations, global LP feasibility of the compressed optimizer, and the all-parameter A119/A122 results are still independent proof obligations.
+
+**Final disposition:** `REPRODUCIBLE_PARTIAL_MATHEMATICS_WITH_RECORDED_CORRECTIONS`. The full research program remains **not certified as a global optimization theorem**.
