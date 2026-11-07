@@ -221,3 +221,26 @@ Three build attempts at the `HasDerivAt` / `StrictMonoOn` bridge failed: [423596
 Rather than leave an uncompiled theorem inside the published formal build, its complete last attempted source, logs, and possible repair paths are preserved in [the failed-proof archive](experiments/A115_FAILED_SOURCE_MONOTONICITY_LEAN_20261107.md). The experimental module was withdrawn from the import graph and Leanchecker matrix at commit `de666c070d41a4955a3457e3cfe832ea9a48fe15`. The last clean CI for that withdrawal is [run 42360306701](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42360306701); check its conclusion separately.
 
 **Do not say the strict monotonicity lemma is kernel-verified.** Its general calculus proof is documented in this note; the exact power bound, parity factorization and conditional Z-sign statement are the verified Lean pieces.
+
+## A conditional but uniform compressed-contact corollary
+
+Combining the uniform analytical `Z<0` theorem with the exact active-band Cramer identities and the Lean-checked positive-interior sign lemma yields a stronger statement for the **compressed** family:
+
+> Suppose `M>=4`, `0<beta<s<1/4`, `0<tau<1`, `delta>=0`. Suppose the two adjacent contact systems both solve the declared beta-lower/s-upper active equations and have **strictly positive** internal P masses `z_k>0` and `z_(k+1)>0`. Then
+> `V_(k+1)>V_k` if and only if `E_(M,k)>0`.
+
+The derivation is short but the conditions matter:
+
+```text
+z_k*Delta_k = Z < 0
+z_(k+1)*Delta_(k+1) = Z < 0
+=> Delta_k < 0 and Delta_(k+1)<0
+=> Delta_k*Delta_(k+1) > 0.
+
+(V_(k+1)-V_k)*Delta_k*Delta_(k+1)=-Z*E_(M,k)
+=> sign(V_(k+1)-V_k)=sign(E_(M,k)).
+```
+
+This conclusion is uniform in the support size and in the target node, **within the specified inequalities**, rather than merely on a checked finite parameter grid.
+
+It still does **not** say the second contact is a valid probability measure, or satisfies every remaining LP band, or is globally optimal. The strict `z>0` condition excludes an endpoint case that must be handled separately. The analytical `Z<0` premise is not yet independently kernel-certified as a full all-h target-deformed theorem even though its algebraic components are.
