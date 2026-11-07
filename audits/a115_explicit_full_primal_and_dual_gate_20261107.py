@@ -226,6 +226,15 @@ def controls():
     assert audit_dual(c,Dual(d.ap,d.aq,d.bp,d.bq,d.v,missing,d.w))==['dual:node-keys']
     mutation+=1
 
+    # A specifically false "dual bound" if one silently drops the
+    # mass-t row: atomwise P/Q inequalities hold, but v=0 would claim
+    # the feasible centered objective 1 is <=0.
+    fake=Dual(F(1),F(0),F(0),F(0),F(0),d.u,d.w)
+    wrong=audit_dual(c,fake)
+    assert wrong==['dual:t-row'],wrong
+    assert weighted_sum(p,c.tau)==1>fake.v
+    mutation+=1
+
     # Crucial adversarial test: one real compressed candidate solves F2,
     # but not F3 when the inherited gamma band is imposed.
     s=F(129,1000);tau=F(1,2);M=24;k=5
