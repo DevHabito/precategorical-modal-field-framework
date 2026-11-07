@@ -170,3 +170,41 @@ References for the general method:
 4. Only then connect local compressed value comparisons to global LP optimality, and A118/A119 sign conclusions.
 
 A positive compressed adjacent difference is not a certificate of global optimality. That is the substantive logical boundary this audit seeks to make explicit.
+
+## Follow-up: Cramer elimination from the equations themselves
+
+The first corrected module's [run 42356782549](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42356782549) finished **21/21 SUCCESS**, including the `CompressedAdjacentObjective` Leanchecker job.
+
+Two further theorems were added to that same module. `active_band_cramer_solution` starts with the two actual linear band equalities and an explicitly nonzero determinant, and proves the formulas for the masses `z` and `t`. `active_band_objective_value` then derives the rational target objective without assuming the Cramer numerator as a definition.
+
+The first attempt at this addition failed [run 42357055959](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357055959) with `No goals to be solved` at line 150: `rw [hbeta, hs]` had completed the goal, leaving a redundant `ring`. The spare tactic was removed in commit `be87503ce701238ae779bd27be6545f65e9c8c7b` without altering the theorem or its hypotheses. The corrected build and individual kernel checks **passed 21/21** in [run 42357203452](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357203452).
+
+A separate [`CompressedActualBandComparison.lean`](../../formal/lean/PrecategoryFormal/CompressedActualBandComparison.lean) now starts with *two actual solutions* of the active band equations at adjacent contacts. It derives their objective difference and the conditional equivalence between `E_k>0` and `V_(k+1)>V_k`. This adds a direct bridge from the hypotheses of the candidate equations to the reduced sign formula. The [build on run 42357382631](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357382631) **succeeded**; the two module-specific Leanchecker jobs must be checked separately before declaring the entire new statement kernel-certified.
+
+## A real feasibility trap, preserved as a regression
+
+The exact-rational test has a particularly useful failing *candidate*:
+
+```text
+M=24, beta=1/8, delta=1/1875,
+s=129/1000, tau=1/2;
+adjacent contact k=5 -> k=6.
+```
+
+The two active band equalities, the central Q target normalization and the mass/mean equations all hold for both algebraic candidates. The sign factor `E_(24,5)>0` and the **unscaled target objective increases** from k=5 to k=6.
+
+However, the putative P mass at the left endpoint at k=6 is exactly
+
+```
+p_0 =
+-3584502932965903373596977777684072721755589435382466075590968697323579413854720000
+/
+345047398895750303288444261617038319958450237568253037270226500133498976787761804121
+< 0.
+```
+
+The adjacent index itself is valid (`7<=h-2=10`), but the k=6 P measure is **not nonnegative** and hence is **not a feasible measure**. This is not a counterexample to the exact E identity; it is a counterexample to interpreting every improving compressed candidate as admissible.
+
+The case is now an exact `Fraction` assertion in `audits/a115_independent_compressed_adjacent_identity_20261107.py`. The [published-code CI run 42357508468](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357508468) finished **SUCCESS**, including the regression and the prior 213 cross-product identities.
+
+This concrete example is the reason that KKT and all primal feasibility checks must not be replaced by an adjacent objective sign calculation.
