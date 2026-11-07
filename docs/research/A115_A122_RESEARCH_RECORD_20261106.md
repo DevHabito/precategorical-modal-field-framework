@@ -11,7 +11,8 @@ I am keeping the definitions, proofs, failed attempts and references in separate
 3. **[Evidence and failure ledger](A115_A122_EVIDENCE_AND_FAILURE_LEDGER_20261106.md)** — exact executable tests, Lean build and kernel replay, source-reported results, compiler failures, genuine counterexamples, rejected out-of-domain data, and outstanding proof obligations.
 4. **[A115 Q-block feasibility](../formal/A115_CENTRAL_FEASIBILITY_INTERVAL_20261106.md)** — exact three-weight nonnegativity intervals, Lean proof and the distinction from full LP feasibility.
 5. **[A115 cofactor/ten-channel bridge](../formal/A115_TEN_CHANNEL_IDENTITY_GATE_20261106.md)** — universal polynomial identity and exact finite-basis bridge, with the CI history.
-6. **[A119/A122 independent arithmetic recheck](../novelty/A119_A122_INDEPENDENT_CERTIFICATE_RECHECK_20261106.md)** — independent interval-covering computations and rational logarithm brackets.
+6. **[Primal constraints to moment-adjusted basis](../formal/A115_PRIMAL_TO_BASIS_BRIDGE_20261106.md)** — finite P support, exact mass/mean elimination, transform ratio, and the determinant's orientation. The full KKT cofactor derivation remains open.
+7. **[A119/A122 independent arithmetic recheck](../novelty/A119_A122_INDEPENDENT_CERTIFICATE_RECHECK_20261106.md)** — independent interval-covering computations and rational logarithm brackets.
 
 ## What can be claimed today
 
