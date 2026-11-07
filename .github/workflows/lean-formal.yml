@@ -92,6 +92,7 @@ jobs:
           - PrecategoryFormal.CompressedPrimalFeasibility
           - PrecategoryFormal.CompressedSourceNumerator
           - PrecategoryFormal.CompressedSourcePowerBound
+          - PrecategoryFormal.FiniteLPWeakDuality
     steps:
       - name: Checkout
         uses: actions/checkout@v6
