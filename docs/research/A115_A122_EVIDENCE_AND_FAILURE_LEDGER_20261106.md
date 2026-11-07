@@ -276,3 +276,15 @@ The first CI run [42370993450](https://github.com/DevHabito/precategorical-modal
 **Boundary:** this is a finite conditional incompatibility test. It is not a refutation of A115's compressed algebraic claims and does not establish that the gamma band is part of the A115 deformed optimization contract. The latter must be defined explicitly before any global LP/KKT conclusion.
 
 [Focused gamma compatibility report](../formal/A115_INHERITED_GAMMA_BAND_COMPATIBILITY_20261107.md).
+
+## 13. Independent red-team audit — 7 November
+
+See the consolidated [A115–A122 adversarial scientific audit](A115_A122_ADVERSARIAL_SCIENTIFIC_AUDIT_20261107.md).
+
+This pass identified a **literal A113 value/factor equality discrepancy** (two exact rational controls, including M=521 inside the published A113 domain), **nonasserting tail/sign outputs** in the original independent A119 and A122 scripts, and a possible **full-LP versus compressed-model interpretation error** when importing A81's gamma band into A115.
+
+The script defects were corrected by adding strict assertions, not by changing expected signs, source parameters or mathematical assumptions. [CI run 42377130346](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42377130346) completed successfully at source SHA `f03fe1dd899ae34c42f7ff700cbfb63997e8fc13`; its logs affirm the corrected A119 tail, A122 two-sided sign gates, 213 compressed comparisons, A113 literal nonidentity, gamma counts and the newly added 40 exact centered equal-measure witnesses.
+
+The centered witness is a mathematical check on overinterpretation: if the full symmetric-band LP allows the two distributions to coincide, the full LP **is feasible** for every `M>=1, 0<tau<1` (and has a feasible objective value 1), even when the particular two-band compressed active architecture fails the inherited gamma constraint.
+
+**Open:** no full target-deformed global KKT theorem, no independent reconstruction of the entire A118→A119 asymptotic chain, no Lean proof of the final L/R derivative-monotonicity link, and no novelty certificate. Do not promote the observed successful CI jobs into any of these missing theorems.
