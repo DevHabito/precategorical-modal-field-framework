@@ -24,7 +24,8 @@ theorem central_source_numerator_cancellation
     D * ((Lb / D) * (Rs + K * (Ls / D) - 2 * epsilon) -
       (Ls / D) * (Rb + K * (Lb / D) + 2 * epsilon)) =
       Lb * Rs - Ls * Rb - 2 * epsilon * (Lb + Ls) := by
-  field_simp [hD] <;> ring
+  field_simp [hD]
+  ring
 
 /--
 A sufficient condition for the non-quotient source expression to be
