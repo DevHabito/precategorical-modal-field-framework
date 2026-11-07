@@ -55,3 +55,13 @@ There are also genuine negative results worth preserving:
 The next paper-ready result is not another sequence label. It is a self-contained derivation of the exact sign factor from the full finite LP, followed by independent verification of the A118 asymptotic formula. Only then does it make sense to promote the A119 positivity certificate from an independently reproduced computation to an end-to-end checked theorem.
 
 The source remains in English and the evidence stays tied to the revision that generated it. The default `main` branch is not changed by this research record.
+
+## 7 November — a stronger source-sign result, with a visible formalization boundary
+
+The new [A115 uniform source-numerator sign note](../formal/A115_UNIFORM_SOURCE_NUMERATOR_SIGN_20261107.md) proves a parameter-uniform sign statement for the compressed common Cramer numerator: `Z<0` when `M>=4`, `0<beta<s<1/4`, `0<tau<1`, and `delta>=0`. The proof reduces the source numerator to an exact cancellation, then uses a strictly increasing `L_h` and strictly decreasing `R_(M,h)`. It is a self-contained calculus argument, not an extrapolation from the existing finite A83 atlas.
+
+The following have been verified by Lean 4 and independent kernel replay: the exact three-site P nonnegativity criterion; automatic determinant orientation from strictly positive interior masses plus `Z<0`; the common-source cancellation; the negative-sign implication given the L/R ordering; the all-natural-index power inequality underpinning `L_h'`; and the parity identities. The corresponding complete successful workflow runs are [42358308334](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358308334), [42358976869](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358976869), and [42359321885](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359321885). The independently published Python checker passed [42358910281](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358910281).
+
+The **entire derivative-to-strict-monotonicity connection has not yet passed Lean**. Three failed elaboration attempts, including an additive-group instance mismatch, have been archived at [A115 failed Lean monotonicity experiment](../formal/experiments/A115_FAILED_SOURCE_MONOTONICITY_LEAN_20261107.md). The failed file was removed from the compiled project; the source is preserved in the archive, not silently discarded.
+
+The current result narrows the global proof obligations but does not remove the need to check every remaining band and the full dual/KKT conditions of the original LP. Mathematical priority over earlier publications is not claimed.
