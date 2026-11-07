@@ -93,6 +93,18 @@ def verify_pair(M,k,s,tau):
     dV=right['value']-left['value']
     factor=left['Z']
     assert dV*left['det']*right['det']==-factor*E
+    # A113 literally writes E=V_(k+1)-V_k, whereas A83 defines E
+    # as a cross-numerator factor. The actual scaled target objective
+    # is NOT numerically equal to this factor. Both controls are exact,
+    # including one inside A113's published M>=521 frozen domain.
+    if (M,k,s,tau) in (
+        (24,4,F(129,1000),F(1,2)),
+        (521,90,F(131,1000),F(1,2))
+    ):
+        assert E!=0 and dV!=E
+        assert dV/E==(-factor)/(left['det']*right['det'])
+        print('PASS: E != literal adjacent objective difference', M,k,s,tau,
+              'signs agree', (E>0)==(dV>0))
     oriented=(factor<0 and left['det']*right['det']>0)
     if oriented:
         assert (dV>0)==(E>0)
