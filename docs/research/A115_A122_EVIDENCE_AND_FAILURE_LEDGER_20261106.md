@@ -264,3 +264,15 @@ The attempted full derivative-to-strict-monotonicity Lean proof was **not verifi
 The source and detailed errors are saved at [A115 FAILED SOURCE MONOTONICITY LEAN](../formal/experiments/A115_FAILED_SOURCE_MONOTONICITY_LEAN_20261107.md). The invalid module was then **removed** from the imported Lean project and individual-check matrix; its file was deleted from the formal source directory after the archive was written. The clean workflow is tracked by [42360306701](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42360306701), and must be read before claiming final success.
 
 **What still stands unchanged:** the 24-job conditional source-sign Lean verification, the 25-job power/parity Lean verification, the published exact-rational Python audit, and the self-contained mathematical calculus proof. The entire final monotonicity argument is **not yet one Lean theorem**.
+
+## 13. Third-node gamma feasibility — conditional model compatibility (7 November)
+
+A81 includes an explicit `gamma=1/16` transform band, whereas the A115 target-deformation audit has no gamma test and does not claim to inherit the full A81/A114 LP active-set structure. We therefore tested, **conditionally**, whether the A115 beta-lower/s-upper active candidates satisfy the unchanged A81 gamma band.
+
+The [exact arithmetic workflow 42371029548](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42371029548) finished **SUCCESS**: among 213 adjacent pairs, 159 had nonnegative P and Q weights at both contacts, **0 pairs** had both contacts gamma-feasible, and **2 of 426 individual contact occurrences** satisfied gamma. An independent recount found 291 distinct parameter/contact tuples, of which exactly two satisfy gamma: `(M=40,s=131/1000,tau=1/2,k=9)` and `(M=522,s=129/1000,tau=1/5,k=208)`.
+
+The first CI run [42370993450](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42370993450) **FAILED** because the script incorrectly asserted that 0 feasible pairs implied 0 feasible individual contacts. That stronger inference was false and was removed, rather than weakening the tested gamma inequality.
+
+**Boundary:** this is a finite conditional incompatibility test. It is not a refutation of A115's compressed algebraic claims and does not establish that the gamma band is part of the A115 deformed optimization contract. The latter must be defined explicitly before any global LP/KKT conclusion.
+
+[Focused gamma compatibility report](../formal/A115_INHERITED_GAMMA_BAND_COMPATIBILITY_20261107.md).
