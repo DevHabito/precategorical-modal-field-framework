@@ -185,3 +185,17 @@ The next requirements are:
 2. Prove the exact nonnegative P/Q weights and *all* remaining transform bands for candidate contacts in the intended theorem domain.
 3. Derive and check the actual dual-reduced-cost/KKT inequalities for the whole LP, not just the two active equations.
 4. Only then extend sign information to global support selection and the later A116–A122 layers.
+
+## Formal expansion beyond the conditional sign lemma
+
+The original [run 42358976869](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358976869) finished **24/24 SUCCESS** (Lean build and 23 individual Leanchecker jobs), including `PrecategoryFormal.CompressedSourceNumerator`. The exact cancellation and the conditional negative-sign implication are therefore verified by Lean's kernel at commit `97f71f50c44544e80be4512fa0c43cf3b542164b`.
+
+To formalize the analytical step rather than simply citing the handwritten derivative inequality, a second module was added:
+
+[`CompressedSourcePowerBound.lean`](../../formal/lean/PrecategoryFormal/CompressedSourcePowerBound.lean).
+
+It encodes the induction `((n:Real)+2)^2 * r^(n+1) <= 4*r` for all `n:Nat`, `0<=r<=1/4`, derives the strict positivity of the derivative's explicit polynomial expression for `0<r<1/4`, and proves the even/odd factorizations of the centered baseline. The module's source commit `2cb8754dae581f4685a39cfec3a1f29dae776bc8` has passed a Lean project build. The individual Leanchecker replay of the imported module is tracked by [run 42359321885](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359321885); do not label that specific job PASS until it completes.
+
+[`CompressedSourceMonotonicity.lean`](../../formal/lean/PrecategoryFormal/CompressedSourceMonotonicity.lean) is a separate attempt to connect the already-positive polynomial expression to the actual derivative and to Mathlib's strict monotonicity theorem on `(0,1/4)`. It is tracked by [run 42359621482](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359621482), which was **queued** at the latest observation. Its kernel verification is **not yet claimed**. The monotonicity of the other factor `R` still needs a formal statement if we want an end-to-end Lean-certified sign theorem.
+
+These gates are intentionally separated. A paper proof can be mathematically complete while its mechanization remains incomplete; the evidence ledger must not collapse those two statuses.
