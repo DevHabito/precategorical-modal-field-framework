@@ -9,6 +9,7 @@ on:
       - "audits/a115_independent_feasibility_bounds_20261106.py"
       - "audits/a115_near_wall_exact_counterexamples_20261106.py"
       - "audits/a115_independent_three_site_primal_bridge_20261106.py"
+      - "audits/a115_independent_compressed_adjacent_identity_20261107.py"
       - "audits/a119_independent_fraction_certificate_20261106.py"
       - "audits/a122_independent_rational_log_brackets_20261106.py"
       - ".github/workflows/a115-a122-exact-audits.yml"
@@ -36,6 +37,7 @@ jobs:
             audits/a115_independent_feasibility_bounds_20261106.py \
             audits/a115_near_wall_exact_counterexamples_20261106.py \
             audits/a115_independent_three_site_primal_bridge_20261106.py \
+            audits/a115_independent_compressed_adjacent_identity_20261107.py \
             audits/a119_independent_fraction_certificate_20261106.py \
             audits/a122_independent_rational_log_brackets_20261106.py
       - name: A115 central reconstruction (exact fractions)
@@ -44,6 +46,8 @@ jobs:
         run: python audits/a115_independent_feasibility_bounds_20261106.py
       - name: A115 independent primal transform and ratio bridge
         run: python audits/a115_independent_three_site_primal_bridge_20261106.py
+      - name: A115 compressed objective identity and sign orientation
+        run: python audits/a115_independent_compressed_adjacent_identity_20261107.py
       - name: A115 near-wall refutations and rejected out-of-domain control
         run: python audits/a115_near_wall_exact_counterexamples_20261106.py
       - name: A119 independent interval covering (exact fractions)
