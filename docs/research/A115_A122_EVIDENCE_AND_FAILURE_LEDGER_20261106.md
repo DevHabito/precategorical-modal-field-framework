@@ -288,3 +288,16 @@ The script defects were corrected by adding strict assertions, not by changing e
 The centered witness is a mathematical check on overinterpretation: if the full symmetric-band LP allows the two distributions to coincide, the full LP **is feasible** for every `M>=1, 0<tau<1` (and has a feasible objective value 1), even when the particular two-band compressed active architecture fails the inherited gamma constraint.
 
 **Open:** no full target-deformed global KKT theorem, no independent reconstruction of the entire A118→A119 asymptotic chain, no Lean proof of the final L/R derivative-monotonicity link, and no novelty certificate. Do not promote the observed successful CI jobs into any of these missing theorems.
+
+## 14. Corrective engineering closure: explicit F3 contracts and two finite full-KKT certificates
+
+The [corrective engineering report](A115_A122_CORRECTIVE_ENGINEERING_REVIEW_20261107.md) and [canonical F2/F3/C2 contract](A115_A122_CANONICAL_LP_CONTRACT_AND_GATES_20261107.md) were added after the adversarial audit. A113's false *literal equality* between E and the objective difference has a prominent erratum, with the original wording retained as historical evidence.
+
+- [GitHub Actions 42385813659](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42385813659): successful full-primal/dual Python regression, including **12 rejected bad mutations** and a deliberately false bound (the missing common-mass dual t row).
+- [GitHub Actions 42385255807](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42385255807): **26/26 Lean jobs success**, including individual kernel replay of generic finite-dimensional maximization-LP weak duality.
+- [GitHub Actions 42386200355](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42386200355): exact **M=4**, three-band full-primal/full-dual optimum and uniqueness, value **550870246006266889/533058861574687500**.
+- [GitHub Actions 42386517555](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42386517555): exact **M=5**, three-band full-primal/full-dual optimum and uniqueness, value **123288732982051199633/110644995632951812500**.
+
+The two finite LPs were proven from exact rational constraints and dual inequalities, not from a claim that a floating-point solver returned the answer. Every atom and both directions of all bands were checked. Both active support matrices are nonsingular and complementary slacks are strict at missing atoms/inactive bands, which gives uniqueness.
+
+**Scope rule:** these examples do not prove the A115 compressed architecture, the all-M target-deformed KKT theorem, the A118/A119 asymptotic chain, A122 resonance or novelty. The separate F2 and F3 problems must remain distinct.
