@@ -22,4 +22,3 @@ import PrecategoryFormal.CompressedActualBandComparison
 import PrecategoryFormal.CompressedPrimalFeasibility
 import PrecategoryFormal.CompressedSourceNumerator
 import PrecategoryFormal.CompressedSourcePowerBound
-import PrecategoryFormal.CompressedSourceMonotonicity
