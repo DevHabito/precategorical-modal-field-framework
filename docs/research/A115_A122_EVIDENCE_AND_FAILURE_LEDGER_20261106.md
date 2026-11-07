@@ -216,3 +216,13 @@ The full exact negative `p_0` fraction and the sign assumptions are preserved in
 The first Cramer-addition build [42357055959](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357055959) failed on a redundant `ring` after a goal-closing `rw`. The later successful run and the exact corrective commit are recorded above. No mathematical hypothesis was changed to repair the script.
 
 **Remaining blocker:** none of these finite comparisons is a global LP optimality certificate, and no theorem has yet proved the required determinant-sign conditions for the entire A115–A122 parameter domain.
+
+## 12. Final checked result — two actual active-band candidates
+
+The [Lean 4 run 42357382631](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357382631) ended **22/22 SUCCESS** (project build plus 21 module-specific Leanchecker jobs). Both `CompressedAdjacentObjective` and `CompressedActualBandComparison` passed individual kernel replay at source revision `9946df5005413679e7ab4ca44d7e45580868f151`.
+
+The fully verified conditional theorem says: when two *actual solutions* satisfy the beta-lower/s-upper active equations at adjacent contacts, their Cramer determinants are nonzero, `Z<0`, and the product of the two determinants is positive, then their scaled target objective increases **if and only if** the A115 factor `E` is positive. The proof starts from active equations and does not assume their Cramer output as unexplained data.
+
+The [Python run 42357508468](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357508468) also completed with **SUCCESS** for the full exact-rational suite, including 213 adjacent comparisons and the exact `M=24,k=5→6` example in which the objective grows but `p_0(k=6)<0`. This is a reproducible falsification of a potential **feasibility inference**, not of the determinant identity.
+
+No broad LP optimality statement follows from the results checked here. A global theorem still needs the missing band constraints and a correctly oriented dual certificate, not only an increasing compressed objective.
