@@ -117,3 +117,9 @@ E = det [ [B_beta,      B_tau,      B_s],
 This expansion is consistent with the previously proved `X DeltaB_s + Y B_s + W H_s`; the row order matters because a swap reverses the determinant sign. The native `Matrix.det` statement was appended to `TargetFactorTenChannel.lean` at commit `1a6d5a4151b13bb4f23ddab6b3c23696f5d813e9`, with [Lean run 42320523915](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320523915) as the corresponding independent build/kernel gate.
 
 Even when these calculations are checked, neither shows the sign of the determinant or proves that its sign selects a globally optimal LP architecture. That conclusion requires the *actual* active constraint matrix, the dual objective direction, and nonnegative primal/dual multipliers. This distinction is preserved deliberately.
+
+## 7. First primal bridge fully kernel-replayed
+
+GitHub Actions [run 42320051698](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320051698), at source commit `44ae36385e15af4fec3a534a7bb1fb9abd0359aa`, has now reported **20/20 jobs SUCCESS**, including the dedicated `leanchecker (PrecategoryFormal.TargetPrimalBridge)` job. This verifies the first version: scaling the finite transform, the target ratio under a normalization, the constructed endpoint masses, and the identity producing `B_{M,k}`.
+
+The later **necessity** lemma and native `Matrix.det` lemma were committed after that run; their CI status is separate and must not be inferred from the earlier 20/20 PASS.
