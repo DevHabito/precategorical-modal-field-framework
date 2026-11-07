@@ -91,6 +91,7 @@ jobs:
           - PrecategoryFormal.CompressedActualBandComparison
           - PrecategoryFormal.CompressedPrimalFeasibility
           - PrecategoryFormal.CompressedSourceNumerator
+          - PrecategoryFormal.CompressedSourcePowerBound
     steps:
       - name: Checkout
         uses: actions/checkout@v6
