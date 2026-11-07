@@ -208,3 +208,14 @@ The adjacent index itself is valid (`7<=h-2=10`), but the k=6 P measure is **not
 The case is now an exact `Fraction` assertion in `audits/a115_independent_compressed_adjacent_identity_20261107.py`. The [published-code CI run 42357508468](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357508468) finished **SUCCESS**, including the regression and the prior 213 cross-product identities.
 
 This concrete example is the reason that KKT and all primal feasibility checks must not be replaced by an adjacent objective sign calculation.
+
+## Direct two-contact result — kernel status
+
+The new [`CompressedActualBandComparison.lean`](../../formal/lean/PrecategoryFormal/CompressedActualBandComparison.lean) now proves two additional statements:
+
+1. Given **two actual pairs of masses** solving the declared active beta-lower/s-upper equations at contacts `k` and `k+1`, and with both determinant values nonzero, their actual target objective difference obeys the cross-product identity.
+2. Given the additional, explicitly stated `Z<0` and `Delta_k*Delta_(k+1)>0` sign assumptions, the objective increases **if and only if** `E_k>0`.
+
+This is a genuine upgrade over merely assigning Cramer numerators to variables. The `leanchecker (PrecategoryFormal.CompressedActualBandComparison)` job and the Lean build on [run 42357382631](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357382631) both completed with **SUCCESS**. The remaining, unrelated matrix jobs were still finishing when this was recorded; full-workflow success must be checked separately.
+
+The theorem concerns the **two active-band equalities**, not the full finite LP, and it does not establish sign orientation uniformly in the A115 parameter range. The source should be cited accordingly.
