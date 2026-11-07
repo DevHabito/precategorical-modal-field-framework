@@ -87,6 +87,7 @@ jobs:
           - PrecategoryFormal.TargetFactorTenChannel
           - PrecategoryFormal.TargetFactorBasisBridge
           - PrecategoryFormal.TargetPrimalBridge
+          - PrecategoryFormal.CompressedAdjacentObjective
     steps:
       - name: Checkout
         uses: actions/checkout@v6
