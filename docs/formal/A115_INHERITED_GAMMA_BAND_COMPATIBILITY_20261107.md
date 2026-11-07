@@ -57,7 +57,7 @@ b=min{j: s^(2j)<=tau^M}.
 | Both contacts satisfy the inherited gamma band | 0 |
 | Both contacts nonnegative **and** gamma-feasible | 0 |
 
-All 426 *individual* algebraic contacts in this finite sample violate the inherited gamma band, under the declared gamma and tolerance convention.
+**Important correction from the first CI run:** zero gamma-feasible *pairs* does not mean zero gamma-feasible *individual contacts*. The first test wrongly asserted the stronger claim and CI rejected it. The corrected script reports both counts separately. No statement about all 426 individual contact outcomes is made until the corrected run is read.
 
 For a transparent nonnegative-weight witness, choose `M=24`, `s=129/1000`, `tau=1/5`, `k=9`. The active beta and s equalities and Q target normalization hold, both P and Q supports are nonnegative, but
 
@@ -94,3 +94,5 @@ Before extending asymptotic claims to global optima:
 2. If yes, do not use the sampled beta/s-only active bases as global candidates; search for a feasible lifted support and a valid dual certificate.
 3. If no, state explicitly that A115–A122 investigate a different, reduced two-band optimization problem, and do not import global optimality conclusions from A81/A114.
 4. Keep the algebraic A119/A122 certificates independent of either interpretation until the full contract is specified.
+
+The initial workflow [run 42370993450](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42370993450) failed on the overly strong assertion `single_gamma==0`. That failure is substantive: the pairwise observation did **not** justify the individual-contact claim. The assertion was removed in commit `096108765efc71478480a030d258b93b77c77af0` and the narrower claim retained.
