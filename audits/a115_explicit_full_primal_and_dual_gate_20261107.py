@@ -17,6 +17,9 @@ from fractions import Fraction as F
 from typing import Mapping
 import a115_independent_compressed_adjacent_identity_20261107 as source
 
+if not __debug__:
+    raise RuntimeError('Assertions must remain enabled for this exact audit; do not use python -O')
+
 BETA = F(1, 8)
 GAMMA = F(1, 16)
 DELTA = F(1, 1875)
