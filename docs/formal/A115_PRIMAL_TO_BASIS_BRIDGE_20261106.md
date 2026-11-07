@@ -123,3 +123,9 @@ Even when these calculations are checked, neither shows the sign of the determin
 GitHub Actions [run 42320051698](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320051698), at source commit `44ae36385e15af4fec3a534a7bb1fb9abd0359aa`, has now reported **20/20 jobs SUCCESS**, including the dedicated `leanchecker (PrecategoryFormal.TargetPrimalBridge)` job. This verifies the first version: scaling the finite transform, the target ratio under a normalization, the constructed endpoint masses, and the identity producing `B_{M,k}`.
 
 The later **necessity** lemma and native `Matrix.det` lemma were committed after that run; their CI status is separate and must not be inferred from the earlier 20/20 PASS.
+
+## 8. Final kernel result for the strengthened primal and determinant bridges
+
+GitHub Actions [run 42320523915](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320523915), at source commit `1a6d5a4151b13bb4f23ddab6b3c23696f5d813e9`, ended with **20/20 SUCCESS**: the project Lean build and all 19 individual Leanchecker jobs passed, including `PrecategoryFormal.TargetPrimalBridge` and `PrecategoryFormal.TargetFactorTenChannel`.
+
+Accordingly, the updated necessity theorems `endpoints_forced_by_primal_equations` and `three_site_transform_from_primal_equations` are now kernel-replayed. The actual `Matrix.det` equality for the oriented 3×3 cofactor matrix is also kernel-replayed. Those claims are algebraic; no KKT or optimization conclusion is silently added.
