@@ -153,7 +153,7 @@ def controls():
     c=LP(24,F(129,1000),F(1,2),True)
     p,q,t=centered_equal(c.M,c.tau)
     mutations=[
-        (dict(p, **{}) if False else {12:-F(1)}, q,t,'p:nonnegative'),
+        ({12:-F(1)}, q,t,'p:nonnegative'),
         ({12:t+1},q,t,'p:mass'),
         ({11:t},q,t,'p:mean'),
         (p,{12:2*t},2*t,'p:mass'),
