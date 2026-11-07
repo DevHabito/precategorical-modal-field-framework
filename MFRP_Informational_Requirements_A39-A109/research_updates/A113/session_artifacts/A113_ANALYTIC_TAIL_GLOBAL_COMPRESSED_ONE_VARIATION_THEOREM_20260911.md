@@ -1,5 +1,34 @@
 # A113 — Analytic tail global compressed one-variation theorem
 
+> **Editorial correction — 7 November 2026 (original dated claim retained for provenance).**
+>
+> The original statement below wrote `E_(M,k) = V_(M,k+1)-V_(M,k)`.
+> This is **not literally correct** if `V` is the scaled target-transform
+> objective of the two-band Cramer solution and `E` is the A83 cofactor factor.
+> At adjacent contacts the exact checked relation is
+>
+> ```text
+> (V_(k+1) - V_k) * Delta_k * Delta_(k+1) = -Z * E_(M,k),
+> Delta_k = B_beta(k)*H_s - B_s(k)*H_beta,
+> Z = C_beta*H_s - C_s*H_beta.
+> ```
+>
+> For nonzero determinants, `V_(k+1)-V_k =
+> -Z*E/(Delta_k*Delta_(k+1))`. Therefore sign agreement requires
+> `Z<0` and `Delta_k*Delta_(k+1)>0`. These conditions are not
+> automatic from the definition of `E`. Two exact counterchecks include
+> `M=521,k=90,s=131/1000,tau=1/2`, inside the quoted A113 domain.
+> This **corrects the equality**, not by itself the separately stated
+> one-variation sign pattern of the factor. Claims about a maximizer
+> additionally require both candidate families to be admissible; a
+> compressed sign factor alone never proves a full lifted LP optimum.
+>
+> See the [source-level exact bridge](../../../../../docs/formal/A115_COMPRESSED_ADJACENT_OBJECTIVE_IDENTITY_20261107.md)
+> and the [adversarial audit](../../../../../docs/research/A115_A122_ADVERSARIAL_SCIENTIFIC_AUDIT_20261107.md).
+> The original 2026-09-11 assertion remains quoted in the original
+> section below, explicitly superseded **as a literal identity**.
+
+
 ## Status
 
 **PROVED for the frozen reduced/compressed contract.**
