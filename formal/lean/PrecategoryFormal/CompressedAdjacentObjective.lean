@@ -119,4 +119,53 @@ theorem oriented_adjacent_sign_transfer
       mul_nonpos_of_nonpos_of_nonneg hnot (le_of_lt hdet)
     linarith
 
+/--
+The two active band equalities *force* the Cramer formulas for
+the scaled total mass t and the interior P mass z. The condition
+D != 0 is explicit and no primal nonnegativity or KKT property
+is inferred.
+-/
+theorem active_band_cramer_solution
+    (Bb Bs Hb Hs Cb Cs t z : ℝ)
+    (hdet : Bb * Hs - Bs * Hb ≠ 0)
+    (hbeta : Bb * z + Hb * t = Cb)
+    (hs : Bs * z + Hs * t = Cs) :
+    z = (Cb * Hs - Cs * Hb) / (Bb * Hs - Bs * Hb) ∧
+      t = (Bb * Cs - Bs * Cb) / (Bb * Hs - Bs * Hb) := by
+  have hz : z * (Bb * Hs - Bs * Hb) = Cb * Hs - Cs * Hb := by
+    calc
+      z * (Bb * Hs - Bs * Hb) =
+          Hs * (Bb * z + Hb * t) - Hb * (Bs * z + Hs * t) := by
+            ring
+      _ = Cb * Hs - Cs * Hb := by
+        rw [hbeta, hs]
+        ring
+  have ht : t * (Bb * Hs - Bs * Hb) = Bb * Cs - Bs * Cb := by
+    calc
+      t * (Bb * Hs - Bs * Hb) =
+          Bb * (Bs * z + Hs * t) - Bs * (Bb * z + Hb * t) := by
+            ring
+      _ = Bb * Cs - Bs * Cb := by
+        rw [hbeta, hs]
+        ring
+  exact ⟨(eq_div_iff hdet).2 hz, (eq_div_iff hdet).2 ht⟩
+
+/--
+The objective expression is the exact rational formula obtained by
+eliminating t and z from the two actual active band equations.
+-/
+theorem active_band_objective_value
+    (Bb Bs Bt Hb Hs Cb Cs A t z : ℝ)
+    (hdet : Bb * Hs - Bs * Hb ≠ 0)
+    (hbeta : Bb * z + Hb * t = Cb)
+    (hs : Bs * z + Hs * t = Cs) :
+    A * t + Bt * z =
+      (A * (Bb * Cs - Bs * Cb) +
+        Bt * (Cb * Hs - Cs * Hb)) /
+          (Bb * Hs - Bs * Hb) := by
+  obtain ⟨hz, ht⟩ :=
+    active_band_cramer_solution Bb Bs Hb Hs Cb Cs t z hdet hbeta hs
+  rw [ht, hz]
+  ring
+
 end PrecategoryFormal.CompressedAdjacency
