@@ -105,3 +105,18 @@ Here `s` and `τ` are fixed, with `s<τ<β/s<1`. Do not use a collision-layer pa
 | `Matrix.det` for the factor | Oriented determinant with rows `(B_beta,B_tau,B_s)`, `(H_beta,A,H_s)`, `(DeltaB_beta,DeltaB_tau,DeltaB_s)` | Its identification with E is algebraic; KKT sign is a distinct obligation |
 
 The source of these additions is [A115 Primal-to-Basis Bridge](../formal/A115_PRIMAL_TO_BASIS_BRIDGE_20261106.md). Keep the P support `{0,k,M}` distinct from the Q support `{1,h,h+1}`.
+
+## The compressed active-band system and sign convention (7 November)
+
+| Symbol | Definition | Caution |
+|---|---|---|
+| `C_r` | Constant term of the central-Q transform `Q_r=C_r+D_r*t` | Not the target factor `C` used as a local variable in A119 |
+| `H_beta` | `A_beta-D_beta+2*epsilon` for the **beta-lower** active band | The plus sign comes from `P_beta-Q_beta=-2*epsilon*t` |
+| `H_s` | `A_s-D_s-2*epsilon` for the **s-upper** active band | The minus sign comes from `P_s-Q_s=+2*epsilon*t` |
+| `Delta_k` | `B_beta(k)*H_s-B_s(k)*H_beta` | **Our** orientation; it is the negative of A81's determinant coefficient |
+| `Z` | `C_beta*H_s-C_s*H_beta` | **Our** orientation; it is the negative of A81/A83's positive interior-mass numerator |
+| `Z_source` | `C_s*H_beta-H_s*C_beta=-Z` | Use this to read A83's `Z_source*E` factorization correctly |
+| `N_k` | `A_tau*(B_beta(k)*C_s-B_s(k)*C_beta)+B_tau(k)*Z` | Cramer numerator of the actual scaled target objective |
+| `V_k` | `N_k/Delta_k=A_tau*t_k+B_tau(k)*z_k` | Exact rational objective, not merely its sign factor |
+
+The factor identity is `(V_(k+1)-V_k)*Delta_k*Delta_(k+1)=-Z*E_(M,k)`. The signs are the same when `Z<0` and `Delta_k*Delta_(k+1)>0`. See [the source-level and Lean analysis](../formal/A115_COMPRESSED_ADJACENT_OBJECTIVE_IDENTITY_20261107.md).
