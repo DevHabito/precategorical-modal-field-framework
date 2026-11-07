@@ -226,3 +226,23 @@ The fully verified conditional theorem says: when two *actual solutions* satisfy
 The [Python run 42357508468](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42357508468) also completed with **SUCCESS** for the full exact-rational suite, including 213 adjacent comparisons and the exact `M=24,k=5→6` example in which the objective grows but `p_0(k=6)<0`. This is a reproducible falsification of a potential **feasibility inference**, not of the determinant identity.
 
 No broad LP optimality statement follows from the results checked here. A global theorem still needs the missing band constraints and a correctly oriented dual certificate, not only an increasing compressed objective.
+
+## 13. P support feasibility and uniform common-source sign (7 November)
+
+**Lean-checked P feasibility:** source commit `e024cc7073f3f4f0e459215bb45d73aaac27aada`, [run 42358308334](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358308334), **23/23 jobs SUCCESS**. The module `CompressedPrimalFeasibility.lean` proves exactly when the three P masses are nonnegative; it also derives two negative determinant orientations from **strictly positive interior masses and the separate hypothesis Z<0**. It removes a redundant determinant-product assumption from the conditional compressed sign theorem, but does not prove all LP constraints.
+
+**Independent P checks:** [run 42358477152](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358477152) completed **SUCCESS** with **142,740** exact `Fraction` mass/moment/nonnegativity controls, including **57,096 deliberately inadmissible** points, plus **345** determinant orientation controls (130 with `Z<0`, 215 with `Z>0`).
+
+**Uniform analytic result:** a new exact cancellation shows
+```text
+L_h(tau)*Z
+ = L_h(beta)*R_(M,h)(s) - L_h(s)*R_(M,h)(beta)
+   -2*epsilon*(L_h(beta)+L_h(s)).
+```
+For `0<beta<s<1/4`, `M>=4`, `0<tau<1`, `delta>=0`, an independent calculus argument proves the first difference strictly negative and the tolerance contribution nonpositive. The proof uses `h^2*r^(h-1) <= 4r` on `0<r<=1/4`, established by induction, and thus `L_h'(r)>=1-4r>0`. It also uses the strictly decreasing positive function `R_(M,h)(r)=(1-r^h)*(1-r^(M-h))/2`. This gives `Z<0` uniformly, without a grid extrapolation. Read [the proof](../formal/A115_UNIFORM_SOURCE_NUMERATOR_SIGN_20261107.md) for all assumptions and algebra.
+
+**Lean scope remains separated:** `CompressedSourceNumerator.lean` encodes the universal cancellation and the sign implication *conditional on the L/R ordering*. It does **not yet** formalize the derivative induction for every natural h. The first Lean [run 42358760783](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358760783) **FAILED** on a strict-style warning about `<;>` in the proof script; the theorem was unchanged. The corrected version, source commit `97f71f50c44544e80be4512fa0c43cf3b542164b`, is tracked by [run 42358976869](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358976869). Do not report this particular Lean module as PASS before its individual job completes.
+
+**Independent source-sign checks:** [run 42358910281](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42358910281) **SUCCESS**, adding **2,370** exact parity/Q-reconstruction/target-cancellation/sign controls. The independent code is `audits/a115_source_numerator_sign_20261107.py`. The grid is evidence against coding mistakes, not the proof of all h.
+
+**Still open:** full LP dual/KKT feasibility, all inactive bands, and the separate formalization of the uniform h-dependent monotonicity theorem in Lean 4. Prior-art novelty remains unverified.
