@@ -37,7 +37,8 @@ theorem sourceShape_hasDerivAt (n : ℕ) (r : ℝ) :
       (hp3.const_mul ((n : ℝ)+1))
   unfold sourceShape
   convert hsum using 1
-  · rfl
+  · funext x
+    simp only [Pi.sub_apply, Pi.add_apply, id_eq]
   · ring
 
 /--
