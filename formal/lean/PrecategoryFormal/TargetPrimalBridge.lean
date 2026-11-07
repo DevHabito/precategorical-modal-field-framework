@@ -104,4 +104,44 @@ theorem three_site_transform_basis
   field_simp [hm]
   ring
 
+/--
+The converse direction needed for an actual primal derivation: any three
+real coefficients satisfying the mass and mean equations must have
+exactly the endpoint values used above. Positivity is not presumed.
+-/
+theorem endpoints_forced_by_primal_equations
+    (M k : ℕ) (t z p₀ pM : ℝ) (hM : M ≠ 0)
+    (hmass : p₀ + z + pM = t)
+    (hmean : (k : ℝ)*z + (M : ℝ)*pM = (M : ℝ)/2*t) :
+    p₀ = leftEndpoint M k t z ∧
+      pM = rightEndpoint M k t z := by
+  have hm : (M : ℝ) ≠ 0 := by exact_mod_cast hM
+  have hright : pM = rightEndpoint M k t z := by
+    unfold rightEndpoint
+    field_simp [hm]
+    nlinarith [hmean]
+  have hleft : p₀ = leftEndpoint M k t z := by
+    have heq : p₀ + z + rightEndpoint M k t z = t := by
+      rw [← hright]
+      exact hmass
+    have htotal := endpoint_mass_identity M k t z hM
+    linarith
+  exact ⟨hleft, hright⟩
+
+/--
+The moment-adjusted basis identity is forced by the original two
+three-site primal equalities, not merely an algebraic construction.
+-/
+theorem three_site_transform_from_primal_equations
+    (M k : ℕ) (t z p₀ pM r : ℝ) (hM : M ≠ 0)
+    (hmass : p₀ + z + pM = t)
+    (hmean : (k : ℝ)*z + (M : ℝ)*pM = (M : ℝ)/2*t) :
+    p₀ + z*r^k + pM*r^M =
+      t/2*(1+r^M) +
+        z*PrecategoryFormal.TargetFactor.finiteBasis M k r := by
+  obtain ⟨hleft, hright⟩ :=
+    endpoints_forced_by_primal_equations M k t z p₀ pM hM hmass hmean
+  rw [hleft, hright]
+  exact three_site_transform_basis M k t z r hM
+
 end PrecategoryFormal.PrimalBridge
