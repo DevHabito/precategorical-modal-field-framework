@@ -101,3 +101,19 @@ E_(M,k) = X*DeltaB_s + Y*B_s + W*H_s.
 To close that gap, the next formal file must include the active transform-band equalities, the second measure, the precise orientation of the reduced objective, and the determinant/dual sign relation. It must then establish why `E` has that expression rather than merely defining `E` that way.
 
 This is a concrete prerequisite for any end-to-end certification of A116–A122. The new results here are elementary algebraic components; mathematical priority is **not claimed**.
+
+## 6. Necessity and determinant orientation — new proof obligations
+
+The first formal file built successfully on [run 42320048684](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320048684), at the revision before the converse was appended. A separate commit `754880ef3ef0034716e78f0fe8a93604324a10f2` adds `endpoints_forced_by_primal_equations` and `three_site_transform_from_primal_equations`: unlike the previous constructed endpoint weights, these theorems begin with **arbitrary** real endpoint masses satisfying the two primal equations and aim to show that the A115 moment-adjusted basis is forced. Track the build and replay on [run 42320382810](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320382810). **Do not call these new converse lemmas kernel-certified until that revision passes.**
+
+A second algebraic observation fixes the determinant orientation of the previously certified cofactor:
+
+```text
+E = det [ [B_beta,      B_tau,      B_s],
+          [H_beta,      A,          H_s],
+          [DeltaB_beta, DeltaB_tau, DeltaB_s] ].
+```
+
+This expansion is consistent with the previously proved `X DeltaB_s + Y B_s + W H_s`; the row order matters because a swap reverses the determinant sign. The native `Matrix.det` statement was appended to `TargetFactorTenChannel.lean` at commit `1a6d5a4151b13bb4f23ddab6b3c23696f5d813e9`, with [Lean run 42320523915](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42320523915) as the corresponding independent build/kernel gate.
+
+Even when these calculations are checked, neither shows the sign of the determinant or proves that its sign selects a globally optimal LP architecture. That conclusion requires the *actual* active constraint matrix, the dual objective direction, and nonnegative primal/dual multipliers. This distinction is preserved deliberately.
