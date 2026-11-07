@@ -105,3 +105,18 @@ An additional independent exact-Fraction recount over the same grid found **2 ga
 - `M=522, s=129/1000, tau=1/5, k=208`: both sparse measures nonnegative, gamma band satisfied.
 
 Neither has its adjacent partner gamma-feasible in the tested comparison set. This is why the **0/213 pair** result is true while the first `0/426 individual` inference was false. The independent recount is exploratory until the corrected GitHub CI run is inspected; the repository script reports the occurrence count explicitly.
+
+## Verified CI result
+
+The corrected [GitHub Actions run 42371029548](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42371029548) finished **SUCCESS**. The exact audit output was:
+
+```text
+pairs: 213
+both_nonnegative: 159
+both_gamma: 0
+both_nonnegative_and_gamma: 0
+single_contacts: 426
+single_gamma: 2
+```
+
+The first CI failure is preserved as a regression lesson: **0 feasible adjacent pairs does not imply 0 feasible individual contacts**. Both exceptional individual contacts were found by an independent recount and are listed above. No claim of gamma-band universality or transfer from A81 to A115 is made.
