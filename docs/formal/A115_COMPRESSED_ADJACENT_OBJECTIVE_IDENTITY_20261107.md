@@ -191,7 +191,7 @@ s=129/1000, tau=1/2;
 adjacent contact k=5 -> k=6.
 ```
 
-The two active band equalities, the central Q target normalization and the mass/mean equations all hold for both algebraic candidates. The sign factor `E_(24,5)>0` and the **unscaled target objective increases** from k=5 to k=6.
+The two active band equalities, the central Q target normalization and the mass/mean equations all hold for both algebraic candidates. The sign factor `E_(24,5)>0` and the **literal scaled target objective increases** from k=5 to k=6.
 
 However, the putative P mass at the left endpoint at k=6 is exactly
 
