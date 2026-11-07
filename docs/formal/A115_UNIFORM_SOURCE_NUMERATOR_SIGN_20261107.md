@@ -199,3 +199,11 @@ It encodes the induction `((n:Real)+2)^2 * r^(n+1) <= 4*r` for all `n:Nat`, `0<=
 [`CompressedSourceMonotonicity.lean`](../../formal/lean/PrecategoryFormal/CompressedSourceMonotonicity.lean) is a separate attempt to connect the already-positive polynomial expression to the actual derivative and to Mathlib's strict monotonicity theorem on `(0,1/4)`. It is tracked by [run 42359621482](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359621482), which was **queued** at the latest observation. Its kernel verification is **not yet claimed**. The monotonicity of the other factor `R` still needs a formal statement if we want an end-to-end Lean-certified sign theorem.
 
 These gates are intentionally separated. A paper proof can be mathematically complete while its mechanization remains incomplete; the evidence ledger must not collapse those two statuses.
+
+## Kernel confirmation of the all-natural-index power bound
+
+GitHub Actions [run 42359321885](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359321885) has now completed with **25/25 SUCCESS**, including individual Leanchecker replay of `PrecategoryFormal.CompressedSourcePowerBound`, at source commit `8ae4984d132f17d58501e5113d539ff400d8d71b`.
+
+Therefore the inequality `(n+2)^2*r^(n+1)<=4*r` for **all natural n** on `0<=r<=1/4`, strict positivity of the formal derivative polynomial for `0<r<1/4`, and both parity factorization identities are kernel-certified. This is not just a finite enumeration.
+
+A separate source `CompressedSourceMonotonicity.lean` attempts the remaining connection to the actual derivative and the Mathlib strict-monotonicity theorem. Its CI run [42359621482](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42359621482) was in progress at the last observation. Do not call this final monotonicity theorem Lean-certified until the new module passes.
