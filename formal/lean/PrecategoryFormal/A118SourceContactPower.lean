@@ -47,6 +47,6 @@ theorem source_slope_equals_xi_at_contact
         xiPublished s α e odd (n+2) :=
     source_slope_matches_a118 s α (s^(n+1))⁻¹ e
       odd (n+2) hs hcontact
-  simpa only using hjet
+  simpa only [Nat.cast_add, Nat.cast_ofNat] using hjet
 
 end PrecategoryFormal.A118SourceContactPower
