@@ -32,4 +32,22 @@ theorem even_r4_upper_half_positive
   exact certified_box_sound false 4 (1/2) 1 s α hs hα
     even_r4_upper_half_passes
 
+/--
+Second independent whole-box evaluation: odd parity at r=4.
+As in the even case, no external interval endpoint is postulated.
+-/
+theorem odd_r4_upper_half_passes :
+    passes true 4 (1/2) 1 = true := by
+  decide +kernel
+
+/-- Pointwise positivity on the certified odd rational rectangle. -/
+theorem odd_r4_upper_half_positive
+    (s α : ℚ)
+    (hs : 129/1000 ≤ s ∧ s ≤ 133/1000)
+    (hα : (alphaBox true 4 (1/2) 1).lo ≤ α ∧
+      α ≤ (alphaBox true 4 (1/2) 1).hi) :
+    0 < PrecategoryFormal.A119CriticalExpression.criticalXiHat s α true 4 := by
+  exact certified_box_sound true 4 (1/2) 1 s α hs hα
+    odd_r4_upper_half_passes
+
 end PrecategoryFormal.A119BoxReplay
