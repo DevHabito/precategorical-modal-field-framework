@@ -112,6 +112,7 @@ jobs:
           - PrecategoryFormal.A119RealCritical
           - PrecategoryFormal.A119Real35Boxes
           - PrecategoryFormal.A119RealManifest
+          - PrecategoryFormal.A119RealFullCells
     steps:
       - name: Checkout
         uses: actions/checkout@v6
