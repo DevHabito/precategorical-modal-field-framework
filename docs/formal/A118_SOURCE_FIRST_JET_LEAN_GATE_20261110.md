@@ -12,3 +12,22 @@ It separately proves that the only difference between `xiBySourceZ` and the repo
 **Remaining formal step:** prove that `sourceSlope` is actually the derivative at x=0 of the original rational bracket with the two collision powers replaced by their correct first-order approximations. The present Lean definitions do not make that derivative claim automatically true. A separate analytic proof is needed for the true exponential/log collision factors and all uniform remainder inequalities. Passing these algebra lemmas would strengthen the source-to-A118 coefficient identification, not finish the O(M^-3) Lean theorem.
 
 The full C2(k) finite cofactor, its power channels, the A119 35 real sign boxes, contact coverage and full F3 optimality are separate logical steps. No novelty or physics claim is made here.
+
+
+## Failed first draft: missing critical contact factor
+
+The first Lean compilation [run 42924951684](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42924951684) **FAILED**. The auxiliary theorem \`source_xi_minus_published\` had incorrectly claimed that the residual is \`(1-s)*alpha*e*(s*z - reciprocalPower)\`. Lean produced genuine unsolved algebraic goals. Independent inspection confirmed an omitted factor
+
+\[
+\eta_h=\alpha^2+2\sigma\alpha.
+\]
+
+The correct **mathematical identity** is
+
+\[
+\Xi_{\rm sourceZ}-\Xi_{\rm published}
+=(1-s)\alpha e\,\eta_h\,
+\left(s z-(s^{r-2})^{-1}\right).
+\]
+
+The stated source-contact hypothesis \`s*z=(s^(r-2))⁻¹\` still makes the residual exactly zero; the downstream coincidence theorem's assumptions are unchanged. This is a substantive **correction to the intermediate algebraic statement**, not merely a Lean syntax issue. The first draft was not kernel-accepted and is retained in Git history. A separate linter warning about \`<;>\` was corrected without modifying the algebra. The replacement module needs fresh compilation and individual kernel replay.
