@@ -42,3 +42,10 @@ Those are hand-auditable analytic arguments, **not** already kernel-replayed uni
 5. **Contact selection and publication scope.** Keep A117's high-deficit exclusion, central support feasibility, and F2/F3 primal/dual optimality separate. Do not call the reduced sign result a global LP optimum, physical theory or original theorem without full prior-art review and external assessment.
 
 The new theorem statements were not weakened after failed checks, and the `main` branch remains untouched.
+
+
+## Final CI read-back
+
+The complete [GitHub Actions run 42914436667](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42914436667) at source commit c025d081479fd9a27a841b3bc7135dedd4b35515 subsequently completed **SUCCESS, 49/49 jobs**. The 49 include one full Lean project compilation and 48 individual module kernel checks; the three source/critical algebra modules named above were individually SUCCESS. This supersedes the earlier “other jobs may still be running” qualification for that exact run.
+
+The research documentation and exact-Python audit sources include later commits. No new code-level theorem should be attributed to those later documentation-only commits. The independent exact finite cofactor regression remains confirmed in CI run 42914016273.
