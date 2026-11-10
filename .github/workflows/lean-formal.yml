@@ -104,6 +104,8 @@ jobs:
           - PrecategoryFormal.A119R4Coverage
           - PrecategoryFormal.A119R5Boxes
           - PrecategoryFormal.A119R6Boxes
+          - PrecategoryFormal.A119R7Boxes
+          - PrecategoryFormal.A119R8R12Boxes
     steps:
       - name: Checkout
         uses: actions/checkout@v6
