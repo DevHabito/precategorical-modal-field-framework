@@ -103,6 +103,7 @@ jobs:
           - PrecategoryFormal.A119R4Remaining
           - PrecategoryFormal.A119R4Coverage
           - PrecategoryFormal.A119R5Boxes
+          - PrecategoryFormal.A119R6Boxes
     steps:
       - name: Checkout
         uses: actions/checkout@v6
