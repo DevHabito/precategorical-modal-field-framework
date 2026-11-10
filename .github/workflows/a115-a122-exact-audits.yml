@@ -21,6 +21,7 @@ on:
       - "audits/a115_a118_exact_cofactor_regression_20261110.py"
       - "audits/a115_finite_power_geometric_bound_gates_20261110.py"
       - "audits/a115_source_to_a118_jet_audit_20261110.py"
+      - "audits/a115_uniform_jet_polynomial_bound_20261110.py"
       - "audits/a118_collision_power_taylor_gates_20261110.py"
       - "audits/a115_full_power_tail_symbolic_20261110.py"
       - "audits/a119_independent_fraction_certificate_20261106.py"
@@ -125,3 +126,5 @@ jobs:
         run: python audits/a115_full_power_tail_symbolic_20261110.py
       - name: Independent source-derived A117 and A118 coefficients
         run: python audits/a115_source_to_a118_jet_audit_20261110.py
+      - name: Uniform source-jet rational monomial certificate
+        run: python audits/a115_uniform_jet_polynomial_bound_20261110.py
