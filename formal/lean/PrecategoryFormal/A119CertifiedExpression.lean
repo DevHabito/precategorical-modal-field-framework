@@ -54,7 +54,7 @@ def xiExpr (odd : Bool) (r : ℕ) : Expr :=
       (Expr.mul
         (Expr.mul (Expr.sub (c 1) s) α)
         (Expr.div (c 1) (Expr.pow s (r-2)))) q) etaH
-  let source := Expr.mul q
+  let sourceTerm := Expr.mul q
     (Expr.sub
       (Expr.mul (Expr.mul a B) G2)
       (Expr.mul (Expr.mul (Expr.sub (c 1) s) (Expr.add α (c 1)))
@@ -64,7 +64,7 @@ def xiExpr (odd : Bool) (r : ℕ) : Expr :=
     (Expr.mul
       (Expr.mul (Expr.mul (c 2) α) s)
         (Expr.mul a (Expr.sub B S)))
-  Expr.add (Expr.add main source) target
+  Expr.add (Expr.add main sourceTerm) target
 
 /--
 The expression-tree semantics match the separately declared rational
@@ -75,7 +75,7 @@ theorem xiExpr_matches_critical
     pointValue (xiExpr odd r) s α =
       criticalXiHat s α odd r := by
   cases odd <;>
-    simp [xiExpr, pointValue, criticalXiHat, div_eq_mul_inv]
+    simp [xiExpr, pointValue, criticalXiHat, div_eq_mul_inv] <;> ring
 
 def sourceBox : Interval := ⟨129/1000, 133/1000⟩
 
@@ -109,7 +109,7 @@ theorem certified_box_sound
       simp [he] at hpass
   | some box =>
       simp [he] at hpass
-      have hlo : 0 < box.lo := of_decide_eq_true hpass
+      have hlo : 0 < box.lo := hpass
       have hinside : contains box (pointValue (xiExpr odd r) s α) :=
         intervalValue_sound (xiExpr odd r) sourceBox
           (alphaBox odd r t₀ t₁) s α hs hα box he
