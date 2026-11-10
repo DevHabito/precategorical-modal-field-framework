@@ -26,3 +26,4 @@ import PrecategoryFormal.FiniteLPWeakDuality
 import PrecategoryFormal.A119CompactCertificate
 import PrecategoryFormal.A119IntervalArithmetic
 import PrecategoryFormal.A119CriticalExpression
+import PrecategoryFormal.A119IntervalEvaluator
