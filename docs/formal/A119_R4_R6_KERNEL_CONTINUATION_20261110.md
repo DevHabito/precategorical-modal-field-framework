@@ -67,3 +67,16 @@ The total count remains **6/35**; the coverage theorem does not create new boxes
 [Lean run 42884049414](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42884049414), source commit `e00892ba34ab502b8232f79c3331cc7e1e9739b9`, has **completed SUCCESS**, including `leanchecker (PrecategoryFormal.A119R5Boxes)`. The module verifies four direct interval evaluations, two per parity at r=5, and two resulting rational full-cell theorems using the half-interval coverage lemma. Thus the cumulative individually replayed box count is **10/35**: six r=4 plus four r=5.
 
 The r=6 module and the r=7..12 modules were separately submitted in subsequent source commits and may be queued; they are **not counted** until their own run's relevant individual checker succeeds. Source commit `f1c63f4f907f56a74ebfe5115c0bf6b0c7de2eb7` submits 14 r=7..12 boxes (4 at r=7, 10 at r=8..12); [CI run 42886987495](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42886987495) is the corresponding run. Python Fraction originally certifies 35/35 independently, but is not a substitute for these Lean kernel checks.
+
+
+## Verified r=6 kernel checkpoint (2026-11-10)
+
+[Lean Actions run 42884588094](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42884588094), source commit \`e4e50ca439c508110d7792f4af88455b5d10a69e\`, has an individually **successful** \`leanchecker (PrecategoryFormal.A119R6Boxes)\` job \`130074577689\`. It replays the four complete exact rational interval computations at r=6, two per parity. **The cumulative verified count is now 14/35 rational boxes** (r=4 six, r=5 four, r=6 four). This status derives from the individual module job, not an assumption about all remaining jobs in the workflow.
+
+In addition, the exact 35-box Lean source manifest has been fully **submitted**, but is not fully verified:
+
+- r=7: four kernel proof attempts, two per parity, and two full-cell rational consequence theorems;
+- r=8,...,12: ten unsplit parity-resolved boxes;
+- r=13,...,19: seven odd-only unsplit boxes.
+
+See commits \`f1c63f4f907f56a74ebfe5115c0bf6b0c7de2eb7\` and \`e5031677683c7d51625c9359b63ac4a96bcfca5d\`. The relevant CI runs are [42886987495](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42886987495) and [42887340405](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42887340405). **Neither newly submitted region family is counted here before its individual checker passes.** No real-variable extension or asymptotic derivation is concluded.
