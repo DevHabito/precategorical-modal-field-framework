@@ -36,7 +36,9 @@ third-order Taylor remainder in A118.
 -/
 theorem exp_four_lt_55 : Real.exp (4:ℝ) < 55 := by
   have heq : Real.exp (4:ℝ) = (Real.exp (1:ℝ))^4 := by
-    simpa using (Real.exp_nat_mul (1:ℝ) 4)
+    calc
+      Real.exp (4:ℝ) = Real.exp ((4:ℕ)*(1:ℝ)) := by norm_num
+      _ = (Real.exp (1:ℝ))^4 := Real.exp_nat_mul (1:ℝ) 4
   rw [heq]
   calc
     (Real.exp (1:ℝ))^4 < (68/25:ℝ)^4 :=
