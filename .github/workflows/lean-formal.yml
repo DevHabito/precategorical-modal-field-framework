@@ -98,6 +98,7 @@ jobs:
           - PrecategoryFormal.A119IntervalArithmetic
           - PrecategoryFormal.A119CriticalExpression
           - PrecategoryFormal.A119IntervalEvaluator
+          - PrecategoryFormal.A119CertifiedExpression
     steps:
       - name: Checkout
         uses: actions/checkout@v6
