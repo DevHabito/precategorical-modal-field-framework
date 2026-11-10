@@ -45,6 +45,15 @@ def main():
     print("PASS bounds for C0, C1, C2 and normalized geometric coefficient")
     print("H=8^18 =", H)
     print("C_full=200*H^2 =", 200 * H * H)
+    # Full normalized cofactor = core(U,V) + beta channel + cubic channel
+    # + the already bounded full-length-power correction. The following
+    # gates verify the *arithmetic constants*, not the triangle inequalities.
+    assert 36 * F(100, 99) < 40  # K-channel coefficient
+    assert 6 * F(100, 99) < 7    # u-cubic coefficient
+    assert 59 * X_MAX + 480 * H < 481 * H * H  # core response delta
+    assert 40 + 7 + 481 + 200 < 750
+    print("PASS aggregate geometric bound: 750*(8^18)^2*(99/100)^M")
+    print("Final Taylor coefficient expansion and Lean inequalities remain open.")
     print("NOT a Lean proof or a test of every analytic inequality")
 
 if __name__ == "__main__":
