@@ -113,6 +113,7 @@ jobs:
           - PrecategoryFormal.A119Real35Boxes
           - PrecategoryFormal.A119RealManifest
           - PrecategoryFormal.A119RealFullCells
+          - PrecategoryFormal.A119GlobalRealManifest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
