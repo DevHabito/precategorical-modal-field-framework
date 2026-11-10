@@ -21,3 +21,8 @@ The original intermediate `source_xi_minus_published` formula submitted earlier 
 ## First compilation gate and correction
 
 [GitHub Actions 42925831382](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42925831382) failed at the final application because Lean reached its default deterministic heartbeat limit during definitional equality. The log contained no failed algebraic equality, but this is still a **failed proof attempt**. The next revision names the instantiated theorem explicitly, raises the local module heartbeat budget, and leaves the exact theorem statement and source-contact assumptions unchanged. Kernel approval remains pending.
+
+
+## Second failed build and precise correction
+
+Builds 42926378989 and 42926534788 still rejected the contact corollary because `↑(n+2)` and `↑n+2` were not automatically identified at the final exact-term check. The original source-power identity and the algebraic coefficient identity were unchanged. The corrected proof now explicitly rewrites `Nat.cast_add` and `Nat.cast_ofNat`, rather than relying on unbounded definitional equality search. The latter run compiled the separate `A118LogExpElementary` module successfully, but its kernel job cannot start until the whole project builds.
