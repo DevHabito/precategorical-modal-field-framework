@@ -51,3 +51,4 @@ import PrecategoryFormal.A115CollisionCoreFactor
 import PrecategoryFormal.A118SourceFirstJet
 import PrecategoryFormal.A118SourceContactPower
 import PrecategoryFormal.A118LogExpElementary
+import PrecategoryFormal.A118LogTaylorRemainder

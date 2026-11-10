@@ -122,6 +122,7 @@ jobs:
           - PrecategoryFormal.A118SourceFirstJet
           - PrecategoryFormal.A118SourceContactPower
           - PrecategoryFormal.A118LogExpElementary
+          - PrecategoryFormal.A118LogTaylorRemainder
     steps:
       - name: Checkout
         uses: actions/checkout@v6
