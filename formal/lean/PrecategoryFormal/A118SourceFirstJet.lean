@@ -62,7 +62,7 @@ theorem source_slope_equals_published_xi
     sourceSlope s α β δ a σ z e r =
       xiBySourceZ s α β δ a σ z e r := by
   dsimp [sourceSlope, xiBySourceZ]
-  field_simp [hs] <;> ring
+  field_simp [hs]; ring
 
 /--
 A complete algebraic bridge to the existing A118 definition:
@@ -76,7 +76,8 @@ theorem source_xi_minus_published
         (if odd then (1+s)/2 else 1)
         (if odd then 1/2 else 0) z e r -
       xiPublished s α e odd r =
-      (1-s)*α*e*(s*z-(s^(r-2))⁻¹) := by
+      (1-s)*α*e*(α^2+2*(if odd then (1/2:ℝ) else 0)*α)*
+        (s*z-(s^(r-2))⁻¹) := by
   cases odd <;>
     simp [xiBySourceZ, xiPublished, div_eq_mul_inv] <;> ring
 
