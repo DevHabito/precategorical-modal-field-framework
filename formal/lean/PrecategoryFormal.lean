@@ -44,3 +44,4 @@ import PrecategoryFormal.A119RealManifest
 import PrecategoryFormal.A119RealFullCells
 import PrecategoryFormal.A119GlobalRealManifest
 import PrecategoryFormal.A119CriticalSubstitutionIdentity
+import PrecategoryFormal.A115CofactorReducedCore

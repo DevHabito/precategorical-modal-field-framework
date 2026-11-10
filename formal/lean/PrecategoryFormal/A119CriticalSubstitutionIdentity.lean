@@ -73,9 +73,7 @@ theorem published_xi_equals_critical_xihat
   cases odd
   · simp [xiPublished, criticalXiHatReal,
       criticalNumerator, criticalDenominator, div_eq_mul_inv]
-    ring
   · simp [xiPublished, criticalXiHatReal,
       criticalNumerator, criticalDenominator, div_eq_mul_inv]
-    ring
 
 end PrecategoryFormal.A119CriticalSubstitutionIdentity
