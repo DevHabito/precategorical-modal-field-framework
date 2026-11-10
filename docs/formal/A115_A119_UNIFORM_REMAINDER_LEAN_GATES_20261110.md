@@ -68,3 +68,18 @@ and source-window endpoint/tail rational checks are supported by
 
 **Not performed:** a Lean formalization or CI for the new theorem,
 a global LP optimum proof, an originality certification.
+
+
+## Compact finite A119 certificate gate added 2026-11-10
+
+The independent exact-rational replay found a fixed 35-box partition for the published critical-substitution expression. Its [certificate note](../research/A119_COMPACT_35_BOX_CERTIFICATE_20261110.md) and [Python checker](../../audits/a119_compact_35box_fraction_certificate_20261110.py) contain the complete finite manifest, strict fraction bounds and fail-closed coarse-box controls.
+
+This gives a smaller, precisely scoped Lean target than replaying 6,400 interval cells. Formalization should:
+
+1. Define the same closed rational s interval, rational alpha boxes and both parity/ranges; prove the 35 box union covers the 25 original enlarged critical rectangles with no omitted endpoints.
+2. Define the natural rational interval operations and prove inclusion of exact division only when the denominator enclosure excludes zero.
+3. Normalize the rational critical expression and verify all 35 strict lower endpoints, preferably with a trusted rational decision procedure or explicit arithmetic certificates without native evaluation shortcuts.
+4. Prove the identity connecting the Lean rational function to the A118 critical substitution. Checking 35 intervals of an unrelated expression would not establish the theorem.
+5. Combine with the separately formalized A117 contact-cell and high-deficit exclusions.
+
+**No new Lean build or kernel replay has been executed for this certificate.** A Python CI workflow entry is present on the isolated research branch, but a workflow edit is not evidence of a successful run.
