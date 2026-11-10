@@ -50,3 +50,13 @@ Kernel evaluation of an input formula does not prove the *derivation* of that fo
 5. Recheck the A119 high-deficit tail and A118 coefficient identification in the Lean kernel. Compare the actual theorem with full-text prior art before any novelty claim.
 
 **Editorial judgment:** this checkpoint improves mechanical verification of a reduced rational sign lemma. It does not make A119 a finished or novel mathematical theorem.
+
+
+## Verified r=4 coverage checkpoint
+
+The full [GitHub Actions run 42883765927](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42883765927) completed **30/30 SUCCESS** at exact source commit \`72c12f7a8b2f8d57e16e9eb224543ee5f89e12d6\`. Its dedicated \`leanchecker (PrecategoryFormal.A119R4Coverage)\` job \`130068298976\` also passed. This lifts the six verified rational box calculations to two quantified rational-range theorems:
+
+- even parity, r=4: for all rational s in [129/1000,133/1000] and rational alpha in [8,21/2], \`criticalXiHat s alpha false 4 > 0\`;
+- odd parity, r=4: for the same rational source window and rational alpha in [9,231/20], \`criticalXiHat s alpha true 4 > 0\`.
+
+The total count remains **6/35**; the coverage theorem does not create new boxes. The theorem does not quantify over real-valued s or alpha, nor does it establish F3 optimality.
