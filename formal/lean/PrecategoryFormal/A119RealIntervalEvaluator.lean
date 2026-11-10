@@ -12,7 +12,7 @@ open PrecategoryFormal.A119RealIntervalCore
 Interpret the very same rational-constant A119 expression tree over reals,
 rather than assuming pointwise real inputs are rational.
 -/
-def evalReal : Expr → ℝ → ℝ → ℝ
+noncomputable def evalReal : Expr → ℝ → ℝ → ℝ
   | .lit c, _, _ => (c:ℝ)
   | .source, s, _ => s
   | .alpha, _, α => α
@@ -27,7 +27,7 @@ theorem pow_real_sound (x : Interval) (a : ℝ)
     containsReal (powI x n) (a^n) := by
   induction n with
   | zero =>
-      simp [powI, containsReal, singleton]
+      simp [powI, containsReal, A119IntervalEvaluator.singleton]
   | succ n ih =>
       simpa [powI, pow_succ, mul_comm] using
         (mul_real_sound x (powI x n) a (a^n) ha ih)

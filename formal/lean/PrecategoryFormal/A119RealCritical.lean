@@ -17,7 +17,7 @@ open PrecategoryFormal.A119RealIntervalEvaluator
 Real-number interpretation of the exact *reduced* A119 critical rational
 expression; not a source-to-A115 coefficient derivation.
 -/
-def criticalXiHatReal (s α : ℝ) (odd : Bool) (r : ℕ) : ℝ :=
+noncomputable def criticalXiHatReal (s α : ℝ) (odd : Bool) (r : ℕ) : ℝ :=
   let beta : ℝ := 1/8
   let delta : ℝ := 1/1875
   let sigma : ℝ := if odd then 1/2 else 0
