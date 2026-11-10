@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "formal/**"
+      - "research/a115-a119-uniform-remainder-20261110"
     paths:
       - "audits/a115_independent_central_reconstruction_20261106.py"
       - "audits/a115_independent_feasibility_bounds_20261106.py"
@@ -18,6 +19,8 @@ on:
       - "audits/a115_independent_primal_feasibility_and_orientation_20261107.py"
       - "audits/a115_source_numerator_sign_20261107.py"
       - "audits/a119_independent_fraction_certificate_20261106.py"
+      - "audits/a119_compact_35box_fraction_certificate_20261110.py"
+      - "audits/a119_independent_tail_and_entry_20261110.py"
       - "audits/a122_independent_rational_log_brackets_20261106.py"
       - ".github/workflows/a115-a122-exact-audits.yml"
   workflow_dispatch:
@@ -53,6 +56,8 @@ jobs:
             audits/a115_independent_primal_feasibility_and_orientation_20261107.py \
             audits/a115_source_numerator_sign_20261107.py \
             audits/a119_independent_fraction_certificate_20261106.py \
+            audits/a119_compact_35box_fraction_certificate_20261110.py \
+            audits/a119_independent_tail_and_entry_20261110.py \
             audits/a122_independent_rational_log_brackets_20261106.py
       - name: A115 central reconstruction (exact fractions)
         run: python audits/a115_independent_central_reconstruction_20261106.py
@@ -80,5 +85,9 @@ jobs:
         run: python audits/a115_near_wall_exact_counterexamples_20261106.py
       - name: A119 independent interval covering (exact fractions)
         run: python audits/a119_independent_fraction_certificate_20261106.py
+      - name: A119 compact 35-box rational positivity and fail-closed controls
+        run: python audits/a119_compact_35box_fraction_certificate_20261110.py
+      - name: A119 independent tail and contact-entry checks
+        run: python audits/a119_independent_tail_and_entry_20261110.py
       - name: A122 rational logarithm sign brackets
         run: python audits/a122_independent_rational_log_brackets_20261106.py
