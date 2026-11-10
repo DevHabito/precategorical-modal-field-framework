@@ -171,6 +171,17 @@ On 10 November 2026, the standalone weighted-degree checker returned PASS, with 
 
 During development, two draft checks initially failed due to treating K-dependent expressions as if K were zero and comparing expanded/factored expressions literally. The tests were corrected to compare exact symbolic differences and to set K=0 only for the K-independent core. The final version passed. No mathematical hypothesis was changed to hide a counterexample.
 
+## Independent A117 cell-entry and A119 tail audit (same research session)
+
+A separate exact-rational test is now committed at [a119_independent_tail_and_entry_20261110.py](../../audits/a119_independent_tail_and_entry_20261110.py). It was executed in the working container with PASS. An 80-term rational atanh-series enclosure proves 2 < -log(s) < 21/10 over the entire frozen source window. Rational inequalities give strictly positive entry margins:
+
+- even: 176249084859 / 2500000000000;
+- odd: 76540493262589821 / 4000000000000000000.
+
+The cutoff lower margins are both strictly positive, independently of floating-point tolerances: approximately 0.0020902493780287305 at even r=13, and 0.00024277493510525955 at odd r=20. The exact rational fractions are printed by the script, and match the earlier repository record. The upper bounds on the successive negative-tail magnitude ratios are 57/400 (even) and 1197/8600 (odd), both below 1. The positive lower-envelope contribution increases linearly with r, while the negative part decreases for later deficits. Thus, **conditional on A117's displayed endpoint inequality and one-crossing setup**, the elementary monotonic extension does rule out later critical contacts; this is more than checking the cutoff sign in isolation.
+
+The calculation is not an independently reconstructed A118-to-A119 Xi derivation, not a repetition of the 6400-box interval exhaustion in this session, and not an F3 optimizer theorem.
+
 ## Literature and publication gate
 
 The underlying moment/extreme-measure optimization is not new:
