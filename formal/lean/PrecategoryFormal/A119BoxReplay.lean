@@ -16,7 +16,7 @@ The box is even parity, r=4, upper half of its alpha interval.
 -/
 theorem even_r4_upper_half_passes :
     passes false 4 (1/2) 1 = true := by
-  decide
+  decide +kernel
 
 /--
 Unlike the old endpoint-positivity theorem, this claim combines the
