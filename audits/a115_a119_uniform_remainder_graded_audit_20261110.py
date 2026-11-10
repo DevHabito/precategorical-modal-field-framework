@@ -7,6 +7,9 @@ Requires SymPy; the working-container run used SymPy 1.14.0.
 """
 import sympy as S
 
+if not __debug__:
+    raise RuntimeError("Assertions disabled; rerun without Python -O")
+
 x, q, u, s, tau, beta = S.symbols('x q u s tau beta', real=True)
 U, V, W, T, K = S.symbols('U V W T K', real=True)
 vb, vs, vt = S.symbols('vb vs vt', real=True)
