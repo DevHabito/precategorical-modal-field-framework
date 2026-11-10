@@ -75,7 +75,8 @@ theorem xiExpr_matches_critical
     pointValue (xiExpr odd r) s α =
       criticalXiHat s α odd r := by
   cases odd <;>
-    simp [xiExpr, pointValue, criticalXiHat, div_eq_mul_inv] <;> ring
+    simp [xiExpr, pointValue, criticalXiHat, div_eq_mul_inv]
+  all_goals ring
 
 def sourceBox : Interval := ⟨129/1000, 133/1000⟩
 
