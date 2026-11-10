@@ -36,3 +36,4 @@ import PrecategoryFormal.A119R6Boxes
 import PrecategoryFormal.A119R7Boxes
 import PrecategoryFormal.A119R8R12Boxes
 import PrecategoryFormal.A119OddR13R19
+import PrecategoryFormal.A119RealIntervalCore

@@ -107,6 +107,7 @@ jobs:
           - PrecategoryFormal.A119R7Boxes
           - PrecategoryFormal.A119R8R12Boxes
           - PrecategoryFormal.A119OddR13R19
+          - PrecategoryFormal.A119RealIntervalCore
     steps:
       - name: Checkout
         uses: actions/checkout@v6
