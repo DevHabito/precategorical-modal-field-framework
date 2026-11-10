@@ -117,6 +117,7 @@ jobs:
           - PrecategoryFormal.A119CriticalSubstitutionIdentity
           - PrecategoryFormal.A115CofactorReducedCore
           - PrecategoryFormal.A115FullPowerTail
+          - PrecategoryFormal.A115FinitePowerDecomposition
     steps:
       - name: Checkout
         uses: actions/checkout@v6
