@@ -43,3 +43,15 @@ A subsequent corrected run is [42874445972](https://github.com/DevHabito/precate
 If the current CI passes, the work delivers a reusable sound interpreter and a verified formula mapping. That is a real formalization advance, but **no full 35-box kernel certificate, unrestricted optimizer theorem, physical prediction or novelty certification** follows without the remaining gates.
 
 All method descriptions and conclusions here are limited to the inspected source and linked CI; failed attempts have not been erased.
+
+
+## Verified source-to-interval bridge (2026-11-10)
+
+The [Lean CI run 42874445972](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42874445972), at exact commit \`f5c39156c97678ae957b3fa6870526dff9fc8c0f\`, successfully built the project, and the two relevant **individual** kernel checks finished SUCCESS:
+
+- \`leanchecker (PrecategoryFormal.A119IntervalEvaluator)\`: structurally inductive interval evaluator soundness, including fail-closed division.
+- \`leanchecker (PrecategoryFormal.A119CertifiedExpression)\`: exact equality of the AST expression to \`criticalXiHat\` and the general box-certification implication.
+
+Other matrix jobs may still be finishing at the time of this addendum; the overall 30-job conclusion must be checked separately. The source-to-expression identity is mathematically distinct from A115-to-A118's derivation of the expression.
+
+A first direct **whole-box** kernel computation was submitted in [A119BoxReplay.lean](../../formal/lean/PrecategoryFormal/A119BoxReplay.lean): even parity, deficit r=4, alpha upper-half interval. This relies on a kernel-evaluated \`passes = true\` rather than an asserted lower endpoint. The attempt's CI must be read independently; **this document does not yet claim the first box passed**.
