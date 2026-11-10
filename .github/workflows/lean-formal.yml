@@ -119,6 +119,7 @@ jobs:
           - PrecategoryFormal.A115FullPowerTail
           - PrecategoryFormal.A115FinitePowerDecomposition
           - PrecategoryFormal.A115CollisionCoreFactor
+          - PrecategoryFormal.A118SourceFirstJet
     steps:
       - name: Checkout
         uses: actions/checkout@v6

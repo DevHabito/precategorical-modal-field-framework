@@ -48,3 +48,4 @@ import PrecategoryFormal.A115CofactorReducedCore
 import PrecategoryFormal.A115FullPowerTail
 import PrecategoryFormal.A115FinitePowerDecomposition
 import PrecategoryFormal.A115CollisionCoreFactor
+import PrecategoryFormal.A118SourceFirstJet
