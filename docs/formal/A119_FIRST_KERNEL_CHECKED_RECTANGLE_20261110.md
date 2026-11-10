@@ -51,3 +51,12 @@ The additional exact **odd** region is:
 - \`0 < criticalXiHat s alpha true 4\` for every rational point in the region.
 
 There are now **2 out of 35** complete rational box evaluations replayed by the kernel: one per parity at r=4. The original Python Fraction checker still verifies 35/35; this should never be rephrased as 35/35 Lean. The two real-valued extensions, finite manifest coverage, and A118/A119 critical-identity bridge remain open exactly as previously described. No theorem hypothesis was weakened to make the odd case pass.
+
+
+## Follow-up 2026-11-10: all six r=4 rational boxes individually verified
+
+[Lean workflow run 42883385073](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42883385073) completed **30/30 SUCCESS**, at source commit \`62d930d5c92f0231ac68dd1ae6294cd0332669ff\`. The added module \`PrecategoryFormal.A119R4Remaining\` passed its independent \`leanchecker\` job. It contains four additional \`decide +kernel\` evaluations: even and odd, each with alpha fractions [0,1/4] and [1/4,1/2]. Together with the previous even/odd [1/2,1] proofs, there are now **6/35 individually kernel-replayed rational boxes**, all of contact deficit r=4.
+
+A distinct module \`PrecategoryFormal.A119R4Coverage\` supplies the *quantified* full-alpha claims using the quarter/half interval coverage lemma and the six explicit certificates. It has compiled, but its own individual leanchecker outcome needs to be read from [workflow 42883765927](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42883765927). Source for r=5 and r=6 box evaluations is committed, but those cases are not counted as kernel-verified until their specific checker jobs pass.
+
+This supersedes the earlier "2/35" checkpoint for the **count of rational box evaluations only**. No real-domain extension or A115-to-A119 asymptotic derivation is implied by that count.
