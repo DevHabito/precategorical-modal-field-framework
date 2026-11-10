@@ -13,7 +13,7 @@ and tau^M are set to zero *only for this auxiliary identity*.
 The exponentially small beta^k channel K is NOT discarded.
 q denotes k/M, not the A118 exponential ratio.
 -/
-def reducedCofactor (x q u β s τ K W T U V : ℝ) : ℝ :=
+noncomputable def reducedCofactor (x q u β s τ K W T U V : ℝ) : ℝ :=
   let A : ℝ := 1/2
   let Hb : ℝ := 1/2+u*U
   let Hs : ℝ := 1/2+u*V

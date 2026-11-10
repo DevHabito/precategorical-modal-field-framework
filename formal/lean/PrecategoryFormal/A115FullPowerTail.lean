@@ -12,7 +12,7 @@ A115 cofactor with all three finite full-length power channels retained:
 vb=beta^M, vs=s^M, vt=tau^M, and bk=uK, sk=uW, tk=uT.
 The scalar q is k/M, x is 1/M. U,V are central response factors.
 -/
-def fullCofactor
+noncomputable def fullCofactor
     (x q u β s τ K W T U V vb vs vt : ℝ) : ℝ :=
   let A : ℝ := (1+vt)/2
   let Hb : ℝ := 1/2+u*U

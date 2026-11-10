@@ -41,3 +41,7 @@ This does **not** prove any asymptotic remainder bound. To obtain the desired un
 The previously submitted [A119CriticalSubstitutionIdentity.lean](../../formal/lean/PrecategoryFormal/A119CriticalSubstitutionIdentity.lean) had a failed CI build [42910102041](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42910102041) because the two explicit `ring` tactics ran after `simp` had already discharged each goal. This commit removes only those redundant tactics, without changing the theorem statement or assumptions. The failed CI run remains part of the record.
 
 New Lean acceptance requires a completed build **and** the corresponding individual `leanchecker` module job at the exact committing SHA. The original source-to-uniform-remainder and full A119 physical/global claims remain open.
+
+## First Lean compilation failure and narrow correction
+
+[Workflow 42912510306](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42912510306) failed in `A115CofactorReducedCore.lean` at the `Real` division literal `1/2`: Lean requires that definition to be declared `noncomputable`, since exact real division is not executable computation. We changed only `def` to `noncomputable def` there, and did the same for the dependent `A115FullPowerTail.fullCofactor` to avoid the identical issue. No mathematical statement or assumption changed. The failed run remains part of the audit record. Neither new module is counted as kernel approved until its corrected compilation and individual checker pass.
