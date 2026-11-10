@@ -23,3 +23,4 @@ import PrecategoryFormal.CompressedPrimalFeasibility
 import PrecategoryFormal.CompressedSourceNumerator
 import PrecategoryFormal.CompressedSourcePowerBound
 import PrecategoryFormal.FiniteLPWeakDuality
+import PrecategoryFormal.A119CompactCertificate
