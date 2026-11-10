@@ -50,3 +50,10 @@ Also, a negative interval lower bound on the still wider window might be repaire
 Keep the original 6,400-box and 35-box tests; add this sensitivity audit as a separate regression. The method is classical interval arithmetic. No originality claim, physical interpretation or universal LP-support conclusion follows.
 
 New Lean module `PrecategoryFormal.A119CompactCertificate` is a first formalization gate for box counts, coverage and basic interval operations. It does not yet establish the 35 Xi_hat lower bounds in Lean. CI status must be recorded independently.
+
+
+## Independently verified CI outcome
+
+GitHub Actions [exact-arithmetic run 42866656323](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42866656323), source SHA \`08eb97a475eafad28249cbe5ada501e492d2bb02\`, completed with conclusion **success**. The actual \`exact-python\` job (ID \`130006685250\`) included a successful dedicated source-window step. Its decoded log printed the exact expanded-window minimum fraction above and confirmed the deliberately non-certifying control on the larger window. This was not inferred from an earlier local test.
+
+Do not interpret this CI result as Lean verification, a proof of an expanded A116-A119 theorem, or historical novelty.
