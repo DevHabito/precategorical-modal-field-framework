@@ -2,6 +2,8 @@ import PrecategoryFormal.A118SourceFirstJet
 
 set_option autoImplicit false
 set_option warningAsError true
+set_option maxRecDepth 10000
+set_option maxHeartbeats 5000000
 
 namespace PrecategoryFormal.A118SourceContactPower
 
@@ -37,7 +39,14 @@ theorem source_slope_equals_xi_at_contact
   have hcontact :
       s*(s^(n+1))⁻¹ = (s^((n+2)-2))⁻¹ := by
     simpa using source_contact_reciprocal s n hs
-  exact source_slope_matches_a118 s α (s^(n+1))⁻¹ e
-    odd (n+2) hs hcontact
+  have hjet :
+      sourceSlope s α (1/8) (1/1875)
+          (if odd then (1+s)/2 else 1)
+          (if odd then 1/2 else 0)
+          (s^(n+1))⁻¹ e (↑(n+2):ℝ) =
+        xiPublished s α e odd (n+2) :=
+    source_slope_matches_a118 s α (s^(n+1))⁻¹ e
+      odd (n+2) hs hcontact
+  simpa only using hjet
 
 end PrecategoryFormal.A118SourceContactPower
