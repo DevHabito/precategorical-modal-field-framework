@@ -6,12 +6,12 @@
 
 ## What has genuinely been verified
 
-The exact finite regression [run 42914016273](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42914016273), job `exact-python`, **SUCCEEDED**, including `A115-A118 independent exact finite cofactor regression`. It reconstructs the actual finite (E_k) from the original ((A_a,B_a,\Delta B_a,H_a)) equations using `Fraction`, checks the auxiliary K/u decomposition and tests six parity-resolved finite inputs. It rejects changes that silently drop the full powers or replace (	au^{-1}) with 1. No floating-point comparison determines a PASS.
+The exact finite regression [run 42914016273](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42914016273), job `exact-python`, **SUCCEEDED**, including `A115-A118 independent exact finite cofactor regression`. It reconstructs the actual finite (E_k) from the original ((A_a,B_a,\Delta B_a,H_a)) equations using `Fraction`, checks the auxiliary K/u decomposition and tests six parity-resolved finite inputs. It rejects changes that silently drop the full powers or replace (\tau^{-1}) with 1. No floating-point comparison determines a PASS.
 
 The corrected Lean run [42914436667](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42914436667) at exact source commit `c025d081479fd9a27a841b3bc7135dedd4b35515` has individually successful kernel-replay jobs:
 
 - `leanchecker (PrecategoryFormal.A115CofactorReducedCore)`, job `130174373472`: proves the exact reduced cofactor adjacent identity, including the (u^2K) and (u^3) remainders. Full-length powers are specialized to zero *only in this auxiliary lemma*.
-- `leanchecker (PrecategoryFormal.A115FullPowerTail)`, job `130174373599`: introduces all (eta^M,s^M,	au^M) channels, establishes their exact mixed quadratic cancellation when (u=0), and verifies that their zero-power specialization matches the reduced cofactor.
+- `leanchecker (PrecategoryFormal.A115FullPowerTail)`, job `130174373599`: introduces all (\beta^M,s^M,\tau^M) channels, establishes their exact mixed quadratic cancellation when (u=0), and verifies that their zero-power specialization matches the reduced cofactor.
 - `leanchecker (PrecategoryFormal.A119CriticalSubstitutionIdentity)`, job `130174373540`: proves the algebraic substitution of the critical equation in the **published A118 formula**, under an explicit nonzero denominator, equals the real (widehat\Xi) expression certified by A119.
 
 These three individual Lean jobs are PASS; the status of other jobs or the overall workflow, if still running, must be inspected independently. The *first* compilation attempts [42910102041](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42910102041) and [42912510306](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42912510306) FAILED due respectively to unnecessary `ring` tactics after a closed goal and to the missing `noncomputable` declaration for real division. The corrections changed no mathematical statement or hypothesis. These failed runs remain part of the engineering record.
@@ -29,7 +29,7 @@ Those are hand-auditable analytic arguments, **not** already kernel-replayed uni
 
 ## What remains to prove to close the genuine obstacle
 
-1. **Full finite-M algebra, not a model with v=0.** Combine the exact (eta^M,s^M,	au^M) cofactor with the reduced core and expose all mixed (u v_a), (u^2v_a) and (v_av_\tau) terms; provide a Lean identity with their explicit coefficients.
+1. **Full finite-M algebra, not a model with v=0.** Combine the exact (\beta^M,s^M,\tau^M) cofactor with the reduced core and expose all mixed (u v_a), (u^2v_a) and (v_av_\tau) terms; provide a Lean identity with their explicit coefficients.
 2. **Uniform coefficient bounds.** Prove the required alpha/s/parity/r bounds, including the third-order Taylor estimate, inside Lean or state a transparent external analytic dependency; obtain one final uniform constant for all normalized finite residuals.
 3. **Source-derived coefficient identity.** Show that the actual original-cofactor Taylor expansion produces the **A117 (Lambda)** and the **A118 (Xi)** as the first two coefficients. The new `A119CriticalSubstitutionIdentity` theorem only replaces (q) in the *published* (Xi) formula; that is necessary but insufficient for source derivation.
 4. **Uniform finite-M result.** For some (C<\infty) and (M_0), both independent of the frozen parameter box and parity/contact deficit, prove
