@@ -121,6 +121,7 @@ jobs:
           - PrecategoryFormal.A115CollisionCoreFactor
           - PrecategoryFormal.A118SourceFirstJet
           - PrecategoryFormal.A118SourceContactPower
+          - PrecategoryFormal.A118LogExpElementary
     steps:
       - name: Checkout
         uses: actions/checkout@v6
