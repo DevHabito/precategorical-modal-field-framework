@@ -83,3 +83,12 @@ This gives a smaller, precisely scoped Lean target than replaying 6,400 interval
 5. Combine with the separately formalized A117 contact-cell and high-deficit exclusions.
 
 **No new Lean build or kernel replay has been executed for this certificate.** A Python CI workflow entry is present on the isolated research branch, but a workflow edit is not evidence of a successful run.
+
+
+## Verified Lean checkpoint: exact finite manifest and partial interval semantics
+
+On 2026-11-10, [Lean formal verification run 42865669770](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42865669770) at source commit \`bf37b27f1a7cbb9e6495b27981b3f7a444464b9a\` finished **SUCCESS with 27/27 jobs**: the project build and all 26 individual \`leanchecker\` module jobs. I inspected the actual workflow jobs, including \`leanchecker (PrecategoryFormal.A119CompactCertificate)\`, job ID \`130008880337\`, which finished SUCCESS.
+
+The new [A119CompactCertificate.lean](../../formal/lean/PrecategoryFormal/A119CompactCertificate.lean) contains kernel-checked theorems for the 14+21=35 finite box count, closed half/quarter-half interval coverage, exact rational addition/subtraction and nonnegative multiplication enclosures, and numerical positivity of two previously reported rational lower endpoints. The source contains no \`sorry\`, \`admit\`, \`native_decide\`, \`axiom\` or \`unsafe\` declarations; the project workflow checks for placeholders before building.
+
+**Scientific boundary:** the Lean module currently does NOT prove that the two reported fractions actually lower-bound the A119 Xi_hat expression, does NOT prove all 35 interval evaluations, signed interval multiplication, reciprocal interval inclusion, or the A115-to-A119 source derivation. Those are still the substantial next formalization gates. A successful replay of these *partial* lemmas cannot be described as a complete Lean proof of A119.
