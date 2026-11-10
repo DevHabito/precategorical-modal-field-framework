@@ -42,3 +42,4 @@ import PrecategoryFormal.A119RealCritical
 import PrecategoryFormal.A119Real35Boxes
 import PrecategoryFormal.A119RealManifest
 import PrecategoryFormal.A119RealFullCells
+import PrecategoryFormal.A119GlobalRealManifest
