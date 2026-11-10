@@ -24,3 +24,4 @@ import PrecategoryFormal.CompressedSourceNumerator
 import PrecategoryFormal.CompressedSourcePowerBound
 import PrecategoryFormal.FiniteLPWeakDuality
 import PrecategoryFormal.A119CompactCertificate
+import PrecategoryFormal.A119IntervalArithmetic
