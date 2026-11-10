@@ -60,3 +60,10 @@ The full [GitHub Actions run 42883765927](https://github.com/DevHabito/precatego
 - odd parity, r=4: for the same rational source window and rational alpha in [9,231/20], \`criticalXiHat s alpha true 4 > 0\`.
 
 The total count remains **6/35**; the coverage theorem does not create new boxes. The theorem does not quantify over real-valued s or alpha, nor does it establish F3 optimality.
+
+
+## Verified r=5 kernel checkpoint (2026-11-10)
+
+[Lean run 42884049414](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42884049414), source commit `e00892ba34ab502b8232f79c3331cc7e1e9739b9`, has **completed SUCCESS**, including `leanchecker (PrecategoryFormal.A119R5Boxes)`. The module verifies four direct interval evaluations, two per parity at r=5, and two resulting rational full-cell theorems using the half-interval coverage lemma. Thus the cumulative individually replayed box count is **10/35**: six r=4 plus four r=5.
+
+The r=6 module and the r=7..12 modules were separately submitted in subsequent source commits and may be queued; they are **not counted** until their own run's relevant individual checker succeeds. Source commit `f1c63f4f907f56a74ebfe5115c0bf6b0c7de2eb7` submits 14 r=7..12 boxes (4 at r=7, 10 at r=8..12); [CI run 42886987495](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42886987495) is the corresponding run. Python Fraction originally certifies 35/35 independently, but is not a substitute for these Lean kernel checks.
