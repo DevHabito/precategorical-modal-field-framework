@@ -9,7 +9,7 @@ namespace PrecategoryFormal.A115CollisionCoreFactor
 
 /--
 The exact normalized K-independent A115 core, with fk=W/T supplied
-as its own contact-ratio variable; no Taylor approximation is used.
+aSource its own contact-ratio variable; no Taylor approximation is used.
 -/
 noncomputable def collisionCore
     (x q s τ W fk U V : ℝ) : ℝ :=
@@ -24,13 +24,13 @@ responses U0,V0. The variables fh and fk are intentionally
 independent: no exponential asymptotic is assumed.
 -/
 noncomputable def collisionBracket
-    (x s α β δ at as z b fh fk : ℝ) : ℝ :=
+    (x s α β δ aTarget aSource z b fh fk : ℝ) : ℝ :=
   let τ := s*(1+2*α*x)
-  let U := at*(β/τ+2*δ)
+  let U := aTarget*(β/τ+2*δ)
   let g0 := s*α*(s-1)+s*s-s
   let g1 := 2*s*α*(b*(s-1)+1)
   α*s*(1-s)*z*fh+
-    (1-τ)*(at*((β-s)/τ+4*δ)+as*fh)+
+    (1-τ)*(aTarget*((β-s)/τ+4*δ)+aSource*fh)+
     U*fk/τ*(g0+x*g1)
 
 /--
@@ -38,13 +38,13 @@ The A115 dominant core has an EXACT factor x=1/M.
 No physical limit or term of order x was discarded.
 -/
 theorem exact_collision_x_factor
-    (x s α β δ at as z b fh fk : ℝ)
+    (x s α β δ aTarget aSource z b fh fk : ℝ)
     (hτ : s*(1+2*α*x) ≠ 0) :
     collisionCore x (1/2-b*x) s (s*(1+2*α*x))
       (z*fh) fk
-      (at*(β/(s*(1+2*α*x))+2*δ))
-      (at*(s/(s*(1+2*α*x))-2*δ)-as*fh) =
-      x*collisionBracket x s α β δ at as z b fh fk := by
+      (aTarget*(β/(s*(1+2*α*x))+2*δ))
+      (aTarget*(s/(s*(1+2*α*x))-2*δ)-aSource*fh) =
+      x*collisionBracket x s α β δ aTarget aSource z b fh fk := by
   dsimp [collisionCore, collisionBracket]
   field_simp [hτ]
   ring
