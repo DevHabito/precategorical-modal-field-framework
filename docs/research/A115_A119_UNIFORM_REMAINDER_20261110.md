@@ -180,7 +180,7 @@ A separate exact-rational test is now committed at [a119_independent_tail_and_en
 
 The cutoff lower margins are both strictly positive, independently of floating-point tolerances: approximately 0.0020902493780287305 at even r=13, and 0.00024277493510525955 at odd r=20. The exact rational fractions are printed by the script, and match the earlier repository record. The upper bounds on the successive negative-tail magnitude ratios are 57/400 (even) and 1197/8600 (odd), both below 1. The positive lower-envelope contribution increases linearly with r, while the negative part decreases for later deficits. Thus, **conditional on A117's displayed endpoint inequality and one-crossing setup**, the elementary monotonic extension does rule out later critical contacts; this is more than checking the cutoff sign in isolation.
 
-The calculation is not an independently reconstructed A118-to-A119 Xi derivation, not a repetition of the 6400-box interval exhaustion in this session, and not an F3 optimizer theorem.
+The tail-only script does not reconstruct the A118-to-A119 Xi derivation and is not an F3 optimizer theorem. A separate full 6,400-box rational replay was subsequently executed to completion in this session; see the execution record below.
 
 ## Literature and publication gate
 
@@ -195,3 +195,28 @@ No full-text prior-art comparison was completed for this exact collision remaind
 **Remaining obligations:** (i) independently referee the uniform bounds and A118 coefficient bridge, (ii) complete Lean 4 proof with all quantifiers, (iii) verify A119 cutoff exclusion from the critical-cell inequalities, (iv) derive an explicit useful C if claiming finite-M certification, and (v) decide whether the article is only about C2 or would need a genuine full-F3 primal/dual theorem.
 
 **Editorial verdict:** a substantially strengthened *reduced-factor* asymptotic argument, not a globally optimal LP result and not a physical theory.
+
+
+## Current-session complete exact-rational replay
+
+On 2026-11-10 the existing standalone independent program
+a115_a122_independent_arithmetic_replay_2026-11-10.py was executed in
+Python 3.13.5 and completed with **exit code 0**. This is distinct from
+the A119 tail-only checker:
+
+- Even boxes 2304/2304 positive; exact smallest rational lower endpoint
+  7962094616280060340361057850523941099377/4460543890481278214239707910840320000000.
+- Odd boxes 4096/4096 positive; exact smallest rational lower endpoint
+  3296636265099577642233577213168576496429665038806348563/2438741833785351580293579578096010608476160000000000000.
+- Both A119 analytic-tail and ratio gates PASS.
+- The A122 rigorous log brackets give an even Omega negative for
+  (s,tau)=(129/1000,131/1000) and positive for
+  (129/1000,132/1000). This proves a continuous-parameter sign crossing,
+  **not** an actual integer resonance subsequence.
+
+The complete local output log has SHA256
+c1d0a35dbe11c49e37f546ff6620f45c88dc3c900347ab5c8f640ae7524964cd.
+The log and runnable replay source are included in the downloadable
+research evidence package; GitHub already contains the parent A119/A122
+rational independent checkers. This is formula-level exact verification,
+not a new Lean check or an F2/F3 global optimization result.
