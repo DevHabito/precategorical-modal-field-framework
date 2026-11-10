@@ -39,14 +39,14 @@ No physical limit or term of order x was discarded.
 -/
 theorem exact_collision_x_factor
     (x s α β δ aTarget aSource z b fh fk : ℝ)
-    (hτ : s*(1+2*α*x) ≠ 0) :
+    (_hτ : s*(1+2*α*x) ≠ 0) :
     collisionCore x (1/2-b*x) s (s*(1+2*α*x))
       (z*fh) fk
       (aTarget*(β/(s*(1+2*α*x))+2*δ))
       (aTarget*(s/(s*(1+2*α*x))-2*δ)-aSource*fh) =
       x*collisionBracket x s α β δ aTarget aSource z b fh fk := by
   dsimp [collisionCore, collisionBracket]
-  field_simp [hτ]
+  field_simp [_hτ]
   ring
 
 /--
