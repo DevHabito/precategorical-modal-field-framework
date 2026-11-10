@@ -16,3 +16,8 @@ With the actual contact deficit r=n+2 and z=(s^(n+1))⁻¹, the source condition
 **What it does not claim:** the already-corrected source-slope formula is still an *algebraic first-order-jet computation*; a general real-derivative theorem for the original rational bracket and its exponential collision powers remains unproved in Lean. The uniform cubic remainder proof, full F2/F3 optimization and historical originality likewise remain open.
 
 The original intermediate `source_xi_minus_published` formula submitted earlier omitted a factor `etaH`, caused a Lean failure, and was corrected. This contact-power module neither restores that false formula nor bypasses the correction.
+
+
+## First compilation gate and correction
+
+[GitHub Actions 42925831382](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42925831382) failed at the final application because Lean reached its default deterministic heartbeat limit during definitional equality. The log contained no failed algebraic equality, but this is still a **failed proof attempt**. The next revision names the instantiated theorem explicitly, raises the local module heartbeat budget, and leaves the exact theorem statement and source-contact assumptions unchanged. Kernel approval remains pending.
