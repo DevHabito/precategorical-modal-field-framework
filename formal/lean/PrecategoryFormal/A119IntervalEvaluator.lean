@@ -70,7 +70,7 @@ theorem pow_sound (x : Interval) (a : ℚ)
     contains (powI x n) (a^n) := by
   induction n with
   | zero =>
-      exact ⟨le_refl _, le_refl _⟩
+      simp [powI, contains, singleton]
   | succ n ih =>
       simpa [powI, pow_succ, mul_comm] using
         (mul_sound x (powI x n) a (a^n) ha ih)
