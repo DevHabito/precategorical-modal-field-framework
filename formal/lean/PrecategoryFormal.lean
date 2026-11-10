@@ -40,3 +40,4 @@ import PrecategoryFormal.A119RealIntervalCore
 import PrecategoryFormal.A119RealIntervalEvaluator
 import PrecategoryFormal.A119RealCritical
 import PrecategoryFormal.A119Real35Boxes
+import PrecategoryFormal.A119RealManifest
