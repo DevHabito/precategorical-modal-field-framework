@@ -95,6 +95,7 @@ jobs:
           - PrecategoryFormal.CompressedSourcePowerBound
           - PrecategoryFormal.FiniteLPWeakDuality
           - PrecategoryFormal.A119CompactCertificate
+          - PrecategoryFormal.A119IntervalArithmetic
     steps:
       - name: Checkout
         uses: actions/checkout@v6
