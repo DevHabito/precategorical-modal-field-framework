@@ -132,6 +132,6 @@ theorem division_enclosure
     · exact negative_reciprocal_enclosure c d y hd hy.1 hy.2
   have hprod := four_corner_mul_enclosure
     a b (1/d) (1/c) x (1/y) hx hinv
-  simpa only [div_eq_mul_inv, one_div] using hprod
+  simpa only [div_eq_mul_inv, one_div, one_mul] using hprod
 
 end PrecategoryFormal.A119IntervalArithmetic
