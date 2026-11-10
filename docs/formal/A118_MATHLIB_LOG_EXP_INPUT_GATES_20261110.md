@@ -7,3 +7,8 @@ This module submits two elementary inequalities: for z>=0, log(1+z)<=z; and exp(
 **Status:** Lean code submitted, not declared kernel-proved before its dedicated `leanchecker` job succeeds. The third-order exponential remainder inequality and the fourth-order log remainder are **not** included; those are still genuinely missing from the final source-to-O(M^-3) Lean theorem.
 
 The relevant Mathlib APIs are `Real.exp_bound'`, `Real.exp_nat_mul`, `Real.log_le_sub_one_of_pos`, and `pow_lt_pow_left₀`. These are existing standard bounds, not newly discovered mathematics. Only the usage and integration into the precise A118 proof chain are the research artifact.
+
+
+## First compilation result
+
+[CI 42926133293](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42926133293) FAILED: the log flagged an unnecessary `simpa` in the exp-four equation and simultaneously inherited the already identified source-contact module heartbeat timeout. The exp arithmetic itself was not refuted. The next source revision replaces `simpa` with an explicit calculation through `Real.exp_nat_mul`, without modifying the bound or numerical assumptions. A new kernel result is required before reporting PASS.
