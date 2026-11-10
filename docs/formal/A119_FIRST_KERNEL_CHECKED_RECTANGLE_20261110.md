@@ -37,3 +37,17 @@ A second odd-parity r=4 upper-half theorem was then submitted in the same file, 
 5. Validate A119's high-deficit exclusion and the external prior-art comparison before calling the whole theorem novel or publication-ready.
 
 **Editorial verdict:** meaningful machine-checked progress on the reduced critical expression, not yet a fully machine-checked mathematical A119 theorem and not a physical interpretation.
+
+
+## Second whole-box theorem: odd parity also kernel checked
+
+The independently compiled [Lean run 42876905479](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42876905479) completed **30/30 SUCCESS** at source commit \`c267ccc468fd1d6b38cc61eeb278123ae24e6e1e\`. The individual \`leanchecker (PrecategoryFormal.A119BoxReplay)\` job passed both the original even-r4 theorem and the added \`odd_r4_upper_half_passes\` theorem.
+
+The additional exact **odd** region is:
+
+- rational \`s\` in \`[129/1000,133/1000]\`;
+- rational \`alpha\` in \`[411/40,231/20]\` (the upper half of the enlarged odd r=4 alpha interval);
+- \`r=4\`, odd parity;
+- \`0 < criticalXiHat s alpha true 4\` for every rational point in the region.
+
+There are now **2 out of 35** complete rational box evaluations replayed by the kernel: one per parity at r=4. The original Python Fraction checker still verifies 35/35; this should never be rephrased as 35/35 Lean. The two real-valued extensions, finite manifest coverage, and A118/A119 critical-identity bridge remain open exactly as previously described. No theorem hypothesis was weakened to make the odd case pass.
