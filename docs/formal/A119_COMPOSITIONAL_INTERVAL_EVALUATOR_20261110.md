@@ -64,3 +64,13 @@ The complete [Lean workflow 42874445972](https://github.com/DevHabito/precategor
 The separate [first-box attempt 42875122400](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42875122400) **FAILED**. The \`decide\` tactic failed to reduce the large rational proposition \`passes false 4 (1/2) 1 = true\` to an \`isTrue\` or \`isFalse\` constructor. It did **not** produce a counterexample or prove the bound false. Its failure is preserved as a reproducibility/automation obstacle.
 
 An alternative \`decide +kernel\` proof is being tested in [run 42875647665](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42875647665). This uses the Lean kernel reducer, rather than \`decide +native\` or \`native_decide\` (which rely on a compiler-related trust assumption). Do not call the first complete box kernel-certified unless that run and the individual module replay actually succeed.
+
+
+## Latest verified whole-box checkpoint (supersedes the earlier pending status)
+
+Two rational Xi-hat rectangles have now passed the full source-to-box inference with kernel-reduced computations. See [A119_FIRST_KERNEL_CHECKED_RECTANGLE_20261110.md](A119_FIRST_KERNEL_CHECKED_RECTANGLE_20261110.md).
+
+- Even r=4 alpha in [37/4,21/2]: [CI 42875647665](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42875647665), **30/30 success**.
+- Odd r=4 alpha in [411/40,231/20]: [CI 42876905479](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42876905479), **30/30 success**.
+
+Both use rational s in [129/1000,133/1000] and kernel \`decide +kernel\` proof terms. Current count: **2/35 Lean-certified rational rectangles**, alongside the independent 35/35 exact Python tests. The distinction between rational and real domains and between the Xi-hat rational formula and the A115–A118 derivation remains mandatory.
