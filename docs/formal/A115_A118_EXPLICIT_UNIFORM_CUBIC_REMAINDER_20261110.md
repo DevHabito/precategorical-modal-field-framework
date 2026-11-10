@@ -53,3 +53,8 @@ Combining the analytic core bound with the geometric error gives a coefficient
 The constant is enormous and gives no useful sign threshold near M=1000. The derivation proves an **analytic** source-to-coefficient remainder statement conditional on the source-locked assumptions, not a kernel-checked final Lean theorem. The central response inequalities, logarithmic and exponential Taylor inequalities, and complete analytic bound still require formal Lean replay. The published coefficient identification has an independent symbolic source audit, but a final Lean derivative/jet theorem is still open.
 
 It is not a feasibility/dual certificate for unrestricted F2/F3, not a proof that r<=19 exhausts all critical contacts, not a physical law, and not a claim of mathematical novelty. Independent mathematical refereeing remains essential.
+
+
+## Exact CI audit read-back
+
+The two-job symbolic and arithmetic workflow [42923563415](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42923563415) individually approved the uniform source-jet monomial certificate. The symbolic job printed 53 even-parity monomials with rational ceiling 8,120,225,541 and 95 odd-parity monomials with rational ceiling 4,569,365,712; both are strictly below the selected 10,000,000,000 bound. The job also passed the exact comparison of the combined constant with 100,000,000,000*(8^18)^2. These are rational polynomial arithmetic checks, not claims that the analytic log/exp theorems were replayed in Lean.
