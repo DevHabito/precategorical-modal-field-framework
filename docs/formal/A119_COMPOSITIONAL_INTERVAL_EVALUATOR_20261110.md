@@ -55,3 +55,12 @@ The [Lean CI run 42874445972](https://github.com/DevHabito/precategorical-modal-
 Other matrix jobs may still be finishing at the time of this addendum; the overall 30-job conclusion must be checked separately. The source-to-expression identity is mathematically distinct from A115-to-A118's derivation of the expression.
 
 A first direct **whole-box** kernel computation was submitted in [A119BoxReplay.lean](../../formal/lean/PrecategoryFormal/A119BoxReplay.lean): even parity, deficit r=4, alpha upper-half interval. This relies on a kernel-evaluated \`passes = true\` rather than an asserted lower endpoint. The attempt's CI must be read independently; **this document does not yet claim the first box passed**.
+
+
+## Full workflow confirmation and first full-box failure
+
+The complete [Lean workflow 42874445972](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42874445972) has now finished **30/30 SUCCESS** (one project build and 29 individual Leanchecker module jobs), at commit \`f5c39156c97678ae957b3fa6870526dff9fc8c0f\`. The generic compositional evaluator and exact AST-to-Xi-hat formula identity are thus kernel-replayed.
+
+The separate [first-box attempt 42875122400](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42875122400) **FAILED**. The \`decide\` tactic failed to reduce the large rational proposition \`passes false 4 (1/2) 1 = true\` to an \`isTrue\` or \`isFalse\` constructor. It did **not** produce a counterexample or prove the bound false. Its failure is preserved as a reproducibility/automation obstacle.
+
+An alternative \`decide +kernel\` proof is being tested in [run 42875647665](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42875647665). This uses the Lean kernel reducer, rather than \`decide +native\` or \`native_decide\` (which rely on a compiler-related trust assumption). Do not call the first complete box kernel-certified unless that run and the individual module replay actually succeed.
