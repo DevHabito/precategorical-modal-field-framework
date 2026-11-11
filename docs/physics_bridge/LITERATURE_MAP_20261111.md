@@ -629,3 +629,19 @@ DOI: https://doi.org/10.1038/s41467-020-20456-x
 The work extends quantum causal-model reasoning to cyclic causal structures.
 
 **Use here:** cyclicity and causal indefiniteness are both established but distinct generalizations; the repository must not conflate them.
+
+
+## 51. Symmetry obstruction to a unique arrow
+
+Time-reversal and symmetry literature repeatedly distinguishes symmetric laws/structures from asymmetric solutions, boundary conditions, or sectors.
+
+A general structural lesson, aligned with Curie's principle, is that an asymmetric observable effect requires either asymmetric input structure or a symmetry-breaking selection.
+
+**Use here:** if an automorphism of a timeless primitive structure exchanges two candidate orientations, an isomorphism-equivariant deterministic rule cannot canonically choose one strict direction between them.
+
+**Novelty boundary:** this is elementary symmetry reasoning, not a new theorem about the arrow of time.
+
+Cristian López and Olimpia Lombardi, **“A Review of the Concept of Time Reversal and the Direction of Time,”** *Entropy* **26**, 563 (2024).  
+DOI: https://doi.org/10.3390/e26070563
+
+**Use here:** benchmark for keeping time-reversal symmetry, temporal direction, motion reversal, and arrow-of-time claims distinct.
