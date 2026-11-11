@@ -111,3 +111,7 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **C1_CYCLE_SPACE_AUDIT_20261111.md** — computes the one-dimensional gauge-invariant cycle-space quotient of both C1 witness skeletons.
 - **c1_cycle_space_audit.py** / **c1_cycle_space_results.json** — exact finite cycle-rank regression for graphA and graphB skeletons.
 - **CALIBRATED_MARK_NOT_TIME_AUDIT_20261111.md** — uses the reversible Markov and single-electron-box bridges to show that an operational quantitative mark can break symmetry without becoming temporal rank or duration.
+
+- **BRIDGE_3A_MAGNETIC_LOOP_GAUGE_CALIBRATION_20261111.md** — physical calibration showing that gauge-invariant loop holonomy can be observable without being time.
+- **LOOP_CHIRALITY_NOT_TIME_ORDER_20261111.md** — four-site flux ring counterbenchmark: loop chirality can break reflection while preserving cyclic site equivalence and no vertex precedence.
+- **CURRENT_ARCHITECTURE_TIME_ORIGIN_AUDIT_20261111.md** — architecture-level boundary showing why the present `(R,q,mu,K,pi)` tuple is not yet a non-circular derivation of time.
