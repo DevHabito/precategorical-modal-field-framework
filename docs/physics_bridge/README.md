@@ -96,3 +96,7 @@ Bridge 1B derives from a published multi-electron master equation an exact trans
 This is still an analytic bridge. Raw experimental data for the 2026 system are not publicly available, so no empirical validation is claimed.
 
 No spacetime, gravity, quantum-gravity, or ontological conclusion follows from the present bridge.
+
+- **C1_LABEL_INVARIANCE_AUDIT_20261111.md** — separates the canonical SCC quotient from C1's label-dependent minimum-representative encoding convention.
+- **DIRECTED_RELATION_ASSUMPTION_AUDIT_20261111.md** — prevents a directed primitive R from being relabeled as emergent temporal direction without non-temporal arrow semantics.
+- **PREGEOMETRIC_FRONTIER_MAP_20261111.md** — canonical map of rejected/classical/conditional routes and the next finite research questions.
