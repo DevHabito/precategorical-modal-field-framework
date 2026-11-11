@@ -250,7 +250,133 @@ exactly matching the two earlier independent exhaustive classifiers:
 - direct transitive-orientation enumeration through \(n=7\);
 - modular/common-interval enumeration through \(n=9\).
 
-## 7. Connected asymptotic
+## 7. Formal generating functions
+
+Define the formal ordinary generating series
+
+\[
+S(z)=\sum_{k\ge4}s_kz^k,
+\qquad
+C(x)=\sum_{n\ge2}C_nx^n,
+\qquad
+R(x)=\sum_{n\ge2}R_nx^n.
+\]
+
+The binomial identity
+
+\[
+\sum_{n\ge k}
+\binom{n-1}{k-1}x^n
+=
+\frac{x^k}{(1-x)^k}
+\]
+
+gives
+
+\[
+\boxed{
+C(x)
+=
+\frac{x^2}{(1-x)^2}
++
+S\left(\frac{x}{1-x}\right).
+}
+\]
+
+The isolated-component formula is convolution with
+
+\[
+\sum_{j\ge0}(j+1)x^j
+=
+\frac1{(1-x)^2}.
+\]
+
+Therefore
+
+\[
+\boxed{
+R(x)
+=
+\frac{C(x)}{(1-x)^2}
+=
+\frac{x^2}{(1-x)^4}
++
+\frac1{(1-x)^2}
+S\left(\frac{x}{1-x}\right).
+}
+\]
+
+These are formal power-series identities. Because the coefficients \(s_n\) grow factorially, no claim of positive analytic radius of convergence is intended.
+
+## 8. Prospective N=10 regression
+
+After Theorems 1–3 were frozen, the classical value
+
+\[
+s_{10}=298526
+\]
+
+was taken from the established simple-permutation sequence.
+
+Before direct \(N=10\) recovery classification, the theorem predicted
+
+\[
+\boxed{
+C_{10}=692297
+}
+\]
+
+and
+
+\[
+\boxed{
+R_{10}=843873.
+}
+\]
+
+The prediction was committed separately.
+
+An independent C++ classifier then enumerated all
+
+\[
+10!=3628800
+\]
+
+relative permutations without using the counting formulas.
+
+It returned exactly
+
+\[
+C_{10}=692297
+\]
+
+and
+
+\[
+R_{10}=843873.
+\]
+
+Therefore the first prospective finite regression of the counting theorem passed exactly.
+
+The complete direct classification was:
+
+\[
+843873
++
+2636060
++
+148866
++
+1
+=
+3628800,
+\]
+
+for recoverable, internal-module ambiguity, multiple nontrivial components, and the empty antichain respectively.
+
+This pass validates the finite \(N=10\) prediction under the established structural classifier. It is not a proof of novelty or a physical time-emergence claim.
+
+## 9. Connected asymptotic
 
 Write
 
@@ -323,7 +449,7 @@ e^{-2}e
 }
 \]
 
-## 8. Isolated components are asymptotically negligible
+## 10. Isolated components are asymptotically negligible
 
 From Theorem 3,
 
@@ -389,7 +515,7 @@ Numerically,
 }
 \]
 
-## 9. Higher-order asymptotic check
+## 11. Higher-order asymptotic check
 
 The stronger classical expansion
 
@@ -460,7 +586,7 @@ while the exact value is
 
 This agreement is diagnostic only; the proof is the asymptotic expansion above, not the numerical closeness.
 
-## 10. Why the finite sequence looked misleading
+## 12. Why the finite sequence looked misleading
 
 The exact finite probabilities through \(n=9\) are
 
@@ -481,7 +607,7 @@ The asymptotic theorem explains why no monotone extrapolation from \(n\le9\) was
 
 The finite data were correctly retained without an asymptotic claim until the substitution decomposition was identified.
 
-## 11. Physical interpretation
+## 13. Physical interpretation
 
 For a flat \(1+1\)-dimensional Minkowski sprinkling conditioned on \(n\) points, the relative light-cone order is a uniform permutation.
 
@@ -509,7 +635,7 @@ This is an orientation-recoverability theorem for a specific information-loss ex
 
 It is not a theorem that physical time emerges with probability \(1/e\).
 
-## 12. What the theorem does not establish
+## 14. What the theorem does not establish
 
 It does not establish:
 
@@ -523,7 +649,7 @@ It does not establish:
 
 The theorem concerns one precise finite-to-asymptotic reconstruction problem.
 
-## 13. Literature boundary
+## 15. Literature boundary
 
 The proof combines classical work on:
 
@@ -549,7 +675,7 @@ This is limited negative evidence only.
 
 **Absolute novelty and priority remain uncertified.**
 
-## 14. Current research consequence
+## 16. Current research consequence
 
 The previous open question
 
