@@ -570,3 +570,25 @@ Recent 2026 literature continues to distinguish entropy growth, irreversibility,
 Some proposals use entropy as an internal clock, while other work emphasizes that microscopic reversible dynamics can continue when such a clock stalls or that the thermodynamic arrow depends on coarse graining or boundary conditions.
 
 **Use here:** a monotone can be a useful clock on a restricted regime without establishing the ontological origin of time.
+
+
+## 45. Page-Wootters reversible relational-time benchmark
+
+Don N. Page and William K. Wootters, **“Evolution without evolution: Dynamics described by stationary observables,”** *Physical Review D* **27**, 2885 (1983).  
+DOI: https://doi.org/10.1103/PhysRevD.27.2885
+
+The mechanism describes system evolution relationally with respect to internal clock readings while the closed global system can remain in a stationary constrained state.
+
+A modern analysis of the assumptions makes explicit the Hilbert-space factorization, clock/system Hamiltonians, global energy constraint, and clock observable structure.
+
+**Use here:** reversible relational temporal description does not require external noise or entropy production.
+
+**Project consequence:** external unresolved influence cannot be claimed as a necessary origin of all time.
+
+## 46. Finite and nonideal clocks
+
+Modern Page-Wootters literature studies finite or quasi-ideal clocks, clock-system interactions, finite resolution, and corrections to ideal Schrödinger evolution.
+
+**Use here:** the existence of relational time and the accuracy of a physical clock are separate questions.
+
+**Boundary:** the repository's finite numerical benchmark is only a regression of this established mechanism.
