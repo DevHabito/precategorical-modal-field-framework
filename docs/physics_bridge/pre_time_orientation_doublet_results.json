@@ -1,0 +1,175 @@
+{
+  "audit": "PRE_TIME_ORIENTATION_DOUBLET_V1",
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 3,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 3,
+      "alphabet": 2,
+      "coloring_count": 8,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 3,
+      "alphabet": 3,
+      "coloring_count": 27,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 4,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 4,
+      "alphabet": 2,
+      "coloring_count": 16,
+      "unique_orientation_doublet_count": 2
+    },
+    {
+      "n": 4,
+      "alphabet": 3,
+      "coloring_count": 81,
+      "unique_orientation_doublet_count": 6
+    },
+    {
+      "n": 5,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 5,
+      "alphabet": 2,
+      "coloring_count": 32,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 5,
+      "alphabet": 3,
+      "coloring_count": 243,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 6,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 6,
+      "alphabet": 2,
+      "coloring_count": 64,
+      "unique_orientation_doublet_count": 2
+    },
+    {
+      "n": 6,
+      "alphabet": 3,
+      "coloring_count": 729,
+      "unique_orientation_doublet_count": 6
+    },
+    {
+      "n": 7,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 7,
+      "alphabet": 2,
+      "coloring_count": 128,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 7,
+      "alphabet": 3,
+      "coloring_count": 2187,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 8,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "unique_orientation_doublet_count": 0
+    },
+    {
+      "n": 8,
+      "alphabet": 2,
+      "coloring_count": 256,
+      "unique_orientation_doublet_count": 2
+    },
+    {
+      "n": 8,
+      "alphabet": 3,
+      "coloring_count": 6561,
+      "unique_orientation_doublet_count": 6
+    }
+  ],
+  "c4_binary": {
+    "n": 4,
+    "alphabet": 2,
+    "coloring_count": 16,
+    "unique_orientation_doublet_count": 2
+  },
+  "c4_binary_examples": [
+    {
+      "coloring": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "orientations": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "coloring": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "orientations": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "interpretation": [
+    "A marked finite structure can determine one acyclic orientation class modulo global reversal without choosing a polarity.",
+    "The graphA C4 skeleton has exactly two binary colorings with this property: the complementary alternating bipartitions.",
+    "The finite criterion is only structurally analogous to Lorentzian time orientability."
+  ],
+  "nonclaims": [
+    "No Lorentzian metric, light cone, duration, dimension, or physical time is derived.",
+    "The orientation doublet is a project-specific finite governance criterion, not a claimed new theorem of geometry."
+  ]
+}
