@@ -771,3 +771,28 @@ Masahito Hayashi and Hayata Yamasaki, **“The generalized quantum Stein’s lem
 Modern quantum resource theory continues to treat state/channel convertibility and resource monotones as operational ordering structures.
 
 **Use here:** resource ordering is active contemporary physics, but it remains a convertibility structure rather than a general temporal ontology.
+
+
+## 63. Constructor-theoretic possible/impossible transformations
+
+David Deutsch, **“Constructor Theory,”** *Synthese* **190** (2013), 4331–4359.  
+DOI: https://doi.org/10.1007/s11229-013-0279-z
+
+Constructor theory proposes expressing fundamental laws through possible and impossible physical transformations rather than primarily through trajectories generated from initial conditions.
+
+David Deutsch and Chiara Marletto, **“Constructor theory of information,”** *Proceedings of the Royal Society A* **471**, 20140540 (2015).  
+DOI: https://doi.org/10.1098/rspa.2014.0540
+
+**Use here:** established benchmark showing that physical transformation arrows can be formulated without using them as explicit clock coordinates.
+
+**Boundary:** a task already contains input/output polarity; the possible/impossible structure does not automatically derive that polarity from untyped symmetric data.
+
+## 64. Constructor-theoretic thermodynamics
+
+Chiara Marletto, **“Constructor Theory of Thermodynamics,”** preprint/programme (2016).
+
+The work formulates thermodynamic constraints in terms of possible/impossible tasks and emphasizes exact, scale-independent statements of irreversibility.
+
+**Use here:** irreversibility and transformation direction can be represented without identifying the task arrow with metric time.
+
+**Boundary:** constructor-theoretic task polarity remains distinct from the origin of temporal order.
