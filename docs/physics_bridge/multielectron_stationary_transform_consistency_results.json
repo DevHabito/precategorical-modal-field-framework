@@ -1,0 +1,13 @@
+{
+  "audit": "MULTIELECTRON_STATIONARY_TRANSFORM_CONSISTENCY_V1",
+  "status": "PASS",
+  "s_exp_minus_a": "1/2",
+  "Gamma0_over_GammaPlus": "2/3",
+  "checks": [
+    {"k": 1, "gaussian_formula": "4/3", "triangular_recurrence": "4/3", "equal": true},
+    {"k": 2, "gaussian_formula": "64/9", "triangular_recurrence": "64/9", "equal": true},
+    {"k": 3, "gaussian_formula": "4096/27", "triangular_recurrence": "4096/27", "equal": true},
+    {"k": 4, "gaussian_formula": "1048576/81", "triangular_recurrence": "1048576/81", "equal": true}
+  ],
+  "nonclaim": "Rational surrogate algebra check only; not experimental evidence."
+}
