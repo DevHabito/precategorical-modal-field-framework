@@ -201,3 +201,59 @@ The general lesson that nonlinear propensities produce moment hierarchies is est
 Safe status:
 
 **EXACT MODEL-SPECIFIC OBSERVABLE COMPARISON; CLASSICAL CLOSURE CONTEXT; NOVELTY NOT CERTIFIED.**
+
+
+## 17. Discrete-normal identification
+
+Adrienne W. Kemp, **“Characterizations of a discrete normal distribution,”** *Journal of Statistical Planning and Inference* **63** (1997), 223–229.  
+DOI: https://doi.org/10.1016/S0378-3758(97)00020-7
+
+Discrete-normal literature writes an integer-supported Gaussian family equivalently in a form proportional to
+
+$$
+\theta^Nq^{N(N-1)/2}.
+$$
+
+The stationary distribution used in the multi-electron bridge is exactly of this form after reparametrization.
+
+**Use here:** the stationary law and its exponential-family/tilting structure are classical.  
+**Not claimed:** a new discrete Gaussian or a new stationary distribution.
+
+## 18. Stein-generator context
+
+Christophe Ley, Gesine Reinert, and Yvik Swan, **“Stein's method for comparison of univariate distributions,”** *Probability Surveys* **14** (2017), 1–52.  
+DOI: https://doi.org/10.1214/16-PS278
+
+The generator approach to Stein's method and discrete birth-death Stein operators use rates satisfying detailed balance with a target law.
+
+**Use here:** a reversible birth-death generator adapted to a discrete target distribution is established structure.  
+**Boundary:** the bridge's model-specific transform closure is not being identified with a new Stein construction.
+
+## 19. Exactly solvable q-birth-death neighbor
+
+Ryu Sasaki, **“Exactly solvable birth and death processes,”** *Journal of Mathematical Physics* **50**, 103509 (2009).  
+DOI: https://doi.org/10.1063/1.3215983
+
+A particularly close structural neighbor is the alternative q-Charlier process, with constant birth rate and exponentially growing death rate
+
+$$
+B(x)=a,\qquad D(x)=q^{-x}-1,
+$$
+
+and natural coordinate
+
+$$
+\eta(x)=1-q^x.
+$$
+
+The Salhani-model death rate is proportional to \(q^{-N}\), not \(q^{-N}-1\), so the generators are not identical.
+
+**Use here:** strong prior that constant-birth/exponential-death structures and q-adapted observables belong to established exactly solvable birth-death theory.
+
+## 20. Bilateral birth-death context
+
+Birth-death chains on the full integer lattice \(\mathbb Z\) have a separate spectral literature, including continuous-time and q-calculus examples.
+
+This matters because the excess-electron variable in the analytic dot model is naturally centered and is not conceptually restricted to a population count on \(\mathbb N_0\).
+
+**Use here:** do not import boundary-at-zero conclusions from ordinary population birth-death chains without checking the state-space contract.
