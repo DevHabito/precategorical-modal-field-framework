@@ -144,7 +144,7 @@ For every relative permutation
 $$
 \pi\in S_N,
 \qquad
-N=2,\ldots,7,
+N=2,\ldots,8,
 $$
 
 the audit constructs the comparability graph and computes all implication classes by exact union-find closure of \(\Gamma\).
@@ -397,3 +397,108 @@ The next question is:
 > Does the implication-class structure have a stable large-\(N\) or coarse-grained behavior in physically motivated causal-set ensembles, and can such behavior support robust recovery of one orientation class modulo global reversal?
 
 That remains open.
+
+
+## 15. Exact N = 8 extension
+
+The audit was extended to all
+
+$$
+8!=40320
+$$
+
+relative permutations.
+
+Exactly one is the empty antichain.
+
+Among the 40319 nonempty comparability graphs, the implication-pair histogram is:
+
+| k_Gamma | count |
+|---:|---:|
+|1|8464|
+|2|12942|
+|3|8568|
+|4|4713|
+|5|3006|
+|6|693|
+|7|1089|
+|8|315|
+|9|156|
+|10|102|
+|11|171|
+|12|18|
+|13|18|
+|15|36|
+|16|18|
+|21|9|
+|28|1|
+
+The exact conditional mean is
+
+$$
+\boxed{
+E[k_\Gamma\mid E\neq\varnothing]
+=
+\frac{114035}{40319}
+\approx2.82827.
+}
+$$
+
+Also,
+
+$$
+P(k_\Gamma\le2\mid E\neq\varnothing)
+=
+\frac{21406}{40319}
+\approx0.53091,
+$$
+
+and
+
+$$
+\boxed{
+P(k_\Gamma\le3\mid E\neq\varnothing)
+=
+\frac{29974}{40319}
+\approx0.74342.
+}
+$$
+
+For the exact one-point refinement
+
+$$
+N=7\to8,
+$$
+
+the forcing-block count is unchanged with probability
+
+$$
+\frac{859}{1680}
+\approx0.51131,
+$$
+
+and satisfies
+
+$$
+\boxed{
+|\Delta k_\Gamma|\le1
+}
+$$
+
+with probability
+
+$$
+\boxed{
+\frac{1929}{2240}
+\approx0.86116.
+}
+$$
+
+The mean absolute change is
+
+$$
+\frac{27413}{40320}
+\approx0.67989.
+$$
+
+This extra exact size does not establish convergence or an asymptotic law.
