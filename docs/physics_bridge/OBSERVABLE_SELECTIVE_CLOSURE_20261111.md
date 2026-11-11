@@ -421,3 +421,146 @@ It establishes an exact structural fact for the published master equation:
 Whether this observable is experimentally useful must be tested against the measured \(\rho_N(t)\) data.
 
 No pregeometric or spacetime interpretation is inferred.
+
+
+## 13. Exact generator eigenfunction under the constant-rate coarse-grained model
+
+Under the time-averaged model used in the paper's coarse-grained transient analysis, let
+
+$$
+\Gamma^+(t)=\Gamma^+
+$$
+
+be constant.
+
+The scalar transform equation is
+
+$$
+\dot G_c
+=
+-a_cG_c+b_c,
+$$
+
+where
+
+$$
+a_c=\Gamma^+(1-e^{-c}),
+$$
+
+and
+
+$$
+b_c=D(e^c-1).
+$$
+
+Define
+
+$$
+G_c^{\rm ss}=\frac{b_c}{a_c}.
+$$
+
+At the observable level define
+
+$$
+h_c(N)=e^{-cN}-G_c^{\rm ss}.
+$$
+
+Because the generator annihilates constants,
+
+$$
+\boxed{
+\mathcal L h_c=-a_c h_c.
+}
+$$
+
+Thus \(h_c\) is an exact eigenfunction of the backward generator with eigenvalue
+
+$$
+\boxed{
+-a_c=-\Gamma^+(1-e^{-c}).
+}
+$$
+
+Consequently,
+
+$$
+\boxed{
+G_c(t)-G_c^{\rm ss}
+=
+[G_c(0)-G_c^{\rm ss}]
+e^{-a_ct}.
+}
+$$
+
+The relaxation rate is determined entirely by the published model parameters.
+
+## 14. Comparison with the mean relaxation scale
+
+The paper's simplified mean transient contains the exponential scale
+
+$$
+c\Gamma^+.
+$$
+
+The exact \(G_c\) relaxation rate is instead
+
+$$
+a_c=\Gamma^+(1-e^{-c}).
+$$
+
+For every \(c>0\),
+
+$$
+1-e^{-c}<c,
+$$
+
+so
+
+$$
+\boxed{
+a_c<c\Gamma^+.
+}
+$$
+
+The two observables therefore need not relax at the same rate even though their stationary values are algebraically related through
+
+$$
+Q_c^{\rm ss}
+=
+\langle N\rangle_{\rm ss}-\frac12.
+$$
+
+For small \(c\),
+
+$$
+1-e^{-c}
+=
+c-\frac{c^2}{2}+O(c^3),
+$$
+
+so the relaxation scales approach one another in the weak-charging/high-temperature limit.
+
+This is another concrete example of why static equivalence does not imply dynamical equivalence.
+
+## 15. Experimental signature
+
+If the constant-rate approximation used for the transient model is adequate, then the quantity
+
+$$
+\log
+\left|
+G_c(t)-G_c^{\rm ss}
+\right|
+$$
+
+must be linear in time wherever the difference is nonzero, with predetermined slope
+
+$$
+\boxed{
+-\Gamma^+(1-e^{-c}).
+}
+$$
+
+The slope is not to be fitted as a free closure parameter.
+
+This signature has been added to the pre-registered data protocol.
