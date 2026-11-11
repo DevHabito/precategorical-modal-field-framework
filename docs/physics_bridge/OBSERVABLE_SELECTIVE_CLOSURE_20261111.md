@@ -348,7 +348,7 @@ $$
 Q_c(t)-\langle N\rangle_t+\frac12.
 $$
 
-For the published stationary discrete-Gaussian family,
+For the stationary discrete-Gaussian family obtained in the paper's averaged-rate approximation,
 
 $$
 \boxed{
@@ -564,3 +564,48 @@ $$
 The slope is not to be fitted as a free closure parameter.
 
 This signature has been added to the pre-registered data protocol.
+
+
+## 16. Phase-conditioned scope correction
+
+The scalar equation
+
+$$
+\dot G_c
+=
+-\Gamma^+(t)(1-e^{-c})G_c
++
+D(e^c-1)
+$$
+
+is exact for a distribution evolving under a specified drive history.
+
+The experiment randomizes the ac phase between repetitions. Therefore, for the phase-averaged observable
+
+$$
+\bar G_c
+=
+\mathbb E_\phi[G_{c,\phi}],
+$$
+
+the exact equation becomes
+
+$$
+\dot{\bar G}_c
+=
+-(1-e^{-c})\bar\Gamma\,\bar G_c
++
+D(e^c-1)
+-
+(1-e^{-c})
+\operatorname{Cov}_\phi
+(\Gamma_\phi^+,G_{c,\phi}).
+$$
+
+The correct scopes are therefore:
+
+- exact scalar autonomy for a known deterministic drive history or fixed phase;
+- no generic scalar autonomy after random-phase marginalization;
+- constant averaged-rate dynamics only as the coarse-grained approximation used in the paper.
+
+This correction changes the empirical protocol, not the fixed-phase generator identity.
