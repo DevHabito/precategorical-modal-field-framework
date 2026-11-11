@@ -477,3 +477,35 @@ The project must distinguish:
 Only the first would address the project's strongest pregeometric ambition.
 
 The current physical bridges address the fourth category and, in part, predictive sufficiency under hidden variables. They do not yet address the first.
+
+
+## 37. Blackwell order as a non-temporal information order
+
+Channel comparison literature defines the Blackwell/degradation order by post-processing:
+
+$$
+W_1\succeq_BW_2
+\iff
+W_2=G\circ W_1
+$$
+
+for some stochastic channel \(G\).
+
+Blackwell's theorem gives an operational decision-theoretic interpretation.
+
+Modern reviews emphasize that the relation is a preorder, becomes a partial order after quotienting equivalent channels, and leaves many channel pairs incomparable.
+
+**Use here:** Blackwell order is a legitimate example of an order defined without external time.
+
+**Negative result for this project:** reversible output relabelings are Blackwell-equivalent, so the order cannot represent universal temporal progression.
+
+## 38. Information decay does not automatically complete Blackwell order
+
+Eyal Sulganik, **“Information Decay Need Not Yield a Transitive Completion of the Blackwell Order,”** preprint (2026).  
+DOI: https://doi.org/10.2139/ssrn.7220598
+
+The preprint gives examples where positive doubly stochastic Markov kernels remain Blackwell-incomparable at finite horizons and where natural decay-based completion rules fail transitivity.
+
+**Use here:** additional adversarial evidence against identifying information degradation with a universal time order.
+
+**Evidence boundary:** this is a recent preprint and is used as a warning, not as a foundational source for a project theorem.
