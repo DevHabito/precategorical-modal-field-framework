@@ -2,8 +2,8 @@
 
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
-**Status:** structural conjecture with analytic mean and finite factorial-moment evidence  
-**Claim level:** not a theorem
+**Status:** superseded for the Poisson sprinkling ensemble by `MINKOWSKI_4D_ISOLATED_POISSON_THEOREM_20261111.md`; retained as the fixed-cardinality/binomial conjecture and as a record of the factorial-moment route  
+**Claim level:** the Poisson-process version is now proved in the project (external review pending); the fixed-(n) version remains unproved
 
 ## 1. Question
 
@@ -27,7 +27,7 @@ E[I_n]\to3\pi.
 
 The stronger question is whether the complete distribution converges.
 
-The present conjecture is
+For fixed-cardinality/binomial sprinklings, the remaining conjecture is
 
 \[
 \boxed{
@@ -324,7 +324,11 @@ The event \(I_n=0\) is too rare for these direct blocks to test efficiently beca
 e^{-3\pi}\approx8.07\times10^{-5}.
 \]
 
-## 7. Relation to Penrose's Poisson-approximation theory
+## 7. Relation to the now-completed Poisson-process proof
+
+The Poisson sprinkling version has now been closed in `MINKOWSKI_4D_ISOLATED_POISSON_THEOREM_20261111.md` by combining Penrose's general coupling theorem with a Lorentzian endpoint-overlap bound. The discussion below is retained because it explains why the more convenient homogeneous theorem could not be invoked directly and why a geometry-specific proof was necessary.
+
+## 8. Relation to Penrose's Poisson-approximation theory
 
 Mathew D. Penrose's 2018 paper
 
@@ -356,7 +360,7 @@ This boundary degeneracy is precisely what creates the finite nonzero isolated c
 
 Penrose's general Poisson-process coupling theorem and factorial-moment method remain relevant, but a geometry-specific verification is required.
 
-## 8. Poisson sprinkling version
+## 9. Poisson sprinkling version
 
 Let the physical sprinkling intensity be \(\rho\), and set
 
@@ -391,7 +395,7 @@ A distributional proof may be cleaner in this Poisson ensemble because Palm/Meck
 
 The fixed-\(n\) result can then be treated by depoissonization.
 
-## 9. Consequence for connectedness
+## 10. Consequence for connectedness
 
 If
 
@@ -423,7 +427,7 @@ This would explain why connected-UPO can remain extremely rare in \(3+1\) even w
 
 It does not reduce logical orientation recoverability: isolated events have no directed relation to reconstruct.
 
-## 10. Relationship to adjacent twins
+## 11. Relationship to adjacent twins
 
 The isolated-vertex and adjacent-twin effects come from the same null-waist geometry but encode opposite structures.
 
@@ -443,12 +447,12 @@ E[T_n]
 
 Thus the boundary can retain a finite cloud of completely disconnected events while size-two orientation ambiguities disappear.
 
-## 11. Precise proof target
+## 12. Remaining fixed-cardinality proof target
 
 The theorem-sized target is:
 
-> **4D isolated Poisson limit.**  
-> For a binomial or Poisson sprinkling in a fixed flat \(3+1\)-dimensional Alexandrov interval,
+> **4D fixed-cardinality isolated limit.**  
+> For a binomial sprinkling of exactly \(n\) iid points in a fixed flat \(3+1\)-dimensional Alexandrov interval,
 > \[
 > I_n
 > \Rightarrow
@@ -462,11 +466,11 @@ A proof should establish:
 3. factorization for separated angular directions;
 4. an \(o(1)\) bound for the angular-collision region;
 5. convergence of every fixed factorial moment, or an equivalent Stein/Palm bound;
-6. depoissonization if the Poisson ensemble is handled first.
+6. a direct factorial-moment argument or a justified depoissonization/conditioning step from the now-proved Poisson ensemble.
 
 Until those steps are closed, the result remains a conjecture.
 
-## 12. Current status
+## 13. Current status
 
 The evidence hierarchy is:
 
@@ -486,6 +490,6 @@ The evidence hierarchy is:
 \boxed{I_n\Rightarrow\operatorname{Poisson}(3\pi)}
 \]
 
-— structural conjecture with a concrete proof program.
+— proved for the Poisson sprinkling ensemble; still conjectural for fixed cardinality.
 
 No stronger claim is made.
