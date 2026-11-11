@@ -6,7 +6,7 @@
 
 ## 1. Stationary law in discrete-normal form
 
-The published stationary family is
+Under the paper's time-averaged-rate approximation, the stationary family is
 
 $$
 \pi_N
@@ -107,7 +107,7 @@ e^{c(\nu-1/2)}e^{-cN}
 \theta q^N.
 $$
 
-Thus the published stationary law follows directly from ordinary birth-death detailed balance.
+Thus the stationary law of the averaged-rate coarse-grained model follows directly from ordinary birth-death detailed balance.
 
 ## 3. Stein-generator context
 
