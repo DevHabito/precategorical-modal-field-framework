@@ -704,3 +704,29 @@ Cycle-current observables in Markov jump networks have a natural gauge structure
 **Use here:** gauge-invariant closed-loop information in a transition network is established stochastic-thermodynamic structure.
 
 **Boundary:** a thermodynamic cycle affinity presupposes a dynamical transition model and is not a derivation of time.
+
+
+## 57. Boundary conditions and the thermodynamic arrow
+
+Sheldon Goldstein, Roderich Tumulka, and Nino Zanghì, **“Is the hypothesis about a low entropy initial state of the Universe necessary for explaining the arrow of time?”** *Physical Review D* **94**, 023520 (2016).  
+DOI: https://doi.org/10.1103/PhysRevD.94.023520
+
+The paper discusses the familiar statistical-mechanical fact that a generic low-entropy macrostate can exhibit entropy increase away from that state in both temporal directions and analyzes cosmological models that may avoid a conventional Past Hypothesis.
+
+**Use here:** a special boundary state is a classical route to selecting a thermodynamic arrow, but its necessity is model-dependent.
+
+Pablo Arrighi, Gilles Dowek, and Amélia Durbec, **“Time arrow without past hypothesis: a toy model explanation,”** *New Journal of Physics* **26**, 113019 (2024).  
+DOI: https://doi.org/10.1088/1367-2630/ad93f5
+
+The authors give reversible expanding toy models in which entropic-arrow behavior can arise without the conventional low-entropy Past Hypothesis.
+
+**Use here:** do not elevate boundary-state asymmetry into a universal necessary explanation of every arrow.
+
+## 58. Entanglement Past Hypothesis
+
+Jim Al-Khalili and Eddy Keming Chen, **“The Decoherent Arrow of Time and the Entanglement Past Hypothesis,”** *Foundations of Physics* **54**, 49 (2024).  
+DOI: https://doi.org/10.1007/s10701-024-00785-3
+
+The paper studies a low-entanglement boundary condition as a possible grounding for the decoherent arrow when unitary dynamics itself permits recoherence.
+
+**Use here:** different effective arrows can be traced to different asymmetric boundary-state information; this remains distinct from deriving temporal order itself.
