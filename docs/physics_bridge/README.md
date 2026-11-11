@@ -33,6 +33,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **PHYSICAL_BRIDGE_LEDGER.md** — evidence/status ledger kept separate from mathematical claims.
 - **NEXT_SYSTEM_SELECTION_20261111.md** — target-selection and reproducibility status.
 - **LITERATURE_MAP_20261111.md** — literature boundary for stochastic thermodynamics, birth-death transforms, and closure.
+- **DATA_REQUEST_SPECIFICATION_20261111.md** — exact numerical data and metadata needed to execute the frozen experimental test without figure digitization.
 
 ## Scientific rule
 
