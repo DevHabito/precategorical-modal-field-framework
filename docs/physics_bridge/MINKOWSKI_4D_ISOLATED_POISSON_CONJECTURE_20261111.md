@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
-**Status:** superseded for the Poisson sprinkling ensemble by `MINKOWSKI_4D_ISOLATED_POISSON_THEOREM_20261111.md`; retained as the fixed-cardinality/binomial conjecture and as a record of the factorial-moment route  
+**Status:** superseded for both ensembles by `MINKOWSKI_4D_ISOLATED_POISSON_THEOREM_20261111.md` and `MINKOWSKI_4D_FIXED_N_ISOLATED_POISSON_THEOREM_20261111.md`; retained as a historical record of the conjecture and numerical factorial-moment evidence  
 **Claim level:** the Poisson-process version is now proved in the project (external review pending); the fixed-(n) version remains unproved
 
 ## 1. Question
@@ -27,7 +27,7 @@ E[I_n]\to3\pi.
 
 The stronger question is whether the complete distribution converges.
 
-For fixed-cardinality/binomial sprinklings, the remaining conjecture is
+The conjecture originally tested here was
 
 \[
 \boxed{
@@ -490,6 +490,6 @@ The evidence hierarchy is:
 \boxed{I_n\Rightarrow\operatorname{Poisson}(3\pi)}
 \]
 
-— proved for the Poisson sprinkling ensemble; still conjectural for fixed cardinality.
+— now proved for both Poisson and fixed-cardinality ensembles; this file records the pre-proof evidence.
 
 No stronger claim is made.
