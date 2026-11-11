@@ -123,6 +123,7 @@ jobs:
           - PrecategoryFormal.A118SourceContactPower
           - PrecategoryFormal.A118LogExpElementary
           - PrecategoryFormal.A118LogTaylorRemainder
+          - PrecategoryFormal.A118CollisionExponentBridge
     steps:
       - name: Checkout
         uses: actions/checkout@v6
