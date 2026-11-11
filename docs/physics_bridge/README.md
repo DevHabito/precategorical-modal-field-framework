@@ -52,6 +52,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **PHYSICAL_ARCHITECTURE_REFINEMENT_20261111.md** — governance refinement requiring every closure claim to declare full state, observation map, conditioning information, preparation class, and temporal resolution.
 - **INFORMATION_THEORETIC_CLOSURE_DIAGNOSTIC_20261111.md** — uses established conditional mutual information to separate preparation-specific predictive sufficiency from universal/strong closure.
 - **PREGEOMETRIC_TIME_ANTI_CIRCULARITY_GATE_20261111.md** — hard gate preventing memory or relaxation results that already assume time from being promoted as evidence that time emerges.
+- **BLACKWELL_TIME_CANDIDATE_AUDIT_20261111.md** — first timeless-order candidate audit; rejects information degradation as a universal temporal order while retaining Blackwell comparison as a diagnostic.
 - **stroboscopic_phase_average_exact.py** — rational regression audit of the phase-averaged Cayley-Hamilton recurrences.
 - **phase_bridge_numerical_stress.py** — dependency-free 16-case integration stress test of continuous phase averaging versus exact stroboscopic closure.
 - **phase_bridge_numerical_stress_results.json** — frozen output of that numerical regression.
