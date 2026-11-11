@@ -751,3 +751,23 @@ Bryan W. Roberts, **“Does Thermodynamics Have a Reversibility Problem?”** *M
 DOI: https://doi.org/10.1093/mind/fzag008
 
 **Use here:** law-level polarity and macroscopic thermodynamic-arrow explanations should not be conflated.
+
+
+## 61. Resource convertibility as a non-temporal preorder
+
+Tobias Fritz, **“Resource convertibility and ordered commutative monoids,”** *Mathematical Structures in Computer Science* **27** (2017), 850–938.  
+DOI: https://doi.org/10.1017/S0960129515000444
+
+Resource convertibility asks whether one resource can be transformed into another under an allowed class of operations. Together with resource composition, the structure is naturally described by ordered commutative monoids.
+
+**Use here:** explicit directed semantics for R that need not mean temporal precedence.
+
+**Boundary:** the allowed-operation class supplies the polarity, and resource convertibility does not generically imply causal time.
+
+## 62. Current resource-theory boundary
+
+Masahito Hayashi and Hayata Yamasaki, **“The generalized quantum Stein’s lemma and the second law of quantum resource theories,”** *Nature Physics* **21** (2025), 1988–1993.
+
+Modern quantum resource theory continues to treat state/channel convertibility and resource monotones as operational ordering structures.
+
+**Use here:** resource ordering is active contemporary physics, but it remains a convertibility structure rather than a general temporal ontology.
