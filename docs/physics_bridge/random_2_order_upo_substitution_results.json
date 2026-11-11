@@ -1,0 +1,91 @@
+{
+  "audit": "RANDOM_2_ORDER_UPO_SUBSTITUTION_V1",
+  "status": "PASS",
+  "n_range": [
+    2,
+    9
+  ],
+  "rows": [
+    {
+      "n": 2,
+      "simple_count": null,
+      "connected_upo_count": 1,
+      "recoverable_count": 1,
+      "recovery_fraction": "1/2",
+      "recovery_decimal": 0.5
+    },
+    {
+      "n": 3,
+      "simple_count": null,
+      "connected_upo_count": 2,
+      "recoverable_count": 4,
+      "recovery_fraction": "2/3",
+      "recovery_decimal": 0.6666666666666666
+    },
+    {
+      "n": 4,
+      "simple_count": 2,
+      "connected_upo_count": 5,
+      "recoverable_count": 12,
+      "recovery_fraction": "1/2",
+      "recovery_decimal": 0.5
+    },
+    {
+      "n": 5,
+      "simple_count": 6,
+      "connected_upo_count": 18,
+      "recoverable_count": 38,
+      "recovery_fraction": "19/60",
+      "recovery_decimal": 0.31666666666666665
+    },
+    {
+      "n": 6,
+      "simple_count": 46,
+      "connected_upo_count": 101,
+      "recoverable_count": 165,
+      "recovery_fraction": "11/48",
+      "recovery_decimal": 0.22916666666666666
+    },
+    {
+      "n": 7,
+      "simple_count": 338,
+      "connected_upo_count": 750,
+      "recoverable_count": 1042,
+      "recovery_fraction": "521/2520",
+      "recovery_decimal": 0.20674603174603173
+    },
+    {
+      "n": 8,
+      "simple_count": 2926,
+      "connected_upo_count": 6545,
+      "recoverable_count": 8464,
+      "recovery_fraction": "529/2520",
+      "recovery_decimal": 0.20992063492063492
+    },
+    {
+      "n": 9,
+      "simple_count": 28146,
+      "connected_upo_count": 64134,
+      "recoverable_count": 80020,
+      "recovery_fraction": "4001/18144",
+      "recovery_decimal": 0.2205136684303351
+    }
+  ],
+  "formulae": {
+    "connected": "C_n=(n-1)+sum_{k=4}^n s_k*binom(n-1,k-1)",
+    "total": "R_n=sum_{m=2}^n (n-m+1)*C_m",
+    "asymptotic": "R_n/n! -> 1/e"
+  },
+  "regressions": [
+    "Simple-permutation counts match the classical sequence through n=9.",
+    "Connected counts match the independent modular classification.",
+    "Total counts match direct orientation enumeration through n=7.",
+    "Total counts match modular/common-interval enumeration through n=9."
+  ],
+  "nonclaims": [
+    "The finite script does not prove the asymptotic theorem.",
+    "The asymptotic proof additionally uses the classical theorem s_n/n! -> exp(-2).",
+    "No claim of absolute novelty or priority is made.",
+    "No physical emergence-of-time claim follows from the recovery probability."
+  ]
+}
