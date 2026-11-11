@@ -825,3 +825,28 @@ DOI: https://doi.org/10.1086/687263
 Standard strict SSB is associated with thermodynamic-limit structure, while large finite systems can reproduce much of the phenomenology.
 
 **Use here:** distinguish realization-level sector selection from a canonical ensemble-level polarity, and avoid calling the finite three-state witness a new SSB result.
+
+
+## 67. Comparability graphs and uniquely partially orderable graphs
+
+Martin Aigner and Geert Prins, **“Uniquely Partially Orderable Graphs,”** *Journal of the London Mathematical Society* s2-3(2), 260–266 (1971).  
+DOI: https://doi.org/10.1112/jlms/s2-3.2.260
+
+A comparability graph is transitively orientable. A UPO graph is one whose compatible strict partial order is unique except for reversal/duality.
+
+Rolf H. Möhring, **“Almost all comparability graphs are UPO,”** *Discrete Mathematics* **50**, 63–70 (1984).  
+DOI: https://doi.org/10.1016/0012-365X(84)90035-9
+
+Martin C. Golumbic, **Algorithmic Graph Theory and Perfect Graphs**, 2nd ed., Elsevier, 2004, Chapter 5.
+
+**Use here:** transitive orientation, comparability, implication classes, and uniqueness up to duality are classical. Any project claim about a unique partial order up to reversal must be positioned against UPO theory.
+
+## 68. Automorphism action on transitive orientations
+
+Pavel Klavík and Peter Zeman, **“Automorphism Groups of Comparability Graphs,”** arXiv:1506.05064 (2015).
+
+The paper explicitly treats the induced action of \(\operatorname{Aut}(G)\) on the set of transitive orientations and relates orientation structure to modular decomposition.
+
+**Use here:** the project criterion “a duality class fixed by every graph automorphism” is built from established group-action structure. No originality claim is attached to the action itself.
+
+**Project-specific distinction:** the diamond \(K_4-e\) has six transitive orientations and is therefore not UPO, but one of its three reversal pairs is invariant as a set under the full automorphism group. The novelty of using this fixed duality class as a pregeometric governance criterion is not certified.
