@@ -1,0 +1,116 @@
+{
+  "audit": "MINKOWSKI_2D_UPO_REFINEMENT_V1",
+  "status": "PASS",
+  "parent_size_range": [
+    2,
+    6
+  ],
+  "summary": {
+    "2": {
+      "parent_size": 2,
+      "child_size": 3,
+      "parent_counts": {
+        "U": 1,
+        "N": 1
+      },
+      "transition_counts": {
+        "U_to_U": 6,
+        "U_to_N": 3,
+        "N_to_U": 6,
+        "N_to_N": 3
+      },
+      "P_child_U_given_parent_U": "2/3",
+      "P_child_U_given_parent_N": "2/3",
+      "U_parent_upo_child_count_min": 6,
+      "U_parent_upo_child_count_max": 6,
+      "child_insertions_per_parent": 9
+    },
+    "3": {
+      "parent_size": 3,
+      "child_size": 4,
+      "parent_counts": {
+        "U": 4,
+        "N": 2
+      },
+      "transition_counts": {
+        "U_to_U": 36,
+        "U_to_N": 28,
+        "N_to_U": 12,
+        "N_to_N": 20
+      },
+      "P_child_U_given_parent_U": "9/16",
+      "P_child_U_given_parent_N": "3/8",
+      "U_parent_upo_child_count_min": 9,
+      "U_parent_upo_child_count_max": 9,
+      "child_insertions_per_parent": 16
+    },
+    "4": {
+      "parent_size": 4,
+      "child_size": 5,
+      "parent_counts": {
+        "U": 12,
+        "N": 12
+      },
+      "transition_counts": {
+        "U_to_U": 160,
+        "U_to_N": 140,
+        "N_to_U": 30,
+        "N_to_N": 270
+      },
+      "P_child_U_given_parent_U": "8/15",
+      "P_child_U_given_parent_N": "1/10",
+      "U_parent_upo_child_count_min": 12,
+      "U_parent_upo_child_count_max": 15,
+      "child_insertions_per_parent": 25
+    },
+    "5": {
+      "parent_size": 5,
+      "child_size": 6,
+      "parent_counts": {
+        "U": 38,
+        "N": 82
+      },
+      "transition_counts": {
+        "U_to_U": 768,
+        "U_to_N": 600,
+        "N_to_U": 222,
+        "N_to_N": 2730
+      },
+      "P_child_U_given_parent_U": "32/57",
+      "P_child_U_given_parent_N": "37/492",
+      "U_parent_upo_child_count_min": 15,
+      "U_parent_upo_child_count_max": 24,
+      "child_insertions_per_parent": 36
+    },
+    "6": {
+      "parent_size": 6,
+      "child_size": 7,
+      "parent_counts": {
+        "U": 165,
+        "N": 555
+      },
+      "transition_counts": {
+        "U_to_U": 5110,
+        "U_to_N": 2975,
+        "N_to_U": 2184,
+        "N_to_N": 25011
+      },
+      "P_child_U_given_parent_U": "146/231",
+      "P_child_U_given_parent_N": "104/1295",
+      "U_parent_upo_child_count_min": 18,
+      "U_parent_upo_child_count_max": 35,
+      "child_insertions_per_parent": 49
+    }
+  },
+  "exact_conclusions": [
+    "Nontrivial UPO status is not invariant under one-point random-2-order refinement.",
+    "Both UPO-to-non-UPO and non-UPO-to-UPO transitions occur.",
+    "From n=3 onward in the audited range, a UPO parent has a larger conditional UPO-child probability than a non-UPO parent.",
+    "UPO-parent refinement robustness varies across individual permutations."
+  ],
+  "nonclaims": [
+    "No asymptotic convergence is claimed.",
+    "No continuum time-orientation result is established.",
+    "UPO is treated only as a finite orientation-recovery diagnostic."
+  ]
+}
