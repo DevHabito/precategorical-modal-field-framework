@@ -1,0 +1,75 @@
+{
+  "audit": "RANDOM_2_ORDER_COMMON_INTERVAL_V1",
+  "status": "PASS",
+  "n_range": [
+    2,
+    9
+  ],
+  "summary": {
+    "2": {
+      "permutations": 2,
+      "recoverable": 1,
+      "fraction": "1/2",
+      "decimal": 0.5
+    },
+    "3": {
+      "permutations": 6,
+      "recoverable": 4,
+      "fraction": "2/3",
+      "decimal": 0.6666666666666666
+    },
+    "4": {
+      "permutations": 24,
+      "recoverable": 12,
+      "fraction": "1/2",
+      "decimal": 0.5
+    },
+    "5": {
+      "permutations": 120,
+      "recoverable": 38,
+      "fraction": "19/60",
+      "decimal": 0.31666666666666665
+    },
+    "6": {
+      "permutations": 720,
+      "recoverable": 165,
+      "fraction": "11/48",
+      "decimal": 0.22916666666666666
+    },
+    "7": {
+      "permutations": 5040,
+      "recoverable": 1042,
+      "fraction": "521/2520",
+      "decimal": 0.20674603174603173
+    },
+    "8": {
+      "permutations": 40320,
+      "recoverable": 8464,
+      "fraction": "529/2520",
+      "decimal": 0.20992063492063492
+    },
+    "9": {
+      "permutations": 362880,
+      "recoverable": 80020,
+      "fraction": "4001/18144",
+      "decimal": 0.2205136684303351
+    }
+  },
+  "comparison": {
+    "independent_modular_audit": "exact match through N=9",
+    "discrepancy_count": 0
+  },
+  "simple_permutation_counts": {
+    "4": 2,
+    "5": 6,
+    "6": 46,
+    "7": 338,
+    "8": 2926,
+    "9": 28146
+  },
+  "nonclaims": [
+    "The graph/module and common-interval theories are classical.",
+    "No asymptotic formula is claimed.",
+    "No physical causal interpretation follows from the permutation characterization alone."
+  ]
+}
