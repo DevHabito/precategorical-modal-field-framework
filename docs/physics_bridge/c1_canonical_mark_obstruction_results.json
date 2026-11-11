@@ -1,0 +1,108 @@
+{
+  "audit": "C1_CANONICAL_MARK_OBSTRUCTION_V1",
+  "status": "PASS",
+  "graphs": {
+    "graphA": {
+      "automorphism_count": 8,
+      "vertex_orbits": [
+        [
+          0,
+          2,
+          3,
+          4
+        ],
+        [
+          1
+        ]
+      ],
+      "binary_coloring_count": 32,
+      "fully_automorphism_invariant_binary_colorings": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "invariant_binary_coloring_count": 4
+    },
+    "graphB": {
+      "automorphism_count": 12,
+      "vertex_orbits": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "binary_coloring_count": 32,
+      "fully_automorphism_invariant_binary_colorings": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "invariant_binary_coloring_count": 4
+    }
+  },
+  "exact_conclusions": [
+    "Canonical isomorphism-invariant vertex marks are constant on automorphism orbits.",
+    "All four graphA cycle vertices lie in one automorphism orbit.",
+    "No fully automorphism-invariant binary mark on graphA yields the alternating cycle pattern required by the audited orientation doublet.",
+    "The graphB triangle vertices form one orbit and the isolated-edge endpoints form another."
+  ],
+  "nonclaims": [
+    "This does not forbid an independently supplied physical mark.",
+    "No physical origin for such a mark is established."
+  ]
+}
