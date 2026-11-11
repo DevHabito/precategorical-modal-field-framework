@@ -150,3 +150,7 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 
 - **RANDOM_2_ORDER_UPO_SUBSTITUTION_THEOREM_20261111.md** — substitution-decomposition classification and exact counting formulas for recoverable random 2-orders; derives the asymptotic recovery probability `1/e` from classical simple-permutation asymptotics, with priority explicitly uncertified.
 - **random_2_order_upo_substitution_audit.py** / **random_2_order_upo_substitution_results.json** — independent exact regression of simple, connected-UPO, and total recovery counts through N=9.
+
+- **RANDOM_2_ORDER_UPO_N10_PREREGISTRATION_20261111.md** — froze `C_10=692297` and `R_10=843873` before direct classification.
+- **RANDOM_2_ORDER_UPO_N10_PROSPECTIVE_PASS_20261111.md** — exact all-10! direct enumeration returned both preregistered counts; finite prospective PASS.
+- **random_2_order_upo_n10_direct.cpp** / **random_2_order_upo_n10_direct_results.json** — direct classifier and frozen exact N=10 output.
