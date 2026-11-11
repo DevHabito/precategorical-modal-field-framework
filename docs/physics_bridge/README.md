@@ -133,3 +133,5 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **C1_CANONICAL_MARK_OBSTRUCTION_20261111.md** — proves that the graphA skeleton cannot canonically generate the alternating mark needed for its orientation doublet.
 - **BIPARTITE_ORIENTATION_DOUBLET_20261111.md** — corrects the scalar-mark obstruction: connected bipartiteness canonically supplies an unlabeled two-fold orientation class.
 - **BIPARTITE_DOUBLET_DEPTH_LIMIT_20261111.md** — proves that the direct bipartite orientation has no two-step directed path and therefore cannot encode extended temporal succession.
+- **DIAMOND_ORIENTATION_TORSOR_20261111.md** — first unmarked finite witness with a unique automorphism-canonical orientation class modulo reversal and directed depth 2.
+- **intrinsic_orientation_depth_audit.py** / **intrinsic_orientation_depth_results.json** — exhaustive connected-graph search through n=5 establishing the minimal diamond witness.
