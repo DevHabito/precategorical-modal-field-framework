@@ -251,3 +251,30 @@ If the answer is no, a temporal arrow cannot emerge from that structure without 
 If the answer is yes, the next question is whether that asymmetry has a physical operational meaning rather than being merely combinatorial.
 
 This is the smallest rigorous step currently available.
+
+
+## 14. Direction V1 update
+
+The F1/F2 programme has now advanced beyond simple intrinsic orientability.
+
+The canonical direction synthesis is:
+
+PREGEOMETRIC_DIRECTION_V1_SYNTHESIS_20261111.md.
+
+The frontier is now:
+
+$$
+\text{symmetry breaking}
+\to
+\text{orientability}
+\to
+\boxed{\text{polarity}}
+\to
+\text{physical order}
+\to
+\text{duration}.
+$$
+
+The first open stage is polarity: a non-temporal physical reason to choose one of two reversed, symmetry-compatible orientations.
+
+This replaces the earlier broad F2 wording.
