@@ -103,3 +103,10 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 
 - **c1_automorphism_orientation_audit.py** — exhaustive 5! permutation audit comparing automorphism-orbits of the directed C1 witnesses with their undirected skeletons.
 - **c1_automorphism_orientation_results.json** — frozen F1 results showing that the one-way witness orientations are not recoverable canonically after arrow removal.
+
+- **Q_DIRECTION_SOURCE_GAUGE_AUDIT_20261111.md** — shows that raw reciprocal q orientation is unidentifiable under the A24 source-row gauge.
+- **Q_CYCLE_CIRCULATION_AUDIT_20261111.md** — isolates the exact gauge-invariant closed-loop q circulation and its classical cycle-affinity interpretation.
+- **CYCLE_SYMMETRY_BREAKING_BUDGET_20261111.md** — distinguishes A22's minimal nontrivial alphabet from the graph-specific amount of marking needed to destroy automorphisms.
+- **cycle_distinguishing_budget_audit.py** / **cycle_distinguishing_budget_results.json** — exhaustive cycle-coloring regression reproducing the classical distinguishing numbers.
+- **C1_CYCLE_SPACE_AUDIT_20261111.md** — computes the one-dimensional gauge-invariant cycle-space quotient of both C1 witness skeletons.
+- **c1_cycle_space_audit.py** / **c1_cycle_space_results.json** — exact finite cycle-rank regression for graphA and graphB skeletons.
