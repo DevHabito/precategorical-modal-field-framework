@@ -4,7 +4,7 @@
 **Author:** Felipe Gianini Romero  
 **Status:** exact finite enumeration using a classical UPO characterization  
 **Physical status:** causal-set-inspired structural control; not an empirical test  
-**Novelty status:** the UPO/module characterization is classical; the exact random-2-order counts below are project computations and priority is not certified
+**Novelty status:** the UPO/module characterization is classical. A later literature audit found Winkler (1990/1991), *Random orders of dimension 2*, which explicitly studies limiting unique orientability for the same pair-of-random-linear-orders ensemble. The exact finite tables below remain project computations, but their priority is not claimed without full-text comparison.
 
 ## 1. Question
 
@@ -288,11 +288,7 @@ The previous question
 
 now has a classical exact answer at the graph level.
 
-The remaining project-specific question is statistical:
-
-> Under the random \(2\)-order measure induced by a \(1+1\) Minkowski sprinkling, how frequently and at what scales do the UPO-obstructing modules occur?
-
-This is different from asking for a new graph-theory characterization.
+The remaining statistical question is the detailed finite and structural distribution of the UPO-obstructing modules. A prior-art correction is required here: Winkler (1990/1991), *Random orders of dimension 2*, already studies limiting unique orientability for the same pair-of-random-linear-orders ensemble. Therefore the broad asymptotic UPO-probability question is not project-specific. The repository's remaining contribution in this (1+1) control is its independently reproducible finite decomposition, its particular modular diagnostics, and any finite formulas or proofs that survive direct full-text comparison with the prior literature.
 
 ## 13. Next rigorous target
 
