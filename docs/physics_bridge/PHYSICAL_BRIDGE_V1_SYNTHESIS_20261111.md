@@ -718,3 +718,59 @@ How is a quantitative physical interval calibrated?
 No single monotone, memory kernel, causal quotient, or clock benchmark currently solves all four.
 
 This separation is now part of the physical-bridge governance.
+
+
+## 27. Boundary-state asymmetry and the role of \(\pi\)
+
+The time-origin audit showed that occupancy \(\pi\) is not a temporal primitive.
+
+It can nevertheless carry symmetry-breaking boundary information.
+
+An exact three-state reflection-symmetric Markov witness uses
+
+$$
+K=
+\begin{pmatrix}
+3/4&1/4&0\\
+1/4&1/2&1/4\\
+0&1/4&3/4
+\end{pmatrix}
+$$
+
+with mirrored preparations
+
+$$
+\pi_L=(1,0,0),
+\qquad
+\pi_R=(0,0,1).
+$$
+
+For the positional observable \(x=(0,1,2)\),
+
+$$
+\boxed{
+\langle x\rangle_{L,n}
+=
+1-\left(\frac34\right)^n,
+\qquad
+\langle x\rangle_{R,n}
+=
+1+\left(\frac34\right)^n.
+}
+$$
+
+The kernel is unchanged and reflection symmetric; the boundary state selects which relaxation sector is realized.
+
+This gives \(\pi\) a legitimate role as preparation/boundary information.
+
+It does not derive the step index, temporal order, or duration.
+
+The result is consistent with the broad boundary-condition logic of Past-Hypothesis approaches, while current literature also contains reversible expanding models that seek thermodynamic arrows without the conventional Past Hypothesis.
+
+The correct boundary is therefore:
+
+$$
+\boxed{
+\pi\text{ can carry effective-arrow asymmetry without being time.}
+}
+$$
