@@ -154,3 +154,12 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **RANDOM_2_ORDER_UPO_N10_PREREGISTRATION_20261111.md** — froze `C_10=692297` and `R_10=843873` before direct classification.
 - **RANDOM_2_ORDER_UPO_N10_PROSPECTIVE_PASS_20261111.md** — exact all-10! direct enumeration returned both preregistered counts; finite prospective PASS.
 - **random_2_order_upo_n10_direct.cpp** / **random_2_order_upo_n10_direct_results.json** — direct classifier and frozen exact N=10 output.
+
+- **WINKLER_RANDOM_2_ORDER_PRIOR_ART_CORRECTION_20261111.md** — literature correction establishing that Winkler (1990/1991) already studies limiting unique orientability for the same pair-of-random-linear-orders ensemble; the repository therefore makes no novelty claim for the random-2-order asymptotic question.
+- **MINKOWSKI_HIGHER_DIMENSIONAL_UPO_AND_ISOLATED_THRESHOLD_20261111.md** — extends the arrow-erasure reconstruction experiment to conditioned Minkowski sprinklings in (2+1) and (3+1), and derives the isolated-vertex expectation asymptotic (E[I_n]\sim d(d-1)\Gamma(1+2/d)^2 n^{1-4/d}).
+- **minkowski_higher_dimensional_upo_pilot.py** / **minkowski_higher_dimensional_upo_pilot_results.json** — permutation-free UPO classifier, exact (1+1) regression, Myrheim-Meyer calibration, and reproducible higher-dimensional Monte Carlo pilot.
+- **ADJACENT_TWIN_SCALING_PREREGISTRATION_20261111.md** — freezes the geometric prediction (E[T_n]=\Theta(1/n)) for adjacent-twin obstructions in (d=3,4) before held-out sizes are inspected.
+- **adjacent_twin_scaling_heldout.py** / **adjacent_twin_scaling_heldout_results.json** — held-out (n=320,384) test and detector regression.
+- **ADJACENT_TWIN_SCALING_HELDOUT_20261111.md** — records the prospective finite scaling-consistency pass without promoting it to an asymptotic theorem.
+- **minkowski_residual_upo_obstruction.py** / **minkowski_residual_upo_obstruction_results.json** — exploratory decomposition of non-UPO failures after excluding adjacent twins.
+- **MINKOWSKI_RESIDUAL_UPO_OBSTRUCTION_20261111.md** — shows that no compensating residual obstruction is visible over the audited finite range; no residual limit is inferred.
