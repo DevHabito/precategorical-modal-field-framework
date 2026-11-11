@@ -131,3 +131,5 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **STOCHASTIC_SECTOR_SELECTION_POLARITY_20261111.md** — symmetric law can yield asymmetric realized sectors while ensemble polarity remains zero.
 - **PRE_TIME_ORIENTABILITY_DOUBLET_20261111.md** — defines the finite orientation-doublet criterion inspired by Lorentzian time orientability.
 - **C1_CANONICAL_MARK_OBSTRUCTION_20261111.md** — proves that the graphA skeleton cannot canonically generate the alternating mark needed for its orientation doublet.
+- **BIPARTITE_ORIENTATION_DOUBLET_20261111.md** — corrects the scalar-mark obstruction: connected bipartiteness canonically supplies an unlabeled two-fold orientation class.
+- **BIPARTITE_DOUBLET_DEPTH_LIMIT_20261111.md** — proves that the direct bipartite orientation has no two-step directed path and therefore cannot encode extended temporal succession.
