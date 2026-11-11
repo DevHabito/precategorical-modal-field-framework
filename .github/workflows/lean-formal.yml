@@ -84,6 +84,7 @@ jobs:
           - PrecategoryFormal.RepresentativeCount
           - PrecategoryFormal.RepresentativeRealization
           - PrecategoryFormal.PhysicalBridgeTransformWitness
+          - PrecategoryFormal.PhysicalBridgeObservableWitness
     steps:
       - name: Checkout
         uses: actions/checkout@v6
