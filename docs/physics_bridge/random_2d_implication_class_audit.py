@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact implication-class ambiguity audit for random 2D orders, N<=7.
+"""Exact implication-class ambiguity audit for random 2D orders, N<=8.
 
 Uses the classical Golumbic forcing relation Gamma on directed versions of
 undirected comparability edges. The transitive closure Gamma* gives implication
@@ -131,7 +131,7 @@ def insert_relative_permutation(
 k_status = {}
 distribution_summary = {}
 
-for n in range(2, 8):
+for n in range(2, 9):
     statuses = {}
     histogram = Counter()
     empty_count = 0
@@ -214,7 +214,7 @@ for n in range(2, 8):
 
 refinement_summary = {}
 
-for n in range(2, 7):
+for n in range(2, 8):
     transitions = Counter()
     total = 0
     unchanged = 0
@@ -281,62 +281,66 @@ for n in range(2, 7):
     }
 
 
-expected_n7 = {
-    "1": 1042,
-    "2": 1756,
-    "3": 998,
-    "4": 650,
-    "5": 256,
-    "6": 116,
-    "7": 144,
-    "8": 8,
-    "9": 16,
-    "10": 28,
-    "11": 16,
-    "15": 8,
-    "21": 1,
+expected_n8 = {
+    "1": 8464,
+    "2": 12942,
+    "3": 8568,
+    "4": 4713,
+    "5": 3006,
+    "6": 693,
+    "7": 1089,
+    "8": 315,
+    "9": 156,
+    "10": 102,
+    "11": 171,
+    "12": 18,
+    "13": 18,
+    "15": 36,
+    "16": 18,
+    "21": 9,
+    "28": 1,
 }
 
 assert (
-    distribution_summary["7"][
+    distribution_summary["8"][
         "nonempty_k_histogram"
     ]
-    == expected_n7
+    == expected_n8
 )
 
 assert (
-    distribution_summary["7"][
+    distribution_summary["8"][
         "mean_k_given_nonempty"
     ]
-    == "13937/5039"
+    == "114035/40319"
 )
 
 assert (
-    refinement_summary["6"][
+    refinement_summary["7"][
         "P_k_unchanged"
     ]
-    == "2497/5040"
+    == "859/1680"
 )
 
 assert (
-    refinement_summary["6"][
+    refinement_summary["7"][
         "P_abs_change_at_most_1"
     ]
-    == "1433/1680"
+    == "1929/2240"
 )
 
 assert (
-    refinement_summary["6"][
+    refinement_summary["7"][
         "mean_absolute_change"
     ]
-    == "887/1260"
+    == "27413/40320"
 )
 
 
 result = {
     "audit": "RANDOM_2D_IMPLICATION_CLASS_AMBIGUITY_V1",
     "status": "PASS",
-    "n_range": [2, 7],
+    "n_range": [2, 8],
     "distribution_summary": (
         distribution_summary
     ),
