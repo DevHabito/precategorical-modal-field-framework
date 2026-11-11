@@ -57,6 +57,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **SCC_CONDENSATION_MACRO_ORDER_AUDIT_20261111.md** — connects the repository's SCC/quotient mathematics to a canonical acyclic macro-order while documenting its non-injectivity and failure as universal time.
 - **STRICT_TIME_AND_DURATION_GATE_20261111.md** — proves the acyclicity requirement for strict temporal rank and separates relational order from metric duration/refinement scale.
 - **PAGE_WOOTTERS_RELATIONAL_TIME_BENCHMARK_20261111.md** — classical reversible relational-time benchmark showing that external noise is not a necessary condition for relational temporal description.
+- **ORDERABILITY_BEFORE_ORDER_GATE_20261111.md** — corrects the pregeometric milestone: test whether definite causal order is available before trying to derive one; benchmarks process matrices and indefinite causal order.
 - **page_wootters_finite_benchmark.py** — finite periodic-clock regression for dimensions 2, 3, 4, 5, and 8.
 - **page_wootters_finite_benchmark_results.json** — frozen numerical output of that classical benchmark.
 - **stroboscopic_phase_average_exact.py** — rational regression audit of the phase-averaged Cayley-Hamilton recurrences.
