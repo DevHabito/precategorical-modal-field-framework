@@ -37,6 +37,8 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **STIELTJES_WIGERT_IDENTIFICATION_20261111.md** — exact change of variables showing that the constant-rate bridge generator is the classical Stieltjes-Wigert q-difference operator minus the identity.
 - **DATA_REQUEST_SPECIFICATION_20261111.md** — exact numerical data and metadata needed to execute the corrected experimental test without figure digitization.
 - **PHASE_AVERAGING_CLOSURE_OBSTRUCTION_20261111.md** — exact correction showing that random-phase marginalization introduces a rate-transform covariance and destroys generic scalar closure.
+- **FLOQUET_STROBOSCOPIC_CLOSURE_20261111.md** — exact Floquet multipliers and phase-averaged stroboscopic recurrences that recover finite closure at integer drive periods.
+- **stroboscopic_phase_average_exact.py** — rational regression audit of the phase-averaged Cayley-Hamilton recurrences.
 
 ## Scientific rule
 
