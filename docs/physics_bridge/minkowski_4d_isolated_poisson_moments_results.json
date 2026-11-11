@@ -1,0 +1,89 @@
+{
+  "audit": "MINKOWSKI_4D_ISOLATED_POISSON_MOMENTS_V1",
+  "date": "2026-11-11",
+  "status": "FINITE_FACTORIAL_MOMENT_EVIDENCE",
+  "candidate_limit": {
+    "distribution": "Poisson(3*pi)",
+    "mean": 9.42477796076938,
+    "p_zero": 0.00008069951757030463
+  },
+  "runs": [
+    {
+      "n": 128,
+      "trials": 1500,
+      "seed": 94128,
+      "mean": 8.407333333333334,
+      "variance": 12.696543918167666,
+      "fano_factor": 1.510174916917889,
+      "p_zero": 0.002,
+      "factorial_moment_2": 74.964,
+      "factorial_moment_2_ratio": 1.0605623820838883,
+      "factorial_moment_3": 704.888,
+      "factorial_moment_3_ratio": 1.1861655792581531,
+      "maximum": 22
+    },
+    {
+      "n": 256,
+      "trials": 1000,
+      "seed": 94256,
+      "mean": 8.545,
+      "variance": 12.040015015015015,
+      "fano_factor": 1.4090128747823307,
+      "p_zero": 0.002,
+      "factorial_moment_2": 76.5,
+      "factorial_moment_2_ratio": 1.0477008615456462,
+      "factorial_moment_3": 710.148,
+      "factorial_moment_3_ratio": 1.1381845002427253,
+      "maximum": 21
+    },
+    {
+      "n": 512,
+      "trials": 1000,
+      "seed": 94512,
+      "mean": 9.006,
+      "variance": 11.71768168168168,
+      "fano_factor": 1.3010972331425361,
+      "p_zero": 0.0,
+      "factorial_moment_2": 83.808,
+      "factorial_moment_2_ratio": 1.0332884894414163,
+      "factorial_moment_3": 805.104,
+      "factorial_moment_3_ratio": 1.1021892133894238,
+      "maximum": 22
+    },
+    {
+      "n": 1024,
+      "trials": 500,
+      "seed": 95024,
+      "mean": 8.996,
+      "variance": 10.332649298597195,
+      "fano_factor": 1.1485826254554463,
+      "p_zero": 0.0,
+      "factorial_moment_2": 82.244,
+      "factorial_moment_2_ratio": 1.0162611672081518,
+      "factorial_moment_3": 759.756,
+      "factorial_moment_3_ratio": 1.0435801222482874,
+      "maximum": 18
+    },
+    {
+      "n": 2048,
+      "trials": 500,
+      "seed": 962048,
+      "mean": 9.44,
+      "variance": 10.711823647294588,
+      "fano_factor": 1.1347270812812065,
+      "p_zero": 0.0,
+      "factorial_moment_2": 90.364,
+      "factorial_moment_2_ratio": 1.0140315282964667,
+      "factorial_moment_3": 872.004,
+      "factorial_moment_3_ratio": 1.0365792099606095,
+      "maximum": 20
+    }
+  ],
+  "assessment": "The mean approaches 3*pi and the Fano factor plus normalized second and third factorial moments move toward their Poisson values. This supports, but does not prove, I_n => Poisson(3*pi).",
+  "nonclaims": [
+    "No Poisson convergence theorem is claimed.",
+    "Observed zero frequencies are too noisy to test exp(-3*pi), which is about 8.07e-5.",
+    "Penrose 2018 Theorem 2.1 does not directly apply because the causal connection kernel is deterministic 0/1 and fails uniform epsilon-homogeneity at the null waist.",
+    "A proof requires a boundary-layer interaction estimate or a custom application of the general Poisson-process coupling framework."
+  ]
+}
