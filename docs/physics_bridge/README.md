@@ -40,6 +40,8 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **CLASSICAL_DISCRETE_NORMAL_AND_STEIN_CONTEXT_20261111.md** — adversarial prior-art note identifying the stationary discrete-normal law, Stein-generator context, and the nearby alternative q-Charlier process.
 - **STIELTJES_WIGERT_IDENTIFICATION_20261111.md** — exact change of variables showing that the constant-rate bridge generator is the classical Stieltjes-Wigert q-difference operator minus the identity.
 - **DATA_REQUEST_SPECIFICATION_20261111.md** — exact numerical data and metadata needed to execute the corrected experimental test without figure digitization.
+- **DATA_REQUEST_EMAIL_DRAFT_20261111.md** — concise draft request for the original numerical data; repository draft only, not sent.
+- **OPEN_DATA_TARGET_SURVEY_20261111.md** — public-data search and reasons not to substitute a different experiment merely for convenience.
 - **PHASE_AVERAGING_CLOSURE_OBSTRUCTION_20261111.md** — exact correction showing that random-phase marginalization introduces a rate-transform covariance and destroys generic scalar closure.
 - **FLOQUET_STROBOSCOPIC_CLOSURE_20261111.md** — exact Floquet multipliers and phase-averaged stroboscopic recurrences that recover finite closure at integer drive periods.
 - **HIDDEN_PHASE_FOURIER_HIERARCHY_20261111.md** — exact lifted phase equation showing that continuous-time marginalization generates an infinite Fourier hierarchy for nonzero drive.
