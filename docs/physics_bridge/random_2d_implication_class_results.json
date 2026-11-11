@@ -1,0 +1,157 @@
+{
+  "audit": "RANDOM_2D_IMPLICATION_CLASS_AMBIGUITY_V1",
+  "status": "PASS",
+  "n_range": [
+    2,
+    7
+  ],
+  "distribution_summary": {
+    "2": {
+      "permutations": 2,
+      "empty_antichain_count": 1,
+      "nonempty_k_histogram": {
+        "1": 1
+      },
+      "mean_k_given_nonempty": "1",
+      "P_k_at_most_2_given_nonempty": "1",
+      "P_k_at_most_3_given_nonempty": "1",
+      "maximum_k": 1
+    },
+    "3": {
+      "permutations": 6,
+      "empty_antichain_count": 1,
+      "nonempty_k_histogram": {
+        "1": 4,
+        "3": 1
+      },
+      "mean_k_given_nonempty": "7/5",
+      "P_k_at_most_2_given_nonempty": "4/5",
+      "P_k_at_most_3_given_nonempty": "1",
+      "maximum_k": 3
+    },
+    "4": {
+      "permutations": 24,
+      "empty_antichain_count": 1,
+      "nonempty_k_histogram": {
+        "1": 12,
+        "2": 5,
+        "3": 5,
+        "6": 1
+      },
+      "mean_k_given_nonempty": "43/23",
+      "P_k_at_most_2_given_nonempty": "17/23",
+      "P_k_at_most_3_given_nonempty": "22/23",
+      "maximum_k": 6
+    },
+    "5": {
+      "permutations": 120,
+      "empty_antichain_count": 1,
+      "nonempty_k_histogram": {
+        "1": 38,
+        "2": 45,
+        "3": 17,
+        "4": 12,
+        "6": 6,
+        "10": 1
+      },
+      "mean_k_given_nonempty": "39/17",
+      "P_k_at_most_2_given_nonempty": "83/119",
+      "P_k_at_most_3_given_nonempty": "100/119",
+      "maximum_k": 10
+    },
+    "6": {
+      "permutations": 720,
+      "empty_antichain_count": 1,
+      "nonempty_k_histogram": {
+        "1": 165,
+        "2": 280,
+        "3": 112,
+        "4": 105,
+        "5": 7,
+        "6": 28,
+        "7": 14,
+        "10": 7,
+        "15": 1
+      },
+      "mean_k_given_nonempty": "1867/719",
+      "P_k_at_most_2_given_nonempty": "445/719",
+      "P_k_at_most_3_given_nonempty": "557/719",
+      "maximum_k": 15
+    },
+    "7": {
+      "permutations": 5040,
+      "empty_antichain_count": 1,
+      "nonempty_k_histogram": {
+        "1": 1042,
+        "2": 1756,
+        "3": 998,
+        "4": 650,
+        "5": 256,
+        "6": 116,
+        "7": 144,
+        "8": 8,
+        "9": 16,
+        "10": 28,
+        "11": 16,
+        "15": 8,
+        "21": 1
+      },
+      "mean_k_given_nonempty": "13937/5039",
+      "P_k_at_most_2_given_nonempty": "2798/5039",
+      "P_k_at_most_3_given_nonempty": "3796/5039",
+      "maximum_k": 21
+    }
+  },
+  "refinement_summary": {
+    "2": {
+      "parent_size": 2,
+      "child_size": 3,
+      "transition_count": 18,
+      "P_k_unchanged": "1/2",
+      "P_abs_change_at_most_1": "5/6",
+      "mean_absolute_change": "2/3"
+    },
+    "3": {
+      "parent_size": 3,
+      "child_size": 4,
+      "transition_count": 96,
+      "P_k_unchanged": "1/2",
+      "P_abs_change_at_most_1": "5/6",
+      "mean_absolute_change": "17/24"
+    },
+    "4": {
+      "parent_size": 4,
+      "child_size": 5,
+      "transition_count": 600,
+      "P_k_unchanged": "59/120",
+      "P_abs_change_at_most_1": "101/120",
+      "mean_absolute_change": "43/60"
+    },
+    "5": {
+      "parent_size": 5,
+      "child_size": 6,
+      "transition_count": 4320,
+      "P_k_unchanged": "22/45",
+      "P_abs_change_at_most_1": "61/72",
+      "mean_absolute_change": "103/144"
+    },
+    "6": {
+      "parent_size": 6,
+      "child_size": 7,
+      "transition_count": 35280,
+      "P_k_unchanged": "2497/5040",
+      "P_abs_change_at_most_1": "1433/1680",
+      "mean_absolute_change": "887/1260"
+    }
+  },
+  "interpretation": [
+    "k_Gamma=1 reproduces the nontrivial UPO counts.",
+    "k_Gamma is a forcing-block diagnostic, not the number of independent orientation bits.",
+    "The graded count is not refinement invariant but usually changes by at most one under one-point refinement in the audited finite range."
+  ],
+  "nonclaims": [
+    "No large-N limit is inferred.",
+    "No physical entropy or time dimension is assigned to k_Gamma.",
+    "Implication classes are classical comparability-graph structure."
+  ]
+}
