@@ -67,6 +67,14 @@ The repository still preserves detailed claim matrices, literature audits, manus
 - `protocols/` and `audits/` — reproducibility material;
 - `MFRP_Informational_Requirements_A39-A109/research_updates/` — chronological A107-A122 development.
 
+## Controlled physical bridge
+
+A first physics-facing stress test is now recorded in [`docs/physics_bridge/`](docs/physics_bridge/).
+
+The pilot maps the provisional roles ((R,q,mu,K,pi)) into a finite thermal Markov jump process and asks which roles remain independent. It uses exact arithmetic, established stochastic-thermodynamics literature, explicit failure criteria, and a deliberately broken nonequilibrium cycle.
+
+This material is a diagnostic bridge, not empirical validation. Its purpose is to remove redundant structure where physics permits it and to expose missing information through falsifiable obstructions rather than ad hoc additions.
+
 ## Scientific boundary
 
 The repository does **not** currently derive or empirically confirm physical spacetime, calibrated physical duration or distance, curvature, gravity, matter, quantum amplitudes, or a physical interpretation of the project variables. RZS/Modal Field language is historical or conjectural unless an explicit mathematical/empirical bridge is separately supplied.
