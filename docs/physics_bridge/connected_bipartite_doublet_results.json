@@ -1,0 +1,30 @@
+{
+  "audit": "CONNECTED_BIPARTITE_UNIQUE_DOUBLET_V1",
+  "status": "PASS",
+  "n_range": [
+    2,
+    6
+  ],
+  "connected_labeled_bipartite_counts": {
+    "2": 1,
+    "3": 3,
+    "4": 19,
+    "5": 195,
+    "6": 3031
+  },
+  "property_checked": "every connected bipartite graph has exactly two proper binary colorings, related by global complement",
+  "graphA_C4_bipartition": [
+    [
+      0,
+      3
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "nonclaims": [
+    "Classical graph theorem regression; not a new combinatorial theorem.",
+    "No physical temporal meaning is assigned to the bipartition."
+  ]
+}
