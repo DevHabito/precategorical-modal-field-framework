@@ -1,0 +1,130 @@
+{
+  "audit": "SYMMETRIC_STOCHASTIC_SECTOR_SELECTION_V1",
+  "status": "PASS",
+  "kernel": [
+    [
+      "0",
+      "1/2",
+      "1/2"
+    ],
+    [
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "symmetry": "swap + and -; fix 0",
+  "rows": [
+    {
+      "n": 0,
+      "distribution": [
+        "1",
+        "0",
+        "0"
+      ],
+      "odd_polarity": "0",
+      "selected_sector_mass": "0"
+    },
+    {
+      "n": 1,
+      "distribution": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "odd_polarity": "0",
+      "selected_sector_mass": "1"
+    },
+    {
+      "n": 2,
+      "distribution": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "odd_polarity": "0",
+      "selected_sector_mass": "1"
+    },
+    {
+      "n": 3,
+      "distribution": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "odd_polarity": "0",
+      "selected_sector_mass": "1"
+    },
+    {
+      "n": 4,
+      "distribution": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "odd_polarity": "0",
+      "selected_sector_mass": "1"
+    },
+    {
+      "n": 5,
+      "distribution": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "odd_polarity": "0",
+      "selected_sector_mass": "1"
+    },
+    {
+      "n": 6,
+      "distribution": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "odd_polarity": "0",
+      "selected_sector_mass": "1"
+    },
+    {
+      "n": 7,
+      "distribution": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "odd_polarity": "0",
+      "selected_sector_mass": "1"
+    },
+    {
+      "n": 8,
+      "distribution": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "odd_polarity": "0",
+      "selected_sector_mass": "1"
+    }
+  ],
+  "trajectory_probabilities": {
+    "0,+,+,+,...": "1/2",
+    "0,-,-,-,...": "1/2"
+  },
+  "exact_conclusions": [
+    "The ensemble distribution is symmetry-invariant at every checked step.",
+    "The reversal-odd ensemble polarity is exactly zero.",
+    "All probability mass leaves the neutral state after one update.",
+    "Each individual trajectory remains in one selected sector thereafter.",
+    "The two opposite realized sectors have equal probability."
+  ],
+  "nonclaims": [
+    "This finite witness is not a new theorem about thermodynamic spontaneous symmetry breaking.",
+    "No physical temporal interpretation is assigned to the + and - sectors.",
+    "The update index is already supplied and is not derived."
+  ]
+}
