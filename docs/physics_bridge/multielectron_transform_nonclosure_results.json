@@ -1,0 +1,19 @@
+{
+  "bridge": "MULTIELECTRON_TRANSFORM_NONCLOSURE_V1",
+  "status": "PASS",
+  "z": "1/2",
+  "y": "3/4",
+  "epsilon": "1/20",
+  "p_plus": ["9/40", "7/20", "1/8", "3/10"],
+  "p_minus": ["11/40", "3/20", "3/8", "1/5"],
+  "mean_both": "3/2",
+  "G_z_both": "15/32",
+  "G_y_plus": "219/320",
+  "G_y_minus": "437/640",
+  "G_y_difference": "1/640",
+  "nonclaims": [
+    "This is an exact algebraic witness, not experimental data.",
+    "The chosen rational z and y are not fitted to the published device parameters.",
+    "No novelty claim is made for transform nonclosure in birth-death processes."
+  ]
+}
