@@ -18,3 +18,4 @@ import PrecategoryFormal.PhysicalBridgeObservableWitness
 import PrecategoryFormal.PhysicalBridgeMarginalClosure
 import PrecategoryFormal.PhysicalBridgeAcyclicityGate
 import PrecategoryFormal.PhysicalBridgeSymmetryOrientation
+import PrecategoryFormal.PhysicalBridgeQDirectionGauge
