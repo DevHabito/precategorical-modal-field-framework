@@ -92,3 +92,44 @@ lake build
 ```
 
 The committed `lake-manifest.json` pins the resolved dependency revisions used by CI.
+
+
+## Physical bridge finite witnesses — END-TO-END LEAN/KERNEL PASS
+
+Two deliberately small algebraic witnesses from the physics-facing bridge are now formalized.
+
+### Transform non-closure witness
+
+PrecategoryFormal/PhysicalBridgeTransformWitness.lean proves with exact rational arithmetic that the two four-state distributions used in the multi-electron bridge have:
+
+- normalization one;
+- the same mean \(3/2\);
+- the same transform value \(15/32\) at the diagnostic point \(z=1/2\);
+- different shifted-transform values \(219/320\) and \(437/640\);
+- exact gap \(1/640\).
+
+The file contains no experimental assumption. It certifies only the finite algebraic counterexample.
+
+### Mean non-autonomy witness
+
+PrecategoryFormal/PhysicalBridgeObservableWitness.lean proves the rational surrogate used to audit mean nonclosure:
+
+- two three-state distributions have the same mean \(1\);
+- their diagnostic \(G_{-c}\) values are \(2\) and \(5/2\);
+- under the same rational birth/death coefficients their mean derivatives are \(11/7\) and \(17/14\);
+- the exact derivative gap is \(-5/14\).
+
+Again, this is a finite algebraic theorem, not a formalization of the experimental master equation.
+
+### Verification status
+
+GitHub Actions run 733 completed successfully after the modules were added to the sharded replay matrix.
+
+The run includes:
+
+- pinned Lean/mathlib build;
+- proof-placeholder rejection;
+- leanchecker replay for PrecategoryFormal.PhysicalBridgeTransformWitness;
+- leanchecker replay for PrecategoryFormal.PhysicalBridgeObservableWitness.
+
+The formal result does **not** certify the physical mapping, the Salhani et al. rate law, empirical adequacy, or novelty.
