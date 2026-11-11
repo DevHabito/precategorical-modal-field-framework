@@ -530,3 +530,24 @@ Interventional data can refine or break observational Markov equivalence classes
 This makes interventions an important benchmark for any proposed intrinsic directionality.
 
 However, a pregeometric time proposal must still explain whether intervention semantics can be defined without presupposing temporal or agent-level causal structure.
+
+
+## 41. Strongly connected condensation as an acyclic quotient
+
+For any directed graph, mutual reachability partitions the vertices into strongly connected components.
+
+Contracting each SCC produces the condensation graph, which is always a DAG.
+
+This is a classical graph-theoretic result.
+
+**Use here:** SCC condensation supplies a canonical acyclic quotient without introducing external time labels.
+
+**Boundary:** the quotient is non-injective and erases all internal strongly connected dynamics. It is therefore not a universal reconstruction of physical time.
+
+## 42. Relation to causal-set order
+
+Causal-set theory takes a locally finite partial order as fundamental.
+
+An SCC condensation followed by reachability also yields a partial order in finite cases, but no causal interpretation follows from graph theory alone.
+
+**Use here:** structural similarity to a causet is insufficient. A physical meaning for the primitive directed relation is still required.
