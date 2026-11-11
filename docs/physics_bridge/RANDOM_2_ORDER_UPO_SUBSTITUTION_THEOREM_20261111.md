@@ -389,7 +389,78 @@ Numerically,
 }
 \]
 
-## 9. Why the finite sequence looked misleading
+## 9. Higher-order asymptotic check
+
+The stronger classical expansion
+
+\[
+\frac{s_n}{n!}
+=
+e^{-2}
+\left(
+1-\frac4n+\frac{2}{n(n-1)}+O(n^{-3})
+\right)
+\]
+
+can be inserted into the same factorially weighted sum.
+
+Writing \(j=n-k\) and splitting the sum into \(j\le n/2\) and the factorially small tail gives
+
+\[
+\boxed{
+\frac{C_n}{n!}
+=
+\frac1e
+\left(
+1-\frac5n+\frac2{n^2}+O(n^{-3})
+\right).
+}
+\]
+
+Using
+
+\[
+\frac{R_n}{n!}
+=
+\frac{C_n}{n!}
++
+\frac{2C_{n-1}}{n!}
++
+\frac{3C_{n-2}}{n!}
++
+O(n^{-3}),
+\]
+
+and expanding the first three terms yields
+
+\[
+\boxed{
+\frac{R_n}{n!}
+=
+\frac1e
+\left(
+1-\frac3n-\frac5{n^2}+O(n^{-3})
+\right).
+}
+\]
+
+At \(n=9\), the second-order approximation is approximately
+
+\[
+0.222544,
+\]
+
+while the exact value is
+
+\[
+\frac{4001}{18144}
+\approx
+0.220514.
+\]
+
+This agreement is diagnostic only; the proof is the asymptotic expansion above, not the numerical closeness.
+
+## 10. Why the finite sequence looked misleading
 
 The exact finite probabilities through \(n=9\) are
 
@@ -410,7 +481,7 @@ The asymptotic theorem explains why no monotone extrapolation from \(n\le9\) was
 
 The finite data were correctly retained without an asymptotic claim until the substitution decomposition was identified.
 
-## 10. Physical interpretation
+## 11. Physical interpretation
 
 For a flat \(1+1\)-dimensional Minkowski sprinkling conditioned on \(n\) points, the relative light-cone order is a uniform permutation.
 
@@ -438,7 +509,7 @@ This is an orientation-recoverability theorem for a specific information-loss ex
 
 It is not a theorem that physical time emerges with probability \(1/e\).
 
-## 11. What the theorem does not establish
+## 12. What the theorem does not establish
 
 It does not establish:
 
@@ -452,7 +523,7 @@ It does not establish:
 
 The theorem concerns one precise finite-to-asymptotic reconstruction problem.
 
-## 12. Literature boundary
+## 13. Literature boundary
 
 The proof combines classical work on:
 
@@ -478,7 +549,7 @@ This is limited negative evidence only.
 
 **Absolute novelty and priority remain uncertified.**
 
-## 13. Current research consequence
+## 14. Current research consequence
 
 The previous open question
 
