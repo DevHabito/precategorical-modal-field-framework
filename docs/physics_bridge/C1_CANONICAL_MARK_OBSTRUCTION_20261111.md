@@ -3,7 +3,7 @@
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
 **Status:** exact finite orbit obstruction  
-**Conclusion:** no deterministic isomorphism-invariant vertex mark derived solely from the unmarked C1 skeleton can generate the symmetry-breaking pattern needed for the audited orientation doublet
+**Corrected conclusion:** no deterministic pointwise-invariant scalar vertex mark derived solely from the unmarked C1 skeleton can split one automorphism orbit. This does not forbid a canonical unordered bipartition or other equivariant two-fold structure.
 
 ## 1. Why this audit matters
 
@@ -115,7 +115,7 @@ where the coordinate order is \(0,1,2,3,4\).
 
 None alternates around the four-cycle.
 
-Therefore none yields the orientation doublet identified in the previous audit.
+Therefore none yields a **labeled scalar coloring** realizing the previous orientation doublet. This does not rule out deriving the same doublet from an unlabeled bipartition class.
 
 ## 5. graphB skeleton
 
@@ -241,3 +241,62 @@ $$
 $$
 
 The missing physical bridge is the origin and semantics of the mark, not the combinatorics of the doublet.
+
+
+## 12. Correction: invariant scalar versus canonical unordered bipartition
+
+The original form of this audit drew a conclusion that was too strong.
+
+The orbit argument proves that a **pointwise-invariant scalar mark**
+
+$$
+m:V\to X
+$$
+
+cannot assign different scalar values to vertices in the same automorphism orbit.
+
+It does **not** prove that the graph cannot canonically determine a set-valued structure whose components are exchanged by automorphisms.
+
+The graphA four-cycle is the counterexample.
+
+Its nontrivial connected component is bipartite with the unordered bipartition
+
+$$
+\boxed{
+\big\{
+\{0,3\},
+\{2,4\}
+\big\}.
+}
+$$
+
+A connected bipartite graph has a unique bipartition up to swapping the two parts.
+
+Therefore the C4 component canonically determines this **unordered pair of parts**, even though no canonical invariant scalar can decide which part is called 0 and which is called 1.
+
+Orienting every edge from the first part to the second gives one acyclic orientation; swapping the parts gives its global reverse.
+
+Hence:
+
+$$
+\boxed{
+\text{C4 skeleton}
+\Longrightarrow
+\{O,O^{\mathrm{op}}\}
+}
+$$
+
+without a labeled scalar polarity.
+
+The isolated vertex \(1\) means the entire five-vertex graphA skeleton is disconnected, so its full-graph bipartition has additional freedom associated with that isolated component. The intrinsic orientation-doublet statement applies to the connected four-cycle component.
+
+This correction strengthens, rather than weakens, the invariant-mark theorem:
+
+- invariant scalar marks cannot split an automorphism orbit;
+- canonical **torsor-valued / unordered** structures can still exist when automorphisms exchange their components.
+
+The correct physical question is therefore not always “which invariant scalar mark breaks the symmetry?”
+
+It can instead be:
+
+> does the primitive structure canonically determine an orientation class modulo a global symmetry action?
