@@ -2,17 +2,23 @@
 """Exact finite audit for the first Markov thermal physical-bridge pilot.
 
 Only Python's standard library is used. All promoted finite equalities use
-fractions.Fraction. Floating-point arithmetic is not used for sign or equality
-decisions.
+fractions.Fraction or integer arithmetic. Floating-point arithmetic is not
+used for sign or equality decisions.
 """
 
 from fractions import Fraction
 import json
-import math
 
 
 def fs(x: Fraction) -> str:
     return str(x.numerator) if x.denominator == 1 else f"{x.numerator}/{x.denominator}"
+
+
+def log2_power_of_two(n: int) -> int:
+    """Return k for n=2**k, rejecting every other positive integer."""
+    if n <= 0 or n & (n - 1):
+        raise ValueError(f"{n} is not a positive power of two")
+    return n.bit_length() - 1
 
 
 # Three-state reversible CTMC.
@@ -110,8 +116,8 @@ weights_A = [Fraction(mu_A[i], 2 ** E_A[i]) for i in range(3)]
 weights_B = [Fraction(mu_B[i], 2 ** E_B[i]) for i in range(3)]
 assert weights_A == weights_B == [Fraction(1), Fraction(1, 2), Fraction(1, 4)]
 
-F_A = [E_A[i] - int(math.log2(mu_A[i])) for i in range(3)]
-F_B = [E_B[i] - int(math.log2(mu_B[i])) for i in range(3)]
+F_A = [E_A[i] - log2_power_of_two(mu_A[i]) for i in range(3)]
+F_B = [E_B[i] - log2_power_of_two(mu_B[i]) for i in range(3)]
 assert F_A == F_B == [0, 1, 2]
 
 
