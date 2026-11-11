@@ -115,3 +115,5 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **BRIDGE_3A_MAGNETIC_LOOP_GAUGE_CALIBRATION_20261111.md** — physical calibration showing that gauge-invariant loop holonomy can be observable without being time.
 - **LOOP_CHIRALITY_NOT_TIME_ORDER_20261111.md** — four-site flux ring counterbenchmark: loop chirality can break reflection while preserving cyclic site equivalence and no vertex precedence.
 - **CURRENT_ARCHITECTURE_TIME_ORIGIN_AUDIT_20261111.md** — architecture-level boundary showing why the present `(R,q,mu,K,pi)` tuple is not yet a non-circular derivation of time.
+- **BOUNDARY_STATE_ARROW_AUDIT_20261111.md** — exact reflected-preparation witness showing how occupancy/boundary state can select opposite relaxation sectors under the same symmetric kernel without deriving time.
+- **boundary_state_arrow_exact.py** / **boundary_state_arrow_results.json** — exact Fraction regression for the boundary-state witness.
