@@ -71,9 +71,15 @@ The repository still preserves detailed claim matrices, literature audits, manus
 
 A first physics-facing stress test is now recorded in [`docs/physics_bridge/`](docs/physics_bridge/).
 
-The pilot maps the provisional roles ((R,q,mu,K,pi)) into a finite thermal Markov jump process and asks which roles remain independent. It uses exact arithmetic, established stochastic-thermodynamics literature, explicit failure criteria, and a deliberately broken nonequilibrium cycle.
+The bridge maps the provisional roles \((R,q,\mu,K,\pi)\) into established stochastic-thermodynamic models and asks which roles remain independent.
 
-This material is a diagnostic bridge, not empirical validation. Its purpose is to remove redundant structure where physics permits it and to expose missing information through falsifiable obstructions rather than ad hoc additions.
+The current physics-facing work contains three layers:
+
+- an exact finite Markov diagnostic that deliberately breaks reversibility;
+- a retrospective calibration against a published single-electron-box experiment;
+- an analytic bridge to a published multi-electron birth-death model, where the physical rate law generates an exact transform-shift hierarchy with both generic non-autonomy and commensurate finite closures.
+
+This material is not empirical validation of the framework. Its purpose is to remove redundant structure where physics permits it, expose missing information through falsifiable obstructions, and identify exact closure regimes without ad hoc additions.
 
 ## Scientific boundary
 
