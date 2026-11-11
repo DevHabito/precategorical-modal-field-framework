@@ -2,7 +2,7 @@
 
 ## Canonical current summary
 
-For the pregeometric direction/order branch, start with **PREGEOMETRIC_DIRECTION_V1_SYNTHESIS_20261111.md**. It consolidates the symmetry, gauge, SCC, q, boundary-state, magnetic-loop, orientability, and polarity audits.
+For the pregeometric direction/order branch, start with **PREGEOMETRIC_DIRECTION_V2_SYNTHESIS_20261111.md**. V2 replaces the polarity-first target with orientation-class uniqueness modulo global reversal; V1 is retained as the preceding stage.
 
 Start with **PHYSICAL_BRIDGE_V1_SYNTHESIS_20261111.md**. It consolidates the current physical-bridge claims, corrections, classical identifications, formal-verification status, and empirical boundary. The other files in this directory are component proofs, audits, preregistrations, or provenance notes.
 
@@ -127,3 +127,7 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **RESOURCE_CONVERTIBILITY_R_SEMANTICS_20261111.md** — first clean non-temporal semantics for directed R: operational convertibility passes anti-circularity but does not imply causal/temporal precedence.
 
 - **CONSTRUCTOR_THEORY_POLARITY_BENCHMARK_20261111.md** — possible/impossible task benchmark: trajectory-free directed semantics passes, but task input/output polarity is still substantive structure rather than derived time.
+
+- **STOCHASTIC_SECTOR_SELECTION_POLARITY_20261111.md** — symmetric law can yield asymmetric realized sectors while ensemble polarity remains zero.
+- **PRE_TIME_ORIENTABILITY_DOUBLET_20261111.md** — defines the finite orientation-doublet criterion inspired by Lorentzian time orientability.
+- **C1_CANONICAL_MARK_OBSTRUCTION_20261111.md** — proves that the graphA skeleton cannot canonically generate the alternating mark needed for its orientation doublet.
