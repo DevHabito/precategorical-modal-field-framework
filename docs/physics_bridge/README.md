@@ -50,6 +50,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **PERSISTENT_VS_RESAMPLED_CONTEXT_20261111.md** — exact diagnostic showing how persistence of an external context changes ensemble dynamics even when its one-time distribution is unchanged.
 - **BRIDGE_2_HIDDEN_DEGREES_RETROSPECTIVE_20261111.md** — independent Nature Physics control case: matched visible initial distributions with different future relaxation because of hidden environmental memory.
 - **PHYSICAL_ARCHITECTURE_REFINEMENT_20261111.md** — governance refinement requiring every closure claim to declare full state, observation map, conditioning information, preparation class, and temporal resolution.
+- **INFORMATION_THEORETIC_CLOSURE_DIAGNOSTIC_20261111.md** — uses established conditional mutual information to separate preparation-specific predictive sufficiency from universal/strong closure.
 - **stroboscopic_phase_average_exact.py** — rational regression audit of the phase-averaged Cayley-Hamilton recurrences.
 - **phase_bridge_numerical_stress.py** — dependency-free 16-case integration stress test of continuous phase averaging versus exact stroboscopic closure.
 - **phase_bridge_numerical_stress_results.json** — frozen output of that numerical regression.
