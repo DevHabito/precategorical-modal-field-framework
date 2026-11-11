@@ -88,6 +88,7 @@ jobs:
           - PrecategoryFormal.PhysicalBridgeMarginalClosure
           - PrecategoryFormal.PhysicalBridgeAcyclicityGate
           - PrecategoryFormal.PhysicalBridgeSymmetryOrientation
+          - PrecategoryFormal.PhysicalBridgeQDirectionGauge
     steps:
       - name: Checkout
         uses: actions/checkout@v6
