@@ -404,3 +404,210 @@ The master equation, transition-rate law, stochastic-thermodynamic interpretatio
 The four-state witness and the use of the exact transform shift as a repository bridge are recorded here as a project derivation.
 
 No priority claim is made until a targeted literature review of generating-function closure for birth-death processes is completed.
+
+
+## 12. Exact commensurate closure ladder
+
+The transform shift does not imply universal non-closure.
+
+Let
+
+$$
+c=2\beta E_{\rm C}
+$$
+
+and define, for positive integers \(j\),
+
+$$
+H_j(t)=G_{jc}(t).
+$$
+
+Because
+
+$$
+G_0(t)=\sum_N\rho_N(t)=1,
+$$
+
+the exact transform equation gives
+
+$$
+\boxed{
+\dot H_j
+=
+\Gamma^+(t)(e^{-jc}-1)H_j
++
+\Gamma_0e^{-\beta E_{\rm C}}(e^{jc}-1)H_{j-1}.
+}
+$$
+
+This system is lower triangular in the ordered family
+
+$$
+(H_1,H_2,\ldots,H_m).
+$$
+
+### Scalar closure at \(\lambda=c\)
+
+For \(j=1\),
+
+$$
+\boxed{
+\dot G_c
+=
+\Gamma^+(t)(e^{-c}-1)G_c
++
+\Gamma_0e^{-\beta E_{\rm C}}(e^c-1).
+}
+$$
+
+Since \(G_0=1\), the right-hand side contains no additional transform.
+
+Thus the physical model has an exact one-transform closed observable at the distinguished parameter
+
+$$
+\lambda=c=2\beta E_{\rm C}.
+$$
+
+This parameter is not inserted to repair a failed closure. It is selected by the exponential state dependence already present in the published death rate.
+
+### Finite closure for integer multiples
+
+For
+
+$$
+\lambda=mc,
+\qquad
+m\in\mathbb N,
+$$
+
+the natural shift chain is
+
+$$
+G_{mc}
+\to
+G_{(m-1)c}
+\to
+\cdots
+\to
+G_c
+\to
+G_0=1.
+$$
+
+Therefore the vector
+
+$$
+\boxed{
+(G_c,G_{2c},\ldots,G_{mc})
+}
+$$
+
+is an exact finite closed triangular state under the published master equation.
+
+The closure dimension supplied by this construction is \(m\).
+
+### Generic parameter
+
+For a parameter \(\lambda\) whose ratio \(\lambda/c\) is not a positive integer, repeated application of the same shift produces
+
+$$
+\lambda,\quad
+\lambda-c,\quad
+\lambda-2c,\quad\ldots
+$$
+
+without reaching \(0\) after a positive integer number of steps.
+
+Therefore the **natural transform-shift ladder** does not terminate at the normalization \(G_0=1\).
+
+This statement is intentionally limited. It does **not** prove that no other finite-dimensional nonlinear representation can close the dynamics at such a parameter.
+
+## 13. Why the closure ladder matters
+
+The bridge now has both a failure statement and a positive closure theorem.
+
+For generic \(\lambda\), one fixed score is not dynamically autonomous because its derivative needs a shifted transform.
+
+At the physically selected lattice
+
+$$
+\lambda\in c\mathbb N,
+$$
+
+the hierarchy closes after finitely many levels.
+
+The first point,
+
+$$
+\lambda=c,
+$$
+
+is especially important: a scalar exponential score is exactly closed.
+
+This changes the interpretation of the bridge. The physical lesson is not
+
+> exponential scores never close.
+
+The correct statement is
+
+> closure depends on how the transform parameter is positioned relative to the exponential scale already built into the transition rates.
+
+That dependence is derived from the physical master equation rather than added as an auxiliary assumption.
+
+## 14. Verification
+
+A separate exact audit evaluates the generator action at the commensurate transform points using rational arithmetic.
+
+For the audit, write
+
+$$
+r=e^{-c}
+$$
+
+and choose the exact diagnostic values
+
+$$
+r=\frac12,\qquad
+\Gamma^+=3,\qquad
+\Gamma_0e^{-\beta E_{\rm C}}=\frac57,
+$$
+
+with current finite-support distribution
+
+$$
+p=
+\left(
+\frac1{10},\frac2{10},\frac3{10},\frac4{10}
+\right).
+$$
+
+For \(j=1,2,3,4\), the direct generator derivative agrees exactly with
+
+$$
+\Gamma^+(r^j-1)G_{jc}
++
+\Gamma_0e^{-\beta E_{\rm C}}(r^{-j}-1)G_{(j-1)c}.
+$$
+
+The exact derivative values are
+
+$$
+\frac{127}{560},\quad
+\frac{339}{1120},\quad
+\frac{5453}{10240},\quad
+\frac{247245}{229376}.
+$$
+
+The audit is a regression check of the analytic identity, not an independent proof and not an experimental result.
+
+## 15. Updated interpretation
+
+Bridge 1B now supports three distinct statements:
+
+1. **generic one-score non-autonomy:** one \(G_\lambda\) generally requires \(G_{\lambda-c}\);
+2. **constructive non-closure:** equal mean and equal \(Q_\lambda\) need not determine \(\dot Q_\lambda\);
+3. **commensurate exact closure:** when \(\lambda=mc\), the natural transform hierarchy closes exactly after \(m\) levels.
+
+The combination is more informative than a blanket non-closure claim.
+
+No novelty claim is attached to the finite closure ladder until specialized generating-function and functional-equation literature is reviewed more deeply.
