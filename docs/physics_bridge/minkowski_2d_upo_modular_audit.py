@@ -62,6 +62,40 @@ def component_masks(n, adj):
     return result
 
 
+def has_nonstable_module(component, adj):
+    vertices = [
+        i
+        for i in range(len(adj))
+        if (component >> i) & 1
+    ]
+
+    subset = (component - 1) & component
+    while subset:
+        size = subset.bit_count()
+        if 2 <= size < len(vertices):
+            # Skip stable subsets immediately.
+            if any(adj[u] & subset for u in vertices if (subset >> u) & 1):
+                outside = component & ~subset
+                valid = True
+
+                while outside:
+                    bit = outside & -outside
+                    x = bit.bit_length() - 1
+                    outside ^= bit
+
+                    count = (adj[x] & subset).bit_count()
+                    if count not in (0, size):
+                        valid = False
+                        break
+
+                if valid:
+                    return True
+
+        subset = (subset - 1) & component
+
+    return False
+
+
 def minimum_nonstable_module_size(component, adj):
     vertices = [
         i
@@ -120,16 +154,25 @@ for n in range(2, 10):
             categories["multiple_nontrivial_components"] += 1
             continue
 
-        bad_size = minimum_nonstable_module_size(
-            nontrivial[0],
-            adj,
-        )
+        if n <= 8:
+            bad_size = minimum_nonstable_module_size(
+                nontrivial[0],
+                adj,
+            )
+            has_bad_module = bad_size is not None
+        else:
+            bad_size = None
+            has_bad_module = has_nonstable_module(
+                nontrivial[0],
+                adj,
+            )
 
-        if bad_size is None:
+        if not has_bad_module:
             categories["upo_recoverable"] += 1
         else:
             categories["internal_module_ambiguity"] += 1
-            minimum_bad_module_histogram[str(bad_size)] += 1
+            if bad_size is not None:
+                minimum_bad_module_histogram[str(bad_size)] += 1
 
     total = math.factorial(n)
     upo = categories["upo_recoverable"]
@@ -147,8 +190,10 @@ for n in range(2, 10):
         "empty_antichain": categories["empty_antichain"],
         "recovery_fraction": str(recovery),
         "recovery_decimal": float(recovery),
-        "minimum_bad_module_size_histogram": dict(
-            sorted(minimum_bad_module_histogram.items())
+        "minimum_bad_module_size_histogram": (
+            dict(sorted(minimum_bad_module_histogram.items()))
+            if n <= 8
+            else None
         ),
     }
 
@@ -196,7 +241,8 @@ result = {
         "The classical modular UPO criterion exactly reproduces the previous direct-orientation UPO counts through N=7.",
         "Exact enumeration extends the random-2-order recovery statistic to N=8 and N=9.",
         "The finite recovery fraction is not monotone: it rises at N=8 and again at N=9.",
-        "Internal non-stable modules are the dominant failure mode in the audited range."
+        "Internal non-stable modules are the dominant failure mode in the audited range.",
+        "Minimum bad-module sizes were exhaustively classified through N=8; N=9 was classified for UPO/failure type without the extra minimum-size pass."
     ],
     "nonclaims": [
         "No asymptotic limit is inferred from N<=9.",
