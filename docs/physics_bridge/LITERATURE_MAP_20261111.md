@@ -358,3 +358,29 @@ Recent multi-state mixture work in 2026 likewise describes generalized non-Marko
 **Use here:** persistent hidden context creating non-Markovian marginal dynamics is established background.
 
 **Novelty boundary:** no claim is made for the general idea that a hidden persistent environment destroys Markovianity.
+
+
+## 28. Experimental hidden-degree memory
+
+Lokesh Muruga, Felix Ginot, Sarah A. M. Loos, and Clemens Bechinger, **“The extraction of work from hidden degrees of freedom,”** *Nature Physics* (2026).  
+DOI: https://doi.org/10.1038/s41567-026-03442-w
+
+The experiment uses an observed optically trapped Brownian particle coupled to hidden environmental degrees of freedom. A delayed double-measurement protocol retrieves information stored in environmental memory.
+
+A particularly important control construction matches the complete observed position distribution at the comparison time while removing history information. Subsequent relaxation differs, isolating the effect of hidden-state memory.
+
+**Use here:** independent retrospective physical witness that an identical instantaneous observed marginal need not determine the future when hidden degrees of freedom retain predictive information.
+
+**Novelty boundary:** this phenomenon and its thermodynamic exploitation are the authors' published result, not a project discovery.
+
+## 29. Causal states and minimal predictive statistics
+
+Computational mechanics defines forward causal states as equivalence classes of observed pasts that induce the same conditional future distribution.
+
+Under the framework's assumptions, causal states are minimal sufficient statistics for prediction.
+
+Related predictive-state representations give an analogous language for controlled systems.
+
+**Use here:** the problem of finding a minimal history-based predictive state is established theory.
+
+**Novelty boundary:** do not introduce a renamed minimal-memory state without comparison against causal-state and predictive-state literature.
