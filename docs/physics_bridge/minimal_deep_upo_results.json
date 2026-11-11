@@ -1,0 +1,71 @@
+{
+  "audit": "MINIMAL_DEEP_UPO_V1",
+  "status": "PASS",
+  "summary": {
+    "2": {
+      "connected_labeled_graphs": 1,
+      "upo_graphs": 1,
+      "upo_depth_at_least_2": 0,
+      "depth_histogram": {
+        "1": 1
+      }
+    },
+    "3": {
+      "connected_labeled_graphs": 4,
+      "upo_graphs": 3,
+      "upo_depth_at_least_2": 0,
+      "depth_histogram": {
+        "1": 3
+      }
+    },
+    "4": {
+      "connected_labeled_graphs": 38,
+      "upo_graphs": 19,
+      "upo_depth_at_least_2": 0,
+      "depth_histogram": {
+        "1": 19
+      }
+    },
+    "5": {
+      "connected_labeled_graphs": 728,
+      "upo_graphs": 315,
+      "upo_depth_at_least_2": 120,
+      "depth_histogram": {
+        "1": 195,
+        "2": 120
+      }
+    }
+  },
+  "minimal_depth_two_vertex_count": 5,
+  "depth_two_unlabeled_types": {
+    "bull": {
+      "labeled_count": 60,
+      "edge_count": 5,
+      "automorphism_count": 2,
+      "degree_multiset": [
+        1,
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    "house": {
+      "labeled_count": 60,
+      "edge_count": 6,
+      "automorphism_count": 2,
+      "degree_multiset": [
+        2,
+        2,
+        2,
+        3,
+        3
+      ]
+    }
+  },
+  "nonclaims": [
+    "UPO theory is classical.",
+    "The finite classification is a project control calculation, not a novelty claim.",
+    "No physical temporal semantics follows from the UPO property."
+  ]
+}
