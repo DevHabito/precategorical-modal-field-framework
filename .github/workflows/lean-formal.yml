@@ -91,6 +91,7 @@ jobs:
           - PrecategoryFormal.PhysicalBridgeQDirectionGauge
           - PrecategoryFormal.PhysicalBridgeQCycleCirculation
           - PrecategoryFormal.PhysicalBridgeSectorSelection
+          - PrecategoryFormal.PhysicalBridgeOrientationDoublet
     steps:
       - name: Checkout
         uses: actions/checkout@v6
