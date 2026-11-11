@@ -69,7 +69,7 @@ The repository still preserves detailed claim matrices, literature audits, manus
 
 ## Controlled physical bridge
 
-A first physics-facing stress test is now recorded in [`docs/physics_bridge/`](docs/physics_bridge/).
+A controlled physics-facing stress test is recorded in [`docs/physics_bridge/`](docs/physics_bridge/). The canonical current summary is [`docs/physics_bridge/PHYSICAL_BRIDGE_V1_SYNTHESIS_20261111.md`](docs/physics_bridge/PHYSICAL_BRIDGE_V1_SYNTHESIS_20261111.md).
 
 The bridge maps the provisional roles \((R,q,\mu,K,\pi)\) into established stochastic-thermodynamic models and asks which roles remain independent.
 
