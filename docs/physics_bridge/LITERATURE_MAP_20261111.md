@@ -645,3 +645,22 @@ Cristian López and Olimpia Lombardi, **“A Review of the Concept of Time Rever
 DOI: https://doi.org/10.3390/e26070563
 
 **Use here:** benchmark for keeping time-reversal symmetry, temporal direction, motion reversal, and arrow-of-time claims distinct.
+
+
+## 52. Operational signalling and causal precedence
+
+Ognyan Oreshkov and Christina Giarmatzi, **“Causal and causally separable processes,”** *New Journal of Physics* **18**, 093020 (2016).  
+DOI: https://doi.org/10.1088/1367-2630/18/9/093020
+
+Operationally, causal order is tied to signalling constraints: if \(A\) is in the causal past of \(B\), signalling can be possible from \(A\) to \(B\) but not from \(B\) to \(A\).
+
+**Use here:** signalling supplies a physically meaningful orientation diagnostic without requiring passive observational correlations alone.
+
+## 53. Interventions in quantum causal modelling
+
+Fabio Costa and Sally Shrapnel, **“Quantum causal modelling,”** *New Journal of Physics* **18**, 063032 (2016).  
+DOI: https://doi.org/10.1088/1367-2630/18/6/063032
+
+The framework emphasizes autonomous mechanisms and interventions and identifies causal influence with the possibility of changing statistics at one event through intervention at another.
+
+**Use here:** the direction obtained by signalling relies on declared intervention structure; it is not extracted from passive symmetric data for free.
