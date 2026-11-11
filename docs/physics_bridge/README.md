@@ -125,3 +125,5 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **LAW_LEVEL_POLARITY_AUDIT_20261111.md** — BABAR T-violation benchmark completing the distinction between law-level, boundary-state, operational, and loop polarity.
 
 - **RESOURCE_CONVERTIBILITY_R_SEMANTICS_20261111.md** — first clean non-temporal semantics for directed R: operational convertibility passes anti-circularity but does not imply causal/temporal precedence.
+
+- **CONSTRUCTOR_THEORY_POLARITY_BENCHMARK_20261111.md** — possible/impossible task benchmark: trajectory-free directed semantics passes, but task input/output polarity is still substantive structure rather than derived time.
