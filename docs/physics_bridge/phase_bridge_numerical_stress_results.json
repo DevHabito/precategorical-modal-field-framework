@@ -1,0 +1,33 @@
+{
+  "audit": "PHASE_BRIDGE_NUMERICAL_STRESS_V1",
+  "status": "PASS",
+  "case_count": 16,
+  "phase_count": 24,
+  "steps_per_period": 800,
+  "period_count": 5,
+  "max_stroboscopic_residual": 2.913578232843772e-12,
+  "min_continuous_mean_rate_difference": 0.00023535958880316343,
+  "max_continuous_mean_rate_difference": 0.43067396423650184,
+  "cases": [
+    {"q":0.35,"A":0.4,"gamma0":0.2,"omega":0.7,"mu":0.29700057839063154,"max_stroboscopic_residual":1.3322676295501878e-14,"max_continuous_mean_rate_difference":0.005313398739518194},
+    {"q":0.35,"A":0.4,"gamma0":0.2,"omega":1.9,"mu":0.6393706372591492,"max_stroboscopic_residual":5.551115123125783e-16,"max_continuous_mean_rate_difference":0.0008071233412221268},
+    {"q":0.35,"A":0.4,"gamma0":0.8,"omega":0.7,"mu":0.007780888292057003,"max_stroboscopic_residual":5.358768984109474e-13,"max_continuous_mean_rate_difference":0.047057880734413526},
+    {"q":0.35,"A":0.4,"gamma0":0.8,"omega":1.9,"mu":0.16711319814574344,"max_stroboscopic_residual":6.128431095930864e-14,"max_continuous_mean_rate_difference":0.010551820973914383},
+    {"q":0.35,"A":1.3,"gamma0":0.2,"omega":0.7,"mu":0.18005969076629158,"max_stroboscopic_residual":1.362243651215067e-13,"max_continuous_mean_rate_difference":0.06620993019484334},
+    {"q":0.35,"A":1.3,"gamma0":0.2,"omega":1.9,"mu":0.5317160418295126,"max_stroboscopic_residual":1.7763568394002505e-15,"max_continuous_mean_rate_difference":0.01134527637787297},
+    {"q":0.35,"A":1.3,"gamma0":0.8,"omega":0.7,"mu":0.001051153158993976,"max_stroboscopic_residual":2.913578232843772e-12,"max_continuous_mean_rate_difference":0.43067396423650184},
+    {"q":0.35,"A":1.3,"gamma0":0.8,"omega":1.9,"mu":0.0799317005248671,"max_stroboscopic_residual":5.93428084449954e-13,"max_continuous_mean_rate_difference":0.12206215213252447},
+    {"q":0.65,"A":0.4,"gamma0":0.2,"omega":0.7,"mu":0.5201158419861093,"max_stroboscopic_residual":3.3306690738754696e-16,"max_continuous_mean_rate_difference":0.001580329952272086},
+    {"q":0.65,"A":0.4,"gamma0":0.2,"omega":1.9,"mu":0.7859687761636923,"max_stroboscopic_residual":3.3306690738754696e-16,"max_continuous_mean_rate_difference":0.00023535958880316343},
+    {"q":0.65,"A":0.4,"gamma0":0.8,"omega":0.7,"mu":0.07318133501474397,"max_stroboscopic_residual":6.492029136495603e-14,"max_continuous_mean_rate_difference":0.01660420001053997},
+    {"q":0.65,"A":0.4,"gamma0":0.8,"omega":1.9,"mu":0.3816112535918079,"max_stroboscopic_residual":1.1102230246251565e-15,"max_continuous_mean_rate_difference":0.0032043751003054677},
+    {"q":0.65,"A":1.3,"gamma0":0.2,"omega":0.7,"mu":0.39725596131506624,"max_stroboscopic_residual":6.661338147750939e-15,"max_continuous_mean_rate_difference":0.021398354907948836},
+    {"q":0.65,"A":1.3,"gamma0":0.2,"omega":1.9,"mu":0.7116871152869005,"max_stroboscopic_residual":4.440892098500626e-16,"max_continuous_mean_rate_difference":0.0034313959806069327},
+    {"q":0.65,"A":1.3,"gamma0":0.8,"omega":0.7,"mu":0.024904721652653294,"max_stroboscopic_residual":1.0596037935961533e-13,"max_continuous_mean_rate_difference":0.1743303104091819},
+    {"q":0.65,"A":1.3,"gamma0":0.8,"omega":1.9,"mu":0.2565407812183425,"max_stroboscopic_residual":3.647082635893639e-14,"max_continuous_mean_rate_difference":0.04125805344565314}
+  ],
+  "nonclaims": [
+    "Numerical regression of derived equations only; not experimental evidence.",
+    "The parameter grid is diagnostic and not fitted to the Salhani et al. device."
+  ]
+}
