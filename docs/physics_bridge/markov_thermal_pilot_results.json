@@ -1,0 +1,59 @@
+{
+  "pilot": "MARKOV_THERMAL_PHYSICAL_BRIDGE_V1",
+  "date": "2026-11-11",
+  "scope": "Exact finite diagnostic model; not an empirical validation of the framework.",
+  "equilibrium_model": {
+    "beta": "ln 2",
+    "q": [0, 1, 2],
+    "off_diagonal_rates": [
+      ["0", "4", "1"],
+      ["8", "0", "3"],
+      ["4", "6", "0"]
+    ],
+    "stationary_distribution": ["4/7", "2/7", "1/7"],
+    "stationarity_vector_piQ": ["0", "0", "0"],
+    "detailed_balance": {
+      "0-1": {"pi_i_w_ij": "16/7", "pi_j_w_ji": "16/7", "equal": true},
+      "0-2": {"pi_i_w_ij": "4/7", "pi_j_w_ji": "4/7", "equal": true},
+      "1-2": {"pi_i_w_ij": "6/7", "pi_j_w_ji": "6/7", "equal": true}
+    },
+    "rate_ratio_checks": {
+      "0->1": {"rate_ratio": "1/2", "target_ratio": "1/2", "matches_q_difference": true, "q_difference": 1},
+      "1->2": {"rate_ratio": "1/2", "target_ratio": "1/2", "matches_q_difference": true, "q_difference": 1},
+      "0->2": {"rate_ratio": "1/4", "target_ratio": "1/4", "matches_q_difference": true, "q_difference": 2}
+    },
+    "cycle_product_forward": "48",
+    "cycle_product_reverse": "48",
+    "kolmogorov_cycle_condition": true
+  },
+  "nonequilibrium_perturbation": {
+    "changed_rate": "W[0][2]: 1 -> 2",
+    "cycle_product_forward": "48",
+    "cycle_product_reverse": "96",
+    "kolmogorov_cycle_condition": false,
+    "conclusion": "No single scalar state potential q can reproduce all three rate ratios after the perturbation."
+  },
+  "coarse_graining": {
+    "partition": {"A": [0, 1], "B": [2]},
+    "A_to_B_rate_if_current_microstate_0": "1",
+    "A_to_B_rate_if_current_microstate_1": "3",
+    "equilibrium_conditional_occupancy_inside_A": ["2/3", "1/3"],
+    "equilibrium_weighted_A_to_B_rate": "5/3",
+    "conclusion": "K and the partition alone do not determine the macro A->B rate away from a declared source occupancy or lumpability condition."
+  },
+  "energy_degeneracy_reparameterization": {
+    "representation_A": {"E": [0, 1, 2], "mu": [1, 1, 1], "weights": ["1", "1/2", "1/4"]},
+    "representation_B": {"E": [1, 1, 2], "mu": [2, 1, 1], "weights": ["1", "1/2", "1/4"]},
+    "same_equilibrium_weights": true,
+    "effective_free_energy_in_log2_units_A": [0, 1, 2],
+    "effective_free_energy_in_log2_units_B": [0, 1, 2],
+    "conclusion": "Equilibrium weights identify the effective combination E-log2(mu), not E and mu separately."
+  },
+  "status": "PASS",
+  "nonclaims": [
+    "This toy model is not experimental evidence.",
+    "The reconstruction of q from K is classical detailed-balance structure, not a new theorem.",
+    "The occupancy dependence of coarse-graining is classical and does not establish a new physical field pi.",
+    "No spacetime, gravity, quantum, or pregeometric interpretation is inferred."
+  ]
+}
