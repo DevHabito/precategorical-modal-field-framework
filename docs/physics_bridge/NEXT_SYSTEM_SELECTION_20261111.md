@@ -1,124 +1,109 @@
-# Selection of the first published physical target
+# Selection and status of the first published physical targets
 
 **Date:** 2026-11-11  
-**Status:** target selection; no empirical test has been promoted.
-
-The exact three-state pilot is only a calibration of the bridge logic. The next stage needs a published physical system.
+**Status:** Bridge 1A completed as retrospective calibration; Bridge 1B analytic stage active; no empirical support promoted.
 
 ## Selection criteria
 
-A useful target should have as many of the following as possible:
+A useful target should provide:
 
-1. state labels with an operational experimental meaning;
-2. transition events or transition rates;
-3. time-resolved state occupancy;
-4. at least three effective states, preferably with a nontrivial cycle;
-5. a controlled thermal or reservoir interpretation;
-6. a published preparation/driving protocol;
-7. enough information to define a coarse-graining without fitting it after seeing the result;
-8. data or parameters that can be independently recovered.
+1. operational state labels;
+2. transition events or rates;
+3. time-resolved occupancy;
+4. at least three effective states for a nontrivial closure test;
+5. a controlled thermal or reservoir model;
+6. a published preparation or driving protocol;
+7. enough information to define the mapping before target comparison;
+8. recoverable data or parameters.
 
-## Candidate A — metallic single-electron box
+## Bridge 1A — metallic single-electron box
 
-O.-P. Saira et al., “Test of the Jarzynski and Crooks Fluctuation Relations in an Electronic System,” *Physical Review Letters* **109**, 180601 (2012).  
-DOI: https://doi.org/10.1103/PhysRevLett.109.180601
+O.-P. Saira et al., *Physical Review Letters* **109**, 180601 (2012).
 
-### Strengths
+### Result
 
-- direct experimental stochastic thermodynamics;
-- a classical two-state system;
-- individual electron transfers are monitored;
-- a microscopic theory reproduces the measured distributions without fitting parameters;
-- useful for testing the rate/energy/occupancy calibration with little ambiguity.
+Bridge 1A is complete as a **retrospective calibration**.
 
-### Limitation
+The mapping assigns:
 
-Two states do not contain a nontrivial cycle. This system cannot by itself test the cycle-affinity obstruction found in the exact pilot.
+- \(R\): admissible \(0\leftrightarrow1\) electron transfers;
+- \(q_t\): independently calibrated electrostatic state energy divided by \(E_{\rm c}\);
+- \(K_t\): time-dependent tunneling kinetics;
+- \(\pi_t\): charge-state occupancy estimated from repeated trajectories;
+- \(\mu\): left uninstantiated because no independent state-level multiplicity is measured by the two-state record.
 
-### Role
+An exact audit verifies the event identity
 
-**Calibration target.** Use it to test whether the bridge can recover accepted thermodynamic quantities without post-hoc freedom.
+$$
+Q_{\rm event}=-\Delta U
+$$
 
-## Candidate B — multielectron nonequilibrium quantum dot
+for both transfer directions.
 
-Katsuhiko Nishiguchi et al., “Heat-dissipation decomposition and free-energy generation in a nonequilibrium dot with multiple electron states,” *Physical Review Research* **8**, 023209 (2026).  
-DOI: https://doi.org/10.1103/947j-vvk2
+### Suitability boundary
 
-### Strengths
+This experiment cannot test mathematical claim C2:
 
-- experimental nonequilibrium system;
-- multiple electron states;
-- single-electron counting statistics;
-- time-domain probability distributions;
-- explicit free-energy and heat-dissipation analysis;
-- much closer to the occupancy and coarse-graining questions of the repository.
+- it has only two relevant states, so the mean occupancy determines the entire distribution;
+- its physical evolution acts on occupancy through a master equation rather than through the centered mark contraction assumed in C2.
 
-### Current limitation
+## Bridge 1B — multi-electron nonequilibrium dot
 
-Before using this paper as evidence, the bridge must verify that the transition rates, state definitions, driving protocol, and enough raw or tabulated data are available to reproduce the required quantities independently.
+C. Salhani et al., *Physical Review Research* **8**, 023209 (2026), arXiv:2501.16721v3.
 
-### Role
+### Reproducibility gate
 
-**Preferred multi-state candidate, pending reproducibility gate.**
+The following are now independently recoverable from the open paper/preprint:
 
-## Candidate C — molecular-motor Markov networks
+- state variable \(N\): excess electron number;
+- charging energy \(E_{\rm C}=9.8\) meV;
+- baseline rate \(\Gamma_0=0.1\) Hz;
+- time-dependent birth rate;
+- state-dependent death rate;
+- full birth-death master equation;
+- phase-averaged time-dependent occupancy \(\rho_N(t)\);
+- main drive frequency of 1 Hz;
+- experimental reconstruction of heat terms;
+- repeated-measurement count for the principal transient figure.
 
-Stochastic thermodynamic models of kinesin and rotary motors provide nontrivial cycles, chemical affinities, currents, and external mechanical forcing.
+The raw supporting data are **not publicly available**. The published data-availability statement says they can be obtained from the authors.
 
-Representative references include:
+### Analytic bridge result
 
-- André C. Barato and Udo Seifert, thermodynamic uncertainty work on biomolecular processes;
-- David Andrieux and Pierre Gaspard, “Fluctuation theorems and the nonequilibrium thermodynamics of molecular motors,” *Physical Review E* **74**, 011906 (2006);
-- later Markov-network analyses of kinesin energy conversion.
+Applying an exponential transform to the published master equation yields an exact shift relation:
 
-### Strengths
+$$
+G_\lambda
+\longrightarrow
+G_{\lambda-2\beta E_{\rm C}}.
+$$
 
-- genuine nonequilibrium cycles;
-- direct relevance of affinities and current observables;
-- strong test of whether one scalar (q) is insufficient.
+A constructive four-state witness shows that one transform value plus the mean does not generically determine the shifted transform.
 
-### Limitation
+This is recorded as an analytic physical-bridge theorem, not as an experimental validation and not as a novelty claim.
 
-Biochemical models introduce more parameterization and model-selection choices than the electronic targets.
+### Next empirical gate
 
-### Role
+A direct experimental closure test requires raw or sufficiently tabulated \(\rho_N(t)\) data.
 
-**Second-stage stress test after an electronic calibration.**
+No attempt will be made to digitize plotted points and then call the result a prospective test. Figure digitization, if ever used, must be labeled exploratory.
 
-## Decision
+## Molecular-motor networks
 
-The programme will use a two-step progression.
+Molecular motors remain a later candidate because they offer genuine nonequilibrium cycles and chemical affinities. They are deferred until the electronic bridge is methodologically stable.
 
-### Bridge 1A — calibration
+## Promotion rule
 
-Start with the single-electron box.
+Before any physical comparison is promoted, freeze:
 
-Goal:
+- state map;
+- definition of \(R\);
+- physical meaning of \(q\);
+- status of \(\mu\);
+- transition law \(K\);
+- occupancy estimator \(\pi\);
+- fitted parameters;
+- held-out observable;
+- failure criterion.
 
-> check whether the mapping from accepted physical quantities into the repository variables can recover a known stochastic-thermodynamic relation without fitting the target quantity.
-
-A failure here would stop the bridge before any more ambitious interpretation.
-
-### Bridge 1B — multi-state test
-
-If Bridge 1A passes, move to the 2026 multielectron quantum-dot experiment, provided the reproducibility gate closes.
-
-Goal:
-
-> test occupancy dependence, nonequilibrium currents, and whether the scalar-potential picture survives or must be replaced by cycle/edge information.
-
-## Pre-registration rule
-
-Before any quantitative comparison, the corresponding bridge note must freeze:
-
-- the physical state map;
-- the definition of (R);
-- the candidate meaning of (q);
-- whether (mu) is used and how it is measured;
-- the generator or transition law (K);
-- how (pi) is estimated;
-- every fitted/calibrated parameter;
-- the held-out observable;
-- the failure criterion.
-
-If these are changed after inspecting the held-out result, the comparison is exploratory and cannot be promoted as prospective evidence.
+Any mapping changed after inspecting the held-out result remains exploratory.
