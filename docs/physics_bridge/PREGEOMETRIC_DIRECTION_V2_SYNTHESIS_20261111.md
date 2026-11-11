@@ -145,33 +145,58 @@ This is an exact finite observation.
 
 It is not yet promoted to a general theorem for all even cycles in the repository.
 
-## 7. Why this is not yet emergence from graphA
+## 7. Intrinsic bipartition correction
 
-The orientation doublet requires a mark.
+A later audit corrected the interpretation above.
 
-For graphA's unmarked skeleton, the four cycle vertices form one automorphism orbit:
+It is true that no **pointwise-invariant scalar mark** can assign different fixed scalar values to the four graphA cycle vertices, because they lie in one automorphism orbit.
 
-$$
-\{0,2,3,4\}.
-$$
+But the connected C4 component is bipartite.
 
-Any deterministic isomorphism-invariant scalar mark derived solely from the skeleton must be constant on this orbit.
+A connected bipartite graph has a unique bipartition up to swapping the two parts.
 
-Therefore it cannot generate the alternating mark.
+For graphA's cycle component the canonical unordered bipartition is
 
-The exact invariant-mark audit found only four fully automorphism-invariant binary colorings on all five graphA vertices, and none alternates on the cycle.
-
-Hence:
-
-$$
+$
 \boxed{
-\text{graphA skeleton alone}
-\not\Rightarrow
-\text{the audited orientation doublet}.
+\big\{
+\{0,3\},
+\{2,4\}
+\big\}.
 }
-$$
+$
 
-An independently justified mark is still required.
+This unordered object is invariant even though an automorphism may exchange its two parts.
+
+Orienting all edges from one part to the other gives one acyclic orientation; swapping the parts gives the global reverse.
+
+Therefore:
+
+$
+\boxed{
+\text{graphA C4 skeleton}
+\Longrightarrow
+[O]_\pm
+}
+$
+
+at the purely combinatorial level.
+
+The isolated vertex 1 means the full five-vertex skeleton is disconnected, so the intrinsic statement applies to the connected orientation-bearing C4 component.
+
+The corrected distinction is:
+
+$
+\boxed{
+\text{invariant labeled scalar}
+\neq
+\text{canonical unordered two-fold structure}.
+}
+$
+
+No extra scalar mark is needed for the C4 orientation doublet.
+
+What remains open is its **physical semantics**.
 
 ## 8. Lean orbit obstruction
 
@@ -396,19 +421,19 @@ This is an **orientation-class uniqueness** problem.
 
 ## 17. New primary physical target
 
-The physical question is:
+The physical question is now:
 
-> What independently measurable non-temporal information supplies the marks or operational structure required to make the orientation class unique modulo reversal?
+> What physical principle, if any, makes an intrinsically derived two-fold relational orientation class correspond to causal/time orientation rather than to an unrelated bipartition, sublattice, parity, or type structure?
 
-This is stricter than inventing a coloring.
+For graphA C4 the combinatorial orientation class no longer needs an external mark. The missing bridge is semantic and physical.
 
-The mark must be:
+Any proposed interpretation must be:
 
 - operationally defined;
 - label invariant;
 - gauge consistent;
-- not reconstructed from the orientation it is supposed to explain;
-- physically justified before the temporal interpretation.
+- independent of the temporal conclusion it is supposed to justify;
+- physically justified before promotion to time orientation.
 
 ## 18. Secondary physical target: polarity selection
 
@@ -516,13 +541,13 @@ One realized sector can later select one member without making the symmetric ens
 
 The immediate open problem is now:
 
-$$
+$
 \boxed{
-\text{find a physically justified non-temporal mark/structure
-that makes the orientation class unique modulo reversal}.
+\text{determine whether an intrinsically derived relational orientation torsor
+has a defensible physical map to causal/time orientation}.
 }
-$$
+$
 
-For the existing C1 graphA witness, no such mark has yet been identified.
+For graphA C4, orientation-class emergence is now established combinatorially through its unique bipartition up to swap.
 
-That negative result is retained.
+What is not established is that this bipartite doublet has temporal meaning.
