@@ -1,0 +1,81 @@
+{
+  "audit": "ADJACENT_TWIN_HELDOUT_SCALING_V1",
+  "date": "2026-11-11",
+  "preregistration_commit": "01d38cafb959ab395c2c1666ad9be143335e2a5f",
+  "prediction": "E[T_n] = Theta(1/n) for d=3 and d=4",
+  "self_test": {
+    "status": "PASS",
+    "checks": 1200,
+    "seed": 731991
+  },
+  "targets": [
+    {
+      "dimension": 3,
+      "n": 320,
+      "trials": 2500,
+      "seed": 202611113320,
+      "total_twin_pairs": 118,
+      "mean_twin_pairs": 0.0472,
+      "mean_twin_pairs_ci95_normal": [0.038523599457682585, 0.05587640054231741],
+      "variance": 0.04899175670268108,
+      "samples_with_any_twin": 113,
+      "p_any_twin": 0.0452,
+      "p_any_twin_wilson95": [0.037730795326771545, 0.05406473669902578],
+      "n_times_mean": 15.104,
+      "maximum_twin_pairs_in_one_sample": 2
+    },
+    {
+      "dimension": 3,
+      "n": 384,
+      "trials": 2500,
+      "seed": 202611113384,
+      "total_twin_pairs": 108,
+      "mean_twin_pairs": 0.0432,
+      "mean_twin_pairs_ci95_normal": [0.035076102689839794, 0.05132389731016021],
+      "variance": 0.04295094037615046,
+      "samples_with_any_twin": 106,
+      "p_any_twin": 0.0424,
+      "p_any_twin_wilson95": [0.035178306069084044, 0.051025817622659266],
+      "n_times_mean": 16.5888,
+      "maximum_twin_pairs_in_one_sample": 2
+    },
+    {
+      "dimension": 4,
+      "n": 320,
+      "trials": 2500,
+      "seed": 202611114320,
+      "total_twin_pairs": 128,
+      "mean_twin_pairs": 0.0512,
+      "mean_twin_pairs_ci95_normal": [0.04214166475371143, 0.060258335246288576],
+      "variance": 0.05339991996798719,
+      "samples_with_any_twin": 122,
+      "p_any_twin": 0.0488,
+      "p_any_twin_wilson95": [0.04102490764595483, 0.057959577952197666],
+      "n_times_mean": 16.384,
+      "maximum_twin_pairs_in_one_sample": 2
+    },
+    {
+      "dimension": 4,
+      "n": 384,
+      "trials": 2500,
+      "seed": 202611114384,
+      "total_twin_pairs": 117,
+      "mean_twin_pairs": 0.0468,
+      "mean_twin_pairs_ci95_normal": [0.03837185847950693, 0.055228141520493074],
+      "variance": 0.04622825130052021,
+      "samples_with_any_twin": 115,
+      "p_any_twin": 0.046,
+      "p_any_twin_wilson95": [0.03846166507131993, 0.05493141219277854],
+      "n_times_mean": 17.9712,
+      "maximum_twin_pairs_in_one_sample": 2
+    }
+  ],
+  "assessment": "PROSPECTIVE SCALING-CONSISTENCY PASS",
+  "assessment_reason": "At both held-out sizes and in both dimensions, n times the observed mean twin count remains order one and close to the pre-holdout range. The raw mean decreases with n. This is consistent with the preregistered 1/n exponent but is not an asymptotic proof and does not identify a limiting constant.",
+  "nonclaims": [
+    "No asymptotic constant is estimated as a theorem.",
+    "No proof of E[T_n] = Theta(1/n) is claimed.",
+    "No claim that p_UPO tends to one follows from this test alone.",
+    "The normal confidence interval for the rare-count mean is diagnostic only."
+  ]
+}
