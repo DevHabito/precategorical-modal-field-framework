@@ -2,6 +2,8 @@
 
 ## Canonical current summary
 
+For the pregeometric direction/order branch, start with **PREGEOMETRIC_DIRECTION_V1_SYNTHESIS_20261111.md**. It consolidates the symmetry, gauge, SCC, q, boundary-state, magnetic-loop, orientability, and polarity audits.
+
 Start with **PHYSICAL_BRIDGE_V1_SYNTHESIS_20261111.md**. It consolidates the current physical-bridge claims, corrections, classical identifications, formal-verification status, and empirical boundary. The other files in this directory are component proofs, audits, preregistrations, or provenance notes.
 
 This directory records a controlled attempt to connect the repository's provisional informational architecture
@@ -117,3 +119,6 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **CURRENT_ARCHITECTURE_TIME_ORIGIN_AUDIT_20261111.md** — architecture-level boundary showing why the present `(R,q,mu,K,pi)` tuple is not yet a non-circular derivation of time.
 - **BOUNDARY_STATE_ARROW_AUDIT_20261111.md** — exact reflected-preparation witness showing how occupancy/boundary state can select opposite relaxation sectors under the same symmetric kernel without deriving time.
 - **boundary_state_arrow_exact.py** / **boundary_state_arrow_results.json** — exact Fraction regression for the boundary-state witness.
+
+- **OPERATION_RELATIVE_SYMMETRY_BREAKING_20261111.md** — separates local pair orientation, global cycle chirality, and full distinguishing symmetry budgets.
+- **ORIENTABILITY_NOT_POLARITY_20261111.md** — exact marked-cycle audit showing that invariant acyclic orientation can exist without selecting a physical global polarity.
