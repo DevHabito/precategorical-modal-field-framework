@@ -39,7 +39,6 @@ theorem log_one_add_cubic_remainder
   have hright :
       |(-z)|^(3+1)/(1-|(-z)|) = z^4/(1-z) := by
     rw [abs_neg, abs_of_nonneg hz0]
-    norm_num
   rw [hleft, hright] at h
   exact h
 
