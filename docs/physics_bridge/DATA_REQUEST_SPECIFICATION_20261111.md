@@ -1,139 +1,144 @@
 # Data request specification for the multi-electron closure test
 
 **Date:** 2026-11-11  
-**Target article:** Salhani, Chida, Shimizu, Hayashi, Nishiguchi, *Physical Review Research* **8**, 023209 (2026)  
-**Corresponding author listed by APS:** Katsuhiko Nishiguchi  
-**Purpose:** execute the pre-registered transform-closure test without figure digitization or post-hoc parameter fitting
+**Target:** Salhani et al., *Physical Review Research* **8**, 023209 (2026)  
+**Purpose:** execute the corrected pre-registered test without figure digitization or post-hoc parameter fitting
 
-## 1. Why the data are needed
+## 1. Key correction
 
-The published article states that the supporting data are not publicly available and are available from the authors upon reasonable request.
+The experiment randomizes the ac phase between repetitions.
 
-The bridge protocol was frozen before access to those data.
-
-The primary test concerns the transform
+Phase-averaged probabilities alone are **not sufficient** for the primary exact scalar-closure test, because averaging introduces the joint quantity
 
 $$
-G_c(t)=\sum_N\rho_N(t)e^{-cN},
-\qquad
-c=2E_{\rm C}/(k_{\rm B}T).
+\mathbb E_\phi[\Gamma_\phi^+G_{c,\phi}].
 $$
 
-The published master equation predicts an exact scalar reduced dynamics for \(G_c\). A second test uses \(G_{2c}\), and a predeclared control uses \(G_{3c/2}\).
+The primary request is therefore for phase-resolved information.
 
-## 2. Minimum requested dataset
+## 2. Minimum data for the exact primary test
 
-The smallest dataset sufficient for the primary test is:
+At least one of the following is needed.
 
-1. time points \(t_j\) used for the transient probability distributions;
-2. integer excess-electron state labels \(N\);
-3. phase-averaged or experimentally reconstructed probabilities \(\rho_N(t_j)\);
-4. the state window actually retained in the experimental analysis;
-5. normalization or missing-tail information if the recorded state window is truncated.
+### Preferred
 
-A machine-readable table such as CSV, TSV, JSON, or plain text is sufficient.
+Individual electron-count trajectories with:
 
-## 3. Strongly preferred additional information
+- measurement times;
+- excess-electron number \(N(t)\);
+- applied phase \(\phi\) for that repetition;
+- drive start time and synchronization information.
+
+### Acceptable alternative
+
+Phase-conditioned distributions
+
+$$
+\rho_N(t\mid\phi)
+$$
+
+on documented phase bins, with:
+
+- time points;
+- state labels \(N\);
+- phase-bin definitions;
+- counts contributing to each bin;
+- state-window and missing-tail information.
+
+Without phase information, the exact conditioned test cannot be executed.
+
+## 3. Data still useful if only phase-averaged values are available
+
+A machine-readable table of
+
+$$
+\bar\rho_N(t)
+$$
+
+remains useful for:
+
+- testing the paper's constant-rate coarse-grained approximation;
+- calculating \(\bar G_c(t)\);
+- stationary discrete-normal checks;
+- the \(\Delta_c\) transient diagnostic;
+- comparison with numerical master-equation results.
+
+Such an analysis will be labeled **phase-averaged approximate-model test**, not exact closure validation.
+
+## 4. Requested physical metadata
 
 If available:
 
-- individual electron-count trajectories used to construct \(\rho_N(t)\);
-- number of repetitions contributing to each time point;
-- uncertainty estimates or bootstrap samples;
-- detector time resolution and bandwidth;
-- corrections made for missed transitions;
-- exact temperature used for \(\beta\);
-- device charging energy \(E_{\rm C}\) and uncertainty;
+- \(E_{\rm C}\) and uncertainty;
+- temperature and uncertainty;
 - \(\Gamma_0\) and uncertainty;
-- drive amplitude \(S_{\rm AC}\);
-- drive frequency and phase convention;
-- the effective time-averaged \(\Gamma^+\) used in the simplified transient model;
-- any code or processed arrays behind Figs. 2, 3, 5, and 6.
+- \(S_{\rm AC}\);
+- \(\omega_{\rm AC}\);
+- phase convention;
+- actual phase values used for each repetition;
+- detector sampling rate and bandwidth;
+- missed-transition corrections;
+- number of repetitions;
+- processed arrays behind the transient probability figures;
+- numerical master-equation output used for the solid curves.
 
-## 4. What will be tested
+## 5. Frozen exact test
 
-No model parameter will be inferred from the target transform trajectory unless that parameter is explicitly designated as a calibration quantity in the pre-registration.
-
-### Primary test
-
-Compute
+For each phase-conditioned ensemble,
 
 $$
-G_c(t_j)
+G_{c,\phi}(t)
 =
-\sum_N\rho_N(t_j)e^{-cN}
+\sum_N
+\rho_N(t\mid\phi)e^{-cN},
+\qquad
+c=\frac{2E_{\rm C}}{k_{\rm B}T}.
 $$
 
-directly from the supplied distributions.
-
-Compare with the frozen integral solution of
+The exact predicted equation is
 
 $$
-\dot G_c
+\dot G_{c,\phi}
 =
--\Gamma^+(t)(1-e^{-c})G_c
+-(1-e^{-c})
+\Gamma_0e^{-A\sin(\omega t+\phi)}
+G_{c,\phi}
 +
-\Gamma_0e^{-c/2}(e^c-1).
+D(e^c-1).
 $$
 
-### Constant-rate secondary test
+No target-dependent parameter will be fitted.
 
-Under the paper's phase-averaged approximation,
+## 6. Frozen phase-averaged comparison
 
-$$
-G_c(t)-G_c^{\rm ss}
-$$
-
-must decay with predetermined rate
+For phase-averaged data, the paper's approximation uses
 
 $$
-\Gamma^+(1-e^{-c}).
+\bar\Gamma
+=
+\Gamma_0I_0(A).
 $$
 
-### Two-coordinate test
+The corresponding scalar equation is an **approximation**.
 
-Compute \(G_{2c}\) and test the frozen triangular pair \((G_c,G_{2c})\).
-
-### Noncommensurate control
-
-Compute
+The exact phase-averaged equation contains the covariance
 
 $$
-G_{3c/2}
+\operatorname{Cov}_\phi
+(\Gamma_\phi^+,G_{c,\phi}).
 $$
 
-and
+Agreement with the constant-rate model therefore assesses approximation quality, not exact closure.
 
-$$
-G_{c/2}.
-$$
+## 7. Reproducibility rules
 
-The published generator predicts explicit dependence of the former's derivative on the latter. No autonomous one-score fit will be introduced after data inspection.
+If data are received:
 
-## 5. What will not be done
+- preserve source files unchanged;
+- record cryptographic checksums;
+- do not redistribute data unless permission allows it;
+- document units and phase conventions;
+- freeze analysis code before the held-out comparison;
+- record every deviation from the pre-registration.
 
-- no silent renormalization of a truncated state window;
-- no selection of \(\lambda\) after inspecting residuals;
-- no fitted closure coefficient replacing \(c=2\beta E_{\rm C}\);
-- no claim that a successful comparison validates a fundamental pregeometric theory;
-- no claim of novelty for stochastic-thermodynamic structures already present in the literature.
-
-## 6. Reproducibility output
-
-If the data are provided with permission to analyze them, the repository will record:
-
-- a read-only checksum of the received source files;
-- an untouched source-data directory if redistribution is permitted, otherwise metadata only;
-- a deterministic analysis script;
-- parameter provenance;
-- uncertainty propagation;
-- the pre-registered pass/fail result;
-- every deviation from the frozen protocol.
-
-If redistribution is not permitted, no raw data will be committed publicly.
-
-## 7. Requested format is flexible
-
-The analysis does not require a particular software ecosystem. Spreadsheet exports, text tables, or raw trajectory files are all acceptable provided the meaning of columns and units is documented.
-
-The key requirement is access to numerical probabilities or trajectories rather than values reconstructed from plotted pixels.
+No plotted pixel values will be presented as original raw data.
