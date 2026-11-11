@@ -1,0 +1,48 @@
+{
+  "audit": "MULTIELECTRON_COMMENSURATE_CLOSURE_LADDER_V1",
+  "status": "PASS",
+  "r": "1/2",
+  "birth_rate": "3",
+  "death_prefactor": "5/7",
+  "distribution": ["1/10", "1/5", "3/10", "2/5"],
+  "G_0": "1",
+  "checks": [
+    {
+      "j": 1,
+      "G_j": "13/40",
+      "G_j_minus_1": "1",
+      "direct_derivative": "127/560",
+      "ladder_derivative": "127/560",
+      "equal": true
+    },
+    {
+      "j": 2,
+      "G_j": "7/40",
+      "G_j_minus_1": "13/40",
+      "direct_derivative": "339/1120",
+      "ladder_derivative": "339/1120",
+      "equal": true
+    },
+    {
+      "j": 3,
+      "G_j": "167/1280",
+      "G_j_minus_1": "7/40",
+      "direct_derivative": "5453/10240",
+      "ladder_derivative": "5453/10240",
+      "equal": true
+    },
+    {
+      "j": 4,
+      "G_j": "233/2048",
+      "G_j_minus_1": "167/1280",
+      "direct_derivative": "247245/229376",
+      "ladder_derivative": "247245/229376",
+      "equal": true
+    }
+  ],
+  "interpretation": [
+    "j=1 closes on G_1 and the normalization G_0=1.",
+    "j=m depends only on G_m and G_(m-1), so the ordered vector G_1,...,G_m is triangular and closed.",
+    "The audit checks the analytic identity only; it is not experimental evidence."
+  ]
+}
