@@ -19,3 +19,18 @@ This repository does not derive or confirm physical spacetime, calibrated durati
 ## Current minimal architecture under investigation
 
 The working architecture is commonly summarized as `(R, q, mu, K, pi)`: relation/order, relative quantitative marks, additive measure or multiplicity, transition law, and dynamic occupancy. This is a research architecture, not a confirmed physical ontology.
+
+
+## Time-origin boundary
+
+The current physical-bridge audit does not support a claim that the provisional architecture derives physical time from a timeless substrate.
+
+- A directed or precedence-like interpretation of \(R\) already supplies orientation.
+- A dynamical interpretation of \(K\) already supplies transition/succession semantics.
+- \(q\) can add calibrated asymmetry without becoming temporal rank.
+- \(\mu\) supplies multiplicity/refinement semantics, not temporal order.
+- \(\pi\) supplies occupancy/state information, not temporal order.
+
+The repository now treats temporal order, reversible relational evolution, arrow/irreversibility, and metric duration as separate problems.
+
+This boundary does not weaken the existing mathematical results. It prevents those results from being overinterpreted as a completed pregeometric theory of time.
