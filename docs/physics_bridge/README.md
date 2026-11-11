@@ -55,6 +55,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **BLACKWELL_TIME_CANDIDATE_AUDIT_20261111.md** — first timeless-order candidate audit; rejects information degradation as a universal temporal order while retaining Blackwell comparison as a diagnostic.
 - **OBSERVATIONAL_CAUSAL_ORDER_AUDIT_20261111.md** — second timeless-order audit; Markov equivalence blocks unique direction from observational conditional independences alone.
 - **SCC_CONDENSATION_MACRO_ORDER_AUDIT_20261111.md** — connects the repository's SCC/quotient mathematics to a canonical acyclic macro-order while documenting its non-injectivity and failure as universal time.
+- **STRICT_TIME_AND_DURATION_GATE_20261111.md** — proves the acyclicity requirement for strict temporal rank and separates relational order from metric duration/refinement scale.
 - **stroboscopic_phase_average_exact.py** — rational regression audit of the phase-averaged Cayley-Hamilton recurrences.
 - **phase_bridge_numerical_stress.py** — dependency-free 16-case integration stress test of continuous phase averaging versus exact stroboscopic closure.
 - **phase_bridge_numerical_stress_results.json** — frozen output of that numerical regression.
