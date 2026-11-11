@@ -730,3 +730,24 @@ DOI: https://doi.org/10.1007/s10701-024-00785-3
 The paper studies a low-entanglement boundary condition as a possible grounding for the decoherent arrow when unitary dynamics itself permits recoherence.
 
 **Use here:** different effective arrows can be traced to different asymmetric boundary-state information; this remains distinct from deriving temporal order itself.
+
+
+## 59. Direct microscopic T violation
+
+J. P. Lees et al. (BABAR Collaboration), **“Observation of Time-Reversal Violation in the B0 Meson System,”** *Physical Review Letters* **109**, 211801 (2012).  
+DOI: https://doi.org/10.1103/PhysRevLett.109.211801
+
+BABAR directly compared T-conjugated neutral-B transitions and reported statistically significant T-violating parameters.
+
+**Use here:** established empirical example of law-level temporal polarity.
+
+**Boundary:** the T transformation and transition evolution are already defined inside temporal quantum theory; this is not a derivation of time.
+
+## 60. Law asymmetry versus thermodynamic asymmetry
+
+The contemporary foundations literature continues to separate microscopic time-reversal properties of laws from the grounding of thermodynamic asymmetry.
+
+Bryan W. Roberts, **“Does Thermodynamics Have a Reversibility Problem?”** *Mind* (2026), fzag008.  
+DOI: https://doi.org/10.1093/mind/fzag008
+
+**Use here:** law-level polarity and macroscopic thermodynamic-arrow explanations should not be conflated.
