@@ -1,0 +1,21 @@
+{
+  "audit": "ADJACENT_TWIN_COEFFICIENT_SYMBOLIC_V1",
+  "date": "2026-11-11",
+  "status": "PASS",
+  "checks": {
+    "d3_H_factorization": true,
+    "d3_s_antiderivative": true,
+    "d3_endpoint_square": true,
+    "d3_z_integral": true,
+    "d3_coefficient": true,
+    "d4_half_gaussian": true,
+    "d4_coefficient": true
+  },
+  "values": {
+    "d3_z_integral": "pi/2",
+    "d3_coefficient": "32*pi/3",
+    "d4_I1": "sqrt(pi)/4",
+    "d4_coefficient": "9*pi"
+  },
+  "nonclaim": "The symbolic check verifies exact algebra and one-dimensional integrals only. It does not prove the global small-D asymptotic or its domination/remainder estimates."
+}
