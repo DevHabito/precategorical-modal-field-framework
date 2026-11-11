@@ -142,3 +142,51 @@ If data are received:
 - record every deviation from the pre-registration.
 
 No plotted pixel values will be presented as original raw data.
+
+
+## 8. Exact test possible without phase metadata
+
+Phase-resolved data remain necessary for the exact continuous-time conditioned equation.
+
+However, phase-averaged distributions are sufficient for an exact stroboscopic test if they include at least three consecutive integer-period times:
+
+$$
+t=nT,\quad(n+1)T,\quad(n+2)T.
+$$
+
+From those distributions compute
+
+$$
+\bar G_c(nT)
+=
+\sum_N
+\bar\rho_N(nT)e^{-cN}.
+$$
+
+The pre-registered exact relation is
+
+$$
+\bar G_{c,n+2}
+-
+(1+\mu_1)\bar G_{c,n+1}
++
+\mu_1\bar G_{c,n}
+=
+0,
+$$
+
+with
+
+$$
+\mu_1
+=
+\exp[-(1-e^{-c})\Gamma_0T I_0(A)].
+$$
+
+Therefore a useful minimum phase-averaged data request is:
+
+- at least three consecutive distributions at integer drive periods for the \(G_c\) test;
+- at least four consecutive distributions for the \(G_{2c}\) recurrence;
+- the exact drive period and time-origin convention.
+
+This test does not require reconstructing the hidden phase covariance.
