@@ -850,3 +850,26 @@ The paper explicitly treats the induced action of \(\operatorname{Aut}(G)\) on t
 **Use here:** the project criterion “a duality class fixed by every graph automorphism” is built from established group-action structure. No originality claim is attached to the action itself.
 
 **Project-specific distinction:** the diamond \(K_4-e\) has six transitive orientations and is therefore not UPO, but one of its three reversal pairs is invariant as a set under the full automorphism group. The novelty of using this fixed duality class as a pregeometric governance criterion is not certified.
+
+
+## 69. Modular characterization of UPO recovery
+
+Ross M. McConnell and Jeremy P. Spinrad, **“Modular decomposition and transitive orientation,”** *Discrete Mathematics* **201** (1999), 189–241.  
+DOI: https://doi.org/10.1016/S0012-365X(98)00319-7
+
+The paper develops the canonical modular decomposition of graphs and its close relation to transitive orientation.
+
+Martin C. Golumbic, **Algorithmic Graph Theory and Perfect Graphs**, 2nd ed., Elsevier, 2004, Chapter 5.
+
+For connected comparability graphs, classical UPO theory characterizes unique partial orderability through the absence of non-stable nontrivial partitive sets/modules.
+
+**Use here:** the random-2-order orientation-recovery failures should be diagnosed through modular structure, not treated as black-box orientation counts.
+
+## 70. Permutation graphs and modular decomposition
+
+Steven Chaplick et al., **“Partial and Simultaneous Transitive Orientations via Modular Decompositions,”** *Algorithmica* **86** (2024), 746–795.  
+DOI: https://doi.org/10.1007/s00453-023-01188-y
+
+For permutation graphs, canonical modular decomposition controls transitive orientations and permutation representations; strong modules occur consecutively in both line orders.
+
+**Use here:** bridge the random-2-order/Minkowski representation to substitution/modular structure before attempting asymptotics.
