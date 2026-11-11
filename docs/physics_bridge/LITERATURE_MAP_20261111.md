@@ -408,3 +408,32 @@ DOI: https://doi.org/10.1137/25M1770114
 The paper compares averaging and projection-based coarse graining, gives sufficient conditions for agreement, and supplies counterexamples showing that even perfect scale separation does not make the two procedures automatically identical.
 
 **Use here:** averaging and projection must not be treated as interchangeable operations without proof.
+
+
+## 32. Conditional mutual information and Markov screening
+
+Conditional mutual information vanishes exactly under conditional independence and is therefore a standard information-theoretic diagnostic of Markov screening.
+
+Zhiqiang Huang and Xiao-Kan Guo, **“Quantifying non-Markovianity via conditional mutual information,”** *Physical Review A* **104**, 032212 (2021).  
+DOI: https://doi.org/10.1103/PhysRevA.104.032212
+
+**Use here:** CMI-based non-Markovianity is established; the bridge must not introduce a renamed information-memory score.
+
+A broad tutorial on quantum stochastic processes likewise emphasizes vanishing CMI as the signature of finite Markov order when the appropriate memory block is conditioned upon.
+
+## 33. Predictive information and causal-state sufficiency
+
+Ryan G. James, John R. Mahoney, and James P. Crutchfield, **“Information trimming: Sufficient statistics, mutual information, and predictability from effective channel states,”** *Physical Review E* **95**, 060102(R) (2017).  
+DOI: https://doi.org/10.1103/PhysRevE.95.060102
+
+The work relates minimal sufficient statistics to predictive information and causal states.
+
+**Use here:** minimal sufficient compression of past information for predicting the future is established theory.
+
+## 34. Strong versus preparation-dependent lumpability
+
+Strong lumpability requires the coarse-grained process to be Markov for every initial distribution, while weak/restricted forms can hold only for selected starting laws.
+
+Higher-order lumpability similarly asks whether the projected process is finite-order Markov.
+
+**Use here:** a zero closure diagnostic for one preparation must not be promoted into universal closure.
