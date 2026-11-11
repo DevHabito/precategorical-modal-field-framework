@@ -172,3 +172,22 @@ cannot orient \(a\) toward \(b\).
 GitHub Actions run 744 completed successfully with the pinned build and independent leanchecker replay.
 
 Scope boundary: this is a structural symmetry theorem. It does not identify the physical source of temporal asymmetry.
+
+
+### q reciprocal-direction gauge obstruction — END-TO-END LEAN/KERNEL PASS
+
+PrecategoryFormal/PhysicalBridgeQDirectionGauge.lean proves that independent source-row offsets can move a reciprocal raw q difference to any prescribed rational target and can therefore flip its sign.
+
+GitHub Actions run 749 completed successfully with the pinned build and independent leanchecker replay.
+
+### q cycle-circulation identities — END-TO-END LEAN/KERNEL PASS
+
+PrecategoryFormal/PhysicalBridgeQCycleCirculation.lean proves the finite rational algebraic cores that:
+
+- independent row-gauge offsets cancel around a triangle circulation;
+- reversing the cycle changes the circulation sign;
+- a scalar gradient has zero triangle circulation.
+
+GitHub Actions run 752 completed successfully with the pinned build and independent leanchecker replay.
+
+Scope boundary: neither module assigns a physical meaning to q or to cycle circulation.
