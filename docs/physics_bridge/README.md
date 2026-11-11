@@ -33,6 +33,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **PHYSICAL_BRIDGE_LEDGER.md** — evidence/status ledger kept separate from mathematical claims.
 - **NEXT_SYSTEM_SELECTION_20261111.md** — target-selection and reproducibility status.
 - **LITERATURE_MAP_20261111.md** — literature boundary for stochastic thermodynamics, birth-death transforms, and closure.
+- **CLASSICAL_DISCRETE_NORMAL_AND_STEIN_CONTEXT_20261111.md** — adversarial prior-art note identifying the stationary discrete-normal law, Stein-generator context, and the nearby alternative q-Charlier process.
 - **DATA_REQUEST_SPECIFICATION_20261111.md** — exact numerical data and metadata needed to execute the frozen experimental test without figure digitization.
 
 ## Scientific rule
