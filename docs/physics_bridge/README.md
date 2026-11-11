@@ -141,3 +141,6 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 
 - **MINIMAL_DEEP_UPO_WITNESSES_20261111.md** — stricter anti-ad-hoc controls: bull and house are the two minimal n=5 UPO types with order depth 2.
 - **minimal_deep_upo_audit.py** / **minimal_deep_upo_results.json** — exact classification through n=5.
+
+- **MINKOWSKI_2D_UPO_RECOVERY_20261111.md** — exact finite random-2-order control asking when unoriented causal connectibility reconstructs a 1+1 Minkowski causet order up to reversal.
+- **minkowski_2d_upo_recovery_audit.py** / **minkowski_2d_upo_recovery_results.json** — exhaustive permutation enumeration through N=7.
