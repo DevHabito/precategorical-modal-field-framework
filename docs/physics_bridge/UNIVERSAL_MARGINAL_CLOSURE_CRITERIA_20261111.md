@@ -118,19 +118,43 @@ $$
 a_i\neq a_j.
 $$
 
-Because their weights are positive, choose two conditioned state assignments that are identical except that two values \(r\neq s\) are exchanged between contexts \(i\) and \(j\).
+Because the weights need not be equal, use a perturbation that lies exactly in the kernel of the marginalization map.
 
-The marginal mean is unchanged.
+For any nonzero scalar \(\delta\), change only contexts \(i\) and \(j\) by
 
-The derivative difference is
+$
+\Delta x_i=w_j\delta,
+\qquad
+\Delta x_j=-w_i\delta.
+$
 
-$$
+Then
+
+$
+\Delta m
+=
+w_iw_j\delta-w_jw_i\delta
+=
+0.
+$
+
+But the derivative changes by
+
+$
 \boxed{
-(w_iw_j\text{-rescaled form})
-\propto
-(a_i-a_j)(r-s)\neq0.
+\Delta\dot m
+=
+w_iw_j(a_i-a_j)\delta.
 }
-$$
+$
+
+Since \(w_i,w_j>0\), \(a_i\neq a_j\), and \(\delta\neq0\),
+
+$
+\Delta\dot m\neq0.
+$
+
+Thus two conditioned states can have exactly the same marginal mean and different marginal derivatives.
 
 In the equal-weight two-context case,
 
