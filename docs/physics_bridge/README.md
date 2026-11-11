@@ -20,6 +20,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **SINGLE_ELECTRON_BOX_CALIBRATION_20261111.md** — retrospective calibration against the 2012 single-electron-box experiment.
 - **single_electron_box_mapping_exact.py** — exact event-level mapping audit.
 - **MULTIELECTRON_DOT_TRANSFORM_NONCLOSURE_20261111.md** — exact transform-evolution bridge derived from the published 2026 multi-electron master equation.
+- **MULTIELECTRON_SCALAR_CLOSURE_PREREGISTRATION_20261111.md** — frozen held-out protocol for \(\lambda=c\), \(2c\), and the noncommensurate control \(3c/2\).
 - **multielectron_transform_nonclosure_exact.py** — exact four-state witness.
 - **multielectron_transform_nonclosure_results.json** — frozen witness output.
 - **multielectron_commensurate_closure_exact.py** — exact rational audit of the commensurate transform ladder.
