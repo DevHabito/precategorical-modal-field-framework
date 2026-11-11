@@ -190,3 +190,17 @@ Status:
 - GitHub Actions run: 741.
 
 No physical interpretation of the graph edges is certified.
+
+
+### PhysicalBridgeSymmetryOrientation — COMPLETE AT STRUCTURAL LOGIC SCOPE
+
+The module formalizes the automorphism/equivariance obstruction to choosing a strict direction on a swapped pair.
+
+Status:
+
+- pinned build: PASS;
+- proof-placeholder rejection: PASS;
+- independent leanchecker replay: PASS;
+- GitHub Actions run: 744.
+
+No physical arrow-of-time mechanism is formalized.
