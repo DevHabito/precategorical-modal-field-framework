@@ -34,6 +34,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **NEXT_SYSTEM_SELECTION_20261111.md** — target-selection and reproducibility status.
 - **LITERATURE_MAP_20261111.md** — literature boundary for stochastic thermodynamics, birth-death transforms, and closure.
 - **CLASSICAL_DISCRETE_NORMAL_AND_STEIN_CONTEXT_20261111.md** — adversarial prior-art note identifying the stationary discrete-normal law, Stein-generator context, and the nearby alternative q-Charlier process.
+- **STIELTJES_WIGERT_IDENTIFICATION_20261111.md** — exact change of variables showing that the constant-rate bridge generator is the classical Stieltjes-Wigert q-difference operator minus the identity.
 - **DATA_REQUEST_SPECIFICATION_20261111.md** — exact numerical data and metadata needed to execute the corrected experimental test without figure digitization.
 - **PHASE_AVERAGING_CLOSURE_OBSTRUCTION_20261111.md** — exact correction showing that random-phase marginalization introduces a rate-transform covariance and destroys generic scalar closure.
 
