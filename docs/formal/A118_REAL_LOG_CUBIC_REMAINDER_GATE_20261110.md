@@ -15,3 +15,8 @@ Mathlib documentation: https://leanprover-community.github.io/mathlib4_docs/Math
 The new inequality is weaker than the tighter `z^4/4` alternating-series remainder used in the earlier hand-written analysis. **Until the tighter result is also kernel checked, no final Lean proof may cite it as a proved lemma.** If the weaker inequality is used for the final uniform M^-3 result, all intermediate constants must be recomputed with exact rational arithmetic and a new final bound explicitly verified.
 
 **Status:** this is a submitted Lean statement, not a PASS until the full build and its individual leanchecker job succeed. The source-to-A118 first-jet and complete source-to-O(M^-3) claims are separate obligations.
+
+
+## First CI result and corrective edit
+
+[Lean run 42927105590](https://github.com/DevHabito/precategorical-modal-field-framework/actions/runs/42927105590) initially FAILED because a rewrite had already closed the denominator-identity subgoal, leaving a redundant `norm_num` tactic and a `No goals to be solved` error at line 42. The statement, the appeal to `Real.abs_log_sub_add_sum_range_le`, and all mathematical hypotheses were unchanged. The redundant tactic was removed; a corrected build and individual kernel replay are required before claiming certification.
