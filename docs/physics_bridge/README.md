@@ -135,3 +135,6 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **BIPARTITE_DOUBLET_DEPTH_LIMIT_20261111.md** — proves that the direct bipartite orientation has no two-step directed path and therefore cannot encode extended temporal succession.
 - **DIAMOND_ORIENTATION_TORSOR_20261111.md** — first unmarked finite witness with a unique automorphism-canonical orientation class modulo reversal and directed depth 2.
 - **intrinsic_orientation_depth_audit.py** / **intrinsic_orientation_depth_results.json** — exhaustive connected-graph search through n=5 establishing the minimal diamond witness.
+
+- **COMPARABILITY_UPO_POSITIONING_20261111.md** — prior-art correction separating classical UPO uniqueness from the project's Aut-stable orientation-duality filter.
+- **comparability_upo_autstable_audit.py** / **comparability_upo_autstable_results.json** — exact transitivity-aware enumeration through n=5.
