@@ -1,0 +1,16 @@
+{
+  "audit": "RANDOM_2_ORDER_UPO_N10_PREREGISTRATION",
+  "status": "PREDICTION_FROZEN",
+  "n": 10,
+  "external_simple_permutation_count": 298526,
+  "predicted_connected_upo": 692297,
+  "predicted_total_recoverable": 843873,
+  "total_permutations": 3628800,
+  "predicted_fraction": "281291/1209600",
+  "predicted_decimal": 0.23254877645502645,
+  "failure_criterion": "Independent direct N=10 classifier returns recoverable_count != 843873.",
+  "nonclaims": [
+    "No direct N=10 recovery classification was used to choose the prediction.",
+    "A pass would be a prospective finite regression, not a proof of novelty or physical time emergence."
+  ]
+}
