@@ -654,3 +654,67 @@ The next genuine advance requires either:
 
 1. a prospective empirical test not used to choose the reduction; or
 2. a mathematically specific theorem that is not already subsumed by lumpability, Mori-Zwanzig, causal-state, Koopman, Floquet, or classical birth-death theory.
+
+
+## 25. Pregeometric correction: memory is not the origin of all time
+
+The physical bridge originally motivated a stronger intuition that temporal structure might arise when relational states are exposed to unresolved external influence for sufficiently persistent durations.
+
+That formulation is now too strong for two independent reasons.
+
+### Circularity
+
+All current memory/closure bridges already use time variables, rates, delays, or periods.
+
+They cannot establish the emergence of time itself.
+
+### Reversible relational-time counterbenchmark
+
+The Page-Wootters mechanism provides relational subsystem evolution in a globally constrained stationary state without requiring environmental noise or entropy production.
+
+A finite repository regression for clock/system dimensions
+
+$$
+d=2,3,4,5,8
+$$
+
+verified:
+
+- zero Hamiltonian-constraint residual in the diagonal benchmark;
+- conditional-state agreement with the target unitary evolution to a maximum numerical error of approximately \(2.5\times10^{-16}\).
+
+This is a classical benchmark, not a new project result.
+
+The strong statement
+
+> external informational noise is necessary for time
+
+is therefore rejected.
+
+The surviving physically supported statement is narrower:
+
+> persistent unresolved external information can make a reduced state dynamically insufficient, generate memory, alter effective temporal coarse-graining, and contribute to an arrow in the reduced description.
+
+## 26. Current separation of temporal questions
+
+The research programme should now keep four questions separate.
+
+### Temporal order
+
+What defines before/after or causal precedence?
+
+### Relational evolution
+
+How can reversible change be described relative to an internal clock/reference?
+
+### Arrow/irreversibility
+
+Why do selected macroscopic descriptions exhibit directional asymmetry?
+
+### Duration
+
+How is a quantitative physical interval calibrated?
+
+No single monotone, memory kernel, causal quotient, or clock benchmark currently solves all four.
+
+This separation is now part of the physical-bridge governance.
