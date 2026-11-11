@@ -437,3 +437,43 @@ Strong lumpability requires the coarse-grained process to be Markov for every in
 Higher-order lumpability similarly asks whether the projected process is finite-order Markov.
 
 **Use here:** a zero closure diagnostic for one preparation must not be promoted into universal closure.
+
+
+## 35. Pregeometric and relational-time boundary
+
+### Causal sets
+
+Modern causal-set work continues to treat locally finite causal order as the fundamental discrete structure, with order and number carrying the information needed to approximate Lorentzian geometry under appropriate conditions.
+
+Tomasz Placek and Leszek Wroński, **“On the Growing Universe of Causal Set Theory—An Order-Type Approach,”** *Foundations of Physics* **54**, 42 (2024).  
+DOI: https://doi.org/10.1007/s10701-024-00767-5
+
+**Use here:** a project that simply postulates a partial order does not derive temporal order from informational closure; it enters established causal-set territory.
+
+### Page-Wootters and relational clocks
+
+The Page-Wootters mechanism recovers relational subsystem dynamics by conditioning a globally constrained state on a clock subsystem. Work in quantum cosmology continues to apply this framework in 2026.
+
+**Use here:** internal-clock dynamics has a mature benchmark and should not be renamed as a project-specific emergence mechanism.
+
+### Thermal time and circularity
+
+Eugene Y. S. Chua, **“The Time in Thermal Time,”** *Journal for General Philosophy of Science* **57** (2026), 235–258.  
+DOI: https://doi.org/10.1007/s10838-024-09691-8
+
+The paper develops a circularity objection to the thermal-time programme: temporally or dynamically loaded ingredients may already be required to motivate the purported emergence of time.
+
+**Use here:** any project claim of emergent time must pass an explicit anti-circularity audit.
+
+## 36. Required novelty boundary for a pregeometric bridge
+
+The project must distinguish:
+
+- deriving an order from timeless structure;
+- using a pre-existing causal order;
+- deriving relational evolution from a clock subsystem;
+- extracting an effective timescale from already temporal dynamics.
+
+Only the first would address the project's strongest pregeometric ambition.
+
+The current physical bridges address the fourth category and, in part, predictive sufficiency under hidden variables. They do not yet address the first.
