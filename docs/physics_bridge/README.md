@@ -138,3 +138,6 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 
 - **COMPARABILITY_UPO_POSITIONING_20261111.md** — prior-art correction separating classical UPO uniqueness from the project's Aut-stable orientation-duality filter.
 - **comparability_upo_autstable_audit.py** / **comparability_upo_autstable_results.json** — exact transitivity-aware enumeration through n=5.
+
+- **MINIMAL_DEEP_UPO_WITNESSES_20261111.md** — stricter anti-ad-hoc controls: bull and house are the two minimal n=5 UPO types with order depth 2.
+- **minimal_deep_upo_audit.py** / **minimal_deep_upo_results.json** — exact classification through n=5.
