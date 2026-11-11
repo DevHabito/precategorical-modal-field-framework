@@ -51,6 +51,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **BRIDGE_2_HIDDEN_DEGREES_RETROSPECTIVE_20261111.md** — independent Nature Physics control case: matched visible initial distributions with different future relaxation because of hidden environmental memory.
 - **PHYSICAL_ARCHITECTURE_REFINEMENT_20261111.md** — governance refinement requiring every closure claim to declare full state, observation map, conditioning information, preparation class, and temporal resolution.
 - **INFORMATION_THEORETIC_CLOSURE_DIAGNOSTIC_20261111.md** — uses established conditional mutual information to separate preparation-specific predictive sufficiency from universal/strong closure.
+- **PREGEOMETRIC_TIME_ANTI_CIRCULARITY_GATE_20261111.md** — hard gate preventing memory or relaxation results that already assume time from being promoted as evidence that time emerges.
 - **stroboscopic_phase_average_exact.py** — rational regression audit of the phase-averaged Cayley-Hamilton recurrences.
 - **phase_bridge_numerical_stress.py** — dependency-free 16-case integration stress test of continuous phase averaging versus exact stroboscopic closure.
 - **phase_bridge_numerical_stress_results.json** — frozen output of that numerical regression.
