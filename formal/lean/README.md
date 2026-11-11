@@ -158,3 +158,17 @@ PrecategoryFormal/PhysicalBridgeAcyclicityGate.lean proves for the existing grap
 GitHub Actions run 741 completed successfully with the pinned build and independent leanchecker replay.
 
 Scope boundary: this verifies the finite graph obstruction only. It does not prove that all physical time must be a scalar rank, that SCC condensation is physical time, or that graph reachability has a causal interpretation.
+
+
+### Symmetry-orientation no-go — END-TO-END LEAN/KERNEL PASS
+
+PrecategoryFormal/PhysicalBridgeSymmetryOrientation.lean proves the generic logical kernel:
+
+- a strict asymmetric relation;
+- invariant/equivariant under a map that swaps \(a\) and \(b\);
+
+cannot orient \(a\) toward \(b\).
+
+GitHub Actions run 744 completed successfully with the pinned build and independent leanchecker replay.
+
+Scope boundary: this is a structural symmetry theorem. It does not identify the physical source of temporal asymmetry.
