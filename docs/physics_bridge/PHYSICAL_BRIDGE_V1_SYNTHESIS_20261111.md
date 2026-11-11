@@ -496,3 +496,161 @@ $$
 $$
 
 This is a numerical regression of the derived equations. It is not experimental evidence and the grid is not fitted to the device parameters.
+
+
+## 20. Bridge 2 — independent hidden-environment control
+
+A second retrospective bridge uses the 2026 Nature Physics experiment by Muruga, Ginot, Loos, and Bechinger.
+
+The experiment distinguishes an observed particle coordinate \(X\) from hidden environmental degrees of freedom \(Y\), with the enlarged state
+
+$$
+Z=(X,Y)
+$$
+
+treated as Markovian.
+
+The authors construct a history-blind control ensemble whose complete observed position distribution at the comparison time is matched to the history-aware ensemble:
+
+$$
+\tilde\rho_{|ij\rangle}(x,0)
+=
+\rho_{|ij\rangle}(x,0).
+$$
+
+The later observed relaxation differs because the hidden environmental conditional states differ.
+
+This is a distribution-level physical witness:
+
+$$
+\boxed{
+\text{same instantaneous observed marginal}
+\not\Rightarrow
+\text{same future observed dynamics}.
+}
+$$
+
+The result is retrospective and belongs to the published experiment. It is not a project prediction.
+
+Its role is to show that the closure concern isolated in Bridge 1 is not specific to the electronic birth-death generator.
+
+## 21. Reduction-contract refinement
+
+The two bridges make under-specified closure claims unacceptable.
+
+Every physical closure statement should declare
+
+$$
+\boxed{
+\mathfrak C=(S,O,\Xi,\mathcal P,\mathcal T),
+}
+$$
+
+where:
+
+- \(S\) is the full state space used by the physical dynamics;
+- \(O\) is the observation/coarse-graining map;
+- \(\Xi\) is the conditioning information regarded as known;
+- \(\mathcal P\) is the admissible preparation class;
+- \(\mathcal T\) is the temporal resolution or sampling rule.
+
+This is theorem/test metadata, not a sixth physical primitive.
+
+The exact reduced-closure question is whether a reduced operator exists such that
+
+$$
+O_\#K^\xi_\Delta\Pi
+=
+\widehat K_\Delta O_\#\Pi
+$$
+
+for every admissible preparation.
+
+The language is classical lumpability/intertwining/coarse-graining.
+
+## 22. Universal hidden-context criteria
+
+For finite hidden-context scalar systems
+
+$$
+\dot x_i=a_ix_i+b_i,
+$$
+
+a universal marginal scalar closure over unrestricted conditioned states exists if and only if all multiplicative coefficients \(a_i\) agree.
+
+For discrete hidden-context maps
+
+$$
+X_{i,n+1}=M_iX_{i,n},
+$$
+
+a universal marginal linear recurrence
+
+$$
+P(E)\bar X_n=0
+$$
+
+holds for every conditioned initial state if and only if
+
+$$
+P(M_i)=0
+$$
+
+for every hidden context.
+
+The minimal universal polynomial is the least common multiple of the hidden-context minimal polynomials.
+
+These are elementary classical criteria used to audit future bridges, not new physical laws.
+
+## 23. Persistent versus resampled external information
+
+The bridge now explicitly separates a context that persists along a trajectory from one that is independently resampled.
+
+For the minimal multiplicative example,
+
+$$
+x_{n+1}=M_nx_n,
+$$
+
+a persistent hidden multiplier gives
+
+$$
+\mathbb E[x_n]
+=
+x_0\mathbb E[M^n],
+$$
+
+whereas independent resampling gives
+
+$$
+\mathbb E[x_n]
+=
+x_0(\mathbb E[M])^n.
+$$
+
+At two steps the difference is
+
+$$
+x_0\operatorname{Var}(M).
+$$
+
+This is a classical quenched/annealed distinction.
+
+Its relevance to the repository is narrower: the temporal persistence of omitted external information changes the reduced dynamics even when the one-time distribution of the external variable is unchanged.
+
+No inference to emergent physical time is licensed.
+
+## 24. Current physical conclusion
+
+After the literature audit and two control systems, the strongest statement supported by the bridge is:
+
+> Dynamical sufficiency is relative to the retained observable, the conditioning information, the admissible preparation class, and the temporal resolution. Removing dynamically relevant context can destroy closure; restoring hidden state, memory, or an appropriate sampling map can restore it.
+
+Every part of this statement has substantial classical precedent.
+
+The repository's contribution at present is not a new law but a disciplined physical stress test of its provisional informational architecture.
+
+The next genuine advance requires either:
+
+1. a prospective empirical test not used to choose the reduction; or
+2. a mathematically specific theorem that is not already subsumed by lumpability, Mori-Zwanzig, causal-state, Koopman, Floquet, or classical birth-death theory.
