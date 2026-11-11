@@ -146,3 +146,15 @@ PrecategoryFormal/PhysicalBridgeMarginalClosure.lean formalizes three algebraic 
 GitHub Actions run 737 completed successfully with the pinned build and independent leanchecker replay for this module.
 
 Scope boundary: the Lean file proves only rational algebraic kernels. It does not formalize Mori-Zwanzig, lumpability, the experimental systems, hidden-phase Fourier analysis, or the matrix-polynomial theorem.
+
+
+### Pregeometric acyclicity gate — END-TO-END LEAN/KERNEL PASS
+
+PrecategoryFormal/PhysicalBridgeAcyclicityGate.lean proves for the existing graphA witness that:
+
+- no rational scalar rank can increase strictly along every edge of the directed four-cycle;
+- multiple distinct vertices in that cycle are mutually reachable and therefore collapse into one SCC.
+
+GitHub Actions run 741 completed successfully with the pinned build and independent leanchecker replay.
+
+Scope boundary: this verifies the finite graph obstruction only. It does not prove that all physical time must be a scalar rank, that SCC condensation is physical time, or that graph reachability has a causal interpretation.
