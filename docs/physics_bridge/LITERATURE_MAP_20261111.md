@@ -796,3 +796,32 @@ The work formulates thermodynamic constraints in terms of possible/impossible ta
 **Use here:** irreversibility and transformation direction can be represented without identifying the task arrow with metric time.
 
 **Boundary:** constructor-theoretic task polarity remains distinct from the origin of temporal order.
+
+
+## 65. Lorentzian time orientability as a two-choice global structure
+
+Ettore Minguzzi, **“Lorentzian causality theory,”** *Living Reviews in Relativity* **22**, 3 (2019).  
+DOI: https://doi.org/10.1007/s41114-019-0019-x
+
+A Lorentzian manifold is time orientable when one can choose continuously one component of the timelike cone at every point; equivalently, a global continuous timelike vector field exists.
+
+Klaas Landsman, **“Foundations of General Relativity: From Einstein to Black Holes”** (online book/lecture text, 2022), causal-structure chapter.
+
+For a connected time-orientable Lorentzian manifold, global timelike vector fields fall into two orientation classes represented by \(T\) and \(-T\). These define the two possible time orientations.
+
+**Use here:** the physically mature target is not necessarily a canonically named future from metric structure alone; time orientability first supplies a globally consistent two-fold orientation structure.
+
+**Boundary:** the project's finite orientation-doublet criterion is only structurally analogous. It does not derive a Lorentzian metric, cone bundle, or spacetime.
+
+## 66. Spontaneous symmetry breaking and sector selection
+
+David Wallace, **“Spontaneous Symmetry Breaking in Finite Quantum Systems: a decoherent-histories approach”** (2018).
+
+The paper emphasizes approximately dynamically isolated symmetry-related sectors in realistic finite systems and their relation to the infinite-volume SSB limit.
+
+James D. Fraser, **“Spontaneous Symmetry Breaking in Finite Systems,”** *Philosophy of Science* **83**, 585–605 (2016).  
+DOI: https://doi.org/10.1086/687263
+
+Standard strict SSB is associated with thermodynamic-limit structure, while large finite systems can reproduce much of the phenomenology.
+
+**Use here:** distinguish realization-level sector selection from a canonical ensemble-level polarity, and avoid calling the finite three-state witness a new SSB result.
