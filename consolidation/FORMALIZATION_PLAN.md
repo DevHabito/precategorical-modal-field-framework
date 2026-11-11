@@ -137,3 +137,25 @@ The implementation lives under
 `formal/lean/`
 
 with modules named by mathematical content rather than audit numbers. Current modules include the representative-code witness, representative counting, poset enumeration/semantics/bijection, count bridge, literal-code carrier equivalence, generic representative-code graph realization, generic edge-addition reachability, edge-toggle finite enumeration, and the `n=5` semantic/ensemble/indicator bridges. A-number provenance may appear in comments, not in theorem names.
+
+
+### Auxiliary physical-bridge witnesses — COMPLETE AT FINITE ALGEBRAIC SCOPE
+
+The physics-facing bridge introduced two small exact witnesses suitable for immediate kernel checking without importing physical assumptions.
+
+Completed modules:
+
+- PhysicalBridgeTransformWitness.lean — equal normalization, mean, and one rational transform value with an exact shifted-transform separation;
+- PhysicalBridgeObservableWitness.lean — equal mean with distinct rational surrogate mean derivatives.
+
+Both modules pass the pinned build and independent sharded leanchecker replay.
+
+Scope boundary:
+
+- the experimental master equation is not formalized;
+- exponential functions and the analytic transform-shift theorem are not yet connected to these rational witnesses in Lean;
+- the Stieltjes-Wigert identification is not formalized;
+- the randomized-phase/Floquet statements are not formalized;
+- no empirical or novelty statement is certified.
+
+A later analytic formalization should proceed only after the classical Stieltjes-Wigert reduction and randomized-phase scope are part of the theorem statement, so the proof assistant does not formalize an outdated novelty framing.
