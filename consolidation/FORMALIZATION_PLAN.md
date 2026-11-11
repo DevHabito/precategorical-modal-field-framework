@@ -173,3 +173,20 @@ Status:
 - GitHub Actions run: 737.
 
 The general unequal-weight/vector criterion and the common-matrix-polynomial theorem remain paper proofs only and should not be labeled formally verified.
+
+
+### PhysicalBridgeAcyclicityGate — COMPLETE AT FINITE GRAPH SCOPE
+
+The module reuses the already formalized graphA/SCC infrastructure and proves:
+
+- impossibility of a strict rational edge-increasing rank on the explicit directed cycle;
+- collapse of distinct cycle vertices into one mutual-reachability class.
+
+Status:
+
+- pinned build: PASS;
+- proof-placeholder rejection: PASS;
+- independent leanchecker replay: PASS;
+- GitHub Actions run: 741.
+
+No physical interpretation of the graph edges is certified.
