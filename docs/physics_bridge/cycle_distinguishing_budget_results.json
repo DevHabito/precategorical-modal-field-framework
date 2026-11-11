@@ -1,0 +1,90 @@
+{
+  "audit": "CYCLE_DISTINGUISHING_BUDGET_V1",
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 3,
+      "distinguishing_counts": {
+        "1": 0,
+        "2": 0,
+        "3": 6,
+        "4": 24
+      },
+      "minimum_alphabet": 3
+    },
+    {
+      "n": 4,
+      "distinguishing_counts": {
+        "1": 0,
+        "2": 0,
+        "3": 24,
+        "4": 120
+      },
+      "minimum_alphabet": 3
+    },
+    {
+      "n": 5,
+      "distinguishing_counts": {
+        "1": 0,
+        "2": 0,
+        "3": 120,
+        "4": 720
+      },
+      "minimum_alphabet": 3
+    },
+    {
+      "n": 6,
+      "distinguishing_counts": {
+        "1": 0,
+        "2": 12,
+        "3": 444,
+        "4": 3192
+      },
+      "minimum_alphabet": 2
+    },
+    {
+      "n": 7,
+      "distinguishing_counts": {
+        "1": 0,
+        "2": 28,
+        "3": 1638,
+        "4": 14616
+      },
+      "minimum_alphabet": 2
+    },
+    {
+      "n": 8,
+      "distinguishing_counts": {
+        "1": 0,
+        "2": 96,
+        "3": 5328,
+        "4": 60480
+      },
+      "minimum_alphabet": 2
+    },
+    {
+      "n": 9,
+      "distinguishing_counts": {
+        "1": 0,
+        "2": 252,
+        "3": 17550,
+        "4": 253008
+      },
+      "minimum_alphabet": 2
+    },
+    {
+      "n": 10,
+      "distinguishing_counts": {
+        "1": 0,
+        "2": 600,
+        "3": 54240,
+        "4": 1022640
+      },
+      "minimum_alphabet": 2
+    }
+  ],
+  "graphA_C4_binary_distinguishing_count": 0,
+  "graphA_C4_ternary_distinguishing_count": 24,
+  "classical_benchmark": "D(C_n)=3 for n=3,4,5 and 2 for n>=6",
+  "nonclaim": "Exact finite reproduction of a classical distinguishing-number result; not a new graph theorem or physical direction mechanism."
+}
