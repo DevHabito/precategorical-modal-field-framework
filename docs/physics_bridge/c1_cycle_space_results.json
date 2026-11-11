@@ -1,0 +1,83 @@
+{
+  "audit": "C1_CYCLE_SPACE_V1",
+  "status": "PASS",
+  "graphs": {
+    "graphA_skeleton": {
+      "vertices": 5,
+      "edges": 4,
+      "components": [
+        [
+          0,
+          2,
+          3,
+          4
+        ],
+        [
+          1
+        ]
+      ],
+      "component_count": 2,
+      "incidence_rank": 3,
+      "edge_space_dimension": 4,
+      "cycle_rank_beta1": 1,
+      "edge_mod_gradient_dimension": 1,
+      "cycle_generator": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "graphB_skeleton": {
+      "vertices": 5,
+      "edges": 4,
+      "components": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "component_count": 2,
+      "incidence_rank": 3,
+      "edge_space_dimension": 4,
+      "cycle_rank_beta1": 1,
+      "edge_mod_gradient_dimension": 1,
+      "cycle_generator": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    }
+  },
+  "interpretation": [
+    "Both C1 witness skeletons have exactly one independent undirected cycle-space degree of freedom.",
+    "For a reciprocal edge score transforming by addition of a vertex gradient, one real cycle-circulation coordinate spans the gauge-invariant quotient on these skeletons.",
+    "This is classical graph homology/Hodge structure, not a physical derivation of direction or time."
+  ]
+}
