@@ -1,0 +1,22 @@
+{
+  "audit": "FOUR_SITE_LOOP_CHIRALITY_NOT_ORDER_V1",
+  "status": "PASS",
+  "cases": [
+    {
+      "phi": 1.0471975511965976,
+      "rotation_commutator_error": 0,
+      "reflection_flux_reversal_error": 0
+    },
+    {
+      "phi": 1.5707963267948966,
+      "rotation_commutator_error": 0,
+      "reflection_flux_reversal_error": 0
+    }
+  ],
+  "interpretation": [
+    "Uniform nonzero loop flux preserves cyclic translation symmetry.",
+    "Reflection maps phi to -phi.",
+    "Loop chirality therefore does not select a distinguished vertex or strict temporal order."
+  ],
+  "nonclaim": "Standard magnetic-ring symmetry regression; not evidence for emergent time."
+}
