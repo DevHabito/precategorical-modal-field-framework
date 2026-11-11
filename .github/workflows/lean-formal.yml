@@ -86,6 +86,7 @@ jobs:
           - PrecategoryFormal.PhysicalBridgeTransformWitness
           - PrecategoryFormal.PhysicalBridgeObservableWitness
           - PrecategoryFormal.PhysicalBridgeMarginalClosure
+          - PrecategoryFormal.PhysicalBridgeAcyclicityGate
     steps:
       - name: Checkout
         uses: actions/checkout@v6
