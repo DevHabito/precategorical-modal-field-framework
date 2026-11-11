@@ -133,3 +133,16 @@ The run includes:
 - leanchecker replay for PrecategoryFormal.PhysicalBridgeObservableWitness.
 
 The formal result does **not** certify the physical mapping, the Salhani et al. rate law, empirical adequacy, or novelty.
+
+
+### Marginal-closure kernels — END-TO-END LEAN/KERNEL PASS
+
+PrecategoryFormal/PhysicalBridgeMarginalClosure.lean formalizes three algebraic statements:
+
+- the exact derivative gap produced by swapping two equal-weight hidden-context states;
+- the fact that universal equal-weight two-context scalar closure forces equal multiplicative coefficients;
+- the exact three-point recurrence for the average of two affine maps with a common multiplier.
+
+GitHub Actions run 737 completed successfully with the pinned build and independent leanchecker replay for this module.
+
+Scope boundary: the Lean file proves only rational algebraic kernels. It does not formalize Mori-Zwanzig, lumpability, the experimental systems, hidden-phase Fourier analysis, or the matrix-polynomial theorem.
