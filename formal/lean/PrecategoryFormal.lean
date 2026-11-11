@@ -17,3 +17,4 @@ import PrecategoryFormal.PhysicalBridgeTransformWitness
 import PrecategoryFormal.PhysicalBridgeObservableWitness
 import PrecategoryFormal.PhysicalBridgeMarginalClosure
 import PrecategoryFormal.PhysicalBridgeAcyclicityGate
+import PrecategoryFormal.PhysicalBridgeSymmetryOrientation
