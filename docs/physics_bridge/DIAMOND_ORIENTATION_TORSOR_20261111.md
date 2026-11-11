@@ -3,7 +3,7 @@
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
 **Status:** exact finite structural result + elementary proof  
-**Novelty status:** graph automorphisms and acyclic orientations are classical; the orientation-torsor criterion is project-specific. No claim of a new graph-theory theorem is made.
+**Novelty status:** comparability graphs, transitive orientations, automorphism actions, and UPO theory are classical. The project-specific Aut-stable-duality filter has no certified novelty claim.
 
 ## 1. Question
 
@@ -433,3 +433,44 @@ from one that is merely a static dependency order?}
 $$
 
 That is now the bridge to physics.
+
+
+## 17. Comparability/UPO correction
+
+A dedicated literature audit places the diamond result inside classical comparability-graph theory.
+
+The displayed depth-two orientation is transitive, so the diamond is a comparability graph.
+
+However, the diamond has
+
+$$
+\boxed{
+6
+}
+$$
+
+transitive orientations, forming three reversal pairs.
+
+Therefore
+
+$$
+\boxed{
+K_4-e\text{ is not UPO}.
+}
+$$
+
+UPO would require exactly two transitive orientations, one the reverse of the other.
+
+What is special under the project's filter is narrower:
+
+- \(\operatorname{Aut}(K_4-e)\) acts on all six transitive orientations;
+- among the three reversal pairs, exactly one pair is preserved as a set by every automorphism;
+- that pair has directed depth two.
+
+Thus the canonical project statement is now:
+
+> the diamond is the smallest witness found in the audited range with one Aut-stable transitive-orientation duality class of nontrivial depth.
+
+This should not be described as discovery of unique partial orderability.
+
+Aigner–Prins UPO theory, Möhring's later work, Golumbic's comparability-graph treatment, and the established automorphism action on transitive orientations are prior art.
