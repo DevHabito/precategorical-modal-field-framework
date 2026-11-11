@@ -144,3 +144,6 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 
 - **MINKOWSKI_2D_UPO_RECOVERY_20261111.md** — exact finite random-2-order control asking when unoriented causal connectibility reconstructs a 1+1 Minkowski causet order up to reversal.
 - **minkowski_2d_upo_recovery_audit.py** / **minkowski_2d_upo_recovery_results.json** — exhaustive permutation enumeration through N=7.
+
+- **MINKOWSKI_2D_UPO_MODULAR_DIAGNOSIS_20261111.md** — replaces black-box orientation counting with the classical modular UPO criterion and extends exact random-2-order recovery counts through N=9.
+- **minkowski_2d_upo_modular_audit.py** / **minkowski_2d_upo_modular_results.json** — exact modular classification of recoverable, internally ambiguous, disconnected, and empty cases.
