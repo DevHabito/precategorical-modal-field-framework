@@ -80,3 +80,24 @@ The project-specific question is different:
 > When the repository's provisional informational roles ((R,q,mu,K,pi)) are mapped into an established physical model, which roles survive as independent information and which collapse into classical physical quantities?
 
 That is currently a **framework stress test**, not a new physical theorem.
+
+
+## 8. Recent pathwise-observable framework
+
+A. Godec and collaborators, **“Stochastic Calculus for Pathwise Observables of Markov-Jump Processes: Unification of Diffusion and Jump Dynamics,”** *Physical Review X* **16**, 021038 (2026).  
+DOI: https://doi.org/10.1103/9ncx-4pgr
+
+The work develops a direct calculus for pathwise observables in Markov-jump processes and emphasizes thermodynamic inference when dissipative degrees of freedom are only partially accessible.
+
+**Use here:** current context for future trajectory-level tests.  
+**Constraint:** any project observable defined on trajectories must be compared against existing pathwise stochastic-thermodynamics machinery before novelty is considered.
+
+## 9. Current experimental multi-state candidate
+
+Katsuhiko Nishiguchi and collaborators, **“Heat-dissipation decomposition and free-energy generation in a nonequilibrium dot with multiple electron states,”** *Physical Review Research* **8**, 023209 (2026).  
+DOI: https://doi.org/10.1103/947j-vvk2
+
+The experiment uses single-electron counting statistics and time-domain probability distributions of multiple electron states in a driven nonequilibrium quantum dot.
+
+**Use here:** candidate for the first multi-state experimental bridge.  
+**Status:** candidate only until the rates, state map, protocol, and reproducibility inputs are independently recovered.
