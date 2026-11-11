@@ -1,0 +1,100 @@
+{
+  "audit": "SYMMETRIC_LAW_ASYMMETRIC_SECTOR_V1",
+  "status": "PASS",
+  "kernel": [
+    [
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "1/2",
+      "0",
+      "1/2"
+    ],
+    [
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "rows": [
+    {
+      "n": 0,
+      "distribution": [
+        "0",
+        "1",
+        "0"
+      ],
+      "reflection_invariant": true,
+      "mean_order_parameter": "0",
+      "mean_absolute_order_parameter": "0"
+    },
+    {
+      "n": 1,
+      "distribution": [
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "reflection_invariant": true,
+      "mean_order_parameter": "0",
+      "mean_absolute_order_parameter": "1"
+    },
+    {
+      "n": 2,
+      "distribution": [
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "reflection_invariant": true,
+      "mean_order_parameter": "0",
+      "mean_absolute_order_parameter": "1"
+    },
+    {
+      "n": 3,
+      "distribution": [
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "reflection_invariant": true,
+      "mean_order_parameter": "0",
+      "mean_absolute_order_parameter": "1"
+    },
+    {
+      "n": 4,
+      "distribution": [
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "reflection_invariant": true,
+      "mean_order_parameter": "0",
+      "mean_absolute_order_parameter": "1"
+    },
+    {
+      "n": 5,
+      "distribution": [
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "reflection_invariant": true,
+      "mean_order_parameter": "0",
+      "mean_absolute_order_parameter": "1"
+    }
+  ],
+  "exact_conclusions": [
+    "The ensemble distribution remains reflection invariant.",
+    "The signed order-parameter expectation is exactly zero.",
+    "After one update every realization lies in a nonzero-polarity absorbing sector.",
+    "For n>=1 the mean absolute order parameter is exactly one."
+  ],
+  "nonclaims": [
+    "This finite chain is not asserted to be thermodynamic spontaneous symmetry breaking.",
+    "The update index already supplies dynamical succession.",
+    "Sector polarity is not identified with temporal order."
+  ]
+}
