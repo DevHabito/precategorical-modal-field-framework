@@ -257,3 +257,40 @@ Birth-death chains on the full integer lattice \(\mathbb Z\) have a separate spe
 This matters because the excess-electron variable in the analytic dot model is naturally centered and is not conceptually restricted to a population count on \(\mathbb N_0\).
 
 **Use here:** do not import boundary-at-zero conclusions from ordinary population birth-death chains without checking the state-space contract.
+
+
+## 21. Exact Stieltjes-Wigert operator identification
+
+Jacob S. Christiansen and Erik Koelink, **“Self-adjoint difference operators and classical solutions to the Stieltjes-Wigert moment problem,”** *Journal of Approximation Theory* **140** (2006), 1-26.  
+DOI: https://doi.org/10.1016/j.jat.2005.11.010
+
+The Stieltjes-Wigert polynomials are eigenfunctions of a second-order q-difference operator. In a standard normalization,
+
+$$
+L_{\rm SW}
+=
+T_q-x^{-1}(I-T_{q^{-1}}).
+$$
+
+After the bridge change of variable
+
+$$
+y=(B/D)q^N,
+$$
+
+the constant-rate electronic generator satisfies
+
+$$
+\frac{\mathcal L}{B}
+=
+L_{\rm SW}-I.
+$$
+
+Therefore the previously derived finite polynomial flag and constant-rate eigenmodes are classical Stieltjes-Wigert spectral structure in a physical coordinate.
+
+**Novelty consequence:** do not claim the constant-rate closure ladder, eigenvalues, or degree-one transform mode as new spectral mathematics.
+
+Jacob Stordal Christiansen, **“The moment problem associated with the Stieltjes-Wigert polynomials,”** *Journal of Mathematical Analysis and Applications* **277** (2003), 218-245.  
+DOI: https://doi.org/10.1016/S0022-247X(02)00534-6
+
+**Use here:** classical indeterminate moment-problem and discrete-measure context for the same polynomial family.
