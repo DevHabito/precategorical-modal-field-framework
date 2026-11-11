@@ -163,3 +163,5 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **ADJACENT_TWIN_SCALING_HELDOUT_20261111.md** — records the prospective finite scaling-consistency pass without promoting it to an asymptotic theorem.
 - **minkowski_residual_upo_obstruction.py** / **minkowski_residual_upo_obstruction_results.json** — exploratory decomposition of non-UPO failures after excluding adjacent twins.
 - **MINKOWSKI_RESIDUAL_UPO_OBSTRUCTION_20261111.md** — shows that no compensating residual obstruction is visible over the audited finite range; no residual limit is inferred.
+- **ADJACENT_TWIN_COEFFICIENT_DERIVATION_20261111.md** — reduces the twin expectation to a two-point integral, derives candidate leading constants (32\pi/3) in (2+1) and (9\pi) in (3+1), and isolates the remaining small-(D) domination lemma before theorem status.
+- **adjacent_twin_pair_importance.py** / **adjacent_twin_pair_importance_results.json** — full-support two-point importance estimators validating the finite expectation and the slow approach toward the analytic coefficient candidates at very large effective (n).
