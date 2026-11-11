@@ -1,0 +1,23 @@
+{
+  "audit": "RANDOM_2_ORDER_UPO_N10_PROSPECTIVE_DIRECT_V1",
+  "status": "PASS",
+  "prediction_was_frozen_before_direct_enumeration": true,
+  "total_permutations": 3628800,
+  "predicted_connected_upo": 692297,
+  "observed_connected_upo": 692297,
+  "predicted_total_recoverable": 843873,
+  "observed_total_recoverable": 843873,
+  "internal_module_ambiguity": 2636060,
+  "multiple_nontrivial_components": 148866,
+  "empty_antichain": 1,
+  "partition_sum": 3628800,
+  "exact_fraction": "281291/1209600",
+  "decimal": 0.23254877645502645,
+  "implementation": "independent direct C++ enumeration using comparability components and common-interval criterion; does not use C_n or R_n counting formulas",
+  "execution_observed_in_current_session": true,
+  "nonclaims": [
+    "The prospective pass validates the N=10 finite prediction under the established structural classifier.",
+    "It is not an independent proof of the asymptotic theorem.",
+    "It does not certify novelty or physical emergence of time."
+  ]
+}
