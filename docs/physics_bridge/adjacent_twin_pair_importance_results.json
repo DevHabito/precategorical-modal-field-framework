@@ -1,0 +1,144 @@
+{
+  "audit": "ADJACENT_TWIN_TWO_POINT_IMPORTANCE_V1",
+  "date": "2026-11-11",
+  "status": "NUMERICAL_VALIDATION_OF_ANALYTIC_COEFFICIENT_CANDIDATES",
+  "exact_identity": "E[T_n] = binom(n,2) E[1_{X~Y} (1-D(X,Y))^(n-2)]",
+  "candidate_coefficients": {
+    "d3_2plus1": {
+      "expression": "32*pi/3",
+      "numeric": 33.510321638291124
+    },
+    "d4_3plus1": {
+      "expression": "9*pi",
+      "numeric": 28.274333882308138
+    }
+  },
+  "d3_runs": [
+    {
+      "n": 48,
+      "samples": 500000,
+      "seed": 15199,
+      "mean_twin_pairs": 0.20766733166058982,
+      "standard_error": 0.0004625893327804952,
+      "n_times_mean": 9.968031919708311,
+      "n_times_standard_error": 0.022204287973463768,
+      "proposal_inside_fraction": 0.35304
+    },
+    {
+      "n": 384,
+      "samples": 500000,
+      "seed": 15535,
+      "mean_twin_pairs": 0.04364521351083183,
+      "standard_error": 0.00006311160385963943,
+      "n_times_mean": 16.759761988159422,
+      "n_times_standard_error": 0.02423485588210154,
+      "proposal_inside_fraction": 0.576084
+    },
+    {
+      "n": 1000,
+      "samples": 500000,
+      "seed": 16151,
+      "mean_twin_pairs": 0.019384496067648093,
+      "standard_error": 0.00002389935257414215,
+      "n_times_mean": 19.384496067648094,
+      "n_times_standard_error": 0.02389935257414215,
+      "proposal_inside_fraction": 0.654868
+    },
+    {
+      "n": 10000,
+      "samples": 500000,
+      "seed": 25151,
+      "mean_twin_pairs": 0.0024278410893795927,
+      "standard_error": 0.000002168402896150277,
+      "n_times_mean": 24.27841089379593,
+      "n_times_standard_error": 0.02168402896150277,
+      "proposal_inside_fraction": 0.790466
+    },
+    {
+      "n": 1000000,
+      "samples": 500000,
+      "seed": 1015151,
+      "mean_twin_pairs": 0.000029802609147959444,
+      "standard_error": 1.5253771219987385e-8,
+      "n_times_mean": 29.802609147959444,
+      "n_times_standard_error": 0.015253771219987385,
+      "proposal_inside_fraction": 0.924348
+    },
+    {
+      "n": 1000000000,
+      "samples": 500000,
+      "seed": 1000007000,
+      "mean_twin_pairs": 3.2650570180115174e-8,
+      "standard_error": 7.691089247441531e-12,
+      "n_times_mean": 32.650570180115174,
+      "n_times_standard_error": 0.007691089247441531,
+      "proposal_inside_fraction": 0.983926
+    },
+    {
+      "n": 1000000000000,
+      "samples": 500000,
+      "seed": 8000,
+      "mean_twin_pairs": 3.331013373527169e-11,
+      "standard_error": 3.715520029217218e-15,
+      "n_times_mean": 33.31013373527169,
+      "n_times_standard_error": 0.003715520029217218,
+      "proposal_inside_fraction": 0.996398
+    }
+  ],
+  "d4_runs": [
+    {
+      "n": 48,
+      "samples": 300000,
+      "seed": 10149,
+      "mean_twin_pairs": 0.23656677746638813,
+      "n_times_mean": 11.35520531838663,
+      "n_times_standard_error": 0.016526868300284804
+    },
+    {
+      "n": 384,
+      "samples": 300000,
+      "seed": 10485,
+      "mean_twin_pairs": 0.04724955036737665,
+      "n_times_mean": 18.143827341072633,
+      "n_times_standard_error": 0.018163976456943683
+    },
+    {
+      "n": 1000,
+      "samples": 300000,
+      "seed": 11101,
+      "mean_twin_pairs": 0.020184208407335782,
+      "n_times_mean": 20.18420840733578,
+      "n_times_standard_error": 0.017301995800236135
+    },
+    {
+      "n": 10000,
+      "samples": 300000,
+      "seed": 20101,
+      "mean_twin_pairs": 0.002350895364118611,
+      "n_times_mean": 23.50895364118611,
+      "n_times_standard_error": 0.014651873773306703
+    },
+    {
+      "n": 1000000,
+      "samples": 300000,
+      "seed": 1010101,
+      "mean_twin_pairs": 0.000026637762390031124,
+      "n_times_mean": 26.637762390031124,
+      "n_times_standard_error": 0.00928893196943639
+    },
+    {
+      "n": 1000000000,
+      "samples": 500000,
+      "seed": 1000017171,
+      "mean_twin_pairs": 2.797360057527583e-8,
+      "n_times_mean": 27.97360057527583,
+      "n_times_standard_error": 0.003134037296372524
+    }
+  ],
+  "assessment": "The exact two-point identity and full-support importance estimators reproduce the finite full-sprinkling scale and show n E[T_n] approaching the analytic candidates 32*pi/3 in d=3 and 9*pi in d=4. This is strong numerical support for the coefficients, not a substitute for the remaining global domination argument.",
+  "nonclaims": [
+    "No theorem is promoted solely from these numerical runs.",
+    "The d=3 and d=4 coefficient derivations still require a complete global remainder/dominance proof.",
+    "The twin asymptotic alone does not prove p_UPO tends to one."
+  ]
+}
