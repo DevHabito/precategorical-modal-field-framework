@@ -159,3 +159,17 @@ Scope boundary:
 - no empirical or novelty statement is certified.
 
 A later analytic formalization should proceed only after the classical Stieltjes-Wigert reduction and randomized-phase scope are part of the theorem statement, so the proof assistant does not formalize an outdated novelty framing.
+
+
+### PhysicalBridgeMarginalClosure — COMPLETE AT SCALAR ALGEBRAIC SCOPE
+
+The new module formalizes the two-context swap obstruction and the common-multiplier three-point recurrence used by the physical bridge.
+
+Status:
+
+- pinned Lean/mathlib build: PASS;
+- proof-placeholder rejection: PASS;
+- independent sharded leanchecker replay: PASS;
+- GitHub Actions run: 737.
+
+The general unequal-weight/vector criterion and the common-matrix-polynomial theorem remain paper proofs only and should not be labeled formally verified.
