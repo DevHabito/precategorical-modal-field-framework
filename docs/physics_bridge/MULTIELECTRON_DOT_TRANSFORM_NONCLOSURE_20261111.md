@@ -611,3 +611,171 @@ Bridge 1B now supports three distinct statements:
 The combination is more informative than a blanket non-closure claim.
 
 No novelty claim is attached to the finite closure ladder until specialized generating-function and functional-equation literature is reviewed more deeply.
+
+
+## 16. Independent stationary-distribution consistency gate
+
+The published phase-averaged model also gives the stationary distribution
+
+$$
+\rho_N^{\rm ss}
+=
+Z(\nu)^{-1}
+\exp\left[-a(N-\nu)^2\right],
+$$
+
+with
+
+$$
+a=\beta E_{\rm C},
+\qquad
+\nu=
+\frac{\log(\Gamma^+/\Gamma_0)}{2a}.
+$$
+
+Because the state index is integer,
+
+$$
+Z(\nu-k)=Z(\nu)
+$$
+
+for every integer \(k\).
+
+Recall that
+
+$$
+c=2a.
+$$
+
+For \(k\in\mathbb N\),
+
+$$
+G_{kc}^{\rm ss}
+=
+\sum_N\rho_N^{\rm ss}e^{-2akN}.
+$$
+
+Completing the square gives
+
+$$
+-a(N-\nu)^2-2akN
+=
+-a[N-(\nu-k)]^2
+-a(2k\nu-k^2).
+$$
+
+Therefore
+
+$$
+G_{kc}^{\rm ss}
+=
+e^{-a(2k\nu-k^2)}
+\frac{Z(\nu-k)}{Z(\nu)}.
+$$
+
+Using integer-shift invariance of the normalization,
+
+$$
+\boxed{
+G_{kc}^{\rm ss}
+=
+e^{ak^2}
+\left(\frac{\Gamma_0}{\Gamma^+}\right)^k.
+}
+$$
+
+### Agreement with the triangular closure
+
+The stationary triangular equation gives
+
+$$
+G_{kc}^{\rm ss}
+=
+\frac{\Gamma_0}{\Gamma^+}
+e^{a(2k-1)}
+G_{(k-1)c}^{\rm ss}.
+$$
+
+Starting from \(G_0=1\), iteration yields
+
+$$
+G_{kc}^{\rm ss}
+=
+\left(\frac{\Gamma_0}{\Gamma^+}\right)^k
+e^{a\sum_{j=1}^k(2j-1)}
+=
+\left(\frac{\Gamma_0}{\Gamma^+}\right)^k e^{ak^2}.
+$$
+
+The master-equation closure and the published stationary Gaussian therefore give the same transform values by independent algebraic routes.
+
+For \(k=1\),
+
+$$
+\boxed{
+G_c^{\rm ss}
+=
+e^{\beta E_{\rm C}}\frac{\Gamma_0}{\Gamma^+}.
+}
+$$
+
+If the published phase-averaged rate
+
+$$
+\Gamma^+
+=
+\Gamma_0 I_0(\beta eS_{\rm AC})
+$$
+
+is used, this becomes
+
+$$
+\boxed{
+G_c^{\rm ss}
+=
+\frac{e^{\beta E_{\rm C}}}
+{I_0(\beta eS_{\rm AC})}.
+}
+$$
+
+This is a parameter-free consequence once the experimentally calibrated \(E_{\rm C}\), \(T\), and drive amplitude are supplied.
+
+It is a consistency consequence of the published model, not a new thermodynamic law.
+
+## 17. Stationary consistency audit
+
+A rational surrogate audit writes
+
+$$
+s=e^{-a}
+$$
+
+and chooses
+
+$$
+s=\frac12,
+\qquad
+\frac{\Gamma_0}{\Gamma^+}=\frac23.
+$$
+
+The stationary formula
+
+$$
+H_k^{\rm ss}
+=
+\left(\frac{\Gamma_0}{\Gamma^+}\right)^k
+s^{-k^2}
+$$
+
+agrees exactly with the triangular recurrence through \(k=4\).
+
+The audited values are
+
+$$
+\frac43,\quad
+\frac{64}{9},\quad
+\frac{4096}{27},\quad
+\frac{1048576}{81}.
+$$
+
+As in the other audits, this checks the algebra; it is not experimental evidence.
