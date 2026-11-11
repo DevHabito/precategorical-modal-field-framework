@@ -592,3 +592,40 @@ Modern Page-Wootters literature studies finite or quasi-ideal clocks, clock-syst
 **Use here:** the existence of relational time and the accuracy of a physical clock are separate questions.
 
 **Boundary:** the repository's finite numerical benchmark is only a regression of this established mechanism.
+
+
+## 47. Process matrices and indefinite causal order
+
+Ognyan Oreshkov, Fabio Costa, and Časlav Brukner, **“Quantum correlations with no causal order,”** *Nature Communications* **3**, 1092 (2012).  
+DOI: https://doi.org/10.1038/ncomms2076
+
+The process-matrix framework describes local quantum operations without imposing one predefined global causal order and contains correlations incompatible with definite causal order.
+
+**Use here:** definite causal order must not be assumed to be a logically necessary primitive of every pregeometric model.
+
+## 48. Operational quantum theory without predefined time
+
+Ognyan Oreshkov and Nicolas J. Cerf, **“Operational quantum theory without predefined time,”** *New Journal of Physics* **18**, 073037 (2016).  
+DOI: https://doi.org/10.1088/1367-2630/18/7/073037
+
+The work develops an operational formulation intended not to assume a predefined time or causal structure.
+
+**Use here:** direct benchmark for the repository's anti-circularity ambition.
+
+## 49. Time-delocalized realizations and causal inequalities
+
+Julian Wechs, Cyril Branciard, and Ognyan Oreshkov, **“Existence of processes violating causal inequalities on time-delocalised subsystems,”** *Nature Communications* **14**, 1471 (2023).  
+DOI: https://doi.org/10.1038/s41467-023-36893-3
+
+The work studies realizations of broad classes of processes on time-delocalized subsystems, including examples relevant to violations of causal inequalities.
+
+**Use here:** causal nonseparability/indefinite order cannot be reduced casually to an ordinary graph cycle.
+
+## 50. Cyclic quantum causal models
+
+Jonathan Barrett, Robin Lorenz, and Ognyan Oreshkov, **“Cyclic quantum causal models,”** *Nature Communications* **12**, 885 (2021).  
+DOI: https://doi.org/10.1038/s41467-020-20456-x
+
+The work extends quantum causal-model reasoning to cyclic causal structures.
+
+**Use here:** cyclicity and causal indefiniteness are both established but distinct generalizations; the repository must not conflate them.
