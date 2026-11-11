@@ -1,0 +1,165 @@
+{
+  "audit": "OPERATION_RELATIVE_SYMMETRY_BREAKING_V1",
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 3,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "pair_orienting_count": 0,
+      "chirality_selecting_count": 0,
+      "fully_distinguishing_count": 0
+    },
+    {
+      "n": 3,
+      "alphabet": 2,
+      "coloring_count": 8,
+      "pair_orienting_count": 4,
+      "chirality_selecting_count": 0,
+      "fully_distinguishing_count": 0
+    },
+    {
+      "n": 3,
+      "alphabet": 3,
+      "coloring_count": 27,
+      "pair_orienting_count": 18,
+      "chirality_selecting_count": 6,
+      "fully_distinguishing_count": 6
+    },
+    {
+      "n": 4,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "pair_orienting_count": 0,
+      "chirality_selecting_count": 0,
+      "fully_distinguishing_count": 0
+    },
+    {
+      "n": 4,
+      "alphabet": 2,
+      "coloring_count": 16,
+      "pair_orienting_count": 12,
+      "chirality_selecting_count": 0,
+      "fully_distinguishing_count": 0
+    },
+    {
+      "n": 4,
+      "alphabet": 3,
+      "coloring_count": 81,
+      "pair_orienting_count": 72,
+      "chirality_selecting_count": 24,
+      "fully_distinguishing_count": 24
+    },
+    {
+      "n": 5,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "pair_orienting_count": 0,
+      "chirality_selecting_count": 0,
+      "fully_distinguishing_count": 0
+    },
+    {
+      "n": 5,
+      "alphabet": 2,
+      "coloring_count": 32,
+      "pair_orienting_count": 24,
+      "chirality_selecting_count": 0,
+      "fully_distinguishing_count": 0
+    },
+    {
+      "n": 5,
+      "alphabet": 3,
+      "coloring_count": 243,
+      "pair_orienting_count": 216,
+      "chirality_selecting_count": 120,
+      "fully_distinguishing_count": 120
+    },
+    {
+      "n": 6,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "pair_orienting_count": 0,
+      "chirality_selecting_count": 0,
+      "fully_distinguishing_count": 0
+    },
+    {
+      "n": 6,
+      "alphabet": 2,
+      "coloring_count": 64,
+      "pair_orienting_count": 56,
+      "chirality_selecting_count": 12,
+      "fully_distinguishing_count": 12
+    },
+    {
+      "n": 6,
+      "alphabet": 3,
+      "coloring_count": 729,
+      "pair_orienting_count": 702,
+      "chirality_selecting_count": 450,
+      "fully_distinguishing_count": 444
+    },
+    {
+      "n": 7,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "pair_orienting_count": 0,
+      "chirality_selecting_count": 0,
+      "fully_distinguishing_count": 0
+    },
+    {
+      "n": 7,
+      "alphabet": 2,
+      "coloring_count": 128,
+      "pair_orienting_count": 112,
+      "chirality_selecting_count": 28,
+      "fully_distinguishing_count": 28
+    },
+    {
+      "n": 7,
+      "alphabet": 3,
+      "coloring_count": 2187,
+      "pair_orienting_count": 2106,
+      "chirality_selecting_count": 1638,
+      "fully_distinguishing_count": 1638
+    },
+    {
+      "n": 8,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "pair_orienting_count": 0,
+      "chirality_selecting_count": 0,
+      "fully_distinguishing_count": 0
+    },
+    {
+      "n": 8,
+      "alphabet": 2,
+      "coloring_count": 256,
+      "pair_orienting_count": 240,
+      "chirality_selecting_count": 96,
+      "fully_distinguishing_count": 96
+    },
+    {
+      "n": 8,
+      "alphabet": 3,
+      "coloring_count": 6561,
+      "pair_orienting_count": 6480,
+      "chirality_selecting_count": 5352,
+      "fully_distinguishing_count": 5328
+    }
+  ],
+  "c4_binary": {
+    "n": 4,
+    "alphabet": 2,
+    "coloring_count": 16,
+    "pair_orienting_count": 12,
+    "chirality_selecting_count": 0,
+    "fully_distinguishing_count": 0
+  },
+  "interpretation": [
+    "A marked structure can orient a selected pair without selecting global cycle chirality.",
+    "Cycle chirality can be selected while some non-reflection automorphism remains.",
+    "Full distinguishing colorings are a stronger requirement than either task.",
+    "The informational symmetry-breaking budget is operation-relative."
+  ],
+  "nonclaim": "Exact group-action enumeration only; marks are not assigned physical temporal meaning."
+}
