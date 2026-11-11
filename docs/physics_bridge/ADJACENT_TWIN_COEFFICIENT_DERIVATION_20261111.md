@@ -4,7 +4,8 @@
 **Author:** Felipe Gianini Romero  
 **Status:** analytic coefficient derivation + exact two-point numerical validation  
 **Proof status:** leading constants derived; global small-(D) domination/remainder lemma still open  
-**Claim discipline:** the constants below are not promoted to theorem status until that final analytic step is closed
+**Claim discipline:** the constants below are not promoted to theorem status until that final analytic step is closed  
+**Formal algebra status:** PASS — Lean 4/mathlib CI run 43121445051 completed successfully for `PhysicalBridgeTwinCoefficientAlgebra`; this validates only the encoded algebraic identities, not the open asymptotic domination lemma
 
 ## 1. Problem
 
