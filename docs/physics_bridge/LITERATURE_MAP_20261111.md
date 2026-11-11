@@ -664,3 +664,43 @@ DOI: https://doi.org/10.1088/1367-2630/18/6/063032
 The framework emphasizes autonomous mechanisms and interventions and identifies causal influence with the possibility of changing statistics at one event through intervention at another.
 
 **Use here:** the direction obtained by signalling relies on declared intervention structure; it is not extracted from passive symmetric data for free.
+
+
+## 54. Distinguishing labels and cycle symmetry breaking
+
+Michael O. Albertson and Karen L. Collins, **“Symmetry Breaking in Graphs,”** *Electronic Journal of Combinatorics* **3** (1996), R18.  
+DOI: https://doi.org/10.37236/1242
+
+A labeling is distinguishing when no nontrivial graph automorphism preserves all labels. For cycle graphs,
+
+$$
+D(C_n)=3\quad(n=3,4,5),
+$$
+
+and
+
+$$
+D(C_n)=2\quad(n\ge6).
+$$
+
+**Use here:** A22's binary-alphabet lower bound does not imply binary marks are sufficient to break the automorphism group of every primitive structure.
+
+## 55. Graph Hodge decomposition and cyclic edge information
+
+Xiaoye Jiang, Lek-Heng Lim, Yuan Yao, and Yinyu Ye, **“Statistical ranking and combinatorial Hodge theory,”** *Mathematical Programming* **127** (2011), 203-244.  
+DOI: https://doi.org/10.1007/s10107-010-0419-x
+
+The work decomposes edge flows into gradient and cyclic components using combinatorial Hodge theory.
+
+**Use here:** nonzero loop circulation is classical non-gradient edge information. A scalar vertex potential cannot represent it.
+
+## 56. Gauge-invariant currents and cycle affinities
+
+Artur Wachtel, Jürgen Vollmer, and Bernhard Altaner, **“Fluctuating currents in stochastic thermodynamics. I. Gauge invariance of asymptotic statistics,”** *Physical Review E* **92**, 042132 (2015).  
+DOI: https://doi.org/10.1103/PhysRevE.92.042132
+
+Cycle-current observables in Markov jump networks have a natural gauge structure and connect to the Schnakenberg cycle decomposition.
+
+**Use here:** gauge-invariant closed-loop information in a transition network is established stochastic-thermodynamic structure.
+
+**Boundary:** a thermodynamic cycle affinity presupposes a dynamical transition model and is not a derivation of time.
