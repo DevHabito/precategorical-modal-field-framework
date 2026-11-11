@@ -1,5 +1,9 @@
 # Physical Bridge Pilot
 
+## Canonical current summary
+
+Start with **PHYSICAL_BRIDGE_V1_SYNTHESIS_20261111.md**. It consolidates the current physical-bridge claims, corrections, classical identifications, formal-verification status, and empirical boundary. The other files in this directory are component proofs, audits, preregistrations, or provenance notes.
+
 This directory records a controlled attempt to connect the repository's provisional informational architecture
 
 $$
