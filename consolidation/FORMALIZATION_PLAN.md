@@ -204,3 +204,14 @@ Status:
 - GitHub Actions run: 744.
 
 No physical arrow-of-time mechanism is formalized.
+
+
+### PhysicalBridgeQDirectionGauge — COMPLETE AT GAUGE-ALGEBRA SCOPE
+
+Status: pinned build PASS; placeholder rejection PASS; leanchecker PASS; GitHub Actions run 749.
+
+### PhysicalBridgeQCycleCirculation — COMPLETE AT FINITE CYCLE-ALGEBRA SCOPE
+
+Status: pinned build PASS; placeholder rejection PASS; leanchecker PASS; GitHub Actions run 752.
+
+These modules certify only the rational gauge identities. The stochastic-thermodynamic, Hodge, and pregeometric interpretations remain outside the formalized scope.
