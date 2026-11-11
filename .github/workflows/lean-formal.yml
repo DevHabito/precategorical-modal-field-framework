@@ -93,6 +93,7 @@ jobs:
           - PrecategoryFormal.PhysicalBridgeSectorSelection
           - PrecategoryFormal.PhysicalBridgeOrientationDoublet
           - PrecategoryFormal.PhysicalBridgeInvariantMarkOrbit
+          - PrecategoryFormal.PhysicalBridgeBipartiteOrientation
     steps:
       - name: Checkout
         uses: actions/checkout@v6
