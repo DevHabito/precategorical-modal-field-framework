@@ -22,6 +22,8 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **MULTIELECTRON_DOT_TRANSFORM_NONCLOSURE_20261111.md** — exact transform-evolution bridge derived from the published 2026 multi-electron master equation.
 - **MULTIELECTRON_SCALAR_CLOSURE_PREREGISTRATION_20261111.md** — frozen held-out protocol for \(\lambda=c\), \(2c\), and the noncommensurate control \(3c/2\).
 - **EXPONENTIAL_OBSERVABLE_CLOSURE_CLASSIFICATION_20261111.md** — necessity, sufficiency, and minimality of finite pure-exponential closures, plus the stationary score identity.
+- **OBSERVABLE_SELECTIVE_CLOSURE_20261111.md** — exact comparison showing mean nonclosure versus scalar closure of the physically tuned exponential transform.
+- **observable_selective_closure_exact.py** — rational three-state nonclosure audit.
 - **multielectron_transform_nonclosure_exact.py** — exact four-state witness.
 - **multielectron_transform_nonclosure_results.json** — frozen witness output.
 - **multielectron_commensurate_closure_exact.py** — exact rational audit of the commensurate transform ladder.
