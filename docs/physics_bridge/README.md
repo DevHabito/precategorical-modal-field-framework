@@ -123,3 +123,5 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **OPERATION_RELATIVE_SYMMETRY_BREAKING_20261111.md** — separates local pair orientation, global cycle chirality, and full distinguishing symmetry budgets.
 - **ORIENTABILITY_NOT_POLARITY_20261111.md** — exact marked-cycle audit showing that invariant acyclic orientation can exist without selecting a physical global polarity.
 - **LAW_LEVEL_POLARITY_AUDIT_20261111.md** — BABAR T-violation benchmark completing the distinction between law-level, boundary-state, operational, and loop polarity.
+
+- **RESOURCE_CONVERTIBILITY_R_SEMANTICS_20261111.md** — first clean non-temporal semantics for directed R: operational convertibility passes anti-circularity but does not imply causal/temporal precedence.
