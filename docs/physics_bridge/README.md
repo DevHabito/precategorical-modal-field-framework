@@ -22,6 +22,8 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **MULTIELECTRON_DOT_TRANSFORM_NONCLOSURE_20261111.md** — exact transform-evolution bridge derived from the published 2026 multi-electron master equation.
 - **multielectron_transform_nonclosure_exact.py** — exact four-state witness.
 - **multielectron_transform_nonclosure_results.json** — frozen witness output.
+- **multielectron_commensurate_closure_exact.py** — exact rational audit of the commensurate transform ladder.
+- **multielectron_commensurate_closure_results.json** — frozen closure-audit output.
 - **PHYSICAL_BRIDGE_LEDGER.md** — evidence/status ledger kept separate from mathematical claims.
 - **NEXT_SYSTEM_SELECTION_20261111.md** — target-selection and reproducibility status.
 - **LITERATURE_MAP_20261111.md** — literature boundary for stochastic thermodynamics, birth-death transforms, and closure.
@@ -51,7 +53,7 @@ The first exact pilot reduces the provisional architecture rather than confirmin
 
 Bridge 1A shows that a real two-state electronic experiment admits a non-circular operational mapping, but it cannot test C2.
 
-Bridge 1B derives from a published multi-electron master equation an exact transform shift: one exponential transform generally couples to another transform at a shifted parameter. A four-state exact witness exposes the resulting closure problem.
+Bridge 1B derives from a published multi-electron master equation an exact transform shift: one exponential transform generally couples to another transform at a shifted parameter. A four-state exact witness exposes the resulting closure problem. The same identity also reveals an exact positive result: at transform parameters \(\lambda=mc\), with \(c=2\beta E_{\rm C}\), the natural hierarchy closes after \(m\) levels; \(\lambda=c\) gives scalar closure.
 
 This is still an analytic bridge. Raw experimental data for the 2026 system are not publicly available, so no empirical validation is claimed.
 
