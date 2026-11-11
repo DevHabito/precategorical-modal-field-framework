@@ -1,0 +1,40 @@
+{
+  "audit": "BOUNDARY_STATE_ARROW_SELECTION_V1",
+  "status": "PASS",
+  "kernel": [
+    [
+      "3/4",
+      "1/4",
+      "0"
+    ],
+    [
+      "1/4",
+      "1/2",
+      "1/4"
+    ],
+    [
+      "0",
+      "1/4",
+      "3/4"
+    ]
+  ],
+  "stationary_distribution": [
+    "1/3",
+    "1/3",
+    "1/3"
+  ],
+  "one_step_left_drift": "1/4",
+  "one_step_right_drift": "-1/4",
+  "exact_mode_factor": "3/4",
+  "checked_steps": 12,
+  "exact_relations": [
+    "pi_R K^n = reflection(pi_L K^n) for n=0..12",
+    "<x>_L,n = 1-(3/4)^n for n=0..12",
+    "<x>_R,n = 1+(3/4)^n for n=0..12"
+  ],
+  "nonclaims": [
+    "Exact finite symmetry-selection regression only.",
+    "The Markov step index is already temporal/update structure.",
+    "No claim that the witness derives time or proves the cosmological Past Hypothesis."
+  ]
+}
