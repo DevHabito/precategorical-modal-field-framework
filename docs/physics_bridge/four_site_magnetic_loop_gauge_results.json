@@ -1,0 +1,73 @@
+{
+  "audit": "FOUR_SITE_MAGNETIC_LOOP_GAUGE_V1",
+  "status": "PASS",
+  "site_count": 4,
+  "J": 1,
+  "gauge_vector": [
+    0.3,
+    -0.7,
+    1.1,
+    -0.2
+  ],
+  "cases": [
+    {
+      "loop_phase": 0,
+      "base_phase_sum": 0,
+      "gauge_phase_sum": 0,
+      "unitary_conjugation_error": 2.3551386880256624e-16,
+      "maximum_spectrum_error": 0,
+      "spectrum": [
+        -2,
+        0,
+        6.938893903907228e-18,
+        2
+      ]
+    },
+    {
+      "loop_phase": 1.0471975511965976,
+      "base_phase_sum": 1.0471975511965976,
+      "gauge_phase_sum": 1.0471975511965974,
+      "unitary_conjugation_error": 4.1474042262369964e-16,
+      "maximum_spectrum_error": 8.881784197001252e-16,
+      "spectrum": [
+        -1.9318516525781368,
+        -0.5176380902050416,
+        0.5176380902050424,
+        1.931851652578137
+      ]
+    },
+    {
+      "loop_phase": 1.5707963267948966,
+      "base_phase_sum": 1.5707963267948966,
+      "gauge_phase_sum": 1.5707963267948966,
+      "unitary_conjugation_error": 3.2308729932603075e-16,
+      "maximum_spectrum_error": 4.440892098500626e-16,
+      "spectrum": [
+        -1.8477590650225737,
+        -0.7653668647301796,
+        0.7653668647301802,
+        1.8477590650225728
+      ]
+    },
+    {
+      "loop_phase": 3.141592653589793,
+      "base_phase_sum": 3.141592653589793,
+      "gauge_phase_sum": 3.141592653589793,
+      "unitary_conjugation_error": 4.406061034464155e-16,
+      "maximum_spectrum_error": 2.220446049250313e-16,
+      "spectrum": [
+        -1.4142135623730954,
+        -1.4142135623730947,
+        1.414213562373095,
+        1.4142135623730951
+      ]
+    }
+  ],
+  "maximum_unitary_conjugation_error": 4.406061034464155e-16,
+  "maximum_spectrum_error": 8.881784197001252e-16,
+  "nonclaims": [
+    "Classical tight-binding/Peierls gauge regression only.",
+    "No identification between the repository q field and electromagnetic vector potential.",
+    "No claim that magnetic holonomy is time or explains the origin of time."
+  ]
+}
