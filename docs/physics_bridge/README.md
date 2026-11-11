@@ -110,3 +110,4 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **cycle_distinguishing_budget_audit.py** / **cycle_distinguishing_budget_results.json** — exhaustive cycle-coloring regression reproducing the classical distinguishing numbers.
 - **C1_CYCLE_SPACE_AUDIT_20261111.md** — computes the one-dimensional gauge-invariant cycle-space quotient of both C1 witness skeletons.
 - **c1_cycle_space_audit.py** / **c1_cycle_space_results.json** — exact finite cycle-rank regression for graphA and graphB skeletons.
+- **CALIBRATED_MARK_NOT_TIME_AUDIT_20261111.md** — uses the reversible Markov and single-electron-box bridges to show that an operational quantitative mark can break symmetry without becoming temporal rank or duration.
