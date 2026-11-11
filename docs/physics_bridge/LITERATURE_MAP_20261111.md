@@ -338,3 +338,23 @@ Representative modern references include work on memory effects in coarse-graine
 **Use here:** the hidden-phase covariance/Fourier hierarchy is a concrete finite physical example of a general coarse-graining phenomenon.
 
 **Novelty boundary:** the principle “discarded variables generate memory or extra information requirements” is not a project discovery.
+
+
+## 26. Quenched versus annealed external context
+
+Jonathan Dewitt and Dmitry Dolgopyat, **“On equivalence of quenched and annealed statistical properties for conservative IID random dynamical systems,”** *Probability Theory and Related Fields* (2026).  
+DOI: https://doi.org/10.1007/s00440-026-01531-8
+
+The work distinguishes quenched statements, conditioned on almost every realization of the random dynamics, from annealed statements averaged over realizations, and provides conditions relating the two.
+
+**Use here:** the distinction between conditioned/persistent external randomness and ensemble-averaged dynamics is classical.
+
+## 27. Mixtures of Markov dynamics and induced non-Markovianity
+
+Literature on mixtures of Markov processes and hidden Markov mixtures explicitly notes that the observed mixture need not itself be Markov and can acquire path dependence through hidden component weights.
+
+Recent multi-state mixture work in 2026 likewise describes generalized non-Markovianity caused by unobserved heterogeneity.
+
+**Use here:** persistent hidden context creating non-Markovian marginal dynamics is established background.
+
+**Novelty boundary:** no claim is made for the general idea that a hidden persistent environment destroys Markovianity.
