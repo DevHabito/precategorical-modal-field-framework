@@ -1,31 +1,34 @@
 # Physical Bridge Pilot
 
-This directory begins a controlled attempt to connect the repository's provisional informational architecture
+This directory records a controlled attempt to connect the repository's provisional informational architecture
 
-[
-(R,q,mu,K,pi)
-]
+$$
+(R,q,\mu,K,\pi)
+$$
 
 to established physical models.
 
-The purpose is not to declare a physical interpretation for the framework. The purpose is to ask a narrower question:
+The purpose is not to declare a physical interpretation for the framework. The question is narrower:
 
-> In a physical system whose variables already have an accepted operational meaning, which parts of ((R,q,mu,K,pi)) are independently observable, which can be derived from other parts, which are representation-dependent, and which remain necessary?
-
-The first test bed is a finite continuous-time Markov jump process in stochastic thermodynamics.
+> In a physical system whose variables already have accepted operational meanings, which roles are independently observable, which are derivable from other roles, which are representation-dependent, and which remain necessary?
 
 ## Files
 
-- `MARKOV_THERMAL_PILOT_20261111.md` — statement of the physical pilot, exact calculations, interpretation, failure modes, and next tests.
-- `LITERATURE_MAP_20261111.md` — literature used to keep the bridge inside established stochastic thermodynamics.
-- `markov_thermal_pilot_exact.py` — dependency-free exact arithmetic audit.
-- `markov_thermal_pilot_results.json` — frozen output of the exact audit.
-- `PHYSICAL_BRIDGE_LEDGER.md` — separate status ledger for exact diagnostics, classical mappings, and open physical hypotheses.
-- `NEXT_SYSTEM_SELECTION_20261111.md` — pre-registered selection of the first published calibration and multi-state targets.
+- **MARKOV_THERMAL_PILOT_20261111.md** — exact three-state diagnostic, reduction tests, and failure criteria.
+- **markov_thermal_pilot_exact.py** — dependency-free exact audit for the three-state pilot.
+- **markov_thermal_pilot_results.json** — frozen exact output.
+- **SINGLE_ELECTRON_BOX_CALIBRATION_20261111.md** — retrospective calibration against the 2012 single-electron-box experiment.
+- **single_electron_box_mapping_exact.py** — exact event-level mapping audit.
+- **MULTIELECTRON_DOT_TRANSFORM_NONCLOSURE_20261111.md** — exact transform-evolution bridge derived from the published 2026 multi-electron master equation.
+- **multielectron_transform_nonclosure_exact.py** — exact four-state witness.
+- **multielectron_transform_nonclosure_results.json** — frozen witness output.
+- **PHYSICAL_BRIDGE_LEDGER.md** — evidence/status ledger kept separate from mathematical claims.
+- **NEXT_SYSTEM_SELECTION_20261111.md** — target-selection and reproducibility status.
+- **LITERATURE_MAP_20261111.md** — literature boundary for stochastic thermodynamics, birth-death transforms, and closure.
 
 ## Scientific rule
 
-No new physical variable or equation is introduced in this bridge unless at least one of the following requires it:
+No new physical variable or equation is introduced unless at least one of the following requires it:
 
 1. an exact obstruction;
 2. a symmetry or conservation law;
@@ -37,17 +40,19 @@ A successful fit is not enough. Every proposed bridge must also state what would
 
 ## Current status
 
-This pilot is a **diagnostic bridge**, not an empirical validation.
+The first exact pilot reduces the provisional architecture rather than confirming all of it:
 
-The exact model shows that, in a reversible thermal Markov sector:
+- \(R\) can be redundant with the support of \(K\);
+- a scalar potential-like \(q\) can be reconstructed from rate ratios only in a cycle-consistent sector;
+- equilibrium occupancy may be derived from \(K\);
+- current/transient occupancy can remain additional state information;
+- coarse-grained rates can depend on occupancy;
+- energy-like \(q\) and degeneracy-like \(\mu\) need not be separately identifiable.
 
-- the relational graph (R) is recoverable from the support of (K);
-- a scalar free-energy-like potential can be reconstructed from rate ratios only when the cycle consistency condition holds;
-- the equilibrium occupancy is determined by the reversible generator;
-- transient or externally prepared occupancy remains additional state information;
-- coarse-grained transition rates can depend on that occupancy;
-- an energy-like mark and a degeneracy measure need not be separately identifiable from equilibrium weights.
+Bridge 1A shows that a real two-state electronic experiment admits a non-circular operational mapping, but it cannot test C2.
 
-The nonequilibrium perturbation deliberately breaks the cycle condition. The failure is useful: it shows that a single state scalar cannot encode arbitrary nonequilibrium thermodynamic driving.
+Bridge 1B derives from a published multi-electron master equation an exact transform shift: one exponential transform generally couples to another transform at a shifted parameter. A four-state exact witness exposes the resulting closure problem.
 
-No spacetime, gravity, quantum, or ontological claim follows from this pilot.
+This is still an analytic bridge. Raw experimental data for the 2026 system are not publicly available, so no empirical validation is claimed.
+
+No spacetime, gravity, quantum-gravity, or ontological conclusion follows from the present bridge.
