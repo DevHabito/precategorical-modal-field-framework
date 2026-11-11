@@ -551,3 +551,22 @@ Causal-set theory takes a locally finite partial order as fundamental.
 An SCC condensation followed by reachability also yields a partial order in finite cases, but no causal interpretation follows from graph theory alone.
 
 **Use here:** structural similarity to a causet is insufficient. A physical meaning for the primitive directed relation is still required.
+
+
+## 43. Proper-time reconstruction in causal sets
+
+Causal-set literature uses longest chains between timelike-related elements as a discrete timelike-distance candidate.
+
+In Poisson sprinklings into Minkowski spacetime, longest-chain length approaches continuum proper time up to a density- and dimension-dependent scale in the appropriate limit.
+
+**Use here:** chain length becomes physically meaningful only together with a continuum correspondence, element density, and causal interpretation.
+
+**Boundary:** arbitrary graph depth in the project is not proper time.
+
+## 44. Entropy, arrow, and time are distinct questions
+
+Recent 2026 literature continues to distinguish entropy growth, irreversibility, temporal orientation, and physical time.
+
+Some proposals use entropy as an internal clock, while other work emphasizes that microscopic reversible dynamics can continue when such a clock stalls or that the thermodynamic arrow depends on coarse graining or boundary conditions.
+
+**Use here:** a monotone can be a useful clock on a restricted regime without establishing the ontological origin of time.
