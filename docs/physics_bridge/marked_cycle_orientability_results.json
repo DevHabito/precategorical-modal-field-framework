@@ -1,0 +1,146 @@
+{
+  "audit": "MARKED_CYCLE_ORIENTABILITY_V1",
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 3,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "colorings_with_invariant_acyclic_orientation": 0,
+      "total_invariant_acyclic_orientations": 0
+    },
+    {
+      "n": 3,
+      "alphabet": 2,
+      "coloring_count": 8,
+      "colorings_with_invariant_acyclic_orientation": 0,
+      "total_invariant_acyclic_orientations": 0
+    },
+    {
+      "n": 3,
+      "alphabet": 3,
+      "coloring_count": 27,
+      "colorings_with_invariant_acyclic_orientation": 6,
+      "total_invariant_acyclic_orientations": 36
+    },
+    {
+      "n": 4,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "colorings_with_invariant_acyclic_orientation": 0,
+      "total_invariant_acyclic_orientations": 0
+    },
+    {
+      "n": 4,
+      "alphabet": 2,
+      "coloring_count": 16,
+      "colorings_with_invariant_acyclic_orientation": 10,
+      "total_invariant_acyclic_orientations": 36
+    },
+    {
+      "n": 4,
+      "alphabet": 3,
+      "coloring_count": 81,
+      "colorings_with_invariant_acyclic_orientation": 66,
+      "total_invariant_acyclic_orientations": 492
+    },
+    {
+      "n": 5,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "colorings_with_invariant_acyclic_orientation": 0,
+      "total_invariant_acyclic_orientations": 0
+    },
+    {
+      "n": 5,
+      "alphabet": 2,
+      "coloring_count": 32,
+      "colorings_with_invariant_acyclic_orientation": 0,
+      "total_invariant_acyclic_orientations": 0
+    },
+    {
+      "n": 5,
+      "alphabet": 3,
+      "coloring_count": 243,
+      "colorings_with_invariant_acyclic_orientation": 120,
+      "total_invariant_acyclic_orientations": 3600
+    },
+    {
+      "n": 6,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "colorings_with_invariant_acyclic_orientation": 0,
+      "total_invariant_acyclic_orientations": 0
+    },
+    {
+      "n": 6,
+      "alphabet": 2,
+      "coloring_count": 64,
+      "colorings_with_invariant_acyclic_orientation": 44,
+      "total_invariant_acyclic_orientations": 988
+    },
+    {
+      "n": 6,
+      "alphabet": 3,
+      "coloring_count": 729,
+      "colorings_with_invariant_acyclic_orientation": 654,
+      "total_invariant_acyclic_orientations": 29160
+    },
+    {
+      "n": 7,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "colorings_with_invariant_acyclic_orientation": 0,
+      "total_invariant_acyclic_orientations": 0
+    },
+    {
+      "n": 7,
+      "alphabet": 2,
+      "coloring_count": 128,
+      "colorings_with_invariant_acyclic_orientation": 28,
+      "total_invariant_acyclic_orientations": 3528
+    },
+    {
+      "n": 7,
+      "alphabet": 3,
+      "coloring_count": 2187,
+      "colorings_with_invariant_acyclic_orientation": 1638,
+      "total_invariant_acyclic_orientations": 206388
+    },
+    {
+      "n": 8,
+      "alphabet": 1,
+      "coloring_count": 1,
+      "colorings_with_invariant_acyclic_orientation": 0,
+      "total_invariant_acyclic_orientations": 0
+    },
+    {
+      "n": 8,
+      "alphabet": 2,
+      "coloring_count": 256,
+      "colorings_with_invariant_acyclic_orientation": 202,
+      "total_invariant_acyclic_orientations": 25956
+    },
+    {
+      "n": 8,
+      "alphabet": 3,
+      "coloring_count": 6561,
+      "colorings_with_invariant_acyclic_orientation": 6258,
+      "total_invariant_acyclic_orientations": 1367628
+    }
+  ],
+  "c4_binary": {
+    "n": 4,
+    "alphabet": 2,
+    "coloring_count": 16,
+    "colorings_with_invariant_acyclic_orientation": 10,
+    "total_invariant_acyclic_orientations": 36
+  },
+  "global_reversal_pairing_checked": true,
+  "interpretation": [
+    "Marked structures can admit an automorphism-invariant acyclic orientation without being fully distinguishing.",
+    "Every invariant acyclic orientation is accompanied by its globally reversed invariant acyclic orientation.",
+    "Static orientability therefore does not by itself supply physical polarity."
+  ],
+  "nonclaim": "Exact finite combinatorics only; no temporal meaning is assigned."
+}
