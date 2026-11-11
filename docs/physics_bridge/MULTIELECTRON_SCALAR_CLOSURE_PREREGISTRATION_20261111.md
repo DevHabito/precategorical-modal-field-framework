@@ -290,3 +290,102 @@ I do not claim that:
 The exact primary test is blocked until phase-resolved raw trajectories or phase-conditioned distributions are obtained.
 
 The published phase-averaged distributions remain useful for testing the coarse-grained approximation and stationary identities, but not for promoting exact conditioned closure.
+
+
+## 12. Exact phase-averaged stroboscopic test
+
+Although continuous-time phase averaging destroys scalar closure, exact closure is recovered at integer multiples of the drive period.
+
+Let
+
+$$
+T=\frac{2\pi}{\omega},
+\qquad
+q=e^{-c},
+$$
+
+and define
+
+$$
+\mu_1
+=
+\exp[-(1-q)\Gamma_0T I_0(A)].
+$$
+
+For each fixed phase, the one-period map has the form
+
+$$
+G_{c,\phi}((n+1)T)
+=
+\mu_1G_{c,\phi}(nT)
++
+C_\phi.
+$$
+
+The homogeneous multiplier is phase-independent.
+
+Averaging over the randomized phase therefore gives the exact recurrence
+
+$$
+\bar G_{c,n+1}
+=
+\mu_1\bar G_{c,n}
++
+\bar C.
+$$
+
+Eliminating the unknown intercept,
+
+$$
+\boxed{
+\bar G_{c,n+2}
+-
+(1+\mu_1)\bar G_{c,n+1}
++
+\mu_1\bar G_{c,n}
+=
+0.
+}
+$$
+
+This is now the primary exact test available from phase-averaged distributions sampled at integer multiples of \(T\).
+
+The multiplier \(\mu_1\) is fixed from the independently calibrated physical parameters. It will not be fitted from the transform sequence.
+
+## 13. Exact \(2c\) stroboscopic recurrence
+
+Define
+
+$$
+\mu_2
+=
+\exp[-(1-q^2)\Gamma_0T I_0(A)].
+$$
+
+Then the phase-averaged \(G_{2c}\) sequence at \(nT\) must satisfy
+
+$$
+\boxed{
+\bar G_{2c,n+3}
+-
+(1+\mu_1+\mu_2)\bar G_{2c,n+2}
++
+(\mu_1+\mu_2+\mu_1\mu_2)\bar G_{2c,n+1}
+-
+\mu_1\mu_2\bar G_{2c,n}
+=
+0.
+}
+$$
+
+This follows from the common characteristic polynomial of the lower-triangular one-period monodromy matrices.
+
+## 14. Evidence hierarchy after the phase correction
+
+The empirical tests now have three levels.
+
+1. **Exact phase-conditioned continuous-time test:** requires phase-resolved data.
+2. **Exact phase-averaged stroboscopic test:** requires only phase-averaged distributions at integer periods.
+3. **Approximate phase-averaged continuous-time test:** evaluates the paper's averaged-rate approximation.
+
+These evidence classes must be reported separately.
