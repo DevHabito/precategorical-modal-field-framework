@@ -21,6 +21,7 @@ The first test bed is a finite continuous-time Markov jump process in stochastic
 - `markov_thermal_pilot_exact.py` — dependency-free exact arithmetic audit.
 - `markov_thermal_pilot_results.json` — frozen output of the exact audit.
 - `PHYSICAL_BRIDGE_LEDGER.md` — separate status ledger for exact diagnostics, classical mappings, and open physical hypotheses.
+- `NEXT_SYSTEM_SELECTION_20261111.md` — pre-registered selection of the first published calibration and multi-state targets.
 
 ## Scientific rule
 
