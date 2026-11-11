@@ -3,7 +3,7 @@
   "status": "PASS",
   "n_range": [
     2,
-    7
+    8
   ],
   "distribution_summary": {
     "2": {
@@ -100,6 +100,33 @@
       "P_k_at_most_2_given_nonempty": "2798/5039",
       "P_k_at_most_3_given_nonempty": "3796/5039",
       "maximum_k": 21
+    },
+    "8": {
+      "permutations": 40320,
+      "empty_antichain_count": 1,
+      "nonempty_k_histogram": {
+        "1": 8464,
+        "2": 12942,
+        "3": 8568,
+        "4": 4713,
+        "5": 3006,
+        "6": 693,
+        "7": 1089,
+        "8": 315,
+        "9": 156,
+        "10": 102,
+        "11": 171,
+        "12": 18,
+        "13": 18,
+        "15": 36,
+        "16": 18,
+        "21": 9,
+        "28": 1
+      },
+      "mean_k_given_nonempty": "114035/40319",
+      "P_k_at_most_2_given_nonempty": "21406/40319",
+      "P_k_at_most_3_given_nonempty": "29974/40319",
+      "maximum_k": 28
     }
   },
   "refinement_summary": {
@@ -142,6 +169,14 @@
       "P_k_unchanged": "2497/5040",
       "P_abs_change_at_most_1": "1433/1680",
       "mean_absolute_change": "887/1260"
+    },
+    "7": {
+      "parent_size": 7,
+      "child_size": 8,
+      "transition_count": 322560,
+      "P_k_unchanged": "859/1680",
+      "P_abs_change_at_most_1": "1929/2240",
+      "mean_absolute_change": "27413/40320"
     }
   },
   "interpretation": [
