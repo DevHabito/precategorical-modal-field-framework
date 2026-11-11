@@ -147,3 +147,6 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 
 - **MINKOWSKI_2D_UPO_MODULAR_DIAGNOSIS_20261111.md** — replaces black-box orientation counting with the classical modular UPO criterion and extends exact random-2-order recovery counts through N=9.
 - **minkowski_2d_upo_modular_audit.py** / **minkowski_2d_upo_modular_results.json** — exact modular classification of recoverable, internally ambiguous, disconnected, and empty cases.
+
+- **RANDOM_2_ORDER_UPO_SUBSTITUTION_THEOREM_20261111.md** — substitution-decomposition classification and exact counting formulas for recoverable random 2-orders; derives the asymptotic recovery probability `1/e` from classical simple-permutation asymptotics, with priority explicitly uncertified.
+- **random_2_order_upo_substitution_audit.py** / **random_2_order_upo_substitution_results.json** — independent exact regression of simple, connected-UPO, and total recovery counts through N=9.
