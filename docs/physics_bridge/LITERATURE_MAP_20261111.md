@@ -384,3 +384,27 @@ Related predictive-state representations give an analogous language for controll
 **Use here:** the problem of finding a minimal history-based predictive state is established theory.
 
 **Novelty boundary:** do not introduce a renamed minimal-memory state without comparison against causal-state and predictive-state literature.
+
+
+## 30. Lumpability and exact reduction
+
+Bernhard C. Geiger, **“Information-theoretic reduction of Markov chains,”** *Computer Science Review* **59**, 100802 (2026).  
+DOI: https://doi.org/10.1016/j.cosrev.2025.100802
+
+The review separates coarse graining from model reduction and discusses lumpability as the case in which a projection yields a reduced Markov model.
+
+**Use here:** exact reduced Markov closure under a projection is classical and should be described in lumpability language where applicable.
+
+Udo Seifert, **“Coarse-Graining,”** in *Stochastic Thermodynamics* (Cambridge University Press, 2025), pp. 324–337.  
+DOI: https://doi.org/10.1017/9781009024358.018
+
+**Use here:** physical coarse-graining loses information and generally changes what thermodynamic quantities can be inferred.
+
+## 31. Current stochastic coarse-graining theory
+
+Hong Duong, Carsten Hartmann, and Michela Ottobre, **“Coarse Graining of Stochastic Differential Equations: Averaging and Projection Method,”** *SIAM Journal on Mathematical Analysis* **58** (2026), 5880–5917.  
+DOI: https://doi.org/10.1137/25M1770114
+
+The paper compares averaging and projection-based coarse graining, gives sufficient conditions for agreement, and supplies counterexamples showing that even perfect scale separation does not make the two procedures automatically identical.
+
+**Use here:** averaging and projection must not be treated as interchangeable operations without proof.
