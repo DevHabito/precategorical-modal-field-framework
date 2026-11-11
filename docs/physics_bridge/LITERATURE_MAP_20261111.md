@@ -317,3 +317,24 @@ Floquet and monodromy methods for periodically forced Markov systems are establi
 **Use here:** the phase-independent one-period multipliers and Cayley-Hamilton recurrence are applications of classical Floquet theory to the bridge hierarchy.
 
 **Not claimed:** a new Floquet theorem or a new theory of periodically driven Markov chains.
+
+
+## 24. Random-phase Floquet precedent
+
+P. Jung and P. Hänggi, **“Stochastic Nonlinear Dynamics Modulated by External Periodic Forces,”** *Europhysics Letters* **8** (1989), 505.
+
+The work develops stochastic dynamics with periodic forcing and uses generalized Floquet theory after averaging over a random phase.
+
+**Use here:** random-phase averaging combined with Floquet structure has direct classical precedent.
+
+**Novelty boundary:** the bridge must not claim that random-phase averaging or Floquet analysis of stochastic dynamics is new.
+
+## 25. Mori-Zwanzig coarse-graining boundary
+
+The Mori-Zwanzig projection formalism provides a broad classical explanation for why eliminating unresolved degrees of freedom can generate memory and non-Markovian reduced dynamics.
+
+Representative modern references include work on memory effects in coarse-grained molecular models and recent structural studies of Markovian embeddings of exact projected dynamics.
+
+**Use here:** the hidden-phase covariance/Fourier hierarchy is a concrete finite physical example of a general coarse-graining phenomenon.
+
+**Novelty boundary:** the principle “discarded variables generate memory or extra information requirements” is not a project discovery.
