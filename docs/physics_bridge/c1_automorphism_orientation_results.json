@@ -1,0 +1,49 @@
+{
+  "audit": "C1_AUTOMORPHISM_ORIENTATION_V1",
+  "status": "PASS",
+  "vertex_count": 5,
+  "graphA": {
+    "directed_edges": [[0, 2], [2, 3], [3, 4], [4, 0]],
+    "directed_automorphism_count": 4,
+    "undirected_skeleton_automorphism_count": 8,
+    "edge_reverse_in_same_orbit_directed": {
+      "0->2": false, "2->3": false, "3->4": false, "4->0": false
+    },
+    "edge_reverse_in_same_orbit_skeleton": {
+      "0->2": true, "2->3": true, "3->4": true, "4->0": true
+    },
+    "ordered_pair_counts_directed": {
+      "reverse_same_orbit": 4,
+      "reverse_separate_orbit": 16
+    },
+    "ordered_pair_counts_skeleton": {
+      "reverse_same_orbit": 12,
+      "reverse_separate_orbit": 8
+    }
+  },
+  "graphB": {
+    "directed_edges": [[0, 2], [1, 4], [2, 3], [3, 0], [4, 1]],
+    "directed_automorphism_count": 6,
+    "undirected_skeleton_automorphism_count": 12,
+    "edge_reverse_in_same_orbit_directed": {
+      "0->2": false, "1->4": true, "2->3": false, "3->0": false, "4->1": true
+    },
+    "edge_reverse_in_same_orbit_skeleton": {
+      "0->2": true, "1->4": true, "2->3": true, "3->0": true, "4->1": true
+    },
+    "ordered_pair_counts_directed": {
+      "reverse_same_orbit": 2,
+      "reverse_separate_orbit": 18
+    },
+    "ordered_pair_counts_skeleton": {
+      "reverse_same_orbit": 8,
+      "reverse_separate_orbit": 12
+    }
+  },
+  "interpretation": [
+    "Reverse-separated ordered-pair orbits mean only that an automorphism-invariant asymmetric relation could distinguish the pair; they do not supply physical temporal meaning.",
+    "For graphA every directed cycle edge becomes reverse-equivalent after arrow removal, so its orientation is information contained in the directed relation rather than the undirected skeleton.",
+    "For graphB the one-way triangle edges become reverse-equivalent after arrow removal; the bidirectional 1<->4 pair is reverse-equivalent already in the directed graph.",
+    "This is an exact exhaustive permutation audit over all 5! vertex relabelings."
+  ]
+}
