@@ -38,6 +38,7 @@ This ledger is intentionally separate from the mathematical claim ledger. It tra
 | PB-P2 | The repository's C2 non-closure theorem has a measurable thermodynamic consequence. | OPEN PHYSICAL HYPOTHESIS | none | not established | first derive a valid physical update matching C2 |
 | PB-P3 | The informational architecture yields a new physical prediction. | OPEN | none | no prediction yet | complete a genuine held-out test |
 | PB-T1 | Blackwell/degradation order cannot serve as a universal emergent time: reversible deterministic channels can evolve through distinct stages while remaining Blackwell-equivalent. | PREGEOMETRIC CANDIDATE REJECTED | exact two-state permutation counterexample + classical Blackwell theory | information degradation is not synonymous with temporal change | retain Blackwell only as an information-comparison diagnostic |
+| PB-T2 | Observational conditional-independence structure cannot uniquely generate temporal direction in general because distinct DAG orientations can be Markov equivalent. | PREGEOMETRIC CANDIDATE REJECTED AT OBSERVATIONAL LEVEL | classical three-node Markov-equivalence obstruction | direction requires interventions or additional assumptions | retain CI as a screening/ruling-out tool, not a unique time generator |
 | PB-P4 | Any present bridge supports spacetime or pregeometric physics. | NOT ESTABLISHED | none | no such inference is licensed | requires a separate later bridge |
 
 ## Allowed labels
