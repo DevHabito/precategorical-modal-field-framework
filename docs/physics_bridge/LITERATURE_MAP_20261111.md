@@ -294,3 +294,26 @@ Jacob Stordal Christiansen, **“The moment problem associated with the Stieltje
 DOI: https://doi.org/10.1016/S0022-247X(02)00534-6
 
 **Use here:** classical indeterminate moment-problem and discrete-measure context for the same polynomial family.
+
+
+## 22. Modified-Bessel Fourier expansion
+
+NIST Digital Library of Mathematical Functions, §10.35, records the Jacobi-Anger expansions for modified Bessel functions, including
+
+$$
+e^{z\cos\theta}
+=
+I_0(z)+2\sum_{n\ge1}I_n(z)\cos(n\theta).
+$$
+
+For positive real \(z\), \(I_n(z)>0\).
+
+**Use here:** the sinusoidal exponential entry rate has infinitely many nonzero Fourier harmonics for nonzero drive amplitude. This is classical special-function structure.
+
+## 23. Floquet context for periodically driven Markov processes
+
+Floquet and monodromy methods for periodically forced Markov systems are established. They are used, for example, in transition statistics and in large-deviation/current-fluctuation theory for periodically driven stochastic systems.
+
+**Use here:** the phase-independent one-period multipliers and Cayley-Hamilton recurrence are applications of classical Floquet theory to the bridge hierarchy.
+
+**Not claimed:** a new Floquet theorem or a new theory of periodically driven Markov chains.
