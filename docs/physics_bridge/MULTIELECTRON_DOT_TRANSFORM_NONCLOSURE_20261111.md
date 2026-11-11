@@ -615,7 +615,7 @@ No novelty claim is attached to the finite closure ladder until specialized gene
 
 ## 16. Independent stationary-distribution consistency gate
 
-The published phase-averaged model also gives the stationary distribution
+Under the paper's time-averaged-rate approximation, the phase-averaged model gives the stationary distribution
 
 $$
 \rho_N^{\rm ss}
@@ -707,7 +707,7 @@ e^{a\sum_{j=1}^k(2j-1)}
 \left(\frac{\Gamma_0}{\Gamma^+}\right)^k e^{ak^2}.
 $$
 
-The master-equation closure and the published stationary Gaussian therefore give the same transform values by independent algebraic routes.
+Within the averaged-rate coarse-grained model, the transform closure and its stationary discrete-Gaussian solution give the same transform values by independent algebraic routes.
 
 For \(k=1\),
 
@@ -779,3 +779,31 @@ $$
 $$
 
 As in the other audits, this checks the algebra; it is not experimental evidence.
+
+
+## 18. Scope correction for randomized phase
+
+The transform-shift identity is exact for the master equation at a specified drive phase or deterministic drive history.
+
+The experiment randomizes phase between repetitions. Averaging the exact conditioned equations introduces correlations such as
+
+$$
+\operatorname{Cov}_\phi
+(\Gamma_\phi^+,G_{\lambda,\phi}),
+$$
+
+so a closed conditioned transform system does not automatically remain closed after phase averaging.
+
+The replacement
+
+$$
+\Gamma^+(t)\approx\Gamma_0 I_0(\beta eS_{\rm AC})
+$$
+
+belongs to the paper's coarse-grained averaged-rate treatment.
+
+Therefore:
+
+- the generator identities and finite transform ladders remain exact at fixed phase;
+- stationary formulas using the constant averaged rate are exact inside that approximating model;
+- promotion of exact experimental closure requires phase-resolved information.
