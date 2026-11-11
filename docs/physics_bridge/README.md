@@ -100,3 +100,6 @@ No spacetime, gravity, quantum-gravity, or ontological conclusion follows from t
 - **C1_LABEL_INVARIANCE_AUDIT_20261111.md** — separates the canonical SCC quotient from C1's label-dependent minimum-representative encoding convention.
 - **DIRECTED_RELATION_ASSUMPTION_AUDIT_20261111.md** — prevents a directed primitive R from being relabeled as emergent temporal direction without non-temporal arrow semantics.
 - **PREGEOMETRIC_FRONTIER_MAP_20261111.md** — canonical map of rejected/classical/conditional routes and the next finite research questions.
+
+- **c1_automorphism_orientation_audit.py** — exhaustive 5! permutation audit comparing automorphism-orbits of the directed C1 witnesses with their undirected skeletons.
+- **c1_automorphism_orientation_results.json** — frozen F1 results showing that the one-way witness orientations are not recoverable canonically after arrow removal.
