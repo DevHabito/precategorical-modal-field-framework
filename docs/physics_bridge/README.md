@@ -25,6 +25,8 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **multielectron_transform_nonclosure_results.json** — frozen witness output.
 - **multielectron_commensurate_closure_exact.py** — exact rational audit of the commensurate transform ladder.
 - **multielectron_commensurate_closure_results.json** — frozen closure-audit output.
+- **multielectron_stationary_transform_consistency_exact.py** — rational check that the stationary Gaussian and triangular hierarchy give the same transforms.
+- **multielectron_stationary_transform_consistency_results.json** — frozen stationary-consistency output.
 - **PHYSICAL_BRIDGE_LEDGER.md** — evidence/status ledger kept separate from mathematical claims.
 - **NEXT_SYSTEM_SELECTION_20261111.md** — target-selection and reproducibility status.
 - **LITERATURE_MAP_20261111.md** — literature boundary for stochastic thermodynamics, birth-death transforms, and closure.
