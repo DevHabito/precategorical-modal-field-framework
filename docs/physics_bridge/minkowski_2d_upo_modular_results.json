@@ -1,0 +1,128 @@
+{
+  "audit": "MINKOWSKI_2D_UPO_MODULAR_V1",
+  "status": "PASS",
+  "n_range": [
+    2,
+    9
+  ],
+  "summary": {
+    "2": {
+      "permutations": 2,
+      "upo_recoverable": 1,
+      "internal_module_ambiguity": 0,
+      "multiple_nontrivial_components": 0,
+      "empty_antichain": 1,
+      "recovery_fraction": "1/2",
+      "recovery_decimal": 0.5,
+      "minimum_bad_module_size_histogram": {}
+    },
+    "3": {
+      "permutations": 6,
+      "upo_recoverable": 4,
+      "internal_module_ambiguity": 1,
+      "multiple_nontrivial_components": 0,
+      "empty_antichain": 1,
+      "recovery_fraction": "2/3",
+      "recovery_decimal": 0.6666666666666666,
+      "minimum_bad_module_size_histogram": {
+        "2": 1
+      }
+    },
+    "4": {
+      "permutations": 24,
+      "upo_recoverable": 12,
+      "internal_module_ambiguity": 10,
+      "multiple_nontrivial_components": 1,
+      "empty_antichain": 1,
+      "recovery_fraction": "1/2",
+      "recovery_decimal": 0.5,
+      "minimum_bad_module_size_histogram": {
+        "2": 10
+      }
+    },
+    "5": {
+      "permutations": 120,
+      "upo_recoverable": 38,
+      "internal_module_ambiguity": 72,
+      "multiple_nontrivial_components": 9,
+      "empty_antichain": 1,
+      "recovery_fraction": "19/60",
+      "recovery_decimal": 0.31666666666666665,
+      "minimum_bad_module_size_histogram": {
+        "2": 57,
+        "3": 11,
+        "4": 4
+      }
+    },
+    "6": {
+      "permutations": 720,
+      "upo_recoverable": 165,
+      "internal_module_ambiguity": 494,
+      "multiple_nontrivial_components": 60,
+      "empty_antichain": 1,
+      "recovery_fraction": "11/48",
+      "recovery_decimal": 0.22916666666666666,
+      "minimum_bad_module_size_histogram": {
+        "2": 369,
+        "3": 64,
+        "4": 33,
+        "5": 28
+      }
+    },
+    "7": {
+      "permutations": 5040,
+      "upo_recoverable": 1042,
+      "internal_module_ambiguity": 3613,
+      "multiple_nontrivial_components": 384,
+      "empty_antichain": 1,
+      "recovery_fraction": "521/2520",
+      "recovery_decimal": 0.20674603174603173,
+      "minimum_bad_module_size_histogram": {
+        "2": 2664,
+        "3": 423,
+        "4": 178,
+        "5": 156,
+        "6": 192
+      }
+    },
+    "8": {
+      "permutations": 40320,
+      "upo_recoverable": 8464,
+      "internal_module_ambiguity": 29280,
+      "multiple_nontrivial_components": 2575,
+      "empty_antichain": 1,
+      "recovery_fraction": "529/2520",
+      "recovery_decimal": 0.20992063492063492,
+      "minimum_bad_module_size_histogram": {
+        "2": 21956,
+        "3": 3054,
+        "4": 1051,
+        "5": 751,
+        "6": 980,
+        "7": 1488
+      }
+    },
+    "9": {
+      "permutations": 362880,
+      "upo_recoverable": 80020,
+      "internal_module_ambiguity": 264156,
+      "multiple_nontrivial_components": 18703,
+      "empty_antichain": 1,
+      "recovery_fraction": "4001/18144",
+      "recovery_decimal": 0.2205136684303351,
+      "minimum_bad_module_size_histogram": {}
+    }
+  },
+  "exact_conclusions": [
+    "The classical modular UPO criterion exactly reproduces the previous direct-orientation UPO counts through N=7.",
+    "Exact enumeration extends the random-2-order recovery statistic to N=8 and N=9.",
+    "The finite recovery fraction is not monotone: it rises at N=8 and again at N=9.",
+    "Internal non-stable modules are the dominant failure mode in the audited range."
+  ],
+  "nonclaims": [
+    "No asymptotic limit is inferred from N<=9.",
+    "The UPO/module characterization is classical graph theory.",
+    "The standard causal-set primitive remains the directed partial order.",
+    "No claim is made that physical causal sets generically permit orientation recovery from symmetric connectibility."
+  ]
+}
