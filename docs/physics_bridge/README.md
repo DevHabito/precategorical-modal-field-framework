@@ -46,6 +46,8 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **FLOQUET_STROBOSCOPIC_CLOSURE_20261111.md** — exact Floquet multipliers and phase-averaged stroboscopic recurrences that recover finite closure at integer drive periods.
 - **HIDDEN_PHASE_FOURIER_HIERARCHY_20261111.md** — exact lifted phase equation showing that continuous-time marginalization generates an infinite Fourier hierarchy for nonzero drive.
 - **PROTOCOL_MARGINALIZATION_CLOSURE_LEMMAS_20261111.md** — reusable classical lemmas separating continuous marginal nonclosure from stroboscopic recurrence closure.
+- **UNIVERSAL_MARGINAL_CLOSURE_CRITERIA_20261111.md** — necessary-and-sufficient continuous and stroboscopic closure criteria for hidden-context linear systems.
+- **PERSISTENT_VS_RESAMPLED_CONTEXT_20261111.md** — exact diagnostic showing how persistence of an external context changes ensemble dynamics even when its one-time distribution is unchanged.
 - **stroboscopic_phase_average_exact.py** — rational regression audit of the phase-averaged Cayley-Hamilton recurrences.
 - **phase_bridge_numerical_stress.py** — dependency-free 16-case integration stress test of continuous phase averaging versus exact stroboscopic closure.
 - **phase_bridge_numerical_stress_results.json** — frozen output of that numerical regression.
