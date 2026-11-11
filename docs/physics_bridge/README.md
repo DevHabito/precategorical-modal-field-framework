@@ -20,6 +20,7 @@ The first test bed is a finite continuous-time Markov jump process in stochastic
 - `LITERATURE_MAP_20261111.md` — literature used to keep the bridge inside established stochastic thermodynamics.
 - `markov_thermal_pilot_exact.py` — dependency-free exact arithmetic audit.
 - `markov_thermal_pilot_results.json` — frozen output of the exact audit.
+- `PHYSICAL_BRIDGE_LEDGER.md` — separate status ledger for exact diagnostics, classical mappings, and open physical hypotheses.
 
 ## Scientific rule
 
