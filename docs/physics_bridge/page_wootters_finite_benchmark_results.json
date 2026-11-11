@@ -1,0 +1,18 @@
+{
+  "audit": "FINITE_PAGE_WOOTTERS_BENCHMARK_V1",
+  "status": "PASS",
+  "cases": [
+    {"dimension": 2, "constraint_norm": 0.0, "max_conditional_state_error": 1.5700924586837752e-16},
+    {"dimension": 3, "constraint_norm": 0.0, "max_conditional_state_error": 1.9229626863835638e-16},
+    {"dimension": 4, "constraint_norm": 0.0, "max_conditional_state_error": 0.0},
+    {"dimension": 5, "constraint_norm": 0.0, "max_conditional_state_error": 2.482534153247273e-16},
+    {"dimension": 8, "constraint_norm": 0.0, "max_conditional_state_error": 1.6947103084502276e-16}
+  ],
+  "max_constraint_norm": 0.0,
+  "max_conditional_state_error": 2.482534153247273e-16,
+  "nonclaims": [
+    "Classical Page-Wootters regression only.",
+    "No external-noise mechanism is needed in this benchmark.",
+    "No claim that this finite clock is a fundamental model of physical time."
+  ]
+}
