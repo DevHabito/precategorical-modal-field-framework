@@ -172,3 +172,32 @@ at \(\lambda=mc\).
 That negative search is **not** a priority proof. The safe status remains:
 
 > exact specialization of a classical generating-function mechanism; novelty not certified.
+
+
+## 15. Spectral-span context
+
+Herman Callaert and Julian Keilson, **“On exponential ergodicity and spectral structure for birth-death processes I,”** *Stochastic Processes and their Applications* **1** (1973), 187–216, and the companion Part II study finite and infinite spectral span and exponential ergodicity for birth-death processes.
+
+**Use here:** finite/infinite invariant or spectral structure in birth-death systems has deep classical precedent.
+
+**Important distinction:** their spectral-span results are not identified with the project's finite dictionary theorem for the explicit observables \(N\mapsto e^{-\alpha N}\). The objects and questions differ.
+
+The targeted search did not locate the exact predecessor-shift classification for the Salhani et al. generator. Priority remains uncertified.
+
+## 16. Observable-selection boundary
+
+The exact comparison between
+
+$$
+\dot{\langle N\rangle}
+=
+\Gamma^+-DG_{-c}
+$$
+
+and the scalar closure of \(G_c\) should be read against classical moment-closure and generating-function theory.
+
+The general lesson that nonlinear propensities produce moment hierarchies is established. The present bridge uses the published exponential rate law to identify a transform coordinate that is closed exactly while the ordinary mean is not autonomous on unrestricted distributions.
+
+Safe status:
+
+**EXACT MODEL-SPECIFIC OBSERVABLE COMPARISON; CLASSICAL CLOSURE CONTEXT; NOVELTY NOT CERTIFIED.**
