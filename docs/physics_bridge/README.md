@@ -43,6 +43,7 @@ The purpose is not to declare a physical interpretation for the framework. The q
 - **PHASE_AVERAGING_CLOSURE_OBSTRUCTION_20261111.md** — exact correction showing that random-phase marginalization introduces a rate-transform covariance and destroys generic scalar closure.
 - **FLOQUET_STROBOSCOPIC_CLOSURE_20261111.md** — exact Floquet multipliers and phase-averaged stroboscopic recurrences that recover finite closure at integer drive periods.
 - **HIDDEN_PHASE_FOURIER_HIERARCHY_20261111.md** — exact lifted phase equation showing that continuous-time marginalization generates an infinite Fourier hierarchy for nonzero drive.
+- **PROTOCOL_MARGINALIZATION_CLOSURE_LEMMAS_20261111.md** — reusable classical lemmas separating continuous marginal nonclosure from stroboscopic recurrence closure.
 - **stroboscopic_phase_average_exact.py** — rational regression audit of the phase-averaged Cayley-Hamilton recurrences.
 - **phase_bridge_numerical_stress.py** — dependency-free 16-case integration stress test of continuous phase averaging versus exact stroboscopic closure.
 - **phase_bridge_numerical_stress_results.json** — frozen output of that numerical regression.
