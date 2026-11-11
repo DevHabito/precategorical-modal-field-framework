@@ -77,7 +77,8 @@ The current physics-facing work contains three layers:
 
 - an exact finite Markov diagnostic that deliberately breaks reversibility;
 - a retrospective calibration against a published single-electron-box experiment;
-- an analytic bridge to a published multi-electron birth-death model, where the physical rate law generates an exact transform-shift hierarchy with both generic non-autonomy and commensurate finite closures.
+- an analytic bridge to a published multi-electron birth-death model, including the correction for randomized-phase marginalization and an exact stroboscopic Floquet recurrence;
+- an independent hidden-environment retrospective bridge using a 2026 Nature Physics experiment in which matched observed initial distributions have different future relaxation because hidden environmental states retain memory.
 
 This material is not empirical validation of the framework. Its purpose is to remove redundant structure where physics permits it, expose missing information through falsifiable obstructions, and identify exact closure regimes without ad hoc additions.
 
