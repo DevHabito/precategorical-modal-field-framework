@@ -462,3 +462,37 @@ It is:
 This question must be positioned against Mori-Zwanzig projection theory, Koopman invariant-subspace theory, hidden Markov dynamics, and Floquet theory before any originality claim is considered.
 
 The multi-electron dot is now a worked control case for that broader investigation.
+
+
+## 19. Numerical stress regression
+
+A dependency-free numerical stress test was run over 16 diagnostic parameter combinations:
+
+- \(q\in\{0.35,0.65\}\);
+- \(A\in\{0.4,1.3\}\);
+- \(\Gamma_0\in\{0.2,0.8\}\);
+- \(\omega\in\{0.7,1.9\}\).
+
+Each case used 24 phase sectors, 800 RK4 steps per drive period, and five periods.
+
+The largest absolute residual of the exact three-point stroboscopic recurrence was
+
+$$
+2.913578232843772\times10^{-12}.
+$$
+
+In the same grid, the exact phase ensemble and the constant averaged-rate continuous-time approximation differed in every case at the diagnostic within-period checkpoints.
+
+The maximum within-period differences ranged from approximately
+
+$$
+2.35\times10^{-4}
+$$
+
+to
+
+$$
+4.31\times10^{-1}.
+$$
+
+This is a numerical regression of the derived equations. It is not experimental evidence and the grid is not fitted to the device parameters.
