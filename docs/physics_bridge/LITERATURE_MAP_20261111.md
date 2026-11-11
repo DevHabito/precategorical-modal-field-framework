@@ -151,3 +151,24 @@ The project-specific question remains narrower:
 > When the repository's provisional informational roles are mapped into established physical models, which roles remain independently necessary, and which closure failures survive under the physical dynamics actually used by those models?
 
 That is currently a framework stress test, not a new fundamental theory.
+
+
+## 14. q-linear and exponentially structured birth-death rates
+
+Andreas Ruffing and Moritz Simon, **“Linear and q-Linear Birth-and-Death Processes with Killing: Spectral Analysis of Mixed Rate Structures via Regular Perturbation Theory”** (2008), study birth-death systems containing q-linear rate structures and connect them with classical orthogonal-polynomial/spectral machinery.
+
+This is relevant because q-deformed rate structures can grow exponentially with state number.
+
+**Use here:** additional warning that exponentially structured birth-death rates and their special-function consequences have prior mathematical literature.
+
+The targeted search performed for the present bridge did not locate the exact statement that the Salhani et al. rate law produces the finite ladder
+
+$$
+G_c,\;G_{2c},\ldots,G_{mc}
+$$
+
+at \(\lambda=mc\).
+
+That negative search is **not** a priority proof. The safe status remains:
+
+> exact specialization of a classical generating-function mechanism; novelty not certified.
