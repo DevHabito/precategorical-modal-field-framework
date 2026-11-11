@@ -110,14 +110,15 @@
       "empty_antichain": 1,
       "recovery_fraction": "4001/18144",
       "recovery_decimal": 0.2205136684303351,
-      "minimum_bad_module_size_histogram": {}
+      "minimum_bad_module_size_histogram": null
     }
   },
   "exact_conclusions": [
     "The classical modular UPO criterion exactly reproduces the previous direct-orientation UPO counts through N=7.",
     "Exact enumeration extends the random-2-order recovery statistic to N=8 and N=9.",
     "The finite recovery fraction is not monotone: it rises at N=8 and again at N=9.",
-    "Internal non-stable modules are the dominant failure mode in the audited range."
+    "Internal non-stable modules are the dominant failure mode in the audited range.",
+    "Minimum bad-module sizes were exhaustively classified through N=8; N=9 was classified for UPO/failure type without the extra minimum-size pass."
   ],
   "nonclaims": [
     "No asymptotic limit is inferred from N<=9.",
