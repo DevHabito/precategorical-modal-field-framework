@@ -1,0 +1,64 @@
+{
+  "audit": "AIGNER_PRINS_RANDOM_2D_COVERAGE_V1",
+  "status": "PASS",
+  "n_range": [
+    2,
+    8
+  ],
+  "summary": {
+    "2": {
+      "upo": 1,
+      "AP2": 1,
+      "AP5": 0,
+      "both": 0,
+      "AP2_or_AP5": 1
+    },
+    "3": {
+      "upo": 4,
+      "AP2": 4,
+      "AP5": 0,
+      "both": 0,
+      "AP2_or_AP5": 4
+    },
+    "4": {
+      "upo": 12,
+      "AP2": 12,
+      "AP5": 2,
+      "both": 2,
+      "AP2_or_AP5": 12
+    },
+    "5": {
+      "upo": 38,
+      "AP2": 34,
+      "AP5": 14,
+      "both": 10,
+      "AP2_or_AP5": 38
+    },
+    "6": {
+      "upo": 165,
+      "AP2": 98,
+      "AP5": 67,
+      "both": 37,
+      "AP2_or_AP5": 128
+    },
+    "7": {
+      "upo": 1042,
+      "AP2": 294,
+      "AP5": 269,
+      "both": 126,
+      "AP2_or_AP5": 437
+    },
+    "8": {
+      "upo": 8464,
+      "AP2": 919,
+      "AP5": 977,
+      "both": 422,
+      "AP2_or_AP5": 1474
+    }
+  },
+  "nonclaims": [
+    "AP2 and AP5 are classical sufficient conditions, not project results.",
+    "Failure of these sufficient conditions does not imply failure of UPO.",
+    "No asymptotic conclusion is inferred."
+  ]
+}
