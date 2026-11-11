@@ -1,0 +1,84 @@
+{
+  "audit": "MINKOWSKI_2D_UPO_RECOVERY_V1",
+  "status": "PASS",
+  "n_range": [
+    2,
+    7
+  ],
+  "summary": {
+    "2": {
+      "permutations": 2,
+      "nontrivial_upo": 1,
+      "selfdual_empty_antichain": 1,
+      "nontrivial_upo_fraction": "1/2",
+      "nontrivial_upo_decimal": 0.5,
+      "upo_depth_histogram": {
+        "1": 1
+      }
+    },
+    "3": {
+      "permutations": 6,
+      "nontrivial_upo": 4,
+      "selfdual_empty_antichain": 1,
+      "nontrivial_upo_fraction": "2/3",
+      "nontrivial_upo_decimal": 0.6666666666666666,
+      "upo_depth_histogram": {
+        "1": 4
+      }
+    },
+    "4": {
+      "permutations": 24,
+      "nontrivial_upo": 12,
+      "selfdual_empty_antichain": 1,
+      "nontrivial_upo_fraction": "1/2",
+      "nontrivial_upo_decimal": 0.5,
+      "upo_depth_histogram": {
+        "1": 12
+      }
+    },
+    "5": {
+      "permutations": 120,
+      "nontrivial_upo": 38,
+      "selfdual_empty_antichain": 1,
+      "nontrivial_upo_fraction": "19/60",
+      "nontrivial_upo_decimal": 0.31666666666666665,
+      "upo_depth_histogram": {
+        "1": 34,
+        "2": 4
+      }
+    },
+    "6": {
+      "permutations": 720,
+      "nontrivial_upo": 165,
+      "selfdual_empty_antichain": 1,
+      "nontrivial_upo_fraction": "11/48",
+      "nontrivial_upo_decimal": 0.22916666666666666,
+      "upo_depth_histogram": {
+        "1": 98,
+        "2": 67
+      }
+    },
+    "7": {
+      "permutations": 5040,
+      "nontrivial_upo": 1042,
+      "selfdual_empty_antichain": 1,
+      "nontrivial_upo_fraction": "521/2520",
+      "nontrivial_upo_decimal": 0.20674603174603176,
+      "upo_depth_histogram": {
+        "1": 294,
+        "2": 664,
+        "3": 84
+      }
+    }
+  },
+  "controls": {
+    "identity_permutation": "total chain; comparability graph K_n; n! transitive orientations",
+    "reverse_permutation": "antichain; empty comparability graph; one self-dual empty orientation"
+  },
+  "nonclaims": [
+    "No asymptotic conclusion is inferred from N<=7.",
+    "The standard causal-set primitive is the directed partial order, not the unoriented comparability graph.",
+    "No claim is made that physical causal sets are generically UPO.",
+    "No exact prior for this combined UPO/random-2-order recovery statistic was located in the targeted search; priority is not certified."
+  ]
+}
