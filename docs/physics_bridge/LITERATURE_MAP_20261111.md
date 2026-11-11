@@ -509,3 +509,24 @@ The preprint gives examples where positive doubly stochastic Markov kernels rema
 **Use here:** additional adversarial evidence against identifying information degradation with a universal time order.
 
 **Evidence boundary:** this is a recent preprint and is used as a warning, not as a foundational source for a project theorem.
+
+
+## 39. Markov equivalence and observational orientation limits
+
+Causal-discovery theory establishes that two DAGs are Markov equivalent exactly when they have the same skeleton and the same v-structures.
+
+As a result, observational conditional independences generally identify only a Markov equivalence class rather than one unique directed causal graph.
+
+Recent causal-discovery reviews continue to emphasize this limitation and the need for interventions or additional structural assumptions to orient unresolved edges.
+
+**Use here:** statistical dependence patterns do not supply a unique timeless directed order in general.
+
+**Novelty boundary:** the project claims no new causal-discovery theorem.
+
+## 40. Interventional identifiability boundary
+
+Interventional data can refine or break observational Markov equivalence classes.
+
+This makes interventions an important benchmark for any proposed intrinsic directionality.
+
+However, a pregeometric time proposal must still explain whether intervention semantics can be defined without presupposing temporal or agent-level causal structure.
