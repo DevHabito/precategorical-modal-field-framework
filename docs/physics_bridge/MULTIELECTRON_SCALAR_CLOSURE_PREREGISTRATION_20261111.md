@@ -285,3 +285,37 @@ Before data access I explicitly do not claim:
 The 2026 article is open access, but its supporting raw data are not presently public through the article. The publication states that supporting data can be requested from the authors.
 
 Therefore the protocol remains frozen at the analytic stage until suitable data are obtained.
+
+
+## 14. Pre-registered relaxation-mode check
+
+For the phase-averaged constant-rate model, the scalar closure predicts
+
+$$
+G_c(t)-G_c^{\rm ss}
+=
+[G_c(t_0)-G_c^{\rm ss}]
+e^{-a_c(t-t_0)},
+$$
+
+with
+
+$$
+\boxed{
+a_c=\Gamma^+(1-e^{-c}).
+}
+$$
+
+This supplies a direct secondary test.
+
+After \(G_c(t)\) is computed from the measured distributions, the residual mode
+
+$$
+H_c(t)=G_c(t)-G_c^{\rm ss}
+$$
+
+will be compared with the predetermined exponential decay.
+
+The decay rate \(a_c\) will be calculated from the published/calibrated physical parameters. It will not be fitted from the held-out \(G_c(t)\) curve.
+
+If the full time-dependent rate rather than the constant phase-averaged approximation is used, this exponential test will be replaced by the already frozen integral solution rather than forcing a constant-rate fit.
