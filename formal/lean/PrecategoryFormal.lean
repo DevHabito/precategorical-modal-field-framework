@@ -19,3 +19,4 @@ import PrecategoryFormal.PhysicalBridgeMarginalClosure
 import PrecategoryFormal.PhysicalBridgeAcyclicityGate
 import PrecategoryFormal.PhysicalBridgeSymmetryOrientation
 import PrecategoryFormal.PhysicalBridgeQDirectionGauge
+import PrecategoryFormal.PhysicalBridgeQCycleCirculation
