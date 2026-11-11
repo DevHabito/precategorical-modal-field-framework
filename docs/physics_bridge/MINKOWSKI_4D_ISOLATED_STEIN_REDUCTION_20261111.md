@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
-**Status:** exact Poisson-process coupling reduction; geometric overlap lemma remains open  
+**Status:** superseded by `MINKOWSKI_4D_ISOLATED_POISSON_THEOREM_20261111.md`; the endpoint-overlap lemma proposed here has now been proved and closes the Poisson-process argument  
 **Target:** prove \(I_\lambda\Rightarrow\operatorname{Poisson}(3\pi)\)
 
 ## 1. Setup
@@ -708,4 +708,4 @@ with the expected mechanism
 B_\lambda=O(\lambda^{-1/2}).
 \]
 
-That overlap estimate is now the narrowest route to a full \(3+1\) isolated-vertex Poisson theorem.
+That overlap estimate was subsequently proved and is incorporated into `MINKOWSKI_4D_ISOLATED_POISSON_THEOREM_20261111.md`, which establishes the Poisson-process limit with total-variation rate (O(\lambda^{-1/2})). The fixed-cardinality version remains separate.
