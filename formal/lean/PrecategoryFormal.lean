@@ -21,3 +21,4 @@ import PrecategoryFormal.PhysicalBridgeSymmetryOrientation
 import PrecategoryFormal.PhysicalBridgeQDirectionGauge
 import PrecategoryFormal.PhysicalBridgeQCycleCirculation
 import PrecategoryFormal.PhysicalBridgeSectorSelection
+import PrecategoryFormal.PhysicalBridgeOrientationDoublet
