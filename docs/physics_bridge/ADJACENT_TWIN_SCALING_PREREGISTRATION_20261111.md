@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
-**Status:** geometric scaling hypothesis, frozen before the next high-N runs  
+**Status:** historical preregistration — the (d=4) (1/n) prediction has now been proved with constant (9\pi); the (d=3) theorem remains open  
 **Claim level:** not a theorem; exponent prediction derived from local geometric scaling, not fitted to the held-out sizes
 
 ## 1. Why this obstruction matters
