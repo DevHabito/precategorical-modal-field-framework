@@ -70,9 +70,31 @@ d\operatorname{Vol}_g(y)
 \rho(y)\,d^dy.
 \]
 
-Inside the convex normal domain, chronological relation is characterized by the sign of the world function plus the fixed time orientation.
+Choose a smooth local temporal function
 
-Thus, after restricting to the time-oriented component,
+\[
+t:C\to\mathbb R
+\]
+
+with timelike gradient.
+
+Inside the convex normal domain,
+
+\[
+y\in I(p,x)
+\]
+
+is equivalently characterized by
+
+\[
+\sigma(p,y)<0,
+\qquad
+\sigma(y,x)<0,
+\qquad
+t(p)<t(y)<t(x).
+\]
+
+Hence
 
 \[
 \tau_-(x)
@@ -80,11 +102,38 @@ Thus, after restricting to the time-oriented component,
 \int_C
 H[-\sigma(p,y)]
 H[-\sigma(y,x)]
-\chi_{p\prec y\prec x}
+H[t(y)-t(p)]
+H[t(x)-t(y)]
 \rho(y)\,d^dy.
 \]
 
-The orientation factor is locally constant away from the null boundary and introduces no additional moving hypersurface.
+The temporal factors only select the correct time-oriented components.
+
+When differentiating in \(x\), the derivative of
+
+\[
+H[t(x)-t(y)]
+\]
+
+is supported on
+
+\[
+t(y)=t(x).
+\]
+
+A level set of a temporal function is spacelike. Therefore there is no point \(y\ne x\) on this level set with
+
+\[
+\sigma(y,x)<0.
+\]
+
+The only common point is the cone vertex \(y=x\), which is handled by the vertex estimate below and does not generate an additional hypersurface contribution.
+
+Thus the only genuine moving boundary term comes from
+
+\[
+\sigma(y,x)=0.
+\]
 
 ## 3. Differentiation formula
 
@@ -94,7 +143,7 @@ Let
 Z\in T_xM.
 \]
 
-After the temporal-selector observation above, differentiate only the moving null Heaviside factor.
+Differentiate only the moving null Heaviside factor identified in the previous section.
 
 Formally,
 
