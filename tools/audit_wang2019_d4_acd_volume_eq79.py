@@ -240,6 +240,59 @@ def volume_coefficient(E: sp.Matrix, B: sp.Matrix) -> sp.Expr:
     return relative
 
 
+def contribution_split(E: sp.Matrix, B: sp.Matrix) -> tuple[sp.Expr, sp.Expr]:
+    """Return separately the moving-boundary and RNC-determinant pieces."""
+    C, H = build_weyl(E, B)
+    n = [mu, sp.sqrt(1 - mu**2), sp.Integer(0)]
+
+    E_nn = sp.expand(sum(
+        E[i, j] * n[i] * n[j]
+        for i, j in itertools.product(range(3), repeat=2)
+    ))
+    E2_nn = sp.expand(sum(
+        E[i, k] * E[k, j] * n[i] * n[j]
+        for i, j, k in itertools.product(range(3), repeat=3)
+    ))
+
+    hh4 = sp.Integer(0)
+    ee4 = sp.Integer(0)
+    for i, j, l, k in itertools.product(range(3), repeat=4):
+        hh = sum(H[i, m, j] * H[l, m, k] for m in range(3))
+        hh4 += hh * n[i] * n[j] * n[l] * n[k]
+        ee4 += E[i, j] * E[l, k] * n[i] * n[j] * n[l] * n[k]
+
+    A = E_nn / 6
+    B_quad = (
+        E_nn**2 / 24
+        - s * E2_nn / 45
+        + (1 - s)**2 * (E2_nn + hh4 - ee4) / 90
+    )
+    boundary = sp.expand((1 - s)**3 * (B_quad + A**2))
+
+    X = [s, r * n[0], r * n[1], r * n[2]]
+    Q = sp.Integer(0)
+    for gamma, alpha, m, nu, rho, sigma in itertools.product(range(4), repeat=6):
+        first = eta[gamma, gamma] * eta[alpha, alpha] * C[gamma, m, alpha, nu]
+        second = C[gamma, rho, alpha, sigma]
+        if first != 0 and second != 0:
+            Q += first * second * X[m] * X[nu] * X[rho] * X[sigma]
+
+    determinant = sp.integrate(
+        -r**2 * sp.expand(Q) / 180,
+        (r, 0, 1 - s),
+    )
+
+    def normalized(piece: sp.Expr) -> sp.Expr:
+        angular = sp.simplify(
+            sp.integrate(piece, (mu, -1, 1)) / 2
+        )
+        return sp.simplify(
+            12 * sp.integrate(angular, (s, 0, 1))
+        )
+
+    return normalized(boundary), normalized(determinant)
+
+
 def norm2(M: sp.Matrix) -> sp.Expr:
     return sp.simplify(
         sum(
@@ -272,6 +325,14 @@ def main() -> None:
     vB = sp.simplify(
         pure_magnetic_relative / B2
     )
+
+    boundary_E, determinant_E = contribution_split(electric, zero)
+    boundary_B, determinant_B = contribution_split(zero, magnetic)
+
+    assert sp.simplify(boundary_E / E2) == sp.Rational(1, 36)
+    assert sp.simplify(determinant_E / E2) == -sp.Rational(1, 1260)
+    assert sp.simplify(boundary_B / B2) == sp.Rational(1, 225)
+    assert sp.simplify(determinant_B / B2) == sp.Rational(1, 3150)
 
     assert E2 == 6
     assert B2 == 6
@@ -308,6 +369,10 @@ def main() -> None:
             "Wang_Eq79_vB": str(wang_vB),
             "delta_vE": str(delta_E),
             "delta_vB": str(delta_B),
+            "boundary_E2": str(sp.simplify(boundary_E / E2)),
+            "determinant_E2": str(sp.simplify(determinant_E / E2)),
+            "boundary_B2": str(sp.simplify(boundary_B / B2)),
+            "determinant_B2": str(sp.simplify(determinant_B / B2)),
             "type_N_correct": str(type_n),
             "type_N_Eq79": str(wang_type_n),
         }
