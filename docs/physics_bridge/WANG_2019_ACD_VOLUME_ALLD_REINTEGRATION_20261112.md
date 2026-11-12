@@ -501,7 +501,7 @@ The current evidence is now:
 2. the published tensorial Eq. (76) integrated directly;
 3. Wang's own angular identities in Eqs. (7)--(11);
 4. explicit algebraic Weyl-sector checks;
-5. exact LRS Kasner causal-cone integration;
+5. independent numerical LRS-Kasner causal-cone integration in tested dimensions;
 6. exact symmetric Cahen--Wallach plane-wave integration.
 
 All six are consistent with the candidate formula above.
