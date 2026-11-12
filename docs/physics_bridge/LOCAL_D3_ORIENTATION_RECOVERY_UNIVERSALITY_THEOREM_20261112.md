@@ -14,7 +14,7 @@ Let
 (M,g)
 \]
 
-be any smooth time-oriented \(2+1\)-dimensional Lorentzian spacetime.
+be a smooth time-oriented \(2+1\)-dimensional Lorentzian spacetime.
 
 Fix a point
 
@@ -558,7 +558,7 @@ A joint double-scaling theorem would require estimates uniform in \(L\).
 
 The curved \(2+1\) result is no longer only a theorem about a selected regular class.
 
-Every smooth \(2+1\) Lorentzian spacetime contains a neighborhood basis of sufficiently small timelike Alexandrov intervals for which causal orientation is asymptotically recoverable from symmetric comparability alone, up to global reversal.
+Every strongly causal smooth \(2+1\) Lorentzian spacetime contains a neighborhood basis of sufficiently small timelike Alexandrov intervals for which causal orientation is asymptotically recoverable from symmetric comparability alone, up to global reversal.
 
 The leading local error approaches the universal Minkowski value
 
