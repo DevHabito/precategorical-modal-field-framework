@@ -70,11 +70,7 @@ The two null boundary sheets meet transversely along a compact smooth spacelike 
 
 The relevant null generators have no cut or conjugate points and admit uniform null-Fermi/double-null neighborhoods.
 
-### R3. Penrose-scaled compactness
-
-The thin-null endpoint families satisfy the compact-containment condition required by the Penrose-scaled Alexandrov-domain convergence theorem.
-
-### R4. Regular tips
+### R3. Regular tips
 
 The one-sided future/past volume functions have nonzero temporal first variations at the tips and admit regular compact middle null bands free of cuts and conjugate points.
 
@@ -740,3 +736,5 @@ It does not cover diamonds with:
 - degenerate finite-diamond volume-time gradients.
 
 The local small-diamond theorem removes these assumptions automatically near strongly causal points.
+
+The Penrose-scaled compact-containment condition is no longer an independent hypothesis: it follows from the null index-form coercivity lemma when the regular generator family stays uniformly away from conjugacy.
