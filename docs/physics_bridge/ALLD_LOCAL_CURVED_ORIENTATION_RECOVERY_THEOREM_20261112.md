@@ -186,7 +186,7 @@ Therefore every causal relation between points of \(D_L\) is represented entirel
 
 Because \(U\) is convex normal:
 
-- every two points in \(U\) are joined by a unique geodesic in \(U\);
+- every two points in \(C\) are joined by a unique geodesic in \(C\);
 - the exponential maps are nonsingular on the relevant star domains;
 - the null generators forming the boundary of \(D_L\) encounter no cut or conjugate point before leaving the local domain.
 
@@ -406,7 +406,7 @@ Choose compact affine bands on the two tip null cones separated from:
 - the tips;
 - the joint edge.
 
-No cuts or conjugate points occur in \(U\).
+No cuts or conjugate points occur in \(C\).
 
 The degree function is continuous and lies strictly between zero and one on those bands.
 
