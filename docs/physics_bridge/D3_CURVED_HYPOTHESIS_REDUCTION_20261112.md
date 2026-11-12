@@ -23,7 +23,7 @@ D=I(p,q)
 
 be a relatively compact causally convex Alexandrov interval in a smooth \(2+1\)-dimensional time-oriented Lorentzian spacetime.
 
-The reduced theorem uses four primitive assumptions.
+The reduced theorem uses three primitive assumptions.
 
 ### R1. C1 temporal finite-diamond volume function
 
@@ -97,13 +97,7 @@ Assume the relevant null-generator families from the tips to \(E\):
 - admit a uniform compact null-Fermi tube;
 - admit a regular double-null neighborhood of \(E\).
 
-### R3. Compact Penrose-scaled containment
-
-For the thin-null endpoint families used near \(E\), assume the Penrose-Fermi rescaled Alexandrov intervals remain inside one fixed compact subset of the regular null-Fermi coordinate tube and have limiting endpoints that are timelike related in the Penrose plane-wave metric.
-
-This is the compactness condition required by the scaled-domain convergence theorem.
-
-### R4. Regular timelike tips
+### R3. Regular timelike tips
 
 Assume the one-sided volume functions
 
@@ -122,7 +116,17 @@ Assume also that each tip null cone contains a compact middle affine band:
 
 ## 3. Previously assumed statements that are now derived
 
-Under R2--R3, the repository now derives the thin-null endpoint law:
+Under R2, the repository now derives the thin-null endpoint law.
+
+The compact-containment step is supplied by null index-form coercivity: a compact conjugate-free generator family has a uniform positive Dirichlet Jacobi spectral gap, forcing
+
+[
+u=O(a),
+qquad
+y=O(sqrt a).
+]
+
+Combined with Penrose-scaled domain convergence, this gives the endpoint law:
 
 \[
 \boxed{
@@ -285,7 +289,7 @@ They do show that \(C^1\) temporal volume regularity is a natural Lorentzian hyp
 
 ## 8. Reduced theorem dependency chain
 
-Under R1--R4, the repository derives:
+Under R1--R3, the repository derives:
 
 ### Thin-null endpoint geometry
 
@@ -384,14 +388,13 @@ The genuinely nontrivial primitive questions are now:
 
 1. when does the exact finite-diamond function \(\Phi\) satisfy R1?
 2. when do all relevant null generators satisfy the regularity in R2?
-3. can R3 be derived automatically from R2 for every compact regular generator family?
-4. what happens when caustics or cut points violate R2/R4?
+3. what happens when caustics or cut points violate R2/R3?
 
 These are substantially fewer and more recognizable geometric questions than the original six-hypothesis formulation.
 
 ## 10. Recommended theorem statement
 
-A future article should state the curved result using R1--R4 rather than treating the derived asymptotic estimates as assumptions.
+A future article should state the curved result using R1--R3 rather than treating the derived asymptotic estimates as assumptions.
 
 This makes the logical content clearer:
 
