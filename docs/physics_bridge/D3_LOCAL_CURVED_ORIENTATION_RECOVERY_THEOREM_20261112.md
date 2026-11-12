@@ -172,11 +172,11 @@ For sufficiently small \(L\),
 \overline{D_L}\subset U.
 \]
 
-Causal relations between points of \(D_L\) are therefore represented entirely inside \(U\).
+Causal relations between points of \(D_L\) are therefore represented entirely inside \(C\).
 
 ## 4. No cut or conjugate points in the diamond
 
-Because \(U\) is convex normal, every two points of \(U\) are connected by a unique geodesic in \(U\).
+Because \(U\) is convex normal, every two points of \(U\) are connected by a unique geodesic in \(C\).
 
 The exponential map is nonsingular on the relevant star-shaped domain.
 
