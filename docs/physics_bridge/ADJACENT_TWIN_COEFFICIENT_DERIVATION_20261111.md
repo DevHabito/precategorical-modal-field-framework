@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
-**Status:** analytic coefficient derivation + exact two-point numerical validation  
+**Status:** superseded in (d=4) by `MINKOWSKI_4D_ADJACENT_TWIN_ASYMPTOTIC_THEOREM_20261111.md`; the (d=3) coefficient derivation remains pending its global domination lemma  
 **Proof status:** leading constants derived; global small-(D) domination/remainder lemma still open  
 **Claim discipline:** the constants below are not promoted to theorem status until that final analytic step is closed  
 **Formal algebra status:** PASS — Lean 4/mathlib CI run 43121445051 completed successfully for `PhysicalBridgeTwinCoefficientAlgebra`; this validates only the encoded algebraic identities, not the open asymptotic domination lemma
