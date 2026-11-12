@@ -25,3 +25,5 @@ import PrecategoryFormal.PhysicalBridgeOrientationDoublet
 import PrecategoryFormal.PhysicalBridgeInvariantMarkOrbit
 import PrecategoryFormal.PhysicalBridgeBipartiteOrientation
 import PrecategoryFormal.PhysicalBridgeTwinCoefficientAlgebra
+
+import PrecategoryFormal.PhysicalBridgeAcdVacuumVolumeAlgebra
