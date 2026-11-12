@@ -1,3 +1,5 @@
+> **CORRECTION — 2026-11-12:** this candidate must no longer cite LRS Kasner as an independent exact calibration. A missing factor \(2\) was found in the Kasner flat-volume normalization. The pair \(17/630,1/210\) is still what Wang's printed intermediate Eqs. (74)+(76) imply and is consistent with the exact type-N plane-wave combination, but the pure-electric coefficient now lacks an independent exact-geometry confirmation. The theorem status is therefore weakened to **intermediate-equation candidate + plane-wave consistency check** until the Kasner discrepancy is understood or another purely electric geometry is computed.
+
 # Theorem candidate: corrected d = 4 vacuum Alexandrov four-volume coefficients
 
 **Date:** 2026-11-12  
