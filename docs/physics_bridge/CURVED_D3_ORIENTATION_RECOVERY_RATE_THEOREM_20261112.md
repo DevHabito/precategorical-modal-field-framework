@@ -54,7 +54,7 @@ b=\mathcal V(\cdot,q)^{2/3}
 
 are regular and satisfy the curved causal-cap estimate.
 
-### H3. Temporal volume-time gradient
+### H3. Temporal volume-time gradient and bulk regularity
 
 The finite-diamond volume function
 
@@ -67,6 +67,18 @@ The finite-diamond volume function
 \]
 
 is \(C^2\) away from the joint, with timelike differential.
+
+On every compact exhaustion separated from the joint, the first-order expansion
+
+\[
+\Delta_g(x,\exp_x h)
+=
+d\Phi_x(h)
++
+O(|h|^2)
+\]
+
+has a uniform remainder bound, and the corresponding local cone-volume asymptotic is dominated by an integrable majorant as the exhaustion approaches the joint and the regular boundary charts.
 
 Define
 
@@ -83,6 +95,8 @@ Assume
 \[
 \kappa^{-3}\in L^1(D,\mu).
 \]
+
+Equivalently, H3 includes the compact-exhaustion/dominated-convergence hypothesis used in the curved small-edge theorem; it is not inferred from pointwise timelikeness alone.
 
 ### H4. Regular tips
 
