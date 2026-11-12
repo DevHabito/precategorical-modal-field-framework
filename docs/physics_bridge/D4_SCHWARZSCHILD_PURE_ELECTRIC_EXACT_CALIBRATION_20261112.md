@@ -1,3 +1,5 @@
+> **Status update (2026-11-12):** the requested independent non-Schwarzschild verification has now been completed using the LRS Kasner vacuum, exact null-cone integrals, Synge world-function endpoint gradients, and the local intrinsic edge density. It reproduces \(a_4=683/9450\) exactly. See \`D4_KASNER_WORLD_FUNCTION_PURE_ELECTRIC_CALIBRATION_20261112.md\`.
+
 # Theorem candidate: exact Schwarzschild calibration of the d = 4 vacuum recovery coefficients
 
 **Date:** 2026-11-12  
