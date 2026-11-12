@@ -608,6 +608,9 @@ Priority checks are:
 5. **All-dimensional sector exhaustion.**  
    In particular, verify the classification of zero-disagreement ordered boundary pairs.
 
+6. **First curvature response.**  
+   Independently verify the universal \(d\ge4\) coefficients and seek a closed analytic evaluation of the \(d=3\) bulk response integrals.
+
 ## 21. Audit verdict
 
 The adversarial review found corrections of scope and one previously unstated subleading sector, but no leading counterexample.
