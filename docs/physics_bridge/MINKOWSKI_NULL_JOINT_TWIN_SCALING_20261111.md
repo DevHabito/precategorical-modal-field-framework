@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
-**Status:** exact local-coordinate reduction + proved null-joint scaling contribution + global asymptotic conjecture pending complementary-sector upper bound  
+**Status:** superseded local analysis; complementary-sector estimate closed in MINKOWSKI_D4_TWIN_ASYMPTOTIC_THEOREM_20261111.md  
 **Physical status:** finite Alexandrov-interval causal-set reconstruction problem  
 **Novelty status:** no absolute priority claim is made
 
@@ -574,7 +574,7 @@ The numerical calculation is diagnostic only.
 
 The constants (3pi) and (9pi) come from the analytic integrals above.
 
-## 10. General dimensional scaling
+## 10. General dimensional scaling — corrected boundary interpretation
 
 Let
 
@@ -582,32 +582,7 @@ Let
 m=rac d2.
 ]
 
-In general dimension the leading joint disagreement is
-
-[
-H_m
-=
-2^{-m}
-left[
-(alpha+A)^m-alpha^m
-+
-(eta+B)^m-eta^m
-ight].
-]
-
-The causal angular cap contributes
-
-[
-(AB)^{m-1}.
-]
-
-Scaling all four scalar variables by
-
-[
-lambda=arepsilon^{1/m}
-]
-
-therefore gives the joint exponent
+The joint blow-up gives the local exponent
 
 [
 oxed{
@@ -617,7 +592,9 @@ therefore gives the joint exponent
 }
 ]
 
-For comparison, ordinary interior closeness gives
+Generic pairs away from the codimension-two joint have a nonzero first-order response of the disagreement volume to causal displacement.
+
+Therefore their ordinary local exponent is
 
 [
 oxed{
@@ -625,57 +602,51 @@ For comparison, ordinary interior closeness gives
 }
 ]
 
-A mixed sector in which only one side approaches a null face gives the scaling exponent
+An earlier intermediate version of this note listed a separate single-null-face exponent. That was too naive because it kept only one endpoint-volume term. The exact disagreement contains the contribution from the opposite causal cone, which restores a nonzero linear term on a single null face away from the joint.
+
+Thus a lone null face is not a separate leading asymptotic sector.
+
+The exceptional degeneracy occurs only where both null-depth coordinates vanish simultaneously:
+
+[
+a=b=0.
+]
+
+Comparing the two relevant exponents,
+
+[
+2+rac4d<d
+]
+
+first occurs at integer spacetime dimension
 
 [
 oxed{
-eta_{mathrm{face}}(d)
-=
-rac d2+1+rac2d.
+d=4.
 }
 ]
 
-These three exponents imply a dimension-dependent competition.
-
-### d=3
+For (d=3),
 
 [
-eta_{mathrm{bulk}}=3,
+3
+<
+rac{10}{3},
 ]
+
+so the bulk dominates.
+
+For (d=4),
 
 [
-eta_{mathrm{face}}=rac{19}{6}approx3.1667,
+3<4,
 ]
 
-[
-eta_{mathrm{joint}}=rac{10}{3}approx3.3333.
-]
+so the codimension-two null joint dominates.
 
-Thus the bulk should dominate asymptotically.
+## 11. Convergence threshold of the homogeneous joint integral
 
-This means the earlier finite-window effective slope below three should not be interpreted as the true asymptotic exponent.
-
-### d=4
-
-[
-eta_{mathrm{joint}}=3,
-]
-
-[
-eta_{mathrm{face}}=rac72,
-]
-
-[
-eta_{mathrm{bulk}}=4.
-]
-
-Thus the codimension-two null joint is the unique lowest-exponent sector.
-
-This explains why the boundary changes the (3+1) asymptotic qualitatively.
-
-## 11. The convergence threshold
-
-The one-side homogeneous integral can be written
+The one-side homogeneous integral is
 
 [
 L_m
@@ -696,41 +667,39 @@ sim
 m t^{m-1}.
 ]
 
-Therefore the integrand behaves as
+Hence the integrand behaves as
 
 [
 t^{-(m-1/m)}.
 ]
 
-The integral converges exactly when
+The integral converges when
 
 [
-m-rac1m>1.
+m-rac1m>1,
 ]
 
-Equivalently,
+or
 
 [
 m^2-m-1>0.
 ]
 
-Thus
-
-[
-m>rac{1+sqrt5}{2}.
-]
-
-In integer spacetime dimension this becomes
+The first integer spacetime dimension satisfying this is again
 
 [
 oxed{
-dge4.
+d=4.
 }
 ]
 
-So the same dimension at which the null-joint exponent overtakes the bulk is also the first integer dimension in which the homogeneous joint integral becomes self-contained.
+The divergence for (d=3) is consistent with matching onto the ordinary bulk sector rather than with a separate single-face asymptotic.
 
-This is a structural threshold, not a fitted crossover.
+The complete (d=4) upper-bound argument is now recorded separately in
+
+[
+	exttt{docs/physics_bridge/MINKOWSKI_D4_TWIN_ASYMPTOTIC_THEOREM_20261111.md}.
+]
 
 ## 12. Relation to existing causal-set boundary literature
 
@@ -847,11 +816,7 @@ Only after those complementary estimates are closed should (3pi) and (9pi) be ad
 
 ## 15. Current research consequence
 
-The next step is now sharply defined.
-
-The main target is no longer another Monte Carlo extension.
-
-It is the complementary-sector estimate
+The complementary-sector estimate below has now been completed in the subsequent theorem note:
 
 [
 oxed{
