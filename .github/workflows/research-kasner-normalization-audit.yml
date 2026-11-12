@@ -3,18 +3,22 @@ name: Research Kasner normalization audit
 on:
   push:
     paths:
+      - "tools/derive_d4_kasner_parent_volume_exact.py"
       - "tools/derive_d4_kasner_world_function_pure_electric_calibration.py"
       - ".github/workflows/research-kasner-normalization-audit.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  kasner-symbolic-audit:
+  kasner-parent-exact:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -24,5 +28,5 @@ jobs:
       - name: Install symbolic dependency
         run: python -m pip install "sympy==1.14.0"
 
-      - name: Run Kasner symbolic diagnostic
-        run: python tools/derive_d4_kasner_world_function_pure_electric_calibration.py
+      - name: Run stable exact Kasner parent-volume checker
+        run: python tools/derive_d4_kasner_parent_volume_exact.py
