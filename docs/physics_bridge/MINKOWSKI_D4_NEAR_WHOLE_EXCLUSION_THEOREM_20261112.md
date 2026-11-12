@@ -715,12 +715,20 @@ The previous reduction theorem showed that any surviving \(d=4\) UPO obstruction
 
 The present theorem eliminates that regime.
 
-Therefore the modular obstruction analysis is now complete.
+Therefore the modular obstruction analysis is complete.
 
-What remains is only to assemble the already proved component and modular statements into the final \(3+1\) orientation-recovery theorem and audit the logical dependencies one more time before promoting
+The dependency audit was subsequently completed and the results were assembled in
 
 \[
-p_4^{\mathrm{UPO}}(n)\to1
+\texttt{MINKOWSKI\_D4\_ORIENTATION\_RECOVERY\_THEOREM\_20261112.md},
 \]
 
-to theorem status.
+which proves
+
+\[
+\boxed{
+p_4^{\mathrm{UPO}}(n)\to1.
+}
+\]
+
+This file remains the dedicated proof of the last near-whole-module step.
