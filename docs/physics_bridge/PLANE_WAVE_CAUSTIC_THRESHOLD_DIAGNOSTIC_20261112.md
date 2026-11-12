@@ -493,6 +493,36 @@ The integrated causal inequality is then even easier to satisfy.
 
 This is consistent with the well-known focusing/non-global-hyperbolicity phenomena of exact plane waves.
 
+## 10. Causal-boundary interpretation
+
+A conjugate point is not merely a regular point of the same null boundary with a worse coefficient.
+
+At conjugacy the null exponential map loses rank, so the light cone develops a caustic and ceases to be an immersed smooth null hypersurface at that point.
+
+Classical Lorentzian causality also implies that once a null generator has passed the relevant conjugate/cut threshold it cannot continue as an achronal generator of
+
+\[
+E^+(p)
+=
+J^+(p)\setminus I^+(p).
+\]
+
+At the first conjugate point itself one must distinguish carefully between the caustic point and the immediately post-caustic generator; in either case the **regular embedded-null-sheet hypothesis** used by the recovery theorem has failed.
+
+Therefore the exact plane-wave calculation should be interpreted as:
+
+\[
+\boxed{
+\text{conjugacy destroys the regular-edge model before one can simply assign it a new regular-edge coefficient.}
+}
+\]
+
+A post-caustic theory must use the local singularity type of the wave front rather than the smooth double-null edge normal form.
+
+Stable caustic types such as fold and cusp are classified by the established singularity theory of wave fronts.
+
+No arrow-erasure exponent is claimed for those classes here.
+
 ## 10. Interpretation for the curved splitter program
 
 The regular thin-null theorem uses
