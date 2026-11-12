@@ -2,9 +2,9 @@
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** literature-backed corollary specialized to finite convex diamonds  
+**Status:** analytic local theorem; literature-informed but not a direct corollary  
 **Physical status:** removes the independent volume-time regularity assumption for sufficiently regular convex diamonds  
-**Literature basis:** direct specialization of Chruściel, Grant, and Minguzzi, *On differentiability of volume time functions*, Ann. Henri Poincaré 17 (2016), 2801–2824, DOI 10.1007/s00023-015-0448-3
+**Literature basis:** the null-boundary variation method is informed by Chruściel, Grant, and Minguzzi, *On differentiability of volume time functions*, Ann. Henri Poincaré 17 (2016), 2801–2824, DOI 10.1007/s00023-015-0448-3. Their theorem does not automatically include the constant weight on an arbitrary bounded subspacetime; the present convex-diamond regularity statement therefore requires its own proof.
 
 ## 1. Setting
 
@@ -117,55 +117,40 @@ d\Phi
 }
 \]
 
-## 3. Direct reduction to the established volume-function theorem
+## 3. Literature boundary: why this is not a direct corollary
 
-View the open diamond
+Chruściel, Grant, and Minguzzi prove differentiability for a **class** of positive smooth weighted volume functions on globally hyperbolic spacetimes.
 
-\[
-D=I(p,q)
-\]
+Their admissible weights are chosen to control behavior of null generators, including behavior near the effective infinity of an auxiliary complete Riemannian metric.
 
-as a spacetime in its own right.
-
-Because \(D\) is a relatively compact causal diamond in the local convex setting, it is globally hyperbolic and has finite physical volume.
-
-The constant weight
+Their paper explicitly gives a bounded Minkowski-subspacetime example with weight
 
 \[
 \varphi\equiv1
 \]
 
-is smooth, strictly positive, and integrable on \(D\).
-
-Chruściel, Grant, and Minguzzi prove \(C^1\) differentiability with timelike gradient for an appropriate class of positive smooth integrable Geroch volume functions on globally hyperbolic spacetimes.
-
-Inside \(D\),
+for which a past-volume function is not differentiable across a causal boundary created by removing a set of the form
 
 \[
-I_D^-(x)=I(p,x),
+J^-(q).
 \]
 
-and
+Therefore the statement
 
-\[
-I_D^+(x)=I(x,q).
-\]
+> constant weight on a finite-volume globally hyperbolic region is automatically covered by their differentiability theorem
 
-Therefore their past and future volume functions specialize exactly to
+is false in that generality.
 
-\[
-\tau_-(x)=\operatorname{Vol}(I(p,x)),
-\]
+The present diamond is geometrically more restrictive:
 
-and
+- its closure lies in a strictly convex normal neighborhood;
+- its two null boundary sheets are smooth away from their vertices;
+- no null cut or conjugate locus occurs inside the containing normal neighborhood;
+- the two moving null boundaries relevant to \(V(p,x)\) and \(V(x,q)\) meet transversely.
 
-\[
-\tau_+(x)=\operatorname{Vol}(I(x,q)).
-\]
+The regularity theorem below is therefore proved directly from this smooth moving-boundary geometry.
 
-Thus the \(C^1\) temporal regularity used by the orientation-recovery theorem is not a new differentiability theorem of this project.
-
-The remaining sections give a local geometric proof sketch because it is useful for understanding signs and for the later tip-shape calculation, but the regularity conclusion itself should be cited as a corollary of the established volume-function literature.
+The work of Chruściel--Grant--Minguzzi remains relevant as established precedent for the null-cone Jacobi-field variation formula and for the timelike-gradient mechanism, but it is **not** used as a black-box differentiability theorem for \(\varphi\equiv1\).
 
 ## 4. Why the convex-normal setting is simpler
 
