@@ -136,37 +136,30 @@ The coordinate Jacobian is exactly
 a^{d/2}.
 \]
 
-The Penrose-Fermi expansion makes this the correct candidate exponent.
+The Penrose-Fermi expansion gives smooth convergence of the rescaled metrics on compact subsets to the plane-wave limit.
 
-However, the step
+The repository now contains a dedicated scaled-domain theorem:
+
+PENROSE_SCALED_ALEXANDROV_DOMAIN_CONVERGENCE_20261112.md.
+
+It proves, under the same regular-tube and compact-containment hypotheses, that:
+
+1. points strictly inside the limiting plane-wave interval eventually remain inside the rescaled intervals;
+2. points outside the limiting causal diamond eventually remain outside, by cone sandwiching and the Lorentzian limit-curve theorem;
+3. the only undecided set is the regular null boundary, which has measure zero;
+4. the rescaled volume densities converge uniformly.
+
+Dominated convergence therefore gives
 
 \[
-\widehat I_a
-\longrightarrow
-I_{\mathrm{PW}}
-\]
-
-with a positive finite limiting volume still requires a precise domain-convergence argument.
-
-The absence of conjugate points strongly supports nondegeneracy but the repository does not yet contain a full measure-convergence proof.
-
-Therefore the statement
-
-\[
-V(p,x_a)
+\operatorname{Vol}(I(p,x_a))
 =
-\mathcal C_\gamma a^{d/2}[1+o(1)]
+\mathcal C_\gamma a^{d/2}[1+o(1)].
 \]
 
-should currently be regarded as:
+Thus the scaled-domain convergence gap is closed **within the regular null-tube hypotheses**.
 
-\[
-\boxed{
-\text{proved modulo uniform scaled-domain convergence in the null-Fermi chart.}
-}
-\]
-
-This is the most important geometric proof gap in the curved program.
+The theorem still does not cover caustic or noncompact scaled-domain regimes.
 
 ## 5. Audit of the curved joint-core exponent
 
@@ -211,7 +204,7 @@ No additional hidden curvature power appears in the counting.
 
 ## 6. Audit of the matched bulk coefficient
 
-The formal coefficient
+The coefficient
 
 \[
 C_{3,g}
@@ -225,40 +218,42 @@ C_{3,g}
 \kappa^{-3}\,d\mu
 \]
 
-is well motivated.
+is now supported by an explicit global integrable majorant.
 
-Near a regular edge,
+The repository theorem
+
+D3_CURVED_DOMINATED_CONVERGENCE_THEOREM_20261112.md
+
+proves near the edge that
+
+\[
+P_\varepsilon(x)
+\le
+C\varepsilon^3
+(ab)^{-3/4}
+\asymp
+C\varepsilon^3\kappa(x)^{-3}
+\]
+
+uniformly across:
+
+- the nonlinear core;
+- one-sided transition regions;
+- the fully linear joint region.
+
+Since
 
 \[
 \kappa^{-3}
 \asymp
-(ab)^{-3/4},
+(ab)^{-3/4}
 \]
 
-which is integrable.
+is integrable, dominated convergence applies directly to the normalized conditional pair volumes.
 
-The one-side matching integral reproduces the same edge singularity.
+This removes the earlier need for an informal two-stage matching argument.
 
-What remains to be written more formally is a dominated-convergence theorem controlling:
-
-1. the Taylor remainder of
-   \[
-   \Delta=d\Phi(h)+O(|h|^2)
-   \]
-   as \(x\) approaches the edge;
-2. the coefficient variation in the optical charts;
-3. the passage
-   \[
-   \varepsilon\to0
-   \]
-   followed by
-   \[
-   \eta\to0.
-   \]
-
-The repository currently contains the asymptotic matching calculation but not a measure-theoretic theorem with explicit dominating function.
-
-This is a second publication-level proof gap.
+The measure-theoretic matching gap is therefore closed under the regular-joint assumptions.
 
 ## 7. Audit of low-degree geometry
 
@@ -325,7 +320,7 @@ The co-degree tail
 \bar g_3(r)=\Theta(r^3)
 \]
 
-follows from a nonzero timelike first derivative
+follows from the nonzero temporal first variation
 
 \[
 R(\exp_p h)
@@ -333,32 +328,47 @@ R(\exp_p h)
 \Lambda_p(h)+O(|h|^2).
 \]
 
-This is structurally sound under T1.
+The middle-band swept-volume estimate is now derived explicitly in
 
-The middle-band statement is more delicate.
+D3_CURVED_TIP_SYNGE_SHAPE_DERIVATIVE_20261112.md.
 
-The argument uses:
+On a regular null-cone band, Synge's world function satisfies
 
-- first variation of the shifted null cone;
-- a positive-measure set of null directions with
-  \[
-  -g(h,k)\ge c|h|;
-  \]
-- a regular affine band with intermediate graphon degree.
+\[
+\sigma(p,z)=0,
+\]
 
-The compactness argument is plausible, but the repository does not yet derive the null-boundary swept-volume formula from a standard shape-derivative theorem.
+and the shifted cone is
 
-Thus the bound
+\[
+\sigma(\exp_p h,z)=0.
+\]
+
+The endpoint first variation gives
+
+\[
+D_x\sigma(p,z)[h]
+=
+-\lambda g_p(h,k_z).
+\]
+
+A parameter-dependent implicit-function theorem converts this into a transverse boundary displacement linear in
+
+\[
+-g_p(h,k_z).
+\]
+
+Compactness of the normalized causal-direction section yields a uniform positive-measure set of null directions on which this displacement is bounded below by a constant times \(\Lambda_p(h)\).
+
+Integrating the resulting tubular thickness proves
 
 \[
 \mu(B_x^{\mathrm{mid}})
 \ge
-cR(x)
+cR(x).
 \]
 
-should be treated as conditional on the explicit first-variation hypothesis.
-
-This is the third publication-level geometric gap.
+Thus the swept-volume gap is closed on every regular affine null band free of cut/conjugate points.
 
 ## 10. Audit of stochastic assembly
 
@@ -413,11 +423,36 @@ No new probabilistic obstruction appears solely because the metric is curved.
 
 ## 11. Curved component-rate statement
 
-The assembled theorem currently states a quantitative curved component ambiguity bound inherited from the flat proof.
+The repository now contains the dedicated proof
 
-The ingredients are sufficient, but the repository should still contain a dedicated curved component proof rather than only the phrase "the same calculation applies."
+D3_CURVED_COMPONENT_STRUCTURE_THEOREM_20261112.md.
 
-This is a documentation/proof-expansion gap, not an identified mathematical contradiction.
+It establishes directly from the curved estimates that:
+
+\[
+\Pr(
+\text{more than one edge-containing component}
+)
+\to0,
+\]
+
+and, after true twins are removed,
+
+\[
+\Pr(
+\text{component ambiguity}
+)
+=
+O(n^{-2})
++
+\exp\!\left(-\frac{n}{2\log n}\right)
++
+e^{-\Theta(n)}.
+\]
+
+No appeal to the phrase "the flat calculation is the same" remains.
+
+The documentation/proof-expansion gap is closed.
 
 ## 12. Literature consistency
 
@@ -441,31 +476,40 @@ This is an important conceptual correction.
 - low-degree and comparable-ball algebra once the endpoint law holds;
 - probabilistic UPO assembly once the geometric estimates hold.
 
-### Medium confidence
+### High confidence conditional on the stated regularity hypotheses
 
-- universal thin-null exponent \(a^{d/2}\) under regular null-Fermi tubes;
-- matched \(2+1\) coefficient formula.
+- universal thin-null exponent \(a^{d/2}\) in a compact regular null-Fermi tube;
+- matched \(2+1\) coefficient formula;
+- uniform tip middle-band first variation;
+- curved component-rate assembly.
 
-### Requires dedicated proof before publication
+### Still external-review priorities
 
-- scaled-domain convergence to the Penrose-limit interval;
-- uniform null-boundary shape derivative for the tip middle band;
-- explicit curved component-rate proof.
+- whether the regularity hypotheses H1--H6 follow from a simpler standard geometric condition;
+- behavior when conjugate points, cut points, or caustics occur;
+- whether the finite-diamond volume function is automatically regular enough in useful broad classes;
+- independent verification of the Penrose-scaled domain theorem and the Synge swept-volume argument.
 
 ## 14. Audit verdict
 
 No contradiction was found in the conditional curved theorem.
 
-However, it should not yet be promoted to the same status as the flat theorem.
+The three concrete proof obligations identified in the first audit have now been supplied by independent repository theorems:
 
-The correct current label is:
+1. Penrose-scaled Alexandrov-domain convergence;
+2. an explicit integrable dominated-convergence majorant;
+3. the Synge-world-function swept-volume proof of the tip middle band.
+
+The dedicated curved component proof has also been added.
+
+The correct current label is therefore:
 
 \[
 \boxed{
-\text{conditional curved theorem with three geometric proof obligations remaining.}
+\text{internally complete conditional theorem under explicit regular-diamond hypotheses.}
 }
 \]
 
-Those obligations are precise and local.
+This is **not** an unconditional theorem for arbitrary curved \(2+1\) spacetimes.
 
-This is substantial progress: the generic-curvature problem is no longer vague, but it is not yet fully closed.
+The remaining scientific frontier is no longer an internal proof gap.  It is to weaken or verify the hypotheses, especially in the presence of caustics, cut loci, and degenerate volume-time geometry, and to obtain independent external mathematical review.
