@@ -513,3 +513,128 @@ A higher-dimensional Kasner family is a natural candidate because:
 - its Weyl tensor is generically non-radiative.
 
 That calculation can test whether the corrected \(A_d\) and \(C_d\) sectors survive independently beyond four dimensions.
+
+
+## 11. Independent higher-dimensional LRS-Kasner regression
+
+A second exact family can test a different invariant direction from the symmetric plane wave.
+
+Let
+
+\[
+n=d-1
+\]
+
+and use the nontrivial LRS Kasner exponents
+
+\[
+p_\parallel
+=
+-\frac{n-2}{n},
+\qquad
+p_\perp
+=
+\frac2n,
+\]
+
+with \(p_\perp\) repeated \(n-1\) times.
+
+These obey
+
+\[
+\sum_i p_i=1,
+\qquad
+\sum_i p_i^2=1,
+\]
+
+so the spacetime is Ricci flat.
+
+The comoving central line is geodesic and the Weyl field is purely electric/hypersurface-orthogonal in this frame:
+
+\[
+H^2=0.
+\]
+
+At \(t=1\),
+
+\[
+\boxed{
+E^2
+=
+\frac{
+4(n-2)^2(n-1)
+}{
+n^3
+},
+}
+\]
+
+and
+
+\[
+\boxed{
+D^2
+=
+\frac{
+16(n-1)(n-2)
+}{
+n^3
+}.
+}
+\]
+
+Unlike in \(d=4\), the ratio \(D^2/E^2\) changes with dimension:
+
+\[
+\frac{D^2}{E^2}
+=
+\frac4{n-2}.
+\]
+
+Thus higher-dimensional Kasner probes an invariant combination different from the plane-wave combination.
+
+The direct numerical checker
+
+tools/check_alld_lrs_kasner_acd_volume_numerically.py
+
+constructs the physical causal volume from the exact null first integrals, solves the direction-dependent crossing of the two cones, and normalizes by the exact flat \(d\)-dimensional Alexandrov volume.
+
+The all-\(d\) formula predicts
+
+\[
+\boxed{
+c_{\rm Kasner}(d)
+=
+A_dE^2+C_dD^2.
+}
+\]
+
+The audit executed the same direct integration at
+
+\[
+L=0.16,\ 0.13,\ 0.10,\ 0.08
+\]
+
+and extrapolated the scaled coefficient as an even polynomial in \(L^2\).
+
+The results were:
+
+| \(d\) | numerical \(L\to0\) | all-\(d\) prediction | difference |
+|---:|---:|---:|---:|
+| 4 | 0.0079953108 | 0.0079952969 | \(1.39\times10^{-8}\) |
+| 5 | 0.0217014207 | 0.0217013889 | \(3.18\times10^{-8}\) |
+| 6 | 0.0348648068 | 0.0348647619 | \(4.49\times10^{-8}\) |
+
+The agreement is nontrivial because:
+
+1. the calculation does not use RNC Eq. (74) or Eq. (76);
+2. the \(d=5,6\) tests include an independent spatial-Weyl \(D^2\) contribution;
+3. the invariant ratio \(D^2/E^2\) changes with \(d\);
+4. the plane-wave check probes a different combination containing \(H^2\).
+
+Therefore the corrected all-\(d\) coefficients now have two independent exact-geometry families behind them:
+
+- Cahen--Wallach, analytically and symbolically in arbitrary \(d\);
+- LRS Kasner, numerically in \(d=4,5,6\).
+
+The Kasner evidence is numerical rather than a completed exact symbolic series proof, but it strongly disfavors the possibility that the all-\(d\) agreement is a four-dimensional accident.
