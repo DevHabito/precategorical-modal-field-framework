@@ -396,29 +396,97 @@ after the displayed \(L^2\) term.
 
 The absence and detailed structure of all cubic terms should receive a separate invariant perturbation audit before an \(O(L^4)\) remainder is asserted.
 
-## 12. Next quantitative problem
+## 12. Quantitative status after the conformal-response calculation
 
-The next task is now sharply defined:
+The coefficients have now been evaluated explicitly for every fixed
+
+\[
+d\ge4.
+\]
+
+The dedicated theorem
+
+EXPLICIT_FIRST_CURVATURE_RESPONSE_DGE4_20261112.md
+
+gives
 
 \[
 \boxed{
-\text{compute }A_d\text{ and }B_d.
+A_d
+=
+-
+K_d^{\rm Mink}
+\frac{
+d(d+6)
+}{
+4(d-1)(d+1)(d+2)
+},
 }
 \]
 
-This requires the first variation of:
+and
 
-- the thin-null Penrose coefficient;
-- the edge measure and cap coefficient;
-- for \(d=3\), the volume-time integral.
+\[
+\boxed{
+B_d
+=
+K_d^{\rm Mink}
+\frac{
+d^2+2d-4
+}{
+4(d-1)(d+1)
+}.
+}
+\]
 
-The calculation can be checked against simple exactly known backgrounds:
+Thus the remaining first-order curvature-response problem is only the bulk-dominated case
 
-1. constant-curvature de Sitter/anti-de Sitter;
-2. conformally flat FLRW models;
-3. in \(d=3\), metrics where the volume-time integral can be evaluated numerically.
+\[
+d=3.
+\]
 
-## 13. Scientific consequence
+There one must perturb the intrinsic volume-time integral rather than the null-edge coefficient.
+
+## 13. Explicit 3+1 consequence
+
+For
+
+\[
+d=4,
+\]
+
+\[
+K_4^{\rm Mink}=9\pi,
+\]
+
+and the explicit response coefficients are
+
+\[
+A_4=-\pi,
+\qquad
+B_4=3\pi.
+\]
+
+Therefore
+
+\[
+\boxed{
+K_{4,g}(D_L)
+=
+9\pi
++
+\pi L^2
+\left(
+3R_{TT}-R
+\right)_o
++
+o(L^2).
+}
+\]
+
+In Ricci-flat spacetime the complete \(L^2\) correction vanishes.
+
+## 14. Scientific consequence
 
 The local recovery probability now has the perturbative structure
 
