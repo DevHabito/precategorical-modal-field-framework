@@ -1,18 +1,10 @@
-> **LATEST AUDIT STATUS — 2026-11-12:** the immediately preceding “missing factor 2” Kasner diagnosis was itself too quick and is superseded. A new direct numerical integration of the physical centered Kasner volume, with the flat normalization built into \(V/V_{\rm flat}\) and the past/future cone crossing solved separately for every direction, extrapolates to
-> \[
-> \frac{\delta V}{V_{\rm flat}L^4}
-> \to
-> \frac{68}{8505}.
-> \]
-> Thus there is currently **no numerical evidence that the physical Kasner coefficient should double**. The symbolic Kasner parent-volume checker is now marked diagnostic and must be reconciled with this independent integral before Kasner is used again as an exact calibration. Until then: keep the Schwarzschild and plane-wave results separate; treat Kasner as unresolved rather than confirmed or refuted.
-
-> **CORRECTION — 2026-11-12:** this candidate must no longer cite LRS Kasner as an independent exact calibration. A missing factor \(2\) was found in the Kasner flat-volume normalization. The pair \(17/630,1/210\) is still what Wang's printed intermediate Eqs. (74)+(76) imply and is consistent with the exact type-N plane-wave combination, but the pure-electric coefficient now lacks an independent exact-geometry confirmation. The theorem status is therefore weakened to **intermediate-equation candidate + plane-wave consistency check** until the Kasner discrepancy is understood or another purely electric geometry is computed.
+> **CURRENT AUDIT STATUS — 2026-11-12:** the coefficient pair is derived exactly from the printed RNC intermediate equations and passes the exact symmetric-plane-wave combination. The physical LRS-Kasner volume independently converges numerically to the same purely electric coefficient; the earlier factor-two alarm was a bookkeeping issue in a symbolic Kasner series implementation, not in the physical volume. The symbolic Kasner series checker remains diagnostic, so Kasner is counted here as an independent **numerical geometry check**, not as an exact analytic calibration.
 
 # Theorem candidate: corrected d = 4 vacuum Alexandrov four-volume coefficients
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** exact internal derivation from published intermediate RNC equations + two exact vacuum calibrations; externally unverified  
+**Status:** exact internal derivation from published intermediate RNC equations + exact plane-wave consistency check + independent numerical Kasner check; externally unverified  
 **Scope:** sufficiently small centered \(3+1\)-dimensional Alexandrov intervals in a Ricci-flat neighborhood  
 **Purpose:** state the internally supported \(L^4\) vacuum four-volume law independently of the orientation-recovery observable
 
@@ -90,7 +82,7 @@ No independent scalar linear in \(\nabla\nabla C\) survives after the vacuum Bia
 
 Therefore two independent vacuum calibrations are sufficient to determine the universal coefficient pair.
 
-## 3. Exact calibration A: LRS Kasner
+## 3. Independent numerical calibration A: LRS Kasner
 
 Use the LRS Kasner vacuum
 
@@ -120,48 +112,33 @@ B^2=0,
 E^2=\frac8{27}.
 \]
 
-Direct exact null-cone integration gives
+A direct numerical integration of the unexpanded physical null cones, with the flat normalization built into \(V/V_{\rm Mink}\), extrapolates to
 
 \[
 \frac{
-V_{\rm Kasner}
+V_{\rm Kasner}/V_{\rm Mink}-1
 }{
-V_{\rm Mink}
-}
-=
-1
-+
-\frac{
-68
-}{
-8505
-}
 L^4
-+
-O(L^6).
+}
+\longrightarrow
+\frac{68}{8505}
+=
+0.00799529688418\ldots.
 \]
 
-Dividing by \(E^2=8/27\),
+Since \(E^2=8/27\), this supports
 
 \[
 \boxed{
-v_E
-=
-\frac{
-68/8505
-}{
-8/27
-}
-=
-\frac{17}{630}.
+v_E=\frac{17}{630}.
 }
 \]
 
-The calculation is implemented in
+The independent physical-volume checker is
 
-tools/derive_d4_kasner_world_function_pure_electric_calibration.py
+tools/check_d4_kasner_parent_volume_numerically.py.
 
-and was independently checked against numerical integration of the unexpanded null cones.
+The older formal-series Kasner script remains under normalization audit and is not used here as an exact proof.
 
 ## 4. Exact calibration B: symmetric plane wave
 
@@ -556,9 +533,11 @@ This is equivalent to the electric/magnetic form.
 
 The coefficient pair is supported internally by three distinct routes:
 
-1. exact LRS-Kasner causal-volume integration;
-2. exact symmetric-plane-wave causal-volume integration;
-3. direct symbolic integration of the published RNC intermediate formulas.
+1. direct exact integration of the published RNC intermediate formulas;
+2. exact symmetric-plane-wave causal-volume integration of the type-N combination;
+3. independent numerical LRS-Kasner causal-volume integration of the purely electric sector.
+
+Only the first two items are analytic/exact at present; the Kasner item is a high-precision numerical geometry check.
 
 The current public APS page lists the 2019 article and its supplemental material, but the supplemental material is subscription-restricted.
 
