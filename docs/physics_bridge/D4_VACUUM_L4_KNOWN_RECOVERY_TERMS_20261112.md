@@ -1,14 +1,14 @@
-# Theorem capsule: known pieces of the 3+1 Ricci-flat L^4 recovery response
+# Theorem capsule: invariant decomposition of the 3+1 Ricci-flat L^4 recovery response
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** exact partial decomposition; one geometric term remains unresolved  
-**Physical status:** combines independently established Alexandrov-diamond geometry with the project-specific thin-null Jacobi response  
-**Literature basis:** ACD edge area and spacetime volume from Jinzhao Wang (2019); thin-null response from the present repository
+**Status:** corrected exact partial decomposition; one world-function cross term remains unresolved  
+**Physical status:** combines Alexandrov-diamond geometry, thin-null focusing, and the invariant intersection angle of the two null sheets  
+**Correction note:** this version supersedes the earlier bookkeeping that treated the parent-volume factor as \(V_D^{-2}\) after the normalized thin coefficients had already absorbed \(V_D^{-1}\)
 
 ## 1. Goal
 
-In Ricci-flat \(3+1\) spacetime, the local recovery coefficient has invariant form
+In Ricci-flat \(3+1\) spacetime,
 
 \[
 K_4(D_L)
@@ -25,165 +25,308 @@ C_B B^2
 o(L^4).
 \]
 
-Equivalently,
+The curved edge theorem is most safely rewritten using **physical** thin-null coefficients rather than normalized ones.
+
+## 2. Normalized versus physical thin coefficients
+
+Write the physical thin-null laws
 
 \[
+V(p,x)
+=
+c_+^{\rm phys} a^2[1+o(1)],
+\]
+
+\[
+V(x,q)
+=
+c_-^{\rm phys} b^2[1+o(1)].
+\]
+
+The normalized coefficients used in the curved edge theorem are
+
+\[
+c_\pm
+=
 \frac{
-K_4(D_L)
+c_\pm^{\rm phys}
 }{
-9\pi
-}
-=
-1
-+
-L^4
-\left[
-\widehat C_E E^2
-+
-\widehat C_B B^2
-\right]
-+
-o(L^4),
-\]
-
-with
-
-\[
-C_E=9\pi\widehat C_E,
-\qquad
-C_B=9\pi\widehat C_B.
-\]
-
-The curved edge formula shows that four geometric ingredients contribute:
-
-1. codimension-two edge area;
-2. parent Alexandrov spacetime volume;
-3. the two thin-null endpoint coefficients;
-4. the double-null cross-normalization factor.
-
-This note closes the first three.
-
-## 2. Four-dimensional Weyl identities
-
-Wang uses
-
-\[
-E_{ij}=C_{0i0j},
-\]
-
-\[
-H_{ijk}=C_{0ijk},
-\]
-
-\[
-D_{ijkl}=C_{ijkl},
-\]
-
-and in four dimensions defines
-
-\[
-B_{ij}
-=
-\frac12
-\epsilon_{jkl}
-H_i{}^{kl}.
-\]
-
-The four-dimensional identities are
-
-\[
-\boxed{
-D^2=4E^2,
-}
-\]
-
-and
-
-\[
-\boxed{
-H^2=2B^2.
-}
-\]
-
-The Bel-Robinson superenergy density is therefore
-
-\[
-W=E^2+B^2.
-\]
-
-These identities are explicitly stated in Wang's paper and are not project results.
-
-## 3. Alexandrov edge-area contribution
-
-For the Alexandrov interval causal diamond, Wang gives in vacuum
-
-\[
-\delta A
-=
-\Omega_{d-2}
-L^{d+2}
-\frac{
-(14d^2-32d-4)E^2
-+
-6(d-4)H^2
--
-3D^2
-}{
-360(d-1)(d+1)
+V_D
 }.
 \]
 
-Set
+For \(d=4\), the scalar edge factor contains
 
 \[
-d=4.
-\]
-
-Then
-
-\[
-14d^2-32d-4
-=
-92,
-\]
-
-the explicit \(H^2\) term vanishes, and
-
-\[
--3D^2
-=
--12E^2.
+c_+^{-3/2}c_-^{-3/2}.
 \]
 
 Hence
 
 \[
-\delta A
+c_+^{-3/2}c_-^{-3/2}
 =
-\Omega_2
-L^6
-\frac{
-80E^2
-}{
-5400
+V_D^3
+\left(
+c_+^{\rm phys}c_-^{\rm phys}
+\right)^{-3/2}.
+\]
+
+The pair-density factor contributes
+
+\[
+V_D^{-2}.
+\]
+
+Therefore the net parent-volume dependence is
+
+\[
+\boxed{
+V_D^{+1},
 }
+\]
+
+not \(V_D^{-2}\).
+
+This is the correction to the earlier bookkeeping.
+
+## 3. World-function optical gauge
+
+Let
+
+\[
+S_+(x)
 =
-\Omega_2
-L^6
+2\sigma(p,x),
+\]
+
+\[
+S_-(x)
+=
+2\sigma(x,q).
+\]
+
+On the null edge,
+
+\[
+S_+=S_-=0.
+\]
+
+Let \(L_+\) and \(L_-\) be the affinely normalized null-generator lengths from the past/future tips to the edge point.
+
+Choose the natural conjugate-null optical coordinates
+
+\[
+\boxed{
+a
+=
 \frac{
-2E^2
+S_+
 }{
-135
+2L_+
+},
+\qquad
+b
+=
+\frac{
+S_-
+}{
+2L_-
+}.
+}
+\]
+
+At the edge, derivatives of \(L_\pm\) do not contribute to \(da,db\), because they are multiplied by \(S_\pm=0\).
+
+Therefore
+
+\[
+da
+=
+\frac{
+dS_+
+}{
+2L_+
+},
+\qquad
+db
+=
+\frac{
+dS_-
+}{
+2L_-
 }.
 \]
 
-The flat edge area is
+Define the invariant null-sheet cross scalar
 
 \[
-A_0=\Omega_2L^2.
+\boxed{
+\chi
+=
+-g^{-1}
+(
+dS_+,
+dS_-
+).
+}
 \]
 
-Therefore
+In double-null form
+
+\[
+g
+=
+-2\Omega^2 da\,db
++
+h_{AB}ds^Ads^B
+\]
+
+one has
+
+\[
+-g^{-1}(da,db)
+=
+\Omega^{-2}.
+\]
+
+Hence
+
+\[
+\boxed{
+\Omega^2
+=
+\frac{
+4L_+L_-
+}{
+\chi
+}.
+}
+\]
+
+In flat space,
+
+\[
+\chi_0=8L^2,
+\]
+
+which gives
+
+\[
+\Omega_0^2=\frac12.
+\]
+
+## 4. Affine-length cancellation
+
+For a regular null generator in \(3+1\), write the physical thin-null coefficient as
+
+\[
+\boxed{
+c_\pm^{\rm phys}
+=
+\frac{
+\pi
+}{
+6
+}
+L_\pm^2
+F_\pm,
+}
+\]
+
+where
+
+\[
+F_\pm=1
+\]
+
+in flat space and contains the dimensionless focusing/shear correction in curved space.
+
+Then
+
+\[
+\Omega^6
+\left(
+c_+^{\rm phys}c_-^{\rm phys}
+\right)^{-3/2}
+\]
+
+equals
+
+\[
+\left(
+\frac{
+4L_+L_-
+}{
+\chi
+}
+\right)^3
+\left[
+\left(
+\frac{\pi}{6}
+\right)^2
+L_+^2L_-^2
+F_+F_-
+\right]^{-3/2}.
+\]
+
+The affine-length factors cancel exactly:
+
+\[
+\boxed{
+(L_+L_-)^3
+(L_+^2L_-^2)^{-3/2}
+=
+1.
+}
+\]
+
+Thus the recovery coefficient has the invariant schematic form
+
+\[
+\boxed{
+K_4
+\propto
+V_D\,
+A_E\,
+\chi^{-3}
+F_+^{-3/2}
+F_-^{-3/2},
+}
+\]
+
+with the known universal scalar prefactor fixed by the flat theorem.
+
+There is no independent affine-length correction to compute.
+
+## 5. Logarithmic decomposition
+
+At order \(L^4\),
+
+\[
+\boxed{
+\delta\ln K_4
+=
+\delta\ln V_D
++
+\delta\ln A_E
+-
+3\delta\ln\chi
+-
+\frac32
+\left(
+\delta\ln F_+
++
+\delta\ln F_-
+\right).
+}
+\]
+
+This is manifestly invariant under optical-coordinate rescaling.
+
+## 6. Alexandrov edge area
+
+Wang's \(3+1\) Ricci-flat ACD result gives
 
 \[
 \boxed{
@@ -198,85 +341,11 @@ E^2L^4.
 }
 \]
 
-There is no \(B^2\) term in the ACD edge area at this order.
+There is no \(B^2\) contribution at this order.
 
-## 4. Parent Alexandrov spacetime volume
+## 7. Parent Alexandrov volume
 
-Wang's vacuum ACD spacetime-volume formula is
-
-\[
-V^{(d)}
-=
-\frac{
-2\Omega_{d-2}L^d
-}{
-d(d-1)
-}
-+
-\Omega_{d-2}L^{d+4}
-\frac{
-(7d^3+58d^2+146d+108)E^2
-+
-6(d+2)(d+6)H^2
--
-\frac32(d+2)D^2
-}{
-90(d-1)(d+1)(d+2)(d+3)(d+4)
-}
-+\cdots.
-\]
-
-For
-
-\[
-d=4,
-\]
-
-the numerator becomes
-
-\[
-2068E^2
-+
-360H^2
--
-9D^2.
-\]
-
-Using
-
-\[
-H^2=2B^2,
-\qquad
-D^2=4E^2,
-\]
-
-this is
-
-\[
-2032E^2
-+
-720B^2.
-\]
-
-The denominator is
-
-\[
-453600.
-\]
-
-The flat volume is
-
-\[
-V_0
-=
-\frac{
-\Omega_2L^4
-}{
-6
-}.
-\]
-
-Thus
+Wang's total ACD volume gives
 
 \[
 \boxed{
@@ -301,188 +370,97 @@ L^4.
 }
 \]
 
-Because the recovery edge coefficient contains
+The sign is **positive** in the logarithmic recovery decomposition because the net normalized-coefficient algebra leaves one power of \(V_D\).
+
+## 8. Thin-null focusing
+
+The plane-wave Jacobi lemma gives per generator
 
 \[
-V_D^{-2},
+\delta\ln F_{\rm thin}
+=
+\frac{
+L^4
+}{
+504
+}
+\mathcal H_{AB}\mathcal H^{AB}.
 \]
 
-the parent-volume contribution to
+Wang's optical-tidal average in \(d=4\) implies
 
 \[
-\delta\ln K_4
+\left\langle
+\mathcal H_{AB}\mathcal H^{AB}
+\right\rangle
+=
+\frac85
+(E^2+B^2).
 \]
 
-is
+Therefore one sheet has average
 
 \[
 \boxed{
--2\delta\ln V_D
+\left\langle
+\delta\ln F_\pm
+\right\rangle
 =
--
-\left[
 \frac{
-254
+1
+}{
+315
+}
+(E^2+B^2)L^4.
+}
+\]
+
+The two sheets together contribute to \(\delta\ln K_4\)
+
+\[
+\boxed{
+-\frac32
+\left\langle
+\delta\ln F_+
++
+\delta\ln F_-
+\right\rangle
+=
+-\frac1{105}
+(E^2+B^2)L^4.
+}
+\]
+
+## 9. Correct sum of the known terms
+
+Add edge area, parent volume, and thin focusing.
+
+### Electric part
+
+\[
+\frac2{135}
++
+\frac{127}{4725}
+-
+\frac1{105}
+=
+\boxed{
+\frac{
+152
 }{
 4725
 }
-E^2
-+
-\frac{
-2
-}{
-105
-}
-B^2
-\right]
-L^4.
-}
+}.
 \]
 
-## 5. Angular average of the optical Weyl tidal matrix
-
-Let
+### Magnetic part
 
 \[
-k=T+n
-\]
-
-be a future null direction and let
-
-\[
-\mathcal H_{AB}
+\frac1{105}
+-
+\frac1{105}
 =
-C_{AkBk}
-\]
-
-be the screen-projected optical tidal matrix.
-
-This is the same projected Weyl tensor entering the shear evolution equation in Wang's light-cone calculation.
-
-In vacuum, Wang obtains the light-cone-cut area density correction
-
-\[
--\frac{
-\mathcal H_{AB}\mathcal H^{AB}
-}{
-180
-}
-L^4.
-\]
-
-Comparing its angular integral with his closed area formula gives, in \(d=4\),
-
-\[
-\boxed{
-\left\langle
-\mathcal H_{AB}\mathcal H^{AB}
-\right\rangle_{S^2}
-=
-\frac85
-(E^2+B^2).
-}
-\]
-
-This is consistent with the explicit four-dimensional identities above.
-
-## 6. Thin-null endpoint response
-
-The project plane-wave lemma proves, for one regular null generator,
-
-\[
-\boxed{
-\delta\ln c_{\rm thin}
-=
-\frac{
-L^4
-}{
-504
-}
-\mathcal H_{AB}\mathcal H^{AB}
-}
-\]
-
-at quadratic Weyl order.
-
-Averaging over the edge directions gives
-
-\[
-\left\langle
-\delta\ln c_{\rm thin}
-\right\rangle
-=
-\frac{
-L^4
-}{
-504
-}
-\frac85
-(E^2+B^2).
-\]
-
-Hence
-
-\[
-\boxed{
-\left\langle
-\delta\ln c_{\rm thin}
-\right\rangle
-=
-\frac{
-L^4
-}{
-315
-}
-(E^2+B^2).
-}
-\]
-
-The past and future null sheets contribute equally at this order, so
-
-\[
-\boxed{
-\left\langle
-\delta\ln c_+
-+
-\delta\ln c_-
-\right\rangle
-=
-\frac{
-2L^4
-}{
-315
-}
-(E^2+B^2).
-}
-\]
-
-## 7. Thin-null contribution to the recovery coefficient
-
-For
-
-\[
-d=4,
-\]
-
-the scalar edge factor contains
-
-\[
-c_+^{-3/2}
-c_-^{-3/2}.
-\]
-
-Therefore
-
-\[
-\delta\ln K_4
-\big|_{\rm thin}
-=
--\frac32
-\left\langle
-\delta\ln c_+
-+
-\delta\ln c_-
-\right\rangle.
+\boxed{0}.
 \]
 
 Thus
@@ -490,280 +468,207 @@ Thus
 \[
 \boxed{
 \delta\ln K_4
-\big|_{\rm thin}
-=
--
-\frac{
-1
-}{
-105
-}
-(E^2+B^2)
-L^4.
-}
-\]
-
-## 8. Sum of the three known pieces
-
-Add:
-
-### Edge area
-
-\[
-+
-\frac{
-2
-}{
-135
-}
-E^2L^4.
-\]
-
-### Parent volume
-
-\[
--
-\left[
-\frac{
-254
-}{
-4725
-}
-E^2
-+
-\frac{
-2
-}{
-105
-}
-B^2
-\right]
-L^4.
-\]
-
-### Thin-null coefficients
-
-\[
--
-\frac{
-1
-}{
-105
-}
-(E^2+B^2)
-L^4.
-\]
-
-For the electric coefficient,
-
-\[
-\frac2{135}
--
-\frac{254}{4725}
--
-\frac1{105}
-=
-\boxed{
--\frac{
-229
-}{
-4725
-}
-}.
-\]
-
-For the magnetic coefficient,
-
-\[
--\frac2{105}
--
-\frac1{105}
-=
-\boxed{
--\frac1{35}.
-}
-\]
-
-Therefore
-
-\[
-\boxed{
-\delta\ln K_4
 \big|_{\rm known}
 =
--
-\left[
 \frac{
-229
+152
 }{
 4725
 }
-E^2
-+
-\frac{
-1
-}{
-35
-}
-B^2
-\right]
-L^4.
+E^2L^4.
 }
 \]
 
-## 9. The remaining term
+The magnetic contribution cancels exactly among the already known pieces.
 
-The curved edge formula also contains the double-null cross-normalization factor
+## 10. The only remaining geometric term
 
-\[
-\Omega_{\rm null}^{6}.
-\]
-
-Thus the full response is
+The full vacuum response is therefore
 
 \[
 \boxed{
 \delta\ln K_4
 =
-6
-\left\langle
-\delta\ln\Omega_{\rm null}
-\right\rangle
--
-\left[
 \frac{
-229
+152
 }{
 4725
 }
-E^2
-+
-\frac{
-1
-}{
-35
-}
-B^2
-\right]
-L^4
+E^2L^4
+-
+3
+\left\langle
+\delta\ln\chi
+\right\rangle
 +
 o(L^4).
 }
 \]
 
-The quantity
+Write
 
 \[
 \left\langle
-\delta\ln\Omega_{\rm null}
+\delta\ln\chi
 \right\rangle
+=
+L^4
+\left[
+X_EE^2
++
+X_BB^2
+\right]
++
+o(L^4).
 \]
 
-is the only unresolved geometric contribution to the \(L^4\) vacuum coefficient in this decomposition.
-
-Because optical coordinate changes redistribute terms between
-
-\[
-\Omega_{\rm null}
-\]
-
-and
-
-\[
-c_\pm,
-\]
-
-this term should be computed in the same optical gauge used by the thin-null coefficient or, preferably, through a manifestly gauge-invariant combination.
-
-## 10. Bel-Robinson question reduced to one equality
-
-Without the cross-normalization term, the known coefficients are unequal:
-
-\[
--\frac{229}{4725}
-\ne
--\frac1{35}.
-\]
-
-Thus the currently known pieces are not proportional to
-
-\[
-E^2+B^2.
-\]
-
-A Bel-Robinson response can emerge only if the remaining cross-normalization contribution supplies precisely the required electric/magnetic difference.
-
-No symmetry currently forces that cancellation.
-
-Therefore the correct status remains:
+Then
 
 \[
 \boxed{
-C_E=C_B
-\quad\text{open}.
+\widehat C_E
+=
+\frac{
+152
+}{
+4725
+}
+-
+3X_E,
 }
 \]
 
-## 11. Literature boundary
+\[
+\boxed{
+\widehat C_B
+=
+-3X_B.
+}
+\]
 
-The ACD edge-area and total-volume formulas are due to Jinzhao Wang, *Physical Review D* 100, 064020 (2019).
+The full problem has therefore been reduced to the invariant cross-angle scalar \(\chi\).
 
-Wang explicitly states in four dimensions:
+## 11. Geometric interpretation of chi
+
+The covectors
 
 \[
-D^2=4E^2,
+dS_+,
 \qquad
-H^2=2B^2,
+dS_-
 \]
 
-and emphasizes that a direct Bel-Robinson proportionality is observable dependent.
+are the affinely scaled null normals to the two Alexandrov boundary sheets.
 
-The thin-null contribution is a project result derived from the constant-profile plane-wave Jacobi equation.
-
-No Wang coefficient is being reinterpreted as a recovery coefficient without the explicit multiplicative bookkeeping above.
-
-## 12. Regression
-
-The repository script
-
-tools/verify_d4_vacuum_l4_known_terms.py
-
-uses exact rational arithmetic and verifies
+Thus
 
 \[
--\frac{229}{4725}
+\chi
+=
+-g^{-1}(dS_+,dS_-)
 \]
 
-and
+measures their Lorentzian cross normalization at the codimension-two edge.
+
+The remaining \(L^4\) response is therefore not an arbitrary coordinate normalization.
+
+It is the curvature correction to the relative boost/cross angle of the two null sheets.
+
+## 12. Bel-Robinson criterion
+
+The full coefficient is proportional to
 
 \[
+E^2+B^2
+\]
+
+if and only if
+
+\[
+\frac{
+152
+}{
+4725
+}
+-
+3X_E
+=
+-3X_B.
+\]
+
+Equivalently,
+
+\[
+\boxed{
+X_E-X_B
+=
+\frac{
+152
+}{
+14175
+}.
+}
+\]
+
+No symmetry currently enforces this relation.
+
+The Bel-Robinson question is therefore reduced to a concrete statement about the averaged world-function cross-normalization.
+
+## 13. Correction to the previous repository version
+
+The earlier version of this note combined:
+
+- \(V_D^{-2}\) from the pair density;
+- physical thin-null focusing coefficients;
+
+without restoring the powers of \(V_D\) already contained in the normalized \(c_\pm\).
+
+That produced the incorrect partial coefficients
+
+\[
+-\frac{229}{4725},
+\qquad
 -\frac1{35}.
 \]
 
-## 13. Next target
+Those values are superseded.
 
-The vacuum \(L^4\) problem has now been reduced to one local geometric observable:
+The corrected invariant bookkeeping gives
+
+\[
+\boxed{
++\frac{152}{4725}E^2,
+\qquad
+0\cdot B^2,
+}
+\]
+
+before the \(\chi\) term.
+
+## 14. Next target
+
+Compute
 
 \[
 \boxed{
 \left\langle
-\delta\ln\Omega_{\rm null}
-\right\rangle.
+\delta\ln\chi
+\right\rangle
 }
 \]
 
-The next proof should express this quantity invariantly in terms of the two null sheets, ideally using Synge's world function:
+from the Riemann-normal-coordinate world-function expansion for the two null sheets.
+
+Because
 
 \[
-\Omega_{\rm null}^{-2}
-\propto
--g^{-1}
-(
-d\sigma(p,\cdot),
-d\sigma(\cdot,q)
-)
+S_\pm
 \]
 
-after the optical normalization is fixed.
+are the squared geodesic intervals whose zero sets define the ACD boundaries, Wang's RNC expansion provides the correct starting point.
 
-That route can be compared directly with the Riemann-normal-coordinate ACD boundary expansion.
+The calculation should be checked on:
+
+1. a purely electric algebraic Weyl tensor;
+2. a radiative/type-N Weyl configuration;
+3. the flat limit.
