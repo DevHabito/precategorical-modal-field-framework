@@ -1,3 +1,5 @@
+> **CORRECTION — 2026-11-12:** the Kasner evidence quoted in older sections of this audit is superseded. The Kasner parent-volume code omitted the factor \(2\) needed to normalize its flat directional integral from \(1/2\) to \(1\). Its corrected coefficient is \(17/315\) in the purely electric sector, not \(17/630\). Therefore statements below that use “two exact geometries” or Kasner as support for the pair \(17/630,1/210\) must not be used. What remains valid and independent of Kasner is: (i) the exact symmetric-plane-wave volume check, and (ii) the direct re-integration of Wang's printed intermediate Eqs. (74) and (76), which implies \(17/630,1/210\) in \(d=4\). The pure-electric geometric status is now reopened.
+
 > **Audit update (2026-11-12):** the discrepancy has now been localized further. Direct exact integration of Wang's own published Eqs. (74) and (76) in \(d=4\) gives
 > \[
 > v_E=\frac{17}{630},\qquad v_B=\frac1{210},
