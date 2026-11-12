@@ -1,18 +1,10 @@
-> **LATEST AUDIT STATUS — 2026-11-12:** the immediately preceding “missing factor 2” Kasner diagnosis was itself too quick and is superseded. A new direct numerical integration of the physical centered Kasner volume, with the flat normalization built into \(V/V_{\rm flat}\) and the past/future cone crossing solved separately for every direction, extrapolates to
-> \[
-> \frac{\delta V}{V_{\rm flat}L^4}
-> \to
-> \frac{68}{8505}.
-> \]
-> Thus there is currently **no numerical evidence that the physical Kasner coefficient should double**. The symbolic Kasner parent-volume checker is now marked diagnostic and must be reconciled with this independent integral before Kasner is used again as an exact calibration. Until then: keep the Schwarzschild and plane-wave results separate; treat Kasner as unresolved rather than confirmed or refuted.
-
-> **CORRECTION — 2026-11-12:** remove LRS Kasner from the evidence list for the \(d=4\) coefficients. Its parent-volume calculation had a missing flat normalization factor \(2\). The all-\(d\) formulas in this note remain the exact result of re-integrating the printed intermediate equations and still pass the exact Cahen--Wallach plane-wave combination in every \(d\ge4\), but they no longer have an independent pure-electric Kasner confirmation.
+> **CURRENT AUDIT STATUS — 2026-11-12:** the temporary Kasner factor-two alarm has been resolved at the physical-volume level. Direct integration of the unexpanded centered LRS-Kasner null cones, with the exact flat normalization built into \(V/V_{\rm flat}\), supports the re-integrated coefficient in \(d=4,5,6\). The \(d=5,6\) regressions were independently repeated in the present audit and agree with the all-\(d\) prediction at the \(10^{-8}\) level after \(L\to0\) extrapolation. The older symbolic Kasner series checker remains diagnostic and is **not** counted as an exact proof. The evidence hierarchy is therefore: exact re-integration of the printed equations; exact all-\(d\) Cahen--Wallach check; independent numerical LRS-Kasner checks in \(d=4,5,6\).
 
 # All-dimensional audit of the vacuum Alexandrov-volume coefficient implied by Wang's intermediate equations
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** exact symbolic re-integration of the published intermediate formulas; \(d=4\) externally unverified but cross-checked by two exact geometries; all-\(d\) extension has an exact Cahen--Wallach consistency check  
+**Status:** exact symbolic re-integration of the published intermediate formulas; externally unverified; exact all-\(d\) Cahen--Wallach consistency check plus independent numerical LRS-Kasner checks in \(d=4,5,6\)  
 **Scope:** centered sufficiently small Ricci-flat Alexandrov intervals, \(d\ge4\)
 
 ## 1. Question
@@ -293,11 +285,13 @@ o(L^4).
 }
 \]
 
-This is exactly the pair independently obtained from:
+This is the same pair supported by three distinct routes:
 
-1. the LRS-Kasner causal volume;
-2. the symmetric Cahen--Wallach plane-wave causal volume;
-3. the direct \(d=4\) integration of the published intermediate equations.
+1. direct \(d=4\) integration of the published intermediate equations;
+2. the exact symmetric Cahen--Wallach plane-wave volume, which fixes the type-N combination;
+3. an independent numerical LRS-Kasner physical-volume regression in the purely electric sector.
+
+The Kasner item is numerical evidence, not an exact symbolic proof.
 
 ## 7. Exact all-dimensional Cahen--Wallach check
 
