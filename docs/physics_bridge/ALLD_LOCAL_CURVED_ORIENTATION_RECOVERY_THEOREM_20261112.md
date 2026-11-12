@@ -157,34 +157,38 @@ L\to0
 
 is a separate statement about the coefficient.
 
-## 3. Local causally convex convex-normal neighborhood
+## 3. Nested causal and geodesic neighborhoods
 
-Strong causality at \(o\) provides arbitrarily small causally convex neighborhoods.
+Strong causality at \(o\) gives arbitrarily small neighborhoods that are causally convex in the ambient spacetime.
 
-Smooth Lorentzian geometry provides arbitrarily small convex normal neighborhoods.
+Independently, smooth Lorentzian geometry gives arbitrarily small strictly convex normal neighborhoods.
 
-Choose a relatively compact neighborhood
+The proof does not require one set to have both properties.
+
+Choose nested relatively compact neighborhoods
 
 \[
-U\ni o
+o\in V\Subset C,
 \]
 
-that is both:
+such that:
 
-- causally convex in the ambient spacetime;
-- convex normal.
+- \(V\) is causally convex in the ambient spacetime;
+- \(C\) is strictly convex normal.
+
+This can be done by first choosing \(C\) and then using strong causality to choose a sufficiently small causally convex \(V\subset C\).
 
 For sufficiently small \(L\),
 
 \[
-\overline{D_L}\subset U.
+\overline{D_L}\subset V.
 \]
 
-Therefore every causal relation between points of \(D_L\) is represented entirely inside the regular local geometry of \(U\).
+Therefore every ambient causal curve with endpoints in \(D_L\) remains inside \(V\), while every geodesic, world-function, Jacobi-field, and null-Fermi calculation is carried out inside the containing strictly convex normal neighborhood \(C\).
 
 ## 4. No cuts or conjugate points
 
-Because \(U\) is convex normal:
+Because \(C\) is strictly convex normal:
 
 - every two points in \(C\) are joined by a unique geodesic in \(C\);
 - the exponential maps are nonsingular on the relevant star domains;
@@ -245,15 +249,23 @@ Thus the regular thin-null geometry is automatic.
 
 ## 7. Penrose-scaled compact containment
 
-Inside the uniform null-Fermi tubes, the metric cones are uniformly sandwiched between nearby model cone structures.
+The compact generator family is free of conjugate points.
 
-For a thin-null endpoint of optical depth \(a\):
+Its transverse Dirichlet Jacobi operators therefore have a uniform positive index-form spectral gap.
 
-- longitudinal inward displacement is \(O(a)\);
-- transverse causal width is \(O(\sqrt a)\);
-- affine position along the generator stays in a fixed compact interval.
+For a nearly null endpoint with optical depth \(a\), the causal inequality plus index-form coercivity gives
 
-Therefore after
+\[
+u=O(a),
+\qquad
+|y|=O(\sqrt a),
+\]
+
+uniformly over the compact generator family.
+
+The affine null coordinate remains in the fixed compact generator interval.
+
+Hence after
 
 \[
 u=aU,
@@ -263,11 +275,11 @@ y^A=\sqrt a\,Y^A,
 v=V,
 \]
 
-the rescaled Alexandrov intervals remain in one fixed compact coordinate set.
+the rescaled Alexandrov intervals lie in one fixed compact coordinate set.
 
-The limiting endpoints are timelike related in the Penrose plane-wave metric.
+The limiting endpoints are timelike related in the Penrose plane-wave metric, so the Penrose-scaled domain-convergence theorem applies.
 
-Hence the Penrose-scaled domain-convergence theorem applies automatically.
+Thus compact containment is derived from regular conjugate-free null geometry; it is not an independent assumption.
 
 ## 8. Thin-null endpoint laws
 
