@@ -564,9 +564,9 @@ tools/audit_wang2019_d4_acd_volume_eq79.py
 
 and verifies both the total coefficients and the boundary/determinant split.
 
-The independent exact-geometry checks are:
+The independent geometry checks are:
 
-- tools/derive_d4_kasner_world_function_pure_electric_calibration.py
-- tools/derive_d4_plane_wave_vacuum_response.py
+- tools/check_d4_kasner_parent_volume_numerically.py — direct numerical LRS-Kasner physical-volume regression;
+- tools/derive_d4_plane_wave_vacuum_response.py — exact symmetric-plane-wave calculation.
 
-All three routes agree.
+Together with the hand derivation above, these routes agree. The Kasner checker is numerical; the older symbolic Kasner series implementation remains diagnostic.
