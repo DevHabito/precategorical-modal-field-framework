@@ -1,3 +1,11 @@
+> **LATEST AUDIT STATUS — 2026-11-12:** the immediately preceding “missing factor 2” Kasner diagnosis was itself too quick and is superseded. A new direct numerical integration of the physical centered Kasner volume, with the flat normalization built into \(V/V_{\rm flat}\) and the past/future cone crossing solved separately for every direction, extrapolates to
+> \[
+> \frac{\delta V}{V_{\rm flat}L^4}
+> \to
+> \frac{68}{8505}.
+> \]
+> Thus there is currently **no numerical evidence that the physical Kasner coefficient should double**. The symbolic Kasner parent-volume checker is now marked diagnostic and must be reconciled with this independent integral before Kasner is used again as an exact calibration. Until then: keep the Schwarzschild and plane-wave results separate; treat Kasner as unresolved rather than confirmed or refuted.
+
 > **CORRECTION — 2026-11-12:** the earlier status line claiming independent confirmation by LRS Kasner is withdrawn because the Kasner parent-volume checker omitted the flat normalization factor \(2\). The Schwarzschild derivation in this file is not affected by that Kasner normalization error and remains the current purely electric calibration under audit.
 
 > **Status update (2026-11-12):** the requested independent non-Schwarzschild verification has now been completed using the LRS Kasner vacuum, exact null-cone integrals, Synge world-function endpoint gradients, and the local intrinsic edge density. It reproduces \(a_4=683/9450\) exactly. See \`D4_KASNER_WORLD_FUNCTION_PURE_ELECTRIC_CALIBRATION_20261112.md\`.
