@@ -2,9 +2,9 @@
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** analytic local theorem  
+**Status:** literature-backed corollary specialized to finite convex diamonds  
 **Physical status:** removes the independent volume-time regularity assumption for sufficiently regular convex diamonds  
-**Literature basis:** adapts the null-boundary variation method of Chruściel, Grant, and Minguzzi to a finite convex Alexandrov interval
+**Literature basis:** direct specialization of Chruściel, Grant, and Minguzzi, *On differentiability of volume time functions*, Ann. Henri Poincaré 17 (2016), 2801–2824, DOI 10.1007/s00023-015-0448-3
 
 ## 1. Setting
 
@@ -117,7 +117,57 @@ d\Phi
 }
 \]
 
-## 3. Why the convex-normal setting is simpler
+## 3. Direct reduction to the established volume-function theorem
+
+View the open diamond
+
+\[
+D=I(p,q)
+\]
+
+as a spacetime in its own right.
+
+Because \(D\) is a relatively compact causal diamond in the local convex setting, it is globally hyperbolic and has finite physical volume.
+
+The constant weight
+
+\[
+\varphi\equiv1
+\]
+
+is smooth, strictly positive, and integrable on \(D\).
+
+Chruściel, Grant, and Minguzzi prove \(C^1\) differentiability with timelike gradient for an appropriate class of positive smooth integrable Geroch volume functions on globally hyperbolic spacetimes.
+
+Inside \(D\),
+
+\[
+I_D^-(x)=I(p,x),
+\]
+
+and
+
+\[
+I_D^+(x)=I(x,q).
+\]
+
+Therefore their past and future volume functions specialize exactly to
+
+\[
+\tau_-(x)=\operatorname{Vol}(I(p,x)),
+\]
+
+and
+
+\[
+\tau_+(x)=\operatorname{Vol}(I(x,q)).
+\]
+
+Thus the \(C^1\) temporal regularity used by the orientation-recovery theorem is not a new differentiability theorem of this project.
+
+The remaining sections give a local geometric proof sketch because it is useful for understanding signs and for the later tip-shape calculation, but the regularity conclusion itself should be cited as a corollary of the established volume-function literature.
+
+## 11. Why the convex-normal setting is simpler
 
 Inside a convex normal neighborhood:
 
