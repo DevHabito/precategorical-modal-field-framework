@@ -1,8 +1,8 @@
-# Theorem: asymptotic error law for arrow-erased Minkowski orientation recovery
+# Theorem: asymptotic error law for arrow-erased Minkowski orientation recovery in every fixed d >= 3
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** assembled quantitative asymptotic theorem for every fixed integer \(d\ge4\)  
+**Status:** assembled quantitative asymptotic theorem for every fixed integer \(d\ge3\)  
 **Physical status:** leading reconstruction-error law for the declared flat Minkowski arrow-erasure experiment  
 **Novelty status:** targeted literature review did not locate an equivalent Minkowski UPO error law; absolute novelty and priority are not certified
 
@@ -11,7 +11,7 @@
 Fix an integer spacetime dimension
 
 \[
-d\ge4.
+d\ge3.
 \]
 
 Let
@@ -28,12 +28,20 @@ Then
 \boxed{
 1-p_d^{\mathrm{UPO}}(n)
 \sim
-K_d^{\mathrm{twin}}
-n^{-4/d},
+\begin{cases}
+\dfrac{32\pi}{3}\,n^{-1}, & d=3,\\[8pt]
+K_d^{\mathrm{twin}}\,n^{-4/d}, & d\ge4.
+\end{cases}
 }
 \]
 
-where
+For
+
+\[
+d\ge4,
+\]
+
+the constant is
 
 \[
 \boxed{
@@ -77,9 +85,69 @@ L_m
 dt.
 \]
 
-Thus comparable true twins are the unique leading orientation-recovery obstruction.
+In every fixed dimension
 
-## 2. The 3+1 law
+\[
+d\ge3,
+\]
+
+comparable true twins are the unique leading orientation-recovery obstruction.
+
+The geometry producing the coefficient changes at \(d=4\):
+
+- \(d=3\): bulk-dominated small-disagreement pairs;
+- \(d\ge4\): null-joint-dominated small-disagreement pairs.
+
+## 2. The 2+1 law
+
+For
+
+\[
+d=3,
+\]
+
+the small-disagreement tail is bulk dominated and has the exact coefficient
+
+\[
+\boxed{
+F_3(\varepsilon)
+\sim
+\frac{32\pi}{9}
+\varepsilon^3.
+}
+\]
+
+Laplace-Stieltjes transfer gives
+
+\[
+\boxed{
+\mathbb E[T_n]
+\sim
+\frac{32\pi}{3n}.
+}
+\]
+
+The factorial second moment is \(O(n^{-2})\), so
+
+\[
+\Pr(T_n>0)
+\sim
+\frac{32\pi}{3n}.
+\]
+
+All verified non-twin failure mechanisms are \(O(n^{-2})\) or smaller. Therefore
+
+\[
+\boxed{
+1-p_3^{\mathrm{UPO}}(n)
+\sim
+\frac{32\pi}{3n}.
+}
+\]
+
+The dedicated proof is recorded in MINKOWSKI_D3_ORIENTATION_RECOVERY_RATE_THEOREM_20261112.md.
+
+## 3. The 3+1 law
 
 For
 
@@ -123,7 +191,7 @@ o(n^{-1}).
 
 This is the sharp first-order reconstruction-error law for the fixed flat \(3+1\) ensemble.
 
-## 3. Lower bound from true-twin occurrence
+## 4. Lower bound from true-twin occurrence
 
 Let \(T_n\) be the number of comparable true-twin pairs.
 
@@ -155,7 +223,7 @@ n^{-4/d}.
 
 It remains to show that every failure not containing a comparable true twin is lower order.
 
-## 4. Quantitative diagonal for macroscopic modules
+## 5. Quantitative diagonal for macroscopic modules
 
 For every fixed
 
@@ -266,7 +334,7 @@ for all sufficiently large \(n\).
 
 This supplies a quantitative bridge between the fixed-\(\varepsilon\) graphon theorem and the sublinear-complement theorem.
 
-## 5. Residual microscopic forcing failures
+## 6. Residual microscopic forcing failures
 
 Let \(R_n\) count low-disagreement sampled edges that:
 
@@ -305,7 +373,7 @@ and
 
 every sampled edge reaches the fixed positive-disagreement core by repeated forcing.
 
-## 6. Core edges make every residual obstruction linear
+## 7. Core edges make every residual obstruction linear
 
 Let
 
@@ -357,7 +425,7 @@ Therefore, outside the residual microscopic event:
 }
 \]
 
-## 7. Multiple components without true twins
+## 8. Multiple components without true twins
 
 If the graph has two edge-containing components and no true twin/residual escalation failure, both components have size at least
 
@@ -393,7 +461,7 @@ This is
 o(n^{-4/d}).
 \]
 
-## 8. Internal non-stable modules without true twins
+## 9. Internal non-stable modules without true twins
 
 Now suppose there is a unique edge-containing component \(C_n\), but it is not UPO.
 
@@ -415,7 +483,7 @@ Hence
 
 There are two possibilities.
 
-### 8.1 Complement at least epsilon_n n
+### 9.1 Complement at least epsilon_n n
 
 If
 
@@ -441,7 +509,7 @@ Its probability is at most
 \right).
 \]
 
-### 8.2 Complement at most epsilon_n n
+### 9.2 Complement at most epsilon_n n
 
 If
 
@@ -481,7 +549,7 @@ o(n^{-4/d}).
 
 Thus every internal non-twin modular obstruction is lower order.
 
-## 9. Upper bound
+## 10. Upper bound
 
 Let \(\mathcal F_n\) be the orientation-recovery failure event.
 
@@ -537,7 +605,7 @@ n^{-4/d}.
 }
 \]
 
-## 10. Quantitative hierarchy
+## 11. Quantitative hierarchy
 
 For fixed \(d\ge4\):
 
@@ -589,7 +657,7 @@ O(n^{1-d}).
 
 Thus the asymptotic hierarchy has a unique first level.
 
-## 11. Geometric interpretation of the leading error
+## 12. Geometric interpretation of the leading error
 
 For \(d\ge4\), the leading true-twin event is localized near the codimension-two null joint of the Alexandrov interval.
 
@@ -635,7 +703,7 @@ For \(d=4\), the exact coefficient is
 9\pi.
 \]
 
-## 12. What the theorem does not say
+## 13. What the theorem does not say
 
 The theorem quantifies failure of orientation recovery under a declared information-loss experiment.
 
@@ -650,7 +718,7 @@ It does not:
 
 The result is a sharp probabilistic statement inside the stated model.
 
-## 13. Literature boundary
+## 14. Literature boundary
 
 The proof combines classical comparability/UPO theory, graphon sampling, weakly homogeneous sets, and standard concentration inequalities with project-specific Lorentzian estimates.
 
@@ -668,21 +736,20 @@ This remains limited negative evidence.
 
 Absolute novelty and priority are not certified.
 
-## 14. Next frontier
+## 15. Next frontier
 
 The flat fixed-window asymptotic recovery probability is now known to first order for every fixed
 
 \[
-d\ge4.
+d\ge3.
 \]
 
 The next quantitative questions are:
 
-1. determine the \(d=3\) leading constant;
-2. derive the second-order correction for \(d=4\);
-3. determine whether the \(O(n^{-1-4/d})\) residual term has a computable constant;
-4. replace the Alexandrov interval with other windows;
-5. perturb the null-joint calculation under weak curvature;
-6. determine which parts of the coefficient are boundary-universal and which depend on the chosen finite window.
+1. derive the second-order correction for \(d=3\) and \(d=4\);
+2. determine whether the first residual non-twin term has a computable constant;
+3. replace the Alexandrov interval with other windows;
+4. perturb the bulk and null-joint calculations under weak curvature;
+5. determine which parts of the leading coefficient are boundary-universal and which depend on the chosen finite window.
 
 The leading flat-space error law itself is closed under the current assumptions.
