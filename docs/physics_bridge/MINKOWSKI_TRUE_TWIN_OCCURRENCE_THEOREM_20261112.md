@@ -279,17 +279,7 @@ Now consider two true-twin pair indicators sharing one vertex, for example
 \{X_1,X_3\}.
 \]
 
-If both events occur, then
-
-\[
-N[X_1]
-=
-N[X_2]
-=
-N[X_3].
-\]
-
-Hence the three vertices form a clique of one true-twin equivalence class.
+If both events occur, then all three vertices are mutually adjacent and their external adjacency signatures coincide.
 
 Let
 
@@ -297,24 +287,7 @@ Let
 \Delta_3(X_1,X_2,X_3)
 \]
 
-be the three-way splitter volume
-
-\[
-\mu
-\left[
-\left(
-A_{X_1}\cup A_{X_2}\cup A_{X_3}
-\right)
-\setminus
-\left(
-A_{X_1}\cap A_{X_2}\cap A_{X_3}
-\right)
-\right].
-\]
-
-All remaining \(n-3\) points must avoid this region.
-
-## 6. Overlap bound for d > 4
+be the three-way splitter volume.
 
 If
 
@@ -322,48 +295,90 @@ If
 \Delta_3\le t,
 \]
 
-then every pairwise disagreement is at most \(t\):
+then every pairwise disagreement is at most \(t\).
+
+In particular,
 
 \[
-\Delta_d(X_i,X_j)\le t.
+X_1\sim X_2,
+\qquad
+\Delta_d(X_1,X_2)\le t.
 \]
 
-Fix \(X_1=x\).
-
-Both \(X_2\) and \(X_3\) must lie in
+The probability of this first pair event is
 
 \[
-B_t(x)
+F_d(t)
 =
-\{
-z:z\sim x,\,
-\Delta_d(x,z)\le t
-\}.
+O(t^{\beta_d}).
 \]
 
-The uniform comparable-ball theorem gives
+Condition on \(X_1,X_2\).
+
+The third point must satisfy
 
 \[
-\sup_x
-\mu(B_t(x))
-=
-O(t^2).
+X_3\sim X_1
+\]
+
+and
+
+\[
+\Delta_d(X_1,X_3)\le t.
 \]
 
 Therefore
 
 \[
-\Pr(
-X_1,X_2,X_3
-\text{ can form an overlapping twin configuration},
-\;
-\Delta_3\le t
-)
-=
-O(t^4).
+X_3\in B_t(X_1),
 \]
 
-It follows that the overlapping contribution satisfies
+where the uniform comparable-ball theorem gives
+
+\[
+\sup_x\mu(B_t(x))
+=
+O(t^2).
+\]
+
+Hence the three-point tail satisfies the dimension-uniform bound
+
+\[
+\boxed{
+H_{\mathrm{overlap}}(t)
+=
+O(
+t^{\beta_d+2}
+).
+}
+\]
+
+No special \(d=4\) local refinement is needed.
+
+## 6. Overlap contribution
+
+All remaining \(n-3\) sampled points must avoid the three-way splitter region.
+
+Therefore the overlapping contribution to the factorial second moment is bounded by
+
+\[
+Cn^3
+\int_0^1
+e^{-cnt}
+\,dH_{\mathrm{overlap}}(t).
+\]
+
+Using
+
+\[
+H_{\mathrm{overlap}}(t)
+=
+O(
+t^{\beta_d+2}
+),
+\]
+
+the Laplace-Stieltjes estimate gives
 
 \[
 \boxed{
@@ -372,255 +387,40 @@ T_n(T_n-1)
 ]_{\mathrm{overlap}}
 =
 O(
-n^3 n^{-4}
-)
-=
-O(n^{-1})
-}
-\]
-
-for every fixed
-
-\[
-d>4.
-\]
-
-Since
-
-\[
-\frac4d<1,
-\]
-
-\[
-n^{-1}
-=
-o(
-n^{-4/d}
+n^{1-\beta_d}
 ).
-\]
-
-Thus overlap is negligible in every \(d>4\).
-
-## 7. Sharpened d = 4 comparable-ball estimate
-
-For \(d=4\), the preceding \(O(n^{-1})\) estimate is not enough, because the first moment itself is of order \(n^{-1}\).
-
-A sharper local estimate is available.
-
-Let
-
-\[
-q=Q_4(x).
-\]
-
-Then, uniformly for sufficiently small \(t\),
-
-\[
-\boxed{
-\mu(B_t(x))
-\le
-C
-\begin{cases}
-t^2, & q\le Ct,\\[4pt]
-t^3/q, & q>Ct.
-\end{cases}
 }
 \]
 
-### Joint derivation
-
-Near the null joint, write the null depths of \(x\) as \(a,b\).
-
-The leading pair disagreement is
+For \(d\ge4\),
 
 \[
-\frac{
-2aA+A^2+
-2bB+B^2
-}{4}.
-\]
-
-The maximal allowed one-side increments satisfy
-
-\[
-L_t(a)^2
-\le
-C
-\min\left(
-t,
-\frac{t^2}{a^2}
-\right),
-\]
-
-and symmetrically for \(b\).
-
-The conditional causal-pair volume is bounded by
-
-\[
-C
-L_t(a)^2L_t(b)^2.
-\]
-
-Since
-
-\[
-q
-\asymp
-a^2+b^2,
-\]
-
-this gives
-
-\[
-\mu(B_t(x))
-\le
-Ct^3/q
-\]
-
-when
-
-\[
-q>Ct.
-\]
-
-For
-
-\[
-q\le Ct,
-\]
-
-the low-degree internal-sparsity theorem gives \(O(t^2)\).
-
-Compact bulk charts are smaller still.
-
-## 8. d = 4 three-point tail
-
-Let
-
-\[
-H_3(t)
+\beta_d
 =
-\Pr(
-X_1,X_2,X_3
-\text{ are a possible overlapping true-twin clique},
-\;
-\Delta_3\le t
-).
+2+\frac4d,
 \]
 
-Since both \(X_2,X_3\) must lie in \(B_t(X_1)\),
-
-\[
-H_3(t)
-\le
-\int
-\mu(B_t(x))^2
-\,d\mu(x).
-\]
-
-Split according to graphon degree.
-
-### Low-degree root
-
-For
-
-\[
-Q_4(x)\le Ct,
-\]
-
-\[
-\mu(B_t(x))^2
-=
-O(t^4).
-\]
-
-The degree-tail theorem gives
-
-\[
-\mu\{Q_4\le Ct\}
-=
-O(t).
-\]
-
-Thus this region contributes
-
-\[
-O(t^5).
-\]
-
-### Higher-degree root
-
-For
-
-\[
-Q_4(x)>Ct,
-\]
-
-\[
-\mu(B_t(x))^2
-\le
-Ct^6 Q_4(x)^{-2}.
-\]
-
-Near zero,
-
-\[
-g_4(q)
-=
-O(q).
-\]
-
-Stieltjes integration by parts gives
-
-\[
-\int_{Ct<Q_4<q_0}
-Q_4^{-2}
-\,d\mu
-=
-O(t^{-1}).
-\]
-
-The region
-
-\[
-Q_4\ge q_0
-\]
-
-contributes only \(O(1)\) to the integral.
-
-Therefore
+so
 
 \[
 \boxed{
-H_3(t)
+\mathbb E[
+T_n(T_n-1)
+]_{\mathrm{overlap}}
 =
-O(t^5).
-}
-\]
-
-## 9. d = 4 overlap contribution
-
-The outside sample must avoid the three-way splitter region.
-
-Using
-
-\[
-H_3(t)=O(t^5),
-\]
-
-the overlapping factorial-moment contribution is
-
-\[
-\boxed{
 O(
-n^3 n^{-5}
-)
-=
-O(n^{-2}).
+n^{-1-4/d}
+).
 }
 \]
 
-This is \(o(n^{-1})\), as required.
+In particular, for \(d=4\),
+
+\[
+O(n^{-2}).
+\]
+
+This is lower order than the first moment in every fixed \(d\ge4\).
 
 ## 10. Factorial-moment conclusion
 
