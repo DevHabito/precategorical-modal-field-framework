@@ -1,3 +1,13 @@
+> **CORRECTION — 2026-11-12:** this note contained a flat-volume normalization error. The directional time integral used for the Kasner parent volume has flat value \(1/2\), so the physical ratio \(V/V_{\rm flat}\) requires an additional factor \(2\). The corrected Kasner parent-volume coefficient is
+> \[
+> \frac{\delta V}{V_{\rm flat}}
+> =
+> \frac{136}{8505}L^4
+> =
+> \frac{17}{315}E^2L^4,
+> \]
+> not \(68/8505=(17/630)E^2\). Consequently this Kasner route does **not** currently reproduce \(a_4=683/9450\); the assembled value from the components in this note becomes \(469/4725\), differing from the Schwarzschild calibration by \(17/630\). All later claims in this file that Kasner independently closes the universal coefficient are superseded. The corrected checker is \`tools/derive_d4_kasner_world_function_pure_electric_calibration.py\`.
+
 # Independent d = 4 pure-electric calibration from LRS Kasner and Synge world functions
 
 **Date:** 2026-11-12  
