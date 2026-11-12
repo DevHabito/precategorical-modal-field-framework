@@ -362,9 +362,32 @@ For a centered small vacuum diamond,
 R_{\mu\nu}=0.
 \]
 
-The parent volume has a known \(L^4\) Weyl expansion in the small-causal-diamond literature.
+A published \(L^4\) Weyl expansion for the parent Alexandrov volume exists in the small-causal-diamond literature. However, the repository's later \(3+1\) audit found that the printed final coefficient in Wang (2019), Eq. (79), is inconsistent with that paper's own intermediate Eqs. (74) and (76), as well as with exact Kasner and symmetric-plane-wave calculations.
 
-The remaining project-specific vacuum calculation can therefore be localized to
+The internally supported \(3+1\) parent-volume law is now
+
+\[
+\frac{V(D_L)}{V_{\rm Mink}(L)}
+=
+1
++
+L^4
+\left[
+\frac{17}{630}E^2
++
+\frac1{210}B^2
+\right]
++
+o(L^4).
+\]
+
+See
+
+\[
+\texttt{D4\_CORRECTED\_VACUUM\_ALEXANDROV\_VOLUME\_THEOREM\_CANDIDATE\_20261112.md}.
+\]
+
+Accordingly, the remaining project-specific vacuum calculation can be localized to
 
 \[
 \boxed{
