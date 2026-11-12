@@ -1,3 +1,11 @@
+> **LATEST AUDIT STATUS — 2026-11-12:** the immediately preceding “missing factor 2” Kasner diagnosis was itself too quick and is superseded. A new direct numerical integration of the physical centered Kasner volume, with the flat normalization built into \(V/V_{\rm flat}\) and the past/future cone crossing solved separately for every direction, extrapolates to
+> \[
+> \frac{\delta V}{V_{\rm flat}L^4}
+> \to
+> \frac{68}{8505}.
+> \]
+> Thus there is currently **no numerical evidence that the physical Kasner coefficient should double**. The symbolic Kasner parent-volume checker is now marked diagnostic and must be reconciled with this independent integral before Kasner is used again as an exact calibration. Until then: keep the Schwarzschild and plane-wave results separate; treat Kasner as unresolved rather than confirmed or refuted.
+
 > **CORRECTION — 2026-11-12:** remove LRS Kasner from the evidence list for the \(d=4\) coefficients. Its parent-volume calculation had a missing flat normalization factor \(2\). The all-\(d\) formulas in this note remain the exact result of re-integrating the printed intermediate equations and still pass the exact Cahen--Wallach plane-wave combination in every \(d\ge4\), but they no longer have an independent pure-electric Kasner confirmation.
 
 # All-dimensional audit of the vacuum Alexandrov-volume coefficient implied by Wang's intermediate equations
