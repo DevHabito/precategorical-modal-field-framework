@@ -651,23 +651,21 @@ No equivalent Minkowski-sprinkling result was located in the targeted review.
 
 Absolute novelty is not certified.
 
-## 13. Current frontier
+## 13. Subsequent closure
 
-The remaining statement is now sharply isolated:
+This note originally left the core-forcing discretization as the apparent final frontier.
+
+The project later closed the full \(3+1\) recovery problem through a different route:
+
+1. every implication class reaches the positive-disagreement core;
+2. every core edge forces any containing module to have linear size;
+3. causal-graphon primeness excludes balanced linear modules;
+4. the remaining near-whole module regime is excluded by the joint/tip degree asymmetry and low-degree internal sparsity.
+
+The assembled theorem is recorded in
 
 \[
-\boxed{
-\Pr(
-\mathcal E_{\mathrm{core}}
-\text{ has more than one forcing class}
-)
-\stackrel{?}{\longrightarrow}
-0.
-}
+\texttt{docs/physics\_bridge/MINKOWSKI\_D4\_ORIENTATION\_RECOVERY\_THEOREM\_20261112.md}.
 \]
 
-The continuum edge space is forcing-connected.
-
-The final task is to transfer that connectivity uniformly to the finite random sample.
-
-If that discretization closes, then the \(3+1\) orientation-recovery problem itself closes.
+Thus the edge-escalation theorem remains an essential dependency, but the optional direct discretization of the entire continuum forcing core is no longer required for the final proof.
