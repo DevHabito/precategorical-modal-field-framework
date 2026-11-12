@@ -190,9 +190,12 @@ def main() -> None:
         yedge_trial.subs(edge_solution)
     )
 
-    assert edge_solution[y1] == w / 2 - sp.Rational(1, 3)
-    assert edge_solution[y2] == 0
-    assert edge_solution[y4] == 0
+    assert sp.simplify(
+        edge_solution[y1]
+        - (w / 2 - sp.Rational(1, 3))
+    ) == 0
+    assert sp.simplify(edge_solution[y2]) == 0
+    assert sp.simplify(edge_solution[y4]) == 0
 
     expected_y3 = (
         216 * w**3
