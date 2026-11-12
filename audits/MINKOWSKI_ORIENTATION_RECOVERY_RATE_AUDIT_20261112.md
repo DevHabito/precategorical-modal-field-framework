@@ -3,7 +3,7 @@
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
 **Status:** adversarial dependency and rate audit  
-**Target theorem:** \(1-p_d^{\mathrm{UPO}}(n)\sim K_d^{\mathrm{twin}}n^{-4/d}\) for fixed integer \(d\ge4\)
+**Target theorem:** the leading orientation-recovery error law for every fixed integer \(d\ge3\)
 
 ## 1. Purpose
 
@@ -16,7 +16,108 @@ The audit also records two corrections made during review:
 1. the overlapping-true-twin second-moment argument was simplified to use the global pair tail plus the uniform comparable-ball bound;
 2. the near-whole tip-clearance theorem was restricted to the event of a unique edge-containing component, which is exactly the scope used in the final assembly.
 
-## 2. Leading candidate
+## 2. d = 3 bulk constant addendum
+
+The \(d=3\) case is not obtained by substituting \(d=3\) into the \(d\ge4\) null-joint constant.
+
+Its small-disagreement tail is bulk dominated.
+
+For an interior point \(x\), a small future-timelike displacement \(h\) satisfies
+
+\[
+\Delta_3(x,x+h)
+=
+C_x\cdot_M h
++
+O(|h|^2),
+\]
+
+where
+
+\[
+C_x
+=
+\frac38
+\left[
+\tau(p,x)(x-p)
++
+\tau(x,q)(q-x)
+\right].
+\]
+
+Writing
+
+\[
+\kappa(x)=\sqrt{C_x^2},
+\]
+
+the local cone volume is
+
+\[
+\frac{\pi}{3}
+\frac{\varepsilon^3}{\kappa(x)^3}.
+\]
+
+The global coefficient reduces in endpoint-distance coordinates to
+
+\[
+C_3^{\mathrm{edge}}
+=
+\frac{256}{9}
+\int_{\substack{u,v>0\\u+v<2}}
+\frac{
+uv
+}{
+\left[
+u^4+v^4+(4-u^2-v^2)uv
+\right]^{3/2}
+}
+\,du\,dv.
+\]
+
+The substitution
+
+\[
+s=u+v,
+\qquad
+w=\frac{u-v}{u+v}
+\]
+
+reduces the integral exactly to
+
+\[
+\frac{\pi}{8}.
+\]
+
+Hence
+
+\[
+C_3^{\mathrm{edge}}
+=
+\frac{32\pi}{9},
+\]
+
+and
+
+\[
+\boxed{
+1-p_3^{\mathrm{UPO}}(n)
+\sim
+\frac{32\pi}{3n}.
+}
+\]
+
+The nonlinear joint core contributes \(O(\varepsilon^{10/3})\) and does not alter the bulk coefficient.
+
+The repository regression
+
+tools/verify_d3_bulk_recovery_constant.py
+
+checks the closed integral numerically.
+
+All non-twin failure classes in \(d=3\) are \(O(n^{-2})\) or smaller, so they do not compete with the \(n^{-1}\) true-twin term.
+
+## 3. Leading candidate
 
 The true-twin occurrence theorem gives
 
@@ -69,7 +170,7 @@ for \(d\ge4\).
 
 No special \(d=4\) local bound is required.
 
-## 3. Lower-bound logic
+## 4. Lower-bound logic
 
 An adjacent true-twin pair is a size-two non-stable module whenever its edge-containing component contains at least one additional vertex.
 
@@ -93,7 +194,7 @@ Hence
 
 This yields the required lower asymptotic.
 
-## 4. Failure-class partition for the upper bound
+## 5. Failure-class partition for the upper bound
 
 Work on the event
 
@@ -190,7 +291,7 @@ O(n^{1-d})
 e^{-\Theta(n)}.
 \]
 
-## 5. Rate comparison
+## 6. Rate comparison
 
 For \(d\ge4\), the leading scale is
 
@@ -259,7 +360,7 @@ o(n^{-4/d}).
 
 No reviewed non-twin class remains at the leading scale.
 
-## 6. Scope correction for the tip-clearance theorem
+## 7. Scope correction for the tip-clearance theorem
 
 The middle-band argument uses the fact that a sampled middle-degree nonneighbor \(z\) of the complete external vertex \(u\) must either:
 
@@ -274,7 +375,7 @@ The final error-law proof applies it only after the component-ambiguity event ha
 
 No circularity is introduced.
 
-## 7. Middle-band geometry check
+## 8. Middle-band geometry check
 
 For a past-tip point
 
@@ -342,7 +443,7 @@ tools/verify_tip_middle_band.py
 
 provides a finite-grid regression of these statements.
 
-## 8. Exact leading constant
+## 9. Exact leading constant
 
 For \(d\ge4\),
 
@@ -389,7 +490,7 @@ K_4^{\mathrm{twin}}
 
 This reproduces the independently derived \(d=4\) theorem.
 
-## 9. Dependency structure
+## 10. Dependency structure
 
 The quantitative theorem depends on:
 
@@ -406,7 +507,7 @@ None of these statements uses the final error law as an assumption.
 
 The dependency graph remains acyclic.
 
-## 10. Literature boundary
+## 11. Literature boundary
 
 Classical inputs include:
 
@@ -430,7 +531,7 @@ for arrow-erased Minkowski sprinklings.
 
 This is limited negative evidence only.
 
-## 11. Audit verdict
+## 12. Audit verdict
 
 No surviving failure class was found at order
 
@@ -440,21 +541,15 @@ n^{-4/d}
 
 other than comparable true twins.
 
-The theorem
+The piecewise theorem
 
 \[
-\boxed{
 1-p_d^{\mathrm{UPO}}(n)
 \sim
-K_d^{\mathrm{twin}}
-n^{-4/d}
-}
-\]
-
-for fixed
-
-\[
-d\ge4
+\begin{cases}
+\dfrac{32\pi}{3n}, & d=3,\\[6pt]
+K_d^{\mathrm{twin}}n^{-4/d}, & d\ge4
+\end{cases}
 \]
 
 survives the present internal audit.
