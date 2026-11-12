@@ -16,12 +16,12 @@ The script derives, with exact SymPy rational arithmetic:
 
 1. null-cone radial series from conserved momenta;
 2. the direction-dependent edge location;
-3. the total parent volume through O(L^4) relative to flat;
+3. the total parent volume through O(L^4), including explicit flat normalization;
 4. the edge area density;
 5. the raw Synge-world-function cross-normalization chi;
 6. the local area * chi^(-3) edge integral;
 7. the universal thin-null vacuum focusing term;
-8. the resulting purely electric recovery coefficient a4.
+8. the resulting Kasner assembly and its comparison with the Schwarzschild calibration.
 
 No Schwarzschild optical geometry and no floating-point fitting are used.
 """
@@ -258,12 +258,25 @@ def main() -> None:
         )
     parent_ratio = sp.expand(parent_ratio)
 
+    # The directional time integral has flat value 1/2:
+    #
+    #   integral_{-1}^0 (1+Y)^3 dY
+    # + integral_0^1 (1-Y)^3 dY = 1/2.
+    #
+    # Therefore the physical ratio V/V_flat is 2*parent_ratio.
+    # The previous version omitted this normalization and consequently
+    # understated the Kasner L^4 parent-volume coefficient by a factor of 2.
+    assert parent_ratio.coeff(L, 0) == sp.Rational(1, 2)
+
+    parent_ratio = sp.expand(2 * parent_ratio)
+
+    assert parent_ratio.coeff(L, 0) == 1
     assert parent_ratio.coeff(L, 2) == 0
     assert parent_ratio.coeff(L, 3) == 0
     assert (
         parent_ratio.coeff(L, 4)
         ==
-        sp.Rational(68, 8505)
+        sp.Rational(136, 8505)
     )
 
     # Kasner electric Weyl norm at t=1.
@@ -275,7 +288,7 @@ def main() -> None:
     assert (
         parent_e2_coefficient
         ==
-        sp.Rational(17, 630)
+        sp.Rational(17, 315)
     )
 
     # ------------------------------------------------------------------
@@ -501,19 +514,19 @@ def main() -> None:
     # ------------------------------------------------------------------
     # Full purely electric recovery coefficient
     # ------------------------------------------------------------------
-    a4 = sp.simplify(
+    kasner_assembled = sp.simplify(
         parent_e2_coefficient
         + edge_cross_e2_coefficient
         + thin_e2_coefficient
     )
 
-    assert a4 == sp.Rational(683, 9450)
+    assert kasner_assembled == sp.Rational(469, 4725)
 
-    # Independent symmetric-plane-wave calibration:
-    plane_wave_sum = sp.Rational(508, 4725)
-    b4 = sp.simplify(plane_wave_sum - a4)
-
-    assert b4 == sp.Rational(37, 1050)
+    schwarzschild_a4 = sp.Rational(683, 9450)
+    mismatch = sp.simplify(
+        kasner_assembled - schwarzschild_a4
+    )
+    assert mismatch == sp.Rational(17, 630)
 
     print(
         {
@@ -521,14 +534,17 @@ def main() -> None:
             "edge_area_E2": str(area_e2_coefficient),
             "edge_cross_E2": str(edge_cross_e2_coefficient),
             "thin_null_E2": str(thin_e2_coefficient),
-            "a4_Kasner_world_function": str(a4),
-            "b4_from_independent_plane_wave_sum": str(b4),
+            "Kasner_assembled_recovery_E2": str(kasner_assembled),
+            "Schwarzschild_a4_reference": str(schwarzschild_a4),
+            "mismatch": str(mismatch),
+            "status": "KASNER_ROUTE_DOES_NOT_CURRENTLY_CLOSE_THE_UNIVERSAL_COEFFICIENT",
         }
     )
 
     print(
-        "PASS: independent LRS-Kasner/world-function route gives "
-        "a4 = 683/9450 and closes the d=4 vacuum coefficient pair."
+        "PASS: Kasner normalization audit completed. "
+        "The corrected parent volume exposes a mismatch that must be resolved "
+        "before this route can be used as an independent recovery calibration."
     )
 
 
