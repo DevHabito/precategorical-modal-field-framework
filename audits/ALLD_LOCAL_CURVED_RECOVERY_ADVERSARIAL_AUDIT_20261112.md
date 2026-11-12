@@ -164,43 +164,116 @@ This reproduces the independently derived flat theorem exactly.
 
 No normalization defect was found.
 
-## 4. Finding C: compact containment — strengthened
+## 4. Finding C: compact containment — corrected and strengthened
 
-The first version of the Penrose-scaled theorem assumed that the rescaled thin-null intervals remained in a fixed compact null-Fermi tube.
+The first proof attempted to control the plane-wave curvature term with a generic causal-energy/Gronwall estimate.
 
-That assumption could have hidden circularity.
+That argument was not sufficient because the quadratic Penrose-plane-wave term
 
-The new lemma
+\[
+\langle H(v)y,y\rangle
+\]
+
+has no fixed sign and cannot be made small merely by shrinking the null-Fermi tube.
+
+The corrected theorem
 
 THIN_NULL_COMPACT_CONTAINMENT_LEMMA_20261112.md
 
-derives the required bounds from causal-energy estimates:
+uses the transverse null index form
 
 \[
-|u|
+Q_\gamma[y]
+=
+\int
+\left(
+|\dot y|^2
++
+\langle H(v)y,y\rangle
+\right)dv.
+\]
+
+Before the first conjugate point, the null Morse-index theorem and absence of a Dirichlet Jacobi kernel give a positive quadratic form.
+
+For the compact generator family, the dedicated lemma
+
+UNIFORM_NULL_INDEX_GAP_LEMMA_20261112.md
+
+shows that the lowest Dirichlet Jacobi eigenvalue varies continuously and has a uniform positive minimum
+
+\[
+\lambda_*>0.
+\]
+
+After subtracting the Jacobi field interpolating the \(O(\sqrt a)\) transverse endpoint data, coercivity gives
+
+\[
+\|w\|_{H^1}^2
 =
 O(a),
 \]
 
+hence
+
 \[
-|y|
+|y|=O(\sqrt a).
+\]
+
+The causal equation then gives
+
+\[
+|u|=O(a).
+\]
+
+Only the higher-order Fermi remainder is absorbed by shrinking the tube.
+
+Thus Penrose-scaled compact containment is derived from **index-form coercivity**, not from a sign assumption on curvature.
+
+### Negative control
+
+The exact constant-profile plane-wave diagnostic
+
+PLANE_WAVE_CAUSTIC_THRESHOLD_DIAGNOSTIC_20261112.md
+
+shows that this mechanism fails exactly at conjugacy.
+
+For
+
+\[
+ds^2
 =
-O(\sqrt a),
+2\,du\,dv
++
+dy^2
+-
+\omega^2y^2dv^2,
 \]
 
-while the affine null coordinate stays in the compact endpoint interval.
-
-Thus after
+the first Dirichlet eigenvalue is
 
 \[
-U=u/a,
-\qquad
-Y=y/\sqrt a,
+\lambda_1(L)
+=
+\left(\frac{\pi}{L}\right)^2-\omega^2.
 \]
 
-the rescaled intervals are uniformly compact.
+At
 
-The compact-containment assumption is therefore no longer primitive.
+\[
+L=\frac{\pi}{\omega},
+\]
+
+the Jacobi mode
+
+\[
+y=A\sin(\omega v)
+\]
+
+has zero index form for every amplitude \(A\).
+
+The thin interval then loses the \(O(\sqrt a)\) transverse bound.
+
+This is an exact control showing that the conjugate-free hypothesis is structural rather than technical.
 
 ## 5. Finding D: strongly causal local neighborhoods — corrected
 
@@ -561,7 +634,9 @@ The adversarial audit found two genuine issues:
 
 Both have been corrected.
 
-No mathematical counterexample to the local curved recovery law was found.
+No mathematical counterexample to the local curved recovery law **inside the regular conjugate-free class** was found.
+
+An exact plane-wave counterexample was found to any attempted extension of the compact-containment step through a conjugate point. This validates the present scope restriction rather than contradicting the theorem.
 
 The current status should be stated as
 
