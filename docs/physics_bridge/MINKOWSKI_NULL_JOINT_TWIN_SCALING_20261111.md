@@ -2,848 +2,228 @@
 
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
-**Status:** superseded local analysis; complementary-sector estimate closed in MINKOWSKI_D4_TWIN_ASYMPTOTIC_THEOREM_20261111.md  
-**Physical status:** finite Alexandrov-interval causal-set reconstruction problem  
-**Novelty status:** no absolute priority claim is made
+**Status:** superseded local-analysis note  
+**Current theorem:** MINKOWSKI_D4_TWIN_ASYMPTOTIC_THEOREM_20261111.md
 
-## 1. Why this calculation matters
+## 1. Purpose of this note
 
-The higher-dimensional UPO audit found that most observed late finite failures are minimal non-stable modules: comparable twin pairs.
+This file records the local null-joint blow-up that led to the complete \(d=4\) comparable-twin theorem.
 
-For a comparable pair (x,y), let
+The final result is now
 
-[
-A_x={z:zsim x},
-qquad
-A_y={z:zsim y},
-]
-
-and define the normalized disagreement volume
-
-[
-Delta(x,y)=mu(A_x	riangle A_y).
-]
-
-If (T_n) is the number of comparable twin pairs in an iid size-(n) sprinkling, then
-
-[
-mathbb E[T_n]
-=
-inom n2
-mathbb E!left[
-mathbf 1_{{Xsim Y}}
-(1-Delta(X,Y))^{n-2}
-ight].
-]
-
-Thus the twin problem is controlled by the geometry of pairs with very small (Delta).
-
-The previous numerical audit suggested that, in (3+1) spacetime, these pairs concentrate near the codimension-two joint where the two null boundaries of the Alexandrov interval meet.
-
-This note derives the local scaling analytically.
-
-## 2. Joint-adapted coordinates
-
-Use the unit-height convention
-
-[
-D=I(p,q),
-qquad
-p=(-1,mathbf 0),
-qquad
-q=(1,mathbf 0).
-]
-
-For a point with time coordinate (t) and spatial radius (r), define
-
-[
-delta=1-r,
-qquad
-a=delta+t,
-qquad
-b=delta-t.
-]
-
-Then
-
-[
-age0,
-qquad
-bge0,
-qquad
-a+ble2,
-]
+\[
+\boxed{
+F_4(\varepsilon)
+\sim
+3\pi\varepsilon^3
+}
+\]
 
 and
 
-[
-t=rac{a-b}{2},
-qquad
-r=1-rac{a+b}{2}.
-]
+\[
+\boxed{
+\mathbb E[T_n]
+\sim
+\frac{9\pi}{n}.
+}
+\]
 
-The null joint is
+The full proof, including the complementary-sector estimate, is in the current theorem file listed above.
 
-[
+## 2. Joint coordinates
+
+For a point with time \(t\) and spatial radius \(r\), define
+
+\[
+\delta=1-r,
+\qquad
+a=\delta+t,
+\qquad
+b=\delta-t.
+\]
+
+The codimension-two null joint is
+
+\[
 a=b=0.
-]
+\]
 
-The endpoint proper-time squares are exactly
+For an ordered comparable pair \(x\prec y\), write
 
-[
-	au(p,x)^2=a(2-b),
-]
+\[
+a_x=\alpha,
+\qquad
+b_y=\beta,
+\]
+
+\[
+A=a_y-a_x,
+\qquad
+B=b_x-b_y.
+\]
+
+Near the joint, the exact disagreement has the leading form
+
+\[
+\boxed{
+\Delta
+=
+\frac{
+2\alpha A+A^2+
+2\beta B+B^2
+}{4}
++
+\text{higher-order terms}.
+}
+\]
+
+Thus
+
+\[
+\Delta=O(\varepsilon)
+\]
+
+requires the joint scaling
+
+\[
+\alpha,\beta,A,B
+=
+O(\sqrt{\varepsilon}).
+\]
+
+## 3. Why the exponent is three
+
+In \(d=4\), the ordered causal-pair measure contains
+
+\[
+AB\,
+d\alpha\,d\beta\,dA\,dB.
+\]
+
+Under the joint scaling,
+
+\[
+d\alpha\,d\beta\,dA\,dB
+\sim
+\varepsilon^2,
+\]
 
 and
 
-[
-	au(x,q)^2=b(2-a).
-]
+\[
+AB\sim\varepsilon.
+\]
 
-## 3. Comparable-pair coordinates
+Therefore the joint contribution is
 
-Assume
+\[
+\varepsilon^3.
+\]
 
-[
-xprec y.
-]
+This exponent is geometric, not fitted.
 
-Write
-
-[
-a_x=alpha,
-qquad
-b_y=eta,
-]
-
-and introduce positive causal increments
-
-[
-A=a_y-a_xge0,
-qquad
-B=b_x-b_yge0.
-]
-
-Thus
-
-[
-x=(alpha,eta+B,mathbf n_x),
-]
-
-[
-y=(alpha+A,eta,mathbf n_y)
-]
-
-in ((a,b,	ext{angle})) coordinates.
-
-Let (	heta) be the angle between the spatial unit vectors.
-
-A direct calculation gives the exact interval relation
-
-[
-oxed{
-	au(x,y)^2
-=
-AB
--
-2r_xr_y(1-cos	heta)
-}.
-]
-
-Hence (xprec y) exactly when
-
-[
-2r_xr_y(1-cos	heta)<AB.
-]
-
-Near the joint,
-
-[
-r_x,r_y	o1,
-]
-
-so the causal angular cap has
-
-[
-	heta^2lesssim AB.
-]
-
-## 4. Exact pair measure in d=4
-
-In four spacetime dimensions the normalized single-point measure is
-
-[
-dmu
-=
-rac{3}{4pi}
-r^2,da,db,dOmega_2.
-]
-
-For an ordered comparable pair (xprec y), integrate over the global angular direction and parameterize the relative causal cap by
-
-[
-u
-=
-rac{
-2r_xr_y(1-cos	heta)
-}{
-AB
-},
-qquad
-0le ule1.
-]
-
-The angular integration is exact in the unsaturated cap regime and gives
-
-[
-oxed{
-dmu(x),dmu(y)
-=
-rac94
-r_xr_y
-AB,
-dalpha,deta,dA,dB,du
-}.
-]
-
-The small-(Delta) joint regime lies inside this unsaturated-cap sector.
-
-## 5. Leading disagreement geometry
-
-For (d=4), the exact disagreement formula is
-
-[
-Delta(x,y)
-=
-rac{
-	au(p,y)^4-	au(p,x)^4+
-	au(x,q)^4-	au(y,q)^4-
-2	au(x,y)^4
-}{16}.
-]
-
-Scale all four joint variables by a common small parameter (lambda):
-
-[
-alpha=lambdaaralpha,
-qquad
-eta=lambdaareta,
-qquad
-A=lambdaar A,
-qquad
-B=lambdaar B.
-]
-
-Then
-
-[
-oxed{
-Delta(x,y)
-=
-lambda^2
-H(aralpha,areta,ar A,ar B)
-+
-O(lambda^3)
-}
-]
-
-uniformly on compact scaled sets, where
-
-[
-oxed{
-H
-=
-rac{
-2aralphaar A+ar A^2+
-2aretaar B+ar B^2
-}{4}.
-}
-]
-
-The interval term involving (	au(x,y)^4) is (O(lambda^4)) and therefore does not enter the leading homogeneous form.
-
-Thus
-
-[
-Delta=O(arepsilon)
-]
-
-in the joint sector when
-
-[
-lambda=sqrt{arepsilon}.
-]
-
-## 6. Why the exponent is three
-
-Under the scaling
-
-[
-alpha,eta,A,Bmapstolambda(alpha,eta,A,B),
-]
-
-the scalar differential contributes
-
-[
-lambda^4,
-]
-
-while the causal angular factor (AB) contributes
-
-[
-lambda^2.
-]
-
-Therefore the ordered-pair measure scales as
-
-[
-lambda^6.
-]
-
-Since
-
-[
-arepsilon=lambda^2,
-]
-
-the joint contribution scales as
-
-[
-oxed{
-arepsilon^3.
-}
-]
-
-This is not a fitted exponent.
-
-It follows from the local Lorentzian geometry and the codimension-two null joint.
-
-## 7. Exact d=4 tail coefficient of the joint scaling sector
+## 4. Exact local integral
 
 Define
 
-[
-g(alpha,A)
+\[
+g(\alpha,A)=2\alpha A+A^2.
+\]
+
+The one-side measure induces
+
+\[
+w(g)=\frac{\sqrt g}{2}.
+\]
+
+The step integral is
+
+\[
+J_{\mathrm{step}}
 =
-2alpha A+A^2.
-]
-
-Then
-
-[
-H
+\frac14
+\int_{g_1+g_2\le4}
+g_1^{1/2}g_2^{1/2}\,
+dg_1\,dg_2
 =
-rac{
-g(alpha,A)+g(eta,B)
-}{4}.
-]
+\boxed{\frac{2\pi}{3}}.
+\]
 
-For one side, use the change of variables
+Together with the ordered-pair coefficient \(9/4\) and both time orientations, this gives
 
-[
-g=2alpha A+A^2.
-]
-
-At fixed (A),
-
-[
-dalpha
-=
-rac{dg}{2A}.
-]
-
-Hence
-
-[
-A,dalpha,dA
-=
-rac12,dg,dA,
-]
-
-and the condition (alphage0) gives
-
-[
-0le Alesqrt g.
-]
-
-Therefore the induced one-side density is
-
-[
-oxed{
-w(g)=rac{sqrt g}{2}.
+\[
+\boxed{
+3\pi
 }
-]
+\]
 
-The leading step integral is
+for the complete \(d=4\) small-disagreement tail coefficient.
 
-[
-J_{mathrm{step}}
-=
-int_{Hle1}
-AB,
-dalpha,dA,deta,dB.
-]
+The corresponding Laplace integral is
 
-Equivalently,
+\[
+J_{\mathrm{Lap}}=4\pi,
+\]
 
-[
-J_{mathrm{step}}
-=
-rac14
-int_{g_1+g_2le4}
-g_1^{1/2}g_2^{1/2},dg_1,dg_2.
-]
+which gives
 
-The beta-simplex integral gives
-
-[
-oxed{
-J_{mathrm{step}}
-=
-rac{2pi}{3}.
+\[
+\boxed{
+9\pi
 }
-]
+\]
 
-For one time orientation, the geometric prefactor is (9/4).
+for the coefficient of \(n^{-1}\) in the expected true-twin count.
 
-The symmetric comparability event contains both
+## 5. Correction to the intermediate boundary picture
 
-[
-xprec y
-]
+An earlier intermediate version of this note treated a single null face as though it might have its own lower asymptotic exponent.
 
-and
+That was incorrect.
 
-[
-yprec x.
-]
+The exact disagreement polynomial shows that away from the joint, the opposite causal-cone contribution restores a nonzero linear term.
 
-Thus the complete null-joint scaling contribution to the small-disagreement tail has coefficient
+Consequently,
 
-[
-2cdotrac94cdotrac{2pi}{3}
+\[
+F_4^{\mathrm{outside\ joint}}(\varepsilon)
 =
-3pi.
-]
+O(\varepsilon^4),
+\]
 
-This yields the rigorous local contribution
+and the codimension-two joint is the unique leading \(\varepsilon^3\) sector.
 
-[
-oxed{
-liminf_{arepsilondownarrow0}
-rac{F_4(arepsilon)}
-{arepsilon^3}
-ge
-3pi,
-}
-]
+## 6. Dimension threshold
 
-where
+The local joint exponent in spacetime dimension \(d\) is
 
-[
-F_4(arepsilon)
+\[
+\beta_{\mathrm{joint}}(d)
 =
-Pr(
-Xsim Y,,
-Delta(X,Y)learepsilon
-).
-]
+2+\frac4d.
+\]
 
-The inequality is stated rather than equality because the complementary bulk and single-null-face sectors have not yet been given a complete global upper bound in the repository.
+The generic bulk exponent is
 
-## 8. Exact Laplace coefficient for twin expectation
+\[
+\beta_{\mathrm{bulk}}(d)=d.
+\]
 
-For the twin expectation the relevant limiting integral is
+The first integer dimension in which the joint wins is
 
-[
-J_{mathrm{Lap}}
-=
-int
-AB,e^{-H}
-dalpha,dA,deta,dB.
-]
+\[
+\boxed{d=4}.
+\]
 
-Using the same (g)-variables,
+Thus \(3+1\) spacetime is the first integer-dimensional case where the null joint changes the leading small-disagreement asymptotic.
 
-[
-int_0^infty
-rac{sqrt g}{2}
-e^{-g/4},dg
-=
-2sqrtpi.
-]
+## 7. Current use
 
-Therefore
+This note should now be read as the derivational bridge to the theorem, not as the authoritative final statement.
 
-[
-oxed{
-J_{mathrm{Lap}}
-=
-4pi.
-}
-]
+For the complete proof, symbolic regression, and current research consequence, use:
 
-For the expectation
-
-[
-mathbb E[T_n]
-=
-inom n2
-mathbb E[
-mathbf1_{{Xsim Y}}
-(1-Delta)^{n-2}
-],
-]
-
-the two time orientations cancel the asymptotic factor (1/2) from
-
-[
-inom n2.
-]
-
-The null-joint contribution therefore gives
-
-[
-oxed{
-liminf_{n	oinfty}
-n,mathbb E[T_n]
-ge
-rac94(4pi)
-=
-9pi.
-}
-]
-
-Equivalently, the joint sector alone contributes asymptotically at least
-
-[
-oxed{
-rac{9pi}{n}
-}
-]
-
-to the expected comparable-twin count.
-
-Again, equality requires an upper bound on all complementary sectors.
-
-## 9. Why finite simulations approach the coefficient slowly
-
-Direct finite-(n) simulations substantially underestimate (9pi) at accessible sizes.
-
-This is not evidence against the scaling calculation.
-
-The limiting scaled variables are unbounded.
-
-Configurations with large scaled base depth and very small causal increment converge slowly to the limiting measure.
-
-The dedicated importance sampler
-
-[
-	exttt{tools/minkowski_null_joint_twin_asymptotic.py}
-]
-
-samples directly from the limiting Laplace measure.
-
-A representative two-million-sample run gave the following estimates for the null-joint contribution to
-
-[
-n,mathbb E[T_n].
-]
-
-| (n) | importance estimate |
-|---:|---:|
-|100|14.20|
-|300|17.53|
-|1000|20.20|
-|3000|22.01|
-|10000|23.52|
-|30000|24.58|
-|100000|25.48|
-
-The analytic limiting target is
-
-[
-9pi
-=
-28.27433388ldots
-]
-
-The slow monotone approach explains why finite graph simulations around (nsim10^2) should not be used to estimate the asymptotic coefficient directly.
-
-The numerical calculation is diagnostic only.
-
-The constants (3pi) and (9pi) come from the analytic integrals above.
-
-## 10. General dimensional scaling — corrected boundary interpretation
-
-Let
-
-[
-m=rac d2.
-]
-
-The joint blow-up gives the local exponent
-
-[
-oxed{
-eta_{mathrm{joint}}(d)
-=
-2+rac4d.
-}
-]
-
-Generic pairs away from the codimension-two joint have a nonzero first-order response of the disagreement volume to causal displacement.
-
-Therefore their ordinary local exponent is
-
-[
-oxed{
-eta_{mathrm{bulk}}(d)=d.
-}
-]
-
-An earlier intermediate version of this note listed a separate single-null-face exponent. That was too naive because it kept only one endpoint-volume term. The exact disagreement contains the contribution from the opposite causal cone, which restores a nonzero linear term on a single null face away from the joint.
-
-Thus a lone null face is not a separate leading asymptotic sector.
-
-The exceptional degeneracy occurs only where both null-depth coordinates vanish simultaneously:
-
-[
-a=b=0.
-]
-
-Comparing the two relevant exponents,
-
-[
-2+rac4d<d
-]
-
-first occurs at integer spacetime dimension
-
-[
-oxed{
-d=4.
-}
-]
-
-For (d=3),
-
-[
-3
-<
-rac{10}{3},
-]
-
-so the bulk dominates.
-
-For (d=4),
-
-[
-3<4,
-]
-
-so the codimension-two null joint dominates.
-
-## 11. Convergence threshold of the homogeneous joint integral
-
-The one-side homogeneous integral is
-
-[
-L_m
-=
-rac1{m+1}
-int_0^infty
-left[
-(1+t)^m-t^m
-ight]^{-(m+1)/m}
-dt.
-]
-
-At large (t),
-
-[
-(1+t)^m-t^m
-sim
-m t^{m-1}.
-]
-
-Hence the integrand behaves as
-
-[
-t^{-(m-1/m)}.
-]
-
-The integral converges when
-
-[
-m-rac1m>1,
-]
-
-or
-
-[
-m^2-m-1>0.
-]
-
-The first integer spacetime dimension satisfying this is again
-
-[
-oxed{
-d=4.
-}
-]
-
-The divergence for (d=3) is consistent with matching onto the ordinary bulk sector rather than with a separate single-face asymptotic.
-
-The complete (d=4) upper-bound argument is now recorded separately in
-
-[
-	exttt{docs/physics_bridge/MINKOWSKI_D4_TWIN_ASYMPTOTIC_THEOREM_20261111.md}.
-]
-
-## 12. Relation to existing causal-set boundary literature
-
-Codimension-two joints of Alexandrov intervals are already important in causal-set theory.
-
-Buck, Dowker, Jubb, and Surya showed that the continuum limit of the mean causal-set action for a flat Alexandrov interval contains a contribution equal to the volume of the codimension-two joint.
-
-That result concerns the causal-set action, not orientation recoverability or graph modules.
-
-The present calculation is therefore not a discovery of the null joint itself.
-
-What is different here is that the same geometric locus controls a reconstruction obstruction after causal arrows are erased.
-
-There is also an important novelty correction concerning symmetric differences.
-
-Bombelli's 1987 dissertation already used symmetric differences of Alexandrov neighborhoods as a way to quantify disagreement between causal structures/metrics.
-
-Modern Lorentzian metric-space work likewise uses symmetric differences of causal futures or pasts in metric comparison constructions.
-
-Therefore the project should **not** claim that the use of symmetric difference as a causal-geometric comparison tool is itself new.
-
-The project-specific object is narrower:
-
-[
-Delta(x,y)
-=
-mu(A_x	riangle A_y)
-]
-
-for comparability neighborhoods of two events in the **same** spacetime, linked to the probability that they become true twins in the arrow-erased comparability graph.
-
-## 13. Literature references
-
-- Luca Bombelli, **Space-time as a causal set**, PhD dissertation, Syracuse University, 1987.
-- Luca Bombelli, Joohan Lee, David Meyer, and Rafael D. Sorkin, **Space-time as a causal set**, *Physical Review Letters* 59 (1987), 521–524. DOI: 10.1103/PhysRevLett.59.521.
-- Michel Buck, Fay Dowker, Ian Jubb, and Sumati Surya, **Boundary terms for causal sets**, *Classical and Quantum Gravity* 32 (2015), 205004. DOI: 10.1088/0264-9381/32/20/205004.
-- Sumati Surya, **The causal set approach to quantum gravity**, *Living Reviews in Relativity* 22, 5 (2019). DOI: 10.1007/s41114-019-0023-1.
-- Martin Aigner and Geert Prins, **Uniquely Partially Orderable Graphs**, *Journal of the London Mathematical Society* s2-3 (1971), 260–266. DOI: 10.1112/jlms/s2-3.2.260.
-- Rolf H. Möhring, **Almost all comparability graphs are UPO**, *Discrete Mathematics* 50 (1984), 63–70. DOI: 10.1016/0012-365X(84)90035-9.
-- Ross M. McConnell and Jeremy P. Spinrad, **Modular decomposition and transitive orientation**, *Discrete Mathematics* 201 (1999), 189–241. DOI: 10.1016/S0012-365X(98)00319-7.
-
-## 14. What is proved and what is not
-
-### Established in this note
-
-The following are analytic consequences of the local null-joint geometry:
-
-[
-Delta
-=
-lambda^2 H+O(lambda^3)
-]
-
-in (d=4);
-
-[
-eta_{mathrm{joint}}(4)=3;
-]
-
-[
-J_{mathrm{step}}=rac{2pi}{3};
-]
-
-[
-J_{mathrm{Lap}}=4pi;
-]
-
-and the null-joint sector yields the lower asymptotic contributions
-
-[
-oxed{
-liminf_{arepsilondownarrow0}
-rac{F_4(arepsilon)}{arepsilon^3}
-ge3pi
-}
-]
-
-and
-
-[
-oxed{
-liminf_{n	oinfty}
-n,mathbb E[T_n]
-ge9pi.
-}
-]
-
-### Not yet established
-
-The repository does not yet contain a complete proof that
-
-[
-F_4(arepsilon)
-sim
-3piarepsilon^3
-]
-
-or
-
-[
-mathbb E[T_n]
-sim
-rac{9pi}{n}.
-]
-
-To promote the lower contributions to equalities, the remaining task is to prove that:
-
-1. the ordinary bulk contributes (O(arepsilon^4));
-2. a single-null-face sector contributes (O(arepsilon^{7/2}));
-3. the timelike tips and all remaining boundary charts are (o(arepsilon^3));
-4. no nonlocal pair family produces an additional (arepsilon^3) contribution.
-
-Only after those complementary estimates are closed should (3pi) and (9pi) be advertised as the complete asymptotic constants.
-
-## 15. Current research consequence
-
-The complementary-sector estimate below has now been completed in the subsequent theorem note:
-
-[
-oxed{
-F_4(arepsilon)
--
-F_4^{mathrm{joint}}(arepsilon)
-=
-o(arepsilon^3).
-}
-]
-
-If that is proved, then
-
-[
-oxed{
-F_4(arepsilon)
-sim3piarepsilon^3
-}
-]
-
-and
-
-[
-oxed{
-mathbb E[T_n]
-simrac{9pi}{n}.
-}
-]
-
-That would turn the currently dominant finite UPO obstruction in (3+1) Minkowski sprinklings into a fully controlled Lorentzian boundary asymptotic.
+- docs/physics_bridge/MINKOWSKI_D4_TWIN_ASYMPTOTIC_THEOREM_20261111.md
+- tools/verify_d4_twin_asymptotic_symbolic.py
+- tools/minkowski_null_joint_twin_asymptotic.py
