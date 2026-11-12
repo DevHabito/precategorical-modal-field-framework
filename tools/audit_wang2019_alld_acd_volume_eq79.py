@@ -60,9 +60,11 @@ def corrected_relative_coefficients(d: sp.Expr):
     )
     boundary_D = sp.Integer(0)
 
-    assert sp.factor(boundary_E) == (
+    assert sp.simplify(
+        boundary_E
+        -
         (7 * d + 2) / (180 * (d + 2))
-    )
+    ) == 0
 
     # RNC determinant terms from Eq. (76).
     #
@@ -177,12 +179,16 @@ def main() -> None:
     corrected_abs_H = 3 * (d + 2) * (d + 6)
     corrected_abs_D = -sp.Rational(3, 2) * (d + 2)
 
-    assert corrected_abs_E == (
-        7 * d**3
-        + 58 * d**2
-        + 146 * d
-        + 116
-    )
+    assert sp.simplify(
+        corrected_abs_E
+        -
+        (
+            7 * d**3
+            + 58 * d**2
+            + 146 * d
+            + 116
+        )
+    ) == 0
 
     # Printed Eq. (79).
     printed_abs_E = (
@@ -215,8 +221,12 @@ def main() -> None:
     d4_electric = sp.simplify(d4_E + 4 * d4_D)
     d4_magnetic = sp.simplify(2 * d4_H)
 
-    assert d4_electric == sp.Rational(17, 630)
-    assert d4_magnetic == sp.Rational(1, 210)
+    assert sp.simplify(
+        d4_electric - sp.Rational(17, 630)
+    ) == 0
+    assert sp.simplify(
+        d4_magnetic - sp.Rational(1, 210)
+    ) == 0
 
     print(
         {
