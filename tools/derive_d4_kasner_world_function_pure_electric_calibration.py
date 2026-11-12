@@ -273,23 +273,22 @@ def main() -> None:
     assert parent_ratio.coeff(L, 0) == 1
     assert parent_ratio.coeff(L, 2) == 0
     assert parent_ratio.coeff(L, 3) == 0
-    assert (
+    parent_l4 = sp.simplify(
         parent_ratio.coeff(L, 4)
-        ==
-        sp.Rational(136, 8505)
     )
 
     # Kasner electric Weyl norm at t=1.
     e2 = sp.Rational(8, 27)
 
     parent_e2_coefficient = sp.simplify(
-        parent_ratio.coeff(L, 4) / e2
+        parent_l4 / e2
     )
-    assert (
-        parent_e2_coefficient
-        ==
-        sp.Rational(17, 315)
-    )
+
+    # Do not hard-code the L^4 value here while the symbolic parent-volume
+    # assembly is under audit.  An independent direct numerical integration,
+    # normalized from the physical volume definition, extrapolates to
+    # 68/8505 for parent_l4.  This script must reproduce that value before
+    # being promoted again to an exact Kasner calibration.
 
     # ------------------------------------------------------------------
     # Edge embedding and area density
@@ -520,16 +519,19 @@ def main() -> None:
         + thin_e2_coefficient
     )
 
-    assert kasner_assembled == sp.Rational(469, 4725)
-
     schwarzschild_a4 = sp.Rational(683, 9450)
     mismatch = sp.simplify(
         kasner_assembled - schwarzschild_a4
     )
-    assert mismatch == sp.Rational(17, 630)
+
+    numerical_parent_target = sp.Rational(68, 8505)
 
     print(
         {
+            "parent_volume_L4_symbolic": str(parent_l4),
+            "parent_volume_L4_numerical_target": str(numerical_parent_target),
+            "parent_symbolic_minus_numerical_target":
+                str(sp.simplify(parent_l4 - numerical_parent_target)),
             "parent_volume_E2": str(parent_e2_coefficient),
             "edge_area_E2": str(area_e2_coefficient),
             "edge_cross_E2": str(edge_cross_e2_coefficient),
@@ -537,14 +539,14 @@ def main() -> None:
             "Kasner_assembled_recovery_E2": str(kasner_assembled),
             "Schwarzschild_a4_reference": str(schwarzschild_a4),
             "mismatch": str(mismatch),
-            "status": "KASNER_ROUTE_DOES_NOT_CURRENTLY_CLOSE_THE_UNIVERSAL_COEFFICIENT",
+            "status": "SYMBOLIC_KASNER_PARENT_VOLUME_UNDER_AUDIT",
         }
     )
 
     print(
-        "PASS: Kasner normalization audit completed. "
-        "The corrected parent volume exposes a mismatch that must be resolved "
-        "before this route can be used as an independent recovery calibration."
+        "AUDIT: the symbolic Kasner route is not a certified coefficient "
+        "checker until its parent-volume L^4 term agrees with the independent "
+        "physical-volume integration."
     )
 
 
