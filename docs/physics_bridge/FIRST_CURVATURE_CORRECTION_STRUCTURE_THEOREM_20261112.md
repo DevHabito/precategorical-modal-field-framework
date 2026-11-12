@@ -439,15 +439,84 @@ d^2+2d-4
 }
 \]
 
-Thus the remaining first-order curvature-response problem is only the bulk-dominated case
+The bulk-dominated case
 
 \[
-d=3.
+d=3
 \]
 
-There one must perturb the intrinsic volume-time integral rather than the null-edge coefficient.
+has now also been evaluated in
 
-## 13. Explicit 3+1 consequence
+EXPLICIT_FIRST_CURVATURE_RESPONSE_D3_20261112.md.
+
+Its constants admit exact convergent integral representations and the numerical values
+
+\[
+\frac{A_3}{K_3^{\rm Mink}}
+=
+-0.112626604856\ldots,
+\]
+
+\[
+\frac{B_3}{K_3^{\rm Mink}}
+=
+0.221999557266\ldots.
+\]
+
+Therefore the complete first \(L^2\) curvature response is now determined for every fixed
+
+\[
+d\ge3.
+\]
+
+## 13. Explicit 2+1 consequence
+
+For
+
+\[
+d=3,
+\]
+
+\[
+K_3^{\rm Mink}
+=
+\frac{32\pi}{3}.
+\]
+
+The response constants are
+
+\[
+A_3
+=
+-3.774153754\ldots,
+\]
+
+\[
+B_3
+=
+7.439276568\ldots.
+\]
+
+Thus
+
+\[
+\boxed{
+K_{3,g}(D_L)
+=
+\frac{32\pi}{3}
++
+L^2
+\left[
+A_3R+B_3R_{TT}
+\right]_o
++
+o(L^2).
+}
+\]
+
+The constants are represented by exact convergent bulk integrals; no elementary closed form is currently claimed.
+
+## 14. Explicit 3+1 consequence
 
 For
 
@@ -486,7 +555,7 @@ o(L^2).
 
 In Ricci-flat spacetime the complete \(L^2\) correction vanishes.
 
-## 14. Scientific consequence
+## 15. Scientific consequence
 
 The local recovery probability now has the perturbative structure
 
