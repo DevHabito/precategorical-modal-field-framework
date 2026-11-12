@@ -1,0 +1,250 @@
+# Audit: Kasner parent-volume normalization and independent numerical cross-check
+
+**Date:** 2026-11-12  
+**Author:** Felipe Gianini Romero  
+**Status:** numerical physical-volume audit completed; symbolic exact checker under reconciliation  
+**Purpose:** record and resolve a false normalization alarm without hiding the intermediate mistake
+
+## 1. Why this audit exists
+
+The first symbolic Kasner checker formed a directional time/angle integral and labeled one of its intermediate quantities as a normalized parent-volume ratio.
+
+Inspecting its flat term suggested a missing factor \(2\), because the normalized angular average of the flat directional time integral is
+
+\[
+\int_{-1}^{0}(1+Y)^3dY
++
+\int_{0}^{1}(1-Y)^3dY
+=
+\frac12.
+\]
+
+A temporary patch therefore multiplied that intermediate quantity by \(2\) and tentatively doubled the reported \(L^4\) coefficient.
+
+That conclusion was not accepted without an independent physical-volume calculation.
+
+## 2. Independent calculation
+
+A second implementation starts directly from
+
+\[
+V
+=
+\int_{1-L}^{1+L}
+dt\,
+t
+\int d\Omega
+\int_0^{\rho_{\max}(t,\Omega)}
+\rho^2d\rho,
+\]
+
+for the LRS Kasner metric
+
+\[
+ds^2
+=
+-dt^2
++
+t^{-2/3}dx^2
++
+t^{4/3}(dy^2+dz^2).
+\]
+
+Here
+
+\[
+\sqrt{\det g_{\rm spatial}}=t.
+\]
+
+For every angular direction separately, the code:
+
+1. solves the conserved-momentum null-geodesic direction equation;
+2. computes the future cone from the past tip;
+3. computes the past cone from the future tip;
+4. solves for their direction-dependent crossing time;
+5. integrates the correct cone on each side of that crossing;
+6. performs the full \(\mu\in[-1,1]\) integral, not a normalized angular average.
+
+The final quantity is normalized directly by
+
+\[
+V_{\rm flat}
+=
+\frac{2\pi}{3}L^4.
+\]
+
+Therefore its flat limit is \(1\) by construction.
+
+The repository implementation is
+
+tools/check_d4_kasner_parent_volume_numerically.py.
+
+## 3. Executed regression
+
+An equivalent implementation was executed during the audit.
+
+The measured scaled coefficients
+
+\[
+c(L)
+=
+\frac{V/V_{\rm flat}-1}{L^4}
+\]
+
+were:
+
+| \(L\) | \(c(L)\) |
+|---:|---:|
+| 0.18 | 0.00823097532273 |
+| 0.15 | 0.00815760604614 |
+| 0.12 | 0.00809847516015 |
+| 0.10 | 0.00806668731368 |
+| 0.08 | 0.00804085094949 |
+
+An even fit
+
+\[
+c(L)
+=
+c_0+c_2L^2+c_4L^4
+\]
+
+gives approximately
+
+\[
+c_0
+=
+0.0079953198.
+\]
+
+The rational value previously obtained for the physical Kasner volume is
+
+\[
+\boxed{
+\frac{68}{8505}
+=
+0.00799529688418\ldots
+}
+\]
+
+and the present extrapolation differs by about
+
+\[
+2.3\times10^{-8}.
+\]
+
+Thus the direct physical integration supports
+
+\[
+\boxed{
+\frac{V_{\rm Kasner}}{V_{\rm flat}}
+=
+1+
+\frac{68}{8505}L^4
++
+O(L^6)
+}
+\]
+
+rather than the temporarily proposed doubled coefficient.
+
+## 4. Electric invariant conversion
+
+At the centered Kasner midpoint,
+
+\[
+E^2=\frac8{27},
+\qquad
+B=0.
+\]
+
+Therefore
+
+\[
+\frac{
+68/8505
+}{
+8/27
+}
+=
+\boxed{
+\frac{17}{630}.
+}
+\]
+
+Numerically, the direct Kasner volume is therefore consistent with the purely electric coefficient
+
+\[
+v_E=\frac{17}{630}
+\]
+
+obtained independently by integrating the printed RNC intermediate equations in Wang (2019).
+
+## 5. What went wrong in the symbolic checker
+
+The current evidence shows that the naive diagnosis
+
+\[
+\text{“flat intermediate integral is }1/2
+\Rightarrow
+\text{physical }L^4\text{ coefficient doubles”}
+\]
+
+was incomplete.
+
+The symbolic assembly contains another normalization/bookkeeping issue in its perturbative coefficient, so changing only the global factor creates a false doubled result.
+
+The symbolic script has therefore been converted into diagnostic mode.
+
+It must satisfy two conditions before being restored as an exact checker:
+
+1. its flat normalized parent volume must equal \(1\);
+2. its \(L^4\) coefficient must agree with the independently normalized physical-volume calculation.
+
+No exact PASS is currently claimed for that script.
+
+## 6. Scientific consequence
+
+The false factor-two alarm does **not** currently overturn the Kasner physical-volume evidence.
+
+The correct status is:
+
+\[
+\boxed{
+\text{Kasner numerical volume supports }v_E=17/630,
+}
+\]
+
+while
+
+\[
+\boxed{
+\text{the exact symbolic Kasner implementation remains under audit.}
+}
+\]
+
+Accordingly, Kasner should not yet be advertised as a second exact analytic proof, but it remains a strong independent numerical geometry check.
+
+## 7. Relation to the literature audit
+
+Wang's paper explicitly uses fourth-order RNC/geodesic expansions containing second covariant derivatives of curvature before simplifying the vacuum ACD geometry. The printed ACD null-boundary expression used for the final volume is described as abridged.
+
+This makes it especially important not to infer a physical correction from one internal normalization issue in a separate Kasner implementation.
+
+The current direct Kasner regression, the exact symmetric-plane-wave volume, and the re-integration of the published intermediate equations are mutually consistent at the level tested.
+
+## 8. Next target
+
+The next task is purely technical but important:
+
+\[
+\boxed{
+\text{repair the symbolic Kasner parent-volume series so that its }
+L^0
+\text{ and }
+L^4
+\text{ normalizations agree simultaneously.}
+}
+\]
+
+Only after that repair should the full Kasner recovery assembly be promoted again from numerical cross-check to exact analytic calibration.
