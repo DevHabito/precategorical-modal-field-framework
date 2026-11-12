@@ -1,3 +1,9 @@
+> **Evidence update (2026-11-12):** the coefficient pair inferred below from two exact geometries is no longer supported only by those calibrations. A direct symbolic re-integration of Wang's publicly printed Eqs. (74) and (76), using the angular identities stated in the same paper, independently gives the same \(d=4\) pair
+> \[
+> v_E=\frac{17}{630},\qquad v_B=\frac1{210}.
+> \]
+> The re-integration also extends to arbitrary \(d\), changing only \(108\to116\) in the printed electric numerator and \(6(d+2)(d+6)\to3(d+2)(d+6)\) in the \(H^2\) numerator, while leaving the \(D^2\) term unchanged. See \`WANG_2019_ACD_VOLUME_ALLD_REINTEGRATION_20261112.md\`.
+
 > **LATEST AUDIT STATUS — 2026-11-12:** the immediately preceding “missing factor 2” Kasner diagnosis was itself too quick and is superseded. A new direct numerical integration of the physical centered Kasner volume, with the flat normalization built into \(V/V_{\rm flat}\) and the past/future cone crossing solved separately for every direction, extrapolates to
 > \[
 > \frac{\delta V}{V_{\rm flat}L^4}
