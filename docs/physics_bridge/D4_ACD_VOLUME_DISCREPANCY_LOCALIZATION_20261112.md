@@ -1,3 +1,11 @@
+> **Superseded localization note (2026-11-12):** a later direct re-integration of the publicly printed Eqs. (74) and (76) showed that their \(d=4\) content already yields
+> \[
+> v_E=\frac{17}{630},\qquad v_B=\frac1{210}.
+> \]
+> Therefore the discrepancy is **not** presently localized to a missing \(C^2\) term in the published cone boundary. It is localized more sharply to the algebraic passage from the printed intermediate equations to Eq. (79). See \`WANG_2019_D4_ACD_VOLUME_INTERNAL_CONSISTENCY_AUDIT_20261112.md\` and \`WANG_2019_ACD_VOLUME_ALLD_REINTEGRATION_20261112.md\`.
+>
+> The analysis below is retained as a record of the eliminated hypotheses.
+
 # Localization audit of the d = 4 vacuum ACD volume discrepancy
 
 **Date:** 2026-11-12  
