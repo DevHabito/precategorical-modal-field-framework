@@ -205,8 +205,10 @@ def main() -> None:
     ) == 8
 
     assert sp.simplify(
-        corrected_abs_H - printed_abs_H
-    ) == -3 * (d + 2) * (d + 6)
+        corrected_abs_H
+        - printed_abs_H
+        + 3 * (d + 2) * (d + 6)
+    ) == 0
 
     assert sp.simplify(
         corrected_abs_D - printed_abs_D
