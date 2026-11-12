@@ -1,9 +1,10 @@
-# Lemma: automatic compact containment of thin-null Alexandrov intervals
+# Lemma: automatic compact containment of thin-null Alexandrov intervals via the null index form
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** analytic causal-energy lemma  
-**Purpose:** remove compact containment as an independent hypothesis in the Penrose-scaled thin-null theorem
+**Status:** analytic causal-geometric lemma  
+**Purpose:** remove compact containment as an independent hypothesis in the Penrose-scaled thin-null theorem  
+**Audit note:** this version replaces an earlier Gronwall-only argument that did not adequately control the sign-indefinite plane-wave curvature term
 
 ## 1. Setting
 
@@ -13,17 +14,14 @@ Let
 \gamma:[0,L]\to(M,g)
 \]
 
-be a compact null geodesic segment with a regular null-Fermi tube
+be a compact future null geodesic segment.
 
-\[
-\mathcal T_\rho
-=
-\{
-|u|<\rho,\,
-|y|<\rho,\,
-v\in[-\rho,L+\rho]
-\}.
-\]
+Assume:
+
+1. \(\gamma\) is contained in a regular null-Fermi tube;
+2. there is no point conjugate to \(\gamma(0)\) along \(\gamma|_{(0,L]}\);
+3. the relevant generator family is compact and stays uniformly away from conjugacy, so the transverse index forms have a uniform positive spectral gap;
+4. the nearly null endpoint family has inward optical scale \(a\downarrow0\).
 
 Use null-Fermi coordinates
 
@@ -33,344 +31,435 @@ Use null-Fermi coordinates
 A=1,\ldots,d-2,
 \]
 
-adapted to \(\gamma\), so
+adapted to \(\gamma\), with
 
 \[
 \gamma(v)=(0,v,0).
 \]
 
-Assume the metric on the tube is uniformly close to a regular Penrose-Fermi form:
+The endpoint family has the natural scaling
+
+\[
+P_a=(O(a),\,0,\,O(\sqrt a)),
+\]
+
+\[
+Q_a=(O(a),\,L,\,O(\sqrt a)).
+\]
+
+The claim is that the whole Alexandrov interval satisfies the same transverse scaling.
+
+## 2. Penrose-Fermi leading metric
+
+The null-Fermi expansion of Blau, Frank, and Weiss has leading plane-wave form
+
+\[
+g_{\rm PW}
+=
+2\,du\,dv
++
+\delta_{AB}\,dy^A dy^B
++
+H_{AB}(v)y^Ay^B\,dv^2,
+\]
+
+up to a conventional sign absorbed into \(H\).
+
+The full metric in a sufficiently small tube is
 
 \[
 g
 =
-2\,du\,dv
+g_{\rm PW}
 +
-H_{AB}(v)y^Ay^B\,dv^2
-+
-\delta_{AB}dy^Ady^B
-+
-E,
+\mathcal R,
 \]
 
-where the error tensor satisfies, after shrinking the tube,
+where \(\mathcal R\) is higher order in the transverse Fermi variables and is controlled uniformly on the compact generator family.
+
+The important point is that
 
 \[
-|E|
-\le
-\epsilon_0
+H_{AB}(v)y^Ay^B
 \]
 
-in a fixed auxiliary Euclidean norm.
+is a genuine quadratic curvature term.
 
-Let the endpoints of the nearly null interval satisfy
+Its sign cannot be controlled merely by shrinking the tube.
+
+## 3. The transverse null index form
+
+For a transverse path
 
 \[
-P_a=(0,0,0)+O(a),
+y:[0,L]\to\mathbb R^{d-2},
 \]
 
-\[
-Q_a=(aU_*,L,\sqrt a\,Y_*)+o(\sqrt a)
-\]
-
-for bounded \(U_*,Y_*\).
-
-## 2. Claim
-
-There are constants
-
-\[
-C_u,C_y>0
-\]
-
-and
-
-\[
-a_0>0
-\]
-
-such that for every
-
-\[
-0<a<a_0,
-\]
-
-the entire Alexandrov interval
-
-\[
-I(P_a,Q_a)
-\]
-
-satisfies
+define the plane-wave quadratic form
 
 \[
 \boxed{
-|u|\le C_u a,
-\qquad
-|y|\le C_y\sqrt a,
-\qquad
-v\in[-Ca,L+Ca].
-}
-\]
-
-Therefore after the Penrose scaling
-
-\[
-u=aU,
-\qquad
-y=\sqrt a\,Y,
-\qquad
-v=V,
-\]
-
-the rescaled intervals lie in one fixed compact set.
-
-## 3. Monotonicity of v
-
-Inside a sufficiently small regular null-Fermi tube, choose the time orientation so that
-
-\[
-\partial_u
-\]
-
-is future null.
-
-For every future-directed causal vector \(X\), the dual null coordinate \(v\) is nondecreasing:
-
-\[
-dv(X)\ge0,
-\]
-
-with equality only for vectors parallel to the distinguished null direction.
-
-After shrinking the tube and using uniform cone comparison, there is a constant \(C\) such that every future causal curve from \(P_a\) to \(Q_a\) satisfies
-
-\[
--Ca
-\le
-v
-\le
-L+Ca.
-\]
-
-Thus the longitudinal coordinate cannot escape the fixed generator interval.
-
-## 4. Causal energy inequality
-
-Write a future causal curve as
-
-\[
-c(s)
+Q_\gamma[y]
 =
-(u(s),v(s),y(s)).
-\]
-
-On portions where
-
-\[
-\dot v>0,
-\]
-
-use \(v\) as parameter.
-
-The causal inequality
-
-\[
-g(\dot c,\dot c)\le0
-\]
-
-and uniform control of the metric coefficients give
-
-\[
-|\partial_v y|^2
-\le
-C
+\int_0^L
 \left(
--\partial_v u
+|\dot y|^2
 +
-u_0
-+
-|y|^2
-\right)
-\]
-
-for a sufficiently small tube, where the harmless lower-order term \(u_0\) is bounded by \(Ca\) for the endpoint configuration.
-
-Integrating between \(v_1\) and \(v_2\) gives the schematic energy estimate
-
-\[
-\boxed{
-\int_{v_1}^{v_2}
-|\partial_v y|^2\,dv
-\le
-C
-\left[
-|u(v_2)-u(v_1)|
-+
-a
-+
-\int_{v_1}^{v_2}|y|^2\,dv
-\right].
+\langle H(v)y,y\rangle
+\right)\,dv.
 }
 \]
 
-A Gronwall argument will close this estimate once \(u=O(a)\).
-
-## 5. Bound on the u-coordinate
-
-The same cone comparison gives
-
-\[
-|\partial_v u|
-\le
-C
-\left[
-|\partial_v y|^2
-+
-a
-+
-|y|^2
-\right].
-\]
-
-Integrating from either endpoint and combining with the previous inequality yields
+With the displayed metric convention, the corresponding transverse Jacobi equation is
 
 \[
 \boxed{
-\sup |u|
-\le
-C
-\left[
-a
-+
-\int_0^L|y|^2\,dv
-\right].
+\ddot J-H(v)J=0.
 }
 \]
 
-## 6. Bootstrap for transverse displacement
-
-Suppose the curve stays inside
+A nonzero solution satisfying
 
 \[
-|y|\le\rho
+J(0)=J(L)=0
 \]
 
-up to some first exit time.
+is precisely a transverse Jacobi field producing conjugacy of the endpoints along the null generator.
 
-The preceding inequalities imply
+Thus loss of invertibility of the Dirichlet Jacobi operator is the conjugate-point threshold.
+
+## 4. Coercivity away from conjugacy
+
+Assume there is no conjugate point on \((0,L]\).
+
+Then the Dirichlet Jacobi operator has trivial kernel.
+
+For the generator segment lying on the regular achronal null boundary, the null Morse-index theorem gives nonnegative index and no negative direction before the first conjugate point.
+
+Hence the quadratic form is strictly positive on nonzero
 
 \[
-\int_0^L
-|\partial_v y|^2\,dv
-\le
-C
-\left[
-a
-+
-\int_0^L|y|^2\,dv
-\right].
+H_0^1([0,L];\mathbb R^{d-2})
 \]
 
-Since the endpoint transverse displacement is
+variations.
 
-\[
-O(\sqrt a),
-\]
-
-the one-dimensional Poincare/energy inequality gives
-
-\[
-\sup_{0\le v\le L}
-|y(v)|^2
-\le
-C
-\left[
-a
-+
-\int_0^L
-|\partial_v y|^2\,dv
-\right].
-\]
-
-Combining the two estimates and taking the tube sufficiently small so the lower-order coefficient can be absorbed gives
+Because the interval is compact, strict positivity yields a spectral gap:
 
 \[
 \boxed{
-\sup |y|^2
-\le
-Ca.
+Q_\gamma[w]
+\ge
+c_\gamma
+\|w\|_{H^1}^2
 }
+\]
+
+for every
+
+\[
+w(0)=w(L)=0,
+\]
+
+with
+
+\[
+c_\gamma>0.
+\]
+
+For a compact family of generators uniformly separated from conjugacy, continuity of the Jacobi operator gives
+
+\[
+\boxed{
+c_\gamma\ge c_*>0
+}
+\]
+
+uniformly.
+
+This is the key estimate.
+
+## 5. Nonzero endpoint data
+
+A causal curve joining the nearly null endpoints need not have zero transverse endpoint values.
+
+Let
+
+\[
+j_a
+\]
+
+be the unique Jacobi field satisfying the endpoint data
+
+\[
+j_a(0)=y(P_a),
+\qquad
+j_a(L)=y(Q_a).
+\]
+
+Nonconjugacy gives existence and uniqueness.
+
+Smooth dependence of the Dirichlet Jacobi problem on its endpoint data gives
+
+\[
+\boxed{
+\|j_a\|_{H^1}
++
+\|j_a\|_\infty
+=
+O(\sqrt a).
+}
+\]
+
+Write
+
+\[
+y=j_a+w,
+\qquad
+w(0)=w(L)=0.
+\]
+
+Because \(j_a\) solves the Jacobi equation, the index-form cross term vanishes:
+
+\[
+Q_\gamma[j_a,w]=0.
+\]
+
+Therefore
+
+\[
+\boxed{
+Q_\gamma[y]
+=
+Q_\gamma[j_a]
++
+Q_\gamma[w].
+}
+\]
+
+Since \(j_a=O(\sqrt a)\),
+
+\[
+Q_\gamma[j_a]=O(a).
+\]
+
+## 6. Causal inequality in the plane-wave model
+
+Parameterize a future causal curve by the monotone null coordinate \(v\).
+
+The plane-wave causal condition gives, up to the chosen signature convention,
+
+\[
+2\dot u
++
+|\dot y|^2
++
+\langle H(v)y,y\rangle
+\le0.
+\]
+
+Integrating from \(0\) to \(L\),
+
+\[
+Q_\gamma[y]
+\le
+C|\Delta u|.
+\]
+
+The endpoint configuration has
+
+\[
+|\Delta u|=O(a).
 \]
 
 Hence
 
 \[
-\boxed{
-\sup |y|
-\le
-C_y\sqrt a.
-}
+Q_\gamma[y]
+=
+O(a).
 \]
 
-Substituting back gives
+Using the Jacobi decomposition,
+
+\[
+Q_\gamma[w]
+=
+O(a).
+\]
+
+Coercivity gives
 
 \[
 \boxed{
-\sup |u|
-\le
-C_u a.
+\|w\|_{H^1}^2
+=
+O(a).
 }
 \]
 
-## 7. First-exit contradiction
-
-Assume, for contradiction, that a sequence of causal curves inside the Alexandrov intervals first exits the fixed null-Fermi tube through
+The one-dimensional Sobolev estimate then yields
 
 \[
-|y|=\rho
+\boxed{
+\|w\|_\infty
+=
+O(\sqrt a).
+}
 \]
 
-or
+Adding back \(j_a\),
 
 \[
-|u|=\rho.
+\boxed{
+\sup_v|y(v)|
+=
+O(\sqrt a).
+}
 \]
 
-The bootstrap estimates valid up to the first exit give
+Thus the desired transverse scale is enforced by the null index form.
+
+## 7. Stability for the full null-Fermi metric
+
+The physical metric differs from the plane-wave quadratic model by higher-order Fermi terms.
+
+Use a first-exit bootstrap inside a fixed sufficiently small null-Fermi tube.
+
+On the portion before first exit, the remainder contribution to the integrated causal inequality satisfies
 
 \[
+|\operatorname{Rem}[y,u]|
+\le
+\epsilon(\rho)
+\|w\|_{H^1}^2
++
+C_\rho a,
+\]
+
+where
+
+\[
+\epsilon(\rho)\to0
+\]
+
+as the tube radius
+
+\[
+\rho\to0.
+\]
+
+Choose the tube so small that
+
+\[
+\epsilon(\rho)
+<
+\frac{c_*}{2}.
+\]
+
+Then the remainder can be absorbed into the uniform index-form gap:
+
+\[
+\frac{c_*}{2}
+\|w\|_{H^1}^2
+\le
+Ca.
+\]
+
+Therefore the full metric still gives
+
+\[
+\boxed{
 |y|
 \le
-C_y\sqrt a,
+C\sqrt a.
+}
 \]
+
+This is the place where shrinking the tube is legitimately used: it controls only the **higher-order remainder**, not the sign-indefinite quadratic curvature term.
+
+## 8. Bound on the conjugate null coordinate
+
+Return to the causal inequality.
+
+Once
 
 \[
-|u|
-\le
-C_u a.
+|y|=O(\sqrt a),
+\qquad
+\int|\dot y|^2\,dv=O(a),
 \]
 
-For sufficiently small \(a\), both are strictly less than \(\rho\).
+all quadratic plane-wave terms and higher-order Fermi terms have integral \(O(a)\).
 
-This contradicts the definition of the first exit.
+Integrating the \(u\)-equation from either endpoint therefore gives
 
-Therefore every causal curve joining the endpoints remains inside the tube, and in particular every point of
+\[
+\boxed{
+|u(v)|
+\le
+Ca
+}
+\]
+
+along the entire causal curve.
+
+The affine coordinate \(v\) is monotone and remains between the endpoint values up to the \(O(a)\) endpoint normalization.
+
+Hence
+
+\[
+\boxed{
+v\in[-Ca,L+Ca].
+}
+\]
+
+## 9. First-exit contradiction
+
+Assume a causal curve in
 
 \[
 I(P_a,Q_a)
 \]
 
-satisfies the same bounds.
+first exits the chosen regular tube.
 
-## 8. Penrose-scaled compactness
-
-After
+Before first exit the estimates above hold:
 
 \[
-U=u/a,
+|y|\le C\sqrt a,
 \qquad
-Y=y/\sqrt a,
+|u|\le Ca.
+\]
+
+For sufficiently small \(a\), both are strictly smaller than the fixed tube radius.
+
+The monotone \(v\)-coordinate also remains in the longitudinal tube interval.
+
+This contradicts first exit.
+
+Therefore every causal curve joining the endpoints remains in the regular tube.
+
+In particular, every point of the Alexandrov interval obeys
+
+\[
+\boxed{
+|u|\le Ca,
+\qquad
+|y|\le C\sqrt a,
+\qquad
+v\in[-Ca,L+Ca].
+}
+\]
+
+## 10. Penrose-scaled compact containment
+
+Under
+
+\[
+U=\frac ua,
+\qquad
+Y=\frac y{\sqrt a},
 \qquad
 V=v,
 \]
@@ -378,60 +467,125 @@ V=v,
 the bounds become
 
 \[
-|U|\le C_u,
+|U|\le C,
 \qquad
-|Y|\le C_y,
+|Y|\le C,
 \qquad
--Ca\le V\le L+Ca.
-\]
-
-Thus the rescaled Alexandrov intervals lie inside the fixed compact set
-
-\[
-[-C_u,C_u]
-\times
-[-1,L+1]
-\times
-\overline{B_{C_y}(0)}
+V\in[-1,L+1]
 \]
 
 for all sufficiently small \(a\).
 
-Hence the compact-containment assumption used in
+Hence the rescaled Alexandrov intervals lie in one fixed compact set.
+
+The compact-containment hypothesis in
 
 PENROSE_SCALED_ALEXANDROV_DOMAIN_CONVERGENCE_20261112.md
 
-is a consequence of regular null-Fermi geometry and the nearly null endpoint scaling.
+is therefore derived rather than assumed.
 
-## 9. Consequence
+## 11. Why conjugate points are a genuine failure mechanism
 
-The thin-null theorem no longer needs compact containment as an independent primitive hypothesis.
+If the endpoint reaches a conjugate point, the Dirichlet Jacobi operator develops a nontrivial kernel.
 
-The logical chain is now:
+Then
+
+\[
+c_\gamma\to0.
+\]
+
+The estimate
+
+\[
+Q_\gamma[w]
+\ge
+c_\gamma\|w\|_{H^1}^2
+\]
+
+loses coercivity.
+
+At the exact conjugate threshold, a nonzero transverse Jacobi field can have
+
+\[
+Q_\gamma[w]=0.
+\]
+
+Therefore the causal inequality can no longer force
+
+\[
+|y|=O(\sqrt a).
+\]
+
+This identifies a precise geometric route by which the thin-null universality class can change.
+
+Caustics are therefore structural, not merely technical exclusions.
+
+## 12. Literature boundary
+
+Blau, Frank, and Weiss provide the null-Fermi/Penrose metric expansion.
+
+The relation between conjugate points, Jacobi fields, and the null index form is classical Lorentzian Morse-index theory.
+
+The project-specific statement is the use of index-form coercivity to prove compact containment of the nearly-null Alexandrov interval at the exact
+
+\[
+u=O(a),
+\qquad
+y=O(\sqrt a)
+\]
+
+Penrose scaling.
+
+## 13. Consequence
+
+The corrected logical chain is
 
 \[
 \boxed{
-\text{regular null-Fermi tube}
-\Longrightarrow
-\text{causal energy bound}
-\Longrightarrow
-\text{scaled compact containment}
-\Longrightarrow
-\text{domain convergence}
-\Longrightarrow
-V_{\rm thin}\sim c\,a^{d/2}.
+\text{regular conjugate-free null generator}
 }
 \]
 
-## 10. Scope
+\[
+\Downarrow
+\]
 
-The argument assumes a regular null-Fermi tube with uniform cone comparison.
+\[
+\boxed{
+\text{uniform null index-form gap}
+}
+\]
 
-It does not apply through:
+\[
+\Downarrow
+\]
 
-- conjugate points;
-- cut points;
-- caustics;
-- degeneration of the adapted null coordinate.
+\[
+\boxed{
+u=O(a),\quad y=O(\sqrt a)
+}
+\]
 
-Those remain genuine failure regimes.
+\[
+\Downarrow
+\]
+
+\[
+\boxed{
+\text{Penrose-scaled compact containment}
+}
+\]
+
+\[
+\Downarrow
+\]
+
+\[
+\boxed{
+V_{\rm thin}
+\sim
+\mathcal C_\gamma a^{d/2}.
+}
+\]
+
+This replaces the weaker Gronwall-only argument of the earlier draft.
