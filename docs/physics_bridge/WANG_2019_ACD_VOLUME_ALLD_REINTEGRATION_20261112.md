@@ -545,3 +545,131 @@ The result should now be stress-tested against:
 3. external review by the original author or another specialist in small causal-diamond geometry.
 
 Only after one of those checks should the candidate formula be presented as a correction to the literature rather than as a repository-level consistency result.
+
+
+## 12. Software-independent regression
+
+A second implementation was added at
+
+\`tools/regress_wang_acd_volume_fraction_only.py\`.
+
+It intentionally does not import SymPy or any other computer-algebra system.
+
+It uses only:
+
+- Python \`fractions.Fraction\`;
+- integer factorials;
+- the elementary beta-integral identity
+  \[
+  \int_0^1dt\,t^a
+  \int_0^{1-t}dr\,r^{s-1+b}
+  =
+  \frac{
+  a!(s+b-1)!
+  }{
+  (s+b+a+1)!
+  };
+  \]
+- the angular contractions already stated in the paper.
+
+The implementation checks every integer dimension
+
+\[
+4\le d\le20
+\]
+
+and reproduces independently
+
+\[
+v_E(d)
+=
+\frac{
+d(7d^2+44d+58)
+}{
+180(d+1)(d+3)(d+4)
+},
+\]
+
+\[
+v_H(d)
+=
+\frac{
+d(d+6)
+}{
+60(d+1)(d+3)(d+4)
+},
+\]
+
+\[
+v_D(d)
+=
+-\frac{
+d
+}{
+120(d+1)(d+3)(d+4)
+}.
+\]
+
+The \(d=4\) reduction again gives
+
+\[
+v_E^{(4)}=\frac{17}{630},
+\qquad
+v_B^{(4)}=\frac1{210}.
+\]
+
+This check reduces dependence on symbolic simplification in the main SymPy derivation.
+
+## 13. Algebraic signature of the magnetic discrepancy
+
+The paper explicitly states
+
+\[
+H^{kl}{}_iH_{lkj}\delta^{ij}
+=
+\frac12H^2,
+\]
+
+and
+
+\[
+H^{kl}{}_iH^{min}\delta^{(4)}_{klmn}
+=
+\frac32H^2.
+\]
+
+The \(H^2\) coefficient printed in Eq. (79) is exactly twice the coefficient obtained by applying these identities to Eqs. (74), (77), and (78).
+
+Therefore the magnetic discrepancy has the same algebraic signature that would result if the factors \(1/2\) in those contractions were lost during the final simplification.
+
+This is a diagnostic observation, not a claim about the unpublished intermediate algebra.
+
+For the electric sector, the discrepancy is different: the re-integrated numerator is
+
+\[
+7d^3+58d^2+146d+116,
+\]
+
+whereas Eq. (79) prints
+
+\[
+7d^3+58d^2+146d+108.
+\]
+
+Only the constant term differs, by exactly
+
+\[
+8.
+\]
+
+No unique line-level source for that \(8\) has yet been established.
+
+## 14. Supplemental-material access status
+
+The APS article page identifies supplemental material but currently marks it as subscription-required.
+
+The public ETH Research Collection entry found during this audit contains bibliographic metadata rather than the supplemental derivation.
+
+No open copy of the Section C calculation was located in the targeted public search performed on 2026-11-12.
+
+This is an access limitation, not evidence that no public copy exists elsewhere.
