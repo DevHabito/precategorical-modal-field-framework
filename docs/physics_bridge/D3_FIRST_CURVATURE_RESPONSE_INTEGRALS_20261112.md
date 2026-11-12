@@ -740,7 +740,186 @@ C_k+C_h
 }
 \]
 
-## 13. Numerical quadrature
+## 13. Exact reduction to one-dimensional integrals
+
+The \(s\)-integration can be carried out exactly.
+
+Define
+
+\[
+\boxed{
+q(w)
+=
+\frac{
+w\sqrt{w^2+3}
+}{
+1+w^2
+},
+\qquad
+0\le w\le1.
+}
+\]
+
+Let
+
+\[
+I_k
+=
+\int_D
+S_0^{-3/2}
+[B_2]_k\,dV_\eta
+\]
+
+and
+
+\[
+I_h
+=
+\int_D
+S_0^{-3/2}
+[B_2]_{h^2}\,dV_\eta
+\]
+
+with the common flat normalization suppressed exactly as in the previous sections.
+
+After integrating over
+
+\[
+0<s<2
+\]
+
+one obtains
+
+\[
+\boxed{
+I_k
+=
+2
+\int_0^1
+J_k(w)\,dw,
+}
+\]
+
+where
+
+\[
+\begin{aligned}
+J_k(w)
+={}&
+-
+\frac{
+93w^8+154w^6+800w^4+1254w^2+195
+}{
+256w^2(1+w^2)^2(w^2+3)^2
+}\\
+&-
+\frac{
+3(w^2-1)(6w^4+137w^2+65)
+}{
+256w^3(w^2+3)^{5/2}
+}
+\operatorname{artanh}q(w).
+\end{aligned}
+\]
+
+Similarly,
+
+\[
+\boxed{
+I_h
+=
+2
+\int_0^1
+J_h(w)\,dw,
+}
+\]
+
+with
+
+\[
+\begin{aligned}
+J_h(w)
+={}&
+\frac{
+77w^{10}+359w^8+1434w^6+2342w^4+729w^2+51
+}{
+128w^2(1+w^2)^3(w^2+3)^2
+}\\
+&-
+\frac{
+3(w^2-1)(2w^4-65w^2-17)
+}{
+128w^3(w^2+3)^{5/2}
+}
+\operatorname{artanh}q(w).
+\end{aligned}
+\]
+
+The apparent singularities at
+
+\[
+w=0
+\]
+
+cancel between the rational and \(\operatorname{artanh}\) pieces.
+
+The regular Taylor expansions are
+
+\[
+\boxed{
+J_k(w)
+=
+-\frac{9}{32}
++
+\frac{33}{64}w^2
+-
+\frac{543}{560}w^4
++
+O(w^6),
+}
+\]
+
+and
+
+\[
+\boxed{
+J_h(w)
+=
+\frac38
++
+\frac{51}{160}w^2
+-
+\frac{249}{140}w^4
++
+O(w^6).
+}
+\]
+
+At the opposite endpoint,
+
+\[
+\boxed{
+J_k(1)
+=
+-\frac{39}{256},
+}
+\]
+
+\[
+\boxed{
+J_h(1)
+=
+\frac{39}{128}.
+}
+\]
+
+Thus the curvature-response problem in \(d=3\) has been reduced to two ordinary finite integrals of explicit elementary functions on a compact interval.
+
+This is substantially simpler than the original two-dimensional bulk representation.
+
+The remaining closed-form question is now purely one-dimensional.
+
+## 14. Numerical quadrature
 
 Tensor-product Gauss--Legendre quadrature was applied directly to the exact compact integrals.
 
@@ -779,7 +958,7 @@ Therefore the present numerical estimates are
 }
 \]
 
-## 14. No closed-form claim
+## 15. No closed-form claim
 
 Attempts to force recognition of these decimals as simple combinations of familiar constants were rejected.
 
@@ -793,7 +972,7 @@ The rigorous content at this stage is:
 
 The decimal values should not be treated as exact constants.
 
-## 15. Comparison with d >= 4
+## 16. Comparison with d >= 4
 
 The \(d\ge4\) joint formula has rational dimension-dependent curvature-response coefficients:
 
@@ -830,7 +1009,7 @@ which are **not** the \(d=3\) bulk coefficients above.
 
 This is another quantitative manifestation of the bulk-to-joint transition at \(d=4\).
 
-## 16. Reproducibility
+## 17. Reproducibility
 
 The repository script
 
@@ -840,7 +1019,7 @@ The repository script
 
 constructs the perturbation algebra symbolically and evaluates the final exact integrals by Gauss--Legendre quadrature.
 
-## 17. Current status
+## 18. Current status
 
 The \(d=3\) first curvature response is substantially less closed than the \(d\ge4\) result.
 
