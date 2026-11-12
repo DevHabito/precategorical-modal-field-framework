@@ -1,0 +1,43 @@
+name: Research ACD volume audits
+
+on:
+  push:
+    paths:
+      - "tools/audit_wang2019_d4_acd_volume_eq79.py"
+      - "tools/audit_wang2019_alld_acd_volume_eq79.py"
+      - "tools/verify_alld_cahen_wallach_acd_volume.py"
+      - "tools/verify_alld_weyl_angular_contractions.py"
+      - ".github/workflows/research-acd-volume-audits.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-acd-audits:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install symbolic dependency
+        run: python -m pip install "sympy==1.14.0"
+
+      - name: Audit d4 Wang volume
+        run: python tools/audit_wang2019_d4_acd_volume_eq79.py
+
+      - name: Audit all-d Wang volume
+        run: python tools/audit_wang2019_alld_acd_volume_eq79.py
+
+      - name: Verify all-d Cahen-Wallach combination
+        run: python tools/verify_alld_cahen_wallach_acd_volume.py
+
+      - name: Stress random Weyl contractions
+        run: python tools/verify_alld_weyl_angular_contractions.py
