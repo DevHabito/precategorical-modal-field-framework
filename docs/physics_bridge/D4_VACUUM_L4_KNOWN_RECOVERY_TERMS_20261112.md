@@ -1,3 +1,17 @@
+> **Supersession warning (2026-11-12):** the factorized \(L^4\) bookkeeping below is incomplete. A later RNC/world-function audit found nonzero first-order local anisotropies
+> \[
+> q_1=-\frac13L^2E_{nn},
+> \qquad
+> a_1=\frac16L^2E_{nn},
+> \]
+> whose separate spherical averages vanish but whose products contribute at order \(C^2L^4\). In particular,
+> \[
+> \left\langle \frac92q_1^2-3a_1q_1\right\rangle
+> =
+> \frac{4}{45}E^2L^4.
+> \]
+> Therefore the edge integral cannot be replaced at this order by total area times separately averaged logarithmic factors. Keep the individual geometric inputs below only as provisional components; do not use Sections 9--14 as a complete coefficient derivation. See \`D4_RNC_WORLD_FUNCTION_EDGE_ANISOTROPY_20261112.md\`.
+
 # Theorem capsule: invariant decomposition of the 3+1 Ricci-flat L^4 recovery response
 
 **Date:** 2026-11-12  
