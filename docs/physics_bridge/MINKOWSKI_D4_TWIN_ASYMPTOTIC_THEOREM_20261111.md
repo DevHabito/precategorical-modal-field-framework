@@ -8,682 +8,613 @@
 
 ## 1. Statement
 
-Let (D=I(p,q)subsetmathbb M^4) be the flat Alexandrov interval with
+Let \(D=I(p,q)\subset\mathbb M^4\) be the flat Alexandrov interval with
 
-[
-p=(-1,mathbf0),
-qquad
-q=(1,mathbf0),
-]
+\[
+p=(-1,\mathbf 0),
+\qquad
+q=(1,\mathbf 0),
+\]
 
-equipped with normalized spacetime volume measure (mu).
+equipped with normalized spacetime volume measure \(\mu\).
 
-For (xin D), define its symmetric comparability neighborhood
+For \(x\in D\), define its symmetric comparability neighborhood
 
-[
-A_x
-=
-{zin D: zprec x 	ext{or} xprec z}.
-]
+\[
+A_x=\{z\in D:\ z\prec x\ \text{or}\ x\prec z\}.
+\]
 
-For iid (X,Ysimmu), define
+For iid \(X,Y\sim\mu\), define
 
-[
-Delta(X,Y)
-=
-mu(A_X	riangle A_Y).
-]
+\[
+\Delta(X,Y)=\mu(A_X\triangle A_Y).
+\]
 
 Let
 
-[
-F_4(arepsilon)
+\[
+F_4(\varepsilon)
 =
-Pr(
-Xsim Y,,
-Delta(X,Y)learepsilon
-).
-]
+\Pr\!\left(
+X\sim Y,\,
+\Delta(X,Y)\le\varepsilon
+\right).
+\]
 
 Then
 
-[
-oxed{
-F_4(arepsilon)
-sim
-3pi,arepsilon^3
-qquad
-(arepsilondownarrow0).
+\[
+\boxed{
+F_4(\varepsilon)
+\sim
+3\pi\,\varepsilon^3
+\qquad
+(\varepsilon\downarrow0).
 }
-]
+\]
 
-Now let (T_n) be the number of adjacent true-twin pairs in the unoriented comparability graph of an iid size-(n) sprinkling into (D).
+Let \(T_n\) be the number of adjacent true-twin pairs in the unoriented comparability graph of an iid size-\(n\) sprinkling into \(D\). Then
 
-Then
-
-[
-oxed{
-mathbb E[T_n]
-sim
-rac{9pi}{n}
-qquad
-(n	oinfty).
+\[
+\boxed{
+\mathbb E[T_n]
+\sim
+\frac{9\pi}{n}
+\qquad
+(n\to\infty).
 }
-]
+\]
 
 The second statement follows from the first through the exact identity
 
-[
-mathbb E[T_n]
+\[
+\mathbb E[T_n]
 =
-inom n2
-int_0^1
-(1-delta)^{n-2},dF_4(delta).
-]
+\binom n2
+\int_0^1
+(1-\delta)^{n-2}\,dF_4(\delta).
+\]
 
 ## 2. Joint-adapted coordinates
 
-Write a point in the diamond using
+For a point with time coordinate \(t\) and spatial radius \(r\), set
 
-[
-delta=1-r,
-qquad
-a=delta+t,
-qquad
-b=delta-t.
-]
+\[
+\delta=1-r,
+\qquad
+a=\delta+t,
+\qquad
+b=\delta-t.
+\]
 
 Then
 
-[
-age0,
-qquad
-bge0,
-qquad
-a+ble2,
-]
+\[
+a\ge0,
+\qquad
+b\ge0,
+\qquad
+a+b\le2,
+\]
 
-and
+with
 
-[
-t=rac{a-b}{2},
-qquad
-r=1-rac{a+b}{2}.
-]
+\[
+t=\frac{a-b}{2},
+\qquad
+r=1-\frac{a+b}{2}.
+\]
 
 The codimension-two null joint is
 
-[
+\[
 a=b=0.
-]
+\]
 
-The endpoint proper-time squares are
+The endpoint proper-time squares are exactly
 
-[
-	au(p,x)^2=a(2-b),
-]
+\[
+\tau(p,x)^2=a(2-b),
+\]
 
-[
-	au(x,q)^2=b(2-a).
-]
+\[
+\tau(x,q)^2=b(2-a).
+\]
 
 ## 3. Ordered comparable-pair coordinates
 
-Assume
+Assume \(x\prec y\). Set
 
-[
-xprec y.
-]
+\[
+a_x=\alpha,
+\qquad
+b_y=\beta,
+\]
 
-Set
+and define
 
-[
-a_x=alpha,
-qquad
-b_y=eta,
-]
-
-and
-
-[
-A=a_y-a_xge0,
-qquad
-B=b_x-b_yge0.
-]
+\[
+A=a_y-a_x\ge0,
+\qquad
+B=b_x-b_y\ge0.
+\]
 
 Thus
 
-[
-a_y=alpha+A,
-qquad
-b_x=eta+B.
-]
+\[
+a_y=\alpha+A,
+\qquad
+b_x=\beta+B.
+\]
 
-Let (	heta) be the relative spatial angle.
+Let \(\theta\) be the relative spatial angle. A direct calculation gives
 
-The exact pair proper-time square is
-
-[
-oxed{
-	au(x,y)^2
+\[
+\boxed{
+\tau(x,y)^2
 =
 AB
 -
-2r_xr_y(1-cos	heta).
+2r_xr_y(1-\cos\theta).
 }
-]
+\]
 
-Therefore the pair is causal exactly when
+Hence the pair is causal exactly when
 
-[
-2r_xr_y(1-cos	heta)<AB.
-]
+\[
+2r_xr_y(1-\cos\theta)<AB.
+\]
 
-## 4. Exact d=4 pair measure
+## 4. Exact \(d=4\) pair measure
 
 In four spacetime dimensions,
 
-[
-dmu
+\[
+d\mu
 =
-rac{3}{4pi}
-r^2,da,db,dOmega_2.
-]
+\frac{3}{4\pi}
+r^2\,da\,db\,d\Omega_2.
+\]
 
-Within the unsaturated causal-cap regime, define
+Within the unsaturated causal-cap regime define
 
-[
+\[
 u
 =
-rac{
-2r_xr_y(1-cos	heta)
-}{AB},
-qquad
-0le ule1.
-]
+\frac{
+2r_xr_y(1-\cos\theta)
+}{
+AB
+},
+\qquad
+0\le u\le1.
+\]
 
 After integrating the global angular direction, the ordered-pair measure is exactly
 
-[
-oxed{
-dmu(x)dmu(y)
+\[
+\boxed{
+d\mu(x)\,d\mu(y)
 =
-rac94
-r_xr_y,AB,
-dalpha,deta,dA,dB,du.
+\frac94
+r_xr_y\,AB\,
+d\alpha\,d\beta\,dA\,dB\,du.
 }
-]
+\]
 
-The null-joint small-(Delta) sector is always inside this regime for sufficiently small (arepsilon).
+The null-joint small-\(\Delta\) sector lies inside this regime for sufficiently small \(\varepsilon\).
 
-## 5. Exact disagreement formula
+## 5. Exact disagreement polynomial
 
-For (xprec y),
+For \(x\prec y\),
 
-[
-Delta(x,y)
+\[
+\Delta(x,y)
 =
-rac{
-	au(p,y)^4-	au(p,x)^4
+\frac{
+\tau(p,y)^4-\tau(p,x)^4
 +
-	au(x,q)^4-	au(y,q)^4
+\tau(x,q)^4-\tau(y,q)^4
 -
-2	au(x,y)^4
+2\tau(x,y)^4
 }{16}.
-]
+\]
 
-Equivalently, in the pair coordinates above,
+In the pair coordinates,
 
-[
-egin{aligned}
-Delta
+\[
+\begin{aligned}
+\Delta
 ={}&
-rac12alpha A
+\frac12\alpha A
 +
-rac14A^2
+\frac14A^2
 +
-rac12eta B
+\frac12\beta B
 +
-rac14B^2\
+\frac14B^2\\
 &+
-rac14alpha^2B
--rac12alphaeta A
--rac12alphaeta B
--rac14alpha B^2\
+\frac14\alpha^2B
+-\frac12\alpha\beta A
+-\frac12\alpha\beta B
+-\frac14\alpha B^2\\
 &+
-rac14eta^2A
--rac14eta A^2
+\frac14\beta^2A
+-\frac14\beta A^2
 -
-rac18(1-u)^2A^2B^2.
-end{aligned}
-]
+\frac18(1-u)^2A^2B^2.
+\end{aligned}
+\]
 
-This polynomial identity is exact.
+This identity is exact.
 
 ## 6. The unique degeneracy of the diagonal
 
-At (A=B=0), the first derivatives in the two causal-increment directions are
+At \(A=B=0\), the first derivatives in the two causal-increment directions are
 
-[
-oxed{
-c_A(alpha,eta)
+\[
+\boxed{
+c_A(\alpha,\beta)
 =
-rac{
-2alpha-2alphaeta+eta^2
+\frac{
+2\alpha-2\alpha\beta+\beta^2
 }{4},
 }
-]
+\]
 
-and
-
-[
-oxed{
-c_B(alpha,eta)
+\[
+\boxed{
+c_B(\alpha,\beta)
 =
-rac{
-alpha^2-2alphaeta+2eta
+\frac{
+\alpha^2-2\alpha\beta+2\beta
 }{4}.
 }
-]
+\]
 
-On the closed triangle
+On the physical triangle
 
-[
-alphage0,
-qquad
-etage0,
-qquad
-alpha+etale2,
-]
+\[
+\alpha\ge0,
+\qquad
+\beta\ge0,
+\qquad
+\alpha+\beta\le2,
+\]
 
 both coefficients are strictly positive except at
 
-[
-(alpha,eta)=(0,0).
-]
+\[
+(\alpha,\beta)=(0,0).
+\]
 
-Hence the only point at which the linear response of (Delta) to both causal increments disappears is the null joint.
+For \(c_A\),
 
-This fact is what separates the joint from the rest of the diamond.
+\[
+4c_A
+=
+\beta^2+2\alpha(1-\beta).
+\]
+
+If \(\beta\le1\), this is nonnegative and vanishes only for \(\alpha=\beta=0\).
+
+If \(\beta\ge1\), the coefficient of \(\alpha\) is nonpositive, so the minimum on
+
+\[
+0\le\alpha\le2-\beta
+\]
+
+occurs at \(\alpha=2-\beta\), where
+
+\[
+4c_A
+\ge
+3(\beta-1)^2+1
+>
+0.
+\]
+
+The proof for \(c_B\) is the symmetric argument with \(\alpha\) and \(\beta\) exchanged.
+
+Thus the only point at which the linear response of \(\Delta\) to both causal increments disappears is the null joint.
+
+The exact polynomial and coefficient identities are independently checked by tools/verify_d4_twin_asymptotic_symbolic.py.
 
 ## 7. Complement of the joint is subleading
 
-Fix (eta>0), and consider the region
+Fix \(\eta>0\) and consider
 
-[
-alpha+etageeta.
-]
+\[
+\alpha+\beta\ge\eta.
+\]
 
-Compactness and the positivity of (c_A,c_B) give a constant
+Compactness and the positivity of \(c_A,c_B\) give \(m_\eta>0\) such that
 
-[
-m_eta>0
-]
+\[
+c_A\ge m_\eta,
+\qquad
+c_B\ge m_\eta.
+\]
 
-such that
+The exact expansion then implies, uniformly for sufficiently small \(A+B\),
 
-[
-c_Age m_eta,
-qquad
-c_Bge m_eta
-]
+\[
+\Delta
+\ge
+\frac{m_\eta}{2}(A+B).
+\]
 
-throughout that region.
+If \(A+B\) is not small, continuity and the distinguishing property of Minkowski causal neighborhoods give a positive lower bound for \(\Delta\). Therefore
 
-The exact polynomial expansion then implies, uniformly for sufficiently small (A+B),
-
-[
-Delta
-ge
-rac{m_eta}{2}(A+B).
-]
-
-If (A+B) is not small, continuity and the distinguishing property of Minkowski causal neighborhoods give a positive lower bound for (Delta).
-
-Therefore
-
-[
-Deltalearepsilon
-]
+\[
+\Delta\le\varepsilon
+\]
 
 forces
 
-[
-A=O(arepsilon),
-qquad
-B=O(arepsilon)
-]
+\[
+A=O(\varepsilon),
+\qquad
+B=O(\varepsilon)
+\]
 
 uniformly away from the joint.
 
 ### Unsaturated causal cap
 
-The exact pair density contains the factor
+The exact pair density contains \(AB\). Hence
 
-[
-AB.
-]
-
-Integrating
-
-[
-0le A,Ble C_etaarepsilon
-]
-
-therefore gives
-
-[
-O(arepsilon^4).
-]
+\[
+\int_0^{C\varepsilon}\!\!\int_0^{C\varepsilon}
+AB\,dA\,dB
+=
+O(\varepsilon^4).
+\]
 
 ### Saturated causal cap
 
-Write
-
-[
-c=2-alpha-eta.
-]
-
-The causal cap saturates only when
-
-[
-A+B>c.
-]
-
-Since (A+B=O(arepsilon)), this forces
-
-[
-c=O(arepsilon).
-]
-
-Then
-
-[
-r_x,r_y=O(arepsilon),
-]
-
-so the original radial measure contributes
-
-[
-r_x^2r_y^2=O(arepsilon^4).
-]
-
-Together with the (A,B) integration and the (c)-strip thickness, this sector is even smaller than (O(arepsilon^4)).
-
-Hence
-
-[
-oxed{
-F_4^{mathrm{outside joint}}(arepsilon)
-=
-O(arepsilon^4).
-}
-]
-
-A single null face does not create a separate lower exponent.
-
-The other causal cone supplies a nonzero linear term unless both null-depth coordinates vanish simultaneously.
-
-## 8. Blow-up of the null joint
-
-Now restrict to a sufficiently small joint neighborhood.
-
 Set
 
-[
-alpha=sqrt{arepsilon},aralpha,
-qquad
-eta=sqrt{arepsilon},areta,
-]
+\[
+c=2-\alpha-\beta.
+\]
 
-[
-A=sqrt{arepsilon},ar A,
-qquad
-B=sqrt{arepsilon},ar B.
-]
+The cap saturates only when
 
-Then
+\[
+A+B>c.
+\]
 
-[
-r_xr_y	o1,
-]
+Since \(A+B=O(\varepsilon)\), saturation forces \(c=O(\varepsilon)\). Then
 
-and
+\[
+r_x,r_y=O(\varepsilon),
+\]
 
-[
-rac{Delta}{arepsilon}
-longrightarrow
-H,
-]
+so the original radial density contributes
 
-where
+\[
+r_x^2r_y^2=O(\varepsilon^4).
+\]
 
-[
-oxed{
-H
-=
-rac{
-2aralphaar A+ar A^2
-+
-2aretaar B+ar B^2
-}{4}.
-}
-]
-
-The exact remainder terms are one order higher under this scaling.
-
-Moreover, for a sufficiently small fixed joint chart,
-
-[
-Delta
-ge
-(1-Ceta)
-left(
-rac12alpha A+rac14A^2
-+
-rac12eta B+rac14B^2
-ight),
-]
-
-so the rescaled integrands are dominated by an integrable limiting function.
-
-This permits dominated convergence after the blow-up.
-
-## 9. Evaluation of the limiting step integral
-
-Define
-
-[
-g(alpha,A)
-=
-2alpha A+A^2.
-]
-
-Then
-
-[
-H
-=
-rac{
-g(alpha,A)+g(eta,B)
-}{4}.
-]
-
-For one side,
-
-[
-g=2alpha A+A^2
-]
-
-gives
-
-[
-dalpha
-=
-rac{dg}{2A}.
-]
-
-Thus
-
-[
-A,dalpha,dA
-=
-rac12,dg,dA.
-]
-
-The condition (alphage0) is equivalent to
-
-[
-0le Alesqrt g.
-]
-
-Therefore the induced one-side density is
-
-[
-w(g)
-=
-rac{sqrt g}{2}.
-]
-
-Hence
-
-[
-egin{aligned}
-J_{mathrm{step}}
-&=
-int_{Hle1}
-AB,
-dalpha,dA,deta,dB\
-&=
-rac14
-int_{g_1+g_2le4}
-g_1^{1/2}g_2^{1/2}
-,dg_1,dg_2.
-end{aligned}
-]
-
-The beta-simplex integral gives
-
-[
-oxed{
-J_{mathrm{step}}
-=
-rac{2pi}{3}.
-}
-]
-
-For one time orientation, the geometric coefficient is
-
-[
-rac94.
-]
-
-Including both orientations,
-
-[
-2cdotrac94cdotrac{2pi}{3}
-=
-3pi.
-]
+This sector is smaller still.
 
 Therefore
 
-[
-oxed{
-F_4(arepsilon)
+\[
+\boxed{
+F_4^{\mathrm{outside\ joint}}(\varepsilon)
 =
-3piarepsilon^3
-+
-o(arepsilon^3).
+O(\varepsilon^4).
 }
-]
+\]
 
-Because the complement is (O(arepsilon^4)), no other sector contributes at the leading order.
+A single null face does not produce a separate lower exponent: away from the joint, the opposite causal-cone term restores a nonzero linear response.
+
+## 8. Blow-up of the null joint
+
+In a sufficiently small joint neighborhood set
+
+\[
+\alpha=\sqrt{\varepsilon}\,\bar\alpha,
+\qquad
+\beta=\sqrt{\varepsilon}\,\bar\beta,
+\]
+
+\[
+A=\sqrt{\varepsilon}\,\bar A,
+\qquad
+B=\sqrt{\varepsilon}\,\bar B.
+\]
+
+Then
+
+\[
+r_xr_y\to1,
+\]
+
+and
+
+\[
+\frac{\Delta}{\varepsilon}
+\longrightarrow
+H,
+\]
+
+where
+
+\[
+\boxed{
+H
+=
+\frac{
+2\bar\alpha\bar A+\bar A^2
++
+2\bar\beta\bar B+\bar B^2
+}{4}.
+}
+\]
+
+The exact remainder terms are one order higher under this scaling.
+
+Moreover, in a sufficiently small fixed chart,
+
+\[
+\Delta
+\ge
+(1-C\eta)
+\left(
+\frac12\alpha A+\frac14A^2
++
+\frac12\beta B+\frac14B^2
+\right),
+\]
+
+which supplies an integrable dominating bound after rescaling.
+
+## 9. Limiting step integral
+
+Define
+
+\[
+g(\alpha,A)=2\alpha A+A^2.
+\]
+
+Then
+
+\[
+H
+=
+\frac{
+g(\alpha,A)+g(\beta,B)
+}{4}.
+\]
+
+At fixed \(A\),
+
+\[
+d\alpha=\frac{dg}{2A},
+\]
+
+so
+
+\[
+A\,d\alpha\,dA
+=
+\frac12\,dg\,dA.
+\]
+
+The constraint \(\alpha\ge0\) gives
+
+\[
+0\le A\le\sqrt g,
+\]
+
+and therefore the one-side density is
+
+\[
+w(g)=\frac{\sqrt g}{2}.
+\]
+
+Thus
+
+\[
+\begin{aligned}
+J_{\mathrm{step}}
+&=
+\int_{H\le1}
+AB\,
+d\alpha\,dA\,d\beta\,dB\\
+&=
+\frac14
+\int_{g_1+g_2\le4}
+g_1^{1/2}g_2^{1/2}\,
+dg_1\,dg_2\\
+&=
+\boxed{\frac{2\pi}{3}}.
+\end{aligned}
+\]
+
+For one time orientation the geometric prefactor is \(9/4\). Including both orientations,
+
+\[
+2\cdot\frac94\cdot\frac{2\pi}{3}
+=
+3\pi.
+\]
+
+Together with the \(O(\varepsilon^4)\) complement,
+
+\[
+\boxed{
+F_4(\varepsilon)
+=
+3\pi\varepsilon^3
++
+o(\varepsilon^3).
+}
+\]
 
 ## 10. Twin-count asymptotic
 
 The exact pair-count identity is
 
-[
-mathbb E[T_n]
+\[
+\mathbb E[T_n]
 =
-inom n2
-int_0^1
-(1-delta)^{n-2},dF_4(delta).
-]
+\binom n2
+\int_0^1
+(1-\delta)^{n-2}\,dF_4(\delta).
+\]
 
 Since
 
-[
-F_4(delta)
-sim
-3pidelta^3,
-]
+\[
+F_4(\delta)
+\sim
+3\pi\delta^3,
+\]
 
-the standard Laplace-Stieltjes asymptotic gives
+the Laplace-Stieltjes asymptotic gives
 
-[
-int_0^1
-(1-delta)^{n-2},dF_4(delta)
-sim
-rac{
-3piGamma(4)
+\[
+\int_0^1
+(1-\delta)^{n-2}\,dF_4(\delta)
+\sim
+\frac{
+3\pi\Gamma(4)
 }{
 n^3
 }.
-]
+\]
 
-Using
+Using \(\Gamma(4)=6\) and \(\binom n2\sim n^2/2\),
 
-[
-Gamma(4)=6
-]
-
-and
-
-[
-inom n2simrac{n^2}{2},
-]
-
-we obtain
-
-[
-oxed{
-mathbb E[T_n]
-sim
-rac{9pi}{n}.
+\[
+\boxed{
+\mathbb E[T_n]
+\sim
+\frac{9\pi}{n}.
 }
-]
+\]
 
-Thus comparable true-twin obstructions vanish in expectation, but only at the slow rate
+## 11. Independent finite-\(n\) diagnostic
 
-[
-n^{-1}.
-]
+The analytic target is
 
-## 11. Independent finite-n diagnostic
-
-The analytic coefficient is
-
-[
-9pi
+\[
+9\pi
 =
-28.2743338823ldots
-]
+28.2743338823\ldots
+\]
 
-for
+for \(n\,\mathbb E[T_n]\).
 
-[
-n,mathbb E[T_n].
-]
+Direct graph simulations converge slowly because the blown-up variables have long tails. The importance sampler tools/minkowski_null_joint_twin_asymptotic.py samples directly from the limiting Laplace measure.
 
-Direct graph simulations converge slowly because the limiting blown-up variables have long tails.
+A representative two-million-sample run gave:
 
-A dedicated importance sampler uses the exact limiting Laplace measure.
-
-Representative estimates from a two-million-sample run were:
-
-| (n) | estimate of (n,mathbb E[T_n]) |
+| \(n\) | estimate of \(n\,\mathbb E[T_n]\) |
 |---:|---:|
 |100|14.20|
 |300|17.53|
@@ -693,109 +624,81 @@ Representative estimates from a two-million-sample run were:
 |30000|24.58|
 |100000|25.48|
 
-The sequence approaches the analytic target from below.
-
-These numbers are validation only.
-
-The theorem is the analytic argument above.
-
-The reproducible implementation is:
-
-[
-	exttt{tools/minkowski_null_joint_twin_asymptotic.py}.
-]
+The numerical values are diagnostic only. The coefficient \(9\pi\) comes from the analytic calculation.
 
 ## 12. Dimensional interpretation
 
-The same joint blow-up in spacetime dimension (d) has local exponent
+The same joint blow-up in spacetime dimension \(d\) has local exponent
 
-[
-oxed{
-eta_{mathrm{joint}}(d)
+\[
+\boxed{
+\beta_{\mathrm{joint}}(d)
 =
-2+rac4d.
+2+\frac4d.
 }
-]
+\]
 
-Generic interior pairs instead have
+Generic pairs away from the joint have the ordinary local exponent
 
-[
-oxed{
-eta_{mathrm{bulk}}(d)=d.
+\[
+\boxed{
+\beta_{\mathrm{bulk}}(d)=d.
 }
-]
+\]
 
-Therefore the joint dominates when
+The joint dominates when
 
-[
-2+rac4d<d.
-]
+\[
+2+\frac4d<d.
+\]
 
-This is equivalent to
+The first integer spacetime dimension satisfying this inequality is
 
-[
-d^2-2d-4>0.
-]
+\[
+\boxed{d=4}.
+\]
 
-The first integer spacetime dimension satisfying it is
+For \(d=3\),
 
-[
-oxed{
-d=4.
-}
-]
+\[
+3<\frac{10}{3},
+\]
 
-For (d=3),
+so the bulk dominates.
 
-[
-eta_{mathrm{bulk}}=3
-<
-rac{10}{3}
-=
-eta_{mathrm{joint}},
-]
+For \(d=4\),
 
-so the bulk controls the asymptotic small-(Delta) tail.
+\[
+3<4,
+\]
 
-For (d=4),
+so the codimension-two null joint dominates.
 
-[
-eta_{mathrm{joint}}=3<4=eta_{mathrm{bulk}},
-]
+## 13. Literature boundary
 
-so the codimension-two null joint controls it.
-
-## 13. Relation to established literature
-
-The null joint itself is not new.
-
-Buck, Dowker, Jubb, and Surya showed that the continuum limit of the mean causal-set action for a flat Alexandrov interval contains a contribution equal to the volume of the codimension-two joint.
-
-Their observable is the causal-set action, not orientation recoverability.
+The null joint itself is not new. Buck, Dowker, Jubb, and Surya showed that the continuum limit of the mean causal-set action for a flat Alexandrov interval contains a contribution equal to the volume of the codimension-two joint.
 
 Bombelli's 1987 dissertation also used symmetric differences of Alexandrov neighborhoods to quantify disagreement between causal structures.
 
-Therefore this project does not claim that either null joints or symmetric-difference causal comparisons were invented here.
+Accordingly, this project does not claim novelty for either null joints or symmetric-difference causal comparisons.
 
-The contribution established in this note is the specific chain
+The project-specific result is the chain
 
-[
-	ext{arrow erasure}
-longrightarrow
-	ext{comparability graph}
-longrightarrow
-	ext{true-twin module}
-longrightarrow
-Delta(x,y)
-longrightarrow
-3piarepsilon^3
-longrightarrow
-rac{9pi}{n}.
-]
+\[
+\text{arrow erasure}
+\longrightarrow
+\text{comparability graph}
+\longrightarrow
+\text{true-twin module}
+\longrightarrow
+\Delta(x,y)
+\longrightarrow
+3\pi\varepsilon^3
+\longrightarrow
+\frac{9\pi}{n}.
+\]
 
-No equivalent result was located in the targeted literature review.
-
-That is limited negative evidence, not absolute proof of priority.
+No equivalent result was located in the targeted literature review. This remains limited negative evidence, not proof of absolute priority.
 
 ## 14. References
 
@@ -807,24 +710,22 @@ That is limited negative evidence, not absolute proof of priority.
 - Rolf H. Möhring, **Almost all comparability graphs are UPO**, *Discrete Mathematics* 50 (1984), 63–70. DOI: 10.1016/0012-365X(84)90035-9.
 - Ross M. McConnell and Jeremy P. Spinrad, **Modular decomposition and transitive orientation**, *Discrete Mathematics* 201 (1999), 189–241. DOI: 10.1016/S0012-365X(98)00319-7.
 
-## 15. What this theorem does not prove
+## 15. What the theorem does not prove
 
 The theorem removes the dominant size-two non-stable module asymptotically:
 
-[
-mathbb E[T_n]	o0.
-]
+\[
+\mathbb E[T_n]\to0.
+\]
 
 It does **not** yet prove
 
-[
-p_4^{mathrm{UPO}}(n)	o1.
-]
+\[
+p_4^{\mathrm{UPO}}(n)\to1.
+\]
 
-Larger non-stable modules and other multiple-implication-class configurations must still be controlled.
+Larger non-stable modules and other multiple-implication-class configurations still require control.
 
-The next question is therefore:
+The next question is:
 
-> after size-two comparable twin modules vanish as (9pi/n), what is the leading asymptotic probability of all remaining UPO obstructions in (3+1) Minkowski sprinklings?
-
-That is now the central higher-dimensional reconstruction problem.
+> after size-two comparable twin modules vanish as \(9\pi/n\), what is the leading asymptotic probability of all remaining UPO obstructions in \(3+1\) Minkowski sprinklings?
