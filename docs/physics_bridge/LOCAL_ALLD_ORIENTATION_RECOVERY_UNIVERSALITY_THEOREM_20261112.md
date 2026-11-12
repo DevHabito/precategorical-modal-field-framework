@@ -13,19 +13,21 @@ Let
 (M,g)
 \]
 
-be any smooth time-oriented Lorentzian spacetime of fixed integer dimension
+be a smooth time-oriented Lorentzian spacetime of fixed integer dimension
 
 \[
 d\ge3.
 \]
 
-Fix
+Fix a point
 
 \[
 o\in M
 \]
 
-and a future-directed unit timelike vector
+that admits a relatively compact causally convex normal neighborhood.  In particular, this holds at every point of a strongly causal spacetime, hence at every point of a globally hyperbolic spacetime.
+
+Fix also a future-directed unit timelike vector
 
 \[
 T\in T_oM.
@@ -175,6 +177,26 @@ Smoothness of \(g\) gives
 \]
 
 in \(C^4\) on every fixed bounded scaled neighborhood.
+
+## 2.1 Why causal convexity is required
+
+The normal-coordinate argument is local, but the chronological relation used by the sampled poset is the spacetime chronological relation.
+
+A small normal neighborhood need not be causally convex in a spacetime that violates strong causality: a causal curve could leave the coordinate neighborhood and return, producing global causal relations not visible in the tangent-space scaling.
+
+Choose the normal-coordinate neighborhood \(U\) to be causally convex.
+
+Then, for sufficiently small \(L\),
+
+\[
+p_L,q_L\in U,
+\]
+
+and every causal curve with endpoints in the local diamond remains in \(U\).
+
+Hence the global Alexandrov interval agrees with the local interval used in the scaled argument.
+
+This is the only reason a causal-convexity/strong-causality hypothesis is needed.
 
 ## 3. Fixed scaled diamond endpoints
 
@@ -538,7 +560,7 @@ Such a theorem would require recovery estimates uniform in \(L\), including unif
 
 ## 14. Scientific consequence
 
-For every smooth Lorentzian spacetime of every fixed dimension
+For every strongly causal smooth Lorentzian spacetime of every fixed dimension
 
 \[
 d\ge3,
