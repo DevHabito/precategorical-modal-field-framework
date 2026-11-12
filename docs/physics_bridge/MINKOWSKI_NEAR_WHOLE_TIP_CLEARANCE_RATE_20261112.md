@@ -22,7 +22,15 @@ G_{d,n}
 
 be the arrow-erased causal-comparability graph of \(n\) iid uniform points in a fixed flat Alexandrov interval.
 
-Let \(C_{d,n}\) be an edge-containing connected component and let
+Work on the event that \(G_{d,n}\) has exactly one connected component containing an edge, and let
+
+\[
+C_{d,n}
+\]
+
+denote that unique edge-containing component.
+
+Let
 
 \[
 M\subsetneq C_{d,n}
@@ -410,7 +418,11 @@ Therefore
 z\notin M.
 \]
 
-Since \(M\) is a module, \(z\) must be either:
+On the unique-edge-containing-component event, every sampled vertex outside \(C_{d,n}\) is isolated.  A middle-band point has continuum degree bounded below by \(q_->0\), so the probability that it is isolated is exponentially small.
+
+Outside that exponentially small event, \(z\in C_{d,n}\setminus M\).
+
+Since \(M\) is a module of \(C_{d,n}\), \(z\) must be either:
 
 1. complete to \(M\);
 2. anticomplete to \(M\).
