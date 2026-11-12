@@ -1,3 +1,5 @@
+> **CORRECTION — 2026-11-12:** remove LRS Kasner from the evidence list for the \(d=4\) coefficients. Its parent-volume calculation had a missing flat normalization factor \(2\). The all-\(d\) formulas in this note remain the exact result of re-integrating the printed intermediate equations and still pass the exact Cahen--Wallach plane-wave combination in every \(d\ge4\), but they no longer have an independent pure-electric Kasner confirmation.
+
 # All-dimensional audit of the vacuum Alexandrov-volume coefficient implied by Wang's intermediate equations
 
 **Date:** 2026-11-12  
