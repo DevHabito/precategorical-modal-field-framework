@@ -120,11 +120,11 @@ Under R2, the repository now derives the thin-null endpoint law.
 
 The compact-containment step is supplied by null index-form coercivity: a compact conjugate-free generator family has a uniform positive Dirichlet Jacobi spectral gap, forcing
 
-[
+\[
 u=O(a),
-qquad
-y=O(sqrt a).
-]
+\qquad
+y=O(\sqrt a).
+\]
 
 Combined with Penrose-scaled domain convergence, this gives the endpoint law:
 
@@ -191,7 +191,7 @@ Thus
 
 The old H5 is therefore a consequence of the regular transverse double-null geometry in R2.
 
-## 5. Tip middle band is derived from R4
+## 5. Tip middle band is derived from R3
 
 On the regular middle null band, Synge's world function is smooth and satisfies
 
