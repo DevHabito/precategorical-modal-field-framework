@@ -524,13 +524,13 @@ and
 }
 \]
 
-## 9. Independent exact-spacetime checks
+## 9. Independent spacetime checks
 
 The direct intermediate-equation result is independently reproduced by two geometries already calculated in the repository.
 
 ### LRS Kasner
 
-The exact null-cone integration gives
+A direct numerical integration of the unexpanded physical null cones, followed by an even \(L\to0\) extrapolation, supports
 
 \[
 \frac{\delta V}{V_0}
@@ -543,6 +543,8 @@ with
 \[
 B=0.
 \]
+
+This is an independent numerical geometry check, not an exact symbolic proof.
 
 ### Symmetric Cahen--Wallach plane wave
 
