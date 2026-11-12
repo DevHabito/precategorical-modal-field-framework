@@ -1,3 +1,11 @@
+> **LATEST AUDIT STATUS — 2026-11-12:** the immediately preceding “missing factor 2” Kasner diagnosis was itself too quick and is superseded. A new direct numerical integration of the physical centered Kasner volume, with the flat normalization built into \(V/V_{\rm flat}\) and the past/future cone crossing solved separately for every direction, extrapolates to
+> \[
+> \frac{\delta V}{V_{\rm flat}L^4}
+> \to
+> \frac{68}{8505}.
+> \]
+> Thus there is currently **no numerical evidence that the physical Kasner coefficient should double**. The symbolic Kasner parent-volume checker is now marked diagnostic and must be reconciled with this independent integral before Kasner is used again as an exact calibration. Until then: keep the Schwarzschild and plane-wave results separate; treat Kasner as unresolved rather than confirmed or refuted.
+
 > **CORRECTION — 2026-11-12:** the earlier status line saying that the LRS-Kasner route independently closed \(a_4=683/9450\) is withdrawn. A missing factor \(2\) in the Kasner parent-volume normalization was found later. The first-order RNC anisotropy results in this file remain separate from that normalization error, but Kasner must not be cited as an independent coefficient closure.
 
 > **Status update (2026-11-12):** this first-order RNC audit led to the independent LRS-Kasner/world-function closure. The full local edge density, rather than separately averaged area and logarithmic factors, reproduces \(a_4=683/9450\). See \`D4_KASNER_WORLD_FUNCTION_PURE_ELECTRIC_CALIBRATION_20261112.md\`. The standalone second-order average of \(q=\log(\chi/\chi_0)\) should not be treated as an invariant coefficient without fixing the edge-direction identification; the invariant object is the complete local edge integrand.
