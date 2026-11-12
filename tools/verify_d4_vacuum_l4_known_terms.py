@@ -1,15 +1,28 @@
 #!/usr/bin/env python3
-"""Exact bookkeeping for the known d=4 Ricci-flat L^4 recovery terms.
+"""Corrected exact bookkeeping for the known d=4 Ricci-flat L^4 terms.
 
-Known pieces:
-1. Alexandrov edge area from Wang (2019);
-2. Alexandrov total spacetime volume from Wang (2019);
-3. the two thin-null endpoint coefficients from the plane-wave Jacobi lemma.
+Use the invariant physical-coefficient form
 
-The remaining unknown contribution is the gauge-invariant double-null
-cross-normalization factor Omega.
+    K_4 ∝ V_D * A_E * chi^{-3} * F_+^{-3/2} * F_-^{-3/2},
 
-All arithmetic is exact with fractions.
+where:
+- V_D is the parent Alexandrov spacetime volume,
+- A_E is the codimension-two edge area,
+- chi = -g^{-1}(dS_+,dS_-) is the null-sheet cross normalization,
+- F_± are dimensionless thin-null focusing factors.
+
+Known pieces before chi:
+1. edge area: +2/135 E^2
+2. parent volume: +127/4725 E^2 + 1/105 B^2
+3. thin focusing: -1/105 (E^2+B^2)
+
+Thus
+
+    known E^2 = 152/4725,
+    known B^2 = 0.
+
+The previous script incorrectly used the raw V_D^{-2} pair-density factor
+without restoring the V_D^3 contained in normalized c_±^{-3/2}.
 """
 
 from __future__ import annotations
@@ -21,14 +34,9 @@ def main() -> None:
     edge_e = Fraction(2, 135)
     edge_b = Fraction(0, 1)
 
-    volume_e = Fraction(127, 4725)
-    volume_b = Fraction(1, 105)
+    parent_e = Fraction(127, 4725)
+    parent_b = Fraction(1, 105)
 
-    # K contains V_D^{-2}.
-    parent_e = -2 * volume_e
-    parent_b = -2 * volume_b
-
-    # Two thin-null coefficients together, multiplied by -3/2.
     thin_e = -Fraction(1, 105)
     thin_b = -Fraction(1, 105)
 
@@ -41,8 +49,8 @@ def main() -> None:
             "edge_area_B2": str(edge_b),
             "parent_volume_E2": str(parent_e),
             "parent_volume_B2": str(parent_b),
-            "thin_null_E2": str(thin_e),
-            "thin_null_B2": str(thin_b),
+            "thin_focusing_E2": str(thin_e),
+            "thin_focusing_B2": str(thin_b),
             "known_total_E2": str(known_e),
             "known_total_B2": str(known_b),
             "known_total_E2_float": float(known_e),
@@ -50,20 +58,13 @@ def main() -> None:
         }
     )
 
-    assert known_e == -Fraction(229, 4725)
-    assert known_b == -Fraction(1, 35)
+    assert known_e == Fraction(152, 4725)
+    assert known_b == 0
 
-    # Wang's d=4 identities:
-    # D^2 = 4 E^2, H^2 = 2 B^2.
-    #
-    # ACD volume:
-    # relative E coefficient = 127/4725
-    # relative B coefficient = 1/105.
-    #
-    # ACD edge area:
-    # relative E coefficient = 2/135
-    # relative B coefficient = 0.
-    print("PASS: exact d=4 known L^4 bookkeeping verified.")
+    print(
+        "PASS: corrected d=4 known L^4 bookkeeping verified; "
+        "remaining term is -3 <delta ln chi>."
+    )
 
 
 if __name__ == "__main__":
