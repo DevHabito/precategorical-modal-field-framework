@@ -167,7 +167,7 @@ Thus the \(C^1\) temporal regularity used by the orientation-recovery theorem is
 
 The remaining sections give a local geometric proof sketch because it is useful for understanding signs and for the later tip-shape calculation, but the regularity conclusion itself should be cited as a corollary of the established volume-function literature.
 
-## 11. Why the convex-normal setting is simpler
+## 4. Why the convex-normal setting is simpler
 
 Inside a convex normal neighborhood:
 
@@ -180,7 +180,7 @@ The general volume-function proof of Chruściel--Grant--Minguzzi has to remove a
 
 That complication is absent here.
 
-## 4. Variation of the past volume
+## 5. Variation of the past volume
 
 Fix
 
@@ -251,7 +251,7 @@ E_D^-(x)
 
 up to lower-dimensional boundary pieces.
 
-## 5. Finiteness and continuity of the derivative
+## 6. Finiteness and continuity of the derivative
 
 The closure of the diamond is compact in \(U\).
 
@@ -291,7 +291,7 @@ The time-dual argument gives
 }
 \]
 
-## 6. Timelikeness of the past-volume gradient
+## 7. Timelikeness of the past-volume gradient
 
 Let
 
@@ -332,7 +332,7 @@ Thus
 
 This is the finite-diamond analogue of the standard volume-time gradient argument.
 
-## 7. Timelikeness of the future-volume gradient
+## 8. Timelikeness of the future-volume gradient
 
 By time reversal,
 
@@ -359,7 +359,7 @@ Equivalently,
 
 is past-directed timelike.
 
-## 8. The finite-diamond volume difference
+## 9. The finite-diamond volume difference
 
 Define
 
@@ -400,7 +400,7 @@ No cancellation can make it null: both terms contribute with the same sign to \(
 
 Thus the primitive regularity assumption R1 of the curved recovery theorem is automatic on convex normal causal diamonds.
 
-## 9. Relation to the literature
+## 10. Relation to the literature
 
 Chruściel, Grant, and Minguzzi derive the differentiability formula for weighted past/future volume functions by transporting causal pasts along Jacobi fields and applying Stokes' theorem.
 
@@ -417,7 +417,7 @@ No novelty is claimed for the general volume-variation method.
 
 The project-specific consequence is that the exact finite-diamond function governing arrow-erasure disagreement is automatically temporal in this local convex class.
 
-## 10. Consequence for orientation recovery
+## 11. Consequence for orientation recovery
 
 For every convex normal causally convex diamond in \(2+1\), the bulk-disagreement theorem can define
 
