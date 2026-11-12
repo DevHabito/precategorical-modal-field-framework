@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-11  
 **Author:** Felipe Gianini Romero  
-**Status:** prospective finite scaling-consistency pass  
+**Status:** prospective finite scaling-consistency pass retained as a pre-proof audit; the (d=4) asymptotic has since been proved  
 **Preregistration:** commit `01d38cafb959ab395c2c1666ad9be143335e2a5f`  
 **Claim level:** finite prospective evidence only; no asymptotic theorem
 
