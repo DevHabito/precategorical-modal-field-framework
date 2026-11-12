@@ -1,3 +1,5 @@
+> **Supersession note (2026-11-12):** this file is retained as the independent floating-point regression. The candidate \(a_4=683/9450\) was subsequently derived by exact formal-series algebra in `D4_SCHWARZSCHILD_PURE_ELECTRIC_EXACT_CALIBRATION_20261112.md` and checked by `tools/derive_d4_schwarzschild_pure_electric_exact.py`. Statements below that call the value unproved describe the state at the time of this numerical experiment.
+
 # Numerical calibration candidate: the purely electric d = 4 vacuum response in Schwarzschild
 
 **Date:** 2026-11-12  
