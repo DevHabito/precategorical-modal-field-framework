@@ -1,3 +1,5 @@
+> **CORRECTION — 2026-11-12:** the earlier status line claiming that Schwarzschild and LRS Kasner independently agree on \(a_4\) is withdrawn. The Kasner parent-volume calculation had a missing flat normalization factor \(2\). The exact plane-wave result \(a_4+b_4=508/4725\) in this file is unaffected.
+
 > **Status update (2026-11-12):** the second independent vacuum calibration has now been completed. Both the exact Schwarzschild calculation and an independent LRS-Kasner/world-function calculation give \(a_4=683/9450\). Combined with the plane-wave result in this file, this gives \(b_4=37/1050\). See \`D4_KASNER_WORLD_FUNCTION_PURE_ELECTRIC_CALIBRATION_20261112.md\`.
 
 # Theorem candidate: symmetric plane-wave calibration of the d = 4 vacuum response
