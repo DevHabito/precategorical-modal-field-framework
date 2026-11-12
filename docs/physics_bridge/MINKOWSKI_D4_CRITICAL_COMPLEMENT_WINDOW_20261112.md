@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** quantitative localization theorem for the only unresolved competing UPO-failure scale  
+**Status:** superseded quantitative localization note; the apparent square-root window is eliminated by MINKOWSKI_NEAR_WHOLE_TIP_CLEARANCE_RATE_20261112.md  
 **Physical status:** finite-rate refinement of the \(3+1\) arrow-erasure recovery theorem  
 **Novelty status:** the concentration tools are standard; the \(\sqrt n\) localization follows from the project-specific Minkowski degree/co-degree tails and internal-sparsity geometry
 
@@ -705,4 +705,22 @@ n^{1/2+o(1)}.
 }
 \]
 
-That is the next target.
+That was the next target at the time of this note.
+
+The subsequent middle-band nonneighbor argument proves the stronger estimate
+
+\[
+\Pr(
+\text{near-whole module}
+)
+=
+O(n^{-3})
+\]
+
+in \(d=4\), so the square-root window does not contribute at order \(n^{-1}\).
+
+The current quantitative endpoint is
+
+\[
+\texttt{MINKOWSKI\_ALLD\_ORIENTATION\_RECOVERY\_RATE\_THEOREM\_20261112.md}.
+\]
