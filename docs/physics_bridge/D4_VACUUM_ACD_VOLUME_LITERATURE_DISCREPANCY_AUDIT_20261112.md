@@ -1,3 +1,9 @@
+> **Audit update (2026-11-12):** the discrepancy has now been localized further. Direct exact integration of Wang's own published Eqs. (74) and (76) in \(d=4\) gives
+> \[
+> v_E=\frac{17}{630},\qquad v_B=\frac1{210},
+> \]
+> not the \(d=4\) specialization of Eq. (79). The null-boundary formula (74) and the RNC volume-density formula (76) independently pass an exact symmetric-plane-wave RNC check. The inconsistency therefore lies in the final integration/algebra leading from the intermediate formulas to Eq. (79), unless an unprinted convention in the supplemental derivation changes those equations. See \`tools/audit_wang2019_d4_acd_volume_eq79.py\`.
+
 # Audit note: tension with the published d = 4 vacuum Alexandrov-volume coefficient
 
 **Date:** 2026-11-12  
@@ -549,3 +555,233 @@ The status of this pair is therefore:
 \text{two-exact-geometry candidate, not yet a general theorem.}
 }
 \]
+
+
+## 12. Direct internal-consistency audit of Eqs. (74), (76), and (79)
+
+The two-exact-geometry argument above is no longer the only evidence for the candidate pair.
+
+A direct symbolic audit starts from the formulas printed immediately before Eq. (79).
+
+### Purely electric representative
+
+Choose the algebraic Weyl tensor
+
+\[
+E=\operatorname{diag}(2,-1,-1),
+\qquad
+B=0.
+\]
+
+Then
+
+\[
+E^2=6.
+\]
+
+Insert this tensor into the published \(d=4\) upper-cone boundary Eq. (74), retain the full quadratic contribution from the moving radial boundary, and add the RNC determinant contribution from Eq. (76).
+
+The normalized angular and time integrals give
+
+\[
+\frac{\delta V}{V_0}
+=
+\frac{17}{105}L^4.
+\]
+
+Dividing by \(E^2=6\),
+
+\[
+\boxed{
+v_E=\frac{17}{630}.
+}
+\]
+
+### Purely magnetic representative
+
+Choose instead
+
+\[
+E=0,
+\qquad
+B=\operatorname{diag}(2,-1,-1),
+\]
+
+so
+
+\[
+B^2=6.
+\]
+
+Using
+
+\[
+H_{ijk}=\epsilon_{jkl}B_i{}^l
+\]
+
+in Eq. (74), together with the same Eq. (76) determinant term, gives
+
+\[
+\frac{\delta V}{V_0}
+=
+\frac1{35}L^4.
+\]
+
+Therefore
+
+\[
+\boxed{
+v_B=\frac1{210}.
+}
+\]
+
+### Comparison with Eq. (79)
+
+The printed Eq. (79), specialized to \(d=4\), instead gives
+
+\[
+v_E^{(79)}=\frac{127}{4725},
+\qquad
+v_B^{(79)}=\frac1{105}.
+\]
+
+Hence
+
+\[
+\boxed{
+v_E-v_E^{(79)}
+=
+\frac1{9450},
+}
+\]
+
+and
+
+\[
+\boxed{
+v_B-v_B^{(79)}
+=
+-\frac1{210}.
+}
+\]
+
+These are exactly the shifts already inferred independently from Kasner and the symmetric plane wave.
+
+## 13. Plane-wave localization of the failure
+
+The symmetric Cahen--Wallach wave provides a stronger audit of the intermediate equations.
+
+Its exponential map gives exact Riemann normal coordinates around the diamond midpoint.
+
+For the two transverse channels,
+
+\[
+F_1(U)
+=
+\frac{\sin(\omega U)}{\omega U},
+\qquad
+F_2(U)
+=
+\frac{\sinh(\omega U)}{\omega U}.
+\]
+
+The exact RNC volume density is the exponential-map Jacobian,
+
+\[
+\sqrt{|g_{\rm RNC}|}
+=
+F_1(U)F_2(U).
+\]
+
+Expanding,
+
+\[
+\boxed{
+\sqrt{|g_{\rm RNC}|}
+=
+1-\frac{\omega^4}{90}U^4+O(\omega^8U^8).
+}
+\]
+
+Since
+
+\[
+U=\frac{t-z}{\sqrt2},
+\]
+
+this is
+
+\[
+\boxed{
+\sqrt{|g_{\rm RNC}|}
+=
+1-\frac{\omega^4}{360}(t-z)^4+\cdots.
+}
+\]
+
+That is exactly the specialization of the published Eq. (76).
+
+The exact plane-wave null cone transformed to RNC also reproduces Eq. (74) through the angularly relevant terms. The difference between the exact boundary and the abridged printed boundary is
+
+\[
+\Delta r^{(4)}
+=
+-\frac{
+\omega^4l^5
+}{
+180
+}
+n_z(n_z^2-1)(s-2)(s-1),
+\qquad
+s=\frac tl,
+\]
+
+which is odd in \(n_z\) and integrates to zero over the sphere.
+
+Therefore the abridgment made in Eq. (74) is legitimate for this volume calculation.
+
+Finally, directly integrating Eq. (74) together with Eq. (76) gives
+
+\[
+\boxed{
+\left.
+\frac{\delta V}{V_0}
+\right|_{\rm type\,N}
+=
+\frac1{63}\omega^4L^4,
+}
+\]
+
+the same result as the independent exact plane-wave causal-volume calculation.
+
+The \(d=4\) specialization of Eq. (79) instead gives
+
+\[
+\frac{86}{4725}\omega^4L^4.
+\]
+
+Thus, in this exact geometry, the inconsistency occurs only after the valid intermediate formulas have already been established.
+
+## 14. Revised status of the candidate pair
+
+The pair
+
+\[
+\boxed{
+v_E=\frac{17}{630},
+\qquad
+v_B=\frac1{210}
+}
+\]
+
+is now supported by three logically distinct routes:
+
+1. exact LRS-Kasner causal-volume integration;
+2. exact symmetric-plane-wave causal-volume integration;
+3. direct integration of Wang's published intermediate RNC formulas (74) and (76).
+
+Accordingly, inside this repository the pair is no longer merely a two-geometry numerical or heuristic candidate.
+
+It is an **internally derived exact \(d=4\) coefficient pair**, subject to external review and to checking the original supplemental derivation for any convention or omitted term not visible in the published equations.
+
+The repository still does not claim an external erratum on behalf of the original author.
