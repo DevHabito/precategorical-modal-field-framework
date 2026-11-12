@@ -248,3 +248,126 @@ L^4
 \]
 
 Only after that repair should the full Kasner recovery assembly be promoted again from numerical cross-check to exact analytic calibration.
+
+
+## 9. Independent intrinsic-edge numerical check
+
+A second direct calculation now audits the local invariant edge factor independently of the symbolic series code.
+
+For each direction \(\mu\), the checker:
+
+1. solves the exact Kasner null first integrals for both tips;
+2. finds the direction-dependent edge crossing;
+3. computes both affine lengths;
+4. evaluates the Synge endpoint-gradient cross-normalization
+   \[
+   \chi
+   =
+   \left|
+   g^{-1}
+   \left(
+   d(2\sigma_-),
+   d(2\sigma_+)
+   \right)
+   \right|;
+   \]
+5. differentiates the exact numerical edge embedding to obtain \(dA\);
+6. integrates
+   \[
+   \left\langle
+   \frac{dA}{dA_0}
+   \left(
+   \frac{\chi}{\chi_0}
+   \right)^{-3}
+   \right\rangle.
+   \]
+
+The measured coefficients
+
+\[
+\frac{
+\langle(dA/dA_0)(\chi/\chi_0)^{-3}\rangle-1
+}{
+E^2L^4
+}
+\]
+
+were:
+
+| \(L\) | measured |
+|---:|---:|
+| 0.18 | 0.0560677397 |
+| 0.15 | 0.0556780374 |
+| 0.12 | 0.0553637284 |
+| 0.10 | 0.0551947063 |
+| 0.08 | 0.0550572250 |
+
+An even fit in \(L^2\) gives approximately
+
+\[
+0.05481491.
+\]
+
+The exact symbolic target from the local edge calculation is
+
+\[
+\boxed{
+\frac{37}{675}
+=
+0.0548148148\ldots
+}
+\]
+
+with a difference of about
+
+\[
+9\times10^{-8}.
+\]
+
+Thus both of the following Kasner ingredients now have independent physical numerical checks:
+
+\[
+\boxed{
+v_E^{\rm parent}
+=
+\frac{17}{630},
+}
+\]
+
+and
+
+\[
+\boxed{
+v_E^{\rm edge-cross}
+=
+\frac{37}{675}.
+}
+\]
+
+Combining them with the separately derived universal thin-null contribution
+
+\[
+-\frac1{105}E^2L^4
+\]
+
+gives
+
+\[
+\frac{17}{630}
++
+\frac{37}{675}
+-
+\frac1{105}
+=
+\boxed{
+\frac{683}{9450}.
+}
+\]
+
+Therefore the Kasner geometry again supports the Schwarzschild recovery coefficient at the level of two independent numerical geometric integrations plus the analytic thin-null theorem.
+
+The remaining open issue is no longer the physical Kasner result; it is the repair and successful execution of the exact symbolic Kasner series checker.
+
+The numerical edge checker is
+
+tools/check_d4_kasner_edge_cross_numerically.py.
