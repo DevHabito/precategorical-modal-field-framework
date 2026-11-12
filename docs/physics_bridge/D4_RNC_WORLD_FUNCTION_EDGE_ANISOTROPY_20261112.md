@@ -1,3 +1,5 @@
+> **CORRECTION — 2026-11-12:** the earlier status line saying that the LRS-Kasner route independently closed \(a_4=683/9450\) is withdrawn. A missing factor \(2\) in the Kasner parent-volume normalization was found later. The first-order RNC anisotropy results in this file remain separate from that normalization error, but Kasner must not be cited as an independent coefficient closure.
+
 > **Status update (2026-11-12):** this first-order RNC audit led to the independent LRS-Kasner/world-function closure. The full local edge density, rather than separately averaged area and logarithmic factors, reproduces \(a_4=683/9450\). See \`D4_KASNER_WORLD_FUNCTION_PURE_ELECTRIC_CALIBRATION_20261112.md\`. The standalone second-order average of \(q=\log(\chi/\chi_0)\) should not be treated as an invariant coefficient without fixing the edge-direction identification; the invariant object is the complete local edge integrand.
 
 # RNC/world-function audit of the d = 4 vacuum null-edge anisotropy
