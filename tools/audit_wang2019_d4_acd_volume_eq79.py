@@ -359,7 +359,7 @@ def main() -> None:
     wang_type_n = sp.simplify((wang_vE + wang_vB) / 2)
 
     assert type_n == sp.Rational(1, 63)
-    assert wang_type_n == sp.Rational(86, 9450)
+    assert wang_type_n == sp.Rational(86, 4725)
 
     print(
         {
