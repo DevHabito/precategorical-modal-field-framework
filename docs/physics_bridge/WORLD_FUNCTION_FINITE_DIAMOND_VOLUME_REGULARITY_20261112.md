@@ -94,7 +94,7 @@ Let
 Z\in T_xM.
 \]
 
-Differentiate only the second Heaviside factor.
+After the temporal-selector observation above, differentiate only the moving null Heaviside factor.
 
 Formally,
 
