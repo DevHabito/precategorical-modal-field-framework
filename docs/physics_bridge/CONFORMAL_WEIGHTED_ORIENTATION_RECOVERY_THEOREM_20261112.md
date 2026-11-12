@@ -733,7 +733,63 @@ The present theorem uses exactly that split:
 
 The project-specific result is that the stochastic UPO reconstruction theorem is stable under this measure change.
 
-## 15. Limitation: generic curvature
+## 15. Concrete curved spacetime classes
+
+The conformal theorem is not limited to a formal density perturbation.
+
+It applies to any causally convex Alexandrov interval that is contained in a conformal chart
+
+\[
+g=\Omega^2\eta
+\]
+
+with
+
+\[
+0<\Omega_{\min}\le\Omega\le\Omega_{\max}<\infty.
+\]
+
+Important examples include:
+
+### de Sitter spacetime
+
+de Sitter spacetime is conformally flat.
+
+A compact Alexandrov interval contained away from conformal infinity admits a regular positive conformal factor.
+
+Therefore the orientation-recovery theorem and the flat error exponents apply.
+
+### anti-de Sitter local diamonds
+
+Anti-de Sitter spacetime is also conformally flat.
+
+For a compact causally convex diamond contained inside one regular conformal chart and away from the timelike conformal boundary, the same weighted theorem applies.
+
+Global AdS boundary effects are not covered by this local statement.
+
+### FLRW geometries
+
+Friedmann--Lemaître--Robertson--Walker spacetimes are conformally flat.
+
+For a causally convex compact diamond on which the scale factor is finite and positive, the physical volume measure is a smooth positive reweighting of the conformal Minkowski measure.
+
+Hence
+
+\[
+p_d^{\mathrm{UPO}}(n)\to1
+\]
+
+for fixed \(d\ge3\), with the same recovery-error exponent as in flat spacetime.
+
+The leading coefficient can depend on the scale-factor profile.
+
+### Interpretation
+
+These examples show that nonzero Ricci curvature alone does not destroy the recovery phenomenon.
+
+The first genuinely new obstruction for generic curvature must come from the deformation of causal cones beyond a conformal rescaling, rather than merely from a changed physical volume density.
+
+## 16. Limitation: generic curvature
 
 A generic curved Lorentzian metric is not conformally equivalent to Minkowski on an open set.
 
@@ -743,7 +799,7 @@ For a generic small causal diamond, both the causal cones and the volume measure
 
 The next problem is to control those simultaneous perturbations.
 
-## 16. Next target
+## 17. Next target
 
 The natural next extension is a small curved Alexandrov interval in a general Lorentzian manifold.
 
