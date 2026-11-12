@@ -95,6 +95,7 @@ jobs:
           - PrecategoryFormal.PhysicalBridgeInvariantMarkOrbit
           - PrecategoryFormal.PhysicalBridgeBipartiteOrientation
           - PrecategoryFormal.PhysicalBridgeTwinCoefficientAlgebra
+          - PrecategoryFormal.PhysicalBridgeAcdVacuumVolumeAlgebra
     steps:
       - name: Checkout
         uses: actions/checkout@v6
