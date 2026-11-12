@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** exact plane-wave scaling theorem + conditional generic-spacetime transfer  
+**Status:** exact plane-wave scaling theorem + generic-spacetime transfer on a regular Penrose tube  
 **Physical status:** geometric mechanism behind long-and-skinny causal-interval volume scaling  
 **Novelty status:** Penrose limits and null Fermi coordinates are classical; a targeted search did not locate their use to derive the nearly-null Alexandrov-volume scaling needed by the present arrow-erasure problem
 
