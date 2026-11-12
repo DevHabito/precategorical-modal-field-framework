@@ -555,6 +555,16 @@ For \(d=4\), the small-side regime already has strong independent control:
 
 for every fixed \(\eta>0\), and implication-edge escalation forces every remaining orientation class to reach a fixed positive-disagreement edge core.
 
-The remaining possible obstruction after combining these results is therefore a near-whole internal module whose complement is sublinear.
+The remaining possible obstruction at the time of this note was a near-whole internal module whose complement is sublinear.
 
-That is now the last large-module regime not covered by the current modular arguments.
+That regime was subsequently excluded in
+
+\[
+\texttt{MINKOWSKI\_D4\_NEAR\_WHOLE\_EXCLUSION\_THEOREM\_20261112.md}.
+\]
+
+The assembled consequence is the full \(3+1\) orientation-recovery theorem
+
+\[
+p_4^{\mathrm{UPO}}(n)\to1.
+\]
