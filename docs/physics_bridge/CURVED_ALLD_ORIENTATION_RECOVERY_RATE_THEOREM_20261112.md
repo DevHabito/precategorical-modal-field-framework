@@ -1,3 +1,12 @@
+> **Superseded research note.**  
+> This file preserves an earlier formulation with stronger and partially redundant hypotheses.  
+> The authoritative regular-diamond theorem is:
+> \`ALLD_CURVED_REGULAR_ORIENTATION_RECOVERY_THEOREM_20261112.md\`.  
+> The authoritative small-diamond/local theorem is:
+> \`ALLD_LOCAL_CURVED_ORIENTATION_RECOVERY_THEOREM_20261112.md\`.  
+> In particular, the current proof uses \(C^1\), not \(C^2\), finite-diamond volume regularity; Penrose compact containment is derived from null index-form coercivity rather than assumed; and the local construction uses nested causally convex and strictly convex-normal neighborhoods.  
+> This older file should not be cited as the current theorem statement.
+
 # Theorem: leading orientation-recovery error in regular curved Lorentzian diamonds for every fixed d >= 3
 
 **Date:** 2026-11-12
