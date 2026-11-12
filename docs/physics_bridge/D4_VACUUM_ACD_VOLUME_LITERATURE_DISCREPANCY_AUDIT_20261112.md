@@ -424,3 +424,128 @@ The target is to determine whether the correct universal coefficients are:
 or a different pair consistent with both exact Kasner and plane-wave tests.
 
 Two exact geometries already provide two linear constraints, so in \(3+1\) they are sufficient to infer a candidate corrected pair before the full tensor derivation.
+
+
+## 11. Two-geometry candidate corrected coefficient pair
+
+Assume the centered \(3+1\) Ricci-flat ACD four-volume has no independent scalar sector at order \(L^4\) beyond
+
+\[
+E^2,
+\qquad
+B^2.
+\]
+
+Write
+
+\[
+\frac{V}{V_0}
+=
+1+
+L^4
+\left[
+v_EE^2+v_BB^2
+\right]
++
+o(L^4).
+\]
+
+The exact Kasner calibration is purely electric and gives
+
+\[
+\boxed{
+v_E=\frac{17}{630}.
+}
+\]
+
+The exact type-N plane wave satisfies
+
+\[
+E^2=B^2=\frac{\omega^4}{2}
+\]
+
+and gives
+
+\[
+\frac{\delta V}{V_0}
+=
+\frac1{63}\omega^4L^4.
+\]
+
+Therefore
+
+\[
+\frac{v_E+v_B}{2}
+=
+\frac1{63},
+\]
+
+so
+
+\[
+v_E+v_B
+=
+\frac2{63}.
+\]
+
+Substituting the Kasner value gives
+
+\[
+\boxed{
+v_B
+=
+\frac2{63}
+-
+\frac{17}{630}
+=
+\frac1{210}.
+}
+\]
+
+Thus the two exact geometries force the candidate corrected pair
+
+\[
+\boxed{
+\frac{V}{V_0}
+=
+1+
+L^4
+\left[
+\frac{17}{630}E^2
++
+\frac1{210}B^2
+\right]
++
+o(L^4).
+}
+\]
+
+Relative to the \(d=4\) specialization of Wang Eq. (79), the coefficient shifts would be
+
+\[
+\boxed{
+\Delta v_E
+=
+\frac1{9450},
+}
+\]
+
+and
+
+\[
+\boxed{
+\Delta v_B
+=
+-\frac1{210}.
+}
+\]
+
+The magnetic shift is large enough that the generic RNC rederivation is essential before this pair is presented as a correction to the literature.
+
+The status of this pair is therefore:
+
+\[
+\boxed{
+\text{two-exact-geometry candidate, not yet a general theorem.}
+}
+\]
