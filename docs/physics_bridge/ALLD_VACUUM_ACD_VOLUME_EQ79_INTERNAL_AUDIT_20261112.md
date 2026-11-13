@@ -1,3 +1,5 @@
+> **NON-TYPE-N MAGNETIC-SECTOR UPDATE — 2026-11-13:** the corrected \(d=5\) law has now passed a direct physical-volume test in transversely boosted LRS-Kasner frames with \(H^2\neq0\). This check is independent of the type-N Cahen--Wallach invariant relation and does not use Wang Eq. (74) in the volume integration. GitHub Actions run **43411592007** completed successfully for \(v=0.3,0.5,0.7\). The \(L\to0\) extrapolated coefficients agree with the re-integrated law within \(1.4\times10^{-5}\), while the printed Eq. (79) misses the same three cases by approximately \(6.1\times10^{-4}\), \(2.7\times10^{-3}\), and \(1.17\times10^{-2}\). The test is numerical and does not replace an exact boosted analytic derivation. An attempted inversion for the full invariant coefficient vector was found to be ill-conditioned and is not used as primary evidence.
+
 > **EXACT HIGHER-D UPDATE — 2026-11-12:** the LRS-Kasner checks in \(d=5\) and \(d=6\) have now been upgraded from numerical \(L\to0\) regressions to exact rational directional-jet calculations. They give
 > \[
 > \frac{V^{(5)}_{\rm Kasner}}{V^{(5)}_{\rm flat}}
