@@ -418,3 +418,20 @@ E^2,\qquad H^2,\qquad D^2.
 \]
 
 This would substantially reduce the remaining dependence on Wang's abridged printed null-boundary formula.
+
+
+## 11. Literature context for observer-dependent electric/magnetic splitting
+
+The use of a boosted observer is standard in the higher-dimensional electric/magnetic decomposition of the Weyl tensor.
+
+Relevant background:
+
+- Sigbjorn Hervik, Marcello Ortaggio and Lode Wylleman (2013), *Minimal tensors and purely electric or magnetic spacetimes of arbitrary dimension*, Classical and Quantum Gravity 30, 165014.
+- Sigbjorn Hervik, Marcello Ortaggio and Lode Wylleman (2013), *Electric and magnetic Weyl tensors in higher dimensions*, arXiv:1301.3691.
+- Marcello Ortaggio, Vojtech Pravda and Alena Pravdova (2013), *Algebraic classification of higher dimensional spacetimes based on null alignment*, Classical and Quantum Gravity 30, 013001.
+
+These works define the electric/magnetic decomposition relative to a chosen timelike observer and emphasize that the split is observer dependent.
+
+The boosted-Kasner target above uses exactly that standard observer-relative decomposition.
+
+No claim is made that the boost transformation itself is new.
