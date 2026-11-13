@@ -625,296 +625,209 @@ tools/check_d5_boosted_kasner_acd_volume_numerically.py
 The checker keeps the target formula separate from the physical volume integration and fails if the \(L\to0\) extrapolation exceeds the declared absolute tolerance.
 
 
-## 12. Independent reconstruction of the d = 5 invariant coefficients
 
-The boosted family can be used for a stronger test than pointwise comparison with the target function.
+## 12. Attempted coefficient-vector inversion and why it is not used as primary evidence
 
-Take the three observer directions
+The boosted family initially suggested a stronger numerical inversion.
 
-\[
-v=0,
-\qquad
-v=\frac12,
-\qquad
-v=\frac7{10}.
-\]
-
-Their invariant rows
+Using
 
 \[
-(E^2,H^2,D^2)
+v=0,\quad \frac12,\quad \frac7{10},
 \]
 
-are
+the three invariant rows are linearly independent, with exact determinant
 
 \[
-\left(
-\frac34,\,
-0,\,
-\frac32
-\right),
+\det M=\frac{392}{289}\ne0.
 \]
+
+Algebraically, the three directions therefore determine
 
 \[
-\left(
-\frac{19}{12},\,
-\frac43,\,
-\frac72
-\right),
+A_5,\quad B_5,\quad C_5.
 \]
 
-and
+However, the numerical matrix is poorly conditioned:
 
 \[
-\left(
-\frac{4689}{1156},\,
-\frac{4900}{867},\,
-\frac{18869}{1734}
-\right).
+\kappa(M)\approx121.
 \]
 
-The exact determinant is
+This matters because the boosted volumes are extracted from finite-\(L\) numerical extrapolations.
+
+Errors of order \(10^{-5}\) in the extrapolated scalar coefficients can be amplified to order \(10^{-4}\) in the reconstructed invariant vector.
+
+A GitHub Actions reproduction exposed exactly this effect.
+
+The individual boosted extrapolations remained accurate, but the reconstructed \(A_5,B_5,C_5\) vector moved outside the initially imposed \(10^{-5}\) tolerance.
+
+Therefore:
 
 \[
 \boxed{
-\det M
-=
-\frac{392}{289}
-\ne0.
+\text{the coefficient-vector inversion is diagnostic only.}
 }
 \]
 
-Therefore these three directions span the full \(d=5\) invariant space
+It is not used as primary evidence for the corrected law.
 
-\[
-E^2,\qquad H^2,\qquad D^2.
-\]
+This is a numerical-conditioning limitation, not evidence against the boosted-volume agreement.
 
-Use:
+## 13. Better-conditioned direct comparison with the printed Eq. (79)
 
-1. the exact comoving LRS-Kasner coefficient
-   \[
-   c(0)=\frac{25}{1152};
-   \]
-2. the direct boosted numerical extrapolation at
-   \[
-   v=\frac12;
-   \]
-3. the direct boosted numerical extrapolation at
-   \[
-   v=\frac7{10}.
-   \]
+The robust comparison is scalar and pointwise in \(v\).
 
-Solving
-
-\[
-M
-\begin{pmatrix}
-A_5\\
-B_5\\
-C_5
-\end{pmatrix}
-=
-\begin{pmatrix}
-c(0)\\
-c(1/2)\\
-c(7/10)
-\end{pmatrix}
-\]
-
-gives
+The corrected \(d=5\) law predicts
 
 \[
 \boxed{
-A_5^{\rm geom}
-\approx
-0.0291239875,
+c_{\rm corr}(v)
+=
+\frac{
+8v^4+24v^2+25
+}{
+1152(1-v^2)^2
+}.
 }
 \]
+
+The \(d=5\) specialization of the printed Eq. (79) predicts instead
 
 \[
 \boxed{
-B_5^{\rm geom}
-\approx
-0.0021181315,
+c_{\rm printed}(v)
+=
+\frac{
+1508v^4+5914v^2+4713
+}{
+217728(1-v^2)^2
+}.
 }
 \]
+
+For the CI-reproduced boosted volumes:
+
+### v = 0.3
+
+Numerical extrapolation:
+
+\[
+0.02854511484.
+\]
+
+Corrected prediction:
+
+\[
+0.02853838774.
+\]
+
+Printed Eq. (79):
+
+\[
+0.02915950396.
+\]
+
+Errors:
+
+\[
+|c_{\rm num}-c_{\rm corr}|
+\approx
+6.73\times10^{-6},
+\]
+
+\[
+|c_{\rm num}-c_{\rm printed}|
+\approx
+6.14\times10^{-4}.
+\]
+
+### v = 0.5
+
+Numerical extrapolation:
+
+\[
+0.04862267975.
+\]
+
+Corrected prediction:
+
+\[
+0.04861111111.
+\]
+
+Printed Eq. (79):
+
+\[
+0.05132397609.
+\]
+
+Errors:
+
+\[
+|c_{\rm num}-c_{\rm corr}|
+\approx
+1.16\times10^{-5},
+\]
+
+\[
+|c_{\rm num}-c_{\rm printed}|
+\approx
+2.70\times10^{-3}.
+\]
+
+### v = 0.7
+
+Numerical extrapolation:
+
+\[
+0.12907927742.
+\]
+
+Corrected prediction:
+
+\[
+0.12909297706.
+\]
+
+Printed Eq. (79):
+
+\[
+0.14078726080.
+\]
+
+Errors:
+
+\[
+|c_{\rm num}-c_{\rm corr}|
+\approx
+1.37\times10^{-5},
+\]
+
+\[
+|c_{\rm num}-c_{\rm printed}|
+\approx
+1.17\times10^{-2}.
+\]
+
+Thus the boosted physical geometry is consistently much closer to the re-integrated coefficient law than to the printed Eq. (79).
+
+This comparison does not require inversion of an ill-conditioned invariant matrix.
+
+## 14. Updated evidence statement
+
+The boosted Kasner test now supports the following statement:
 
 \[
 \boxed{
-C_5^{\rm geom}
-\approx
--0.0000944012.
+\text{direct non-type-N physical volumes favor the re-integrated d=5 law over the printed Eq. (79).}
 }
 \]
 
-The coefficients obtained by re-integrating the published RNC intermediate equations are
+The statement is numerical and internal.
 
-\[
-A_5
-=
-\frac{151}{5184}
-\approx
-0.0291280864,
-\]
+It does not establish a published correction by itself.
 
-\[
-B_5
-=
-\frac{11}{5184}
-\approx
-0.0021219136,
-\]
+The strongest remaining analytic upgrade is an exact boosted-cone expansion, beginning with the exact timelike-tip jets recorded in
 
-\[
-C_5
-=
--\frac1{10368}
-\approx
--0.0000964506.
-\]
-
-The coefficient differences are
-
-\[
-\boxed{
-\Delta A_5
-\approx
--4.10\times10^{-6},
-}
-\]
-
-\[
-\boxed{
-\Delta B_5
-\approx
--3.78\times10^{-6},
-}
-\]
-
-\[
-\boxed{
-\Delta C_5
-\approx
-+2.05\times10^{-6}.
-}
-\]
-
-This inversion is conceptually stronger than checking one predicted scalar combination.
-
-Within the numerical accuracy of the boosted volume calculation, the three-dimensional invariant coefficient vector itself is recovered from an independent exact/numerical geometry construction.
-
-The solve does not use Wang Eq. (79).
-
-The remaining limitation is numerical rather than algebraic: the boosted coefficients are extracted by finite-\(L\) extrapolation.
-
-An exact boosted directional-jet derivation would remove that last limitation.
-
-
-## 13. Direct comparison with the printed d = 5 Eq. (79) coefficients
-
-The printed Eq. (79) gives, in \(d=5\),
-
-\[
-A_5^{\rm printed}
-=
-\frac{3163}{108864}
-\approx
-0.0290546002,
-\]
-
-\[
-B_5^{\rm printed}
-=
-\frac{11}{2592}
-\approx
-0.0042438272,
-\]
-
-and
-
-\[
-C_5^{\rm printed}
-=
--\frac1{10368}
-\approx
--0.0000964506.
-\]
-
-The independently reconstructed geometry coefficients are
-
-\[
-A_5^{\rm geom}
-\approx
-0.0291239875,
-\]
-
-\[
-B_5^{\rm geom}
-\approx
-0.0021181315,
-\]
-
-\[
-C_5^{\rm geom}
-\approx
--0.0000944012.
-\]
-
-Relative to the corrected coefficients,
-
-\[
-A_5^{\rm corr}
-=
-\frac{151}{5184},
-\qquad
-B_5^{\rm corr}
-=
-\frac{11}{5184},
-\qquad
-C_5^{\rm corr}
-=
--\frac1{10368},
-\]
-
-the absolute reconstruction differences are approximately
-
-\[
-4.10\times10^{-6},
-\qquad
-3.78\times10^{-6},
-\qquad
-2.05\times10^{-6}.
-\]
-
-Relative to the printed Eq. (79), the corresponding differences are approximately
-
-\[
-6.94\times10^{-5},
-\qquad
--2.13\times10^{-3},
-\qquad
-2.05\times10^{-6}.
-\]
-
-The hook/magnetic sector is therefore especially discriminating.
-
-The geometry reconstruction lies near
-
-\[
-\boxed{
-B_5=\frac{11}{5184},
-}
-\]
-
-not near the printed
-
-\[
-\boxed{
-B_5^{\rm printed}=\frac{11}{2592}.
-}
-\]
-
-This is an independent non-type-N numerical check of the factor-of-two discrepancy previously found by direct re-integration of the published intermediate equations.
-
-The result remains a numerical internal verification and is not described as a published correction until external review is obtained.
+tools/derive_d5_boosted_kasner_timelike_tip_jets.py.
