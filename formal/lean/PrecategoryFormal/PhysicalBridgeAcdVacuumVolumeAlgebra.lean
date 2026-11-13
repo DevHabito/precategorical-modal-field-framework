@@ -222,4 +222,38 @@ theorem acdVacuumD5BoostedPrintedMinusCorrected
   field_simp [h]
   ring
 
+
+/--
+The five electric-sector numerator contributions obtained by integrating the
+printed intermediate equations sum to the corrected common numerator.
+
+This theorem formalizes the exact polynomial identity before the final
+normalization used in Eq. (79).
+-/
+theorem acdVacuumElectricFiveTermCommonNumerator
+    (d : ℝ) :
+    5 * (d + 1) * (d + 2) * (d + 3) * (d + 4)
+      - 4 * (d + 2) * (d + 3) * (d + 4)
+      + 2 * d * (d - 1) * (d + 3) * (d + 4)
+      - 24
+      - 3 * d * (d + 2)
+      =
+    d * (d + 2) * (7 * d ^ 2 + 44 * d + 58) := by
+  ring
+
+/--
+At the common-numerator stage, replacing the corrected final electric
+polynomial +116 by the printed +108 requires exactly a shift -8 d.
+-/
+theorem acdVacuumElectricPrintedCommonShift
+    (d : ℝ) :
+    d * (
+        (7 * d ^ 3 + 58 * d ^ 2 + 146 * d + 108)
+          -
+        (7 * d ^ 3 + 58 * d ^ 2 + 146 * d + 116)
+      )
+      =
+    -8 * d := by
+  ring
+
 end PrecategoryFormal.PhysicalBridge
