@@ -131,4 +131,95 @@ theorem acdVacuumD4PlaneWaveReduction :
     1 / 63 := by
   norm_num
 
+
+/--
+Raw electric moving-boundary coefficient from the three terms that arise
+when the printed null-cone radius is raised to the spatial power and angular
+averaged.
+-/
+theorem acdVacuumBoundaryElectricReduction
+    (d : ℝ)
+    (h1 : d + 1 ≠ 0)
+    (h2 : d + 2 ≠ 0) :
+    (1 / 36 : ℝ)
+      - 1 / (45 * (d + 1))
+      + d * (d - 1) / (90 * (d + 1) * (d + 2))
+      =
+    (7 * d + 2) / (180 * (d + 2)) := by
+  field_simp [h1, h2]
+  ring
+
+/--
+The corrected d=5 coefficients evaluated on the exact Weyl invariants of a
+transversely boosted LRS-Kasner observer.
+
+The invariant formulas are:
+  E^2 = (v^4 + 2 v^2 + 3) / (4(1-v^2)^2),
+  H^2 = 3 v^2 / (1-v^2)^2,
+  D^2 = (7 v^4 + 2 v^2 + 3) / (2(1-v^2)^2).
+
+This theorem certifies only the rational reduction.
+-/
+theorem acdVacuumD5BoostedKasnerCorrected
+    (v : ℝ)
+    (h : 1 - v ^ 2 ≠ 0) :
+    (151 / 5184 : ℝ)
+        * ((v ^ 4 + 2 * v ^ 2 + 3) /
+            (4 * (1 - v ^ 2) ^ 2))
+      +
+    (11 / 5184 : ℝ)
+        * ((3 * v ^ 2) /
+            ((1 - v ^ 2) ^ 2))
+      -
+    (1 / 10368 : ℝ)
+        * ((7 * v ^ 4 + 2 * v ^ 2 + 3) /
+            (2 * (1 - v ^ 2) ^ 2))
+      =
+    (8 * v ^ 4 + 24 * v ^ 2 + 25) /
+      (1152 * (1 - v ^ 2) ^ 2) := by
+  field_simp [h]
+  ring
+
+/--
+The d=5 specialization of the printed Eq. (79), evaluated on the same
+boosted-Kasner Weyl invariants.
+-/
+theorem acdVacuumD5BoostedKasnerPrinted
+    (v : ℝ)
+    (h : 1 - v ^ 2 ≠ 0) :
+    (3163 / 108864 : ℝ)
+        * ((v ^ 4 + 2 * v ^ 2 + 3) /
+            (4 * (1 - v ^ 2) ^ 2))
+      +
+    (11 / 2592 : ℝ)
+        * ((3 * v ^ 2) /
+            ((1 - v ^ 2) ^ 2))
+      -
+    (1 / 10368 : ℝ)
+        * ((7 * v ^ 4 + 2 * v ^ 2 + 3) /
+            (2 * (1 - v ^ 2) ^ 2))
+      =
+    (1508 * v ^ 4 + 5914 * v ^ 2 + 4713) /
+      (217728 * (1 - v ^ 2) ^ 2) := by
+  field_simp [h]
+  ring
+
+/--
+Exact algebraic difference between the printed and corrected d=5 boosted
+Kasner predictions.
+-/
+theorem acdVacuumD5BoostedPrintedMinusCorrected
+    (v : ℝ)
+    (h : 1 - v ^ 2 ≠ 0) :
+    (1508 * v ^ 4 + 5914 * v ^ 2 + 4713) /
+        (217728 * (1 - v ^ 2) ^ 2)
+      -
+    (8 * v ^ 4 + 24 * v ^ 2 + 25) /
+        (1152 * (1 - v ^ 2) ^ 2)
+      =
+    (-2 * v ^ 4 + 689 * v ^ 2 - 6) /
+      (108864 * (1 - v ^ 2) ^ 2) := by
+  field_simp [h]
+  ring
+
 end PrecategoryFormal.PhysicalBridge
