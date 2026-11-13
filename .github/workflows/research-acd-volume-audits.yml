@@ -9,6 +9,7 @@ on:
       - "tools/verify_alld_weyl_angular_contractions.py"
       - "tools/derive_d5_lrs_kasner_parent_volume_exact.py"
       - "tools/derive_d6_lrs_kasner_parent_volume_exact.py"
+      - "tools/derive_d7_lrs_kasner_parent_volume_exact.py"
       - "tools/derive_d5_boosted_kasner_weyl_target.py"
       - "tools/derive_d5_boosted_kasner_timelike_tip_jets.py"
       - "tools/derive_d5_kasner_null_cone_profile_jets.py"
@@ -55,6 +56,9 @@ jobs:
 
       - name: Verify exact d6 LRS-Kasner volume
         run: python tools/derive_d6_lrs_kasner_parent_volume_exact.py
+
+      - name: Verify exact d7 LRS-Kasner volume
+        run: python tools/derive_d7_lrs_kasner_parent_volume_exact.py
 
       - name: Verify boosted d5 Kasner Weyl target
         run: python tools/derive_d5_boosted_kasner_weyl_target.py
