@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "tools/check_d5_boosted_kasner_acd_volume_numerically.py"
+      - "tools/check_d5_boosted_kasner_l4_jet_quadrature.py"
       - ".github/workflows/research-boosted-kasner-volume.yml"
   workflow_dispatch:
 
@@ -29,3 +30,6 @@ jobs:
 
       - name: Check boosted d5 Kasner ACD volume
         run: python tools/check_d5_boosted_kasner_acd_volume_numerically.py
+
+      - name: Check coefficient-level boosted d5 Kasner L4 jet quadrature
+        run: python tools/check_d5_boosted_kasner_l4_jet_quadrature.py
