@@ -646,3 +646,25 @@ The public APS article page identifies supplemental material, but the supplement
 A targeted public search did not locate an accessible copy of Section C, a published erratum for Eq. (79), or an independent later reproduction of the exact Weyl-quadratic ACD volume coefficients.
 
 That search result is only an access/literature-status statement. It is not a novelty proof.
+
+
+## 15. Updated Kasner CI status
+
+After this packet was first assembled, the second exact Kasner implementation was added to the dedicated GitHub Actions workflow.
+
+Run
+
+\[
+\boxed{\text{43335082471}}
+\]
+
+completed successfully on commit
+
+7e050ec98c4d14fc8143f6516609f87a1d30e402.
+
+Both steps passed:
+
+- stable exact symbolic-\(w\) truncated-series checker;
+- independent exact rational-direction/held-out-jet checker.
+
+This strengthens only the internal reproducibility of the Kasner parent-volume result. It does not replace external review.
