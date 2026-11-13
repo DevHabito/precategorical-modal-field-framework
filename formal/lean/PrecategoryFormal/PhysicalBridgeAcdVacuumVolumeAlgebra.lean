@@ -256,4 +256,26 @@ theorem acdVacuumElectricPrintedCommonShift
     -8 * d := by
   ring
 
+
+/--
+Factorization fingerprint of the corrected electric numerator.
+-/
+theorem acdVacuumElectricCorrectedFactorization
+    (d : ℝ) :
+    (d + 2) * (7 * d ^ 2 + 44 * d + 58)
+      =
+    7 * d ^ 3 + 58 * d ^ 2 + 146 * d + 116 := by
+  ring
+
+/--
+The printed electric numerator is exactly the corrected factorized numerator
+minus eight.
+-/
+theorem acdVacuumElectricPrintedFactorizationRemainder
+    (d : ℝ) :
+    7 * d ^ 3 + 58 * d ^ 2 + 146 * d + 108
+      =
+    (d + 2) * (7 * d ^ 2 + 44 * d + 58) - 8 := by
+  ring
+
 end PrecategoryFormal.PhysicalBridge
