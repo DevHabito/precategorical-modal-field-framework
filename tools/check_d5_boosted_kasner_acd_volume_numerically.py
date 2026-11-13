@@ -565,6 +565,19 @@ def target_coefficient(
     )
 
 
+def printed_eq79_coefficient(
+    v: float,
+) -> float:
+    return (
+        1508.0 * v**4
+        + 5914.0 * v**2
+        + 4713.0
+    ) / (
+        217728.0
+        * (1.0 - v**2) ** 2
+    )
+
+
 def extrapolate(
     L_values: list[float],
     measured: list[float],
@@ -708,107 +721,61 @@ def main() -> None:
                 f"v={v}, difference={difference}"
             )
 
-    # Independent coefficient reconstruction.
+    # Direct discrimination against the printed Eq. (79).
     #
-    # Use the exact comoving d=5 Kasner result together with two boosted
-    # numerical geometries.  The three invariant directions are linearly
-    # independent, so they determine A_5, B_5, C_5 without using Wang Eq. (79)
-    # or the corrected coefficient formula as input to the solve.
-    if 0.5 in extrapolated_by_velocity and 0.7 in extrapolated_by_velocity:
-        def invariants(v: float) -> np.ndarray:
-            denominator = (1.0 - v * v) ** 2
+    # The boosted geometry is used only through the measured extrapolated
+    # coefficient.  We compare that result with:
+    #
+    #   (a) the re-integrated/corrected coefficient function; and
+    #   (b) the coefficient function obtained from the printed Eq. (79).
+    #
+    # This comparison is numerically much better conditioned than attempting
+    # to invert the boosted family for A_5, B_5 and C_5 separately.
+    for v, extrapolated in extrapolated_by_velocity.items():
+        corrected = target_coefficient(v)
+        printed = printed_eq79_coefficient(v)
 
-            return np.asarray(
-                [
-                    (
-                        v**4
-                        + 2.0 * v**2
-                        + 3.0
-                    )
-                    / (
-                        4.0 * denominator
-                    ),
-                    (
-                        3.0 * v**2
-                        / denominator
-                    ),
-                    (
-                        7.0 * v**4
-                        + 2.0 * v**2
-                        + 3.0
-                    )
-                    / (
-                        2.0 * denominator
-                    ),
-                ],
-                dtype=float,
-            )
-
-        invariant_matrix = np.vstack(
-            [
-                invariants(0.0),
-                invariants(0.5),
-                invariants(0.7),
-            ]
+        corrected_error = abs(
+            extrapolated - corrected
         )
 
-        measured_vector = np.asarray(
-            [
-                25.0 / 1152.0,
-                extrapolated_by_velocity[0.5],
-                extrapolated_by_velocity[0.7],
-            ],
-            dtype=float,
+        printed_error = abs(
+            extrapolated - printed
         )
-
-        recovered = np.linalg.solve(
-            invariant_matrix,
-            measured_vector,
-        )
-
-        exact = np.asarray(
-            [
-                151.0 / 5184.0,
-                11.0 / 5184.0,
-                -1.0 / 10368.0,
-            ],
-            dtype=float,
-        )
-
-        recovery_error = recovered - exact
 
         print(
             {
-                "recovered_A5":
-                    float(recovered[0]),
-                "recovered_B5":
-                    float(recovered[1]),
-                "recovered_C5":
-                    float(recovered[2]),
-                "exact_A5":
-                    float(exact[0]),
-                "exact_B5":
-                    float(exact[1]),
-                "exact_C5":
-                    float(exact[2]),
-                "coefficient_errors":
-                    recovery_error.tolist(),
-                "invariant_matrix_determinant":
-                    float(
-                        np.linalg.det(
-                            invariant_matrix
-                        )
+                "v": v,
+                "extrapolated": extrapolated,
+                "corrected_prediction": corrected,
+                "printed_eq79_prediction": printed,
+                "error_to_corrected":
+                    corrected_error,
+                "error_to_printed":
+                    printed_error,
+                "printed_over_corrected_error_ratio":
+                    (
+                        printed_error
+                        / corrected_error
+                        if corrected_error > 0.0
+                        else float("inf")
                     ),
             }
         )
 
-        if np.max(
-            np.abs(
-                recovery_error
-            )
-        ) > 1.0e-5:
+        if corrected_error > args.absolute_tolerance:
             raise AssertionError(
-                "independent A5/B5/C5 reconstruction exceeded tolerance"
+                "boosted Kasner extrapolation exceeded corrected-formula "
+                f"tolerance at v={v}"
+            )
+
+        if not (
+            corrected_error
+            < 0.1 * printed_error
+        ):
+            raise AssertionError(
+                "boosted geometry does not clearly discriminate corrected "
+                f"formula from printed Eq. (79) at v={v}"
             )
 
     print(
