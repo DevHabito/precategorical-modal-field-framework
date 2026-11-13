@@ -578,6 +578,8 @@ def main() -> None:
     held_out_w = [
         sp.Rational(9, 16),
         sp.Rational(3, 4),
+        sp.Rational(2, 3),
+        sp.Rational(5, 6),
     ]
 
     training = []
