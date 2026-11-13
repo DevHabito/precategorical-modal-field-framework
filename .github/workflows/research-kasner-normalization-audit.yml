@@ -5,6 +5,7 @@ on:
     paths:
       - "tools/derive_d4_kasner_parent_volume_exact.py"
       - "tools/derive_d4_kasner_world_function_pure_electric_calibration.py"
+      - "tools/derive_d4_kasner_parent_volume_directional_jets.py"
       - ".github/workflows/research-kasner-normalization-audit.yml"
   workflow_dispatch:
 
@@ -30,3 +31,6 @@ jobs:
 
       - name: Run stable exact Kasner parent-volume checker
         run: python tools/derive_d4_kasner_parent_volume_exact.py
+
+      - name: Cross-check exact directional Kasner jets
+        run: python tools/derive_d4_kasner_parent_volume_directional_jets.py
