@@ -1,26 +1,20 @@
-> **LATEST AUDIT STATUS — 2026-11-12:** the immediately preceding “missing factor 2” Kasner diagnosis was itself too quick and is superseded. A new direct numerical integration of the physical centered Kasner volume, with the flat normalization built into \(V/V_{\rm flat}\) and the past/future cone crossing solved separately for every direction, extrapolates to
+> **CURRENT RESOLUTION — 2026-11-12:** the earlier temporary claim that the physical Kasner parent coefficient should double to \(136/8505\) has been falsified. An independent direct physical-volume integration gives \(68/8505\), and a new exact directional formal-jet reconstruction now reproduces the same value:
 > \[
-> \frac{\delta V}{V_{\rm flat}L^4}
-> \to
-> \frac{68}{8505}.
-> \]
-> Thus there is currently **no numerical evidence that the physical Kasner coefficient should double**. The symbolic Kasner parent-volume checker is now marked diagnostic and must be reconciled with this independent integral before Kasner is used again as an exact calibration. Until then: keep the Schwarzschild and plane-wave results separate; treat Kasner as unresolved rather than confirmed or refuted.
-
-> **CORRECTION — 2026-11-12:** this note contained a flat-volume normalization error. The directional time integral used for the Kasner parent volume has flat value \(1/2\), so the physical ratio \(V/V_{\rm flat}\) requires an additional factor \(2\). The corrected Kasner parent-volume coefficient is
-> \[
-> \frac{\delta V}{V_{\rm flat}}
+> \boxed{
+> \frac{V_{\rm Kasner}}{V_{\rm flat}}
 > =
-> \frac{136}{8505}L^4
+> 1+\frac{68}{8505}L^4+O(L^6)
 > =
-> \frac{17}{315}E^2L^4,
+> 1+\frac{17}{630}E^2L^4+O(L^6).
+> }
 > \]
-> not \(68/8505=(17/630)E^2\). Consequently this Kasner route does **not** currently reproduce \(a_4=683/9450\); the assembled value from the components in this note becomes \(469/4725\), differing from the Schwarzschild calibration by \(17/630\). All later claims in this file that Kasner independently closes the universal coefficient are superseded. The corrected checker is \`tools/derive_d4_kasner_world_function_pure_electric_calibration.py\`.
+> The normalization mechanism is explicit: the normalized directional integral has flat term \(1/2\) and raw \(L^4\) term \(34/8505\); multiplying the entire directional average by \(2\) gives flat term \(1\) and physical \(L^4\) term \(68/8505\). The obsolete \(136/8505\) block is removed from the active status. The repaired exact parent-volume computation is \`tools/derive_d4_kasner_parent_volume_directional_jets.py\`. The original global-symbolic-\(w\) script remains a diagnostic record.
 
 # Independent d = 4 pure-electric calibration from LRS Kasner and Synge world functions
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** exact internal derivation; independent of the Schwarzschild optical calculation; externally unverified  
+**Status:** exact computational parent-volume reconstruction + exact local symbolic components + independent numerical geometry regressions; externally unverified  
 **Scope:** sufficiently small centered Alexandrov intervals in the LRS Kasner vacuum  
 **Purpose:** test the \(3+1\) vacuum recovery coefficient by a second geometry and a second computational route
 
