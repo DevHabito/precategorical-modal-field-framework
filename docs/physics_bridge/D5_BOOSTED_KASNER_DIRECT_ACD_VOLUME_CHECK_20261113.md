@@ -809,3 +809,112 @@ The solve does not use Wang Eq. (79).
 The remaining limitation is numerical rather than algebraic: the boosted coefficients are extracted by finite-\(L\) extrapolation.
 
 An exact boosted directional-jet derivation would remove that last limitation.
+
+
+## 13. Direct comparison with the printed d = 5 Eq. (79) coefficients
+
+The printed Eq. (79) gives, in \(d=5\),
+
+\[
+A_5^{\rm printed}
+=
+\frac{3163}{108864}
+\approx
+0.0290546002,
+\]
+
+\[
+B_5^{\rm printed}
+=
+\frac{11}{2592}
+\approx
+0.0042438272,
+\]
+
+and
+
+\[
+C_5^{\rm printed}
+=
+-\frac1{10368}
+\approx
+-0.0000964506.
+\]
+
+The independently reconstructed geometry coefficients are
+
+\[
+A_5^{\rm geom}
+\approx
+0.0291239875,
+\]
+
+\[
+B_5^{\rm geom}
+\approx
+0.0021181315,
+\]
+
+\[
+C_5^{\rm geom}
+\approx
+-0.0000944012.
+\]
+
+Relative to the corrected coefficients,
+
+\[
+A_5^{\rm corr}
+=
+\frac{151}{5184},
+\qquad
+B_5^{\rm corr}
+=
+\frac{11}{5184},
+\qquad
+C_5^{\rm corr}
+=
+-\frac1{10368},
+\]
+
+the absolute reconstruction differences are approximately
+
+\[
+4.10\times10^{-6},
+\qquad
+3.78\times10^{-6},
+\qquad
+2.05\times10^{-6}.
+\]
+
+Relative to the printed Eq. (79), the corresponding differences are approximately
+
+\[
+6.94\times10^{-5},
+\qquad
+-2.13\times10^{-3},
+\qquad
+2.05\times10^{-6}.
+\]
+
+The hook/magnetic sector is therefore especially discriminating.
+
+The geometry reconstruction lies near
+
+\[
+\boxed{
+B_5=\frac{11}{5184},
+}
+\]
+
+not near the printed
+
+\[
+\boxed{
+B_5^{\rm printed}=\frac{11}{2592}.
+}
+\]
+
+This is an independent non-type-N numerical check of the factor-of-two discrepancy previously found by direct re-integration of the published intermediate equations.
+
+The result remains a numerical internal verification and is not described as a published correction until external review is obtained.
