@@ -1,8 +1,27 @@
+> **RESOLUTION — 2026-11-12:** the parent-volume normalization question is now closed at the computational-algebra level. A new formal-jet calculation avoids the unstable global symbolic expansion in \(w=\mu^2\), solves the null cones independently at exact rational directions, reconstructs the directional \(L^2\) and \(L^4\) polynomials, and validates them on four held-out rational directions. It gives
+> \[
+> \langle c_2\rangle=0,\qquad
+> \langle c_4\rangle=\frac{34}{8505}.
+> \]
+> Because the normalized angular/time directional integral has flat value \(1/2\), the physical volume ratio is twice this quantity:
+> \[
+> \boxed{
+> \frac{V_{\rm Kasner}}{V_{\rm flat}}
+> =
+> 1+\frac{68}{8505}L^4+O(L^6).
+> }
+> \]
+> Thus
+> \[
+> \boxed{v_E=\frac{17}{630}}
+> \]
+> for \(E^2=8/27\). The earlier temporary \(136/8505\) diagnosis is false. The original monolithic symbolic-\(w\) checker remains diagnostic; the repaired parent-volume checker is \`tools/derive_d4_kasner_parent_volume_directional_jets.py\`.
+
 # Audit: Kasner parent-volume normalization and independent numerical cross-check
 
 **Date:** 2026-11-12  
 **Author:** Felipe Gianini Romero  
-**Status:** numerical physical-volume audit completed; symbolic exact checker under reconciliation  
+**Status:** normalization issue resolved by an exact directional formal-jet reconstruction + independent numerical physical-volume regression  
 **Purpose:** record and resolve a false normalization alarm without hiding the intermediate mistake
 
 ## 1. Why this audit exists
@@ -371,3 +390,123 @@ The remaining open issue is no longer the physical Kasner result; it is the repa
 The numerical edge checker is
 
 tools/check_d4_kasner_edge_cross_numerically.py.
+
+
+## 10. Exact directional formal-jet reconstruction
+
+The repaired calculation treats the angular parameter
+
+\[
+w=\mu^2
+\]
+
+as an exact rational value while performing the \(L\)-series algebra.
+
+This avoids carrying a free symbolic \(w\) through every square root and nonlinear series operation.
+
+For each fixed rational direction, the calculation:
+
+1. expands the past and future null first integrals as formal jets in \(L\);
+2. solves the conserved-momentum direction parameter coefficient by coefficient;
+3. solves the direction-dependent cone crossing through \(L^4\);
+4. integrates the physical directional volume through \(L^4\).
+
+Five exact rational directions reconstruct
+
+\[
+\boxed{
+c_2(w)
+=
+\frac{
+7(45w^2-57w+10)
+}{
+540
+},
+}
+\]
+
+and
+
+\[
+\boxed{
+c_4(w)
+=
+\frac{
+56133w^4
+-152334w^3
++138393w^2
+-46632w
++3608
+}{
+54432
+}.
+}
+\]
+
+Four additional directions were not used in the interpolation:
+
+\[
+w=\frac9{16},
+\qquad
+\frac34,
+\qquad
+\frac23,
+\qquad
+\frac56.
+\]
+
+Every held-out \(c_2\) and \(c_4\) value agrees with the reconstructed polynomials with exact rational difference
+
+\[
+0.
+\]
+
+Using
+
+\[
+\left\langle w^k\right\rangle_{S^2}
+=
+\frac1{2k+1},
+\]
+
+one obtains
+
+\[
+\boxed{
+\left\langle c_2\right\rangle=0,
+}
+\]
+
+and
+
+\[
+\boxed{
+\left\langle c_4\right\rangle
+=
+\frac{34}{8505}.
+}
+\]
+
+The raw directional integral has flat value \(1/2\), so
+
+\[
+\boxed{
+\frac{V_{\rm Kasner}}{V_{\rm flat}}
+=
+2
+\left[
+\frac12+
+\frac{34}{8505}L^4+O(L^6)
+\right]
+=
+1+\frac{68}{8505}L^4+O(L^6).
+}
+\]
+
+This agrees exactly with the rational target inferred from the independently normalized physical-volume regression.
+
+The checker is
+
+\`tools/derive_d4_kasner_parent_volume_directional_jets.py\`.
+
+The derivation uses exact rational arithmetic at every sampled direction. The angular polynomial is reconstructed from exact values and tested on four exact held-out directions; it is therefore classified here as an **exact computational reconstruction**, distinct from a handwritten symbolic proof in a free angular variable.
