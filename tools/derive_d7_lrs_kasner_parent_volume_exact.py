@@ -8,6 +8,43 @@ Spacetime dimension:
 LRS Kasner exponents:
     p_parallel = -2/3,
     p_perp     = +1/3
+with p_perp repeated five times.
+
+The calculation uses exact rational arithmetic direction by direction.
+
+Five rational directions reconstruct the directional L^2 and L^4
+polynomials in w=mu^2.  Three additional rational directions are held out
+and must agree exactly with those reconstructed polynomials.
+
+No d=7 directional polynomial is inserted as a target.
+
+The normalized S^5 moments are
+
+    <w^k> = (1/2)_k / (3)_k.
+
+The corrected all-d invariant law predicts, independently,
+
+    E^2 = 40/27,
+    D^2 = 40/27,
+    H^2 = 0,
+
+and
+
+    A_7 E^2 + C_7 D^2 = 1981/42768.
+
+The directional-jet calculation must recover the same physical L^4
+coefficient exactly.
+
+No floating-point fit or rational reconstruction is used.
+"""Exact d=7 LRS-Kasner parent-volume directional-jet calibration.
+
+Spacetime dimension:
+    d = 7,
+    n = 6 spatial dimensions.
+
+LRS Kasner exponents:
+    p_parallel = -2/3,
+    p_perp     = +1/3
 with p_perp repeated four times.
 
 For w=mu^2, exact rational directional jets reconstruct
@@ -554,7 +591,7 @@ def main() -> None:
     )
 
     assert average_c2 == 0
-    assert average_c4 == sp.Rational(566, 21384)
+    assert average_c4 == sp.Rational(283, 21384)
 
     physical_l4 = sp.factor(
         sp.Rational(7, 2) * average_c4
@@ -628,7 +665,7 @@ def main() -> None:
     print(
         "PASS: exact d=7 LRS-Kasner directional-jet calculation gives "
         "V/V_flat = 1 + (1981/42768)L^4 + O(L^6), exactly matching "
-        "A_6 E^2 + C_6 D^2 from the corrected all-d ACD formula."
+        "A_7 E^2 + C_7 D^2 from the corrected all-d ACD formula."
     )
 
 
