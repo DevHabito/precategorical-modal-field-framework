@@ -1,15 +1,10 @@
-> **LATEST AUDIT STATUS — 2026-11-12:** the immediately preceding “missing factor 2” Kasner diagnosis was itself too quick and is superseded. A new direct numerical integration of the physical centered Kasner volume, with the flat normalization built into \(V/V_{\rm flat}\) and the past/future cone crossing solved separately for every direction, extrapolates to
+> **CURRENT STATUS — 2026-11-12:** the temporary Kasner factor-two alarm has been resolved. The stable exact truncated-series checker \`tools/derive_d4_kasner_parent_volume_exact.py\` gives
 > \[
-> \frac{\delta V}{V_{\rm flat}L^4}
-> \to
-> \frac{68}{8505}.
+> V_{\rm Kasner}/V_{\rm flat}
+> =
+> 1+\frac{68}{8505}L^4+O(L^6),
 > \]
-> Thus there is currently **no numerical evidence that the physical Kasner coefficient should double**. The symbolic Kasner parent-volume checker is now marked diagnostic and must be reconciled with this independent integral before Kasner is used again as an exact calibration. Until then: keep the Schwarzschild and plane-wave results separate; treat Kasner as unresolved rather than confirmed or refuted.
-
-> **CORRECTION — 2026-11-12:** the earlier status line saying that the LRS-Kasner route independently closed \(a_4=683/9450\) is withdrawn. A missing factor \(2\) in the Kasner parent-volume normalization was found later. The first-order RNC anisotropy results in this file remain separate from that normalization error, but Kasner must not be cited as an independent coefficient closure.
-
-> **Status update (2026-11-12):** this first-order RNC audit led to the independent LRS-Kasner/world-function closure. The full local edge density, rather than separately averaged area and logarithmic factors, reproduces \(a_4=683/9450\). See \`D4_KASNER_WORLD_FUNCTION_PURE_ELECTRIC_CALIBRATION_20261112.md\`. The standalone second-order average of \(q=\log(\chi/\chi_0)\) should not be treated as an invariant coefficient without fixing the edge-direction identification; the invariant object is the complete local edge integrand.
-
+> hence \(v_E=17/630\), and the corresponding GitHub Actions Kasner audit completed successfully. The first-order RNC anisotropy and missing-covariance results in this note remain valid. Any residual target in this file that was assembled using Wang's printed Eq. (79) parent-volume coefficients must be treated as historical, because the direct re-integration of Wang's printed Eqs. (74)+(76) instead gives \(v_E=17/630,\ v_B=1/210\).
 # RNC/world-function audit of the d = 4 vacuum null-edge anisotropy
 
 **Date:** 2026-11-12  
