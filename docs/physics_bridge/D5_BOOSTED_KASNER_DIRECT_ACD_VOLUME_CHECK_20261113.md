@@ -833,3 +833,76 @@ It does not establish a published correction by itself.
 The strongest remaining analytic upgrade is an exact boosted-cone expansion, beginning with the exact timelike-tip jets recorded in
 
 tools/derive_d5_boosted_kasner_timelike_tip_jets.py.
+
+
+## 15. Mesh-convergence audit
+
+A representative convergence check was performed at
+
+\[
+v=0.5,
+\qquad
+L=0.08.
+\]
+
+### Time-panel refinement
+
+With 2561 cone-profile nodes and 56-point null quadrature:
+
+\[
+N_t=80:
+\quad
+C(L)\approx0.04909771093,
+\]
+
+\[
+N_t=160:
+\quad
+C(L)\approx0.04910485075,
+\]
+
+\[
+N_t=320:
+\quad
+C(L)\approx0.04910107616.
+\]
+
+The 160-to-320 change is approximately
+
+\[
+3.8\times10^{-6}.
+\]
+
+### Cone-profile refinement
+
+With 160 time panels:
+
+\[
+N_{\rm profile}=1281:
+\quad
+C(L)\approx0.04910023425,
+\]
+
+\[
+N_{\rm profile}=2561:
+\quad
+C(L)\approx0.04910485076.
+\]
+
+The change is approximately
+
+\[
+4.6\times10^{-6}.
+\]
+
+The lower-resolution 321- and 641-node runs show visibly larger interpolation error and are not used for the final high-resolution evidence.
+
+These convergence scales are below the declared
+
+\[
+3\times10^{-5}
+\]
+
+absolute tolerance of the CI extrapolation test.
+
+The convergence audit does not turn the numerical calculation into an analytic proof; it bounds the most obvious discretization sensitivity at a representative small-\(L\) point.
