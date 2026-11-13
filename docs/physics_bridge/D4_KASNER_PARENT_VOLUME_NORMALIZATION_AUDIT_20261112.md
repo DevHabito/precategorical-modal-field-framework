@@ -510,3 +510,47 @@ The checker is
 \`tools/derive_d4_kasner_parent_volume_directional_jets.py\`.
 
 The derivation uses exact rational arithmetic at every sampled direction. The angular polynomial is reconstructed from exact values and tested on four exact held-out directions; it is therefore classified here as an **exact computational reconstruction**, distinct from a handwritten symbolic proof in a free angular variable.
+
+
+## 11. CI closure of the repaired normalization audit
+
+The updated workflow
+
+.github/workflows/research-kasner-normalization-audit.yml
+
+ran both exact implementations on GitHub Actions:
+
+1. tools/derive_d4_kasner_parent_volume_exact.py
+2. tools/derive_d4_kasner_parent_volume_directional_jets.py
+
+Workflow run:
+
+\[
+\boxed{\text{43335082471}}
+\]
+
+completed with conclusion
+
+\[
+\boxed{\text{success}}.
+\]
+
+The job step
+
+\[
+\text{Run stable exact Kasner parent-volume checker}
+\]
+
+passed, and the independent step
+
+\[
+\text{Cross-check exact directional Kasner jets}
+\]
+
+also passed.
+
+The tested commit was
+
+7e050ec98c4d14fc8143f6516609f87a1d30e402.
+
+Therefore the repaired parent-volume normalization is now covered by two distinct exact computational implementations in CI.
