@@ -1,3 +1,5 @@
+> **CI STATUS — 2026-11-13:** GitHub Actions run **43411592007** completed successfully on commit \`0d56cfb108a63b353ea1c4fcb8d88df3dd450ca5\`. The run reproduced the three boosted extrapolations and the direct discrimination between the re-integrated coefficient law and the printed Eq. (79). An earlier run, **43411112221**, failed only because an attempted numerical inversion for the full \((A_5,B_5,C_5)\) vector used an unrealistically tight tolerance on an ill-conditioned matrix. The individual boosted scalar extrapolations in that failed run already agreed with the corrected law. The inversion has been demoted to a diagnostic and is no longer a pass/fail criterion.
+
 # Direct boosted d = 5 LRS-Kasner ACD volume calibration
 
 **Date:** 2026-11-13  
