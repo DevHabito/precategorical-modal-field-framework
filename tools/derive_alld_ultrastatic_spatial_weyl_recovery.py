@@ -80,7 +80,7 @@ def main() -> None:
         * parent_volume
     )
 
-    assert parent_recovery == (
+    expected_parent_recovery = (
         -1
         /
         (
@@ -90,6 +90,11 @@ def main() -> None:
             * (d + 4)
         )
     )
+
+    assert sp.simplify(
+        parent_recovery
+        - expected_parent_recovery
+    ) == 0
 
     # ---------------------------------------------------------------
     # 2. Geodesic-sphere edge area
@@ -109,7 +114,7 @@ def main() -> None:
         )
     )
 
-    assert edge_area == (
+    expected_edge_area = (
         -1
         /
         (
@@ -118,6 +123,11 @@ def main() -> None:
             * (d + 1)
         )
     )
+
+    assert sp.simplify(
+        edge_area
+        - expected_edge_area
+    ) == 0
 
     # ---------------------------------------------------------------
     # 3. Angular average of the null/spatial tidal square
