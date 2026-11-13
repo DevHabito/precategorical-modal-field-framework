@@ -316,6 +316,7 @@ theorem acdVacuumHookPrintedIsTwiceCorrected
         d * (d + 6) /
           (60 * (d + 1) * (d + 3) * (d + 4))
       ) := by
+  field_simp [h1, h3, h4]
   ring
 
 end PrecategoryFormal.PhysicalBridge
