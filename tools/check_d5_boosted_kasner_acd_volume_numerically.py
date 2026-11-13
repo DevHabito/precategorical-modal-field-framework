@@ -635,6 +635,8 @@ def main() -> None:
         if value.strip()
     ]
 
+    extrapolated_by_velocity: dict[float, float] = {}
+
     for v in velocities:
         measured = []
 
@@ -698,10 +700,115 @@ def main() -> None:
             }
         )
 
+        extrapolated_by_velocity[v] = extrapolated
+
         if abs(difference) > args.absolute_tolerance:
             raise AssertionError(
                 "boosted Kasner extrapolation exceeded tolerance: "
                 f"v={v}, difference={difference}"
+            )
+
+    # Independent coefficient reconstruction.
+    #
+    # Use the exact comoving d=5 Kasner result together with two boosted
+    # numerical geometries.  The three invariant directions are linearly
+    # independent, so they determine A_5, B_5, C_5 without using Wang Eq. (79)
+    # or the corrected coefficient formula as input to the solve.
+    if 0.5 in extrapolated_by_velocity and 0.7 in extrapolated_by_velocity:
+        def invariants(v: float) -> np.ndarray:
+            denominator = (1.0 - v * v) ** 2
+
+            return np.asarray(
+                [
+                    (
+                        v**4
+                        + 2.0 * v**2
+                        + 3.0
+                    )
+                    / (
+                        4.0 * denominator
+                    ),
+                    (
+                        3.0 * v**2
+                        / denominator
+                    ),
+                    (
+                        7.0 * v**4
+                        + 2.0 * v**2
+                        + 3.0
+                    )
+                    / (
+                        2.0 * denominator
+                    ),
+                ],
+                dtype=float,
+            )
+
+        invariant_matrix = np.vstack(
+            [
+                invariants(0.0),
+                invariants(0.5),
+                invariants(0.7),
+            ]
+        )
+
+        measured_vector = np.asarray(
+            [
+                25.0 / 1152.0,
+                extrapolated_by_velocity[0.5],
+                extrapolated_by_velocity[0.7],
+            ],
+            dtype=float,
+        )
+
+        recovered = np.linalg.solve(
+            invariant_matrix,
+            measured_vector,
+        )
+
+        exact = np.asarray(
+            [
+                151.0 / 5184.0,
+                11.0 / 5184.0,
+                -1.0 / 10368.0,
+            ],
+            dtype=float,
+        )
+
+        recovery_error = recovered - exact
+
+        print(
+            {
+                "recovered_A5":
+                    float(recovered[0]),
+                "recovered_B5":
+                    float(recovered[1]),
+                "recovered_C5":
+                    float(recovered[2]),
+                "exact_A5":
+                    float(exact[0]),
+                "exact_B5":
+                    float(exact[1]),
+                "exact_C5":
+                    float(exact[2]),
+                "coefficient_errors":
+                    recovery_error.tolist(),
+                "invariant_matrix_determinant":
+                    float(
+                        np.linalg.det(
+                            invariant_matrix
+                        )
+                    ),
+            }
+        )
+
+        if np.max(
+            np.abs(
+                recovery_error
+            )
+        ) > 1.0e-5:
+            raise AssertionError(
+                "independent A5/B5/C5 reconstruction exceeded tolerance"
             )
 
     print(
