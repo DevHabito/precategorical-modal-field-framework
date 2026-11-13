@@ -10,6 +10,7 @@ on:
       - "tools/derive_d5_lrs_kasner_parent_volume_exact.py"
       - "tools/derive_d6_lrs_kasner_parent_volume_exact.py"
       - "tools/derive_d5_boosted_kasner_weyl_target.py"
+      - "tools/derive_d5_boosted_kasner_timelike_tip_jets.py"
       - ".github/workflows/research-acd-volume-audits.yml"
   workflow_dispatch:
 
@@ -50,6 +51,9 @@ jobs:
 
       - name: Verify boosted d5 Kasner Weyl target
         run: python tools/derive_d5_boosted_kasner_weyl_target.py
+
+      - name: Verify exact boosted d5 Kasner timelike tip jets
+        run: python tools/derive_d5_boosted_kasner_timelike_tip_jets.py
 
       - name: Stress random Weyl contractions
         run: python tools/verify_alld_weyl_angular_contractions.py
