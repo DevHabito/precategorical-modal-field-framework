@@ -27,7 +27,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install numerical dependencies
-        run: python -m pip install "numpy==2.3.4" "scipy==1.16.3"
+        run: python -m pip install "numpy==2.3.4" "scipy==1.16.3" "sympy==1.14.0"
 
       - name: Check boosted d5 Kasner ACD volume
         run: python tools/check_d5_boosted_kasner_acd_volume_numerically.py
