@@ -623,3 +623,189 @@ Checker:
 tools/check_d5_boosted_kasner_acd_volume_numerically.py
 
 The checker keeps the target formula separate from the physical volume integration and fails if the \(L\to0\) extrapolation exceeds the declared absolute tolerance.
+
+
+## 12. Independent reconstruction of the d = 5 invariant coefficients
+
+The boosted family can be used for a stronger test than pointwise comparison with the target function.
+
+Take the three observer directions
+
+\[
+v=0,
+\qquad
+v=\frac12,
+\qquad
+v=\frac7{10}.
+\]
+
+Their invariant rows
+
+\[
+(E^2,H^2,D^2)
+\]
+
+are
+
+\[
+\left(
+\frac34,\,
+0,\,
+\frac32
+\right),
+\]
+
+\[
+\left(
+\frac{19}{12},\,
+\frac43,\,
+\frac72
+\right),
+\]
+
+and
+
+\[
+\left(
+\frac{4689}{1156},\,
+\frac{4900}{867},\,
+\frac{18869}{1734}
+\right).
+\]
+
+The exact determinant is
+
+\[
+\boxed{
+\det M
+=
+\frac{392}{289}
+\ne0.
+}
+\]
+
+Therefore these three directions span the full \(d=5\) invariant space
+
+\[
+E^2,\qquad H^2,\qquad D^2.
+\]
+
+Use:
+
+1. the exact comoving LRS-Kasner coefficient
+   \[
+   c(0)=\frac{25}{1152};
+   \]
+2. the direct boosted numerical extrapolation at
+   \[
+   v=\frac12;
+   \]
+3. the direct boosted numerical extrapolation at
+   \[
+   v=\frac7{10}.
+   \]
+
+Solving
+
+\[
+M
+\begin{pmatrix}
+A_5\\
+B_5\\
+C_5
+\end{pmatrix}
+=
+\begin{pmatrix}
+c(0)\\
+c(1/2)\\
+c(7/10)
+\end{pmatrix}
+\]
+
+gives
+
+\[
+\boxed{
+A_5^{\rm geom}
+\approx
+0.0291239875,
+}
+\]
+
+\[
+\boxed{
+B_5^{\rm geom}
+\approx
+0.0021181315,
+}
+\]
+
+\[
+\boxed{
+C_5^{\rm geom}
+\approx
+-0.0000944012.
+}
+\]
+
+The coefficients obtained by re-integrating the published RNC intermediate equations are
+
+\[
+A_5
+=
+\frac{151}{5184}
+\approx
+0.0291280864,
+\]
+
+\[
+B_5
+=
+\frac{11}{5184}
+\approx
+0.0021219136,
+\]
+
+\[
+C_5
+=
+-\frac1{10368}
+\approx
+-0.0000964506.
+\]
+
+The coefficient differences are
+
+\[
+\boxed{
+\Delta A_5
+\approx
+-4.10\times10^{-6},
+}
+\]
+
+\[
+\boxed{
+\Delta B_5
+\approx
+-3.78\times10^{-6},
+}
+\]
+
+\[
+\boxed{
+\Delta C_5
+\approx
++2.05\times10^{-6}.
+}
+\]
+
+This inversion is conceptually stronger than checking one predicted scalar combination.
+
+Within the numerical accuracy of the boosted volume calculation, the three-dimensional invariant coefficient vector itself is recovered from an independent exact/numerical geometry construction.
+
+The solve does not use Wang Eq. (79).
+
+The remaining limitation is numerical rather than algebraic: the boosted coefficients are extracted by finite-\(L\) extrapolation.
+
+An exact boosted directional-jet derivation would remove that last limitation.
