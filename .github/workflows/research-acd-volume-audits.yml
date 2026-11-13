@@ -12,6 +12,7 @@ on:
       - "tools/derive_d5_boosted_kasner_weyl_target.py"
       - "tools/derive_d5_boosted_kasner_timelike_tip_jets.py"
       - "tools/derive_d5_kasner_null_cone_profile_jets.py"
+      - "tools/derive_d5_boosted_flat_lens_switching.py"
       - ".github/workflows/research-acd-volume-audits.yml"
   workflow_dispatch:
 
@@ -58,6 +59,9 @@ jobs:
 
       - name: Verify exact d5 Kasner null-cone profile jets
         run: python tools/derive_d5_kasner_null_cone_profile_jets.py
+
+      - name: Verify exact boosted flat lens switching
+        run: python tools/derive_d5_boosted_flat_lens_switching.py
 
       - name: Stress random Weyl contractions
         run: python tools/verify_alld_weyl_angular_contractions.py
