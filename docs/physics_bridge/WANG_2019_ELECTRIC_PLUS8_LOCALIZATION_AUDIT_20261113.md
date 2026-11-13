@@ -391,3 +391,66 @@ It can state:
 > Direct integration of the five electric contributions visible in the published intermediate equations gives \(+116\). The difference from the printed \(+108\) is exactly \(-8d\) at the common-numerator stage. Unlike the magnetic discrepancy, this shift cannot be attributed to a simple constant multiplicative error in any strict subset of the printed contributions.
 
 This is a stronger localization than the previous status, but it remains a consistency audit rather than a claim about the author's unpublished calculation.
+
+
+## 10. Factorization fingerprint
+
+There is a sharper algebraic localization.
+
+The directly integrated electric numerator can be kept in the factorized form
+
+\[
+\boxed{
+N_E^{\rm direct}
+=
+(d+2)(7d^2+44d+58).
+}
+\]
+
+Expanding gives
+
+\[
+7d^3+58d^2+146d+116.
+\]
+
+Polynomial division of the printed numerator by \(d+2\) gives
+
+\[
+7d^3+58d^2+146d+108
+=
+(d+2)(7d^2+44d+58)-8.
+\]
+
+Equivalently,
+
+\[
+\boxed{
+N_E^{\rm printed}
+=
+N_E^{\rm direct}-8.
+}
+\]
+
+This is more informative than merely observing the final constant difference.
+
+The cubic, quadratic and linear coefficients of the printed polynomial are **exactly** those produced by expanding the factorized direct result.
+
+Only the constant term fails to match.
+
+Thus the printed polynomial retains the complete quotient
+
+\[
+7d^2+44d+58
+\]
+
+under division by \(d+2\), with the sole remainder
+
+\[
+-8.
+\]
+
+This is a strong algebraic fingerprint of a discrepancy introduced at or after the final factorized combination.
+
+It does **not** prove whether the historical cause was arithmetic, transcription, typesetting, or an omitted supplemental term.
+
+However, together with the strict-subset rescaling audit, it makes a one-term integration error substantially less plausible than a final-stage mismatch.
