@@ -1,0 +1,35 @@
+name: Research all-d vacuum recovery calibrations
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/derive_alld_cahen_wallach_recovery_relation.py"
+      - "tools/derive_alld_ultrastatic_spatial_weyl_recovery.py"
+      - "docs/physics_bridge/ALLD_CAHEN_WALLACH_VACUUM_RECOVERY_CALIBRATION_20261112.md"
+      - "docs/physics_bridge/ALLD_ULTRASTATIC_SPATIAL_WEYL_RECOVERY_CALIBRATION_20261112.md"
+      - ".github/workflows/research-alld-vacuum-recovery-calibrations.yml"
+  workflow_dispatch:
+
+jobs:
+  vacuum-recovery-calibrations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check sympy numpy scipy
+
+      - name: Derive all-d Cahen-Wallach recovery relation
+        run: python tools/derive_alld_cahen_wallach_recovery_relation.py --order 60
+
+      - name: Derive all-d ultrastatic spatial-Weyl coefficient
+        run: python tools/derive_alld_ultrastatic_spatial_weyl_recovery.py
