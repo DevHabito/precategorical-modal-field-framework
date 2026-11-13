@@ -1,3 +1,17 @@
+> **EXACT HIGHER-D UPDATE — 2026-11-12:** the LRS-Kasner checks in \(d=5\) and \(d=6\) have now been upgraded from numerical \(L\to0\) regressions to exact rational directional-jet calculations. They give
+> \[
+> \frac{V^{(5)}_{\rm Kasner}}{V^{(5)}_{\rm flat}}
+> =
+> 1+\frac{25}{1152}L^4+O(L^6),
+> \]
+> and
+> \[
+> \frac{V^{(6)}_{\rm Kasner}}{V^{(6)}_{\rm flat}}
+> =
+> 1+\frac{2288}{65625}L^4+O(L^6),
+> \]
+> exactly equal to \(A_5E^2+C_5D^2\) and \(A_6E^2+C_6D^2\), respectively. Five rational directions reconstruct each directional polynomial and three held-out rational directions give exact zero residual. See \`EXACT_D5_D6_LRS_KASNER_ACD_VOLUME_CHECKS_20261112.md\` and the corresponding tools. The earlier numerical higher-dimensional checks remain useful as independent physical integrations but are no longer the strongest evidence in \(d=5,6\).
+
 > **CURRENT AUDIT STATUS — 2026-11-12:** the temporary Kasner factor-two alarm has been resolved at the physical-volume level. Direct integration of the unexpanded centered LRS-Kasner null cones, with the exact flat normalization built into \(V/V_{\rm flat}\), supports the re-integrated coefficient in \(d=4,5,6\). The \(d=5,6\) regressions were independently repeated in the present audit and agree with the all-\(d\) prediction at the \(10^{-8}\) level after \(L\to0\) extrapolation. The older symbolic Kasner series checker remains diagnostic and is **not** counted as an exact proof. The evidence hierarchy is therefore: exact re-integration of the printed equations; exact all-\(d\) Cahen--Wallach check; independent numerical LRS-Kasner checks in \(d=4,5,6\).
 
 # All-dimensional audit of the vacuum Alexandrov-volume coefficient implied by Wang's intermediate equations
