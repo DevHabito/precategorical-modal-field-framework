@@ -1,3 +1,27 @@
+> **Higher-dimensional exact update — 2026-11-12:** the LRS-Kasner evidence in \(d=5,6\) has been upgraded from numerical regression to exact rational directional-jet verification. The new exact results are
+> \[
+> V^{(5)}/V_{\rm flat}^{(5)}
+> =
+> 1+\frac{25}{1152}L^4+O(L^6),
+> \]
+> and
+> \[
+> V^{(6)}/V_{\rm flat}^{(6)}
+> =
+> 1+\frac{2288}{65625}L^4+O(L^6),
+> \]
+> in exact agreement with the re-integrated all-\(d\) coefficients. Each polynomial reconstruction uses held-out rational directions with exact zero residual. GitHub Actions run \(43339417105\) completed successfully with both new checkers. See \`EXACT_D5_D6_LRS_KASNER_ACD_VOLUME_CHECKS_20261112.md\`.
+>
+> A third invariant-direction target has also been prepared: a transverse boost of the \(d=5\) LRS-Kasner observer produces
+> \[
+> H^2(v)=\frac{3v^2}{(1-v^2)^2}\ne0,
+> \]
+> with predicted corrected coefficient
+> \[
+> c_5(v)=\frac{8v^4+24v^2+25}{1152(1-v^2)^2}.
+> \]
+> Direct boosted-volume integration is not yet accepted: a first generic angular quadrature failed the flat Lorentz-invariance control at order \(10^{-4}\), comparable to the desired \(L^4\) signal. No coefficient was inferred from that failed route.
+
 # External review packet: vacuum Alexandrov-volume coefficient audit
 
 **Date:** 2026-11-12  
