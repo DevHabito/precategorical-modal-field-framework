@@ -15,6 +15,7 @@ on:
       - "tools/derive_d5_boosted_flat_lens_switching.py"
       - "tools/verify_three_ball_lens_c1_switching.py"
       - "tools/derive_d5_boosted_kasner_lens_time_switch_jets.py"
+      - "tools/derive_d5_boosted_kasner_contained_tail_exact.py"
       - ".github/workflows/research-acd-volume-audits.yml"
   workflow_dispatch:
 
@@ -70,6 +71,9 @@ jobs:
 
       - name: Verify exact boosted d5 Kasner lens time-switch jets
         run: python tools/derive_d5_boosted_kasner_lens_time_switch_jets.py
+
+      - name: Verify exact boosted d5 Kasner contained tail
+        run: python tools/derive_d5_boosted_kasner_contained_tail_exact.py
 
       - name: Stress random Weyl contractions
         run: python tools/verify_alld_weyl_angular_contractions.py
