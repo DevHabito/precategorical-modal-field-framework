@@ -1,3 +1,19 @@
+> **Additional supersession — parent volume:** this historical decomposition also used the \(d=4\) parent-volume coefficients obtained by specializing Wang (2019) Eq. (79),
+> \[
+> \frac{127}{4725}E^2+\frac1{105}B^2.
+> \]
+> A direct re-integration of Wang's printed Eqs. (74)+(76), independently checked by exact Cahen--Wallach geometry, Lean-certified rational reductions, and the exact Kasner pure-electric parent checker, instead supports
+> \[
+> \boxed{
+> \frac{\delta V}{V_0}
+> =
+> L^4\left[
+> \frac{17}{630}E^2+\frac1{210}B^2
+> \right]+o(L^4).
+> }
+> \]
+> Therefore the numerical sums later in this file are retained only as an audit trail and must not be used as current coefficients.
+
 > **Supersession warning (2026-11-12):** the factorized \(L^4\) bookkeeping below is incomplete. A later RNC/world-function audit found nonzero first-order local anisotropies
 > \[
 > q_1=-\frac13L^2E_{nn},
