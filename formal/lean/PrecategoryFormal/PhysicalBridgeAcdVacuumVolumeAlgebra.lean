@@ -278,4 +278,44 @@ theorem acdVacuumElectricPrintedFactorizationRemainder
     (d + 2) * (7 * d ^ 2 + 44 * d + 58) - 8 := by
   ring
 
+
+/--
+General electric coefficient difference between the corrected all-d law and
+the printed Eq. (79).
+-/
+theorem acdVacuumElectricCorrectedMinusPrinted
+    (d : ℝ)
+    (h1 : d + 1 ≠ 0)
+    (h2 : d + 2 ≠ 0)
+    (h3 : d + 3 ≠ 0)
+    (h4 : d + 4 ≠ 0) :
+    d * (7 * d ^ 2 + 44 * d + 58) /
+        (180 * (d + 1) * (d + 3) * (d + 4))
+      -
+    d * (7 * d ^ 3 + 58 * d ^ 2 + 146 * d + 108) /
+        (180 * (d + 1) * (d + 2) * (d + 3) * (d + 4))
+      =
+    2 * d /
+      (45 * (d + 1) * (d + 2) * (d + 3) * (d + 4)) := by
+  field_simp [h1, h2, h3, h4]
+  ring
+
+/--
+The printed hook coefficient is exactly twice the corrected coefficient.
+-/
+theorem acdVacuumHookPrintedIsTwiceCorrected
+    (d : ℝ)
+    (h1 : d + 1 ≠ 0)
+    (h3 : d + 3 ≠ 0)
+    (h4 : d + 4 ≠ 0) :
+    d * (d + 6) /
+        (30 * (d + 1) * (d + 3) * (d + 4))
+      =
+    2 *
+      (
+        d * (d + 6) /
+          (60 * (d + 1) * (d + 3) * (d + 4))
+      ) := by
+  ring
+
 end PrecategoryFormal.PhysicalBridge
