@@ -8,6 +8,7 @@ on:
       - "tools/verify_alld_cahen_wallach_acd_volume.py"
       - "tools/verify_alld_weyl_angular_contractions.py"
       - "tools/derive_d5_lrs_kasner_parent_volume_exact.py"
+      - "tools/derive_d6_lrs_kasner_parent_volume_exact.py"
       - ".github/workflows/research-acd-volume-audits.yml"
   workflow_dispatch:
 
@@ -17,7 +18,7 @@ permissions:
 jobs:
   exact-acd-audits:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
@@ -42,6 +43,9 @@ jobs:
 
       - name: Verify exact d5 LRS-Kasner volume
         run: python tools/derive_d5_lrs_kasner_parent_volume_exact.py
+
+      - name: Verify exact d6 LRS-Kasner volume
+        run: python tools/derive_d6_lrs_kasner_parent_volume_exact.py
 
       - name: Stress random Weyl contractions
         run: python tools/verify_alld_weyl_angular_contractions.py
