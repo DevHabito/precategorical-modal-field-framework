@@ -11,6 +11,9 @@ on:
       - ".github/workflows/research-alld-vacuum-recovery-calibrations.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   vacuum-recovery-calibrations:
     runs-on: ubuntu-latest
