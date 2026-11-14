@@ -14,6 +14,15 @@
     "mean_ordering_fraction": 0.499907619047619
   },
   "exact_1plus1_n7_probability": 0.20674603174603173,
+  "main_grid_isolation_correction": {
+    "date": "2026-11-14",
+    "command": "python docs/physics_bridge/minkowski_higher_dimensional_upo_pilot.py --output pilot.json",
+    "source_field": "runs[].mean_isolated_vertices",
+    "seed_rule": "2026111100 + 1000 * dimension + n",
+    "affected_dimensions": [3, 4],
+    "affected_sizes": [7, 9, 11, 16],
+    "definition": "Mean over all trials, including n isolated vertices for a graph with no edges."
+  },
   "main_grid": [
     {"d":2,"n":7,"trials":5000,"p_upo":0.1946,"p_conn":0.1392,"ordering":0.4989333333333333,"mean_active":0.938922331522537,"mean_isolated":0.3582,"iso_asym":0.2857142857142857},
     {"d":2,"n":9,"trials":5000,"p_upo":0.215,"p_conn":0.1728,"ordering":0.4990555555555556,"mean_active":0.9729198966408269,"mean_isolated":0.2598,"iso_asym":0.2222222222222222},
@@ -23,18 +32,18 @@
     {"d":2,"n":32,"trials":1500,"p_upo":0.3393333333333333,"p_conn":0.31466666666666665,"ordering":0.49845161290322576,"mean_active":0.9976055992141454,"mean_isolated":0.07666666666666666,"iso_asym":0.0625},
     {"d":2,"n":48,"trials":750,"p_upo":0.348,"p_conn":0.32666666666666666,"ordering":0.49841725768321515,"mean_active":0.9987228607918264,"mean_isolated":0.04133333333333333,"iso_asym":0.041666666666666664},
 
-    {"d":3,"n":7,"trials":5000,"p_upo":0.5872,"p_conn":0.0994,"ordering":0.229,"mean_active":0.6795445698715453,"mean_isolated":1.8662,"iso_asym":2.556126654061766},
-    {"d":3,"n":9,"trials":5000,"p_upo":0.5566,"p_conn":0.1072,"ordering":0.22890555555555556,"mean_active":0.757096658282429,"mean_isolated":2.0622,"iso_asym":2.350719874594396},
-    {"d":3,"n":11,"trials":5000,"p_upo":0.5628,"p_conn":0.1196,"ordering":0.22641454545454545,"mean_active":0.8172449441106157,"mean_isolated":2.0788,"iso_asym":2.198623272035989},
-    {"d":3,"n":16,"trials":5000,"p_upo":0.621,"p_conn":0.1484,"ordering":0.23009000000000002,"mean_active":0.8911835748792271,"mean_isolated":1.8934,"iso_asym":1.940476502110349},
+    {"d":3,"n":7,"trials":5000,"p_upo":0.5872,"p_conn":0.0994,"ordering":0.229,"mean_active":0.6795445698715453,"mean_isolated":2.1672,"iso_asym":2.556126654061766},
+    {"d":3,"n":9,"trials":5000,"p_upo":0.5566,"p_conn":0.1072,"ordering":0.22890555555555556,"mean_active":0.757096658282429,"mean_isolated":2.1432,"iso_asym":2.350719874594396},
+    {"d":3,"n":11,"trials":5000,"p_upo":0.5628,"p_conn":0.1196,"ordering":0.22641454545454545,"mean_active":0.8172449441106157,"mean_isolated":2.0942,"iso_asym":2.198623272035989},
+    {"d":3,"n":16,"trials":5000,"p_upo":0.621,"p_conn":0.1484,"ordering":0.23009000000000002,"mean_active":0.8911835748792271,"mean_isolated":1.8966,"iso_asym":1.940476502110349},
     {"d":3,"n":24,"trials":3000,"p_upo":0.7016666666666667,"p_conn":0.184,"ordering":0.22888647342995172,"mean_active":0.9346001583531275,"mean_isolated":1.6566666666666667,"iso_asym":1.6951623645234262},
     {"d":3,"n":32,"trials":1500,"p_upo":0.7553333333333333,"p_conn":0.20133333333333334,"ordering":0.22689112903225805,"mean_active":0.9534973521624007,"mean_isolated":1.5453333333333332,"iso_asym":1.54015722038477},
     {"d":3,"n":48,"trials":750,"p_upo":0.8026666666666666,"p_conn":0.25733333333333336,"ordering":0.2273274231678487,"mean_active":0.972141472868217,"mean_isolated":1.368,"iso_asym":1.3454512603506936},
 
-    {"d":4,"n":7,"trials":5000,"p_upo":0.6366,"p_conn":0.0178,"ordering":0.10058095238095237,"mean_active":0.49297607827296797,"mean_isolated":2.5066,"iso_asym":9.424777960769381},
-    {"d":4,"n":9,"trials":5000,"p_upo":0.672,"p_conn":0.014,"ordering":0.1000111111111111,"mean_active":0.4967261904761905,"mean_isolated":3.7714,"iso_asym":9.424777960769381},
-    {"d":4,"n":11,"trials":5000,"p_upo":0.6618,"p_conn":0.0114,"ordering":0.10048,"mean_active":0.5310310722822056,"mean_isolated":4.682,"iso_asym":9.424777960769381},
-    {"d":4,"n":16,"trials":5000,"p_upo":0.6288,"p_conn":0.0094,"ordering":0.09914333333333333,"mean_active":0.6374642175572519,"mean_isolated":6.0706,"iso_asym":9.424777960769381},
+    {"d":4,"n":7,"trials":5000,"p_upo":0.6366,"p_conn":0.0178,"ordering":0.10058095238095237,"mean_active":0.49297607827296797,"mean_isolated":4.2412,"iso_asym":9.424777960769381},
+    {"d":4,"n":9,"trials":5000,"p_upo":0.672,"p_conn":0.014,"ordering":0.1000111111111111,"mean_active":0.4967261904761905,"mean_isolated":4.8172,"iso_asym":9.424777960769381},
+    {"d":4,"n":11,"trials":5000,"p_upo":0.6618,"p_conn":0.0114,"ordering":0.10048,"mean_active":0.5310310722822056,"mean_isolated":5.2892,"iso_asym":9.424777960769381},
+    {"d":4,"n":16,"trials":5000,"p_upo":0.6288,"p_conn":0.0094,"ordering":0.09914333333333333,"mean_active":0.6374642175572519,"mean_isolated":6.1538,"iso_asym":9.424777960769381},
     {"d":4,"n":24,"trials":3000,"p_upo":0.6776666666666666,"p_conn":0.007333333333333333,"ordering":0.10141304347826087,"mean_active":0.741617478275127,"mean_isolated":6.7956666666666665,"iso_asym":9.424777960769381},
     {"d":4,"n":32,"trials":1500,"p_upo":0.7086666666666667,"p_conn":0.0033333333333333335,"ordering":0.09921774193548387,"mean_active":0.7892462370649106,"mean_isolated":7.372,"iso_asym":9.424777960769381},
     {"d":4,"n":48,"trials":750,"p_upo":0.7893333333333333,"p_conn":0.004,"ordering":0.10051891252955082,"mean_active":0.848606418918919,"mean_isolated":7.578666666666667,"iso_asym":9.424777960769381}
