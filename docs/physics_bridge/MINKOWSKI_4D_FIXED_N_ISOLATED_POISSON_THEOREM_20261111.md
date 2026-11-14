@@ -635,34 +635,23 @@ The fixed-\(n\) proof does not rely on an unproved depoissonization step.
 
 ## 12. Consequence for connectedness
 
-Since a connected graph has no isolated vertices,
-
+Let \(B_n\) be the event that \(G_n\) has at least two components containing edges. For \(n\ge2\), a connected graph has no isolated vertices. If a graph has no isolated vertices but is disconnected, each component contains an edge, so \(B_n\) occurs. Consequently
 \[
-P(G_n\text{ connected})
-\le
-P(I_n=0).
+0\le
+P(I_n=0)-P(G_n\text{ connected})
+\le P(B_n).
 \]
 
-Therefore
-
+The [flat orientation-recovery theorem, Section 4.1](MINKOWSKI_D4_ORIENTATION_RECOVERY_THEOREM_20261112.md#41-one-nontrivial-component), gives \(P(B_n)\to0\) for the same fixed-cardinality ensemble. The Poisson limit above gives \(P(I_n=0)\to e^{-3\pi}\), by evaluating the distribution functions at \(1/2\) since both variables are integer-valued. Thus
 \[
 \boxed{
-\limsup_{n\to\infty}
-P(G_n\text{ connected})
-\le
-e^{-3\pi}.
+\lim_{n\to\infty}P(G_n\text{ connected})
+=e^{-3\pi}
+\approx 8.07\times10^{-5}.
 }
 \]
 
-Numerically,
-
-\[
-e^{-3\pi}
-\approx
-8.07\times10^{-5}.
-\]
-
-Equality is not claimed because disconnected edge-containing components may remain even when there are no isolated vertices.
+The [sharp recovery law](MINKOWSKI_ALLD_ORIENTATION_RECOVERY_RATE_THEOREM_20261112.md#3-the-31-law) also gives \(p_4^{\mathrm{UPO}}(n)\to1\). The probability of a graph that is both connected and UPO has the same limit \(e^{-3\pi}\), since omitting the UPO requirement changes that probability by at most \(1-p_4^{\mathrm{UPO}}(n)\).
 
 ---
 
@@ -721,24 +710,6 @@ Absolute novelty and priority are not certified.
 
 ---
 
-## 15. What remains open
+## 15. Subsequent results
 
-The isolated-vertex problem in the flat \(3+1\) fixed-diamond ensemble is now closed at the level of its limiting distribution, subject to independent review of the project proof.
-
-The remaining orientation-recovery frontier is different:
-
-1. prove the adjacent-twin asymptotic
-   \[
-   E[T_n]
-   \sim
-   \frac{9\pi}{n};
-   \]
-2. control non-stable modules of size at least three;
-3. control multiple nontrivial connected components;
-4. determine whether
-   \[
-   p_4^{\mathrm{UPO}}(n)
-   \to1.
-   \]
-
-The isolated cloud no longer belongs to that unresolved list.
+The [adjacent-twin asymptotic](MINKOWSKI_4D_ADJACENT_TWIN_ASYMPTOTIC_THEOREM_20261111.md) gives the \(9\pi/n\) first moment. The [sharp flat recovery law](MINKOWSKI_ALLD_ORIENTATION_RECOVERY_RATE_THEOREM_20261112.md) bounds the other failure modes and gives the same leading term for the probability of failure. The fixed-cardinality Poisson limit and the connectedness corollary in Section 12 remain specific to this flat finite-diamond ensemble.

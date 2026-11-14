@@ -252,14 +252,24 @@ nin
 
 The sample count was (5000) at the smaller sizes, reduced at the larger sizes for computational cost.
 
+The mean isolated count includes every trial. A graph with no edges contributes
+all of its vertices as isolates. The four small-size rows in each table were
+regenerated from the original seeded pilot after finding that their published
+sums omitted those contributions.
+
+From the repository root, run
+`python docs/physics_bridge/minkowski_higher_dimensional_upo_pilot.py --output pilot.json`.
+For each dimension and sample size, the table's mean isolated count comes from
+`runs[].mean_isolated_vertices`.
+
 ### 2+1 spacetime, (d=3)
 
 | n | (p_3^{m UPO}) | (p_3^{m conn}) | mean (alpha_3midmathrm{UPO}) | mean isolated |
 |---:|---:|---:|---:|---:|
-|7|0.5872|0.0994|0.6795|1.8662|
-|9|0.5566|0.1072|0.7571|2.0622|
-|11|0.5628|0.1196|0.8172|2.0788|
-|16|0.6210|0.1484|0.8912|1.8934|
+|7|0.5872|0.0994|0.6795|2.1672|
+|9|0.5566|0.1072|0.7571|2.1432|
+|11|0.5628|0.1196|0.8172|2.0942|
+|16|0.6210|0.1484|0.8912|1.8966|
 |24|0.7017|0.1840|0.9346|1.6567|
 |32|0.7553|0.2013|0.9535|1.5453|
 |48|0.8027|0.2573|0.9721|1.3680|
@@ -304,10 +314,10 @@ p_3^{m UPO}(n)	o1.
 
 | n | (p_4^{m UPO}) | (p_4^{m conn}) | mean (alpha_4midmathrm{UPO}) | mean isolated |
 |---:|---:|---:|---:|---:|
-|7|0.6366|0.0178|0.4930|2.5066|
-|9|0.6720|0.0140|0.4967|3.7714|
-|11|0.6618|0.0114|0.5310|4.6820|
-|16|0.6288|0.0094|0.6375|6.0706|
+|7|0.6366|0.0178|0.4930|4.2412|
+|9|0.6720|0.0140|0.4967|4.8172|
+|11|0.6618|0.0114|0.5310|5.2892|
+|16|0.6288|0.0094|0.6375|6.1538|
 |24|0.6777|0.0073|0.7416|6.7957|
 |32|0.7087|0.0033|0.7892|7.3720|
 |48|0.7893|0.0040|0.8486|7.5787|
